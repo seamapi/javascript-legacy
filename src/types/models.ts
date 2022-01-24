@@ -6,13 +6,16 @@ export interface Workspace {
 
 export type LockDeviceType = "august_lock" | "schlage_lock" | "yale_lock"
 export type NoiseDetectionDeviceType = "noiseaware_activity_zone"
+export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
 
-export interface Device<Properties, DeviceType = string> {
+export type Provider = "august" | "schlage" | "yale" | "noiseaware"
+
+export interface Device<Properties, Type = DeviceType> {
   device_id: string
   workspace_id: string
   properties: Properties
   location: null
-  device_type: DeviceType
+  device_type: Type
   third_party_account_id: string
 }
 
@@ -40,4 +43,18 @@ export interface ActionAttempt {
     action_attempt_id: string
     status: string
   }
+}
+
+export interface ConnectWebview {
+  connect_webview_id: string
+  workspace_id: string
+  device_selection_mode: string
+  accepted_providers: Provider[]
+  accepted_devices: never[]
+  any_provider_allowed: boolean
+  any_device_allowed: null | boolean
+  created_at: string
+  login_successful: boolean
+  status: "pending" | "authorized"
+  connected_account_id: null | string
 }
