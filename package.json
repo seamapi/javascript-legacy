@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "main": "./dist/index.js",
+  "files": ["dist"],
   "dependencies": {
     "axios": "0.25.0"
   },
