@@ -1,7 +1,11 @@
 import { AxiosRequestConfig } from "axios"
 import { SuccessfulAPIResponse } from "./types/globals"
-import { ConnectWebviewCreateRequest } from "./types/route-requests"
 import {
+  AccessCodeCreateRequest,
+  ConnectWebviewCreateRequest,
+} from "./types/route-requests"
+import {
+  AccessCodesListResponse,
   ConnectWebviewCreateResponse,
   ConnectWebviewGetResponse,
   ConnectWebviewListResponse,
@@ -107,6 +111,26 @@ export abstract class Routes {
         url: "/connect_webviews/create",
         method: "POST",
         data: params,
+      }),
+  }
+
+  public readonly accessCodes = {
+    list: (deviceId: string) =>
+      this.makeRequest<AccessCodesListResponse>({
+        url: "/access_codes/list",
+        params: {
+          device_id: deviceId,
+        },
+      }),
+
+    create: (deviceId: string, params: AccessCodeCreateRequest) =>
+      this.makeRequest<AccessCodeCreateRequest>({
+        url: "/access_codes/create",
+        method: "POST",
+        data: {
+          device_id: deviceId,
+          ...params,
+        },
       }),
   }
 }

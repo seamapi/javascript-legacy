@@ -58,3 +58,11 @@ export interface ConnectWebview {
   status: "pending" | "authorized"
   connected_account_id: null | string
 }
+
+export interface AccessCode {
+  code: string
+  name: string
+  type: "ongoing"
+  created_at: string
+  access_code_id: string
+}

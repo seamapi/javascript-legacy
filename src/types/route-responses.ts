@@ -1,4 +1,5 @@
 import {
+  AccessCode,
   ActionAttempt,
   ConnectWebview,
   Device,
@@ -46,3 +47,9 @@ export interface ConnectWebviewGetResponse {
 export interface ConnectWebviewCreateResponse {
   connect_webview: ConnectWebview
 }
+
+// Access Codes
+export interface AccessCodesListResponse {
+  access_codes: AccessCode[]
+}
+export type AccessCodeCreateResponse = ActionAttempt

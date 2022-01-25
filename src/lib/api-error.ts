@@ -5,8 +5,8 @@ interface ErrorMetadata {
 }
 
 export class SeamAPIError extends Error {
-  constructor(public status: number, public metadata: ErrorMetadata) {
-    super(metadata.message)
+  constructor(public status: number, public metadata?: ErrorMetadata) {
+    super(metadata?.message ?? "Unknown Error")
 
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, this.constructor)
@@ -14,6 +14,6 @@ export class SeamAPIError extends Error {
   }
 
   toString() {
-    return `SeamAPIError: ${this.status}, ${this.metadata.message} (${this.metadata.type})`
+    return `SeamAPIError: ${this.status}, ${this.metadata?.message} (${this.metadata?.type})`
   }
 }
