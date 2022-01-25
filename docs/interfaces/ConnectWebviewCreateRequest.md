@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[src/types/route-requests.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-requests.ts#L4)
+[src/types/route-requests.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-requests.ts#L4)

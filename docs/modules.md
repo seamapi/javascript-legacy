@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[src/types/globals.ts:16](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/globals.ts#L16)
+[src/types/globals.ts:16](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/globals.ts#L16)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:55](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-responses.ts#L55)
+[src/types/route-responses.ts:55](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L55)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L9)
+[src/types/models.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L9)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L39)
+[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L39)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L7)
+[src/types/models.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L7)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:29](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-responses.ts#L29)
+[src/types/route-responses.ts:29](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L29)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-responses.ts#L30)
+[src/types/route-responses.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L30)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L8)
+[src/types/models.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L8)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L11)
+[src/types/models.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L11)
 
 ___
 
@@ -157,4 +157,4 @@ ___
 
 #### Defined in
 
-[src/types/globals.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/globals.ts#L7)
+[src/types/globals.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/globals.ts#L7)

@@ -46,7 +46,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/index.ts:14](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/index.ts#L14)
+[src/index.ts:14](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L14)
 
 ## Properties
 
@@ -67,7 +67,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:118](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L118)
+[src/routes.ts:118](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L118)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/index.ts#L12)
+[src/index.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L12)
 
 ___
 
@@ -99,7 +99,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:98](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L98)
+[src/routes.ts:98](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L98)
 
 ___
 
@@ -120,7 +120,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:79](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L79)
+[src/routes.ts:79](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L79)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/index.ts#L11)
+[src/index.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L11)
 
 ___
 
@@ -153,7 +153,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L44)
+[src/routes.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L44)
 
 ___
 
@@ -175,7 +175,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:28](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L28)
+[src/routes.ts:28](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L28)
 
 ## Methods
 
@@ -205,4 +205,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:35](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/index.ts#L35)
+[src/index.ts:35](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L35)

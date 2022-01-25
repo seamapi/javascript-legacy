@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/lib/api-error.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/lib/api-error.ts#L4)
+[src/lib/api-error.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/main/src/lib/api-error.ts#L4)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/lib/api-error.ts:3](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/lib/api-error.ts#L3)
+[src/lib/api-error.ts:3](https://github.com/hello-seam/seamapi-javascript/blob/main/src/lib/api-error.ts#L3)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[src/lib/api-error.ts:2](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/lib/api-error.ts#L2)
+[src/lib/api-error.ts:2](https://github.com/hello-seam/seamapi-javascript/blob/main/src/lib/api-error.ts#L2)
