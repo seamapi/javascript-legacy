@@ -56,14 +56,14 @@
 #### Type parameters
 
 | Name |
-| :--- |
-| `T`  |
+| :------ |
+| `T` |
 
 #### Defined in
 
-[src/types/globals.ts:16](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/globals.ts#L16)
+[src/types/globals.ts:16](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/globals.ts#L16)
 
----
+___
 
 ### AccessCodeCreateResponse
 
@@ -71,9 +71,9 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:55](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/route-responses.ts#L55)
+[src/types/route-responses.ts:55](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-responses.ts#L55)
 
----
+___
 
 ### DeviceType
 
@@ -81,9 +81,9 @@
 
 #### Defined in
 
-[src/types/models.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L9)
+[src/types/models.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L9)
 
----
+___
 
 ### LockDevice
 
@@ -91,19 +91,19 @@
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L39)
+[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L39)
 
----
+___
 
 ### LockDeviceType
 
-Ƭ **LockDeviceType**: `"august_lock"` \| `"schlage_lock"` \| `"yale_lock"`
+Ƭ **LockDeviceType**: ``"august_lock"`` \| ``"schlage_lock"`` \| ``"yale_lock"``
 
 #### Defined in
 
-[src/types/models.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L7)
+[src/types/models.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L7)
 
----
+___
 
 ### LockLockDoorResponse
 
@@ -111,9 +111,9 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:29](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/route-responses.ts#L29)
+[src/types/route-responses.ts:29](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-responses.ts#L29)
 
----
+___
 
 ### LockUnlockDoorResponse
 
@@ -121,40 +121,40 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/route-responses.ts#L30)
+[src/types/route-responses.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-responses.ts#L30)
 
----
+___
 
 ### NoiseDetectionDeviceType
 
-Ƭ **NoiseDetectionDeviceType**: `"noiseaware_activity_zone"`
+Ƭ **NoiseDetectionDeviceType**: ``"noiseaware_activity_zone"``
 
 #### Defined in
 
-[src/types/models.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L8)
+[src/types/models.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L8)
 
----
+___
 
 ### Provider
 
-Ƭ **Provider**: `"august"` \| `"schlage"` \| `"yale"` \| `"noiseaware"`
+Ƭ **Provider**: ``"august"`` \| ``"schlage"`` \| ``"yale"`` \| ``"noiseaware"``
 
 #### Defined in
 
-[src/types/models.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L11)
+[src/types/models.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L11)
 
----
+___
 
 ### SuccessfulAPIResponse
 
-Ƭ **SuccessfulAPIResponse**<`T`\>: `T` & { `ok`: `true` }
+Ƭ **SuccessfulAPIResponse**<`T`\>: `T` & { `ok`: ``true``  }
 
 #### Type parameters
 
 | Name |
-| :--- |
-| `T`  |
+| :------ |
+| `T` |
 
 #### Defined in
 
-[src/types/globals.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/globals.ts#L7)
+[src/types/globals.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/globals.ts#L7)

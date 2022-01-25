@@ -6,21 +6,21 @@
 
 ### Properties
 
-- [is_sandbox](Workspace.md#is_sandbox)
+- [is\_sandbox](Workspace.md#is_sandbox)
 - [name](Workspace.md#name)
-- [workspace_id](Workspace.md#workspace_id)
+- [workspace\_id](Workspace.md#workspace_id)
 
 ## Properties
 
-### is_sandbox
+### is\_sandbox
 
-• **is_sandbox**: `boolean`
+• **is\_sandbox**: `boolean`
 
 #### Defined in
 
-[src/types/models.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L4)
+[src/types/models.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L4)
 
----
+___
 
 ### name
 
@@ -28,14 +28,14 @@
 
 #### Defined in
 
-[src/types/models.ts:3](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L3)
+[src/types/models.ts:3](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L3)
 
----
+___
 
-### workspace_id
+### workspace\_id
 
-• **workspace_id**: `string`
+• **workspace\_id**: `string`
 
 #### Defined in
 
-[src/types/models.ts:2](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L2)
+[src/types/models.ts:2](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L2)

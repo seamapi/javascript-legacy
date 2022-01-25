@@ -37,9 +37,9 @@
 
 #### Parameters
 
-| Name        | Type                                                            |
-| :---------- | :-------------------------------------------------------------- |
-| `status`    | `number`                                                        |
+| Name | Type |
+| :------ | :------ |
+| `status` | `number` |
 | `metadata?` | [`SeamAPIErrorMetadata`](../interfaces/SeamAPIErrorMetadata.md) |
 
 #### Overrides
@@ -48,7 +48,7 @@ Error.constructor
 
 #### Defined in
 
-[src/lib/api-error.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/lib/api-error.ts#L8)
+[src/lib/api-error.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/lib/api-error.ts#L8)
 
 ## Properties
 
@@ -64,13 +64,13 @@ Error.message
 
 node_modules/typescript/lib/lib.es5.d.ts:1023
 
----
+___
 
 ### metadata
 
 • `Optional` **metadata**: [`SeamAPIErrorMetadata`](../interfaces/SeamAPIErrorMetadata.md)
 
----
+___
 
 ### name
 
@@ -84,7 +84,7 @@ Error.name
 
 node_modules/typescript/lib/lib.es5.d.ts:1022
 
----
+___
 
 ### stack
 
@@ -98,13 +98,13 @@ Error.stack
 
 node_modules/typescript/lib/lib.es5.d.ts:1024
 
----
+___
 
 ### status
 
 • **status**: `number`
 
----
+___
 
 ### prepareStackTrace
 
@@ -120,9 +120,9 @@ Optional override for formatting stack traces
 
 ##### Parameters
 
-| Name          | Type         |
-| :------------ | :----------- |
-| `err`         | `Error`      |
+| Name | Type |
+| :------ | :------ |
+| `err` | `Error` |
 | `stackTraces` | `CallSite`[] |
 
 ##### Returns
@@ -137,7 +137,7 @@ Error.prepareStackTrace
 
 node_modules/@types/node/globals.d.ts:11
 
----
+___
 
 ### stackTraceLimit
 
@@ -163,9 +163,9 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Defined in
 
-[src/lib/api-error.ts:16](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/lib/api-error.ts#L16)
+[src/lib/api-error.ts:16](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/lib/api-error.ts#L16)
 
----
+___
 
 ### captureStackTrace
 
@@ -175,9 +175,9 @@ Create .stack property on a target object
 
 #### Parameters
 
-| Name              | Type       |
-| :---------------- | :--------- |
-| `targetObject`    | `object`   |
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | `object` |
 | `constructorOpt?` | `Function` |
 
 #### Returns

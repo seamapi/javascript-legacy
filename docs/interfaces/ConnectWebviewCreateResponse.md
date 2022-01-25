@@ -6,14 +6,14 @@
 
 ### Properties
 
-- [connect_webview](ConnectWebviewCreateResponse.md#connect_webview)
+- [connect\_webview](ConnectWebviewCreateResponse.md#connect_webview)
 
 ## Properties
 
-### connect_webview
+### connect\_webview
 
-• **connect_webview**: [`ConnectWebview`](ConnectWebview.md)
+• **connect\_webview**: [`ConnectWebview`](ConnectWebview.md)
 
 #### Defined in
 
-[src/types/route-responses.ts:48](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/route-responses.ts#L48)
+[src/types/route-responses.ts:48](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-responses.ts#L48)

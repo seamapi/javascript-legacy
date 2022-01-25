@@ -6,23 +6,23 @@
 
 ### Properties
 
-- [access_code_id](AccessCode.md#access_code_id)
+- [access\_code\_id](AccessCode.md#access_code_id)
 - [code](AccessCode.md#code)
-- [created_at](AccessCode.md#created_at)
+- [created\_at](AccessCode.md#created_at)
 - [name](AccessCode.md#name)
 - [type](AccessCode.md#type)
 
 ## Properties
 
-### access_code_id
+### access\_code\_id
 
-• **access_code_id**: `string`
+• **access\_code\_id**: `string`
 
 #### Defined in
 
-[src/types/models.ts:67](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L67)
+[src/types/models.ts:67](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L67)
 
----
+___
 
 ### code
 
@@ -30,19 +30,19 @@
 
 #### Defined in
 
-[src/types/models.ts:63](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L63)
+[src/types/models.ts:63](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L63)
 
----
+___
 
-### created_at
+### created\_at
 
-• **created_at**: `string`
+• **created\_at**: `string`
 
 #### Defined in
 
-[src/types/models.ts:66](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L66)
+[src/types/models.ts:66](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L66)
 
----
+___
 
 ### name
 
@@ -50,14 +50,14 @@
 
 #### Defined in
 
-[src/types/models.ts:64](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L64)
+[src/types/models.ts:64](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L64)
 
----
+___
 
 ### type
 
-• **type**: `"ongoing"`
+• **type**: ``"ongoing"``
 
 #### Defined in
 
-[src/types/models.ts:65](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L65)
+[src/types/models.ts:65](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L65)

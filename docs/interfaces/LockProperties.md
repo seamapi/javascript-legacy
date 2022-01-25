@@ -6,41 +6,41 @@
 
 ### Properties
 
-- [august_metadata](LockProperties.md#august_metadata)
-- [door_open](LockProperties.md#door_open)
+- [august\_metadata](LockProperties.md#august_metadata)
+- [door\_open](LockProperties.md#door_open)
 - [locked](LockProperties.md#locked)
 - [online](LockProperties.md#online)
-- [schlage_metadata](LockProperties.md#schlage_metadata)
+- [schlage\_metadata](LockProperties.md#schlage_metadata)
 
 ## Properties
 
-### august_metadata
+### august\_metadata
 
-• `Optional` **august_metadata**: `Object`
+• `Optional` **august\_metadata**: `Object`
 
 #### Type declaration
 
-| Name         | Type     |
-| :----------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `house_name` | `string` |
-| `lock_id`    | `string` |
-| `lock_name`  | `string` |
+| `lock_id` | `string` |
+| `lock_name` | `string` |
 
 #### Defined in
 
-[src/types/models.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L32)
+[src/types/models.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L32)
 
----
+___
 
-### door_open
+### door\_open
 
-• `Optional` **door_open**: `boolean`
+• `Optional` **door\_open**: `boolean`
 
 #### Defined in
 
-[src/types/models.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L25)
+[src/types/models.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L25)
 
----
+___
 
 ### locked
 
@@ -48,9 +48,9 @@
 
 #### Defined in
 
-[src/types/models.ts:23](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L23)
+[src/types/models.ts:23](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L23)
 
----
+___
 
 ### online
 
@@ -58,21 +58,21 @@
 
 #### Defined in
 
-[src/types/models.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L24)
+[src/types/models.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L24)
 
----
+___
 
-### schlage_metadata
+### schlage\_metadata
 
-• `Optional` **schlage_metadata**: `Object`
+• `Optional` **schlage\_metadata**: `Object`
 
 #### Type declaration
 
-| Name          | Type     |
-| :------------ | :------- |
-| `device_id`   | `string` |
+| Name | Type |
+| :------ | :------ |
+| `device_id` | `string` |
 | `device_name` | `string` |
 
 #### Defined in
 
-[src/types/models.ts:27](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L27)
+[src/types/models.ts:27](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L27)

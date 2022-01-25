@@ -6,124 +6,124 @@
 
 ### Properties
 
-- [accepted_devices](ConnectWebview.md#accepted_devices)
-- [accepted_providers](ConnectWebview.md#accepted_providers)
-- [any_device_allowed](ConnectWebview.md#any_device_allowed)
-- [any_provider_allowed](ConnectWebview.md#any_provider_allowed)
-- [connect_webview_id](ConnectWebview.md#connect_webview_id)
-- [connected_account_id](ConnectWebview.md#connected_account_id)
-- [created_at](ConnectWebview.md#created_at)
-- [device_selection_mode](ConnectWebview.md#device_selection_mode)
-- [login_successful](ConnectWebview.md#login_successful)
+- [accepted\_devices](ConnectWebview.md#accepted_devices)
+- [accepted\_providers](ConnectWebview.md#accepted_providers)
+- [any\_device\_allowed](ConnectWebview.md#any_device_allowed)
+- [any\_provider\_allowed](ConnectWebview.md#any_provider_allowed)
+- [connect\_webview\_id](ConnectWebview.md#connect_webview_id)
+- [connected\_account\_id](ConnectWebview.md#connected_account_id)
+- [created\_at](ConnectWebview.md#created_at)
+- [device\_selection\_mode](ConnectWebview.md#device_selection_mode)
+- [login\_successful](ConnectWebview.md#login_successful)
 - [status](ConnectWebview.md#status)
-- [workspace_id](ConnectWebview.md#workspace_id)
+- [workspace\_id](ConnectWebview.md#workspace_id)
 
 ## Properties
 
-### accepted_devices
+### accepted\_devices
 
-• **accepted_devices**: `never`[]
-
-#### Defined in
-
-[src/types/models.ts:53](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L53)
-
----
-
-### accepted_providers
-
-• **accepted_providers**: [`Provider`](../modules.md#provider)[]
+• **accepted\_devices**: `never`[]
 
 #### Defined in
 
-[src/types/models.ts:52](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L52)
+[src/types/models.ts:53](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L53)
 
----
+___
 
-### any_device_allowed
+### accepted\_providers
 
-• **any_device_allowed**: `null` \| `boolean`
-
-#### Defined in
-
-[src/types/models.ts:55](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L55)
-
----
-
-### any_provider_allowed
-
-• **any_provider_allowed**: `boolean`
+• **accepted\_providers**: [`Provider`](../modules.md#provider)[]
 
 #### Defined in
 
-[src/types/models.ts:54](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L54)
+[src/types/models.ts:52](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L52)
 
----
+___
 
-### connect_webview_id
+### any\_device\_allowed
 
-• **connect_webview_id**: `string`
-
-#### Defined in
-
-[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L49)
-
----
-
-### connected_account_id
-
-• **connected_account_id**: `null` \| `string`
+• **any\_device\_allowed**: ``null`` \| `boolean`
 
 #### Defined in
 
-[src/types/models.ts:59](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L59)
+[src/types/models.ts:55](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L55)
 
----
+___
 
-### created_at
+### any\_provider\_allowed
 
-• **created_at**: `string`
-
-#### Defined in
-
-[src/types/models.ts:56](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L56)
-
----
-
-### device_selection_mode
-
-• **device_selection_mode**: `string`
+• **any\_provider\_allowed**: `boolean`
 
 #### Defined in
 
-[src/types/models.ts:51](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L51)
+[src/types/models.ts:54](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L54)
 
----
+___
 
-### login_successful
+### connect\_webview\_id
 
-• **login_successful**: `boolean`
+• **connect\_webview\_id**: `string`
 
 #### Defined in
 
-[src/types/models.ts:57](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L57)
+[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L49)
 
----
+___
+
+### connected\_account\_id
+
+• **connected\_account\_id**: ``null`` \| `string`
+
+#### Defined in
+
+[src/types/models.ts:59](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L59)
+
+___
+
+### created\_at
+
+• **created\_at**: `string`
+
+#### Defined in
+
+[src/types/models.ts:56](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L56)
+
+___
+
+### device\_selection\_mode
+
+• **device\_selection\_mode**: `string`
+
+#### Defined in
+
+[src/types/models.ts:51](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L51)
+
+___
+
+### login\_successful
+
+• **login\_successful**: `boolean`
+
+#### Defined in
+
+[src/types/models.ts:57](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L57)
+
+___
 
 ### status
 
-• **status**: `"pending"` \| `"authorized"`
+• **status**: ``"pending"`` \| ``"authorized"``
 
 #### Defined in
 
-[src/types/models.ts:58](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L58)
+[src/types/models.ts:58](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L58)
 
----
+___
 
-### workspace_id
+### workspace\_id
 
-• **workspace_id**: `string`
+• **workspace\_id**: `string`
 
 #### Defined in
 
-[src/types/models.ts:50](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L50)
+[src/types/models.ts:50](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L50)

@@ -36,8 +36,8 @@
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `apiKey?` | `string` |
 
 #### Overrides
@@ -46,7 +46,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/index.ts:14](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/index.ts#L14)
+[src/index.ts:14](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/index.ts#L14)
 
 ## Properties
 
@@ -56,10 +56,10 @@ Routes.constructor
 
 #### Type declaration
 
-| Name     | Type                                                                                                                                                                                                                                      |
-| :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `create` | (`deviceId`: `string`, `params`: [`AccessCodeCreateRequest`](../interfaces/AccessCodeCreateRequest.md)) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ActionAttempt`](../interfaces/ActionAttempt.md)\>\> |
-| `list`   | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`AccessCodesListResponse`](../interfaces/AccessCodesListResponse.md)\>\>                                                              |
+| `list` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`AccessCodesListResponse`](../interfaces/AccessCodesListResponse.md)\>\> |
 
 #### Inherited from
 
@@ -67,9 +67,9 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:118](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/routes.ts#L118)
+[src/routes.ts:118](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L118)
 
----
+___
 
 ### client
 
@@ -77,9 +77,9 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/index.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/index.ts#L12)
+[src/index.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/index.ts#L12)
 
----
+___
 
 ### connectWebviews
 
@@ -87,11 +87,11 @@ Routes.accessCodes
 
 #### Type declaration
 
-| Name     | Type                                                                                                                                                                                                                                                      |
-| :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `create` | (`params`: [`ConnectWebviewCreateRequest`](../interfaces/ConnectWebviewCreateRequest.md)) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewCreateResponse`](../interfaces/ConnectWebviewCreateResponse.md)\>\> |
-| `get`    | (`connectWebviewId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewGetResponse`](../interfaces/ConnectWebviewGetResponse.md)\>\>                                                                  |
-| `list`   | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewListResponse`](../interfaces/ConnectWebviewListResponse.md)\>\>                                                                                            |
+| `get` | (`connectWebviewId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewGetResponse`](../interfaces/ConnectWebviewGetResponse.md)\>\> |
+| `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewListResponse`](../interfaces/ConnectWebviewListResponse.md)\>\> |
 
 #### Inherited from
 
@@ -99,9 +99,9 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:98](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/routes.ts#L98)
+[src/routes.ts:98](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L98)
 
----
+___
 
 ### devices
 
@@ -109,9 +109,9 @@ Routes.connectWebviews
 
 #### Type declaration
 
-| Name   | Type                                                                                                                                                                            |
-| :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `get`  | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LockGetResponse`](../interfaces/LockGetResponse.md)\>\>                    |
+| Name | Type |
+| :------ | :------ |
+| `get` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LockGetResponse`](../interfaces/LockGetResponse.md)\>\> |
 | `list` | (`connectedAccountId?`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`DevicesListResponse`](../interfaces/DevicesListResponse.md)\>\> |
 
 #### Inherited from
@@ -120,9 +120,9 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:79](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/routes.ts#L79)
+[src/routes.ts:79](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L79)
 
----
+___
 
 ### endpoint
 
@@ -130,9 +130,9 @@ Routes.devices
 
 #### Defined in
 
-[src/index.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/index.ts#L11)
+[src/index.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/index.ts#L11)
 
----
+___
 
 ### locks
 
@@ -140,12 +140,12 @@ Routes.devices
 
 #### Type declaration
 
-| Name         | Type                                                                                                                                                                        |
-| :----------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `get`        | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LockGetResponse`](../interfaces/LockGetResponse.md)\>\>                |
-| `list`       | (`connectedAccountId?`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LocksListResponse`](../interfaces/LocksListResponse.md)\>\> |
-| `lockDoor`   | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ActionAttempt`](../interfaces/ActionAttempt.md)\>\>                    |
-| `unlockDoor` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ActionAttempt`](../interfaces/ActionAttempt.md)\>\>                    |
+| Name | Type |
+| :------ | :------ |
+| `get` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LockGetResponse`](../interfaces/LockGetResponse.md)\>\> |
+| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LocksListResponse`](../interfaces/LocksListResponse.md)\>\> |
+| `lockDoor` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ActionAttempt`](../interfaces/ActionAttempt.md)\>\> |
+| `unlockDoor` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ActionAttempt`](../interfaces/ActionAttempt.md)\>\> |
 
 #### Inherited from
 
@@ -153,9 +153,9 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/routes.ts#L44)
+[src/routes.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L44)
 
----
+___
 
 ### workspaces
 
@@ -163,11 +163,11 @@ Routes.locks
 
 #### Type declaration
 
-| Name           | Type                                                                                                                                                   |
-| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `get`          | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspaceGetResponse`](../interfaces/WorkspaceGetResponse.md)\>\>     |
-| `list`         | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspacesListResponse`](../interfaces/WorkspacesListResponse.md)\>\> |
-| `resetSandbox` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ResetSandboxResponse`](../interfaces/ResetSandboxResponse.md)\>\>     |
+| Name | Type |
+| :------ | :------ |
+| `get` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspaceGetResponse`](../interfaces/WorkspaceGetResponse.md)\>\> |
+| `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspacesListResponse`](../interfaces/WorkspacesListResponse.md)\>\> |
+| `resetSandbox` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ResetSandboxResponse`](../interfaces/ResetSandboxResponse.md)\>\> |
 
 #### Inherited from
 
@@ -175,7 +175,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:28](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/routes.ts#L28)
+[src/routes.ts:28](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/routes.ts#L28)
 
 ## Methods
 
@@ -186,13 +186,13 @@ Routes.workspaces
 #### Type parameters
 
 | Name |
-| :--- |
-| `T`  |
+| :------ |
+| `T` |
 
 #### Parameters
 
-| Name      | Type                         |
-| :-------- | :--------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `request` | `AxiosRequestConfig`<`any`\> |
 
 #### Returns
@@ -205,4 +205,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:35](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/index.ts#L35)
+[src/index.ts:35](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/index.ts#L35)

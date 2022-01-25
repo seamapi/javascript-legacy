@@ -6,21 +6,21 @@
 
 ### Properties
 
-- [action_attempt](ActionAttempt.md#action_attempt)
+- [action\_attempt](ActionAttempt.md#action_attempt)
 
 ## Properties
 
-### action_attempt
+### action\_attempt
 
-• **action_attempt**: `Object`
+• **action\_attempt**: `Object`
 
 #### Type declaration
 
-| Name                | Type     |
-| :------------------ | :------- |
+| Name | Type |
+| :------ | :------ |
 | `action_attempt_id` | `string` |
-| `status`            | `string` |
+| `status` | `string` |
 
 #### Defined in
 
-[src/types/models.ts:42](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/models.ts#L42)
+[src/types/models.ts:42](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/models.ts#L42)

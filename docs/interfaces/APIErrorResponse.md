@@ -18,9 +18,9 @@
 
 #### Defined in
 
-[src/types/globals.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/globals.ts#L4)
+[src/types/globals.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/globals.ts#L4)
 
----
+___
 
 ### message
 
@@ -28,9 +28,9 @@
 
 #### Defined in
 
-[src/types/globals.ts:3](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/globals.ts#L3)
+[src/types/globals.ts:3](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/globals.ts#L3)
 
----
+___
 
 ### type
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[src/types/globals.ts:2](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/globals.ts#L2)
+[src/types/globals.ts:2](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/globals.ts#L2)

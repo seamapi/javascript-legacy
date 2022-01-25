@@ -6,14 +6,14 @@
 
 ### Properties
 
-- [accepted_providers](ConnectWebviewCreateRequest.md#accepted_providers)
+- [accepted\_providers](ConnectWebviewCreateRequest.md#accepted_providers)
 
 ## Properties
 
-### accepted_providers
+### accepted\_providers
 
-• **accepted_providers**: [`Provider`](../modules.md#provider)[]
+• **accepted\_providers**: [`Provider`](../modules.md#provider)[]
 
 #### Defined in
 
-[src/types/route-requests.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/617170d/src/types/route-requests.ts#L4)
+[src/types/route-requests.ts:4](https://github.com/hello-seam/seamapi-javascript/blob/48ada3e/src/types/route-requests.ts#L4)
