@@ -9,7 +9,6 @@ import {
 
 class Seam extends Routes {
   private endpoint = "https://connect.getseam.com"
-  private apiKey: string
   private client: AxiosInstance
 
   constructor(apiKey?: string) {
@@ -25,12 +24,10 @@ class Seam extends Routes {
       )
     }
 
-    this.apiKey = apiKey
-
     this.client = axios.create({
       baseURL: this.endpoint,
       headers: {
-        Authorization: `Bearer ${this.apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
       },
     })
   }
@@ -56,4 +53,8 @@ class Seam extends Routes {
 
 export default Seam
 
-export { SeamAPIError }
+export * from "./types/globals"
+export * from "./types/models"
+export * from "./types/route-requests"
+export * from "./types/route-responses"
+export * from "./lib/api-error"

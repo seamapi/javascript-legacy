@@ -5,6 +5,7 @@ import {
   ConnectWebviewCreateRequest,
 } from "./types/route-requests"
 import {
+  AccessCodeCreateResponse,
   AccessCodesListResponse,
   ConnectWebviewCreateResponse,
   ConnectWebviewGetResponse,
@@ -124,7 +125,7 @@ export abstract class Routes {
       }),
 
     create: (deviceId: string, params: AccessCodeCreateRequest) =>
-      this.makeRequest<AccessCodeCreateRequest>({
+      this.makeRequest<AccessCodeCreateResponse>({
         url: "/access_codes/create",
         method: "POST",
         data: {
