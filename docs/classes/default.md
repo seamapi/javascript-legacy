@@ -20,7 +20,6 @@
 - [client](default.md#client)
 - [connectWebviews](default.md#connectwebviews)
 - [devices](default.md#devices)
-- [endpoint](default.md#endpoint)
 - [locks](default.md#locks)
 - [workspaces](default.md#workspaces)
 
@@ -32,13 +31,14 @@
 
 ### constructor
 
-• **new default**(`apiKey?`)
+• **new default**(`apiKey?`, `endpoint?`)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `apiKey?` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `apiKey?` | `string` | `undefined` |
+| `endpoint` | `string` | `"https://connect.getseam.com"` |
 
 #### Overrides
 
@@ -46,7 +46,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/index.ts:14](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L14)
+[src/index.ts:13](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L13)
 
 ## Properties
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L12)
+[src/index.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L11)
 
 ___
 
@@ -121,16 +121,6 @@ Routes.devices
 #### Defined in
 
 [src/routes.ts:79](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L79)
-
-___
-
-### endpoint
-
-• `Private` **endpoint**: `string` = `"https://connect.getseam.com"`
-
-#### Defined in
-
-[src/index.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L11)
 
 ___
 
@@ -205,4 +195,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:35](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L35)
+[src/index.ts:34](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L34)

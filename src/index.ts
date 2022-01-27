@@ -8,10 +8,9 @@ import {
 } from "./types/globals"
 
 class Seam extends Routes {
-  private endpoint = "https://connect.getseam.com"
   private client: AxiosInstance
 
-  constructor(apiKey?: string) {
+  constructor(apiKey?: string, endpoint = "https://connect.getseam.com") {
     super()
 
     if (!apiKey) {
@@ -25,7 +24,7 @@ class Seam extends Routes {
     }
 
     this.client = axios.create({
-      baseURL: this.endpoint,
+      baseURL: endpoint,
       headers: {
         Authorization: `Bearer ${apiKey}`,
       },
