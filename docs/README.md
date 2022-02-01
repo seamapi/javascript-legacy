@@ -25,17 +25,18 @@ seam.accessCodes.create(someLockId, { name: "Some Access Code", code: "1234" })
 
 const someLockAccessCodes = seam.accessCodes.list(someLockId)
 /* 
-  someLockAccessCodes = {
-    access_codes: [
-      {
-        access_code_id: "some-access-code-1",
-        name: "Some Access Code",
-        code: "1234",
-        type: "ongoing",
-        created_at: "2022-02-01T12:57:40.843Z",
-      },
-    ],
-  }
+  someLockAccessCodes === 
+    {
+      access_codes: [
+        {
+          access_code_id: "some-access-code-1",
+          name: "Some Access Code",
+          code: "1234",
+          type: "ongoing",
+          created_at: "2022-02-01T12:57:40.843Z",
+        },
+      ],
+    }
 */
 ```
 
