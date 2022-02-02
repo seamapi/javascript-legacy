@@ -9,8 +9,9 @@ Control locks, lights and other internet of things devices with Seam's simple AP
 ```ts
 import Seam from seamapi
 
-// export SEAM_API_KEY=***
 const seam = new Seam()
+// Seam will automatically use the SEAM_API_KEY environment variable if you
+// don't provide an api_key to `new Seam()`
 
 const someLock = seam.locks.list().devices[0]
 const someLockId = someLock.device_id
@@ -23,20 +24,20 @@ seam.locks.unlockDoor(someLockId)
 
 seam.accessCodes.create(someLockId, { name: "Some Access Code", code: "1234" })
 
-const someLockAccessCodes = seam.accessCodes.list(someLockId)
-/* 
-  someLockAccessCodes === 
-    {
-      access_codes: [
-        {
-          access_code_id: "some-access-code-1",
-          name: "Some Access Code",
-          code: "1234",
-          type: "ongoing",
-          created_at: "2022-02-01T12:57:40.843Z",
-        },
-      ],
-    }
+const accessCodeList = seam.accessCodes.list(someLockId)
+console.log(accessCodeList)
+/*
+{
+    access_codes: [
+      {
+        access_code_id: "some-access-code-1",
+        name: "Some Access Code",
+        code: "1234",
+        type: "ongoing",
+        created_at: "2022-02-01T12:57:40.843Z",
+      },
+    ],
+  }
 */
 ```
 
