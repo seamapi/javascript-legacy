@@ -13,18 +13,18 @@ const seam = new Seam()
 // Seam will automatically use the SEAM_API_KEY environment variable if you
 // don't provide an api_key to `new Seam()`
 
-const someLock = seam.locks.list().devices[0]
+const someLock = await seam.locks.list().devices[0]
 const someLockId = someLock.device_id
 
-seam.locks.lockDoor(someLockId)
-const { device: someLockedLock } = seam.locks.get(someLockId)
+await seam.locks.lockDoor(someLockId)
+const { device: someLockedLock } = await seam.locks.get(someLockId)
 // someLockedLock.properties.locked === true
 
-seam.locks.unlockDoor(someLockId)
+await seam.locks.unlockDoor(someLockId)
 
-seam.accessCodes.create(someLockId, { name: "Some Access Code", code: "1234" })
+await seam.accessCodes.create(someLockId, { name: "Some Access Code", code: "1234" })
 
-const accessCodeList = seam.accessCodes.list(someLockId)
+const accessCodeList = await seam.accessCodes.list(someLockId)
 console.log(accessCodeList)
 /*
 {
