@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:55](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L55)
+[src/types/route-responses.ts:57](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L57)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:29](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L29)
+[src/types/route-responses.ts:31](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L31)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L30)
+[src/types/route-responses.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L32)
 
 ___
 

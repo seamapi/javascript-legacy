@@ -12,7 +12,7 @@
 
 ### workspace
 
-• **workspace**: [`Workspace`](Workspace.md)
+• **workspace**: [`Workspace`](Workspace.md) & { `connect_partner_name`: `string`  }
 
 #### Defined in
 

@@ -23,6 +23,7 @@
     "@semantic-release/release-notes-generator": "10.0.3",
     "@swc/core": "1.2.133",
     "@types/node": "17.0.10",
+    "ajv": "8.9.0",
     "ava": "4.0.1",
     "esbuild": "0.14.18",
     "esbuild-runner": "2.2.1",
@@ -33,6 +34,7 @@
     "pgknexlove": "1.1.21",
     "prettier": "2.5.1",
     "testcontainers": "8.2.0",
+    "ts-json-schema-generator": "0.97.0",
     "tsup": "5.11.11",
     "typedoc": "0.22.11",
     "typedoc-plugin-markdown": "3.11.12",
@@ -49,7 +51,9 @@
     "build": "npm run build:package && npm run build:docs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "ava"
+    "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json",
+    "test": "npm run build:json-response-schemas && ava",
+    "test:watch": "npm run build:json-response-schemas && ava --watch"
   },
   "repository": "https://github.com/hello-seam/seamapi-javascript"
 }

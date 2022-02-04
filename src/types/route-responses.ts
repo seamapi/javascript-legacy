@@ -12,7 +12,9 @@ export interface WorkspacesListResponse {
   workspaces: Workspace[]
 }
 export interface WorkspaceGetResponse {
-  workspace: Workspace
+  workspace: Workspace & {
+    connect_partner_name: string
+  }
 }
 export interface ResetSandboxResponse {
   message: string
