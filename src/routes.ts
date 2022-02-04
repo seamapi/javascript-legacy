@@ -15,7 +15,7 @@ import {
   LockLockDoorResponse,
   LocksListResponse,
   LockUnlockDoorResponse,
-  ResetSandboxResponse,
+  WorkspaceResetSandboxResponse,
   WorkspaceGetResponse,
   WorkspacesListResponse,
 } from "./types/route-responses"
@@ -35,7 +35,7 @@ export abstract class Routes {
         url: "/workspaces/get",
       }),
     resetSandbox: () =>
-      this.makeRequest<ResetSandboxResponse>({
+      this.makeRequest<WorkspaceResetSandboxResponse>({
         url: "/workspaces/reset_sandbox",
         method: "POST",
       }),

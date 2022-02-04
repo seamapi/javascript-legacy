@@ -16,7 +16,7 @@ export interface WorkspaceGetResponse {
     connect_partner_name: string
   }
 }
-export interface ResetSandboxResponse {
+export interface WorkspaceResetSandboxResponse {
   message: string
 }
 

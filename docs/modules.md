@@ -28,10 +28,10 @@
 - [LockGetResponse](interfaces/LockGetResponse.md)
 - [LockProperties](interfaces/LockProperties.md)
 - [LocksListResponse](interfaces/LocksListResponse.md)
-- [ResetSandboxResponse](interfaces/ResetSandboxResponse.md)
 - [SeamAPIErrorMetadata](interfaces/SeamAPIErrorMetadata.md)
 - [Workspace](interfaces/Workspace.md)
 - [WorkspaceGetResponse](interfaces/WorkspaceGetResponse.md)
+- [WorkspaceResetSandboxResponse](interfaces/WorkspaceResetSandboxResponse.md)
 - [WorkspacesListResponse](interfaces/WorkspacesListResponse.md)
 
 ### Type aliases

@@ -157,7 +157,7 @@ ___
 | :------ | :------ |
 | `get` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspaceGetResponse`](../interfaces/WorkspaceGetResponse.md)\>\> |
 | `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspacesListResponse`](../interfaces/WorkspacesListResponse.md)\>\> |
-| `resetSandbox` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ResetSandboxResponse`](../interfaces/ResetSandboxResponse.md)\>\> |
+| `resetSandbox` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspaceResetSandboxResponse`](../interfaces/WorkspaceResetSandboxResponse.md)\>\> |
 
 #### Inherited from
 

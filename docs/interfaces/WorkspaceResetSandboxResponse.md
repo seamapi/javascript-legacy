@@ -1,12 +1,12 @@
-[seamapi](../README.md) / [Exports](../modules.md) / ResetSandboxResponse
+[seamapi](../README.md) / [Exports](../modules.md) / WorkspaceResetSandboxResponse
 
-# Interface: ResetSandboxResponse
+# Interface: WorkspaceResetSandboxResponse
 
 ## Table of contents
 
 ### Properties
 
-- [message](ResetSandboxResponse.md#message)
+- [message](WorkspaceResetSandboxResponse.md#message)
 
 ## Properties
 
