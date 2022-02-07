@@ -36,6 +36,7 @@
     "testcontainers": "8.2.0",
     "ts-json-schema-generator": "0.97.0",
     "tsup": "5.11.11",
+    "type-fest": "2.11.1",
     "typedoc": "0.22.11",
     "typedoc-plugin-markdown": "3.11.12",
     "typescript": "4.5.5"

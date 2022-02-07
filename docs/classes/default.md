@@ -91,7 +91,7 @@ ___
 | :------ | :------ |
 | `create` | (`params`: [`ConnectWebviewCreateRequest`](../interfaces/ConnectWebviewCreateRequest.md)) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewCreateResponse`](../interfaces/ConnectWebviewCreateResponse.md)\>\> |
 | `get` | (`connectWebviewId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewGetResponse`](../interfaces/ConnectWebviewGetResponse.md)\>\> |
-| `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewListResponse`](../interfaces/ConnectWebviewListResponse.md)\>\> |
+| `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewsListResponse`](../interfaces/ConnectWebviewsListResponse.md)\>\> |
 
 #### Inherited from
 

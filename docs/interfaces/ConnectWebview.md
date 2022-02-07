@@ -16,13 +16,14 @@
 - [device\_selection\_mode](ConnectWebview.md#device_selection_mode)
 - [login\_successful](ConnectWebview.md#login_successful)
 - [status](ConnectWebview.md#status)
+- [url](ConnectWebview.md#url)
 - [workspace\_id](ConnectWebview.md#workspace_id)
 
 ## Properties
 
 ### accepted\_devices
 
-• **accepted\_devices**: `never`[]
+• **accepted\_devices**: `unknown`[]
 
 #### Defined in
 
@@ -117,6 +118,16 @@ ___
 #### Defined in
 
 [src/types/models.ts:58](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L58)
+
+___
+
+### url
+
+• **url**: `string`
+
+#### Defined in
+
+[src/types/models.ts:60](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L60)
 
 ___
 

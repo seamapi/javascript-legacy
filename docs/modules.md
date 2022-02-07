@@ -20,7 +20,7 @@
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
 - [ConnectWebviewGetResponse](interfaces/ConnectWebviewGetResponse.md)
-- [ConnectWebviewListResponse](interfaces/ConnectWebviewListResponse.md)
+- [ConnectWebviewsListResponse](interfaces/ConnectWebviewsListResponse.md)
 - [Device](interfaces/Device.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:57](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L57)
+[src/types/route-responses.ts:59](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L59)
 
 ___
 

@@ -50,13 +50,14 @@ export interface ConnectWebview {
   workspace_id: string
   device_selection_mode: string
   accepted_providers: Provider[]
-  accepted_devices: never[]
+  accepted_devices: unknown[]
   any_provider_allowed: boolean
   any_device_allowed: null | boolean
   created_at: string
   login_successful: boolean
   status: "pending" | "authorized"
   connected_account_id: null | string
+  url: string
 }
 
 export interface AccessCode {
@@ -64,5 +65,4 @@ export interface AccessCode {
   name: string
   type: "ongoing"
   created_at: string
-  access_code_id: string
 }

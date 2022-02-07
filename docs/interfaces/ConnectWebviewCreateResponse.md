@@ -12,7 +12,7 @@
 
 ### connect\_webview
 
-• **connect\_webview**: [`ConnectWebview`](ConnectWebview.md)
+• **connect\_webview**: `Omit`<[`ConnectWebview`](ConnectWebview.md), ``"connected_account_id"``\> & { `custom_redirect_url`: ``null`` \| `string`  }
 
 #### Defined in
 

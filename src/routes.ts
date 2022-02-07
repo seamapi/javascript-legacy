@@ -9,7 +9,7 @@ import {
   AccessCodesListResponse,
   ConnectWebviewCreateResponse,
   ConnectWebviewGetResponse,
-  ConnectWebviewListResponse,
+  ConnectWebviewsListResponse,
   DevicesListResponse,
   LockGetResponse,
   LockLockDoorResponse,
@@ -97,7 +97,7 @@ export abstract class Routes {
 
   public readonly connectWebviews = {
     list: () =>
-      this.makeRequest<ConnectWebviewListResponse>({
+      this.makeRequest<ConnectWebviewsListResponse>({
         url: "/connect_webviews/list",
       }),
     get: (connectWebviewId: string) =>

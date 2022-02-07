@@ -1,12 +1,12 @@
-[seamapi](../README.md) / [Exports](../modules.md) / ConnectWebviewListResponse
+[seamapi](../README.md) / [Exports](../modules.md) / ConnectWebviewsListResponse
 
-# Interface: ConnectWebviewListResponse
+# Interface: ConnectWebviewsListResponse
 
 ## Table of contents
 
 ### Properties
 
-- [connect\_webviews](ConnectWebviewListResponse.md#connect_webviews)
+- [connect\_webviews](ConnectWebviewsListResponse.md#connect_webviews)
 
 ## Properties
 
