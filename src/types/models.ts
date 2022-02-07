@@ -57,6 +57,7 @@ export interface ConnectWebview {
   login_successful: boolean
   status: "pending" | "authorized"
   connected_account_id: null | string
+  url: string
 }
 
 export interface AccessCode {
