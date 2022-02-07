@@ -12,9 +12,11 @@ export interface WorkspacesListResponse {
   workspaces: Workspace[]
 }
 export interface WorkspaceGetResponse {
-  workspace: Workspace
+  workspace: Workspace & {
+    connect_partner_name: string
+  }
 }
-export interface ResetSandboxResponse {
+export interface WorkspaceResetSandboxResponse {
   message: string
 }
 
@@ -38,14 +40,16 @@ export interface DeviceGetResponse {
 }
 
 // Connect Webview
-export interface ConnectWebviewListResponse {
+export interface ConnectWebviewsListResponse {
   connect_webviews: ConnectWebview[]
 }
 export interface ConnectWebviewGetResponse {
   connect_webview: ConnectWebview
 }
 export interface ConnectWebviewCreateResponse {
-  connect_webview: ConnectWebview
+  connect_webview: Omit<ConnectWebview, "connected_account_id"> & {
+    custom_redirect_url: null | string
+  }
 }
 
 // Access Codes

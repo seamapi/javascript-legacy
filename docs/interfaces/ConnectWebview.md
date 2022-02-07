@@ -23,7 +23,7 @@
 
 ### accepted\_devices
 
-• **accepted\_devices**: `never`[]
+• **accepted\_devices**: `unknown`[]
 
 #### Defined in
 

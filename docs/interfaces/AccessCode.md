@@ -6,23 +6,12 @@
 
 ### Properties
 
-- [access\_code\_id](AccessCode.md#access_code_id)
 - [code](AccessCode.md#code)
 - [created\_at](AccessCode.md#created_at)
 - [name](AccessCode.md#name)
 - [type](AccessCode.md#type)
 
 ## Properties
-
-### access\_code\_id
-
-• **access\_code\_id**: `string`
-
-#### Defined in
-
-[src/types/models.ts:68](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L68)
-
-___
 
 ### code
 

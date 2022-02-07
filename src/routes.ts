@@ -9,13 +9,13 @@ import {
   AccessCodesListResponse,
   ConnectWebviewCreateResponse,
   ConnectWebviewGetResponse,
-  ConnectWebviewListResponse,
+  ConnectWebviewsListResponse,
   DevicesListResponse,
   LockGetResponse,
   LockLockDoorResponse,
   LocksListResponse,
   LockUnlockDoorResponse,
-  ResetSandboxResponse,
+  WorkspaceResetSandboxResponse,
   WorkspaceGetResponse,
   WorkspacesListResponse,
 } from "./types/route-responses"
@@ -35,7 +35,7 @@ export abstract class Routes {
         url: "/workspaces/get",
       }),
     resetSandbox: () =>
-      this.makeRequest<ResetSandboxResponse>({
+      this.makeRequest<WorkspaceResetSandboxResponse>({
         url: "/workspaces/reset_sandbox",
         method: "POST",
       }),
@@ -97,7 +97,7 @@ export abstract class Routes {
 
   public readonly connectWebviews = {
     list: () =>
-      this.makeRequest<ConnectWebviewListResponse>({
+      this.makeRequest<ConnectWebviewsListResponse>({
         url: "/connect_webviews/list",
       }),
     get: (connectWebviewId: string) =>

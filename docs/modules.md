@@ -20,7 +20,7 @@
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
 - [ConnectWebviewGetResponse](interfaces/ConnectWebviewGetResponse.md)
-- [ConnectWebviewListResponse](interfaces/ConnectWebviewListResponse.md)
+- [ConnectWebviewsListResponse](interfaces/ConnectWebviewsListResponse.md)
 - [Device](interfaces/Device.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
@@ -28,10 +28,10 @@
 - [LockGetResponse](interfaces/LockGetResponse.md)
 - [LockProperties](interfaces/LockProperties.md)
 - [LocksListResponse](interfaces/LocksListResponse.md)
-- [ResetSandboxResponse](interfaces/ResetSandboxResponse.md)
 - [SeamAPIErrorMetadata](interfaces/SeamAPIErrorMetadata.md)
 - [Workspace](interfaces/Workspace.md)
 - [WorkspaceGetResponse](interfaces/WorkspaceGetResponse.md)
+- [WorkspaceResetSandboxResponse](interfaces/WorkspaceResetSandboxResponse.md)
 - [WorkspacesListResponse](interfaces/WorkspacesListResponse.md)
 
 ### Type aliases
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:55](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L55)
+[src/types/route-responses.ts:59](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L59)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:29](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L29)
+[src/types/route-responses.ts:31](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L31)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L30)
+[src/types/route-responses.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L32)
 
 ___
 
