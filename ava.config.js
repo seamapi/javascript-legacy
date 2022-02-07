@@ -2,5 +2,5 @@ module.exports = {
   files: ["tests/**/*.test.ts"],
   extensions: ["ts"],
   require: ["esbuild-runner/register"],
-  timeout: "30s",
+  timeout: "90s",
 }
