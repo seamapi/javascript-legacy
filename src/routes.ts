@@ -18,6 +18,8 @@ import {
   WorkspaceResetSandboxResponse,
   WorkspaceGetResponse,
   WorkspacesListResponse,
+  ConnectedAccountsListResponse,
+  ConnectedAccountsGetResponse,
 } from "./types/route-responses"
 
 export abstract class Routes {
@@ -132,6 +134,18 @@ export abstract class Routes {
           device_id: deviceId,
           ...params,
         },
+      }),
+  }
+
+  public readonly connectedAccounts = {
+    list: () =>
+      this.makeRequest<ConnectedAccountsListResponse>({
+        url: "/connected_accounts/list",
+      }),
+
+    get: (connected_account_id: string) =>
+      this.makeRequest<ConnectedAccountsGetResponse>({
+        url: `/connected_accounts/get?connected_account_id=${connected_account_id}`,
       }),
   }
 }

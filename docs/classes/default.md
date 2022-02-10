@@ -19,6 +19,7 @@
 - [accessCodes](default.md#accesscodes)
 - [client](default.md#client)
 - [connectWebviews](default.md#connectwebviews)
+- [connectedAccounts](default.md#connectedaccounts)
 - [devices](default.md#devices)
 - [locks](default.md#locks)
 - [workspaces](default.md#workspaces)
@@ -67,7 +68,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:118](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L118)
+[src/routes.ts:120](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L120)
 
 ___
 
@@ -99,7 +100,28 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:98](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L98)
+[src/routes.ts:100](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L100)
+
+___
+
+### connectedAccounts
+
+• `Readonly` **connectedAccounts**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `get` | (`connected_account_id`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectedAccountsGetResponse`](../interfaces/ConnectedAccountsGetResponse.md)\>\> |
+| `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectedAccountsListResponse`](../interfaces/ConnectedAccountsListResponse.md)\>\> |
+
+#### Inherited from
+
+Routes.connectedAccounts
+
+#### Defined in
+
+[src/routes.ts:140](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L140)
 
 ___
 
@@ -120,7 +142,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:79](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L79)
+[src/routes.ts:81](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L81)
 
 ___
 
@@ -143,7 +165,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L44)
+[src/routes.ts:46](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L46)
 
 ___
 
@@ -165,7 +187,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:28](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L28)
+[src/routes.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L30)
 
 ## Methods
 

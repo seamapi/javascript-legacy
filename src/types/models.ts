@@ -66,3 +66,12 @@ export interface AccessCode {
   type: "ongoing"
   created_at: string
 }
+
+export type AccountType = "august" | "schlage" | "smartthings" | "noiseaware"
+
+export interface ConnectedAccount {
+  connected_account_id: string
+  created_at: string
+  user_identifier: string
+  account_type: AccountType
+}

@@ -5,6 +5,7 @@ import {
   Device,
   LockDevice,
   Workspace,
+  ConnectedAccount,
 } from "./models"
 
 // Workspaces
@@ -57,3 +58,11 @@ export interface AccessCodesListResponse {
   access_codes: AccessCode[]
 }
 export type AccessCodeCreateResponse = ActionAttempt
+
+// Connected Accounts
+export interface ConnectedAccountsListResponse {
+  connected_accounts: ConnectedAccount[]
+}
+export interface ConnectedAccountsGetResponse {
+  connected_account: ConnectedAccount
+}

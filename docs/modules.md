@@ -21,6 +21,9 @@
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
 - [ConnectWebviewGetResponse](interfaces/ConnectWebviewGetResponse.md)
 - [ConnectWebviewsListResponse](interfaces/ConnectWebviewsListResponse.md)
+- [ConnectedAccount](interfaces/ConnectedAccount.md)
+- [ConnectedAccountsGetResponse](interfaces/ConnectedAccountsGetResponse.md)
+- [ConnectedAccountsListResponse](interfaces/ConnectedAccountsListResponse.md)
 - [Device](interfaces/Device.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
@@ -38,6 +41,7 @@
 
 - [APIResponse](modules.md#apiresponse)
 - [AccessCodeCreateResponse](modules.md#accesscodecreateresponse)
+- [AccountType](modules.md#accounttype)
 - [DeviceType](modules.md#devicetype)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
@@ -71,7 +75,17 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:59](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L59)
+[src/types/route-responses.ts:60](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L60)
+
+___
+
+### AccountType
+
+Ƭ **AccountType**: ``"august"`` \| ``"schlage"`` \| ``"smartthings"`` \| ``"noiseaware"``
+
+#### Defined in
+
+[src/types/models.ts:70](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L70)
 
 ___
 
@@ -111,7 +125,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:31](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L31)
+[src/types/route-responses.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L32)
 
 ___
 
@@ -121,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L32)
+[src/types/route-responses.ts:33](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L33)
 
 ___
 
