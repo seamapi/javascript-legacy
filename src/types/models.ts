@@ -8,7 +8,12 @@ export type LockDeviceType = "august_lock" | "schlage_lock" | "yale_lock"
 export type NoiseDetectionDeviceType = "noiseaware_activity_zone"
 export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
 
-export type Provider = "august" | "schlage" | "yale" | "noiseaware"
+export type Provider =
+  | "august"
+  | "schlage"
+  | "yale"
+  | "noiseaware"
+  | "smartthings"
 
 export interface Device<Properties, Type = DeviceType> {
   device_id: string
@@ -67,11 +72,9 @@ export interface AccessCode {
   created_at: string
 }
 
-export type AccountType = "august" | "schlage" | "smartthings" | "noiseaware"
-
 export interface ConnectedAccount {
   connected_account_id: string
   created_at: string
   user_identifier: string
-  account_type: AccountType
+  account_type: Provider
 }

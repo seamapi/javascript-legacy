@@ -143,9 +143,12 @@ export abstract class Routes {
         url: "/connected_accounts/list",
       }),
 
-    get: (connected_account_id: string) =>
+    get: (connectedAccountId: string) =>
       this.makeRequest<ConnectedAccountsGetResponse>({
-        url: `/connected_accounts/get?connected_account_id=${connected_account_id}`,
+        url: "/connected_accounts/get",
+        params: {
+          connected_account_id: connectedAccountId,
+        },
       }),
   }
 }

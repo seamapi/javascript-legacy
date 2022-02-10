@@ -112,7 +112,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`connected_account_id`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectedAccountsGetResponse`](../interfaces/ConnectedAccountsGetResponse.md)\>\> |
+| `get` | (`connectedAccountId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectedAccountsGetResponse`](../interfaces/ConnectedAccountsGetResponse.md)\>\> |
 | `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectedAccountsListResponse`](../interfaces/ConnectedAccountsListResponse.md)\>\> |
 
 #### Inherited from

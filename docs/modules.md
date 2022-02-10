@@ -41,7 +41,6 @@
 
 - [APIResponse](modules.md#apiresponse)
 - [AccessCodeCreateResponse](modules.md#accesscodecreateresponse)
-- [AccountType](modules.md#accounttype)
 - [DeviceType](modules.md#devicetype)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
@@ -79,16 +78,6 @@ ___
 
 ___
 
-### AccountType
-
-Ƭ **AccountType**: ``"august"`` \| ``"schlage"`` \| ``"smartthings"`` \| ``"noiseaware"``
-
-#### Defined in
-
-[src/types/models.ts:70](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L70)
-
-___
-
 ### DeviceType
 
 Ƭ **DeviceType**: [`LockDeviceType`](modules.md#lockdevicetype) \| [`NoiseDetectionDeviceType`](modules.md#noisedetectiondevicetype)
@@ -105,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L44)
 
 ___
 
@@ -151,7 +140,7 @@ ___
 
 ### Provider
 
-Ƭ **Provider**: ``"august"`` \| ``"schlage"`` \| ``"yale"`` \| ``"noiseaware"``
+Ƭ **Provider**: ``"august"`` \| ``"schlage"`` \| ``"yale"`` \| ``"noiseaware"`` \| ``"smartthings"``
 
 #### Defined in
 
