@@ -1,5 +1,7 @@
 name: Dispatch test event
-on: push
+on:
+  push:
+  pull_request:
 jobs:
   dispatch:
     name: Dispatch event
