@@ -21,6 +21,9 @@
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
 - [ConnectWebviewGetResponse](interfaces/ConnectWebviewGetResponse.md)
 - [ConnectWebviewsListResponse](interfaces/ConnectWebviewsListResponse.md)
+- [ConnectedAccount](interfaces/ConnectedAccount.md)
+- [ConnectedAccountsGetResponse](interfaces/ConnectedAccountsGetResponse.md)
+- [ConnectedAccountsListResponse](interfaces/ConnectedAccountsListResponse.md)
 - [Device](interfaces/Device.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
@@ -71,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:59](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L59)
+[src/types/route-responses.ts:60](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L60)
 
 ___
 
@@ -91,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L44)
 
 ___
 
@@ -111,7 +114,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:31](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L31)
+[src/types/route-responses.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L32)
 
 ___
 
@@ -121,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L32)
+[src/types/route-responses.ts:33](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L33)
 
 ___
 
@@ -137,7 +140,7 @@ ___
 
 ### Provider
 
-Ƭ **Provider**: ``"august"`` \| ``"schlage"`` \| ``"yale"`` \| ``"noiseaware"``
+Ƭ **Provider**: ``"august"`` \| ``"schlage"`` \| ``"yale"`` \| ``"noiseaware"`` \| ``"smartthings"``
 
 #### Defined in
 
