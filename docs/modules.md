@@ -13,7 +13,6 @@
 
 - [APIErrorResponse](interfaces/APIErrorResponse.md)
 - [AccessCode](interfaces/AccessCode.md)
-- [AccessCodeCreateRequest](interfaces/AccessCodeCreateRequest.md)
 - [AccessCodesListResponse](interfaces/AccessCodesListResponse.md)
 - [ActionAttempt](interfaces/ActionAttempt.md)
 - [ConnectWebview](interfaces/ConnectWebview.md)
@@ -40,7 +39,10 @@
 ### Type aliases
 
 - [APIResponse](modules.md#apiresponse)
+- [AccessCodeCreateOngoingRequest](modules.md#accesscodecreateongoingrequest)
+- [AccessCodeCreateRequest](modules.md#accesscodecreaterequest)
 - [AccessCodeCreateResponse](modules.md#accesscodecreateresponse)
+- [AccessCodeCreateScheduledRequest](modules.md#accesscodecreatescheduledrequest)
 - [DeviceType](modules.md#devicetype)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
@@ -68,6 +70,34 @@
 
 ___
 
+### AccessCodeCreateOngoingRequest
+
+Ƭ **AccessCodeCreateOngoingRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `code?` | `string` |
+| `device_id` | `string` |
+| `name` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-requests.ts#L7)
+
+___
+
+### AccessCodeCreateRequest
+
+Ƭ **AccessCodeCreateRequest**: [`AccessCodeCreateOngoingRequest`](modules.md#accesscodecreateongoingrequest) \| [`AccessCodeCreateScheduledRequest`](modules.md#accesscodecreatescheduledrequest)
+
+#### Defined in
+
+[src/types/route-requests.ts:21](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-requests.ts#L21)
+
+___
+
 ### AccessCodeCreateResponse
 
 Ƭ **AccessCodeCreateResponse**: [`ActionAttempt`](interfaces/ActionAttempt.md)
@@ -75,6 +105,26 @@ ___
 #### Defined in
 
 [src/types/route-responses.ts:60](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L60)
+
+___
+
+### AccessCodeCreateScheduledRequest
+
+Ƭ **AccessCodeCreateScheduledRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `code?` | `string` |
+| `device_id` | `string` |
+| `ends_at` | `string` \| `Date` |
+| `name` | `string` |
+| `starts_at` | `string` \| `Date` |
+
+#### Defined in
+
+[src/types/route-requests.ts:13](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-requests.ts#L13)
 
 ___
 

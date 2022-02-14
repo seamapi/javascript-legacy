@@ -2,6 +2,7 @@ import { AxiosRequestConfig } from "axios"
 import { SuccessfulAPIResponse } from "./types/globals"
 import {
   AccessCodeCreateRequest,
+  AccessCodeCreateScheduledRequest,
   ConnectWebviewCreateRequest,
 } from "./types/route-requests"
 import {
@@ -126,15 +127,32 @@ export abstract class Routes {
         },
       }),
 
-    create: (deviceId: string, params: AccessCodeCreateRequest) =>
-      this.makeRequest<AccessCodeCreateResponse>({
+    create: async (params: AccessCodeCreateRequest) => {
+      const parsedParams: any = Object.assign({}, params)
+
+      if (
+        typeof (params as AccessCodeCreateScheduledRequest).starts_at ===
+        "object"
+      ) {
+        parsedParams.starts_at = (
+          (params as AccessCodeCreateScheduledRequest).starts_at as Date
+        ).toISOString()
+      }
+
+      if (
+        typeof (params as AccessCodeCreateScheduledRequest).ends_at === "object"
+      ) {
+        parsedParams.ends_at = (
+          (params as AccessCodeCreateScheduledRequest).ends_at as Date
+        ).toISOString()
+      }
+
+      return await this.makeRequest<AccessCodeCreateResponse>({
         url: "/access_codes/create",
         method: "POST",
-        data: {
-          device_id: deviceId,
-          ...params,
-        },
-      }),
+        data: parsedParams,
+      })
+    },
   }
 
   public readonly connectedAccounts = {
