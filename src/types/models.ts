@@ -21,7 +21,9 @@ export interface Device<Properties, Type = DeviceType> {
   properties: Properties
   location: null
   device_type: Type
-  third_party_account_id: string
+  connected_account_id: string
+  capabilities_supported: unknown[]
+  created_at: string
 }
 
 export interface LockProperties {
@@ -46,6 +48,7 @@ export type LockDevice = Device<LockProperties, LockDeviceType>
 export interface ActionAttempt {
   action_attempt: {
     action_attempt_id: string
+    action_type: "LOCK_DOOR" | "UNLOCK_DOOR" | "CREATE_ACCESS_CODE"
     status: string
   }
 }

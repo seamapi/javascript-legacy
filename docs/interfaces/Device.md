@@ -13,14 +13,46 @@
 
 ### Properties
 
+- [capabilities\_supported](Device.md#capabilities_supported)
+- [connected\_account\_id](Device.md#connected_account_id)
+- [created\_at](Device.md#created_at)
 - [device\_id](Device.md#device_id)
 - [device\_type](Device.md#device_type)
 - [location](Device.md#location)
 - [properties](Device.md#properties)
-- [third\_party\_account\_id](Device.md#third_party_account_id)
 - [workspace\_id](Device.md#workspace_id)
 
 ## Properties
+
+### capabilities\_supported
+
+• **capabilities\_supported**: `unknown`[]
+
+#### Defined in
+
+[src/types/models.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L25)
+
+___
+
+### connected\_account\_id
+
+• **connected\_account\_id**: `string`
+
+#### Defined in
+
+[src/types/models.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L24)
+
+___
+
+### created\_at
+
+• **created\_at**: `string`
+
+#### Defined in
+
+[src/types/models.ts:26](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L26)
+
+___
 
 ### device\_id
 
@@ -59,16 +91,6 @@ ___
 #### Defined in
 
 [src/types/models.ts:21](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L21)
-
-___
-
-### third\_party\_account\_id
-
-• **third\_party\_account\_id**: `string`
-
-#### Defined in
-
-[src/types/models.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L24)
 
 ___
 
