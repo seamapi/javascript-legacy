@@ -9,7 +9,16 @@
   ],
   "version": "1.2.1",
   "license": "MIT",
-  "main": "./dist/index.js",
+  "main": "./cjs-wrapper.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./cjs-wrapper.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
