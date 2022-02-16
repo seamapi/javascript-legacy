@@ -7,26 +7,35 @@ Control locks, lights and other internet of things devices with Seam's simple AP
 ## Usage
 
 ```ts
-import Seam from seamapi
+// Replace with
+// const Seam = require("seamapi")
+// if not using ES6 modules and/or TypeScript.
+import Seam from "seamapi";
 
-const seam = new Seam()
+const seam = new Seam();
 // Seam will automatically use the SEAM_API_KEY environment variable if you
-// don't provide an api_key to `new Seam()`
+// don't provide an apiKey to `new Seam()`
 
-const someLock = await seam.locks.list().devices[0]
-const someLockId = someLock.device_id
+(async () => {
+  const {
+    devices: [someLock],
+  } = await seam.locks.list();
+  const someLockId = someLock.device_id;
 
-await seam.locks.lockDoor(someLockId)
-const { device: someLockedLock } = await seam.locks.get(someLockId)
-// someLockedLock.properties.locked === true
+  await seam.locks.lockDoor(someLockId);
+  const { device: someLockedLock } = await seam.locks.get(someLockId);
+  // someLockedLock.properties.locked === true
 
-await seam.locks.unlockDoor(someLockId)
+  await seam.locks.unlockDoor(someLockId);
 
-await seam.accessCodes.create(someLockId, { name: "Some Access Code", code: "1234" })
+  await seam.accessCodes.create(someLockId, {
+    name: "Some Access Code",
+    code: "1234",
+  });
 
-const accessCodeList = await seam.accessCodes.list(someLockId)
-console.log(accessCodeList)
-/*
+  const accessCodeList = await seam.accessCodes.list(someLockId);
+  console.log(accessCodeList);
+  /*
 {
     access_codes: [
       {
@@ -39,6 +48,7 @@ console.log(accessCodeList)
     ],
   }
 */
+})();
 ```
 
 ## In Progress
