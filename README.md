@@ -35,18 +35,18 @@ const seam = new Seam();
   const accessCodeList = await seam.accessCodes.list(someLockId);
   console.log(accessCodeList);
   /*
-{
-    access_codes: [
-      {
-        access_code_id: "some-access-code-1",
-        name: "Some Access Code",
-        code: "1234",
-        type: "ongoing",
-        created_at: "2022-02-01T12:57:40.843Z",
-      },
-    ],
-  }
-*/
+    {
+        access_codes: [
+          {
+            access_code_id: "some-access-code-1",
+            name: "Some Access Code",
+            code: "1234",
+            type: "ongoing",
+            created_at: "2022-02-01T12:57:40.843Z",
+          },
+        ],
+      }
+  */
 })();
 ```
 
