@@ -28,9 +28,10 @@ const seam = new Seam();
 
   await seam.locks.unlockDoor(someLockId);
 
-  await seam.accessCodes.create(someLockId, {
+  await seam.accessCodes.create({
     name: "Some Access Code",
     code: "1234",
+    device_id: someLockId,
   });
 
   const accessCodeList = await seam.accessCodes.list(someLockId);
