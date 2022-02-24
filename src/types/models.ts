@@ -27,6 +27,7 @@ export interface Device<Properties, Type = DeviceType> {
 }
 
 export interface LockProperties {
+  name: string
   locked: boolean
   online: boolean
   door_open?: boolean

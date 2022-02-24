@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:46](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L46)
+[src/types/models.ts:47](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L47)
 
 ___
 

@@ -9,6 +9,7 @@
 - [august\_metadata](LockProperties.md#august_metadata)
 - [door\_open](LockProperties.md#door_open)
 - [locked](LockProperties.md#locked)
+- [name](LockProperties.md#name)
 - [online](LockProperties.md#online)
 - [schlage\_metadata](LockProperties.md#schlage_metadata)
 
@@ -28,7 +29,7 @@
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:40](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L40)
 
 ___
 
@@ -38,13 +39,23 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L32)
+[src/types/models.ts:33](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L33)
 
 ___
 
 ### locked
 
 • **locked**: `boolean`
+
+#### Defined in
+
+[src/types/models.ts:31](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L31)
+
+___
+
+### name
+
+• **name**: `string`
 
 #### Defined in
 
@@ -58,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:31](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L31)
+[src/types/models.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L32)
 
 ___
 
@@ -75,4 +86,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:34](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L34)
+[src/types/models.ts:35](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L35)

@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L49)
+[src/types/models.ts:50](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L50)
