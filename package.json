@@ -20,7 +20,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "cjs-wrapper.js"
   ],
   "dependencies": {
     "axios": "0.25.0"
