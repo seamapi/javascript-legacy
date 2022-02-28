@@ -17,6 +17,7 @@
 ### Properties
 
 - [accessCodes](default.md#accesscodes)
+- [actionAttempts](default.md#actionattempts)
 - [client](default.md#client)
 - [connectWebviews](default.md#connectwebviews)
 - [connectedAccounts](default.md#connectedaccounts)
@@ -47,7 +48,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/index.ts:13](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L13)
+[src/index.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L9)
 
 ## Properties
 
@@ -59,8 +60,9 @@ Routes.constructor
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`params`: [`AccessCodeCreateRequest`](../modules.md#accesscodecreaterequest)) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ActionAttempt`](../interfaces/ActionAttempt.md)\>\> |
-| `list` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`AccessCodesListResponse`](../interfaces/AccessCodesListResponse.md)\>\> |
+| `create` | (`params`: [`AccessCodeCreateRequest`](../modules.md#accesscodecreaterequest)) => `Promise`<[`AccessCode`](../interfaces/AccessCode.md)\> |
+| `delete` | (`params`: [`AccessCodeDeleteRequest`](../modules.md#accesscodedeleterequest)) => `Promise`<[`Workspace`](../interfaces/Workspace.md) \| [`Workspace`](../interfaces/Workspace.md)[] \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\> \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[] \| [`ActionAttempt`](../modules.md#actionattempt)<`any`\> \| [`AccessCode`](../interfaces/AccessCode.md) \| [`AccessCode`](../interfaces/AccessCode.md)[] \| [`Device`](../interfaces/Device.md)<`any`, `any`\> \| [`Device`](../interfaces/Device.md)<`any`, `any`\>[] \| [`ConnectWebview`](../interfaces/ConnectWebview.md) \| [`ConnectWebview`](../interfaces/ConnectWebview.md)[] \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md) \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
+| `list` | (`params`: { `device_id?`: `string`  }) => `Promise`<[`AccessCode`](../interfaces/AccessCode.md)[]\> |
 
 #### Inherited from
 
@@ -68,7 +70,27 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:121](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L121)
+[src/routes.ts:163](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L163)
+
+___
+
+### actionAttempts
+
+• `Readonly` **actionAttempts**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `get` | (`actionAttemptId`: `string`) => `Promise`<[`ActionAttempt`](../modules.md#actionattempt)<`any`\>\> |
+
+#### Inherited from
+
+Routes.actionAttempts
+
+#### Defined in
+
+[src/routes.ts:220](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L220)
 
 ___
 
@@ -78,7 +100,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L11)
+[src/index.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L7)
 
 ___
 
@@ -90,9 +112,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`params`: [`ConnectWebviewCreateRequest`](../interfaces/ConnectWebviewCreateRequest.md)) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewCreateResponse`](../interfaces/ConnectWebviewCreateResponse.md)\>\> |
-| `get` | (`connectWebviewId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewGetResponse`](../interfaces/ConnectWebviewGetResponse.md)\>\> |
-| `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectWebviewsListResponse`](../interfaces/ConnectWebviewsListResponse.md)\>\> |
+| `create` | (`params`: [`ConnectWebviewCreateRequest`](../interfaces/ConnectWebviewCreateRequest.md)) => `Promise`<[`ConnectWebview`](../interfaces/ConnectWebview.md)\> |
+| `get` | (`connectWebviewId`: `string`) => `Promise`<[`ConnectWebview`](../interfaces/ConnectWebview.md)\> |
+| `list` | () => `Promise`<[`ConnectWebview`](../interfaces/ConnectWebview.md)[]\> |
 
 #### Inherited from
 
@@ -100,7 +122,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:101](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L101)
+[src/routes.ts:143](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L143)
 
 ___
 
@@ -112,8 +134,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`connectedAccountId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectedAccountsGetResponse`](../interfaces/ConnectedAccountsGetResponse.md)\>\> |
-| `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ConnectedAccountsListResponse`](../interfaces/ConnectedAccountsListResponse.md)\>\> |
+| `get` | (`connectedAccountId`: `string`) => `Promise`<[`ConnectedAccount`](../interfaces/ConnectedAccount.md)\> |
+| `list` | () => `Promise`<[`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
 
 #### Inherited from
 
@@ -121,7 +143,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:158](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L158)
+[src/routes.ts:205](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L205)
 
 ___
 
@@ -133,8 +155,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LockGetResponse`](../interfaces/LockGetResponse.md)\>\> |
-| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`DevicesListResponse`](../interfaces/DevicesListResponse.md)\>\> |
+| `get` | (`deviceId`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<`any`, `any`\>\> |
+| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<`any`, `any`\>[]\> |
 
 #### Inherited from
 
@@ -142,7 +164,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:82](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L82)
+[src/routes.ts:124](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L124)
 
 ___
 
@@ -154,10 +176,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LockGetResponse`](../interfaces/LockGetResponse.md)\>\> |
-| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`LocksListResponse`](../interfaces/LocksListResponse.md)\>\> |
-| `lockDoor` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ActionAttempt`](../interfaces/ActionAttempt.md)\>\> |
-| `unlockDoor` | (`deviceId`: `string`) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ActionAttempt`](../interfaces/ActionAttempt.md)\>\> |
+| `get` | (`deviceId`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>\> |
+| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[]\> |
+| `lockDoor` | (`deviceId`: `string`) => `Promise`<[`Workspace`](../interfaces/Workspace.md) \| [`Workspace`](../interfaces/Workspace.md)[] \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\> \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[] \| [`ActionAttempt`](../modules.md#actionattempt)<`any`\> \| [`AccessCode`](../interfaces/AccessCode.md) \| [`AccessCode`](../interfaces/AccessCode.md)[] \| [`Device`](../interfaces/Device.md)<`any`, `any`\> \| [`Device`](../interfaces/Device.md)<`any`, `any`\>[] \| [`ConnectWebview`](../interfaces/ConnectWebview.md) \| [`ConnectWebview`](../interfaces/ConnectWebview.md)[] \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md) \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
+| `unlockDoor` | (`deviceId`: `string`) => `Promise`<[`Workspace`](../interfaces/Workspace.md) \| [`Workspace`](../interfaces/Workspace.md)[] \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\> \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[] \| [`ActionAttempt`](../modules.md#actionattempt)<`any`\> \| [`AccessCode`](../interfaces/AccessCode.md) \| [`AccessCode`](../interfaces/AccessCode.md)[] \| [`Device`](../interfaces/Device.md)<`any`, `any`\> \| [`Device`](../interfaces/Device.md)<`any`, `any`\>[] \| [`ConnectWebview`](../interfaces/ConnectWebview.md) \| [`ConnectWebview`](../interfaces/ConnectWebview.md)[] \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md) \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
 
 #### Inherited from
 
@@ -165,7 +187,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:47](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L47)
+[src/routes.ts:89](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L89)
 
 ___
 
@@ -177,9 +199,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspaceGetResponse`](../interfaces/WorkspaceGetResponse.md)\>\> |
-| `list` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspacesListResponse`](../interfaces/WorkspacesListResponse.md)\>\> |
-| `resetSandbox` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspaceResetSandboxResponse`](../interfaces/WorkspaceResetSandboxResponse.md)\>\> |
+| `get` | () => `Promise`<[`Workspace`](../interfaces/Workspace.md)\> |
+| `list` | () => `Promise`<[`Workspace`](../interfaces/Workspace.md)[]\> |
+| `resetSandbox` | () => `Promise`<{ `ok`: ``true``  }\> |
 
 #### Inherited from
 
@@ -187,7 +209,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:31](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L31)
+[src/routes.ts:73](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L73)
 
 ## Methods
 
@@ -217,4 +239,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:34](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L34)
+[src/index.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L30)

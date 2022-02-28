@@ -6,6 +6,7 @@ import {
   LockDevice,
   Workspace,
   ConnectedAccount,
+  LockProperties,
 } from "./models"
 
 // Workspaces
@@ -65,4 +66,9 @@ export interface ConnectedAccountsListResponse {
 }
 export interface ConnectedAccountsGetResponse {
   connected_account: ConnectedAccount
+}
+
+// Action Attempts
+export interface ActionAttemptGetResponse {
+  action_attempt: ActionAttempt
 }

@@ -1,11 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
 import { SeamAPIError } from "./lib/api-error"
 import { Routes } from "./routes"
-import {
-  APIResponse,
-  ErroredAPIResponse,
-  SuccessfulAPIResponse,
-} from "./types/globals"
+import { ErroredAPIResponse, SuccessfulAPIResponse } from "./types/globals"
 
 class Seam extends Routes {
   private client: AxiosInstance

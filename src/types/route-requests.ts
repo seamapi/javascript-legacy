@@ -21,3 +21,8 @@ export type AccessCodeCreateScheduledRequest = {
 export type AccessCodeCreateRequest =
   | AccessCodeCreateOngoingRequest
   | AccessCodeCreateScheduledRequest
+
+export type AccessCodeDeleteRequest = {
+  device_id?: string
+  access_code_id: string
+}

@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:64](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L64)
+[src/types/route-responses.ts:65](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L65)
