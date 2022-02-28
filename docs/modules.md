@@ -14,7 +14,9 @@
 - [APIErrorResponse](interfaces/APIErrorResponse.md)
 - [AccessCode](interfaces/AccessCode.md)
 - [AccessCodesListResponse](interfaces/AccessCodesListResponse.md)
-- [ActionAttempt](interfaces/ActionAttempt.md)
+- [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
+- [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
+- [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
 - [ConnectWebview](interfaces/ConnectWebview.md)
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
@@ -30,7 +32,10 @@
 - [LockGetResponse](interfaces/LockGetResponse.md)
 - [LockProperties](interfaces/LockProperties.md)
 - [LocksListResponse](interfaces/LocksListResponse.md)
+- [PendingActionAttempt](interfaces/PendingActionAttempt.md)
 - [SeamAPIErrorMetadata](interfaces/SeamAPIErrorMetadata.md)
+- [SeamObjectTypeMap](interfaces/SeamObjectTypeMap.md)
+- [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
 - [Workspace](interfaces/Workspace.md)
 - [WorkspaceGetResponse](interfaces/WorkspaceGetResponse.md)
 - [WorkspaceResetSandboxResponse](interfaces/WorkspaceResetSandboxResponse.md)
@@ -43,6 +48,9 @@
 - [AccessCodeCreateRequest](modules.md#accesscodecreaterequest)
 - [AccessCodeCreateResponse](modules.md#accesscodecreateresponse)
 - [AccessCodeCreateScheduledRequest](modules.md#accesscodecreatescheduledrequest)
+- [AccessCodeDeleteRequest](modules.md#accesscodedeleterequest)
+- [ActionAttempt](modules.md#actionattempt)
+- [ActionType](modules.md#actiontype)
 - [DeviceType](modules.md#devicetype)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
@@ -100,11 +108,11 @@ ___
 
 ### AccessCodeCreateResponse
 
-Ƭ **AccessCodeCreateResponse**: [`ActionAttempt`](interfaces/ActionAttempt.md)
+Ƭ **AccessCodeCreateResponse**: [`ActionAttempt`](modules.md#actionattempt)
 
 #### Defined in
 
-[src/types/route-responses.ts:60](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L60)
+[src/types/route-responses.ts:61](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L61)
 
 ___
 
@@ -125,6 +133,49 @@ ___
 #### Defined in
 
 [src/types/route-requests.ts:13](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-requests.ts#L13)
+
+___
+
+### AccessCodeDeleteRequest
+
+Ƭ **AccessCodeDeleteRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `access_code_id` | `string` |
+| `device_id?` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-requests.ts#L25)
+
+___
+
+### ActionAttempt
+
+Ƭ **ActionAttempt**<`T`\>: [`PendingActionAttempt`](interfaces/PendingActionAttempt.md)<`T`\> \| [`ActionAttemptWithError`](interfaces/ActionAttemptWithError.md)<`T`\> \| [`SuccessfulActionAttempt`](interfaces/SuccessfulActionAttempt.md)<`T`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`ActionType`](modules.md#actiontype) = [`ActionType`](modules.md#actiontype) |
+
+#### Defined in
+
+[src/types/models.ts:87](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L87)
+
+___
+
+### ActionType
+
+Ƭ **ActionType**: ``"LOCK_DOOR"`` \| ``"UNLOCK_DOOR"`` \| ``"CREATE_ACCESS_CODE"`` \| ``"DELETE_ACCESS_CODE"``
+
+#### Defined in
+
+[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L49)
 
 ___
 
@@ -160,21 +211,21 @@ ___
 
 ### LockLockDoorResponse
 
-Ƭ **LockLockDoorResponse**: [`ActionAttempt`](interfaces/ActionAttempt.md)
+Ƭ **LockLockDoorResponse**: [`ActionAttempt`](modules.md#actionattempt)
 
 #### Defined in
 
-[src/types/route-responses.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L32)
+[src/types/route-responses.ts:33](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L33)
 
 ___
 
 ### LockUnlockDoorResponse
 
-Ƭ **LockUnlockDoorResponse**: [`ActionAttempt`](interfaces/ActionAttempt.md)
+Ƭ **LockUnlockDoorResponse**: [`ActionAttempt`](modules.md#actionattempt)
 
 #### Defined in
 
-[src/types/route-responses.ts:33](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L33)
+[src/types/route-responses.ts:34](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L34)
 
 ___
 

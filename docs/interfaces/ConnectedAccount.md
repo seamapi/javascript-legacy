@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/models.ts:83](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L83)
+[src/types/models.ts:118](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L118)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:80](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L80)
+[src/types/models.ts:115](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L115)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:81](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L81)
+[src/types/models.ts:116](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L116)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:82](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L82)
+[src/types/models.ts:117](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L117)
