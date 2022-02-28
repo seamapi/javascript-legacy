@@ -59,5 +59,4 @@ console.log(await seam.accessCodes.list({ device_id: myLockId }))
   }
 ]
 */
-
 ```
