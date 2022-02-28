@@ -161,12 +161,10 @@ export abstract class Routes {
   }
 
   public readonly accessCodes = {
-    list: (deviceId: string) =>
+    list: (params: { device_id?: string } = {}) =>
       this.makeRequestAndFormat("access_codes", {
         url: "/access_codes/list",
-        params: {
-          device_id: deviceId,
-        },
+        params,
       }),
 
     create: async (params: AccessCodeCreateRequest) => {
