@@ -70,7 +70,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:160](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L160)
+[src/routes.ts:163](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L163)
 
 ___
 
@@ -90,7 +90,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:219](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L219)
+[src/routes.ts:222](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L222)
 
 ___
 
@@ -122,7 +122,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:140](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L140)
+[src/routes.ts:143](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L143)
 
 ___
 
@@ -143,7 +143,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:204](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L204)
+[src/routes.ts:207](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L207)
 
 ___
 
@@ -164,7 +164,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:121](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L121)
+[src/routes.ts:124](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L124)
 
 ___
 
@@ -187,7 +187,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:86](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L86)
+[src/routes.ts:89](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L89)
 
 ___
 
@@ -209,7 +209,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:70](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L70)
+[src/routes.ts:73](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L73)
 
 ## Methods
 

@@ -13,6 +13,7 @@
 - [connect\_webview\_id](ConnectWebview.md#connect_webview_id)
 - [connected\_account\_id](ConnectWebview.md#connected_account_id)
 - [created\_at](ConnectWebview.md#created_at)
+- [custom\_redirect\_url](ConnectWebview.md#custom_redirect_url)
 - [device\_selection\_mode](ConnectWebview.md#device_selection_mode)
 - [login\_successful](ConnectWebview.md#login_successful)
 - [status](ConnectWebview.md#status)
@@ -27,7 +28,7 @@
 
 #### Defined in
 
-[src/types/models.ts:97](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L97)
+[src/types/models.ts:99](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L99)
 
 ___
 
@@ -37,7 +38,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:96](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L96)
+[src/types/models.ts:98](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L98)
 
 ___
 
@@ -47,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:99](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L99)
+[src/types/models.ts:101](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L101)
 
 ___
 
@@ -57,7 +58,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:98](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L98)
+[src/types/models.ts:100](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L100)
 
 ___
 
@@ -67,17 +68,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:93](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L93)
+[src/types/models.ts:95](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L95)
 
 ___
 
 ### connected\_account\_id
 
-• **connected\_account\_id**: ``null`` \| `string`
+• `Optional` **connected\_account\_id**: ``null`` \| `string`
 
 #### Defined in
 
-[src/types/models.ts:103](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L103)
+[src/types/models.ts:105](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L105)
 
 ___
 
@@ -87,7 +88,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:100](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L100)
+[src/types/models.ts:102](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L102)
+
+___
+
+### custom\_redirect\_url
+
+• `Optional` **custom\_redirect\_url**: ``null`` \| `string`
+
+#### Defined in
+
+[src/types/models.ts:106](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L106)
 
 ___
 
@@ -97,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:95](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L95)
+[src/types/models.ts:97](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L97)
 
 ___
 
@@ -107,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:101](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L101)
+[src/types/models.ts:103](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L103)
 
 ___
 
@@ -117,7 +128,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:102](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L102)
+[src/types/models.ts:104](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L104)
 
 ___
 
@@ -127,7 +138,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:104](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L104)
+[src/types/models.ts:107](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L107)
 
 ___
 
@@ -137,4 +148,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:94](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L94)
+[src/types/models.ts:96](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L96)

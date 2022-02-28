@@ -1,5 +1,6 @@
 export interface Workspace {
   workspace_id: string
+  connect_partner_name?: string
   name: string
   is_sandbox: boolean
 }
@@ -44,6 +45,7 @@ export interface LockProperties {
   }
 }
 
+export type AnyDevice = Device<any, DeviceType>
 export type LockDevice = Device<LockProperties, LockDeviceType>
 
 export type ActionType =
@@ -100,15 +102,18 @@ export interface ConnectWebview {
   created_at: string
   login_successful: boolean
   status: "pending" | "authorized"
-  connected_account_id: null | string
+  connected_account_id?: null | string
+  custom_redirect_url?: null | string
   url: string
 }
 
 export interface AccessCode {
+  access_code_id: string
   code: string
   name: string
   type: "ongoing"
   created_at: string
+  status: "setting" | "set" | "removing" | "unset"
 }
 
 export interface ConnectedAccount {

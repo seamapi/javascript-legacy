@@ -51,6 +51,7 @@
 - [AccessCodeDeleteRequest](modules.md#accesscodedeleterequest)
 - [ActionAttempt](modules.md#actionattempt)
 - [ActionType](modules.md#actiontype)
+- [AnyDevice](modules.md#anydevice)
 - [DeviceType](modules.md#devicetype)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
@@ -165,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:87](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L87)
+[src/types/models.ts:89](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L89)
 
 ___
 
@@ -175,7 +176,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L49)
+[src/types/models.ts:51](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L51)
+
+___
+
+### AnyDevice
+
+Ƭ **AnyDevice**: [`Device`](interfaces/Device.md)<`any`, [`DeviceType`](modules.md#devicetype)\>
+
+#### Defined in
+
+[src/types/models.ts:48](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L48)
 
 ___
 
@@ -185,7 +196,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L9)
+[src/types/models.ts:10](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L10)
 
 ___
 
@@ -195,7 +206,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:47](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L47)
+[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L49)
 
 ___
 
@@ -205,7 +216,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L7)
+[src/types/models.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L8)
 
 ___
 
@@ -235,7 +246,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L8)
+[src/types/models.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L9)
 
 ___
 
@@ -245,7 +256,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:11](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L11)
+[src/types/models.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L12)
 
 ___
 

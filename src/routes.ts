@@ -32,7 +32,7 @@ export abstract class Routes {
   private async awaitActionAttempt<T extends ActionType>(
     actionAttempt: ActionAttempt<T>
   ): Promise<SuccessfulActionAttempt<T>> {
-    while (actionAttempt.status !== "pending") {
+    while (actionAttempt.status === "pending") {
       // TODO use long polling when seam connect supports long polling
       actionAttempt = await this.actionAttempts.get(
         actionAttempt.action_attempt_id
@@ -62,9 +62,12 @@ export abstract class Routes {
       "action_attempt",
       request
     )
-    await this.awaitActionAttempt<T>(pendingActionAttempt)
-    if (innerObjectName === null) return pendingActionAttempt.result
-    return pendingActionAttempt.result[innerObjectName]
+    const successfulActionAttempt = await this.awaitActionAttempt<T>(
+      pendingActionAttempt
+    )
+    console.log({ successfulActionAttempt })
+    if (innerObjectName === null) return successfulActionAttempt.result as any
+    return (successfulActionAttempt as any).result[innerObjectName]
   }
 
   public readonly workspaces = {
