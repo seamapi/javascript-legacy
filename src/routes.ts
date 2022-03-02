@@ -1,11 +1,12 @@
 import { AxiosRequestConfig } from "axios"
+import pRetry from "p-retry"
 import { APIResponse, SuccessfulAPIResponse } from "./types/globals"
 import {
   ActionAttempt,
   SuccessfulActionAttempt,
-  ActionAttemptResultTypeMap,
   ActionType,
   SeamObjectTypeMap,
+  ActionAttemptWithError,
 } from "./types/models"
 import {
   AccessCodeCreateRequest,
@@ -13,8 +14,6 @@ import {
   AccessCodeCreateScheduledRequest,
   ConnectWebviewCreateRequest,
 } from "./types/route-requests"
-
-type Promisable<T> = T | Promise<T>
 
 export abstract class Routes {
   public abstract makeRequest<T>(
@@ -31,16 +30,22 @@ export abstract class Routes {
 
   private async awaitActionAttempt<T extends ActionType>(
     actionAttempt: ActionAttempt<T>
-  ): Promise<SuccessfulActionAttempt<T>> {
-    while (actionAttempt.status === "pending") {
-      // TODO use long polling when seam connect supports long polling
-      actionAttempt = await this.actionAttempts.get(
-        actionAttempt.action_attempt_id
-      )
-      if (actionAttempt.status !== "pending") break
-      await new Promise((resolve) => setTimeout(resolve, 250))
-    }
-    return actionAttempt as SuccessfulActionAttempt<T>
+  ): Promise<SuccessfulActionAttempt<T> | ActionAttemptWithError<T>> {
+    // TODO use long polling when seam connect supports long polling
+    return pRetry(
+      async () => {
+        const updatedActionAttempt = await this.actionAttempts.get(
+          actionAttempt.action_attempt_id
+        )
+
+        if (updatedActionAttempt.status === "pending") {
+          throw new Error("Action attempt is still pending")
+        }
+
+        return updatedActionAttempt
+      },
+      { factor: 1, minTimeout: 250, maxRetryTime: 60 * 1000 }
+    )
   }
 
   private async makeRequestAndFormat<T extends keyof SeamObjectTypeMap>(
@@ -65,7 +70,6 @@ export abstract class Routes {
     const successfulActionAttempt = await this.awaitActionAttempt<T>(
       pendingActionAttempt
     )
-    console.log({ successfulActionAttempt })
     if (innerObjectName === null) return successfulActionAttempt.result as any
     return (successfulActionAttempt as any).result[innerObjectName]
   }
