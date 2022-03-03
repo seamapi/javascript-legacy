@@ -7,6 +7,7 @@
 ### Classes
 
 - [SeamAPIError](classes/SeamAPIError.md)
+- [SeamActionAttemptError](classes/SeamActionAttemptError.md)
 - [default](classes/default.md)
 
 ### Interfaces

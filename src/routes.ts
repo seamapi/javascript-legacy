@@ -13,6 +13,7 @@ import {
   AccessCodeCreateScheduledRequest,
   ConnectWebviewCreateRequest,
 } from "./types/route-requests"
+import { SeamActionAttemptError } from "./lib/api-error"
 
 type Promisable<T> = T | Promise<T>
 
@@ -40,6 +41,13 @@ export abstract class Routes {
       if (actionAttempt.status !== "pending") break
       await new Promise((resolve) => setTimeout(resolve, 250))
     }
+    if (actionAttempt.status === "error") {
+      throw new SeamActionAttemptError(
+        actionAttempt.error.type,
+        actionAttempt.error.message,
+        actionAttempt.action_type
+      )
+    }
     return actionAttempt as SuccessfulActionAttempt<T>
   }
 
@@ -62,11 +70,9 @@ export abstract class Routes {
       "action_attempt",
       request
     )
-    const successfulActionAttempt = await this.awaitActionAttempt<T>(
-      pendingActionAttempt
-    )
-    if (innerObjectName === null) return successfulActionAttempt.result as any
-    return (successfulActionAttempt as any).result[innerObjectName]
+    const actionAttempt = await this.awaitActionAttempt<T>(pendingActionAttempt)
+    if (innerObjectName === null) return actionAttempt.result as any
+    return (actionAttempt as any).result[innerObjectName]
   }
 
   public readonly workspaces = {
@@ -170,8 +176,8 @@ export abstract class Routes {
       const parsedParams: any = Object.assign({}, params)
 
       if (
-        typeof (params as AccessCodeCreateScheduledRequest).starts_at ===
-        "object"
+        (params as AccessCodeCreateScheduledRequest).starts_at === "object" &&
+        (params as AccessCodeCreateScheduledRequest).starts_at !== null
       ) {
         parsedParams.starts_at = (
           (params as AccessCodeCreateScheduledRequest).starts_at as Date
@@ -179,7 +185,9 @@ export abstract class Routes {
       }
 
       if (
-        typeof (params as AccessCodeCreateScheduledRequest).ends_at === "object"
+        typeof (params as AccessCodeCreateScheduledRequest).ends_at ===
+          "object" &&
+        (params as AccessCodeCreateScheduledRequest).starts_at !== null
       ) {
         parsedParams.ends_at = (
           (params as AccessCodeCreateScheduledRequest).ends_at as Date
