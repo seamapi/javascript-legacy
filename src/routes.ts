@@ -65,7 +65,6 @@ export abstract class Routes {
     const successfulActionAttempt = await this.awaitActionAttempt<T>(
       pendingActionAttempt
     )
-    console.log({ successfulActionAttempt })
     if (innerObjectName === null) return successfulActionAttempt.result as any
     return (successfulActionAttempt as any).result[innerObjectName]
   }
