@@ -1,7 +1,6 @@
-#!/usr/bin/env node
 import commonOptions from "./global-options"
 
-commonOptions
+export const cli = commonOptions
   .commandDir("./commands", {
     extensions: [process.env.NODE_ENV === "production" ? "js" : "ts"],
     visit: (command) => {
@@ -9,4 +8,4 @@ commonOptions
     },
   })
   .demandCommand()
-  .parse()
+  .strict()
