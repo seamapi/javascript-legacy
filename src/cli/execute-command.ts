@@ -2,6 +2,7 @@ import ora from "ora"
 import { paramCase } from "change-case"
 import Seam, { SeamAPIError } from ".."
 
+// todo: tighten types for args
 const executeCommand = async (
   methodName: string,
   args: any[],
