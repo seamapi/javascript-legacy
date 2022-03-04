@@ -16,6 +16,7 @@ const parserWithOptions = parser
     describe: "Output JSON",
     type: "boolean",
   })
+  .group(["api-key", "quiet", "json", "help", "version"], "Global Options:")
 
 export default parserWithOptions
 

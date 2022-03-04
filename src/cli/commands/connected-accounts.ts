@@ -3,7 +3,7 @@ import { YargsWithGlobalOptions } from "../global-options"
 
 export default {
   command: "connected-accounts",
-  aliases: ["ca", "connected-account"],
+  aliases: ["connected-account", "ca"],
   describe: "interact with connected accounts",
   builder: (yargs: YargsWithGlobalOptions) => {
     yargs

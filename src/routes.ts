@@ -65,7 +65,6 @@ export abstract class Routes {
     const successfulActionAttempt = await this.awaitActionAttempt<T>(
       pendingActionAttempt
     )
-    console.log({ successfulActionAttempt })
     if (innerObjectName === null) return successfulActionAttempt.result as any
     return (successfulActionAttempt as any).result[innerObjectName]
   }
@@ -161,7 +160,7 @@ export abstract class Routes {
   }
 
   public readonly accessCodes = {
-    list: (params: { device_id?: string } = {}) =>
+    list: (params: { device_id: string }) =>
       this.makeRequestAndFormat("access_codes", {
         url: "/access_codes/list",
         params,

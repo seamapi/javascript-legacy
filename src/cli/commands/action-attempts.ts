@@ -3,7 +3,7 @@ import { YargsWithGlobalOptions } from "../global-options"
 
 export default {
   command: "action-attempts",
-  aliases: ["aa", "action-attempt"],
+  aliases: ["action-attempt", "aa"],
   describe: "interact with action attempts",
   builder: (yargs: YargsWithGlobalOptions) => {
     yargs.demandCommand().command(

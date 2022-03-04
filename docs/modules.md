@@ -89,7 +89,7 @@ ___
 | :------ | :------ |
 | `code?` | `string` |
 | `device_id` | `string` |
-| `name` | `string` |
+| `name?` | `string` |
 
 #### Defined in
 
