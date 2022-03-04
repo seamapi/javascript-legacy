@@ -17,3 +17,21 @@ export class SeamAPIError extends Error {
     return `SeamAPIError: ${this.status}, ${this.metadata?.message} (${this.metadata?.type})`
   }
 }
+
+export class SeamActionAttemptError extends Error {
+  constructor(
+    public type: string,
+    public message: string,
+    public action_type: string
+  ) {
+    super(`${type} performing ${action_type}: ${message}`)
+
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor)
+    }
+  }
+
+  toString() {
+    return `SeamActionAttemptError: ${this.type} performing ${this.action_type}: ${this.message}`
+  }
+}
