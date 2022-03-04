@@ -12,6 +12,7 @@ import {
   AccessCodeDeleteRequest,
   AccessCodeCreateScheduledRequest,
   ConnectWebviewCreateRequest,
+  DeviceUpdateRequest,
 } from "./types/route-requests"
 import { SeamActionAttemptError } from "./lib/api-error"
 
@@ -142,6 +143,12 @@ export abstract class Routes {
         params: {
           device_id: deviceId,
         },
+      }),
+    update: (params: DeviceUpdateRequest) =>
+      this.makeRequestAndFormat("device", {
+        url: "/devices/update",
+        method: "PATCH",
+        data: params,
       }),
   }
 

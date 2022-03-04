@@ -28,6 +28,7 @@
 - [ConnectedAccountsListResponse](interfaces/ConnectedAccountsListResponse.md)
 - [Device](interfaces/Device.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
+- [DeviceProperties](interfaces/DeviceProperties.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
 - [ErroredAPIResponse](interfaces/ErroredAPIResponse.md)
 - [LockGetResponse](interfaces/LockGetResponse.md)
@@ -54,6 +55,7 @@
 - [ActionType](modules.md#actiontype)
 - [AnyDevice](modules.md#anydevice)
 - [DeviceType](modules.md#devicetype)
+- [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [LockLockDoorResponse](modules.md#locklockdoorresponse)
@@ -198,6 +200,25 @@ ___
 #### Defined in
 
 [src/types/models.ts:10](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L10)
+
+___
+
+### DeviceUpdateRequest
+
+Ƭ **DeviceUpdateRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `device_id` | `string` |
+| `location?` | `object` |
+| `name?` | `string` |
+| `properties?` | [`DeviceProperties`](interfaces/DeviceProperties.md) |
+
+#### Defined in
+
+[src/types/route-requests.ts:30](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-requests.ts#L30)
 
 ___
 

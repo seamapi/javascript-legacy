@@ -145,3 +145,7 @@ export interface ActionAttemptResultTypeMap {
   CREATE_ACCESS_CODE: { access_code: AccessCode }
   DELETE_ACCESS_CODE: {}
 }
+
+export interface DeviceProperties {
+  name?: string
+}
