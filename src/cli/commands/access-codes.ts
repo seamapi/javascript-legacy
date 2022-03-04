@@ -15,6 +15,7 @@ export default {
           return yargs.option("device-id", {
             describe: "filter by device ID",
             demandOption: true,
+            type: "string",
           })
         },
         async (argv) => {
@@ -37,9 +38,11 @@ export default {
             .option("device-id", {
               describe: "the device ID",
               demandOption: true,
+              type: "string",
             })
             .option("name", {
               describe: "the name of the access code",
+              type: "string",
             })
             .option("code", {
               describe: "the code",
@@ -80,6 +83,7 @@ export default {
           return yargs.positional("id", {
             describe: "the access code ID",
             demandOption: true,
+            type: "string",
           })
         },
         async (argv) => {

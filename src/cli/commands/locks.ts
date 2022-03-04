@@ -15,6 +15,7 @@ export default {
           return yargs.positional("id", {
             describe: "the lock ID",
             demandOption: true,
+            type: "string",
           })
         },
         async (argv) => {
@@ -42,6 +43,7 @@ export default {
           return yargs.positional("id", {
             describe: "the lock ID",
             demandOption: true,
+            type: "string",
           })
         },
         async (argv) => {
@@ -55,6 +57,7 @@ export default {
           return yargs.positional("id", {
             describe: "the lock ID",
             demandOption: true,
+            type: "string",
           })
         },
         async (argv) => {

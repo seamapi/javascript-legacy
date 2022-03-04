@@ -15,6 +15,7 @@ export default {
           return yargs.positional("id", {
             describe: "the device ID",
             demandOption: true,
+            type: "string",
           })
         },
         async (argv) => {

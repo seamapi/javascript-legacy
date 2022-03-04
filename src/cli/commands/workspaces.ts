@@ -9,16 +9,11 @@ export default {
     yargs
       .demandCommand()
       .command(
-        "get <id>",
-        "get a workspace",
-        (yargs) => {
-          return yargs.positional("id", {
-            describe: "the workspace ID",
-            demandOption: true,
-          })
-        },
+        "get",
+        "get the workspace associated with the current API key",
+        () => {},
         async (argv) => {
-          await executeCommand("workspaces.get", [argv.id], argv)
+          await executeCommand("workspaces.get", [], argv)
         }
       )
       .command(

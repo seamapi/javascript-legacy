@@ -24,6 +24,7 @@ export default {
           return yargs.positional("id", {
             describe: "the connect webview ID",
             demandOption: true,
+            type: "string",
           })
         },
         async (argv) => {
@@ -56,7 +57,7 @@ export default {
             "connectWebviews.create",
             [
               {
-                accepted_providers: argv["accepted-providers"],
+                accepted_providers: argv["accepted-providers"] as Provider[],
               },
             ],
             argv

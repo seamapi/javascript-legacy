@@ -23,6 +23,7 @@ export default {
           return yargs.positional("id", {
             describe: "the connected account ID",
             demandOption: true,
+            type: "string",
           })
         },
         async (argv) => {

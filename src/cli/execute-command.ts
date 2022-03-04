@@ -1,11 +1,15 @@
 import ora from "ora"
+import { Get } from "type-fest"
 import { paramCase } from "change-case"
 import Seam, { SeamAPIError } from ".."
 
-// todo: tighten types for args
-const executeCommand = async (
-  methodName: string,
-  args: any[],
+type ParametersByPath<Path extends string> = Parameters<
+  Exclude<Get<Seam, Path>, Seam>
+>
+
+const executeCommand = async <MethodPath extends string>(
+  methodName: MethodPath,
+  args: ParametersByPath<MethodPath>,
   executeArgs: { json?: boolean; quiet?: boolean }
 ) => {
   const displaySpinner = !(executeArgs.quiet || executeArgs.json)

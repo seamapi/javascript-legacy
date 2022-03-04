@@ -13,6 +13,7 @@ export default {
         return yargs.positional("id", {
           describe: "the action attempt ID",
           demandOption: true,
+          type: "string",
         })
       },
       async (argv) => {
