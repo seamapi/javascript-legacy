@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 import commonOptions from "./global-options"
 
-// todo: bash auto-completion
-
 commonOptions
   .commandDir("./commands", {
-    extensions: ["ts"],
+    extensions: [process.env.NODE_ENV === "production" ? "js" : "ts"],
     visit: (command) => {
       return command.default
     },

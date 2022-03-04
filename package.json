@@ -69,7 +69,12 @@
     "format:check": "prettier --check .",
     "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
     "test": "npm run build:json-response-schemas && ava",
-    "test:watch": "npm run build:json-response-schemas && ava --watch"
+    "test:watch": "npm run build:json-response-schemas && ava --watch",
+    "cli:dev": "esr src/cli/index.ts"
+  },
+  "bin": {
+    "seamapi": "./dist/cli/index.js",
+    "seam": "./dist/cli/index.js"
   },
   "repository": "https://github.com/hello-seam/seamapi-javascript"
 }
