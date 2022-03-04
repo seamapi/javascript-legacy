@@ -12,7 +12,7 @@
 
 ### accepted\_providers
 
-• **accepted\_providers**: [`Provider`](../modules.md#provider)[]
+• **accepted\_providers**: [`Provider`](../enums/Provider.md)[]
 
 #### Defined in
 

@@ -9,12 +9,13 @@ export type LockDeviceType = "august_lock" | "schlage_lock" | "yale_lock"
 export type NoiseDetectionDeviceType = "noiseaware_activity_zone"
 export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
 
-export type Provider =
-  | "august"
-  | "schlage"
-  | "yale"
-  | "noiseaware"
-  | "smartthings"
+export enum Provider {
+  AUGUST = "august",
+  SCHLAGE = "schlage",
+  YALE = "yale",
+  NOISEAWARE = "noiseaware",
+  SMARTTHINGS = "smartthings",
+}
 
 export interface Device<Properties, Type = DeviceType> {
   device_id: string

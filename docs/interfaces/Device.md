@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/types/models.ts:26](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L26)
+[src/types/models.ts:27](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L27)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L25)
+[src/types/models.ts:26](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L26)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:27](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L27)
+[src/types/models.ts:28](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L28)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:20](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L20)
+[src/types/models.ts:21](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L21)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L24)
+[src/types/models.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L25)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:23](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L23)
+[src/types/models.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L24)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:22](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L22)
+[src/types/models.ts:23](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L23)
 
 ___
 
@@ -100,4 +100,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:21](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L21)
+[src/types/models.ts:22](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L22)
