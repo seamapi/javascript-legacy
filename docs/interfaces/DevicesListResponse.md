@@ -12,8 +12,8 @@
 
 ### devices
 
-• **devices**: [`Device`](Device.md)<`unknown`, [`DeviceType`](../modules.md#devicetype)\>[]
+• **devices**: [`Device`](Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), [`DeviceType`](../modules.md#devicetype)\>[]
 
 #### Defined in
 
-[src/types/route-responses.ts:38](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L38)
+[src/types/route-responses.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L39)

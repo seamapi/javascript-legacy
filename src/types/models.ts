@@ -16,7 +16,14 @@ export type Provider =
   | "noiseaware"
   | "smartthings"
 
-export interface Device<Properties, Type = DeviceType> {
+export type CommonDeviceProperties = {
+  name: string
+  online: boolean
+}
+export interface Device<
+  Properties extends CommonDeviceProperties,
+  Type = DeviceType
+> {
   device_id: string
   workspace_id: string
   properties: Properties
@@ -27,10 +34,8 @@ export interface Device<Properties, Type = DeviceType> {
   created_at: string
 }
 
-export interface LockProperties {
-  name: string
+export interface LockProperties extends CommonDeviceProperties {
   locked: boolean
-  online: boolean
   door_open?: boolean
 
   schlage_metadata?: {
@@ -144,8 +149,4 @@ export interface ActionAttemptResultTypeMap {
   UNLOCK_DOOR: {}
   CREATE_ACCESS_CODE: { access_code: AccessCode }
   DELETE_ACCESS_CODE: {}
-}
-
-export interface DeviceProperties {
-  name?: string
 }

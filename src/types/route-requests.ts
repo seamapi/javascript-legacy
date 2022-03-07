@@ -1,4 +1,4 @@
-import { DeviceProperties, Provider } from "./models"
+import { CommonDeviceProperties, Provider } from "./models"
 
 export interface ConnectWebviewCreateRequest {
   accepted_providers: Provider[]
@@ -29,7 +29,7 @@ export type AccessCodeDeleteRequest = {
 
 export type DeviceUpdateRequest = {
   device_id: string
-  properties?: DeviceProperties
+  properties?: Partial<CommonDeviceProperties>
   name?: string
   location?: object
 }

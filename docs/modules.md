@@ -28,7 +28,6 @@
 - [ConnectedAccountsListResponse](interfaces/ConnectedAccountsListResponse.md)
 - [Device](interfaces/Device.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
-- [DeviceProperties](interfaces/DeviceProperties.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
 - [ErroredAPIResponse](interfaces/ErroredAPIResponse.md)
 - [LockGetResponse](interfaces/LockGetResponse.md)
@@ -54,6 +53,7 @@
 - [ActionAttempt](modules.md#actionattempt)
 - [ActionType](modules.md#actiontype)
 - [AnyDevice](modules.md#anydevice)
+- [CommonDeviceProperties](modules.md#commondeviceproperties)
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [LockDevice](modules.md#lockdevice)
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:61](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L61)
+[src/types/route-responses.ts:62](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L62)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:89](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L89)
+[src/types/models.ts:94](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L94)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:51](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L51)
+[src/types/models.ts:56](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L56)
 
 ___
 
@@ -189,7 +189,24 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:48](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L48)
+[src/types/models.ts:53](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L53)
+
+___
+
+### CommonDeviceProperties
+
+Ƭ **CommonDeviceProperties**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `online` | `boolean` |
+
+#### Defined in
+
+[src/types/models.ts:19](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L19)
 
 ___
 
@@ -214,7 +231,7 @@ ___
 | `device_id` | `string` |
 | `location?` | `object` |
 | `name?` | `string` |
-| `properties?` | [`DeviceProperties`](interfaces/DeviceProperties.md) |
+| `properties?` | `Partial`<[`CommonDeviceProperties`](modules.md#commondeviceproperties)\> |
 
 #### Defined in
 
@@ -228,7 +245,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L49)
+[src/types/models.ts:54](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L54)
 
 ___
 
@@ -248,7 +265,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:33](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L33)
+[src/types/route-responses.ts:34](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L34)
 
 ___
 
@@ -258,7 +275,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:34](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L34)
+[src/types/route-responses.ts:35](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/route-responses.ts#L35)
 
 ___
 

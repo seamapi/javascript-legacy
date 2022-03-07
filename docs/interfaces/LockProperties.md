@@ -2,6 +2,12 @@
 
 # Interface: LockProperties
 
+## Hierarchy
+
+- [`CommonDeviceProperties`](../modules.md#commondeviceproperties)
+
+  ↳ **`LockProperties`**
+
 ## Table of contents
 
 ### Properties
@@ -29,7 +35,7 @@
 
 #### Defined in
 
-[src/types/models.ts:41](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L41)
+[src/types/models.ts:46](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L46)
 
 ___
 
@@ -39,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:34](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L34)
+[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L39)
 
 ___
 
@@ -49,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:32](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L32)
+[src/types/models.ts:38](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L38)
 
 ___
 
@@ -57,9 +63,13 @@ ___
 
 • **name**: `string`
 
+#### Inherited from
+
+CommonDeviceProperties.name
+
 #### Defined in
 
-[src/types/models.ts:31](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L31)
+[src/types/models.ts:20](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L20)
 
 ___
 
@@ -67,9 +77,13 @@ ___
 
 • **online**: `boolean`
 
+#### Inherited from
+
+CommonDeviceProperties.online
+
 #### Defined in
 
-[src/types/models.ts:33](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L33)
+[src/types/models.ts:21](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L21)
 
 ___
 
@@ -86,4 +100,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:36](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L36)
+[src/types/models.ts:41](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L41)

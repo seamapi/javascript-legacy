@@ -36,7 +36,7 @@ ActionAttemptBase.action\_attempt\_id
 
 #### Defined in
 
-[src/types/models.ts:58](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L58)
+[src/types/models.ts:63](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L63)
 
 ___
 
@@ -50,7 +50,7 @@ ActionAttemptBase.action\_type
 
 #### Defined in
 
-[src/types/models.ts:59](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L59)
+[src/types/models.ts:64](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L64)
 
 ___
 
@@ -64,7 +64,7 @@ ActionAttemptBase.error
 
 #### Defined in
 
-[src/types/models.ts:69](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L69)
+[src/types/models.ts:74](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L74)
 
 ___
 
@@ -78,7 +78,7 @@ ActionAttemptBase.result
 
 #### Defined in
 
-[src/types/models.ts:68](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L68)
+[src/types/models.ts:73](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L73)
 
 ___
 
@@ -92,4 +92,4 @@ ActionAttemptBase.status
 
 #### Defined in
 
-[src/types/models.ts:67](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L67)
+[src/types/models.ts:72](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L72)
