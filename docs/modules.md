@@ -4,6 +4,10 @@
 
 ## Table of contents
 
+### Enumerations
+
+- [Provider](enums/Provider.md)
+
 ### Classes
 
 - [SeamAPIError](classes/SeamAPIError.md)
@@ -59,7 +63,6 @@
 - [LockLockDoorResponse](modules.md#locklockdoorresponse)
 - [LockUnlockDoorResponse](modules.md#lockunlockdoorresponse)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
-- [Provider](modules.md#provider)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
 
 ## Type aliases
@@ -90,7 +93,7 @@ ___
 | :------ | :------ |
 | `code?` | `string` |
 | `device_id` | `string` |
-| `name` | `string` |
+| `name?` | `string` |
 
 #### Defined in
 
@@ -167,7 +170,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:89](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L89)
+[src/types/models.ts:90](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L90)
 
 ___
 
@@ -177,7 +180,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:51](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L51)
+[src/types/models.ts:52](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L52)
 
 ___
 
@@ -187,7 +190,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:48](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L48)
+[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L49)
 
 ___
 
@@ -207,7 +210,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:49](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L49)
+[src/types/models.ts:50](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L50)
 
 ___
 
@@ -248,16 +251,6 @@ ___
 #### Defined in
 
 [src/types/models.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L9)
-
-___
-
-### Provider
-
-Ƭ **Provider**: ``"august"`` \| ``"schlage"`` \| ``"yale"`` \| ``"noiseaware"`` \| ``"smartthings"``
-
-#### Defined in
-
-[src/types/models.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L12)
 
 ___
 

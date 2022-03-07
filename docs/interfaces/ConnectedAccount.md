@@ -15,11 +15,11 @@
 
 ### account\_type
 
-• **account\_type**: [`Provider`](../modules.md#provider)
+• **account\_type**: [`Provider`](../enums/Provider.md)
 
 #### Defined in
 
-[src/types/models.ts:123](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L123)
+[src/types/models.ts:124](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L124)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:120](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L120)
+[src/types/models.ts:121](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L121)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:121](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L121)
+[src/types/models.ts:122](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L122)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:122](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L122)
+[src/types/models.ts:123](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L123)
