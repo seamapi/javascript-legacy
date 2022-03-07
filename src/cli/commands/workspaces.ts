@@ -1,17 +1,18 @@
-import executeCommand from "../execute-command"
-import { YargsWithGlobalOptions } from "../global-options"
+import { CommandModule } from "yargs"
+import executeCommand from "../lib/execute-command"
+import { GlobalOptions } from "../lib/global-options"
 
-export default {
+const command: CommandModule<GlobalOptions> = {
   command: "workspaces",
   aliases: ["workspace"],
   describe: "interact with workspaces",
-  builder: (yargs: YargsWithGlobalOptions) => {
-    yargs
+  builder: (yargs) => {
+    return yargs
       .demandCommand()
       .command(
         "get",
         "get the workspace associated with the current API key",
-        () => {},
+        (yargs) => yargs,
         async (argv) => {
           await executeCommand("workspaces.get", [], argv)
         }
@@ -19,7 +20,7 @@ export default {
       .command(
         "list",
         "list workspaces",
-        () => {},
+        (yargs) => yargs,
         async (argv) => {
           await executeCommand("workspaces.list", [], argv)
         }
@@ -27,10 +28,13 @@ export default {
       .command(
         "reset-sandbox",
         "reset the sandbox associated with the current API key",
-        () => {},
+        (yargs) => yargs,
         async (argv) => {
           await executeCommand("workspaces.resetSandbox", [], argv)
         }
       )
   },
+  handler: () => {},
 }
+
+export default command

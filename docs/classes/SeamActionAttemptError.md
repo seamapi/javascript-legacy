@@ -49,7 +49,7 @@ Error.constructor
 
 #### Defined in
 
-[src/lib/api-error.ts:22](https://github.com/seamapi/seamapi-javascript/blob/main/src/lib/api-error.ts#L22)
+[src/lib/api-error.ts:22](https://github.com/hello-seam/seamapi-javascript/blob/main/src/lib/api-error.ts#L22)
 
 ## Properties
 
@@ -160,7 +160,7 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Defined in
 
-[src/lib/api-error.ts:34](https://github.com/seamapi/seamapi-javascript/blob/main/src/lib/api-error.ts#L34)
+[src/lib/api-error.ts:34](https://github.com/hello-seam/seamapi-javascript/blob/main/src/lib/api-error.ts#L34)
 
 ___
 

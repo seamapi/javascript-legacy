@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/types/globals.ts:13](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/globals.ts#L13)
+[src/types/globals.ts:13](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/globals.ts#L13)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/types/globals.ts:12](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/globals.ts#L12)
+[src/types/globals.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/globals.ts#L12)

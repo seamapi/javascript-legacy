@@ -1,11 +1,16 @@
-import commonOptions from "./global-options"
+import type { Argv } from "yargs"
+import * as commands from "./commands"
+import { getParserWithOptions } from "./lib/global-options"
 
-export const cli = commonOptions
-  .commandDir("./commands", {
-    extensions: [process.env.NODE_ENV === "production" ? "js" : "ts"],
-    visit: (command) => {
-      return command.default
-    },
-  })
-  .demandCommand()
-  .strict()
+export const getCLI = (yargs: Argv) => {
+  let builder = getParserWithOptions(yargs)
+
+  // We import commands manually instead of using `.commandDir()` so bundling works
+  for (const command of Object.values(commands)) {
+    builder = builder.command(command.default as any)
+  }
+
+  builder = builder.demandCommand().strict()
+
+  return builder
+}
