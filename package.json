@@ -23,6 +23,11 @@
       "require": "./dist/cli/index.js",
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"
+    },
+    "./cli/browser": {
+      "require": "./dist/cli/browser.js",
+      "import": "./dist/cli/browser.mjs",
+      "types": "./dist/cli/browser.d.ts"
     }
   },
   "files": [
@@ -46,6 +51,7 @@
     "ajv": "8.9.0",
     "ava": "4.0.1",
     "esbuild": "0.14.18",
+    "esbuild-plugin-cache": "0.2.9",
     "esbuild-runner": "2.2.1",
     "husky": ">=6",
     "knex": "1.0.2",
@@ -66,19 +72,18 @@
     "*.{ts,css,md}": "prettier --write"
   },
   "pkg": {
-    "outputPath": "cli-binaries",
-    "assets": "./dist/cli/commands/**/*"
+    "outputPath": "cli-binaries"
   },
   "scripts": {
     "prepare": "husky install",
     "prepack": "npm run build && npm run pack:cli",
     "build:package": "tsup",
     "build:docs": "typedoc",
+    "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
     "build": "npm run build:package && npm run build:docs",
     "pack:cli": "pkg -c package.json dist/cli/entry.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
     "test": "npm run build:json-response-schemas && ava",
     "test:watch": "npm run build:json-response-schemas && ava --watch",
     "cli:dev": "esr src/cli/entry.ts"
