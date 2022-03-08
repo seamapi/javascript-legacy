@@ -1,13 +1,14 @@
+import { CommandModule } from "yargs"
 import { Provider } from "../../types/models"
-import executeCommand from "../execute-command"
-import { YargsWithGlobalOptions } from "../global-options"
+import executeCommand from "../lib/execute-command"
+import { GlobalOptions } from "../lib/global-options"
 
-export default {
+const command: CommandModule<GlobalOptions> = {
   command: "connect-webviews",
   aliases: ["connect-webview", "cw"],
   describe: "interact with connect webviews",
-  builder: (yargs: YargsWithGlobalOptions) => {
-    yargs
+  builder: (yargs) => {
+    return yargs
       .demandCommand()
       .command(
         "list",
@@ -65,4 +66,7 @@ export default {
         }
       )
   },
+  handler: () => {},
 }
+
+export default command

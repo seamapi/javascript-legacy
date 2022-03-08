@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import { cli } from "./index"
+import yargs from "yargs/yargs"
+import { hideBin } from "yargs/helpers"
+import { getCLI } from "./index"
 
-cli.parse()
+getCLI(yargs()).parse(hideBin(process.argv))

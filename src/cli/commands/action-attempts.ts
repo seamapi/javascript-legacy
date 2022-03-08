@@ -1,12 +1,13 @@
-import executeCommand from "../execute-command"
-import { YargsWithGlobalOptions } from "../global-options"
+import { CommandModule } from "yargs"
+import executeCommand from "../lib/execute-command"
+import { GlobalOptions } from "../lib/global-options"
 
-export default {
+const command: CommandModule<GlobalOptions> = {
   command: "action-attempts",
   aliases: ["action-attempt", "aa"],
   describe: "interact with action attempts",
-  builder: (yargs: YargsWithGlobalOptions) => {
-    yargs.demandCommand().command(
+  builder: (yargs) => {
+    return yargs.demandCommand().command(
       "get <id>",
       "get an action attempt",
       (yargs) => {
@@ -21,4 +22,7 @@ export default {
       }
     )
   },
+  handler: () => {},
 }
+
+export default command

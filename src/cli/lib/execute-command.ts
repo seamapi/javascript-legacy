@@ -1,7 +1,8 @@
-import ora from "ora"
+import { inspect } from "node-inspect-extracted"
 import { Get } from "type-fest"
 import { paramCase } from "change-case"
-import Seam, { SeamAPIError } from ".."
+import Seam, { SeamAPIError } from "../.."
+import { GlobalOptions } from "./global-options"
 
 type ParametersByPath<Path extends string> = Parameters<
   Exclude<Get<Seam, Path>, Seam>
@@ -10,20 +11,28 @@ type ParametersByPath<Path extends string> = Parameters<
 const executeCommand = async <MethodPath extends string>(
   methodName: MethodPath,
   args: ParametersByPath<MethodPath>,
-  executeArgs: { json?: boolean; quiet?: boolean }
+  executeArgs: GlobalOptions
 ) => {
-  const displaySpinner = !(executeArgs.quiet || executeArgs.json)
+  let spinner = undefined
 
-  const spinner = displaySpinner
-    ? ora(
+  const displaySpinner =
+    typeof window === "undefined" && !(executeArgs.quiet || executeArgs.json)
+
+  if (displaySpinner) {
+    // Dynamic import so we don't bundle this for the browser
+    const ora = await import("ora")
+
+    spinner = ora
+      .default(
         methodName
           .split(".")
           .map((v) => paramCase(v))
           .join(".")
-      ).start()
-    : undefined
+      )
+      .start()
+  }
 
-  const seam = new Seam()
+  const seam = new Seam(executeArgs["api-key"])
 
   let method: any = seam
   for (const path of methodName.split(".")) {
@@ -35,10 +44,14 @@ const executeCommand = async <MethodPath extends string>(
     spinner?.succeed()
 
     if (executeArgs.json) {
-      console.log(JSON.stringify(result, null, 2))
+      process.stdout.write(JSON.stringify(result, null, 2))
     } else {
-      console.log(result)
+      process.stdout.write(
+        inspect(result, { depth: 2, colors: true, compact: false })
+      )
     }
+
+    process.stdout.write("\n")
   } catch (error) {
     let message = "Unknown error"
     if (error instanceof SeamAPIError) {

@@ -1,12 +1,13 @@
-import executeCommand from "../execute-command"
-import { YargsWithGlobalOptions } from "../global-options"
+import { CommandModule } from "yargs"
+import executeCommand from "../lib/execute-command"
+import { GlobalOptions } from "../lib/global-options"
 
-export default {
+const command: CommandModule<GlobalOptions> = {
   command: "access-codes",
   aliases: ["access-code", "ac"],
   describe: "interact with access codes",
-  builder: (yargs: YargsWithGlobalOptions) => {
-    yargs
+  builder: (yargs) => {
+    return yargs
       .demandCommand()
       .command(
         "list",
@@ -99,4 +100,7 @@ export default {
         }
       )
   },
+  handler: () => {},
 }
+
+export default command

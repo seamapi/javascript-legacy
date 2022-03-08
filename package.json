@@ -19,10 +19,15 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
-    "./cli": {
-      "require": "./dist/cli/index.js",
-      "import": "./dist/cli/index.js",
-      "types": "./dist/cli/index.d.ts"
+    "./cli/browser": {
+      "require": "./dist/cli/browser.js",
+      "import": "./dist/cli/browser.mjs",
+      "types": "./dist/cli/browser.d.ts"
+    },
+    "./dist/cli/browser": {
+      "require": "./dist/cli/browser.js",
+      "import": "./dist/cli/browser.mjs",
+      "types": "./dist/cli/browser.d.ts"
     }
   },
   "files": [
@@ -32,6 +37,8 @@
   "dependencies": {
     "axios": "0.25.0",
     "change-case": "4.1.2",
+    "eventemitter3": "4.0.7",
+    "node-inspect-extracted": "1.1.0",
     "ora": "5.4.1",
     "yargs": "17.3.1"
   },
@@ -46,6 +53,7 @@
     "ajv": "8.9.0",
     "ava": "4.0.1",
     "esbuild": "0.14.18",
+    "esbuild-plugin-cache": "0.2.9",
     "esbuild-runner": "2.2.1",
     "husky": ">=6",
     "knex": "1.0.2",
@@ -58,27 +66,27 @@
     "ts-json-schema-generator": "0.98.0",
     "tsup": "5.11.11",
     "type-fest": "2.11.1",
+    "typed-emitter": "2.1.0",
     "typedoc": "0.22.12",
     "typedoc-plugin-markdown": "3.11.12",
     "typescript": "4.5.5"
   },
   "lint-staged": {
-    "*.{ts,css,md}": "prettier --write"
+    "*.{ts,css,md,js}": "prettier --write"
   },
   "pkg": {
-    "outputPath": "cli-binaries",
-    "assets": "./dist/cli/commands/**/*"
+    "outputPath": "cli-binaries"
   },
   "scripts": {
     "prepare": "husky install",
     "prepack": "npm run build && npm run pack:cli",
     "build:package": "tsup",
     "build:docs": "typedoc",
+    "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
     "build": "npm run build:package && npm run build:docs",
     "pack:cli": "pkg -c package.json dist/cli/entry.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
     "test": "npm run build:json-response-schemas && ava",
     "test:watch": "npm run build:json-response-schemas && ava --watch",
     "cli:dev": "esr src/cli/entry.ts"
