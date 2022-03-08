@@ -19,11 +19,6 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
-    "./cli": {
-      "require": "./dist/cli/index.js",
-      "import": "./dist/cli/index.js",
-      "types": "./dist/cli/index.d.ts"
-    },
     "./cli/browser": {
       "require": "./dist/cli/browser.js",
       "import": "./dist/cli/browser.mjs",
@@ -37,6 +32,8 @@
   "dependencies": {
     "axios": "0.25.0",
     "change-case": "4.1.2",
+    "eventemitter3": "4.0.7",
+    "node-inspect-extracted": "1.1.0",
     "ora": "5.4.1",
     "yargs": "17.3.1"
   },
@@ -64,6 +61,7 @@
     "ts-json-schema-generator": "0.98.0",
     "tsup": "5.11.11",
     "type-fest": "2.11.1",
+    "typed-emitter": "2.1.0",
     "typedoc": "0.22.12",
     "typedoc-plugin-markdown": "3.11.12",
     "typescript": "4.5.5"

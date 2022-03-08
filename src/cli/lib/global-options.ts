@@ -5,6 +5,7 @@ export const getParserWithOptions = (yargsInstance: Argv) =>
     .option("api-key", {
       describe:
         "Seam API key (the environment variable SEAM_API_KEY is used if not provided)",
+      type: "string",
     })
     .option("quiet", {
       describe: "Hide progress indicators",

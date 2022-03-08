@@ -1920,6 +1920,11 @@ esutils@^2.0.2, esutils@^2.0.3:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
+eventemitter3@4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
+
 execa@^5.0.0, execa@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-5.1.1.tgz#f80ad9cbf4298f7bd1d4c9555c21e93741c411dd"
@@ -3310,6 +3315,11 @@ node-gyp@^8.2.0, node-gyp@^8.4.1:
     semver "^7.3.5"
     tar "^6.1.2"
     which "^2.0.2"
+
+node-inspect-extracted@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/node-inspect-extracted/-/node-inspect-extracted-1.1.0.tgz#7dad148e656edd2518ce66d31f9c6edaba968494"
+  integrity sha512-GtmPYJiHqmkt4sd7oYqUIzFepBDY6aotmD7nuF9QV9lolH+Sru5FZCholI5QuuyM+NvgAq/BaQB6OgXv+ZT8lA==
 
 nofilter@^3.1.0:
   version "3.1.0"
@@ -4946,6 +4956,13 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+typed-emitter@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/typed-emitter/-/typed-emitter-2.1.0.tgz#ca78e3d8ef1476f228f548d62e04e3d4d3fd77fb"
+  integrity sha512-g/KzbYKbH5C2vPkaXGu8DJlHrGKHLsM25Zg9WuC9pMGfuvT+X25tZQWo5fK1BjBm8+UrVE9LDCvaY0CQk+fXDA==
+  optionalDependencies:
+    rxjs "^7.5.2"
 
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"
