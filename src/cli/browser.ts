@@ -38,6 +38,12 @@ class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIE
       ? input
       : `${input} --api-key ${this.apiKey}`
 
+    const inputWithKeyAndWithoutPrefix = inputWithKey.startsWith("seam ")
+      ? inputWithKey.replace("seam ", "")
+      : inputWithKey.startsWith("seamapi ")
+      ? inputWithKey.replace("seamapi ", "")
+      : inputWithKey
+
     await new Promise<void>((resolve, reject) => {
       // .parseAsync isn't available in v16, so we listen for the ending newline instead
       const onData = (data: string) => {
@@ -49,7 +55,7 @@ class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIE
       this.on("data", onData)
 
       this.instance.parse(
-        inputWithKey,
+        inputWithKeyAndWithoutPrefix,
         (error: Error, _argv: any, output?: string) => {
           if (error) {
             this.removeListener("data", onData)
