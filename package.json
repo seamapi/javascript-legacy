@@ -23,6 +23,11 @@
       "require": "./dist/cli/browser.js",
       "import": "./dist/cli/browser.mjs",
       "types": "./dist/cli/browser.d.ts"
+    },
+    "./dist/cli/browser": {
+      "require": "./dist/cli/browser.js",
+      "import": "./dist/cli/browser.mjs",
+      "types": "./dist/cli/browser.d.ts"
     }
   },
   "files": [
