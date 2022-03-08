@@ -10,7 +10,12 @@ export const getCLI = (yargs: Argv) => {
     builder = builder.command(command.default as any)
   }
 
-  builder = builder.demandCommand().strict()
+  builder = builder
+    .demandCommand()
+    .strict()
+    .usage(
+      "Control locks, lights and other internet of things devices with Seam's simple API."
+    )
 
   return builder
 }
