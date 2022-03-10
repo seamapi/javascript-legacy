@@ -37,10 +37,10 @@
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `apiKey?` | `string` | `undefined` |
-| `endpoint` | `string` | `"https://connect.getseam.com"` |
+| Name | Type |
+| :------ | :------ |
+| `apiKey?` | `string` |
+| `endpoint` | `string` |
 
 #### Overrides
 
@@ -48,7 +48,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/index.ts:9](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L9)
+[src/index.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L9)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:190](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L190)
+[src/routes.ts:190](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L190)
 
 ___
 
@@ -90,7 +90,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:262](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L262)
+[src/routes.ts:262](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L262)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:7](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L7)
+[src/index.ts:7](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L7)
 
 ___
 
@@ -122,7 +122,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:164](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L164)
+[src/routes.ts:164](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L164)
 
 ___
 
@@ -143,7 +143,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:241](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L241)
+[src/routes.ts:241](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L241)
 
 ___
 
@@ -164,7 +164,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:145](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L145)
+[src/routes.ts:145](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L145)
 
 ___
 
@@ -187,7 +187,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:110](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L110)
+[src/routes.ts:110](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L110)
 
 ___
 
@@ -209,7 +209,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:94](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L94)
+[src/routes.ts:94](https://github.com/hello-seam/seamapi-javascript/blob/main/src/routes.ts#L94)
 
 ## Methods
 
@@ -239,4 +239,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:30](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L30)
+[src/index.ts:33](https://github.com/hello-seam/seamapi-javascript/blob/main/src/index.ts#L33)

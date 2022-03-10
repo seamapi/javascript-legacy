@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/types/models.ts:124](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L124)
+[src/types/models.ts:124](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L124)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:126](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L126)
+[src/types/models.ts:126](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L126)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:137](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L137)
+[src/types/models.ts:137](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L137)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:140](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L140)
+[src/types/models.ts:140](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L140)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:125](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L125)
+[src/types/models.ts:125](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L125)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:139](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L139)
+[src/types/models.ts:139](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L139)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:138](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L138)
+[src/types/models.ts:138](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L138)
 
 ___
 
@@ -111,4 +111,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:136](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L136)
+[src/types/models.ts:136](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L136)

@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/types/models.ts:47](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L47)
+[src/types/models.ts:47](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L47)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L39)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:40](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L40)
+[src/types/models.ts:40](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L40)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:37](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L37)
+[src/types/models.ts:37](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L37)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:36](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L36)
+[src/types/models.ts:36](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L36)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:38](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L38)
+[src/types/models.ts:38](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L38)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:42](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L42)
+[src/types/models.ts:42](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L42)
 
 ___
 
@@ -108,4 +108,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:53](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L53)
+[src/types/models.ts:53](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L53)
