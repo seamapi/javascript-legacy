@@ -4,16 +4,16 @@ export interface ConnectWebviewCreateRequest {
   accepted_providers: Provider[]
 }
 
-export type AccessCodeCreateOngoingRequest = {
+export interface AccessCodeCreateBaseRequest {
   device_id: string
   name?: string
   code?: string
 }
 
-export type AccessCodeCreateScheduledRequest = {
-  device_id: string
-  name: string
-  code?: string
+export type AccessCodeCreateOngoingRequest = AccessCodeCreateBaseRequest
+
+export interface AccessCodeCreateScheduledRequest
+  extends AccessCodeCreateBaseRequest {
   starts_at: string | Date
   ends_at: string | Date
 }

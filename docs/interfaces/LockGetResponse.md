@@ -6,13 +6,13 @@
 
 ### Properties
 
-- [device](LockGetResponse.md#device)
+- [lock](LockGetResponse.md#lock)
 
 ## Properties
 
-### device
+### lock
 
-• **device**: [`LockDevice`](../modules.md#lockdevice)
+• **lock**: [`LockDevice`](../modules.md#lockdevice)
 
 #### Defined in
 

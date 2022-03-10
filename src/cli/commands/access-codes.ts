@@ -62,19 +62,33 @@ const command: CommandModule<GlobalOptions> = {
             })
         },
         async (argv) => {
-          await executeCommand(
-            "accessCodes.create",
-            [
-              {
-                device_id: argv.deviceId,
-                name: argv.name,
-                code: argv.code,
-                starts_at: argv.startsAt,
-                ends_at: argv.endsAt,
-              },
-            ],
-            argv
-          )
+          if (argv.startsAt && argv.endsAt) {
+            await executeCommand(
+              "accessCodes.create",
+              [
+                {
+                  device_id: argv.deviceId,
+                  name: argv.name,
+                  code: argv.code,
+                  starts_at: argv.startsAt,
+                  ends_at: argv.endsAt,
+                },
+              ],
+              argv
+            )
+          } else {
+            await executeCommand(
+              "accessCodes.create",
+              [
+                {
+                  device_id: argv.deviceId,
+                  name: argv.name,
+                  code: argv.code,
+                },
+              ],
+              argv
+            )
+          }
         }
       )
       .command(

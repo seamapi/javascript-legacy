@@ -17,8 +17,11 @@
 ### Interfaces
 
 - [APIErrorResponse](interfaces/APIErrorResponse.md)
-- [AccessCode](interfaces/AccessCode.md)
+- [AccessCodeBase](interfaces/AccessCodeBase.md)
+- [AccessCodeCreateBaseRequest](interfaces/AccessCodeCreateBaseRequest.md)
+- [AccessCodeCreateScheduledRequest](interfaces/AccessCodeCreateScheduledRequest.md)
 - [AccessCodesListResponse](interfaces/AccessCodesListResponse.md)
+- [ActionAttemptCreateResponse](interfaces/ActionAttemptCreateResponse.md)
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
@@ -37,10 +40,11 @@
 - [LockGetResponse](interfaces/LockGetResponse.md)
 - [LockProperties](interfaces/LockProperties.md)
 - [LocksListResponse](interfaces/LocksListResponse.md)
+- [OngoingAccessCode](interfaces/OngoingAccessCode.md)
 - [PendingActionAttempt](interfaces/PendingActionAttempt.md)
 - [SeamAPIErrorMetadata](interfaces/SeamAPIErrorMetadata.md)
-- [SeamObjectTypeMap](interfaces/SeamObjectTypeMap.md)
 - [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
+- [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
 - [Workspace](interfaces/Workspace.md)
 - [WorkspaceGetResponse](interfaces/WorkspaceGetResponse.md)
 - [WorkspaceResetSandboxResponse](interfaces/WorkspaceResetSandboxResponse.md)
@@ -49,10 +53,9 @@
 ### Type aliases
 
 - [APIResponse](modules.md#apiresponse)
+- [AccessCode](modules.md#accesscode)
 - [AccessCodeCreateOngoingRequest](modules.md#accesscodecreateongoingrequest)
 - [AccessCodeCreateRequest](modules.md#accesscodecreaterequest)
-- [AccessCodeCreateResponse](modules.md#accesscodecreateresponse)
-- [AccessCodeCreateScheduledRequest](modules.md#accesscodecreatescheduledrequest)
 - [AccessCodeDeleteRequest](modules.md#accesscodedeleterequest)
 - [ActionAttempt](modules.md#actionattempt)
 - [ActionType](modules.md#actiontype)
@@ -60,8 +63,6 @@
 - [DeviceType](modules.md#devicetype)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
-- [LockLockDoorResponse](modules.md#locklockdoorresponse)
-- [LockUnlockDoorResponse](modules.md#lockunlockdoorresponse)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
 
@@ -83,61 +84,33 @@
 
 ___
 
-### AccessCodeCreateOngoingRequest
+### AccessCode
 
-Ƭ **AccessCodeCreateOngoingRequest**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `code?` | `string` |
-| `device_id` | `string` |
-| `name?` | `string` |
+Ƭ **AccessCode**: [`OngoingAccessCode`](interfaces/OngoingAccessCode.md) \| [`TimeBoundAccessCode`](interfaces/TimeBoundAccessCode.md)
 
 #### Defined in
 
-[src/types/route-requests.ts:7](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L7)
+[src/types/models.ts:143](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L143)
+
+___
+
+### AccessCodeCreateOngoingRequest
+
+Ƭ **AccessCodeCreateOngoingRequest**: [`AccessCodeCreateBaseRequest`](interfaces/AccessCodeCreateBaseRequest.md)
+
+#### Defined in
+
+[src/types/route-requests.ts:13](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L13)
 
 ___
 
 ### AccessCodeCreateRequest
 
-Ƭ **AccessCodeCreateRequest**: [`AccessCodeCreateOngoingRequest`](modules.md#accesscodecreateongoingrequest) \| [`AccessCodeCreateScheduledRequest`](modules.md#accesscodecreatescheduledrequest)
+Ƭ **AccessCodeCreateRequest**: [`AccessCodeCreateOngoingRequest`](modules.md#accesscodecreateongoingrequest) \| [`AccessCodeCreateScheduledRequest`](interfaces/AccessCodeCreateScheduledRequest.md)
 
 #### Defined in
 
 [src/types/route-requests.ts:21](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L21)
-
-___
-
-### AccessCodeCreateResponse
-
-Ƭ **AccessCodeCreateResponse**: [`ActionAttempt`](modules.md#actionattempt)
-
-#### Defined in
-
-[src/types/route-responses.ts:61](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-responses.ts#L61)
-
-___
-
-### AccessCodeCreateScheduledRequest
-
-Ƭ **AccessCodeCreateScheduledRequest**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `code?` | `string` |
-| `device_id` | `string` |
-| `ends_at` | `string` \| `Date` |
-| `name` | `string` |
-| `starts_at` | `string` \| `Date` |
-
-#### Defined in
-
-[src/types/route-requests.ts:13](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L13)
 
 ___
 
@@ -170,7 +143,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:97](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L97)
+[src/types/models.ts:102](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L102)
 
 ___
 
@@ -221,26 +194,6 @@ ___
 #### Defined in
 
 [src/types/models.ts:8](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L8)
-
-___
-
-### LockLockDoorResponse
-
-Ƭ **LockLockDoorResponse**: [`ActionAttempt`](modules.md#actionattempt)
-
-#### Defined in
-
-[src/types/route-responses.ts:33](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-responses.ts#L33)
-
-___
-
-### LockUnlockDoorResponse
-
-Ƭ **LockUnlockDoorResponse**: [`ActionAttempt`](modules.md#actionattempt)
-
-#### Defined in
-
-[src/types/route-responses.ts:34](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-responses.ts#L34)
 
 ___
 

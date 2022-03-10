@@ -1,6 +1,6 @@
-[seamapi](../README.md) / [Exports](../modules.md) / ActionAttemptGetResponse
+[seamapi](../README.md) / [Exports](../modules.md) / ActionAttemptCreateResponse
 
-# Interface: ActionAttemptGetResponse<T\>
+# Interface: ActionAttemptCreateResponse<T\>
 
 ## Type parameters
 
@@ -12,7 +12,7 @@
 
 ### Properties
 
-- [action\_attempt](ActionAttemptGetResponse.md#action_attempt)
+- [action\_attempt](ActionAttemptCreateResponse.md#action_attempt)
 
 ## Properties
 
@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:77](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-responses.ts#L77)
+[src/types/route-responses.ts:73](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-responses.ts#L73)
