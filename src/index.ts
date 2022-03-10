@@ -3,7 +3,7 @@ import { SeamAPIError } from "./lib/api-error"
 import { Routes } from "./routes"
 import { ErroredAPIResponse, SuccessfulAPIResponse } from "./types/globals"
 
-interface SeamClientOptions {
+export interface SeamClientOptions {
   /* Seam API Key */
   apiKey?: string
   /**
@@ -17,25 +17,28 @@ interface SeamClientOptions {
   workspaceId?: string
 }
 
+export const getSeamClientOptionsWithDefaults = (
+  apiKeyOrOptions?: string | SeamClientOptions
+): SeamClientOptions => {
+  const seamClientDefaults: SeamClientOptions = {
+    apiKey: process?.env?.SEAM_API_KEY,
+    endpoint: process?.env?.SEAM_API_URL || "https://connect.getseam.com",
+    workspaceId: process?.env?.SEAM_WORKSPACE_ID,
+  }
+  if (typeof apiKeyOrOptions === "string") {
+    return { ...seamClientDefaults, apiKey: apiKeyOrOptions }
+  } else {
+    return { ...seamClientDefaults, ...apiKeyOrOptions }
+  }
+}
+
 class Seam extends Routes {
   private client: AxiosInstance
 
   constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
 
-    const seamClientDefaults: SeamClientOptions = {
-      apiKey: process?.env?.SEAM_API_KEY,
-      endpoint: process?.env?.SEAM_API_URL || "https://connect.getseam.com",
-      workspaceId: process?.env?.SEAM_WORKSPACE_ID,
-    }
-
-    let options: SeamClientOptions
-    if (typeof apiKeyOrOptions === "string") {
-      options = { ...seamClientDefaults, apiKey: apiKeyOrOptions }
-    } else {
-      options = { ...seamClientDefaults, ...apiKeyOrOptions }
-    }
-
+    const options = getSeamClientOptionsWithDefaults(apiKeyOrOptions)
     const { apiKey, endpoint, workspaceId } = options
 
     const isRegularAPIKey = apiKey?.startsWith("seam_")

@@ -43,6 +43,7 @@
 - [OngoingAccessCode](interfaces/OngoingAccessCode.md)
 - [PendingActionAttempt](interfaces/PendingActionAttempt.md)
 - [SeamAPIErrorMetadata](interfaces/SeamAPIErrorMetadata.md)
+- [SeamClientOptions](interfaces/SeamClientOptions.md)
 - [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
 - [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
 - [Workspace](interfaces/Workspace.md)
@@ -65,6 +66,10 @@
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
+
+### Functions
+
+- [getSeamClientOptionsWithDefaults](modules.md#getseamclientoptionswithdefaults)
 
 ## Type aliases
 
@@ -220,3 +225,23 @@ ___
 #### Defined in
 
 [src/types/globals.ts:7](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/globals.ts#L7)
+
+## Functions
+
+### getSeamClientOptionsWithDefaults
+
+▸ **getSeamClientOptionsWithDefaults**(`apiKeyOrOptions?`): [`SeamClientOptions`](interfaces/SeamClientOptions.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `apiKeyOrOptions?` | `string` \| [`SeamClientOptions`](interfaces/SeamClientOptions.md) |
+
+#### Returns
+
+[`SeamClientOptions`](interfaces/SeamClientOptions.md)
+
+#### Defined in
+
+[src/index.ts:20](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L20)

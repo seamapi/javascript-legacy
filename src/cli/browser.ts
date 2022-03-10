@@ -4,6 +4,7 @@ import type Y from "yargs"
 import { Yargs } from "https://unpkg.com/yargs@16.0.0-alpha.3/browser.mjs"
 import EventEmitter from "eventemitter3"
 import TypedEmitter from "typed-emitter"
+import { getSeamClientOptionsWithDefaults, SeamClientOptions } from "../"
 
 const yargsInstance = Yargs() as ReturnType<typeof Y>
 
@@ -13,12 +14,14 @@ type CLIEvents = {
 
 class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIEvents>) {
   private instance = getCLI(yargsInstance).scriptName("seam")
+  private seamClientOptions: SeamClientOptions
 
   /**
    * Use the Seam CLI in the browser!
    */
-  constructor(private apiKey?: string) {
+  constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
+    this.seamClientOptions = getSeamClientOptionsWithDefaults(apiKeyOrOptions)
     this.setUpShims()
   }
 
@@ -34,9 +37,11 @@ class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIE
   async parse(input: string) {
     this.setUpShims()
 
+    const { apiKey } = this.seamClientOptions
+
     const inputWithKey = input.includes("--api-key")
       ? input
-      : `${input} --api-key ${this.apiKey}`
+      : `${input} --api-key ${apiKey}`
 
     const inputWithKeyAndWithoutPrefix = inputWithKey.startsWith("seam ")
       ? inputWithKey.replace("seam ", "")

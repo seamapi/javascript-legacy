@@ -39,7 +39,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `apiKeyOrOptions?` | `string` \| `SeamClientOptions` |
+| `apiKeyOrOptions?` | `string` \| [`SeamClientOptions`](../interfaces/SeamClientOptions.md) |
 
 #### Overrides
 
@@ -47,7 +47,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/index.ts:23](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L23)
+[src/index.ts:38](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L38)
 
 ## Properties
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:21](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L21)
+[src/index.ts:36](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L36)
 
 ___
 
@@ -238,4 +238,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:65](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L65)
+[src/index.ts:68](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L68)
