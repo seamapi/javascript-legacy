@@ -32,7 +32,11 @@ const executeCommand = async <MethodPath extends string>(
       .start()
   }
 
-  const seam = new Seam(executeArgs["api-key"])
+  const seam = new Seam({
+    apiKey: executeArgs["api-key"],
+    endpoint: executeArgs["endpoint"],
+    workspaceId: executeArgs["workspace-id"],
+  })
 
   let method: any = seam
   for (const path of methodName.split(".")) {

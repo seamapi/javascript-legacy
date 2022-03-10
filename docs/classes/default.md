@@ -33,14 +33,13 @@
 
 ### constructor
 
-• **new default**(`apiKey?`, `endpoint?`)
+• **new default**(`apiKeyOrOptions?`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `apiKey?` | `string` |
-| `endpoint` | `string` |
+| `apiKeyOrOptions?` | `string` \| `SeamClientOptions` |
 
 #### Overrides
 
@@ -48,7 +47,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/index.ts:9](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L9)
+[src/index.ts:23](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L23)
 
 ## Properties
 
@@ -100,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:7](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L7)
+[src/index.ts:21](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L21)
 
 ___
 
@@ -239,4 +238,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:33](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L33)
+[src/index.ts:65](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L65)

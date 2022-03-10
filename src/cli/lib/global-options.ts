@@ -15,7 +15,29 @@ export const getParserWithOptions = (yargsInstance: Argv) =>
       describe: "Output JSON",
       type: "boolean",
     })
-    .group(["api-key", "quiet", "json", "help", "version"], "Global Options:")
+    .option("endpoint", {
+      describe: "Seam API Endpoint (defaults to https://connect.getseam.com)",
+      hidden: true,
+      type: "string",
+    })
+    .option("workspace-id", {
+      describe:
+        "Workspace Id to perform action against (only if using session key auth)",
+      hidden: true,
+      type: "string",
+    })
+    .group(
+      [
+        "api-key",
+        "endpoint",
+        "workspace-id",
+        "quiet",
+        "json",
+        "help",
+        "version",
+      ],
+      "Global Options:"
+    )
 
 export type YargsWithGlobalOptions = ReturnType<typeof getParserWithOptions>
 type ExtractGeneric<T> = T extends Argv<infer X> ? X : never
