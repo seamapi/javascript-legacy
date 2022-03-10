@@ -1,12 +1,30 @@
 seamapi / [Exports](modules.md)
 
-# Javascript / Typescript Seam API Library
+# Javascript / Typescript Seam API Library & CLI
 
 Control locks, lights and other internet of things devices with Seam's simple
 API. Check out [the documentation](./docs/modules.md) or [some examples](./examples).
 
 ## Usage
 
+This package contains both a library and a CLI tool.
+
+### CLI Usage
+
+Install with `yarn global add seamapi` or `npm install -g seamapi`.
+
+Then:
+```bash
+export SEAM_API_KEY=<your api key> # you can also pass this as an argument to the CLI
+
+seam workspaces list
+```
+
+### Library Usage
+
+Install with `yarn add seamapi` or `npm install seamapi -s`.
+
+Then:
 ```ts
 // Replace with
 // const Seam = require("seamapi")

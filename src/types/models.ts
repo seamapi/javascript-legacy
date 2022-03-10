@@ -5,16 +5,21 @@ export interface Workspace {
   is_sandbox: boolean
 }
 
-export type LockDeviceType = "august_lock" | "schlage_lock" | "yale_lock"
+export type LockDeviceType =
+  | "august_lock"
+  | "schlage_lock"
+  | "yale_lock"
+  | "smartthings_lock"
 export type NoiseDetectionDeviceType = "noiseaware_activity_zone"
 export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
 
-export type Provider =
-  | "august"
-  | "schlage"
-  | "yale"
-  | "noiseaware"
-  | "smartthings"
+export enum Provider {
+  AUGUST = "august",
+  SCHLAGE = "schlage",
+  YALE = "yale",
+  NOISEAWARE = "noiseaware",
+  SMARTTHINGS = "smartthings",
+}
 
 export type CommonDeviceProperties = {
   name: string
@@ -48,6 +53,8 @@ export interface LockProperties extends CommonDeviceProperties {
     lock_name: string
     house_name: string
   }
+
+  smartthings_metadata?: unknown
 }
 
 export type AnyDevice = Device<any, DeviceType>

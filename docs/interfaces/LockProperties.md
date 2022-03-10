@@ -18,6 +18,7 @@
 - [name](LockProperties.md#name)
 - [online](LockProperties.md#online)
 - [schlage\_metadata](LockProperties.md#schlage_metadata)
+- [smartthings\_metadata](LockProperties.md#smartthings_metadata)
 
 ## Properties
 
@@ -35,7 +36,7 @@
 
 #### Defined in
 
-[src/types/models.ts:46](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L46)
+[src/types/models.ts:51](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L51)
 
 ___
 
@@ -45,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L44)
 
 ___
 
@@ -55,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:38](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L38)
+[src/types/models.ts:43](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L43)
 
 ___
 
@@ -69,7 +70,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:20](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L20)
+[src/types/models.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L25)
 
 ___
 
@@ -83,7 +84,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:21](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L21)
+[src/types/models.ts:26](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L26)
 
 ___
 
@@ -100,4 +101,14 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:41](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L41)
+[src/types/models.ts:46](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L46)
+
+___
+
+### smartthings\_metadata
+
+• `Optional` **smartthings\_metadata**: `unknown`
+
+#### Defined in
+
+[src/types/models.ts:57](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L57)

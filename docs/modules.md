@@ -4,6 +4,10 @@
 
 ## Table of contents
 
+### Enumerations
+
+- [Provider](enums/Provider.md)
+
 ### Classes
 
 - [SeamAPIError](classes/SeamAPIError.md)
@@ -61,7 +65,6 @@
 - [LockLockDoorResponse](modules.md#locklockdoorresponse)
 - [LockUnlockDoorResponse](modules.md#lockunlockdoorresponse)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
-- [Provider](modules.md#provider)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
 
 ## Type aliases
@@ -92,7 +95,7 @@ ___
 | :------ | :------ |
 | `code?` | `string` |
 | `device_id` | `string` |
-| `name` | `string` |
+| `name?` | `string` |
 
 #### Defined in
 
@@ -169,7 +172,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:94](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L94)
+[src/types/models.ts:101](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L101)
 
 ___
 
@@ -179,7 +182,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:56](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L56)
+[src/types/models.ts:63](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L63)
 
 ___
 
@@ -189,7 +192,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:53](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L53)
+[src/types/models.ts:60](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L60)
 
 ___
 
@@ -206,7 +209,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:19](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L19)
+[src/types/models.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L24)
 
 ___
 
@@ -216,7 +219,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:10](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L10)
+[src/types/models.ts:14](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L14)
 
 ___
 
@@ -245,13 +248,13 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:54](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L54)
+[src/types/models.ts:61](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L61)
 
 ___
 
 ### LockDeviceType
 
-Ƭ **LockDeviceType**: ``"august_lock"`` \| ``"schlage_lock"`` \| ``"yale_lock"``
+Ƭ **LockDeviceType**: ``"august_lock"`` \| ``"schlage_lock"`` \| ``"yale_lock"`` \| ``"smartthings_lock"``
 
 #### Defined in
 
@@ -285,17 +288,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:9](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L9)
-
-___
-
-### Provider
-
-Ƭ **Provider**: ``"august"`` \| ``"schlage"`` \| ``"yale"`` \| ``"noiseaware"`` \| ``"smartthings"``
-
-#### Defined in
-
-[src/types/models.ts:12](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L12)
+[src/types/models.ts:13](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L13)
 
 ___
 

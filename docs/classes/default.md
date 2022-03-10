@@ -62,7 +62,7 @@ Routes.constructor
 | :------ | :------ |
 | `create` | (`params`: [`AccessCodeCreateRequest`](../modules.md#accesscodecreaterequest)) => `Promise`<[`AccessCode`](../interfaces/AccessCode.md)\> |
 | `delete` | (`params`: [`AccessCodeDeleteRequest`](../modules.md#accesscodedeleterequest)) => `Promise`<[`Workspace`](../interfaces/Workspace.md) \| [`Workspace`](../interfaces/Workspace.md)[] \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\> \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[] \| [`ActionAttempt`](../modules.md#actionattempt)<`any`\> \| [`AccessCode`](../interfaces/AccessCode.md) \| [`AccessCode`](../interfaces/AccessCode.md)[] \| [`Device`](../interfaces/Device.md)<`any`, `any`\> \| [`Device`](../interfaces/Device.md)<`any`, `any`\>[] \| [`ConnectWebview`](../interfaces/ConnectWebview.md) \| [`ConnectWebview`](../interfaces/ConnectWebview.md)[] \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md) \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
-| `list` | (`params`: { `device_id?`: `string`  }) => `Promise`<[`AccessCode`](../interfaces/AccessCode.md)[]\> |
+| `list` | (`params`: { `device_id`: `string`  }) => `Promise`<[`AccessCode`](../interfaces/AccessCode.md)[]\> |
 
 #### Inherited from
 

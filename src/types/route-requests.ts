@@ -6,7 +6,7 @@ export interface ConnectWebviewCreateRequest {
 
 export type AccessCodeCreateOngoingRequest = {
   device_id: string
-  name: string
+  name?: string
   code?: string
 }
 
