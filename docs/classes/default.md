@@ -37,10 +37,10 @@
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `apiKey?` | `string` | `undefined` |
-| `endpoint` | `string` | `"https://connect.getseam.com"` |
+| Name | Type |
+| :------ | :------ |
+| `apiKey?` | `string` |
+| `endpoint` | `string` |
 
 #### Overrides
 
@@ -239,4 +239,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:30](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L30)
+[src/index.ts:33](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L33)

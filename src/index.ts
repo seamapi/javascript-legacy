@@ -6,7 +6,10 @@ import { ErroredAPIResponse, SuccessfulAPIResponse } from "./types/globals"
 class Seam extends Routes {
   private client: AxiosInstance
 
-  constructor(apiKey?: string, endpoint = "https://connect.getseam.com") {
+  constructor(
+    apiKey?: string,
+    endpoint = process?.env?.SEAM_API_URL || "https://connect.getseam.com"
+  ) {
     super()
 
     if (!apiKey) {
