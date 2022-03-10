@@ -5,7 +5,11 @@ export interface Workspace {
   is_sandbox: boolean
 }
 
-export type LockDeviceType = "august_lock" | "schlage_lock" | "yale_lock"
+export type LockDeviceType =
+  | "august_lock"
+  | "schlage_lock"
+  | "yale_lock"
+  | "smartthings_lock"
 export type NoiseDetectionDeviceType = "noiseaware_activity_zone"
 export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
 
@@ -32,6 +36,7 @@ export interface LockProperties {
   name: string
   locked: boolean
   online: boolean
+  battery_level?: number
   door_open?: boolean
 
   schlage_metadata?: {
@@ -44,6 +49,8 @@ export interface LockProperties {
     lock_name: string
     house_name: string
   }
+
+  smartthings_metadata?: unknown
 }
 
 export type AnyDevice = Device<any, DeviceType>

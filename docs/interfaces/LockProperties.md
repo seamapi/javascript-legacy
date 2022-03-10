@@ -7,11 +7,13 @@
 ### Properties
 
 - [august\_metadata](LockProperties.md#august_metadata)
+- [battery\_level](LockProperties.md#battery_level)
 - [door\_open](LockProperties.md#door_open)
 - [locked](LockProperties.md#locked)
 - [name](LockProperties.md#name)
 - [online](LockProperties.md#online)
 - [schlage\_metadata](LockProperties.md#schlage_metadata)
+- [smartthings\_metadata](LockProperties.md#smartthings_metadata)
 
 ## Properties
 
@@ -29,7 +31,17 @@
 
 #### Defined in
 
-[src/types/models.ts:42](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L42)
+[src/types/models.ts:47](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L47)
+
+___
+
+### battery\_level
+
+• `Optional` **battery\_level**: `number`
+
+#### Defined in
+
+[src/types/models.ts:39](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L39)
 
 ___
 
@@ -39,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:35](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L35)
+[src/types/models.ts:40](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L40)
 
 ___
 
@@ -49,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:33](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L33)
+[src/types/models.ts:37](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L37)
 
 ___
 
@@ -59,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:32](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L32)
+[src/types/models.ts:36](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L36)
 
 ___
 
@@ -69,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:34](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L34)
+[src/types/models.ts:38](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L38)
 
 ___
 
@@ -86,4 +98,14 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:37](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L37)
+[src/types/models.ts:42](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L42)
+
+___
+
+### smartthings\_metadata
+
+• `Optional` **smartthings\_metadata**: `unknown`
+
+#### Defined in
+
+[src/types/models.ts:53](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L53)

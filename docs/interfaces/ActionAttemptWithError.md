@@ -36,7 +36,7 @@ ActionAttemptBase.action\_attempt\_id
 
 #### Defined in
 
-[src/types/models.ts:59](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L59)
+[src/types/models.ts:66](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L66)
 
 ___
 
@@ -50,7 +50,7 @@ ActionAttemptBase.action\_type
 
 #### Defined in
 
-[src/types/models.ts:60](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L60)
+[src/types/models.ts:67](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L67)
 
 ___
 
@@ -71,7 +71,7 @@ ActionAttemptBase.error
 
 #### Defined in
 
-[src/types/models.ts:77](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L77)
+[src/types/models.ts:84](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L84)
 
 ___
 
@@ -85,7 +85,7 @@ ActionAttemptBase.result
 
 #### Defined in
 
-[src/types/models.ts:76](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L76)
+[src/types/models.ts:83](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L83)
 
 ___
 
@@ -99,4 +99,4 @@ ActionAttemptBase.status
 
 #### Defined in
 
-[src/types/models.ts:75](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L75)
+[src/types/models.ts:82](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L82)

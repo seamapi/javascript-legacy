@@ -170,7 +170,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:90](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L90)
+[src/types/models.ts:97](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L97)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:52](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L52)
+[src/types/models.ts:59](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L59)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:49](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L49)
+[src/types/models.ts:56](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L56)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:10](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L10)
+[src/types/models.ts:14](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L14)
 
 ___
 
@@ -210,13 +210,13 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:50](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L50)
+[src/types/models.ts:57](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L57)
 
 ___
 
 ### LockDeviceType
 
-Ƭ **LockDeviceType**: ``"august_lock"`` \| ``"schlage_lock"`` \| ``"yale_lock"``
+Ƭ **LockDeviceType**: ``"august_lock"`` \| ``"schlage_lock"`` \| ``"yale_lock"`` \| ``"smartthings_lock"``
 
 #### Defined in
 
@@ -250,7 +250,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:9](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L9)
+[src/types/models.ts:13](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L13)
 
 ___
 
