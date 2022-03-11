@@ -35,7 +35,6 @@ import {
   WorkspaceGetResponse,
   ActionAttemptCreateResponse,
 } from "./types/route-responses"
-import { string } from "yargs"
 
 export abstract class Routes {
   public abstract makeRequest<T>(
