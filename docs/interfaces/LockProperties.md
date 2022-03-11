@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/types/models.ts:51](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L51)
+[src/types/models.ts:51](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L51)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L44)
+[src/types/models.ts:44](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L44)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:43](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L43)
+[src/types/models.ts:43](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L43)
 
 ___
 
@@ -70,7 +70,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L25)
+[src/types/models.ts:25](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L25)
 
 ___
 
@@ -84,7 +84,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:26](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L26)
+[src/types/models.ts:26](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L26)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:46](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L46)
+[src/types/models.ts:46](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L46)
 
 ___
 
@@ -111,4 +111,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:57](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L57)
+[src/types/models.ts:57](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L57)
