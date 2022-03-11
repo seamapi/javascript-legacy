@@ -37,17 +37,21 @@ class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIE
   async parse(input: string) {
     this.setUpShims()
 
-    const { apiKey } = this.seamClientOptions
+    const { apiKey, endpoint, workspaceId } = this.seamClientOptions
 
-    const inputWithKey = input.includes("--api-key")
+    input = input.includes("--api-key") ? input : `${input} --api-key ${apiKey}`
+    input = input.includes("--endpoint")
       ? input
-      : `${input} --api-key ${apiKey}`
+      : `${input} --endpoint ${endpoint}`
+    input = input.includes("--workspace-id")
+      ? input
+      : `${input} --workspace-id ${workspaceId}`
 
-    const inputWithKeyAndWithoutPrefix = inputWithKey.startsWith("seam ")
-      ? inputWithKey.replace("seam ", "")
-      : inputWithKey.startsWith("seamapi ")
-      ? inputWithKey.replace("seamapi ", "")
-      : inputWithKey
+    input = input.startsWith("seam ")
+      ? input.replace("seam ", "")
+      : input.startsWith("seamapi ")
+      ? input.replace("seamapi ", "")
+      : input
 
     await new Promise<void>((resolve, reject) => {
       // .parseAsync isn't available in v16, so we listen for the ending newline instead
@@ -59,8 +63,10 @@ class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIE
       }
       this.on("data", onData)
 
+      console.log({ input })
+
       this.instance.parse(
-        inputWithKeyAndWithoutPrefix,
+        input,
         (error: Error, _argv: any, output?: string) => {
           if (error) {
             this.removeListener("data", onData)
