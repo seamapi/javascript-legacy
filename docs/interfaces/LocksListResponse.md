@@ -6,13 +6,13 @@
 
 ### Properties
 
-- [devices](LocksListResponse.md#devices)
+- [locks](LocksListResponse.md#locks)
 
 ## Properties
 
-### devices
+### locks
 
-• **devices**: [`LockDevice`](../modules.md#lockdevice)[]
+• **locks**: [`LockDevice`](../modules.md#lockdevice)[]
 
 #### Defined in
 

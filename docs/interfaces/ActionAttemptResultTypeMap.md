@@ -2,6 +2,12 @@
 
 # Interface: ActionAttemptResultTypeMap
 
+## Hierarchy
+
+- `Record`<[`ActionType`](../modules.md#actiontype), `unknown`\>
+
+  ↳ **`ActionAttemptResultTypeMap`**
+
 ## Table of contents
 
 ### Properties
@@ -21,38 +27,42 @@
 
 | Name | Type |
 | :------ | :------ |
-| `access_code` | [`AccessCode`](AccessCode.md) |
+| `access_code` | [`AccessCode`](../modules.md#accesscode) |
+
+#### Overrides
+
+Record.CREATE\_ACCESS\_CODE
 
 #### Defined in
 
-[src/types/models.ts:157](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L157)
+[src/types/models.ts:96](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L96)
 
 ___
 
 ### DELETE\_ACCESS\_CODE
 
-• **DELETE\_ACCESS\_CODE**: `Object`
+• **DELETE\_ACCESS\_CODE**: `unknown`
 
-#### Defined in
+#### Inherited from
 
-[src/types/models.ts:158](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L158)
+Record.DELETE\_ACCESS\_CODE
 
 ___
 
 ### LOCK\_DOOR
 
-• **LOCK\_DOOR**: `Object`
+• **LOCK\_DOOR**: `unknown`
 
-#### Defined in
+#### Inherited from
 
-[src/types/models.ts:155](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L155)
+Record.LOCK\_DOOR
 
 ___
 
 ### UNLOCK\_DOOR
 
-• **UNLOCK\_DOOR**: `Object`
+• **UNLOCK\_DOOR**: `unknown`
 
-#### Defined in
+#### Inherited from
 
-[src/types/models.ts:156](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L156)
+Record.UNLOCK\_DOOR

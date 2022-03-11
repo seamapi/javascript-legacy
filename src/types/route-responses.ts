@@ -6,7 +6,7 @@ import {
   LockDevice,
   Workspace,
   ConnectedAccount,
-  LockProperties,
+  ActionType,
   CommonDeviceProperties,
 } from "./models"
 
@@ -25,14 +25,12 @@ export interface WorkspaceResetSandboxResponse {
 
 // Locks
 export interface LocksListResponse {
-  devices: LockDevice[]
+  locks: LockDevice[]
 }
 
 export interface LockGetResponse {
-  device: LockDevice
+  lock: LockDevice
 }
-export type LockLockDoorResponse = ActionAttempt
-export type LockUnlockDoorResponse = ActionAttempt
 
 // Devices
 export interface DevicesListResponse {
@@ -59,7 +57,6 @@ export interface ConnectWebviewCreateResponse {
 export interface AccessCodesListResponse {
   access_codes: AccessCode[]
 }
-export type AccessCodeCreateResponse = ActionAttempt
 
 // Connected Accounts
 export interface ConnectedAccountsListResponse {
@@ -70,6 +67,13 @@ export interface ConnectedAccountsGetResponse {
 }
 
 // Action Attempts
-export interface ActionAttemptGetResponse {
-  action_attempt: ActionAttempt
+// Returned from endpoints like /locks/lock_door
+export interface ActionAttemptCreateResponse<
+  T extends ActionType = ActionType
+> {
+  action_attempt: ActionAttempt<T>
+}
+
+export interface ActionAttemptGetResponse<T extends ActionType = ActionType> {
+  action_attempt: ActionAttempt<T>
 }

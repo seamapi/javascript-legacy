@@ -12,8 +12,8 @@
 
 ### access\_codes
 
-• **access\_codes**: [`AccessCode`](AccessCode.md)[]
+• **access\_codes**: [`AccessCode`](../modules.md#accesscode)[]
 
 #### Defined in
 
-[src/types/route-responses.ts:60](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-responses.ts#L60)
+[src/types/route-responses.ts:58](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-responses.ts#L58)

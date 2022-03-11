@@ -91,6 +91,11 @@ export interface ActionAttemptWithError<T extends ActionType>
   }
 }
 
+export interface ActionAttemptResultTypeMap
+  extends Record<ActionType, unknown> {
+  CREATE_ACCESS_CODE: { access_code: AccessCode }
+}
+
 export interface SuccessfulActionAttempt<T extends ActionType>
   extends ActionAttemptBase<T> {
   status: "success"
@@ -119,41 +124,31 @@ export interface ConnectWebview {
   url: string
 }
 
-export interface AccessCode {
+export interface AccessCodeBase {
   access_code_id: string
+  name?: string
   code: string
-  name: string
+}
+
+export interface OngoingAccessCode extends AccessCodeBase {
   type: "ongoing"
   created_at: string
   status: "setting" | "set" | "removing" | "unset"
 }
+
+export interface TimeBoundAccessCode extends AccessCodeBase {
+  type: "time_bound"
+  created_at: string
+  status: "setting" | "set" | "removing" | "unset"
+  starts_at: string
+  ends_at: string
+}
+
+export type AccessCode = OngoingAccessCode | TimeBoundAccessCode
 
 export interface ConnectedAccount {
   connected_account_id: string
   created_at: string
   user_identifier: string
   account_type: Provider
-}
-
-export interface SeamObjectTypeMap<ActionAttemptType extends ActionType = any> {
-  action_attempt: ActionAttempt<ActionAttemptType>
-  access_code: AccessCode
-  access_codes: AccessCode[]
-  device: Device<any, any>
-  devices: Device<any, any>[]
-  lock: Device<LockProperties, any>
-  locks: Device<LockProperties, any>[]
-  connect_webview: ConnectWebview
-  connect_webviews: ConnectWebview[]
-  connected_account: ConnectedAccount
-  connected_accounts: ConnectedAccount[]
-  workspace: Workspace
-  workspaces: Workspace[]
-}
-
-export interface ActionAttemptResultTypeMap {
-  LOCK_DOOR: {}
-  UNLOCK_DOOR: {}
-  CREATE_ACCESS_CODE: { access_code: AccessCode }
-  DELETE_ACCESS_CODE: {}
 }

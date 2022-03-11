@@ -37,10 +37,10 @@
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `apiKey?` | `string` | `undefined` |
-| `endpoint` | `string` | `"https://connect.getseam.com"` |
+| Name | Type |
+| :------ | :------ |
+| `apiKey?` | `string` |
+| `endpoint` | `string` |
 
 #### Overrides
 
@@ -60,9 +60,9 @@ Routes.constructor
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`params`: [`AccessCodeCreateRequest`](../modules.md#accesscodecreaterequest)) => `Promise`<[`AccessCode`](../interfaces/AccessCode.md)\> |
-| `delete` | (`params`: [`AccessCodeDeleteRequest`](../modules.md#accesscodedeleterequest)) => `Promise`<[`Workspace`](../interfaces/Workspace.md) \| [`Workspace`](../interfaces/Workspace.md)[] \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\> \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[] \| [`ActionAttempt`](../modules.md#actionattempt)<`any`\> \| [`AccessCode`](../interfaces/AccessCode.md) \| [`AccessCode`](../interfaces/AccessCode.md)[] \| [`Device`](../interfaces/Device.md)<`any`, `any`\> \| [`Device`](../interfaces/Device.md)<`any`, `any`\>[] \| [`ConnectWebview`](../interfaces/ConnectWebview.md) \| [`ConnectWebview`](../interfaces/ConnectWebview.md)[] \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md) \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
-| `list` | (`params`: { `device_id`: `string`  }) => `Promise`<[`AccessCode`](../interfaces/AccessCode.md)[]\> |
+| `create` | (`params`: [`AccessCodeCreateBaseRequest`](../interfaces/AccessCodeCreateBaseRequest.md)) => `Promise`<[`OngoingAccessCode`](../interfaces/OngoingAccessCode.md)\> \| (`params`: [`AccessCodeCreateScheduledRequest`](../interfaces/AccessCodeCreateScheduledRequest.md)) => `Promise`<[`TimeBoundAccessCode`](../interfaces/TimeBoundAccessCode.md)\> |
+| `delete` | (`params`: [`AccessCodeDeleteRequest`](../modules.md#accesscodedeleterequest)) => `Promise`<`unknown`\> |
+| `list` | (`params`: { `device_id`: `string`  }) => `Promise`<[`AccessCode`](../modules.md#accesscode)[]\> |
 
 #### Inherited from
 
@@ -70,7 +70,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:175](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L175)
+[src/routes.ts:198](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L198)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`actionAttemptId`: `string`) => `Promise`<[`ActionAttempt`](../modules.md#actionattempt)<`any`\>\> |
+| `get` | <T\>(`actionAttemptId`: `string`) => `Promise`<[`ActionAttempt`](../modules.md#actionattempt)<`T`\>\> |
 
 #### Inherited from
 
@@ -90,7 +90,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:234](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L234)
+[src/routes.ts:270](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L270)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`params`: [`ConnectWebviewCreateRequest`](../interfaces/ConnectWebviewCreateRequest.md)) => `Promise`<[`ConnectWebview`](../interfaces/ConnectWebview.md)\> |
+| `create` | (`params`: [`ConnectWebviewCreateRequest`](../interfaces/ConnectWebviewCreateRequest.md)) => `Promise`<`Omit`<[`ConnectWebview`](../interfaces/ConnectWebview.md), ``"connected_account_id"``\> & { `custom_redirect_url`: ``null`` \| `string`  }\> |
 | `get` | (`connectWebviewId`: `string`) => `Promise`<[`ConnectWebview`](../interfaces/ConnectWebview.md)\> |
 | `list` | () => `Promise`<[`ConnectWebview`](../interfaces/ConnectWebview.md)[]\> |
 
@@ -122,7 +122,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:155](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L155)
+[src/routes.ts:172](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L172)
 
 ___
 
@@ -143,7 +143,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:219](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L219)
+[src/routes.ts:249](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L249)
 
 ___
 
@@ -155,9 +155,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`deviceId`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<`any`, `any`\>\> |
-| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<`any`, `any`\>[]\> |
-| `update` | (`params`: [`DeviceUpdateRequest`](../modules.md#deviceupdaterequest)) => `Promise`<[`Device`](../interfaces/Device.md)<`any`, `any`\>\> |
+| `get` | (`deviceId`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), [`DeviceType`](../modules.md#devicetype)\>\> |
+| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), [`DeviceType`](../modules.md#devicetype)\>[]\> |
+| `update` | (`params`: [`DeviceUpdateRequest`](../modules.md#deviceupdaterequest)) => `Promise`<{ `ok`: ``true``  }\> |
 
 #### Inherited from
 
@@ -165,7 +165,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:130](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L130)
+[src/routes.ts:147](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L147)
 
 ___
 
@@ -177,10 +177,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`deviceId`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>\> |
-| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[]\> |
-| `lockDoor` | (`deviceId`: `string`) => `Promise`<[`Workspace`](../interfaces/Workspace.md) \| [`Workspace`](../interfaces/Workspace.md)[] \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\> \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[] \| [`ActionAttempt`](../modules.md#actionattempt)<`any`\> \| [`AccessCode`](../interfaces/AccessCode.md) \| [`AccessCode`](../interfaces/AccessCode.md)[] \| [`Device`](../interfaces/Device.md)<`any`, `any`\> \| [`Device`](../interfaces/Device.md)<`any`, `any`\>[] \| [`ConnectWebview`](../interfaces/ConnectWebview.md) \| [`ConnectWebview`](../interfaces/ConnectWebview.md)[] \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md) \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
-| `unlockDoor` | (`deviceId`: `string`) => `Promise`<[`Workspace`](../interfaces/Workspace.md) \| [`Workspace`](../interfaces/Workspace.md)[] \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\> \| [`Device`](../interfaces/Device.md)<[`LockProperties`](../interfaces/LockProperties.md), `any`\>[] \| [`ActionAttempt`](../modules.md#actionattempt)<`any`\> \| [`AccessCode`](../interfaces/AccessCode.md) \| [`AccessCode`](../interfaces/AccessCode.md)[] \| [`Device`](../interfaces/Device.md)<`any`, `any`\> \| [`Device`](../interfaces/Device.md)<`any`, `any`\>[] \| [`ConnectWebview`](../interfaces/ConnectWebview.md) \| [`ConnectWebview`](../interfaces/ConnectWebview.md)[] \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md) \| [`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
+| `get` | (`deviceId`: `string`) => `Promise`<[`LockDevice`](../modules.md#lockdevice)\> |
+| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`LockDevice`](../modules.md#lockdevice)[]\> |
+| `lockDoor` | (`deviceId`: `string`) => `Promise`<`unknown`\> |
+| `unlockDoor` | (`deviceId`: `string`) => `Promise`<`unknown`\> |
 
 #### Inherited from
 
@@ -188,7 +188,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:95](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L95)
+[src/routes.ts:112](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L112)
 
 ___
 
@@ -200,9 +200,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | () => `Promise`<[`Workspace`](../interfaces/Workspace.md)\> |
+| `get` | () => `Promise`<[`Workspace`](../interfaces/Workspace.md) & { `connect_partner_name`: `string`  }\> |
 | `list` | () => `Promise`<[`Workspace`](../interfaces/Workspace.md)[]\> |
-| `resetSandbox` | () => `Promise`<{ `ok`: ``true``  }\> |
+| `resetSandbox` | () => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`WorkspaceResetSandboxResponse`](../interfaces/WorkspaceResetSandboxResponse.md)\>\> |
 
 #### Inherited from
 
@@ -210,7 +210,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:79](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L79)
+[src/routes.ts:96](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L96)
 
 ## Methods
 
@@ -240,4 +240,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:30](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L30)
+[src/index.ts:33](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L33)
