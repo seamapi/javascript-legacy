@@ -63,7 +63,6 @@ class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIE
       }
       this.on("data", onData)
 
-      console.log({ input })
 
       this.instance.parse(
         input,
