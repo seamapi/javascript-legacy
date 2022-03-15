@@ -21,7 +21,14 @@ export enum Provider {
   SMARTTHINGS = "smartthings",
 }
 
-export interface Device<Properties, Type = DeviceType> {
+export type CommonDeviceProperties = {
+  name: string
+  online: boolean
+}
+export interface Device<
+  Properties extends CommonDeviceProperties,
+  Type = DeviceType
+> {
   device_id: string
   workspace_id: string
   properties: Properties
@@ -32,11 +39,8 @@ export interface Device<Properties, Type = DeviceType> {
   created_at: string
 }
 
-export interface LockProperties {
-  name: string
+export interface LockProperties extends CommonDeviceProperties {
   locked: boolean
-  online: boolean
-  battery_level?: number
   door_open?: boolean
 
   schlage_metadata?: {

@@ -7,6 +7,7 @@ import {
   Workspace,
   ConnectedAccount,
   ActionType,
+  CommonDeviceProperties,
 } from "./models"
 
 // Workspaces
@@ -33,10 +34,10 @@ export interface LockGetResponse {
 
 // Devices
 export interface DevicesListResponse {
-  devices: Device<unknown>[]
+  devices: Device<CommonDeviceProperties>[]
 }
 export interface DeviceGetResponse {
-  device: Device<unknown>
+  device: Device<CommonDeviceProperties>
 }
 
 // Connect Webview

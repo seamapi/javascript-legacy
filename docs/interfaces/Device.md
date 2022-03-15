@@ -6,7 +6,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Properties` | `Properties` |
+| `Properties` | extends [`CommonDeviceProperties`](../modules.md#commondeviceproperties) |
 | `Type` | [`DeviceType`](../modules.md#devicetype) |
 
 ## Table of contents
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/types/models.ts:31](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L31)
+[src/types/models.ts:38](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L38)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:30](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L30)
+[src/types/models.ts:37](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L37)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:32](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L32)
+[src/types/models.ts:39](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L39)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:25](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L25)
+[src/types/models.ts:32](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L32)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:29](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L29)
+[src/types/models.ts:36](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L36)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:28](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L28)
+[src/types/models.ts:35](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L35)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:27](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L27)
+[src/types/models.ts:34](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L34)
 
 ___
 
@@ -100,4 +100,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:26](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L26)
+[src/types/models.ts:33](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L33)

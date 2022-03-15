@@ -69,7 +69,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:190](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L190)
+[src/routes.ts:198](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L198)
 
 ___
 
@@ -89,7 +89,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:262](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L262)
+[src/routes.ts:270](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L270)
 
 ___
 
@@ -121,7 +121,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:164](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L164)
+[src/routes.ts:172](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L172)
 
 ___
 
@@ -142,7 +142,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:241](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L241)
+[src/routes.ts:249](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L249)
 
 ___
 
@@ -154,8 +154,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`deviceId`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<`unknown`, [`DeviceType`](../modules.md#devicetype)\>\> |
-| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<`unknown`, [`DeviceType`](../modules.md#devicetype)\>[]\> |
+| `get` | (`deviceId`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), [`DeviceType`](../modules.md#devicetype)\>\> |
+| `list` | (`connectedAccountId?`: `string`) => `Promise`<[`Device`](../interfaces/Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), [`DeviceType`](../modules.md#devicetype)\>[]\> |
+| `update` | (`params`: [`DeviceUpdateRequest`](../modules.md#deviceupdaterequest)) => `Promise`<{ `ok`: ``true``  }\> |
 
 #### Inherited from
 
@@ -163,7 +164,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:145](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L145)
+[src/routes.ts:147](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L147)
 
 ___
 
@@ -186,7 +187,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:110](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L110)
+[src/routes.ts:112](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L112)
 
 ___
 
@@ -208,7 +209,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:94](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L94)
+[src/routes.ts:96](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L96)
 
 ## Methods
 

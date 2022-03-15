@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/types/models.ts:124](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L124)
+[src/types/models.ts:128](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L128)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:126](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L126)
+[src/types/models.ts:130](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L130)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:137](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L137)
+[src/types/models.ts:141](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L141)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:140](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L140)
+[src/types/models.ts:144](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L144)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:125](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L125)
+[src/types/models.ts:129](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L129)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:139](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L139)
+[src/types/models.ts:143](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L143)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:138](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L138)
+[src/types/models.ts:142](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L142)
 
 ___
 
@@ -111,4 +111,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:136](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L136)
+[src/types/models.ts:140](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L140)

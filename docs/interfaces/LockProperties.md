@@ -2,12 +2,17 @@
 
 # Interface: LockProperties
 
+## Hierarchy
+
+- [`CommonDeviceProperties`](../modules.md#commondeviceproperties)
+
+  ↳ **`LockProperties`**
+
 ## Table of contents
 
 ### Properties
 
 - [august\_metadata](LockProperties.md#august_metadata)
-- [battery\_level](LockProperties.md#battery_level)
 - [door\_open](LockProperties.md#door_open)
 - [locked](LockProperties.md#locked)
 - [name](LockProperties.md#name)
@@ -31,17 +36,7 @@
 
 #### Defined in
 
-[src/types/models.ts:47](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L47)
-
-___
-
-### battery\_level
-
-• `Optional` **battery\_level**: `number`
-
-#### Defined in
-
-[src/types/models.ts:39](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:51](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L51)
 
 ___
 
@@ -51,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:40](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L40)
+[src/types/models.ts:44](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L44)
 
 ___
 
@@ -61,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:37](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L37)
+[src/types/models.ts:43](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L43)
 
 ___
 
@@ -69,9 +64,13 @@ ___
 
 • **name**: `string`
 
+#### Inherited from
+
+CommonDeviceProperties.name
+
 #### Defined in
 
-[src/types/models.ts:36](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L36)
+[src/types/models.ts:25](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L25)
 
 ___
 
@@ -79,9 +78,13 @@ ___
 
 • **online**: `boolean`
 
+#### Inherited from
+
+CommonDeviceProperties.online
+
 #### Defined in
 
-[src/types/models.ts:38](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L38)
+[src/types/models.ts:26](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L26)
 
 ___
 
@@ -98,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:42](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L42)
+[src/types/models.ts:46](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L46)
 
 ___
 
@@ -108,4 +111,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:53](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L53)
+[src/types/models.ts:57](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L57)

@@ -61,7 +61,9 @@
 - [ActionAttempt](modules.md#actionattempt)
 - [ActionType](modules.md#actiontype)
 - [AnyDevice](modules.md#anydevice)
+- [CommonDeviceProperties](modules.md#commondeviceproperties)
 - [DeviceType](modules.md#devicetype)
+- [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
@@ -95,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:143](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L143)
+[src/types/models.ts:147](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L147)
 
 ___
 
@@ -148,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:102](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L102)
+[src/types/models.ts:106](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L106)
 
 ___
 
@@ -158,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:59](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L59)
+[src/types/models.ts:63](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L63)
 
 ___
 
@@ -168,7 +170,24 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:56](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L56)
+[src/types/models.ts:60](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L60)
+
+___
+
+### CommonDeviceProperties
+
+Ƭ **CommonDeviceProperties**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `online` | `boolean` |
+
+#### Defined in
+
+[src/types/models.ts:24](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L24)
 
 ___
 
@@ -182,13 +201,32 @@ ___
 
 ___
 
+### DeviceUpdateRequest
+
+Ƭ **DeviceUpdateRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `device_id` | `string` |
+| `location?` | `object` |
+| `name?` | `string` |
+| `properties?` | `Partial`<[`CommonDeviceProperties`](modules.md#commondeviceproperties)\> |
+
+#### Defined in
+
+[src/types/route-requests.ts:30](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L30)
+
+___
+
 ### LockDevice
 
 Ƭ **LockDevice**: [`Device`](interfaces/Device.md)<[`LockProperties`](interfaces/LockProperties.md), [`LockDeviceType`](modules.md#lockdevicetype)\>
 
 #### Defined in
 
-[src/types/models.ts:57](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L57)
+[src/types/models.ts:61](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L61)
 
 ___
 
