@@ -4,6 +4,7 @@ import type Y from "yargs"
 import { Yargs } from "https://unpkg.com/yargs@16.0.0-alpha.3/browser.mjs"
 import EventEmitter from "eventemitter3"
 import TypedEmitter from "typed-emitter"
+import { getSeamClientOptionsWithDefaults, SeamClientOptions } from "../"
 
 const yargsInstance = Yargs() as ReturnType<typeof Y>
 
@@ -13,12 +14,14 @@ type CLIEvents = {
 
 class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIEvents>) {
   private instance = getCLI(yargsInstance).scriptName("seam")
+  private seamClientOptions: SeamClientOptions
 
   /**
    * Use the Seam CLI in the browser!
    */
-  constructor(private apiKey?: string) {
+  constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
+    this.seamClientOptions = getSeamClientOptionsWithDefaults(apiKeyOrOptions)
     this.setUpShims()
   }
 
@@ -34,15 +37,21 @@ class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIE
   async parse(input: string) {
     this.setUpShims()
 
-    const inputWithKey = input.includes("--api-key")
-      ? input
-      : `${input} --api-key ${this.apiKey}`
+    const { apiKey, endpoint, workspaceId } = this.seamClientOptions
 
-    const inputWithKeyAndWithoutPrefix = inputWithKey.startsWith("seam ")
-      ? inputWithKey.replace("seam ", "")
-      : inputWithKey.startsWith("seamapi ")
-      ? inputWithKey.replace("seamapi ", "")
-      : inputWithKey
+    input = input.includes("--api-key") ? input : `${input} --api-key ${apiKey}`
+    input = input.includes("--endpoint")
+      ? input
+      : `${input} --endpoint ${endpoint}`
+    input = input.includes("--workspace-id")
+      ? input
+      : `${input} --workspace-id ${workspaceId}`
+
+    input = input.startsWith("seam ")
+      ? input.replace("seam ", "")
+      : input.startsWith("seamapi ")
+      ? input.replace("seamapi ", "")
+      : input
 
     await new Promise<void>((resolve, reject) => {
       // .parseAsync isn't available in v16, so we listen for the ending newline instead
@@ -55,7 +64,7 @@ class BrowserCLI extends (EventEmitter as unknown as new () => TypedEmitter<CLIE
       this.on("data", onData)
 
       this.instance.parse(
-        inputWithKeyAndWithoutPrefix,
+        input,
         (error: Error, _argv: any, output?: string) => {
           if (error) {
             this.removeListener("data", onData)

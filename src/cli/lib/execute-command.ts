@@ -3,6 +3,7 @@ import { Get } from "type-fest"
 import { paramCase } from "change-case"
 import Seam, { SeamAPIError } from "../.."
 import { GlobalOptions } from "./global-options"
+import _ from "lodash"
 
 type ParametersByPath<Path extends string> = Parameters<
   Exclude<Get<Seam, Path>, Seam>
@@ -32,7 +33,16 @@ const executeCommand = async <MethodPath extends string>(
       .start()
   }
 
-  const seam = new Seam(executeArgs["api-key"])
+  const seam = new Seam(
+    _.omitBy(
+      {
+        apiKey: executeArgs["api-key"],
+        endpoint: executeArgs["endpoint"],
+        workspaceId: executeArgs["workspace-id"],
+      },
+      _.isUndefined
+    )
+  )
 
   let method: any = seam
   for (const path of methodName.split(".")) {
