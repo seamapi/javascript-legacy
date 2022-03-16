@@ -3,7 +3,7 @@ on: pull_request
 
 jobs:
   dispatch:
-    name: Dispatch event
+    name: Dispatch event from PR
     runs-on: ubuntu-latest
     steps:
       - uses: benc-uk/workflow-dispatch@v1
