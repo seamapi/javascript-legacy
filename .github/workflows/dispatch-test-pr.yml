@@ -1,7 +1,6 @@
 name: Dispatch test event
-on:
-  push:
-  pull_request:
+on: pull_request
+
 jobs:
   dispatch:
     name: Dispatch event
@@ -12,4 +11,5 @@ jobs:
           workflow: NPM Test
           repo: hello-seam/seamapi-javascript-tests
           token: ${{ secrets.BOT_GH_TOKEN }}
-          inputs: '{ "sdkSha": "${{ github.event.head_commit.head.sha }}", "prRepo": "seamapi-javascript", "prNumber": "${{ github.event.number }}" }'
+          ref: ${{ github.event.pull_request.head.ref }}
+          inputs: '{ "sdkSha": "${{ github.event.pull_request.head.sha }}", "prRepo": "seamapi-javascript", "prNumber": "${{ github.event.number }}" }'
