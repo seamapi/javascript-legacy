@@ -11,5 +11,5 @@ jobs:
           workflow: NPM Test
           repo: hello-seam/seamapi-javascript-tests
           token: ${{ secrets.BOT_GH_TOKEN }}
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: main
           inputs: '{ "sdkSha": "${{ github.event.pull_request.head.sha }}", "prRepo": "seamapi-javascript", "prNumber": "${{ github.event.number }}" }'
