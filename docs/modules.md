@@ -12,6 +12,7 @@
 
 - [SeamAPIError](classes/SeamAPIError.md)
 - [SeamActionAttemptError](classes/SeamActionAttemptError.md)
+- [SeamMalformedInputError](classes/SeamMalformedInputError.md)
 - [default](classes/default.md)
 
 ### Interfaces

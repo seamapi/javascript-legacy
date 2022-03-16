@@ -35,3 +35,17 @@ export class SeamActionAttemptError extends Error {
     return `SeamActionAttemptError: ${this.type} performing ${this.action_type}: ${this.message}`
   }
 }
+
+export class SeamMalformedInputError extends Error {
+  constructor(public validationErrors: Record<string, unknown>) {
+    super("Malformed input")
+
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor)
+    }
+  }
+
+  toString() {
+    return `SeamMalformedInputError: ${JSON.stringify(this.validationErrors)}`
+  }
+}

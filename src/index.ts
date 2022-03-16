@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
-import { SeamAPIError } from "./lib/api-error"
+import { SeamAPIError, SeamMalformedInputError } from "./lib/api-error"
 import { Routes } from "./routes"
 import { ErroredAPIResponse, SuccessfulAPIResponse } from "./types/globals"
 
@@ -73,6 +73,12 @@ class Seam extends Routes {
       return response.data
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
+        if (error.response.data.error.type === "invalid_input") {
+          throw new SeamMalformedInputError(
+            error.response.data.error.validation_errors
+          )
+        }
+
         throw new SeamAPIError(
           error.response.status,
           (error.response.data as ErroredAPIResponse).error
