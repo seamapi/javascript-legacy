@@ -42,6 +42,7 @@ export interface Device<
 export interface LockProperties extends CommonDeviceProperties {
   locked: boolean
   door_open?: boolean
+  battery_level?: number
 
   schlage_metadata?: {
     device_id: string

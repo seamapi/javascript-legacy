@@ -13,6 +13,7 @@
 ### Properties
 
 - [august\_metadata](LockProperties.md#august_metadata)
+- [battery\_level](LockProperties.md#battery_level)
 - [door\_open](LockProperties.md#door_open)
 - [locked](LockProperties.md#locked)
 - [name](LockProperties.md#name)
@@ -36,7 +37,17 @@
 
 #### Defined in
 
-[src/types/models.ts:51](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L51)
+[src/types/models.ts:52](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L52)
+
+___
+
+### battery\_level
+
+• `Optional` **battery\_level**: `number`
+
+#### Defined in
+
+[src/types/models.ts:45](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L45)
 
 ___
 
@@ -101,7 +112,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:46](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L46)
+[src/types/models.ts:47](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L47)
 
 ___
 
@@ -111,4 +122,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:57](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L57)
+[src/types/models.ts:58](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L58)
