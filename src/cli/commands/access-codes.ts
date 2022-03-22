@@ -84,7 +84,8 @@ const command: CommandModule<GlobalOptions> = {
                   device_id: argv.deviceId,
                   name: argv.name,
                   code: argv.code,
-                },
+                  // see https://github.com/microsoft/TypeScript/issues/32164
+                } as any,
               ],
               argv
             )

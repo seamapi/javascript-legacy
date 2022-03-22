@@ -6,6 +6,8 @@
 
 - **`AccessCodeCreateBaseRequest`**
 
+  ↳ [`AccessCodeCreateOngoingRequest`](AccessCodeCreateOngoingRequest.md)
+
   ↳ [`AccessCodeCreateScheduledRequest`](AccessCodeCreateScheduledRequest.md)
 
 ## Table of contents

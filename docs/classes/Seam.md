@@ -1,39 +1,39 @@
-[seamapi](../README.md) / [Exports](../modules.md) / default
+[seamapi](../README.md) / [Exports](../modules.md) / Seam
 
-# Class: default
+# Class: Seam
 
 ## Hierarchy
 
 - `Routes`
 
-  ↳ **`default`**
+  ↳ **`Seam`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](default.md#constructor)
+- [constructor](Seam.md#constructor)
 
 ### Properties
 
-- [accessCodes](default.md#accesscodes)
-- [actionAttempts](default.md#actionattempts)
-- [client](default.md#client)
-- [connectWebviews](default.md#connectwebviews)
-- [connectedAccounts](default.md#connectedaccounts)
-- [devices](default.md#devices)
-- [locks](default.md#locks)
-- [workspaces](default.md#workspaces)
+- [accessCodes](Seam.md#accesscodes)
+- [actionAttempts](Seam.md#actionattempts)
+- [client](Seam.md#client)
+- [connectWebviews](Seam.md#connectwebviews)
+- [connectedAccounts](Seam.md#connectedaccounts)
+- [devices](Seam.md#devices)
+- [locks](Seam.md#locks)
+- [workspaces](Seam.md#workspaces)
 
 ### Methods
 
-- [makeRequest](default.md#makerequest)
+- [makeRequest](Seam.md#makerequest)
 
 ## Constructors
 
 ### constructor
 
-• **new default**(`apiKeyOrOptions?`)
+• **new Seam**(`apiKeyOrOptions?`)
 
 #### Parameters
 
@@ -47,7 +47,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/index.ts:38](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L38)
+[src/client.ts:38](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L38)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Routes.constructor
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`params`: [`AccessCodeCreateBaseRequest`](../interfaces/AccessCodeCreateBaseRequest.md)) => `Promise`<[`OngoingAccessCode`](../interfaces/OngoingAccessCode.md)\> \| (`params`: [`AccessCodeCreateScheduledRequest`](../interfaces/AccessCodeCreateScheduledRequest.md)) => `Promise`<[`TimeBoundAccessCode`](../interfaces/TimeBoundAccessCode.md)\> |
+| `create` | (`params`: [`AccessCodeCreateOngoingRequest`](../interfaces/AccessCodeCreateOngoingRequest.md)) => `Promise`<[`OngoingAccessCode`](../interfaces/OngoingAccessCode.md)\>(`params`: [`AccessCodeCreateScheduledRequest`](../interfaces/AccessCodeCreateScheduledRequest.md)) => `Promise`<[`TimeBoundAccessCode`](../interfaces/TimeBoundAccessCode.md)\> |
 | `delete` | (`params`: [`AccessCodeDeleteRequest`](../modules.md#accesscodedeleterequest)) => `Promise`<`unknown`\> |
 | `list` | (`params`: { `device_id`: `string`  }) => `Promise`<[`AccessCode`](../modules.md#accesscode)[]\> |
 
@@ -89,7 +89,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:269](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L269)
+[src/routes.ts:268](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L268)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:36](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L36)
+[src/client.ts:36](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L36)
 
 ___
 
@@ -142,7 +142,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:248](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L248)
+[src/routes.ts:247](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L247)
 
 ___
 
@@ -239,4 +239,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/index.ts:68](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L68)
+[src/client.ts:68](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L68)
