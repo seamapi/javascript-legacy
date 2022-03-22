@@ -76,3 +76,42 @@ console.log(await seam.accessCodes.list({ device_id: myLockId }))
 ]
 */
 ```
+
+### Receiving Webhooks
+
+Although you don't need to use this package when receiving webhooks, we **strongly** recommend that you do. Using the included helper class will verify payloads (preventing malicious requests) and return a well-typed event.
+
+`SeamWebhook` is a thin wrapper around the `Webhook` class from the [Svix library](https://docs.svix.com/receiving/verifying-payloads/how).
+
+Example for Express:
+
+```ts
+// Replace with
+// const {SeamWebhook} = require("seamapi")
+// if not using ES6 modules and/or TypeScript.
+import {SeamWebhook} from "seamapi";
+
+import bodyParser from "body-parser";
+
+// Get this from the Seam dashboard
+const secret = "sample-secret";
+
+app.post('/webhook', bodyParser.raw({type: 'application/json'}), (req, res) => {
+    const payload = req.body;
+    const headers = req.headers;
+
+    const wh = new SeamWebhook(secret);
+    let msg;
+    try {
+        msg = wh.verify(payload, headers);
+    } catch (err) {
+        res.status(400).json({});
+    }
+
+    // Do something with the message...
+
+    res.json({});
+});
+```
+
+For examples using other frameworks, see the [Svix docs](https://docs.svix.com/receiving/verifying-payloads/how#framework-specific-examples).

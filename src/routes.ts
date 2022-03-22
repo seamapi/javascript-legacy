@@ -231,11 +231,10 @@ export abstract class Routes {
         })
 
       return action.access_code
-    }) as
-      | ((params: AccessCodeCreateOngoingRequest) => Promise<OngoingAccessCode>)
-      | ((
-          params: AccessCodeCreateScheduledRequest
-        ) => Promise<TimeBoundAccessCode>),
+    }) as {
+      (params: AccessCodeCreateOngoingRequest): Promise<OngoingAccessCode>
+      (params: AccessCodeCreateScheduledRequest): Promise<TimeBoundAccessCode>
+    },
 
     delete: (params: AccessCodeDeleteRequest) =>
       this.createActionAttemptAndWait({

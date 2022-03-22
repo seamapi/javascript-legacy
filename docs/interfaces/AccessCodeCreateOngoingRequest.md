@@ -1,22 +1,20 @@
-[seamapi](../README.md) / [Exports](../modules.md) / AccessCodeCreateScheduledRequest
+[seamapi](../README.md) / [Exports](../modules.md) / AccessCodeCreateOngoingRequest
 
-# Interface: AccessCodeCreateScheduledRequest
+# Interface: AccessCodeCreateOngoingRequest
 
 ## Hierarchy
 
 - [`AccessCodeCreateBaseRequest`](AccessCodeCreateBaseRequest.md)
 
-  ↳ **`AccessCodeCreateScheduledRequest`**
+  ↳ **`AccessCodeCreateOngoingRequest`**
 
 ## Table of contents
 
 ### Properties
 
-- [code](AccessCodeCreateScheduledRequest.md#code)
-- [device\_id](AccessCodeCreateScheduledRequest.md#device_id)
-- [ends\_at](AccessCodeCreateScheduledRequest.md#ends_at)
-- [name](AccessCodeCreateScheduledRequest.md#name)
-- [starts\_at](AccessCodeCreateScheduledRequest.md#starts_at)
+- [code](AccessCodeCreateOngoingRequest.md#code)
+- [device\_id](AccessCodeCreateOngoingRequest.md#device_id)
+- [name](AccessCodeCreateOngoingRequest.md#name)
 
 ## Properties
 
@@ -48,16 +46,6 @@ ___
 
 ___
 
-### ends\_at
-
-• **ends\_at**: `string` \| `Date`
-
-#### Defined in
-
-[src/types/route-requests.ts:19](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L19)
-
-___
-
 ### name
 
 • `Optional` **name**: `string`
@@ -69,13 +57,3 @@ ___
 #### Defined in
 
 [src/types/route-requests.ts:9](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L9)
-
-___
-
-### starts\_at
-
-• **starts\_at**: `string` \| `Date`
-
-#### Defined in
-
-[src/types/route-requests.ts:18](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L18)

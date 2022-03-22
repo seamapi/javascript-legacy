@@ -4,28 +4,35 @@
 
 ## Table of contents
 
+### References
+
+- [default](modules.md#default)
+
 ### Enumerations
 
 - [Provider](enums/Provider.md)
 
 ### Classes
 
+- [Seam](classes/Seam.md)
 - [SeamAPIError](classes/SeamAPIError.md)
 - [SeamActionAttemptError](classes/SeamActionAttemptError.md)
 - [SeamMalformedInputError](classes/SeamMalformedInputError.md)
-- [default](classes/default.md)
+- [SeamWebhook](classes/SeamWebhook.md)
 
 ### Interfaces
 
 - [APIErrorResponse](interfaces/APIErrorResponse.md)
 - [AccessCodeBase](interfaces/AccessCodeBase.md)
 - [AccessCodeCreateBaseRequest](interfaces/AccessCodeCreateBaseRequest.md)
+- [AccessCodeCreateOngoingRequest](interfaces/AccessCodeCreateOngoingRequest.md)
 - [AccessCodeCreateScheduledRequest](interfaces/AccessCodeCreateScheduledRequest.md)
 - [AccessCodesListResponse](interfaces/AccessCodesListResponse.md)
 - [ActionAttemptCreateResponse](interfaces/ActionAttemptCreateResponse.md)
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
+- [CommonDeviceEvent](interfaces/CommonDeviceEvent.md)
 - [ConnectWebview](interfaces/ConnectWebview.md)
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
@@ -56,23 +63,35 @@
 
 - [APIResponse](modules.md#apiresponse)
 - [AccessCode](modules.md#accesscode)
-- [AccessCodeCreateOngoingRequest](modules.md#accesscodecreateongoingrequest)
 - [AccessCodeCreateRequest](modules.md#accesscodecreaterequest)
 - [AccessCodeDeleteRequest](modules.md#accesscodedeleterequest)
 - [ActionAttempt](modules.md#actionattempt)
 - [ActionType](modules.md#actiontype)
 - [AnyDevice](modules.md#anydevice)
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
+- [CreateAccessCodeEvent](modules.md#createaccesscodeevent)
+- [DeviceConnectedEvent](modules.md#deviceconnectedevent)
+- [DeviceDisconnectEvent](modules.md#devicedisconnectevent)
+- [DeviceLowBatteryEvent](modules.md#devicelowbatteryevent)
+- [DeviceTamperEvent](modules.md#devicetamperevent)
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
+- [NoiseDetectedEvent](modules.md#noisedetectedevent)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
+- [SeamEvent](modules.md#seamevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
 
 ### Functions
 
 - [getSeamClientOptionsWithDefaults](modules.md#getseamclientoptionswithdefaults)
+
+## References
+
+### default
+
+Renames and re-exports [Seam](classes/Seam.md)
 
 ## Type aliases
 
@@ -102,23 +121,13 @@ ___
 
 ___
 
-### AccessCodeCreateOngoingRequest
-
-Ƭ **AccessCodeCreateOngoingRequest**: [`AccessCodeCreateBaseRequest`](interfaces/AccessCodeCreateBaseRequest.md)
-
-#### Defined in
-
-[src/types/route-requests.ts:13](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L13)
-
-___
-
 ### AccessCodeCreateRequest
 
-Ƭ **AccessCodeCreateRequest**: [`AccessCodeCreateOngoingRequest`](modules.md#accesscodecreateongoingrequest) \| [`AccessCodeCreateScheduledRequest`](interfaces/AccessCodeCreateScheduledRequest.md)
+Ƭ **AccessCodeCreateRequest**: [`AccessCodeCreateOngoingRequest`](interfaces/AccessCodeCreateOngoingRequest.md) \| [`AccessCodeCreateScheduledRequest`](interfaces/AccessCodeCreateScheduledRequest.md)
 
 #### Defined in
 
-[src/types/route-requests.ts:21](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L21)
+[src/types/route-requests.ts:22](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L22)
 
 ___
 
@@ -135,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:25](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L25)
+[src/types/route-requests.ts:26](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L26)
 
 ___
 
@@ -192,6 +201,56 @@ ___
 
 ___
 
+### CreateAccessCodeEvent
+
+Ƭ **CreateAccessCodeEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"access_codes.created"``, { `access_code_id`: `string`  }\>
+
+#### Defined in
+
+[src/types/webhook-events.ts:21](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L21)
+
+___
+
+### DeviceConnectedEvent
+
+Ƭ **DeviceConnectedEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"device.connected"``\>
+
+#### Defined in
+
+[src/types/webhook-events.ts:14](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L14)
+
+___
+
+### DeviceDisconnectEvent
+
+Ƭ **DeviceDisconnectEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"devices.disconnected"``\>
+
+#### Defined in
+
+[src/types/webhook-events.ts:15](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L15)
+
+___
+
+### DeviceLowBatteryEvent
+
+Ƭ **DeviceLowBatteryEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"devices.triggered_low_battery"``\>
+
+#### Defined in
+
+[src/types/webhook-events.ts:17](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L17)
+
+___
+
+### DeviceTamperEvent
+
+Ƭ **DeviceTamperEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"devices.tampered"``\>
+
+#### Defined in
+
+[src/types/webhook-events.ts:16](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L16)
+
+___
+
 ### DeviceType
 
 Ƭ **DeviceType**: [`LockDeviceType`](modules.md#lockdevicetype) \| [`NoiseDetectionDeviceType`](modules.md#noisedetectiondevicetype)
@@ -217,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:30](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L30)
+[src/types/route-requests.ts:31](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L31)
 
 ___
 
@@ -241,6 +300,16 @@ ___
 
 ___
 
+### NoiseDetectedEvent
+
+Ƭ **NoiseDetectedEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"noise_thresholds.detected_noise"``\>
+
+#### Defined in
+
+[src/types/webhook-events.ts:29](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L29)
+
+___
+
 ### NoiseDetectionDeviceType
 
 Ƭ **NoiseDetectionDeviceType**: ``"noiseaware_activity_zone"``
@@ -248,6 +317,16 @@ ___
 #### Defined in
 
 [src/types/models.ts:13](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L13)
+
+___
+
+### SeamEvent
+
+Ƭ **SeamEvent**: [`DeviceConnectedEvent`](modules.md#deviceconnectedevent) \| [`DeviceDisconnectEvent`](modules.md#devicedisconnectevent) \| [`DeviceTamperEvent`](modules.md#devicetamperevent) \| [`DeviceLowBatteryEvent`](modules.md#devicelowbatteryevent) \| [`CreateAccessCodeEvent`](modules.md#createaccesscodeevent) \| [`NoiseDetectedEvent`](modules.md#noisedetectedevent)
+
+#### Defined in
+
+[src/types/webhook-events.ts:32](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L32)
 
 ___
 
@@ -283,4 +362,4 @@ ___
 
 #### Defined in
 
-[src/index.ts:20](https://github.com/seamapi/seamapi-javascript/blob/main/src/index.ts#L20)
+[src/client.ts:20](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L20)

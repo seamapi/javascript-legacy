@@ -10,7 +10,8 @@ export interface AccessCodeCreateBaseRequest {
   code?: string
 }
 
-export type AccessCodeCreateOngoingRequest = AccessCodeCreateBaseRequest
+export interface AccessCodeCreateOngoingRequest
+  extends AccessCodeCreateBaseRequest {}
 
 export interface AccessCodeCreateScheduledRequest
   extends AccessCodeCreateBaseRequest {
