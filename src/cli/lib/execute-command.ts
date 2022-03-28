@@ -4,6 +4,7 @@ import { paramCase } from "change-case"
 import Seam, { SeamAPIError } from "../.."
 import { GlobalOptions } from "./global-options"
 import _ from "lodash"
+import getClientFromArgs from "./get-client-from-args"
 
 type ParametersByPath<Path extends string> = Parameters<
   Exclude<Get<Seam, Path>, Seam>
@@ -33,16 +34,7 @@ const executeCommand = async <MethodPath extends string>(
       .start()
   }
 
-  const seam = new Seam(
-    _.omitBy(
-      {
-        apiKey: executeArgs["api-key"],
-        endpoint: executeArgs["endpoint"],
-        workspaceId: executeArgs["workspace-id"],
-      },
-      _.isUndefined
-    )
-  )
+  const seam = getClientFromArgs(executeArgs)
 
   let method: any = seam
   for (const path of methodName.split(".")) {
@@ -62,6 +54,7 @@ const executeCommand = async <MethodPath extends string>(
     }
 
     process.stdout.write("\n")
+    return result
   } catch (error) {
     let message = "Unknown error"
     if (error instanceof SeamAPIError) {

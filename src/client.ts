@@ -33,7 +33,7 @@ export const getSeamClientOptionsWithDefaults = (
 }
 
 export class Seam extends Routes {
-  private client: AxiosInstance
+  public client: AxiosInstance
 
   constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
@@ -73,7 +73,7 @@ export class Seam extends Routes {
       return response.data
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
-        if (error.response.data.error.type === "invalid_input") {
+        if (error.response.data.error?.type === "invalid_input") {
           throw new SeamMalformedInputError(
             error.response.data.error.validation_errors
           )
