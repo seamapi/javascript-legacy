@@ -2,6 +2,7 @@ import type ora from "ora"
 import getClientFromArgs from "../get-client-from-args"
 import { GlobalOptions } from "../global-options"
 import panes from "./panes"
+import { formatErrorMsg } from "./utils"
 
 const completeInteractiveLogin = async (
   connectWebviewId: string,
@@ -42,6 +43,10 @@ const completeInteractiveLogin = async (
       const handler = panes.find((p) => p.name === currentPane.name)
       if (!handler) {
         throw new Error(`Unknown pane ${currentPane.name}`)
+      }
+
+      if (currentPane.render_props.error_msg) {
+        console.error(formatErrorMsg(currentPane.render_props.error_msg))
       }
 
       submit_props = await handler.getInput(currentPane.render_props)

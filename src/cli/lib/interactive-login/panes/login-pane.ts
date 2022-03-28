@@ -8,24 +8,27 @@ const loginPane: PaneImplementation = {
     let userIdentifier
     if (props.accepted_user_identifiers.length > 1) {
       userIdentifier = (
-        await prompts({
-          name: "userIdentifier",
-          type: "select",
-          message: "Select your login identifier type",
-          choices: props.accepted_user_identifiers.map(
-            (user_identifier: any) => ({
-              title: user_identifier,
-              value: user_identifier,
-            })
-          ),
-        })
+        await prompts(
+          {
+            name: "userIdentifier",
+            type: "select",
+            message: "Select your login identifier type",
+            choices: props.accepted_user_identifiers.map(
+              (user_identifier: any) => ({
+                title: user_identifier,
+                value: user_identifier,
+              })
+            ),
+          },
+          {
+            onCancel: () => {
+              process.exit(1)
+            },
+          }
+        )
       ).userIdentifier
     } else {
       userIdentifier = props.accepted_user_identifiers[0]
-    }
-
-    if (props.error_msg) {
-      console.error(formatErrorMsg(props.error_msg))
     }
 
     const response = await prompts(
