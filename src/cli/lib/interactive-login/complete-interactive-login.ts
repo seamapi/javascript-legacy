@@ -19,7 +19,7 @@ const completeInteractiveLogin = async (
     spinner = ora.default("Logging in...")
   }
 
-  let submit_props: any
+  let submit_args: any
   while (true) {
     console.clear()
 
@@ -29,7 +29,7 @@ const completeInteractiveLogin = async (
         "/internal/connect_webviews/login/next",
         {
           connect_webview_id: connectWebviewId,
-          submit_props,
+          submit_args,
         }
       )
       spinner?.stop()
@@ -37,6 +37,10 @@ const completeInteractiveLogin = async (
       const currentPane = data.pane
 
       if (currentPane.name === "finished_pane") {
+        if (currentPane.render_props.error_msg) {
+          throw new Error(currentPane.render_props.error_msg)
+        }
+
         break
       }
 
@@ -49,7 +53,7 @@ const completeInteractiveLogin = async (
         console.error(formatErrorMsg(currentPane.render_props.error_msg))
       }
 
-      submit_props = await handler.getInput(currentPane.render_props)
+      submit_args = await handler.getInput(currentPane.render_props)
     } catch (error) {
       if (spinner) {
         spinner.fail((error as Error).message)
