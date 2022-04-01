@@ -34,6 +34,20 @@ const command: CommandModule<GlobalOptions> = {
         }
       )
       .command(
+        "login <id>",
+        "login to a connect webview",
+        (yargs) => {
+          return yargs.positional("id", {
+            describe: "the connect webview ID",
+            demandOption: true,
+            type: "string",
+          })
+        },
+        async (argv) => {
+          await completeInteractiveLogin(argv.id, argv)
+        }
+      )
+      .command(
         "create",
         "create a connect webview",
         (yargs) => {
