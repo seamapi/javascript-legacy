@@ -35,7 +35,7 @@
     "cjs-wrapper.js"
   ],
   "dependencies": {
-    "@seamapi/seam-connect-public-types": "1.0.0",
+    "@seamapi/seam-connect-public-types": "1.0.3",
     "axios": "0.25.0",
     "change-case": "4.1.2",
     "eventemitter3": "4.0.7",
