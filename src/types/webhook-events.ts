@@ -1,4 +1,4 @@
-import { SeamEvent } from "@seamapi/seam-connect-public-types"
+import { SeamEvent } from "seamapi-types"
 
 type Distribute<EventType> = EventType extends SeamEvent["event_type"]
   ? {

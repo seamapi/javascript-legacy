@@ -35,7 +35,6 @@
     "cjs-wrapper.js"
   ],
   "dependencies": {
-    "@seamapi/seam-connect-public-types": "1.0.3",
     "axios": "0.25.0",
     "change-case": "4.1.2",
     "eventemitter3": "4.0.7",
@@ -79,6 +78,7 @@
     "pkg": "5.5.2",
     "playwright": "1.19.2",
     "prettier": "2.5.1",
+    "seamapi-types": "1.1.0",
     "testcontainers": "8.4.0",
     "ts-json-schema-generator": "0.98.0",
     "tsup": "5.11.11",

@@ -234,11 +234,6 @@
     node-gyp "^8.2.0"
     read-package-json-fast "^2.0.1"
 
-"@seamapi/seam-connect-public-types@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@seamapi/seam-connect-public-types/-/seam-connect-public-types-1.0.3.tgz#ba579e80a060c46af9cd45a0265e0689857f3230"
-  integrity sha512-72uMNL3YjZpaWri921anaW3pJ0hOMPCXzdAIhKrnk2Fv8QhDG2LVIqMJXuhZwhT25oPSauWpcBSRXBi1VIzLMw==
-
 "@semantic-release/commit-analyzer@9.0.2":
   version "9.0.2"
   resolved "https://registry.yarnpkg.com/@semantic-release/commit-analyzer/-/commit-analyzer-9.0.2.tgz#a78e54f9834193b55f1073fa6258eecc9a545e03"
@@ -4561,6 +4556,11 @@ safe-stable-stringify@^2.3.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
+seamapi-types@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/seamapi-types/-/seamapi-types-1.1.0.tgz#72b8eef7aa53e24e90b9f61605535728cf410b46"
+  integrity sha512-Qa8X4Ieaj3LBKPZuPUwvhBRAi+96HyJZYkHoyz1lX19os6JVp9YiT0Znio5I/svvRDH8B7ao5cHqyV5m4PKjjw==
 
 "semver@2 || 3 || 4 || 5", semver@^5.4.1:
   version "5.7.1"

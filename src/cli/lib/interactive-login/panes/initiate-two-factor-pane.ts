@@ -1,5 +1,5 @@
 import prompts from "prompts"
-import { TwoFactorOption } from "@seamapi/seam-connect-public-types"
+import { TwoFactorOption } from "seamapi-types"
 import { PaneImplementation } from "./types"
 
 const formatOption = (option: TwoFactorOption) => {

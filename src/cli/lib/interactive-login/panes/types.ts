@@ -1,4 +1,4 @@
-import { AnyPane } from "@seamapi/seam-connect-public-types"
+import { AnyPane } from "seamapi-types"
 
 export interface PaneImplementation<PaneName extends AnyPane["name"]> {
   name: PaneName
