@@ -1,7 +1,7 @@
 import prompts from "prompts"
 import { PaneImplementation } from "./types"
 
-const twoFactorPane: PaneImplementation = {
+const twoFactorPane: PaneImplementation<"two_factor_pane"> = {
   name: "two_factor_pane",
   getInput: async ({ code_length }) => {
     const { code } = await prompts(

@@ -50,7 +50,7 @@ Create a new instance of SeamWebhook.
 
 ### verify
 
-▸ **verify**(`payload`, `headers`): [`SeamEvent`](../modules.md#seamevent)
+▸ **verify**(`payload`, `headers`): [`SeamWebhookEvent`](../modules.md#seamwebhookevent)
 
 Verify a payload received from a webhook and return the typed event.
 
@@ -63,7 +63,7 @@ Verify a payload received from a webhook and return the typed event.
 
 #### Returns
 
-[`SeamEvent`](../modules.md#seamevent)
+[`SeamWebhookEvent`](../modules.md#seamwebhookevent)
 
 event
 

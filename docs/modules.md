@@ -32,7 +32,6 @@
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
-- [CommonDeviceEvent](interfaces/CommonDeviceEvent.md)
 - [ConnectWebview](interfaces/ConnectWebview.md)
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
@@ -69,18 +68,12 @@
 - [ActionType](modules.md#actiontype)
 - [AnyDevice](modules.md#anydevice)
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
-- [CreateAccessCodeEvent](modules.md#createaccesscodeevent)
-- [DeviceConnectedEvent](modules.md#deviceconnectedevent)
-- [DeviceDisconnectEvent](modules.md#devicedisconnectevent)
-- [DeviceLowBatteryEvent](modules.md#devicelowbatteryevent)
-- [DeviceTamperEvent](modules.md#devicetamperevent)
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
-- [NoiseDetectedEvent](modules.md#noisedetectedevent)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
-- [SeamEvent](modules.md#seamevent)
+- [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
 
 ### Functions
@@ -201,56 +194,6 @@ ___
 
 ___
 
-### CreateAccessCodeEvent
-
-Ƭ **CreateAccessCodeEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"access_codes.created"``, { `access_code_id`: `string`  }\>
-
-#### Defined in
-
-[src/types/webhook-events.ts:21](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L21)
-
-___
-
-### DeviceConnectedEvent
-
-Ƭ **DeviceConnectedEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"device.connected"``\>
-
-#### Defined in
-
-[src/types/webhook-events.ts:14](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L14)
-
-___
-
-### DeviceDisconnectEvent
-
-Ƭ **DeviceDisconnectEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"devices.disconnected"``\>
-
-#### Defined in
-
-[src/types/webhook-events.ts:15](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L15)
-
-___
-
-### DeviceLowBatteryEvent
-
-Ƭ **DeviceLowBatteryEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"devices.triggered_low_battery"``\>
-
-#### Defined in
-
-[src/types/webhook-events.ts:17](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L17)
-
-___
-
-### DeviceTamperEvent
-
-Ƭ **DeviceTamperEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"devices.tampered"``\>
-
-#### Defined in
-
-[src/types/webhook-events.ts:16](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L16)
-
-___
-
 ### DeviceType
 
 Ƭ **DeviceType**: [`LockDeviceType`](modules.md#lockdevicetype) \| [`NoiseDetectionDeviceType`](modules.md#noisedetectiondevicetype)
@@ -300,16 +243,6 @@ ___
 
 ___
 
-### NoiseDetectedEvent
-
-Ƭ **NoiseDetectedEvent**: [`CommonDeviceEvent`](interfaces/CommonDeviceEvent.md)<``"noise_thresholds.detected_noise"``\>
-
-#### Defined in
-
-[src/types/webhook-events.ts:29](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L29)
-
-___
-
 ### NoiseDetectionDeviceType
 
 Ƭ **NoiseDetectionDeviceType**: ``"noiseaware_activity_zone"``
@@ -320,13 +253,13 @@ ___
 
 ___
 
-### SeamEvent
+### SeamWebhookEvent
 
-Ƭ **SeamEvent**: [`DeviceConnectedEvent`](modules.md#deviceconnectedevent) \| [`DeviceDisconnectEvent`](modules.md#devicedisconnectevent) \| [`DeviceTamperEvent`](modules.md#devicetamperevent) \| [`DeviceLowBatteryEvent`](modules.md#devicelowbatteryevent) \| [`CreateAccessCodeEvent`](modules.md#createaccesscodeevent) \| [`NoiseDetectedEvent`](modules.md#noisedetectedevent)
+Ƭ **SeamWebhookEvent**: `Distribute`<`SeamEvent`[``"event_type"``]\>
 
 #### Defined in
 
-[src/types/webhook-events.ts:32](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L32)
+[src/types/webhook-events.ts:10](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/webhook-events.ts#L10)
 
 ___
 

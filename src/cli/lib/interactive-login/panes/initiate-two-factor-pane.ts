@@ -1,7 +1,8 @@
 import prompts from "prompts"
+import { TwoFactorOption } from "@seamapi/seam-connect-public-types"
 import { PaneImplementation } from "./types"
 
-const formatOption = (option: any) => {
+const formatOption = (option: TwoFactorOption) => {
   switch (option.method) {
     case "otp":
       return `📱 authenticator app`
@@ -14,7 +15,7 @@ const formatOption = (option: any) => {
   }
 }
 
-const initiateTwoFactorPane: PaneImplementation = {
+const initiateTwoFactorPane: PaneImplementation<"initiate_two_factor_pane"> = {
   name: "initiate_two_factor_pane",
   getInput: async ({ options }) => {
     const { id } = await prompts(
@@ -22,7 +23,7 @@ const initiateTwoFactorPane: PaneImplementation = {
         type: "select",
         name: "id",
         message: "Select a 2FA option",
-        choices: options.map((o: any) => ({
+        choices: options.map((o) => ({
           title: formatOption(o),
           value: o.id,
         })),

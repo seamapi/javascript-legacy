@@ -2,7 +2,7 @@ import prompts from "prompts"
 import { formatErrorMsg } from "../utils"
 import { PaneImplementation } from "./types"
 
-const loginPane: PaneImplementation = {
+const loginPane: PaneImplementation<"login_pane"> = {
   name: "login_pane",
   getInput: async (props) => {
     let userIdentifier

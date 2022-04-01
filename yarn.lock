@@ -234,6 +234,11 @@
     node-gyp "^8.2.0"
     read-package-json-fast "^2.0.1"
 
+"@seamapi/seam-connect-public-types@1.0.0":
+  version "1.0.0"
+  resolved "https://npm.pkg.github.com/download/@seamapi/seam-connect-public-types/1.0.0/5c549205ce3eef0aee1fd5dfea1c041f468d3c8e28f6c65acf31f0a5f44dbb3c#764ab68dc76776770fd7d1a65ca28ed9221242a7"
+  integrity sha512-HE6c+536/obneHYMMwjZrIClCWklE3ivgWV77PG3XF78ttlAm/639EvxBScIWKAwP8Gspz43yOB6qRnsT/Okfw==
+
 "@semantic-release/commit-analyzer@9.0.2":
   version "9.0.2"
   resolved "https://registry.yarnpkg.com/@semantic-release/commit-analyzer/-/commit-analyzer-9.0.2.tgz#a78e54f9834193b55f1073fa6258eecc9a545e03"
