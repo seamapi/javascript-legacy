@@ -1,5 +1,5 @@
 import { Webhook } from "svix"
-import { SeamEvent } from "./types/webhook-events"
+import { SeamWebhookEvent } from "./types/webhook-events"
 
 /**
  * Parse and verify webhook payloads.
@@ -21,7 +21,7 @@ export class SeamWebhook {
    * @param headers request headers (used to verify against the secret)
    * @returns event
    */
-  verify(payload: string, headers: Record<string, string>): SeamEvent {
-    return this.wh.verify(payload, headers) as SeamEvent
+  verify(payload: string, headers: Record<string, string>): SeamWebhookEvent {
+    return this.wh.verify(payload, headers) as SeamWebhookEvent
   }
 }

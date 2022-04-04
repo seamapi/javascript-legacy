@@ -95,7 +95,7 @@ ___
 
 ### client
 
-• `Private` **client**: `AxiosInstance`
+• **client**: `AxiosInstance`
 
 #### Defined in
 

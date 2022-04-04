@@ -1,5 +1,6 @@
 import { CommandModule } from "yargs"
 import { Provider } from "../../types/models"
+import completeInteractiveLogin from "../lib/interactive-login/complete-interactive-login"
 import executeCommand from "../lib/execute-command"
 import { GlobalOptions } from "../lib/global-options"
 
@@ -33,6 +34,20 @@ const command: CommandModule<GlobalOptions> = {
         }
       )
       .command(
+        "login <id>",
+        "login to a connect webview",
+        (yargs) => {
+          return yargs.positional("id", {
+            describe: "the connect webview ID",
+            demandOption: true,
+            type: "string",
+          })
+        },
+        async (argv) => {
+          await completeInteractiveLogin(argv.id, argv)
+        }
+      )
+      .command(
         "create",
         "create a connect webview",
         (yargs) => {
@@ -44,6 +59,10 @@ const command: CommandModule<GlobalOptions> = {
               choices: Object.values(Provider),
               alias: "ap",
             })
+            .option("login", {
+              describe: "start interactive login flow after creating",
+              type: "boolean",
+            })
             .check((argv) => {
               if (argv["accepted-providers"].length === 0) {
                 throw new Error(
@@ -54,7 +73,7 @@ const command: CommandModule<GlobalOptions> = {
             })
         },
         async (argv) => {
-          await executeCommand(
+          const { connect_webview_id } = await executeCommand(
             "connectWebviews.create",
             [
               {
@@ -63,6 +82,10 @@ const command: CommandModule<GlobalOptions> = {
             ],
             argv
           )
+
+          if (argv.login) {
+            await completeInteractiveLogin(connect_webview_id, argv)
+          }
         }
       )
   },
