@@ -19,6 +19,7 @@
 - [message](SeamAPIError.md#message)
 - [metadata](SeamAPIError.md#metadata)
 - [name](SeamAPIError.md#name)
+- [requestId](SeamAPIError.md#requestid)
 - [stack](SeamAPIError.md#stack)
 - [status](SeamAPIError.md#status)
 - [prepareStackTrace](SeamAPIError.md#preparestacktrace)
@@ -33,13 +34,14 @@
 
 ### constructor
 
-• **new SeamAPIError**(`status`, `metadata?`)
+• **new SeamAPIError**(`status`, `requestId`, `metadata?`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `status` | `number` |
+| `requestId` | `string` |
 | `metadata?` | [`SeamAPIErrorMetadata`](../interfaces/SeamAPIErrorMetadata.md) |
 
 #### Overrides
@@ -83,6 +85,12 @@ Error.name
 #### Defined in
 
 node_modules/typescript/lib/lib.es5.d.ts:1022
+
+___
+
+### requestId
+
+• **requestId**: `string`
 
 ___
 
@@ -163,7 +171,7 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Defined in
 
-[src/lib/api-error.ts:16](https://github.com/seamapi/seamapi-javascript/blob/main/src/lib/api-error.ts#L16)
+[src/lib/api-error.ts:20](https://github.com/seamapi/seamapi-javascript/blob/main/src/lib/api-error.ts#L20)
 
 ___
 

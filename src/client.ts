@@ -81,6 +81,7 @@ export class Seam extends Routes {
 
         throw new SeamAPIError(
           error.response.status,
+          error.response.headers["seam-request-id"],
           (error.response.data as ErroredAPIResponse).error
         )
       }
