@@ -28,6 +28,14 @@ export type AccessCodeDeleteRequest = {
   access_code_id: string
 }
 
+export type DeviceGetRequest =
+  | {
+      device_id: string
+    }
+  | {
+      name: string
+    }
+
 export type DeviceUpdateRequest = {
   device_id: string
   properties?: Partial<CommonDeviceProperties>

@@ -10,17 +10,31 @@ const command: CommandModule<GlobalOptions> = {
     return yargs
       .demandCommand()
       .command(
-        "get <id>",
+        "get",
         "get a device",
         (yargs) => {
-          return yargs.positional("id", {
-            describe: "the device ID",
-            demandOption: true,
-            type: "string",
-          })
+          return yargs
+            .option("id", {
+              describe: "the device ID",
+              type: "string",
+            })
+            .option("name", {
+              describe: "the device name",
+              type: "string",
+            })
+            .conflicts("id", "name")
+            .check((argv) => {
+              if (!argv.id && !argv.name) {
+                throw new Error("Either --id or --name is required")
+              }
+            })
         },
         async (argv) => {
-          await executeCommand("devices.get", [argv.id], argv)
+          await executeCommand(
+            "devices.get",
+            [argv.name ? { name: argv.name } : { device_id: argv.id! }],
+            argv
+          )
         }
       )
       .command(

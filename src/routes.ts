@@ -16,6 +16,7 @@ import {
   AccessCodeCreateOngoingRequest,
   ConnectWebviewCreateRequest,
   DeviceUpdateRequest,
+  DeviceGetRequest,
 } from "./types/route-requests"
 import { SeamActionAttemptError } from "./lib/api-error"
 import {
@@ -153,12 +154,10 @@ export abstract class Routes {
             }
           : {},
       }),
-    get: (deviceId: string) =>
+    get: (params: DeviceGetRequest) =>
       this.makeRequestAndFormat<DeviceGetResponse>("device", {
         url: "/devices/get",
-        params: {
-          device_id: deviceId,
-        },
+        params,
       }),
     update: (params: DeviceUpdateRequest) =>
       this.makeRequest({

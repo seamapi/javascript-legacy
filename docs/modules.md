@@ -68,6 +68,7 @@
 - [ActionType](modules.md#actiontype)
 - [AnyDevice](modules.md#anydevice)
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
+- [DeviceGetRequest](modules.md#devicegetrequest)
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [LockDevice](modules.md#lockdevice)
@@ -194,6 +195,16 @@ ___
 
 ___
 
+### DeviceGetRequest
+
+Ƭ **DeviceGetRequest**: { `device_id`: `string`  } \| { `name`: `string`  }
+
+#### Defined in
+
+[src/types/route-requests.ts:31](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L31)
+
+___
+
 ### DeviceType
 
 Ƭ **DeviceType**: [`LockDeviceType`](modules.md#lockdevicetype) \| [`NoiseDetectionDeviceType`](modules.md#noisedetectiondevicetype)
@@ -219,7 +230,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:31](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L31)
+[src/types/route-requests.ts:39](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/route-requests.ts#L39)
 
 ___
 
