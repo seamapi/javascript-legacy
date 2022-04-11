@@ -50,6 +50,10 @@ export class SeamMalformedInputError extends Error {
   }
 
   toString() {
-    return `SeamMalformedInputError: ${JSON.stringify(this.validationErrors)}`
+    return `SeamMalformedInputError: ${JSON.stringify(
+      this.validationErrors,
+      null,
+      2
+    )}`
   }
 }
