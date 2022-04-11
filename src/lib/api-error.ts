@@ -42,7 +42,7 @@ export class SeamActionAttemptError extends Error {
 
 export class SeamMalformedInputError extends Error {
   constructor(public validationErrors: Record<string, unknown>) {
-    super("Malformed input")
+    super(`Malformed input: ${JSON.stringify(validationErrors, null, 2)}`)
 
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, this.constructor)
@@ -50,6 +50,10 @@ export class SeamMalformedInputError extends Error {
   }
 
   toString() {
-    return `SeamMalformedInputError: ${JSON.stringify(this.validationErrors)}`
+    return `SeamMalformedInputError: ${JSON.stringify(
+      this.validationErrors,
+      null,
+      2
+    )}`
   }
 }
