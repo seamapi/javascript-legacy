@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[src/types/models.ts:52](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L52)
+[src/types/models.ts:52](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L52)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:45](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L45)
+[src/types/models.ts:45](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L45)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:44](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L44)
+[src/types/models.ts:44](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L44)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:43](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L43)
+[src/types/models.ts:43](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L43)
 
 ___
 
@@ -81,7 +81,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:25](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L25)
+[src/types/models.ts:25](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L25)
 
 ___
 
@@ -95,7 +95,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:26](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L26)
+[src/types/models.ts:26](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L26)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:47](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L47)
+[src/types/models.ts:47](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L47)
 
 ___
 
@@ -122,4 +122,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:58](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L58)
+[src/types/models.ts:58](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L58)
