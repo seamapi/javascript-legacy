@@ -1,16 +1,21 @@
 import test, { ExecutionContext } from "ava"
 import { Get } from "type-fest"
 import Seam from "../../../src"
+import { OverloadedParameters } from "../../../src/types/overloaded-types"
 import { getServer, WorkerPublishedMessage } from "../plugins/get-server-plugin"
 import getModelSchemas from "./get-model-schemas"
-import getRouteResponseSchemas from "./get-route-response-schemas"
 
-type ParametersByPath<Path extends string> = Parameters<
+type OverloadedParametersByPath<Path extends string> = OverloadedParameters<
   Exclude<Get<Seam, Path>, Seam>
 >
 
+// Unwrap into union
+type ParametersByPath<Path extends string> =
+  OverloadedParametersByPath<Path> extends Array<any>
+    ? OverloadedParametersByPath<Path>[number]
+    : OverloadedParametersByPath<Path>
+
 interface Input<Path extends string> {
-  // method: Path
   args?:
     | ParametersByPath<Path>
     | ((seed: WorkerPublishedMessage["seed"]) => ParametersByPath<Path>)
@@ -40,7 +45,8 @@ export const testAPIMethod = <MethodPath extends string>(
         }
       }
 
-      const resolvedArgs = Array.isArray(args) ? args : args(server.seed)
+      const resolvedArgs =
+        typeof args === "function" ? (args as any)(server.seed) : args
       t.log("Arguments:", resolvedArgs)
       const result = await func(...resolvedArgs)
 

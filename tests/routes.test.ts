@@ -104,7 +104,7 @@ test(
         device_id: seed.devices.schlageLock.id1,
         name: "Created by Ava",
         code: "4321",
-      } as any,
+      },
     ],
     modifiesState: true,
   },
