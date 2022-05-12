@@ -1,7 +1,12 @@
 # Javascript / Typescript Seam API Library & CLI
 
 Control locks, lights and other internet of things devices with Seam's simple
-API. Check out [the documentation](./docs/modules.md) or [some examples](./examples).
+API.
+
+Check out [the documentation](./docs/modules.md) or some examples:
+- [CLI Usage](#cli-usage)
+- [Library Usage](#library-usage)
+- [Receiving Webhooks](#receiving-webhooks)
 
 ## Usage
 
