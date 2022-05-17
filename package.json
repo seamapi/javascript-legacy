@@ -103,7 +103,7 @@
     "build:package": "tsup",
     "build:docs": "typedoc",
     "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
-    "build": "npm run build:package && npm run build:docs",
+    "build": "npm run build:json-response-schemas && npm run build:package && npm run build:docs",
     "pack:cli": "pkg -c package.json dist/cli/entry.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -115,5 +115,5 @@
     "seamapi": "./dist/cli/entry.js",
     "seam": "./dist/cli/entry.js"
   },
-  "repository": "https://github.com/hello-seam/seamapi-javascript"
+  "repository": "https://github.com/seamapi/javascript"
 }
