@@ -75,11 +75,13 @@ const startAndSeedServer = async () => {
 
   ;(axios.defaults.headers as any).Authorization = `Bearer ${api_key}`
 
-  const schlageLock = await addFakeSchlageDevices(axios)
-  const augustLock = await addFakeAugustDevices(axios)
-  const connectWebview = await axios.post("/connect_webviews/create", {
-    accepted_providers: ["schlage", "august"],
-  })
+  const [schlageLock, augustLock, connectWebview] = await Promise.all([
+    addFakeSchlageDevices(axios),
+    addFakeAugustDevices(axios),
+    axios.post("/connect_webviews/create", {
+      accepted_providers: ["schlage", "august"],
+    }),
+  ])
 
   return {
     serverUrl,
