@@ -1,6 +1,7 @@
+import { Axios } from "axios"
 import pRetry from "p-retry"
 
-const waitForDeviceType = (axios, deviceType) => {
+const waitForDeviceType = (axios: Axios, deviceType: string) => {
   return pRetry(
     async () => {
       const {
@@ -8,7 +9,7 @@ const waitForDeviceType = (axios, deviceType) => {
       } = await axios.get("/devices/list")
 
       const filteredDevices = devices.filter(
-        (d) => d.device_type === deviceType
+        (d: any) => d.device_type === deviceType
       )
 
       if (filteredDevices.length > 0) {

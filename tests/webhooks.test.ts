@@ -21,7 +21,7 @@ test("webhook payload is correctly verified", async (t) => {
   const [{ req, data }] = await Promise.all([
     waitForCallback(ms("15s")),
     client.accessCodes.create({
-      device_id: seed.devices.smartThingsLock.id1,
+      device_id: seed.devices.augustLock.id1,
       code: "4321",
     }),
   ])
@@ -41,7 +41,7 @@ test("webhook payload is correctly verified", async (t) => {
   )
 
   t.is(callback.event_type, "access_codes.created")
-  t.is(callback.data.device_id, seed.devices.smartThingsLock.id1)
+  t.is(callback.data.device_id, seed.devices.augustLock.id1)
   // Check types
   t.true(
     callback.event_type === "access_codes.created" &&

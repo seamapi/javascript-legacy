@@ -1,10 +1,20 @@
-import { GenericContainer } from "testcontainers"
+import {
+  GenericContainer,
+  StartedTestContainer,
+  TestContainer,
+} from "testcontainers"
 import { internalIpV4 } from "internal-ip"
 
-let container
-let apiKey
+let container: StartedTestContainer | TestContainer
+let apiKey: string
 
-const getTestSvix = async ({ env, networkName }) => {
+const getTestSvix = async ({
+  env,
+  networkName,
+}: {
+  env: Record<string, string>
+  networkName: string
+}) => {
   if (!container) {
     container = new GenericContainer("svix/svix-server")
       .withExposedPorts(8071)
@@ -14,7 +24,7 @@ const getTestSvix = async ({ env, networkName }) => {
       // We add an extra mapping so Svix can call out to proccesses on the host
       .withExtraHosts({
         host: "docker-host",
-        ipAddress: await internalIpV4(),
+        ipAddress: (await internalIpV4())!,
       })
 
     for (const [key, value] of Object.entries(env)) {

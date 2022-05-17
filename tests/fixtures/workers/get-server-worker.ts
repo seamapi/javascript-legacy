@@ -1,10 +1,13 @@
-import startAndSeedServer from "./helpers/start-and-seed-server.mjs"
+import { SharedWorker } from "ava/plugin"
+import { Except } from "type-fest"
+import startAndSeedServer from "./helpers/start-and-seed-server"
 
-let readableServer
+let readableServer: Except<
+  Awaited<ReturnType<typeof startAndSeedServer>>,
+  "teardownFn"
+>
 
-const getServer = async ({ negotiateProtocol }) => {
-  const protocol = await negotiateProtocol(["ava-4"]).ready()
-
+const getServer = async (protocol: SharedWorker.Protocol) => {
   for await (const message of protocol.subscribe()) {
     const { data } = message
 

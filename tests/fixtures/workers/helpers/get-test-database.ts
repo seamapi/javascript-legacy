@@ -1,11 +1,16 @@
-import { Network, GenericContainer } from "testcontainers"
+import {
+  Network,
+  GenericContainer,
+  StartedTestContainer,
+  StartedNetwork,
+} from "testcontainers"
 import { customAlphabet } from "nanoid"
 import knex from "knex"
 
 const nanoid = customAlphabet("1234567890abcdef", 10)
 
-let container
-let network
+let container: StartedTestContainer
+let network: StartedNetwork
 
 const getTestDatabase = async () => {
   if (!container) {

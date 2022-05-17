@@ -55,14 +55,14 @@ test("waiting on an errored action attempt should throw", async (t) => {
 
   const ACCESS_CODE_TO_DUPLICATE = "111111"
   await client.accessCodes.create({
-    device_id: seed.devices.smartThingsLock.id1,
+    device_id: seed.devices.augustLock.id1,
     code: ACCESS_CODE_TO_DUPLICATE,
   })
 
   await t.throwsAsync(
     () =>
       client.accessCodes.create({
-        device_id: seed.devices.smartThingsLock.id1,
+        device_id: seed.devices.augustLock.id1,
         code: ACCESS_CODE_TO_DUPLICATE,
       }),
     {

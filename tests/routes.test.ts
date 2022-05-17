@@ -71,7 +71,7 @@ test(testAPIMethod("connectWebviews.list"), {}, "ConnectWebview[]")
 test(
   testAPIMethod("connectWebviews.get"),
   {
-    args: (seed) => [seed.devices.schlageLock.connectWebviewId],
+    args: (seed) => [seed.connectWebviewId],
   },
   "ConnectWebview"
 )
@@ -117,7 +117,7 @@ test(
   {
     args: (seed) => [
       {
-        device_id: seed.devices.smartThingsLock.id1,
+        device_id: seed.devices.augustLock.id1,
         name: "Created by Ava",
         code: "4321",
         starts_at: new Date(),

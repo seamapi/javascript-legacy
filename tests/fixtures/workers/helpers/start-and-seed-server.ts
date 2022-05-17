@@ -2,10 +2,10 @@ import { GenericContainer, Wait } from "testcontainers"
 import getPort from "get-port"
 import knex from "knex"
 import defaultAxios from "axios"
-import getTestDatabase from "./get-test-database.mjs"
-import getTestSvix from "./get-test-svix.mjs"
-import addFakeSchlageDevices from "./add-fake-schlage-devices.mjs"
-import addFakeSmartThingsDevices from "./add-fake-smartthings-devices.mjs"
+import getTestDatabase from "./get-test-database"
+import getTestSvix from "./get-test-svix"
+import addFakeSchlageDevices from "./add-fake-schlage-devices"
+import addFakeAugustDevices from "./add-fake-august-devices"
 
 const SEAM_ADMIN_PASSWORD = "1234"
 
@@ -73,10 +73,13 @@ const startAndSeedServer = async () => {
 
   const api_key = "seam_sandykey_0000000000000000000sand"
 
-  axios.defaults.headers.Authorization = `Bearer ${api_key}`
+  ;(axios.defaults.headers as any).Authorization = `Bearer ${api_key}`
 
   const schlageLock = await addFakeSchlageDevices(axios)
-  const smartThingsLock = await addFakeSmartThingsDevices(axios)
+  const augustLock = await addFakeAugustDevices(axios)
+  const connectWebview = await axios.post("/connect_webviews/create", {
+    accepted_providers: ["schlage", "august"],
+  })
 
   return {
     serverUrl,
@@ -85,9 +88,10 @@ const startAndSeedServer = async () => {
     seed: {
       apiKey: api_key,
       workspaceId: workspace.workspace_id,
+      connectWebviewId: connectWebview.data.connect_webview.connect_webview_id,
       devices: {
         schlageLock,
-        smartThingsLock,
+        augustLock,
       },
     },
     teardownFn: () => server.stop(),

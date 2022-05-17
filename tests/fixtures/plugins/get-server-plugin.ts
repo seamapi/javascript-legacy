@@ -1,4 +1,4 @@
-import { registerSharedWorker } from "ava/plugin"
+import { registerSharedTypeScriptWorker } from "ava-typescript-worker"
 import { URL } from "url"
 import defaultAxios from "axios"
 import knex from "knex"
@@ -7,7 +7,6 @@ import Seam from "../../../src"
 
 type SeedLock = {
   connectedAccountId: string
-  connectWebviewId: string
   id1: string
   name1: string
 }
@@ -19,18 +18,18 @@ export type WorkerPublishedMessage = {
   seed: {
     apiKey: string
     workspaceId: string
+    connectWebviewId: string
     devices: {
       schlageLock: SeedLock
-      smartThingsLock: SeedLock
+      augustLock: SeedLock
     }
   }
 }
 
-const serverWorker = registerSharedWorker({
+const serverWorker = registerSharedTypeScriptWorker({
   filename: new URL(
-    `file:${path.join(__dirname, "../", "workers", "get-server-worker.mjs")}`
+    `file:${path.join(__dirname, "../", "workers", "get-server-worker.ts")}`
   ),
-  supportedProtocols: ["ava-4"],
 })
 
 export const getServer = async (writable = false) => {
