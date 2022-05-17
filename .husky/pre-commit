@@ -3,4 +3,4 @@
 
 npx lint-staged
 
-npm run build:docs && git add docs
+npm run build:json-response-schemas && npm run build:docs && git add docs
