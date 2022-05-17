@@ -55,15 +55,16 @@ jobs:
           ref: ${{ github.event.inputs.sdkSha }}
           submodules: true
 
-      - name: Update submodule
-        run: |
-          git submodule update --remote --recursive
+      - name: Pre-pull Seam Connect image
+        run: docker pull registry.digitalocean.com/seam/seam-connect
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 14
-      - run: yarn install
+          node-version: 16
+          cache: "yarn"
+
+      - run: yarn install --frozen-lockfile
       - run: yarn test -T 2m
         env:
           SEAM_CONNECT_IMAGE: "${{ env.CONTAINER_REGISTRY }}/seam/seam-connect:${{ github.event.inputs.connectSha || 'latest' }}"
