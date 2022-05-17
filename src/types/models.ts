@@ -15,6 +15,9 @@ export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
 
 export enum Provider {
   AUGUST = "august",
+  BUTTERFLYMX = "butterflymx",
+  GENIE = "genie",
+  SALTO = "salto",
   SCHLAGE = "schlage",
   YALE = "yale",
   NOISEAWARE = "noiseaware",

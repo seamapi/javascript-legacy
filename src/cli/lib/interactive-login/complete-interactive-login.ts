@@ -2,7 +2,7 @@ import type ora from "ora"
 import getClientFromArgs from "../get-client-from-args"
 import { GlobalOptions } from "../global-options"
 import panes from "./panes"
-import { formatErrorMsg } from "./utils"
+import { ContinueOutsideCLIError, formatErrorMsg } from "./utils"
 
 const completeInteractiveLogin = async (
   connectWebviewId: string,
@@ -53,7 +53,18 @@ const completeInteractiveLogin = async (
         console.error(formatErrorMsg(currentPane.render_props.error_msg))
       }
 
-      submit_args = await handler.getInput(currentPane.render_props)
+      try {
+        submit_args = await handler.getInput(currentPane.render_props)
+      } catch (error: unknown) {
+        if (error instanceof ContinueOutsideCLIError) {
+          spinner?.succeed(
+            "Please continue the login process outside of the CLI."
+          )
+          process.exit(0)
+        }
+
+        throw error
+      }
     } catch (error) {
       if (spinner) {
         spinner.fail((error as Error).message)

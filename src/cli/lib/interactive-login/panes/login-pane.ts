@@ -1,5 +1,4 @@
 import prompts from "prompts"
-import { formatErrorMsg } from "../utils"
 import { PaneImplementation } from "./types"
 
 const loginPane: PaneImplementation<"login_pane"> = {

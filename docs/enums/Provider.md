@@ -7,7 +7,10 @@
 ### Enumeration members
 
 - [AUGUST](Provider.md#august)
+- [BUTTERFLYMX](Provider.md#butterflymx)
+- [GENIE](Provider.md#genie)
 - [NOISEAWARE](Provider.md#noiseaware)
+- [SALTO](Provider.md#salto)
 - [SCHLAGE](Provider.md#schlage)
 - [SMARTTHINGS](Provider.md#smartthings)
 - [YALE](Provider.md#yale)
@@ -24,9 +27,39 @@
 
 ___
 
+### BUTTERFLYMX
+
+• **BUTTERFLYMX** = `"butterflymx"`
+
+#### Defined in
+
+[src/types/models.ts:18](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L18)
+
+___
+
+### GENIE
+
+• **GENIE** = `"genie"`
+
+#### Defined in
+
+[src/types/models.ts:19](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L19)
+
+___
+
 ### NOISEAWARE
 
 • **NOISEAWARE** = `"noiseaware"`
+
+#### Defined in
+
+[src/types/models.ts:23](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L23)
+
+___
+
+### SALTO
+
+• **SALTO** = `"salto"`
 
 #### Defined in
 
@@ -40,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:18](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L18)
+[src/types/models.ts:21](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L21)
 
 ___
 
@@ -50,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:21](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L21)
+[src/types/models.ts:24](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L24)
 
 ___
 
@@ -60,4 +93,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:19](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L19)
+[src/types/models.ts:22](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L22)
