@@ -1,5 +1,5 @@
 import { Axios } from "axios"
-import waitForDeviceType from "./wait-for-device-type"
+import getDeviceType from "./get-device-type"
 
 const addFakeSchlageDevices = async (axios: Axios) => {
   await axios.post("/internal/scenarios/factories/load", {
@@ -10,7 +10,7 @@ const addFakeSchlageDevices = async (axios: Axios) => {
     sync: true,
   })
 
-  const [firstDevice] = await waitForDeviceType(axios, "schlage_lock")
+  const [firstDevice] = await getDeviceType(axios, "schlage_lock")
 
   await axios.post("/access_codes/create", {
     device_id: firstDevice.device_id,
