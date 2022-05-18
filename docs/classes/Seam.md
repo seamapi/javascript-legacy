@@ -47,7 +47,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/client.ts:38](https://github.com/seamapi/javascript/blob/main/src/client.ts#L38)
+[src/client.ts:39](https://github.com/seamapi/javascript/blob/main/src/client.ts#L39)
 
 ## Properties
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/client.ts:36](https://github.com/seamapi/javascript/blob/main/src/client.ts#L36)
+[src/client.ts:37](https://github.com/seamapi/javascript/blob/main/src/client.ts#L37)
 
 ___
 
@@ -239,4 +239,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/client.ts:68](https://github.com/seamapi/javascript/blob/main/src/client.ts#L68)
+[src/client.ts:70](https://github.com/seamapi/javascript/blob/main/src/client.ts#L70)

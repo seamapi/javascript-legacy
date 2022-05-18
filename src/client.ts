@@ -2,6 +2,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
 import { SeamAPIError, SeamMalformedInputError } from "./lib/api-error"
 import { Routes } from "./routes"
 import { ErroredAPIResponse, SuccessfulAPIResponse } from "./types/globals"
+import { version } from "../package.json"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -58,6 +59,7 @@ export class Seam extends Routes {
       baseURL: endpoint,
       headers: {
         Authorization: `Bearer ${apiKey}`,
+        ["User-Agent"]: `Javascript SDK v${version} (https://github.com/seamapi/javascript)`,
 
         // only needed for session key authentication
         ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }),
