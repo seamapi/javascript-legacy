@@ -65,7 +65,6 @@ jobs:
       - run: yarn test -T 2m
         env:
           SEAM_CONNECT_IMAGE: "${{ env.CONTAINER_REGISTRY }}/seam/seam-connect:${{ github.event.inputs.connectSha || 'latest' }}"
-          DEBUG: "testcontainers*"
 
       - name: Comment on failure
         if: ${{ github.event.inputs.prNumber && failure() }}
