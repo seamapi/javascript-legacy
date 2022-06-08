@@ -50,10 +50,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: seamapi/seamapi-javascript
-          token: ${{ secrets.BOT_GH_TOKEN }}
           ref: ${{ github.event.inputs.sdkSha }}
-          submodules: true
 
       - name: Pre-pull Seam Connect image
         run: docker pull ${{ env.CONTAINER_REGISTRY }}/seam/seam-connect:${{ github.event.inputs.connectSha || 'latest' }}
