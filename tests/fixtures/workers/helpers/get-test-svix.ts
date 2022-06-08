@@ -16,12 +16,12 @@ const getTestSvix = async ({
   networkName: string
 }) => {
   if (!container) {
-    container = new GenericContainer("svix/svix-server")
+    container = new GenericContainer("svix/svix-server:v0.58")
       .withExposedPorts(8071)
       .withNetworkMode(networkName)
       .withNetworkAliases("svix")
-      .withCmd(["svix-server"])
-      // We add an extra mapping so Svix can call out to proccesses on the host
+      .withCmd(["svix-server", "--run-migrations"])
+      // We add an extra mapping so Svix can call out to processes on the host
       .withExtraHosts({
         host: "docker-host",
         ipAddress: (await internalIpV4())!,
