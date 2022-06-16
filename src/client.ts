@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
+import axiosRetry from "axios-retry"
 import { SeamAPIError, SeamMalformedInputError } from "./lib/api-error"
 import { Routes } from "./routes"
 import { ErroredAPIResponse, SuccessfulAPIResponse } from "./types/globals"
@@ -64,6 +65,11 @@ export class Seam extends Routes {
         // only needed for session key authentication
         ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }),
       },
+    })
+
+    axiosRetry(this.client, {
+      retries: 2,
+      retryDelay: axiosRetry.exponentialDelay,
     })
   }
 
