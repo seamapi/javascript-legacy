@@ -48,7 +48,11 @@ const command: CommandModule<GlobalOptions> = {
           })
         },
         async (argv) => {
-          await executeCommand("devices.list", [argv.connectedAccountId], argv)
+          await executeCommand(
+            "devices.list",
+            [{ connected_account_id: argv.connectedAccountId }],
+            argv
+          )
         }
       )
   },

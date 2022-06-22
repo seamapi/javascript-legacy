@@ -45,7 +45,9 @@ test(
   "with connected account ID",
   testAPIMethod("devices.list"),
   {
-    args: (seed) => [seed.devices.schlageLock.connectedAccountId],
+    args: (seed) => [
+      { connected_account_id: seed.devices.schlageLock.connectedAccountId },
+    ],
   },
   "AnyDevice[]"
 )

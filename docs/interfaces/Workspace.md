@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/models.ts:3](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L3)
+[src/types/models.ts:3](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L3)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:5](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L5)
+[src/types/models.ts:5](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L5)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:4](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L4)
+[src/types/models.ts:4](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L4)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:2](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L2)
+[src/types/models.ts:2](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L2)

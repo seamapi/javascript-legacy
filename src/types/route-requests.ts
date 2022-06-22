@@ -4,6 +4,12 @@ export interface ConnectWebviewCreateRequest {
   accepted_providers: Provider[]
 }
 
+export interface DevicesListRequest {
+  connected_account_id?: string
+  connect_webview_id?: string
+  device_type?: string
+}
+
 export interface AccessCodeCreateBaseRequest {
   device_id: string
   name?: string

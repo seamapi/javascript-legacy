@@ -17,6 +17,7 @@ import {
   ConnectWebviewCreateRequest,
   DeviceUpdateRequest,
   DeviceGetRequest,
+  DevicesListRequest,
 } from "./types/route-requests"
 import { SeamActionAttemptError } from "./lib/api-error"
 import {
@@ -145,14 +146,10 @@ export abstract class Routes {
   }
 
   public readonly devices = {
-    list: (connectedAccountId?: string) =>
+    list: (params?: DevicesListRequest) =>
       this.makeRequestAndFormat<DevicesListResponse>("devices", {
         url: "/devices/list",
-        params: connectedAccountId
-          ? {
-              connected_account_id: connectedAccountId,
-            }
-          : {},
+        params,
       }),
     get: (params: DeviceGetRequest) =>
       this.makeRequestAndFormat<DeviceGetResponse>("device", {
