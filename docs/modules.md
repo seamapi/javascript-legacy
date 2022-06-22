@@ -42,6 +42,7 @@
 - [ConnectedAccountsListResponse](interfaces/ConnectedAccountsListResponse.md)
 - [Device](interfaces/Device.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
+- [DevicesListRequest](interfaces/DevicesListRequest.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
 - [ErroredAPIResponse](interfaces/ErroredAPIResponse.md)
 - [LockGetResponse](interfaces/LockGetResponse.md)
@@ -111,7 +112,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:151](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L151)
+[src/types/models.ts:152](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L152)
 
 ___
 
@@ -121,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:22](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L22)
+[src/types/route-requests.ts:28](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L28)
 
 ___
 
@@ -138,7 +139,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:26](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L26)
+[src/types/route-requests.ts:32](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L32)
 
 ___
 
@@ -201,7 +202,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:31](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L31)
+[src/types/route-requests.ts:37](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L37)
 
 ___
 
@@ -230,7 +231,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:39](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L39)
+[src/types/route-requests.ts:45](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L45)
 
 ___
 

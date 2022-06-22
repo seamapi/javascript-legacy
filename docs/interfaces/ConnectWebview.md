@@ -10,6 +10,7 @@
 - [accepted\_providers](ConnectWebview.md#accepted_providers)
 - [any\_device\_allowed](ConnectWebview.md#any_device_allowed)
 - [any\_provider\_allowed](ConnectWebview.md#any_provider_allowed)
+- [authorized\_at](ConnectWebview.md#authorized_at)
 - [connect\_webview\_id](ConnectWebview.md#connect_webview_id)
 - [connected\_account\_id](ConnectWebview.md#connected_account_id)
 - [created\_at](ConnectWebview.md#created_at)
@@ -59,6 +60,16 @@ ___
 #### Defined in
 
 [src/types/models.ts:121](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L121)
+
+___
+
+### authorized\_at
+
+• `Optional` **authorized\_at**: ``null`` \| `string`
+
+#### Defined in
+
+[src/types/models.ts:129](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L129)
 
 ___
 
