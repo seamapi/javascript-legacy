@@ -47,7 +47,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/client.ts:39](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L39)
+[src/client.ts:39](https://github.com/seamapi/javascript/blob/main/src/client.ts#L39)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:193](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L193)
+[src/routes.ts:193](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L193)
 
 ___
 
@@ -89,7 +89,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:264](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L264)
+[src/routes.ts:264](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L264)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/client.ts:37](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L37)
+[src/client.ts:37](https://github.com/seamapi/javascript/blob/main/src/client.ts#L37)
 
 ___
 
@@ -121,7 +121,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:167](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L167)
+[src/routes.ts:167](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L167)
 
 ___
 
@@ -142,7 +142,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:243](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L243)
+[src/routes.ts:243](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L243)
 
 ___
 
@@ -164,7 +164,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:148](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L148)
+[src/routes.ts:148](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L148)
 
 ___
 
@@ -187,7 +187,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:113](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L113)
+[src/routes.ts:113](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L113)
 
 ___
 
@@ -209,7 +209,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:97](https://github.com/seamapi/seamapi-javascript/blob/main/src/routes.ts#L97)
+[src/routes.ts:97](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L97)
 
 ## Methods
 
@@ -239,4 +239,4 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/client.ts:70](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L70)
+[src/client.ts:70](https://github.com/seamapi/javascript/blob/main/src/client.ts#L70)

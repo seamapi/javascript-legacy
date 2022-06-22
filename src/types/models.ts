@@ -126,6 +126,7 @@ export interface ConnectWebview {
   connected_account_id?: null | string
   custom_redirect_url?: null | string
   url: string
+  authorized_at?: null | string
 }
 
 export interface AccessCodeBase {

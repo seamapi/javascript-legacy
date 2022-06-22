@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/client.ts:9](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L9)
+[src/client.ts:9](https://github.com/seamapi/javascript/blob/main/src/client.ts#L9)
 
 ___
 
@@ -30,7 +30,7 @@ Seam Endpoint to use, defaults to https://connect.getseam.com
 
 #### Defined in
 
-[src/client.ts:13](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L13)
+[src/client.ts:13](https://github.com/seamapi/javascript/blob/main/src/client.ts#L13)
 
 ___
 
@@ -43,4 +43,4 @@ or undefined
 
 #### Defined in
 
-[src/client.ts:18](https://github.com/seamapi/seamapi-javascript/blob/main/src/client.ts#L18)
+[src/client.ts:18](https://github.com/seamapi/javascript/blob/main/src/client.ts#L18)

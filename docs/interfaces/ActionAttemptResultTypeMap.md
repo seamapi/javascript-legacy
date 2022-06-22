@@ -35,7 +35,7 @@ Record.CREATE\_ACCESS\_CODE
 
 #### Defined in
 
-[src/types/models.ts:100](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L100)
+[src/types/models.ts:100](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L100)
 
 ___
 
