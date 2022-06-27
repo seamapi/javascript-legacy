@@ -16,6 +16,7 @@
 - [DELETE\_ACCESS\_CODE](ActionAttemptResultTypeMap.md#delete_access_code)
 - [LOCK\_DOOR](ActionAttemptResultTypeMap.md#lock_door)
 - [UNLOCK\_DOOR](ActionAttemptResultTypeMap.md#unlock_door)
+- [UPDATE\_ACCESS\_CODE](ActionAttemptResultTypeMap.md#update_access_code)
 
 ## Properties
 
@@ -35,7 +36,7 @@ Record.CREATE\_ACCESS\_CODE
 
 #### Defined in
 
-[src/types/models.ts:100](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L100)
+[src/types/models.ts:101](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L101)
 
 ___
 
@@ -66,3 +67,23 @@ ___
 #### Inherited from
 
 Record.UNLOCK\_DOOR
+
+___
+
+### UPDATE\_ACCESS\_CODE
+
+• **UPDATE\_ACCESS\_CODE**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `access_code` | [`AccessCode`](../modules.md#accesscode) |
+
+#### Overrides
+
+Record.UPDATE\_ACCESS\_CODE
+
+#### Defined in
+
+[src/types/models.ts:102](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L102)

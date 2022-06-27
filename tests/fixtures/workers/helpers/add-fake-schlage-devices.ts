@@ -12,7 +12,13 @@ const addFakeSchlageDevices = async (axios: Axios) => {
 
   const [firstDevice] = await getDeviceType(axios, "schlage_lock")
 
-  await axios.post("/access_codes/create", {
+  const {
+    data: {
+      action_attempt: {
+        result: { access_code },
+      },
+    },
+  } = await axios.post("/access_codes/create", {
     device_id: firstDevice.device_id,
     name: "Sample Code",
     code: "1234",
@@ -23,6 +29,7 @@ const addFakeSchlageDevices = async (axios: Axios) => {
     id1: firstDevice.device_id,
     name1: firstDevice.properties.name,
     connectedAccountId: firstDevice.third_party_account_id,
+    accessCode: access_code,
   }
 }
 
