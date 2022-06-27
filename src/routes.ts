@@ -273,7 +273,7 @@ export abstract class Routes {
 
   public readonly webhooks = {
     list: () =>
-      this.makeRequestAndFormat<WebhookListResponse>("webhook", {
+      this.makeRequestAndFormat<WebhookListResponse>("webhooks", {
         url: "/webhooks/list",
         params: {},
       }),

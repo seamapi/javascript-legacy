@@ -69,7 +69,7 @@ export interface ConnectedAccountsGetResponse {
 
 // Webhooks
 export interface WebhookListResponse {
-  webhook: Webhook[]
+  webhooks: Webhook[]
 }
 
 export interface WebhookGetResponse {

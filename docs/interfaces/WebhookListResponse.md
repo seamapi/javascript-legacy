@@ -6,13 +6,13 @@
 
 ### Properties
 
-- [webhook](WebhookListResponse.md#webhook)
+- [webhooks](WebhookListResponse.md#webhooks)
 
 ## Properties
 
-### webhook
+### webhooks
 
-• **webhook**: [`Webhook`](Webhook.md)[]
+• **webhooks**: [`Webhook`](Webhook.md)[]
 
 #### Defined in
 
