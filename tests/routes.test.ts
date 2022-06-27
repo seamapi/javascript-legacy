@@ -130,3 +130,17 @@ test(
   },
   "AccessCode"
 )
+
+test(
+  testAPIMethod("accessCodes.update"),
+  {
+    args: (seed) => [
+      {
+        access_code_id: seed.devices.augustLock.accessCode.access_code_id,
+        name: "new name",
+      },
+    ],
+    modifiesState: true,
+  },
+  "AccessCode"
+)

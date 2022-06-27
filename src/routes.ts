@@ -18,6 +18,9 @@ import {
   DeviceUpdateRequest,
   DeviceGetRequest,
   DevicesListRequest,
+  AccessCodeUpdateScheduledRequest,
+  AccessCodeUpdateOngoingRequest,
+  AccessCodeUpdateRequest,
 } from "./types/route-requests"
 import { SeamActionAttemptError } from "./lib/api-error"
 import {
@@ -198,38 +201,31 @@ export abstract class Routes {
       }),
 
     create: (async (params: AccessCodeCreateRequest) => {
-      const parsedParams: any = Object.assign({}, params)
-
-      if (
-        (params as AccessCodeCreateScheduledRequest).starts_at === "object" &&
-        (params as AccessCodeCreateScheduledRequest).starts_at !== null
-      ) {
-        parsedParams.starts_at = (
-          (params as AccessCodeCreateScheduledRequest).starts_at as Date
-        ).toISOString()
-      }
-
-      if (
-        typeof (params as AccessCodeCreateScheduledRequest).ends_at ===
-          "object" &&
-        (params as AccessCodeCreateScheduledRequest).starts_at !== null
-      ) {
-        parsedParams.ends_at = (
-          (params as AccessCodeCreateScheduledRequest).ends_at as Date
-        ).toISOString()
-      }
-
       const action =
         await this.createActionAttemptAndWait<"CREATE_ACCESS_CODE">({
           url: "/access_codes/create",
           method: "POST",
-          data: parsedParams,
+          data: params,
         })
 
       return action.access_code
     }) as {
       (params: AccessCodeCreateOngoingRequest): Promise<OngoingAccessCode>
       (params: AccessCodeCreateScheduledRequest): Promise<TimeBoundAccessCode>
+    },
+
+    // We can't narrow the return type here like we do with create because we're given partial input
+    update: async (
+      params: AccessCodeUpdateRequest
+    ): Promise<OngoingAccessCode | TimeBoundAccessCode> => {
+      const action =
+        await this.createActionAttemptAndWait<"UPDATE_ACCESS_CODE">({
+          url: "/access_codes/update",
+          method: "POST",
+          data: params,
+        })
+
+      return action.access_code
     },
 
     delete: (params: AccessCodeDeleteRequest) =>

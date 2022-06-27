@@ -1,3 +1,4 @@
+import { Except } from "type-fest"
 import { CommonDeviceProperties, Provider } from "./models"
 
 export interface ConnectWebviewCreateRequest {
@@ -28,6 +29,25 @@ export interface AccessCodeCreateScheduledRequest
 export type AccessCodeCreateRequest =
   | AccessCodeCreateOngoingRequest
   | AccessCodeCreateScheduledRequest
+
+export interface AccessCodeUpdateBaseRequest {
+  device_id?: string
+  access_code_id: string
+}
+
+export type AccessCodeUpdateOngoingRequest = Except<
+  AccessCodeCreateOngoingRequest,
+  "device_id"
+> &
+  AccessCodeUpdateBaseRequest
+export type AccessCodeUpdateScheduledRequest = Except<
+  AccessCodeCreateScheduledRequest,
+  "device_id"
+> &
+  AccessCodeUpdateBaseRequest
+export type AccessCodeUpdateRequest =
+  | AccessCodeUpdateOngoingRequest
+  | AccessCodeUpdateScheduledRequest
 
 export type AccessCodeDeleteRequest = {
   device_id?: string

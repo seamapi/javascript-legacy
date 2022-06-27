@@ -68,6 +68,7 @@ export type ActionType =
   | "LOCK_DOOR"
   | "UNLOCK_DOOR"
   | "CREATE_ACCESS_CODE"
+  | "UPDATE_ACCESS_CODE"
   | "DELETE_ACCESS_CODE"
 
 interface ActionAttemptBase<T extends ActionType> {
@@ -98,6 +99,7 @@ export interface ActionAttemptWithError<T extends ActionType>
 export interface ActionAttemptResultTypeMap
   extends Record<ActionType, unknown> {
   CREATE_ACCESS_CODE: { access_code: AccessCode }
+  UPDATE_ACCESS_CODE: { access_code: AccessCode }
 }
 
 export interface SuccessfulActionAttempt<T extends ActionType>

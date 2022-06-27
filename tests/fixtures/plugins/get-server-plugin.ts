@@ -3,12 +3,13 @@ import { URL } from "url"
 import defaultAxios from "axios"
 import knex from "knex"
 import path from "path"
-import Seam from "../../../src"
+import Seam, { AccessCode } from "../../../src"
 
 type SeedLock = {
   connectedAccountId: string
   id1: string
   name1: string
+  accessCode: AccessCode
 }
 
 export type WorkerPublishedMessage = {
