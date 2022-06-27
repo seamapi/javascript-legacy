@@ -23,6 +23,7 @@
 - [connectedAccounts](Seam.md#connectedaccounts)
 - [devices](Seam.md#devices)
 - [locks](Seam.md#locks)
+- [webhooks](Seam.md#webhooks)
 - [workspaces](Seam.md#workspaces)
 
 ### Methods
@@ -70,7 +71,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:196](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L196)
+[src/routes.ts:200](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L200)
 
 ___
 
@@ -90,7 +91,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:260](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L260)
+[src/routes.ts:264](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L264)
 
 ___
 
@@ -122,7 +123,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:170](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L170)
+[src/routes.ts:174](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L174)
 
 ___
 
@@ -143,7 +144,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:239](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L239)
+[src/routes.ts:243](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L243)
 
 ___
 
@@ -165,7 +166,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:151](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L151)
+[src/routes.ts:155](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L155)
 
 ___
 
@@ -188,7 +189,30 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:116](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L116)
+[src/routes.ts:120](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L120)
+
+___
+
+### webhooks
+
+• `Readonly` **webhooks**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `create` | (`data`: [`WebhookCreateRequest`](../modules.md#webhookcreaterequest)) => `Promise`<{ `ok`: ``true``  }\> |
+| `delete` | (`params`: [`WebhookGetRequest`](../modules.md#webhookgetrequest)) => `Promise`<{ `ok`: ``true``  }\> |
+| `get` | (`params`: [`WebhookGetRequest`](../modules.md#webhookgetrequest)) => `Promise`<[`Webhook`](../interfaces/Webhook.md)\> |
+| `list` | () => `Promise`<[`Webhook`](../interfaces/Webhook.md)[]\> |
+
+#### Inherited from
+
+Routes.webhooks
+
+#### Defined in
+
+[src/routes.ts:274](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L274)
 
 ___
 
@@ -210,7 +234,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:100](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L100)
+[src/routes.ts:104](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L104)
 
 ## Methods
 

@@ -55,6 +55,9 @@
 - [SeamClientOptions](interfaces/SeamClientOptions.md)
 - [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
 - [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
+- [Webhook](interfaces/Webhook.md)
+- [WebhookGetResponse](interfaces/WebhookGetResponse.md)
+- [WebhookListResponse](interfaces/WebhookListResponse.md)
 - [Workspace](interfaces/Workspace.md)
 - [WorkspaceGetResponse](interfaces/WorkspaceGetResponse.md)
 - [WorkspaceResetSandboxResponse](interfaces/WorkspaceResetSandboxResponse.md)
@@ -81,6 +84,8 @@
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
+- [WebhookCreateRequest](modules.md#webhookcreaterequest)
+- [WebhookGetRequest](modules.md#webhookgetrequest)
 
 ### Functions
 
@@ -322,6 +327,38 @@ ___
 #### Defined in
 
 [src/types/globals.ts:7](https://github.com/seamapi/javascript/blob/main/src/types/globals.ts#L7)
+
+___
+
+### WebhookCreateRequest
+
+Ƭ **WebhookCreateRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `url` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L76)
+
+___
+
+### WebhookGetRequest
+
+Ƭ **WebhookGetRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `webhook_id` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L72)
 
 ## Functions
 

@@ -159,3 +159,18 @@ export interface ConnectedAccount {
   user_identifier: string
   account_type: Provider
 }
+
+export interface Webhook {
+  id: string
+  uid?: string
+  url: string
+  description?: string
+  disabled: boolean
+  channels?: string[]
+  filterTypes?: string[]
+  rateLimit?: number
+  version: number
+  createdAt: string
+  updateAt: string
+  secret?: string
+}

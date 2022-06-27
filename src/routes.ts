@@ -21,6 +21,8 @@ import {
   AccessCodeUpdateScheduledRequest,
   AccessCodeUpdateOngoingRequest,
   AccessCodeUpdateRequest,
+  WebhookGetRequest,
+  WebhookCreateRequest,
 } from "./types/route-requests"
 import { SeamActionAttemptError } from "./lib/api-error"
 import {
@@ -39,6 +41,8 @@ import {
   WorkspacesListResponse,
   WorkspaceGetResponse,
   ActionAttemptCreateResponse,
+  WebhookListResponse,
+  WebhookGetResponse,
 } from "./types/route-responses"
 
 export abstract class Routes {
@@ -264,6 +268,31 @@ export abstract class Routes {
         params: {
           action_attempt_id: actionAttemptId,
         },
+      }),
+  }
+
+  public readonly webhooks = {
+    list: () =>
+      this.makeRequestAndFormat<WebhookListResponse>("webhook", {
+        url: "/webhooks/list",
+        params: {},
+      }),
+    get: (params: WebhookGetRequest) =>
+      this.makeRequestAndFormat<WebhookGetResponse>("webhook", {
+        url: "/webhooks/get",
+        params,
+      }),
+    create: (data: WebhookCreateRequest) =>
+      this.makeRequest({
+        url: "/webhooks/create",
+        method: "POST",
+        data,
+      }),
+    delete: (params: WebhookGetRequest) =>
+      this.makeRequest({
+        url: `/webhooks/delete`,
+        method: "DELETE",
+        params,
       }),
   }
 }

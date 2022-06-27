@@ -8,6 +8,7 @@ import {
   ConnectedAccount,
   ActionType,
   CommonDeviceProperties,
+  Webhook,
 } from "./models"
 
 // Workspaces
@@ -64,6 +65,15 @@ export interface ConnectedAccountsListResponse {
 }
 export interface ConnectedAccountsGetResponse {
   connected_account: ConnectedAccount
+}
+
+// Webhooks
+export interface WebhookListResponse {
+  webhook: Webhook[]
+}
+
+export interface WebhookGetResponse {
+  webhook: Webhook
 }
 
 // Action Attempts
