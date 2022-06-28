@@ -7,9 +7,9 @@
 ### Properties
 
 - [event\_types](Webhook.md#event_types)
-- [id](Webhook.md#id)
 - [secret](Webhook.md#secret)
 - [url](Webhook.md#url)
+- [webhook\_id](Webhook.md#webhook_id)
 
 ## Properties
 
@@ -20,16 +20,6 @@
 #### Defined in
 
 [src/types/models.ts:166](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L166)
-
-___
-
-### id
-
-• **id**: `string`
-
-#### Defined in
-
-[src/types/models.ts:164](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L164)
 
 ___
 
@@ -50,3 +40,13 @@ ___
 #### Defined in
 
 [src/types/models.ts:165](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L165)
+
+___
+
+### webhook\_id
+
+• **webhook\_id**: `string`
+
+#### Defined in
+
+[src/types/models.ts:164](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L164)

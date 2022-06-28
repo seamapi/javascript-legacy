@@ -161,7 +161,7 @@ export interface ConnectedAccount {
 }
 
 export interface Webhook {
-  id: string
+  webhook_id: string
   url: string
   event_types?: string[]
   secret?: string
