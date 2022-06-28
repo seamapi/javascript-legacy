@@ -163,6 +163,6 @@ export interface ConnectedAccount {
 export interface Webhook {
   id: string
   url: string
-  filterTypes?: string[]
+  event_types?: string[]
   secret?: string
 }

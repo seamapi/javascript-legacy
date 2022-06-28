@@ -6,16 +6,16 @@
 
 ### Properties
 
-- [filterTypes](Webhook.md#filtertypes)
+- [event\_types](Webhook.md#event_types)
 - [id](Webhook.md#id)
 - [secret](Webhook.md#secret)
 - [url](Webhook.md#url)
 
 ## Properties
 
-### filterTypes
+### event\_types
 
-• `Optional` **filterTypes**: `string`[]
+• `Optional` **event\_types**: `string`[]
 
 #### Defined in
 
