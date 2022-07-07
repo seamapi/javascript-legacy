@@ -9,13 +9,10 @@ test("webhook payload is correctly verified", async (t) => {
 
   const { endpoint, waitForCallback } = await mockWebhook()
 
-  const webhookCreationResponse = await axios.post(
-    "/internal/webhooks/create",
-    {
-      url: endpoint,
-    }
-  )
-  const { secret } = webhookCreationResponse.data.ext_svix_endpoint
+  const webhookCreationResponse = await axios.post("/webhooks/create", {
+    url: endpoint,
+  })
+  const { secret } = webhookCreationResponse.data.webhook
 
   // Create event
   const [{ req, data }] = await Promise.all([
