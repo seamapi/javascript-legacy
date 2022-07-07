@@ -68,3 +68,11 @@ export type DeviceUpdateRequest = {
   name?: string
   location?: object
 }
+
+export type WebhookGetRequest = {
+  webhook_id: string
+}
+
+export type WebhookCreateRequest = {
+  url: string
+}

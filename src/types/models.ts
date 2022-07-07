@@ -159,3 +159,10 @@ export interface ConnectedAccount {
   user_identifier: string
   account_type: Provider
 }
+
+export interface Webhook {
+  webhook_id: string
+  url: string
+  event_types?: string[]
+  secret?: string
+}
