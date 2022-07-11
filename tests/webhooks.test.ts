@@ -37,11 +37,11 @@ test("webhook payload is correctly verified", async (t) => {
     req.headers as any
   )
 
-  t.is(callback.event_type, "access_codes.created")
+  t.is(callback.event_type, "access_code.created")
   t.is(callback.data.device_id, seed.devices.augustLock.id1)
   // Check types
   t.true(
-    callback.event_type === "access_codes.created" &&
+    callback.event_type === "access_code.created" &&
       typeof callback.data.access_code_id === "string"
   )
 })

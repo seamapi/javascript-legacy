@@ -83,7 +83,7 @@
     "pkg": "5.5.2",
     "playwright": "1.19.2",
     "prettier": "2.5.1",
-    "seamapi-types": "1.2.2",
+    "seamapi-types": "1.3.8",
     "semantic-release": "19.0.2",
     "testcontainers": "8.4.0",
     "ts-json-schema-generator": "0.98.0",
