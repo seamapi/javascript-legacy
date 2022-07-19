@@ -22,6 +22,7 @@
 - [connectWebviews](Seam.md#connectwebviews)
 - [connectedAccounts](Seam.md#connectedaccounts)
 - [devices](Seam.md#devices)
+- [events](Seam.md#events)
 - [locks](Seam.md#locks)
 - [webhooks](Seam.md#webhooks)
 - [workspaces](Seam.md#workspaces)
@@ -71,7 +72,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:200](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L200)
+[src/routes.ts:212](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L212)
 
 ___
 
@@ -91,7 +92,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:264](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L264)
+[src/routes.ts:276](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L276)
 
 ___
 
@@ -123,7 +124,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:174](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L174)
+[src/routes.ts:186](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L186)
 
 ___
 
@@ -144,7 +145,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:243](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L243)
+[src/routes.ts:255](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L255)
 
 ___
 
@@ -167,6 +168,26 @@ Routes.devices
 #### Defined in
 
 [src/routes.ts:155](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L155)
+
+___
+
+### events
+
+• `Readonly` **events**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `list` | (`params?`: [`EventsListRequest`](../interfaces/EventsListRequest.md)) => `Promise`<[`Event`](../modules.md#event)[]\> |
+
+#### Inherited from
+
+Routes.events
+
+#### Defined in
+
+[src/routes.ts:174](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L174)
 
 ___
 
@@ -212,7 +233,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/routes.ts:274](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L274)
+[src/routes.ts:286](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L286)
 
 ___
 
