@@ -46,6 +46,8 @@
 - [DevicesListRequest](interfaces/DevicesListRequest.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
 - [ErroredAPIResponse](interfaces/ErroredAPIResponse.md)
+- [EventsListRequest](interfaces/EventsListRequest.md)
+- [EventsListResponse](interfaces/EventsListResponse.md)
 - [LockGetResponse](interfaces/LockGetResponse.md)
 - [LockProperties](interfaces/LockProperties.md)
 - [LocksListResponse](interfaces/LocksListResponse.md)
@@ -79,6 +81,7 @@
 - [DeviceGetRequest](modules.md#devicegetrequest)
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
+- [Event](modules.md#event)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
@@ -121,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L154)
+[src/types/models.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L155)
 
 ___
 
@@ -194,7 +197,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:112](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L112)
+[src/types/models.ts:113](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L113)
 
 ___
 
@@ -204,7 +207,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:67](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L67)
+[src/types/models.ts:68](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L68)
 
 ___
 
@@ -214,7 +217,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:64](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L64)
+[src/types/models.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L65)
 
 ___
 
@@ -231,7 +234,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:27](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L27)
+[src/types/models.ts:28](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L28)
 
 ___
 
@@ -251,7 +254,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:14](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L14)
+[src/types/models.ts:15](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L15)
 
 ___
 
@@ -274,13 +277,23 @@ ___
 
 ___
 
+### Event
+
+Ƭ **Event**: `Flatten`<`SeamEvent`[``"event_type"``]\>
+
+#### Defined in
+
+[src/types/models.ts:171](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L171)
+
+___
+
 ### LockDevice
 
 Ƭ **LockDevice**: [`Device`](interfaces/Device.md)<[`LockProperties`](interfaces/LockProperties.md), [`LockDeviceType`](modules.md#lockdevicetype)\>
 
 #### Defined in
 
-[src/types/models.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L65)
+[src/types/models.ts:66](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L66)
 
 ___
 
@@ -290,7 +303,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:8](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L8)
+[src/types/models.ts:9](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L9)
 
 ___
 
@@ -300,7 +313,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:13](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L13)
+[src/types/models.ts:14](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L14)
 
 ___
 

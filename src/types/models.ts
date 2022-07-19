@@ -1,3 +1,4 @@
+import { SeamEvent } from "seamapi-types"
 export interface Workspace {
   workspace_id: string
   connect_partner_name?: string
@@ -166,3 +167,12 @@ export interface Webhook {
   event_types?: string[]
   secret?: string
 }
+
+type Flatten<EventType extends SeamEvent["event_type"]> =
+  EventType extends SeamEvent["event_type"]
+    ? {
+        event_type: EventType
+      } & Extract<SeamEvent, { event_type: EventType }>["payload"]
+    : never
+
+export type Event = Flatten<SeamEvent["event_type"]>
