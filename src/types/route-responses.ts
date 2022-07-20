@@ -9,6 +9,7 @@ import {
   ActionType,
   CommonDeviceProperties,
   Webhook,
+  Event,
 } from "./models"
 
 // Workspaces
@@ -86,4 +87,9 @@ export interface ActionAttemptCreateResponse<
 
 export interface ActionAttemptGetResponse<T extends ActionType = ActionType> {
   action_attempt: ActionAttempt<T>
+}
+
+// Events
+export interface EventsListResponse {
+  events: Event[]
 }

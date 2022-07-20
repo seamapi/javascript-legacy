@@ -76,3 +76,11 @@ export type WebhookGetRequest = {
 export type WebhookCreateRequest = {
   url: string
 }
+
+export interface EventsListRequest {
+  since?: string | Date
+  device_ids?: string[]
+  device_id?: string
+  event_types?: string[]
+  event_type?: string
+}

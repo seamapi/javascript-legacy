@@ -18,11 +18,10 @@ import {
   DeviceUpdateRequest,
   DeviceGetRequest,
   DevicesListRequest,
-  AccessCodeUpdateScheduledRequest,
-  AccessCodeUpdateOngoingRequest,
   AccessCodeUpdateRequest,
   WebhookGetRequest,
   WebhookCreateRequest,
+  EventsListRequest,
 } from "./types/route-requests"
 import { SeamActionAttemptError } from "./lib/api-error"
 import {
@@ -43,6 +42,7 @@ import {
   ActionAttemptCreateResponse,
   WebhookListResponse,
   WebhookGetResponse,
+  EventsListResponse,
 } from "./types/route-responses"
 
 export abstract class Routes {
@@ -168,6 +168,18 @@ export abstract class Routes {
         url: "/devices/update",
         method: "PATCH",
         data: params,
+      }),
+  }
+
+  public readonly events = {
+    list: (params?: EventsListRequest) =>
+      this.makeRequestAndFormat<EventsListResponse>("events", {
+        url: "/events/list",
+        method: "POST",
+        data: {
+          ...params,
+          since: params?.since ?? new Date(0).toISOString(),
+        },
       }),
   }
 
