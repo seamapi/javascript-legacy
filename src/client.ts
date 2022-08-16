@@ -17,6 +17,10 @@ export interface SeamClientOptions {
    * or undefined
    **/
   workspaceId?: string
+  /**
+   * Extended options to pass to Axios
+   */
+  axiosOptions?: AxiosRequestConfig
 }
 
 export const getSeamClientOptionsWithDefaults = (
@@ -40,8 +44,8 @@ export class Seam extends Routes {
   constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
 
-    const options = getSeamClientOptionsWithDefaults(apiKeyOrOptions)
-    const { apiKey, endpoint, workspaceId } = options
+    const { apiKey, endpoint, workspaceId, axiosOptions } =
+      getSeamClientOptionsWithDefaults(apiKeyOrOptions)
 
     const isRegularAPIKey = apiKey?.startsWith("seam_")
 
@@ -57,8 +61,10 @@ export class Seam extends Routes {
     }
 
     this.client = axios.create({
+      ...axiosOptions,
       baseURL: endpoint,
       headers: {
+        ...axiosOptions?.headers,
         Authorization: `Bearer ${apiKey}`,
         ["User-Agent"]: `Javascript SDK v${version} (https://github.com/seamapi/javascript)`,
 

@@ -7,6 +7,7 @@
 ### Properties
 
 - [apiKey](SeamClientOptions.md#apikey)
+- [axiosOptions](SeamClientOptions.md#axiosoptions)
 - [endpoint](SeamClientOptions.md#endpoint)
 - [workspaceId](SeamClientOptions.md#workspaceid)
 
@@ -19,6 +20,18 @@
 #### Defined in
 
 [src/client.ts:10](https://github.com/seamapi/javascript/blob/main/src/client.ts#L10)
+
+___
+
+### axiosOptions
+
+• `Optional` **axiosOptions**: `AxiosRequestConfig`<`any`\>
+
+Extended options to pass to Axios
+
+#### Defined in
+
+[src/client.ts:23](https://github.com/seamapi/javascript/blob/main/src/client.ts#L23)
 
 ___
 
