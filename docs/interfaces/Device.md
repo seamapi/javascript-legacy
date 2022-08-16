@@ -18,6 +18,7 @@
 - [created\_at](Device.md#created_at)
 - [device\_id](Device.md#device_id)
 - [device\_type](Device.md#device_type)
+- [errors](Device.md#errors)
 - [location](Device.md#location)
 - [properties](Device.md#properties)
 - [workspace\_id](Device.md#workspace_id)
@@ -50,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:43](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L43)
+[src/types/models.ts:44](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L44)
 
 ___
 
@@ -71,6 +72,16 @@ ___
 #### Defined in
 
 [src/types/models.ts:40](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L40)
+
+___
+
+### errors
+
+• **errors**: `unknown`[]
+
+#### Defined in
+
+[src/types/models.ts:43](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L43)
 
 ___
 

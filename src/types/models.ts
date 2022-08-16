@@ -40,6 +40,7 @@ export interface Device<
   device_type: Type
   connected_account_id: string
   capabilities_supported: unknown[]
+  errors: unknown[]
   created_at: string
 }
 

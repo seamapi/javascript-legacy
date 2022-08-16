@@ -21,7 +21,7 @@ const getTestDatabase = async () => {
       .withEnv("POSTGRES_HOST_AUTH_METHOD", "trust")
       .withNetworkMode(network.getName())
       .withNetworkAliases("database")
-      .withCmd(["-c", "max_connections=200"])
+      .withCmd(["-c", "max_connections=1000"])
       .start()
   }
 
