@@ -64,7 +64,7 @@ export abstract class Routes {
             throw new Error("Action attempt is still pending")
           }
         },
-        { maxTimeout: 60 * 1000 }
+        { maxTimeout: 60 * 1000 } as any
       )
     }
 

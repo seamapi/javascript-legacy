@@ -1,4 +1,4 @@
-const Seam = require("../")
+const Seam = require("../").default
 
 const seam = new Seam({
   // VVV INTERVIEW SHOULD PROVIDE AN API KEY VVV
