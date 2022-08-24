@@ -98,38 +98,6 @@ test(
   },
   "AccessCode[]"
 )
-test(
-  testAPIMethod("accessCodes.create"),
-  {
-    args: (seed) => [
-      {
-        device_id: seed.devices.schlageLock.id1,
-        name: "Created by Ava",
-        code: "4321",
-      },
-    ],
-    modifiesState: true,
-  },
-  "AccessCode"
-)
-
-test(
-  "scheduled",
-  testAPIMethod("accessCodes.create"),
-  {
-    args: (seed) => [
-      {
-        device_id: seed.devices.augustLock.id1,
-        name: "Created by Ava",
-        code: "4321",
-        starts_at: new Date(),
-        ends_at: new Date(Date.now() + 1000 * 60 * 60),
-      },
-    ],
-    modifiesState: true,
-  },
-  "AccessCode"
-)
 
 test(
   testAPIMethod("accessCodes.update"),

@@ -50,27 +50,6 @@ test("should throw on malformed input with details", async (t) => {
   }
 })
 
-test("waiting on an errored action attempt should throw", async (t) => {
-  const { client, seed } = await getServer(true)
-
-  const ACCESS_CODE_TO_DUPLICATE = "111111"
-  await client.accessCodes.create({
-    device_id: seed.devices.augustLock.id1,
-    code: ACCESS_CODE_TO_DUPLICATE,
-  })
-
-  await t.throwsAsync(
-    () =>
-      client.accessCodes.create({
-        device_id: seed.devices.augustLock.id1,
-        code: ACCESS_CODE_TO_DUPLICATE,
-      }),
-    {
-      instanceOf: SeamActionAttemptError,
-    }
-  )
-})
-
 test("constructor throws if no API key is present", (t) => {
   t.throws(() => new Seam())
 

@@ -10,10 +10,7 @@ import {
   TimeBoundAccessCode,
 } from "./types/models"
 import {
-  AccessCodeCreateRequest,
   AccessCodeDeleteRequest,
-  AccessCodeCreateScheduledRequest,
-  AccessCodeCreateOngoingRequest,
   ConnectWebviewCreateRequest,
   DeviceUpdateRequest,
   DeviceGetRequest,
@@ -215,20 +212,6 @@ export abstract class Routes {
         url: "/access_codes/list",
         params,
       }),
-
-    create: (async (params: AccessCodeCreateRequest) => {
-      const action =
-        await this.createActionAttemptAndWait<"CREATE_ACCESS_CODE">({
-          url: "/access_codes/create",
-          method: "POST",
-          data: params,
-        })
-
-      return action.access_code
-    }) as {
-      (params: AccessCodeCreateOngoingRequest): Promise<OngoingAccessCode>
-      (params: AccessCodeCreateScheduledRequest): Promise<TimeBoundAccessCode>
-    },
 
     // We can't narrow the return type here like we do with create because we're given partial input
     update: async (
