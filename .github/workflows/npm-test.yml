@@ -43,17 +43,17 @@ jobs:
           message: |
             ⌛️ [running Javascript SDK tests](${{ env.RUN_URL }})...
 
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.sdkSha }}
+
       - name: Log in to GitHub registry
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.inputs.sdkSha }}
 
       - name: Pre-pull Seam Connect image
         run: docker pull ${{ env.SEAM_CONNECT_IMAGE }}
