@@ -53,7 +53,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.BOT_GH_TOKEN }}
 
       - name: Pre-pull Seam Connect image
         run: docker pull ${{ env.SEAM_CONNECT_IMAGE }}
