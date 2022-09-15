@@ -31,7 +31,7 @@ jobs:
       contents: read
       packages: write
     env:
-      CONTAINER_REGISTRY: "ghcr.io"
+      SEAM_CONNECT_IMAGE: ghcr.io/seamapi/seam-connect:${{ github.event.inputs.connectSha || 'latest' }}
       RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
       - if: ${{ github.event.inputs.prNumber }}
@@ -56,7 +56,7 @@ jobs:
           ref: ${{ github.event.inputs.sdkSha }}
 
       - name: Pre-pull Seam Connect image
-        run: docker pull ${{ env.CONTAINER_REGISTRY }}/seam/seam-connect:${{ github.event.inputs.connectSha || 'latest' }}
+        run: docker pull ${{ env.SEAM_CONNECT_IMAGE }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -67,7 +67,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn test -T 2m
         env:
-          SEAM_CONNECT_IMAGE: "${{ env.CONTAINER_REGISTRY }}/seam/seam-connect:${{ github.event.inputs.connectSha || 'latest' }}"
+          SEAM_CONNECT_IMAGE: ${{ env.SEAM_CONNECT_IMAGE }}
 
       - name: Comment on failure
         if: ${{ github.event.inputs.prNumber && failure() }}
