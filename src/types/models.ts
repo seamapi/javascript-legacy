@@ -58,6 +58,7 @@ export interface LockProperties extends CommonDeviceProperties {
     lock_id: string
     lock_name: string
     house_name: string
+    has_keypad: boolean
   }
 
   smartthings_metadata?: unknown

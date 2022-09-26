@@ -31,6 +31,7 @@
 
 | Name | Type |
 | :------ | :------ |
+| `has_keypad` | `boolean` |
 | `house_name` | `string` |
 | `lock_id` | `string` |
 | `lock_name` | `string` |
@@ -122,4 +123,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:63](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L63)
+[src/types/models.ts:64](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L64)
