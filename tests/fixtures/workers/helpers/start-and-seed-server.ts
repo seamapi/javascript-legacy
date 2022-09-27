@@ -34,8 +34,7 @@ const startAndSeedServer = async () => {
   const serverUrl = `http://localhost:${hostPort}`
 
   const server = await new GenericContainer(
-    process.env.SEAM_CONNECT_IMAGE ??
-      "registry.digitalocean.com/seam/seam-connect"
+    process.env.SEAM_CONNECT_IMAGE ?? "ghcr.io/seamapi/seam-connect:latest"
   )
     .withExposedPorts({
       container: hostPort,
