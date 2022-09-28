@@ -10,6 +10,7 @@ import {
   TimeBoundAccessCode,
 } from "./types/models"
 import {
+  AccessCodeGetRequest,
   AccessCodeCreateRequest,
   AccessCodeDeleteRequest,
   AccessCodeCreateScheduledRequest,
@@ -27,6 +28,7 @@ import {
 import { SeamActionAttemptError } from "./lib/api-error"
 import {
   AccessCodesListResponse,
+  AccessCodeGetResponse,
   ActionAttemptGetResponse,
   ConnectedAccountsGetResponse,
   ConnectedAccountsListResponse,
@@ -222,7 +224,11 @@ export abstract class Routes {
         url: "/access_codes/list",
         params,
       }),
-
+    get: (params: AccessCodeGetRequest) =>
+      this.makeRequestAndFormat<AccessCodeGetResponse>("access_code", {
+        url: "/access_codes/get",
+        params,
+      }),
     create: (async (params: AccessCodeCreateRequest) => {
       const action =
         await this.createActionAttemptAndWait<"CREATE_ACCESS_CODE">({

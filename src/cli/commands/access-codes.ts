@@ -32,6 +32,47 @@ const command: CommandModule<GlobalOptions> = {
         }
       )
       .command(
+        "get <id>",
+        "get an access code",
+        (yargs) => {
+          return yargs
+            .option("access-code-id", {
+              describe: "access code ID",
+              type: "string",
+            })
+            .option("device-id", {
+              describe: "device ID",
+              type: "string",
+              implies: "code",
+            })
+            .option("code", {
+              describe: "access code",
+              type: "string",
+              implies: "device-id",
+            })
+            .check((argv) => {
+              if (!argv.accessCodeId || !(argv.deviceId && argv.code)) {
+                throw new Error(
+                  "Must provide either --access-code-id or both --device-id and --code"
+                )
+              }
+            })
+        },
+        async (argv) => {
+          await executeCommand(
+            "accessCodes.get",
+            [
+              {
+                access_code_id: argv.accessCodeId,
+                device_id: argv.deviceId,
+                code: argv.code,
+              },
+            ],
+            argv
+          )
+        }
+      )
+      .command(
         "create",
         "create an access code",
         (yargs) => {

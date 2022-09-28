@@ -63,6 +63,7 @@ Routes.constructor
 | :------ | :------ |
 | `create` | (`params`: [`AccessCodeCreateOngoingRequest`](../interfaces/AccessCodeCreateOngoingRequest.md)) => `Promise`<[`OngoingAccessCode`](../interfaces/OngoingAccessCode.md)\>(`params`: [`AccessCodeCreateScheduledRequest`](../interfaces/AccessCodeCreateScheduledRequest.md)) => `Promise`<[`TimeBoundAccessCode`](../interfaces/TimeBoundAccessCode.md)\> |
 | `delete` | (`params`: [`AccessCodeDeleteRequest`](../modules.md#accesscodedeleterequest)) => `Promise`<`unknown`\> |
+| `get` | (`params`: [`AccessCodeGetRequest`](../modules.md#accesscodegetrequest)) => `Promise`<[`AccessCode`](../modules.md#accesscode)\> |
 | `list` | (`params`: { `device_id`: `string`  }) => `Promise`<[`AccessCode`](../modules.md#accesscode)[]\> |
 | `update` | (`params`: [`AccessCodeUpdateRequest`](../modules.md#accesscodeupdaterequest)) => `Promise`<[`OngoingAccessCode`](../interfaces/OngoingAccessCode.md) \| [`TimeBoundAccessCode`](../interfaces/TimeBoundAccessCode.md)\> |
 
@@ -72,7 +73,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:219](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L219)
+[src/routes.ts:221](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L221)
 
 ___
 
@@ -92,7 +93,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:283](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L283)
+[src/routes.ts:289](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L289)
 
 ___
 
@@ -124,7 +125,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:193](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L193)
+[src/routes.ts:195](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L195)
 
 ___
 
@@ -145,7 +146,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:262](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L262)
+[src/routes.ts:268](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L268)
 
 ___
 
@@ -168,7 +169,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:156](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L156)
+[src/routes.ts:158](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L158)
 
 ___
 
@@ -188,7 +189,7 @@ Routes.events
 
 #### Defined in
 
-[src/routes.ts:181](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L181)
+[src/routes.ts:183](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L183)
 
 ___
 
@@ -211,7 +212,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:121](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L121)
+[src/routes.ts:123](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L123)
 
 ___
 
@@ -234,7 +235,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/routes.ts:293](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L293)
+[src/routes.ts:299](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L299)
 
 ___
 
@@ -256,7 +257,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:105](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L105)
+[src/routes.ts:107](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L107)
 
 ## Methods
 

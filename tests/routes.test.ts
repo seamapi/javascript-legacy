@@ -121,6 +121,31 @@ test(
   },
   "AccessCode"
 )
+test(
+  "by access code ID",
+  testAPIMethod("accessCodes.get"),
+  {
+    args: (seed) => [
+      {
+        access_code_id: seed.devices.augustLock.accessCode.access_code_id,
+      },
+    ],
+  },
+  "AccessCode"
+)
+test(
+  "by device ID and code",
+  testAPIMethod("accessCodes.get"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.augustLock.id1,
+        code: seed.devices.augustLock.accessCode.code,
+      },
+    ],
+  },
+  "AccessCode"
+)
 
 test(
   "scheduled",
