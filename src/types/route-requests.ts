@@ -69,6 +69,10 @@ export type DeviceUpdateRequest = {
   location?: object
 }
 
+export type DeviceDeleteRequest = {
+  device_id: string
+}
+
 export type WebhookGetRequest = {
   webhook_id: string
 }
