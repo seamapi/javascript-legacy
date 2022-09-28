@@ -1,6 +1,7 @@
 import { CommandModule } from "yargs"
-import executeCommand from "../lib/execute-command"
 import { GlobalOptions } from "../lib/global-options"
+import { CommonDeviceProperties } from "../../types"
+import executeCommand from "../lib/execute-command"
 
 const command: CommandModule<GlobalOptions> = {
   command: "devices",
@@ -51,6 +52,47 @@ const command: CommandModule<GlobalOptions> = {
           await executeCommand(
             "devices.list",
             [{ connected_account_id: argv.connectedAccountId }],
+            argv
+          )
+        }
+      )
+      .command(
+        "update <id>",
+        "update a device",
+        (yargs) => {
+          return yargs
+            .option("id", {
+              describe: "the device ID",
+              type: "string",
+              demandOption: true,
+            })
+            .option("name", {
+              describe: "the device name",
+              type: "string",
+            })
+            .option("properties", {
+              describe: "device properties",
+            })
+            .option("location", {
+              describe: "the device location",
+            })
+            .check((argv) => {
+              if (!argv.id) {
+                throw new Error("--id is required")
+              }
+            })
+        },
+        async (argv) => {
+          await executeCommand(
+            "devices.update",
+            [
+              {
+                device_id: argv.id,
+                name: argv.name,
+                properties: argv.properties as Partial<CommonDeviceProperties>,
+                location: argv.location as object,
+              },
+            ],
             argv
           )
         }
