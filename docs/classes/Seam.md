@@ -179,7 +179,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`params?`: [`EventsGetRequest`](../interfaces/EventsGetRequest.md)) => `Promise`<[`Event`](../modules.md#event)\> |
+| `get` | (`params`: [`EventsGetRequest`](../interfaces/EventsGetRequest.md)) => `Promise`<[`Event`](../modules.md#event)\> |
 | `list` | (`params?`: [`EventsListRequest`](../interfaces/EventsListRequest.md)) => `Promise`<[`Event`](../modules.md#event)[]\> |
 
 #### Inherited from

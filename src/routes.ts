@@ -183,7 +183,7 @@ export abstract class Routes {
           since: params?.since ?? new Date(0).toISOString(),
         },
       }),
-    get: (params?: EventsGetRequest) =>
+    get: (params: EventsGetRequest) =>
       this.makeRequestAndFormat<EventsGetResponse>("event", {
         url: "/events/get",
         params,
