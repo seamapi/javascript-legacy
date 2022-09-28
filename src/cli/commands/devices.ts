@@ -55,6 +55,20 @@ const command: CommandModule<GlobalOptions> = {
           )
         }
       )
+      .command(
+        "delete",
+        "delete a device",
+        (yargs) => {
+          return yargs.option("id", {
+            describe: "the device ID",
+            type: "string",
+            demandOption: true,
+          })
+        },
+        async (argv) => {
+          await executeCommand("devices.delete", [{ device_id: argv.id }], argv)
+        }
+      )
   },
   handler: () => {},
 }

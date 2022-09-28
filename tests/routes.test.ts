@@ -67,6 +67,15 @@ test(
   },
   "AnyDevice"
 )
+test(
+  "delete",
+  testAPIMethod("devices.delete"),
+  {
+    args: (seed) => [{ device_id: seed.devices.schlageLock.id1 }],
+    modifiesState: true,
+  },
+  "{}"
+)
 
 // Connect Webviews
 test(testAPIMethod("connectWebviews.list"), {}, "ConnectWebview[]")

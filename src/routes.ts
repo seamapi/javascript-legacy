@@ -18,6 +18,7 @@ import {
   DeviceUpdateRequest,
   DeviceGetRequest,
   DevicesListRequest,
+  DeviceDeleteRequest,
   AccessCodeUpdateRequest,
   WebhookGetRequest,
   WebhookCreateRequest,
@@ -168,6 +169,12 @@ export abstract class Routes {
         url: "/devices/update",
         method: "PATCH",
         data: params,
+      }),
+    delete: (params: DeviceDeleteRequest) =>
+      this.makeRequest({
+        url: "/devices/delete",
+        method: "DELETE",
+        params: params,
       }),
   }
 

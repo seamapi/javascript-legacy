@@ -78,6 +78,7 @@
 - [ActionType](modules.md#actiontype)
 - [AnyDevice](modules.md#anydevice)
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
+- [DeviceDeleteRequest](modules.md#devicedeleterequest)
 - [DeviceGetRequest](modules.md#devicegetrequest)
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
@@ -238,6 +239,22 @@ ___
 
 ___
 
+### DeviceDeleteRequest
+
+Ƭ **DeviceDeleteRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `device_id` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L72)
+
+___
+
 ### DeviceGetRequest
 
 Ƭ **DeviceGetRequest**: { `device_id`: `string`  } \| { `name`: `string`  }
@@ -355,7 +372,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L76)
+[src/types/route-requests.ts:80](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L80)
 
 ___
 
@@ -371,7 +388,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L72)
+[src/types/route-requests.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L76)
 
 ## Functions
 
