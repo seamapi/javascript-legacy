@@ -59,6 +59,9 @@ export interface ConnectWebviewCreateResponse {
 export interface AccessCodesListResponse {
   access_codes: AccessCode[]
 }
+export interface AccessCodeGetResponse {
+  access_code: AccessCode
+}
 
 // Connected Accounts
 export interface ConnectedAccountsListResponse {

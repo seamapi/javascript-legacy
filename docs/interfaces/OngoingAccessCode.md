@@ -15,6 +15,7 @@
 - [access\_code\_id](OngoingAccessCode.md#access_code_id)
 - [code](OngoingAccessCode.md#code)
 - [created\_at](OngoingAccessCode.md#created_at)
+- [device\_id](OngoingAccessCode.md#device_id)
 - [name](OngoingAccessCode.md#name)
 - [status](OngoingAccessCode.md#status)
 - [type](OngoingAccessCode.md#type)
@@ -45,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:140](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L140)
+[src/types/models.ts:141](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L141)
 
 ___
 
@@ -55,7 +56,21 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:145](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L145)
+[src/types/models.ts:146](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L146)
+
+___
+
+### device\_id
+
+• `Optional` **device\_id**: `string`
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[device_id](AccessCodeBase.md#device_id)
+
+#### Defined in
+
+[src/types/models.ts:139](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L139)
 
 ___
 
@@ -69,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:139](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L139)
+[src/types/models.ts:140](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L140)
 
 ___
 
@@ -79,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:146](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L146)
+[src/types/models.ts:147](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L147)
 
 ___
 
@@ -89,4 +104,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:144](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L144)
+[src/types/models.ts:145](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L145)
