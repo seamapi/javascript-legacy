@@ -93,3 +93,7 @@ export interface ActionAttemptGetResponse<T extends ActionType = ActionType> {
 export interface EventsListResponse {
   events: Event[]
 }
+
+export interface EventsGetResponse {
+  event: Event
+}

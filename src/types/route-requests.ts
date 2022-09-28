@@ -84,3 +84,9 @@ export interface EventsListRequest {
   event_types?: string[]
   event_type?: string
 }
+
+export interface EventsGetRequest {
+  event_id?: string
+  event_type?: string
+  device_id?: string
+}

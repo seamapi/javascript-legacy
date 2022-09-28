@@ -46,6 +46,8 @@
 - [DevicesListRequest](interfaces/DevicesListRequest.md)
 - [DevicesListResponse](interfaces/DevicesListResponse.md)
 - [ErroredAPIResponse](interfaces/ErroredAPIResponse.md)
+- [EventsGetRequest](interfaces/EventsGetRequest.md)
+- [EventsGetResponse](interfaces/EventsGetResponse.md)
 - [EventsListRequest](interfaces/EventsListRequest.md)
 - [EventsListResponse](interfaces/EventsListResponse.md)
 - [LockGetResponse](interfaces/LockGetResponse.md)
@@ -279,7 +281,7 @@ ___
 
 ### Event
 
-Ƭ **Event**: `Flatten`<`SeamEvent`[``"event_type"``]\>
+Ƭ **Event**: `Flatten`<`SeamEvent`[``"event_type"``]\> & { `created_at`: `string` ; `event_id`: `string` ; `payload`: { `device_id`: `string` ; `workspace_id`: `string`  }  }
 
 #### Defined in
 

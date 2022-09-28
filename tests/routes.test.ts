@@ -144,3 +144,22 @@ test(
   },
   "AccessCode"
 )
+
+// Events
+test(
+  "by device ID",
+  testAPIMethod("events.get"),
+  {
+    args: (seed) => [{ device_id: seed.devices.augustLock.id1 }],
+  },
+  "Event"
+)
+
+test(
+  "by event type",
+  testAPIMethod("events.get"),
+  {
+    args: () => [{ event_type: "device.connected" }],
+  },
+  "Event"
+)

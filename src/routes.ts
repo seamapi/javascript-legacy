@@ -22,6 +22,7 @@ import {
   WebhookGetRequest,
   WebhookCreateRequest,
   EventsListRequest,
+  EventsGetRequest,
 } from "./types/route-requests"
 import { SeamActionAttemptError } from "./lib/api-error"
 import {
@@ -43,6 +44,7 @@ import {
   WebhookListResponse,
   WebhookGetResponse,
   EventsListResponse,
+  EventsGetResponse,
 } from "./types/route-responses"
 
 export abstract class Routes {
@@ -180,6 +182,11 @@ export abstract class Routes {
           ...params,
           since: params?.since ?? new Date(0).toISOString(),
         },
+      }),
+    get: (params?: EventsGetRequest) =>
+      this.makeRequestAndFormat<EventsGetResponse>("event", {
+        url: "/events/get",
+        params,
       }),
   }
 
