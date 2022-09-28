@@ -68,6 +68,19 @@ test(
   "AnyDevice"
 )
 test(
+  testAPIMethod("devices.update"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.schlageLock.id1,
+        name: "New Name",
+      },
+    ],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
   "delete",
   testAPIMethod("devices.delete"),
   {
