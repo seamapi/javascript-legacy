@@ -111,6 +111,18 @@ test(
   },
   "ConnectWebview"
 )
+test(
+  testAPIMethod("connectWebviews.delete"),
+  {
+    args: (seed) => [
+      {
+        connect_webview_id: seed.connectWebviewId,
+      },
+    ],
+    modifiesState: true,
+  },
+  "{}"
+)
 
 // Access Codes
 test(
