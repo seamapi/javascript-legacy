@@ -191,3 +191,29 @@ test(
   },
   "AccessCode"
 )
+
+test(testAPIMethod("connectedAccounts.list"), {}, "ConnectedAccount[]")
+test(
+  "by email",
+  testAPIMethod("connectedAccounts.get"),
+  {
+    args: (seed) => [
+      {
+        email: "user-3@example.com",
+      },
+    ],
+  },
+  "ConnectedAccount"
+)
+test(
+  "by ID",
+  testAPIMethod("connectedAccounts.get"),
+  {
+    args: (seed) => [
+      {
+        connected_account_id: seed.devices.augustLock.connectedAccountId,
+      },
+    ],
+  },
+  "ConnectedAccount"
+)

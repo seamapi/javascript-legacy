@@ -28,7 +28,7 @@ const addFakeAugustDevices = async (axios: Axios) => {
   return {
     id1: firstDevice.device_id,
     name1: firstDevice.properties.name,
-    connectedAccountId: firstDevice.third_party_account_id,
+    connectedAccountId: firstDevice.connected_account_id,
     accessCode: access_code,
   }
 }

@@ -9,6 +9,7 @@
 - [account\_type](ConnectedAccount.md#account_type)
 - [connected\_account\_id](ConnectedAccount.md#connected_account_id)
 - [created\_at](ConnectedAccount.md#created_at)
+- [errors](ConnectedAccount.md#errors)
 - [user\_identifier](ConnectedAccount.md#user_identifier)
 
 ## Properties
@@ -19,7 +20,7 @@
 
 #### Defined in
 
-[src/types/models.ts:165](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L165)
+[src/types/models.ts:169](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L169)
 
 ___
 
@@ -29,7 +30,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
+[src/types/models.ts:166](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L166)
 
 ___
 
@@ -39,14 +40,24 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:163](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L163)
+[src/types/models.ts:167](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L167)
+
+___
+
+### errors
+
+• **errors**: `string`[]
+
+#### Defined in
+
+[src/types/models.ts:170](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L170)
 
 ___
 
 ### user\_identifier
 
-• **user\_identifier**: `string`
+• **user\_identifier**: [`UserIdentifier`](UserIdentifier.md)
 
 #### Defined in
 
-[src/types/models.ts:164](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L164)
+[src/types/models.ts:168](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L168)

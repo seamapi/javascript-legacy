@@ -16,6 +16,7 @@ import {
   AccessCodeCreateScheduledRequest,
   AccessCodeCreateOngoingRequest,
   ConnectWebviewCreateRequest,
+  ConnectedAccountsGetRequest,
   DeviceUpdateRequest,
   DeviceGetRequest,
   DevicesListRequest,
@@ -274,14 +275,12 @@ export abstract class Routes {
         }
       ),
 
-    get: (connectedAccountId: string) =>
+    get: (params: ConnectedAccountsGetRequest) =>
       this.makeRequestAndFormat<ConnectedAccountsGetResponse>(
         "connected_account",
         {
           url: "/connected_accounts/get",
-          params: {
-            connected_account_id: connectedAccountId,
-          },
+          params,
         }
       ),
   }
