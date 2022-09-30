@@ -9,6 +9,7 @@
 - [account\_type](ConnectedAccount.md#account_type)
 - [connected\_account\_id](ConnectedAccount.md#connected_account_id)
 - [created\_at](ConnectedAccount.md#created_at)
+- [errors](ConnectedAccount.md#errors)
 - [user\_identifier](ConnectedAccount.md#user_identifier)
 
 ## Properties
@@ -43,9 +44,19 @@ ___
 
 ___
 
+### errors
+
+• **errors**: `string`[]
+
+#### Defined in
+
+[src/types/models.ts:165](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L165)
+
+___
+
 ### user\_identifier
 
-• **user\_identifier**: `string`
+• **user\_identifier**: [`UserIdentifier`](UserIdentifier.md)
 
 #### Defined in
 

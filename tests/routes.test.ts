@@ -191,3 +191,18 @@ test(
   },
   "AccessCode"
 )
+
+test(testAPIMethod("connectedAccounts.list"), {}, "ConnectedAccount[]")
+test(
+  testAPIMethod("connectedAccounts.get"),
+  {
+    args: (seed) => [
+      {
+        email: "user-3@example.com",
+      },
+    ],
+  },
+  "ConnectedAccount"
+)
+
+// TODO: Add test for getting a connected account by ID (may require a new seed)

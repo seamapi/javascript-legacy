@@ -160,8 +160,13 @@ export type AccessCode = OngoingAccessCode | TimeBoundAccessCode
 export interface ConnectedAccount {
   connected_account_id: string
   created_at: string
-  user_identifier: string
+  user_identifier: UserIdentifier
   account_type: Provider
+  errors: string[]
+}
+
+export interface UserIdentifier {
+  email: string
 }
 
 export interface Webhook {

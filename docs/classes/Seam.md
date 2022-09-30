@@ -73,7 +73,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:221](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L221)
+[src/routes.ts:222](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L222)
 
 ___
 
@@ -93,7 +93,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:289](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L289)
+[src/routes.ts:288](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L288)
 
 ___
 
@@ -125,7 +125,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:195](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L195)
+[src/routes.ts:196](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L196)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`connectedAccountId`: `string`) => `Promise`<[`ConnectedAccount`](../interfaces/ConnectedAccount.md)\> |
+| `get` | (`params`: [`ConnectedAccountsGetRequest`](../interfaces/ConnectedAccountsGetRequest.md)) => `Promise`<[`ConnectedAccount`](../interfaces/ConnectedAccount.md)\> |
 | `list` | () => `Promise`<[`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
 
 #### Inherited from
@@ -146,7 +146,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:268](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L268)
+[src/routes.ts:269](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L269)
 
 ___
 
@@ -169,7 +169,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:158](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L158)
+[src/routes.ts:159](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L159)
 
 ___
 
@@ -189,7 +189,7 @@ Routes.events
 
 #### Defined in
 
-[src/routes.ts:183](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L183)
+[src/routes.ts:184](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L184)
 
 ___
 
@@ -212,7 +212,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:123](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L123)
+[src/routes.ts:124](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L124)
 
 ___
 
@@ -235,7 +235,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/routes.ts:299](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L299)
+[src/routes.ts:298](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L298)
 
 ___
 
@@ -257,7 +257,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:107](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L107)
+[src/routes.ts:108](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L108)
 
 ## Methods
 
