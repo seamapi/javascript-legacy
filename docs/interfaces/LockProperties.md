@@ -16,6 +16,7 @@
 - [battery\_level](LockProperties.md#battery_level)
 - [door\_open](LockProperties.md#door_open)
 - [locked](LockProperties.md#locked)
+- [manufacturer](LockProperties.md#manufacturer)
 - [name](LockProperties.md#name)
 - [online](LockProperties.md#online)
 - [schlage\_metadata](LockProperties.md#schlage_metadata)
@@ -38,7 +39,7 @@
 
 #### Defined in
 
-[src/types/models.ts:57](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L57)
+[src/types/models.ts:58](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L58)
 
 ___
 
@@ -69,6 +70,16 @@ ___
 #### Defined in
 
 [src/types/models.ts:48](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L48)
+
+___
+
+### manufacturer
+
+• `Optional` **manufacturer**: `string`
+
+#### Defined in
+
+[src/types/models.ts:51](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L51)
 
 ___
 
@@ -113,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:52](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L52)
+[src/types/models.ts:53](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L53)
 
 ___
 
@@ -123,4 +134,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:64](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L64)
+[src/types/models.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L65)
