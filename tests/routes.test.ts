@@ -194,6 +194,7 @@ test(
 
 test(testAPIMethod("connectedAccounts.list"), {}, "ConnectedAccount[]")
 test(
+  "by email",
   testAPIMethod("connectedAccounts.get"),
   {
     args: (seed) => [
@@ -204,5 +205,15 @@ test(
   },
   "ConnectedAccount"
 )
-
-// TODO: Add test for getting a connected account by ID (may require a new seed)
+test(
+  "by ID",
+  testAPIMethod("connectedAccounts.get"),
+  {
+    args: (seed) => [
+      {
+        connected_account_id: seed.devices.augustLock.connectedAccountId,
+      },
+    ],
+  },
+  "ConnectedAccount"
+)
