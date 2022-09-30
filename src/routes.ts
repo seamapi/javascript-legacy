@@ -17,6 +17,7 @@ import {
   AccessCodeCreateOngoingRequest,
   ConnectWebviewCreateRequest,
   ConnectedAccountsGetRequest,
+  ConnectedAccountsDeleteRequest,
   DeviceUpdateRequest,
   DeviceGetRequest,
   DevicesListRequest,
@@ -283,6 +284,12 @@ export abstract class Routes {
           params,
         }
       ),
+    delete: (params: ConnectedAccountsDeleteRequest) =>
+      this.makeRequest({
+        url: "/connected_accounts/delete",
+        method: "DELETE",
+        data: params,
+      }),
   }
 
   public readonly actionAttempts = {

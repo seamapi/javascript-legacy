@@ -73,7 +73,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:222](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L222)
+[src/routes.ts:223](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L223)
 
 ___
 
@@ -93,7 +93,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:288](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L288)
+[src/routes.ts:295](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L295)
 
 ___
 
@@ -125,7 +125,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:196](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L196)
+[src/routes.ts:197](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L197)
 
 ___
 
@@ -137,6 +137,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `delete` | (`params`: [`ConnectedAccountsDeleteRequest`](../interfaces/ConnectedAccountsDeleteRequest.md)) => `Promise`<{ `ok`: ``true``  }\> |
 | `get` | (`params`: [`ConnectedAccountsGetRequest`](../interfaces/ConnectedAccountsGetRequest.md)) => `Promise`<[`ConnectedAccount`](../interfaces/ConnectedAccount.md)\> |
 | `list` | () => `Promise`<[`ConnectedAccount`](../interfaces/ConnectedAccount.md)[]\> |
 
@@ -146,7 +147,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:269](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L269)
+[src/routes.ts:270](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L270)
 
 ___
 
@@ -169,7 +170,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:159](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L159)
+[src/routes.ts:160](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L160)
 
 ___
 
@@ -189,7 +190,7 @@ Routes.events
 
 #### Defined in
 
-[src/routes.ts:184](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L184)
+[src/routes.ts:185](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L185)
 
 ___
 
@@ -212,7 +213,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:124](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L124)
+[src/routes.ts:125](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L125)
 
 ___
 
@@ -235,7 +236,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/routes.ts:298](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L298)
+[src/routes.ts:305](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L305)
 
 ___
 
@@ -257,7 +258,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:108](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L108)
+[src/routes.ts:109](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L109)
 
 ## Methods
 

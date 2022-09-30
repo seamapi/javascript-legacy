@@ -217,3 +217,15 @@ test(
   },
   "ConnectedAccount"
 )
+test(
+  testAPIMethod("connectedAccounts.delete"),
+  {
+    args: (seed) => [
+      {
+        connected_account_id: seed.devices.augustLock.connectedAccountId,
+      },
+    ],
+    modifiesState: true,
+  },
+  "{}"
+)

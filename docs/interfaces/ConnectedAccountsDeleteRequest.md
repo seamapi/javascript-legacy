@@ -1,19 +1,19 @@
-[seamapi](../README.md) / [Exports](../modules.md) / ConnectedAccountsGetRequest
+[seamapi](../README.md) / [Exports](../modules.md) / ConnectedAccountsDeleteRequest
 
-# Interface: ConnectedAccountsGetRequest
+# Interface: ConnectedAccountsDeleteRequest
 
 ## Hierarchy
 
 - `ConnectedAccountBaseRequest`
 
-  ↳ **`ConnectedAccountsGetRequest`**
+  ↳ **`ConnectedAccountsDeleteRequest`**
 
 ## Table of contents
 
 ### Properties
 
-- [connected\_account\_id](ConnectedAccountsGetRequest.md#connected_account_id)
-- [email](ConnectedAccountsGetRequest.md#email)
+- [connected\_account\_id](ConnectedAccountsDeleteRequest.md#connected_account_id)
+- [email](ConnectedAccountsDeleteRequest.md#email)
 
 ## Properties
 
