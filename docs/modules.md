@@ -37,6 +37,7 @@
 - [ConnectWebview](interfaces/ConnectWebview.md)
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
+- [ConnectWebviewDeleteRequest](interfaces/ConnectWebviewDeleteRequest.md)
 - [ConnectWebviewGetResponse](interfaces/ConnectWebviewGetResponse.md)
 - [ConnectWebviewsListResponse](interfaces/ConnectWebviewsListResponse.md)
 - [ConnectedAccount](interfaces/ConnectedAccount.md)
@@ -314,7 +315,6 @@ ___
 #### Defined in
 
 [src/types/route-requests.ts:82](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L82)
-
 ___
 
 ### Event

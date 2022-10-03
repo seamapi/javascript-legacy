@@ -88,6 +88,28 @@ const command: CommandModule<GlobalOptions> = {
           }
         }
       )
+      .command(
+        "delete <id>",
+        "delete a connect webview",
+        (yargs) => {
+          return yargs.positional("id", {
+            describe: "the connect webview ID",
+            demandOption: true,
+            type: "string",
+          })
+        },
+        async (argv) => {
+          await executeCommand(
+            "connectWebviews.delete",
+            [
+              {
+                connect_webview_id: argv.id,
+              },
+            ],
+            argv
+          )
+        }
+      )
   },
   handler: () => {},
 }

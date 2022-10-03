@@ -73,7 +73,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:223](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L223)
+[src/routes.ts:229](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L229)
 
 ___
 
@@ -116,6 +116,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `create` | (`params`: [`ConnectWebviewCreateRequest`](../interfaces/ConnectWebviewCreateRequest.md)) => `Promise`<`Omit`<[`ConnectWebview`](../interfaces/ConnectWebview.md), ``"connected_account_id"``\> & { `custom_redirect_url`: ``null`` \| `string`  }\> |
+| `delete` | (`params`: [`ConnectWebviewDeleteRequest`](../interfaces/ConnectWebviewDeleteRequest.md)) => `Promise`<{ `ok`: ``true``  }\> |
 | `get` | (`connectWebviewId`: `string`) => `Promise`<[`ConnectWebview`](../interfaces/ConnectWebview.md)\> |
 | `list` | () => `Promise`<[`ConnectWebview`](../interfaces/ConnectWebview.md)[]\> |
 
@@ -147,7 +148,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:270](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L270)
+[src/routes.ts:276](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L276)
 
 ___
 
