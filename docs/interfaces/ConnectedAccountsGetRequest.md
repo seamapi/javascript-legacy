@@ -2,6 +2,12 @@
 
 # Interface: ConnectedAccountsGetRequest
 
+## Hierarchy
+
+- `ConnectedAccountBaseRequest`
+
+  ↳ **`ConnectedAccountsGetRequest`**
+
 ## Table of contents
 
 ### Properties
@@ -15,6 +21,10 @@
 
 • `Optional` **connected\_account\_id**: `string`
 
+#### Inherited from
+
+ConnectedAccountBaseRequest.connected\_account\_id
+
 #### Defined in
 
 [src/types/route-requests.ts:13](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L13)
@@ -24,6 +34,10 @@ ___
 ### email
 
 • `Optional` **email**: `string`
+
+#### Inherited from
+
+ConnectedAccountBaseRequest.email
 
 #### Defined in
 

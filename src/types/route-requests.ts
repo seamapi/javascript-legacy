@@ -5,14 +5,16 @@ export interface ConnectWebviewCreateRequest {
   accepted_providers: Provider[]
 }
 
-export interface ConnectWebviewDeleteRequest {
-  connect_webview_id: string
-}
-
-export interface ConnectedAccountsGetRequest {
+interface ConnectedAccountBaseRequest {
   connected_account_id?: string
   email?: string
 }
+
+export interface ConnectedAccountsGetRequest
+  extends ConnectedAccountBaseRequest {}
+
+export interface ConnectedAccountsDeleteRequest
+  extends ConnectedAccountBaseRequest {}
 
 export interface DevicesListRequest {
   connected_account_id?: string
