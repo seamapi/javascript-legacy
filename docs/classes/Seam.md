@@ -73,7 +73,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/routes.ts:229](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L229)
+[src/routes.ts:230](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L230)
 
 ___
 
@@ -93,7 +93,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/routes.ts:295](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L295)
+[src/routes.ts:302](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L302)
 
 ___
 
@@ -126,7 +126,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/routes.ts:197](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L197)
+[src/routes.ts:198](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L198)
 
 ___
 
@@ -148,7 +148,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/routes.ts:276](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L276)
+[src/routes.ts:277](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L277)
 
 ___
 
@@ -171,7 +171,7 @@ Routes.devices
 
 #### Defined in
 
-[src/routes.ts:160](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L160)
+[src/routes.ts:161](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L161)
 
 ___
 
@@ -191,7 +191,7 @@ Routes.events
 
 #### Defined in
 
-[src/routes.ts:185](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L185)
+[src/routes.ts:186](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L186)
 
 ___
 
@@ -214,7 +214,7 @@ Routes.locks
 
 #### Defined in
 
-[src/routes.ts:125](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L125)
+[src/routes.ts:126](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L126)
 
 ___
 
@@ -237,7 +237,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/routes.ts:305](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L305)
+[src/routes.ts:312](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L312)
 
 ___
 
@@ -259,7 +259,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/routes.ts:109](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L109)
+[src/routes.ts:110](https://github.com/seamapi/javascript/blob/main/src/routes.ts#L110)
 
 ## Methods
 
