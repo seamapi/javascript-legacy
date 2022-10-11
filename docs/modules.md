@@ -432,4 +432,4 @@ ___
 
 #### Defined in
 
-[src/client.ts:26](https://github.com/seamapi/javascript/blob/main/src/client.ts#L26)
+[src/client.ts:32](https://github.com/seamapi/javascript/blob/main/src/client.ts#L32)

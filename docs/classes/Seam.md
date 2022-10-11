@@ -24,12 +24,14 @@
 - [devices](Seam.md#devices)
 - [events](Seam.md#events)
 - [locks](Seam.md#locks)
+- [shouldReportExceptions](Seam.md#shouldreportexceptions)
 - [webhooks](Seam.md#webhooks)
 - [workspaces](Seam.md#workspaces)
 
 ### Methods
 
 - [makeRequest](Seam.md#makerequest)
+- [wrapThrowable](Seam.md#wrapthrowable)
 
 ## Constructors
 
@@ -49,7 +51,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/client.ts:44](https://github.com/seamapi/javascript/blob/main/src/client.ts#L44)
+[src/client.ts:52](https://github.com/seamapi/javascript/blob/main/src/client.ts#L52)
 
 ## Properties
 
@@ -103,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/client.ts:42](https://github.com/seamapi/javascript/blob/main/src/client.ts#L42)
+[src/client.ts:49](https://github.com/seamapi/javascript/blob/main/src/client.ts#L49)
 
 ___
 
@@ -218,6 +220,16 @@ Routes.locks
 
 ___
 
+### shouldReportExceptions
+
+• `Private` **shouldReportExceptions**: `boolean`
+
+#### Defined in
+
+[src/client.ts:50](https://github.com/seamapi/javascript/blob/main/src/client.ts#L50)
+
+___
+
 ### webhooks
 
 • `Readonly` **webhooks**: `Object`
@@ -289,4 +301,32 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/client.ts:82](https://github.com/seamapi/javascript/blob/main/src/client.ts#L82)
+[src/client.ts:110](https://github.com/seamapi/javascript/blob/main/src/client.ts#L110)
+
+___
+
+### wrapThrowable
+
+▸ `Private` **wrapThrowable**<`T`\>(`fn`): `Promise`<`T`\>
+
+Reports thrown exceptions to Sentry, if enabled.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `fn` | () => `T` |
+
+#### Returns
+
+`Promise`<`T`\>
+
+#### Defined in
+
+[src/client.ts:140](https://github.com/seamapi/javascript/blob/main/src/client.ts#L140)
