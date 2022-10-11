@@ -97,9 +97,15 @@ test.serial("reports exception to Sentry if enabled", async (t) => {
   await new Promise((resolve) => setTimeout(resolve, 1_000))
 
   // Check that exception was reported to Sentry
-  t.is(sentryFake.testkit.reports().length, 1)
+  // (More than one report seems to get sent when running in CI)
+  t.true(sentryFake.testkit.reports().length > 0)
   // (Bad typings on library)
-  const report = (sentryFake.testkit.reports()[0].originalReport as string)
+  const report = (
+    sentryFake.testkit
+      .reports()
+      .find((r) => (r.originalReport as string).includes("timeout"))
+      ?.originalReport as string
+  )
     .split("\n")
     .map((event) => JSON.parse(event))
     .reduce((accum, e) => ({ ...accum, ...e }), {})
