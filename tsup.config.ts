@@ -14,6 +14,7 @@ export default defineConfig({
   format: ["cjs", "esm"],
   env: {
     NODE_ENV: "production",
+    ...(process.env.SENTRY_DSN ? { SENTRY_DSN: process.env.SENTRY_DSN } : {}),
   },
   esbuildPlugins: [
     cache({}, path.resolve(__dirname, "node_modules", ".esbuild-plugin-cache")),
