@@ -281,7 +281,7 @@ ___
 
 ### Event
 
-Ƭ **Event**: `Flatten`<`SeamEvent`[``"event_type"``]\> & { `created_at`: `string` ; `event_id`: `string` ; `payload`: { `device_id`: `string` ; `workspace_id`: `string`  }  }
+Ƭ **Event**: `Flatten`<`SeamEvent`[``"event_type"``]\> & { `created_at`: `string` ; `event_id`: `string`  }
 
 #### Defined in
 

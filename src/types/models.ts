@@ -180,8 +180,4 @@ type Flatten<EventType extends SeamEvent["event_type"]> =
 export type Event = Flatten<SeamEvent["event_type"]> & {
   event_id: string
   created_at: string
-  payload: {
-    device_id: string
-    workspace_id: string
-  }
 }
