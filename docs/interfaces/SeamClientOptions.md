@@ -9,7 +9,6 @@
 - [apiKey](SeamClientOptions.md#apikey)
 - [axiosOptions](SeamClientOptions.md#axiosoptions)
 - [endpoint](SeamClientOptions.md#endpoint)
-- [shouldReportExceptions](SeamClientOptions.md#shouldreportexceptions)
 - [workspaceId](SeamClientOptions.md#workspaceid)
 
 ## Properties
@@ -20,7 +19,7 @@
 
 #### Defined in
 
-[src/client.ts:11](https://github.com/seamapi/javascript/blob/main/src/client.ts#L11)
+[src/client.ts:10](https://github.com/seamapi/javascript/blob/main/src/client.ts#L10)
 
 ___
 
@@ -32,7 +31,7 @@ Extended options to pass to Axios
 
 #### Defined in
 
-[src/client.ts:29](https://github.com/seamapi/javascript/blob/main/src/client.ts#L29)
+[src/client.ts:23](https://github.com/seamapi/javascript/blob/main/src/client.ts#L23)
 
 ___
 
@@ -44,21 +43,7 @@ Seam Endpoint to use, defaults to https://connect.getseam.com
 
 #### Defined in
 
-[src/client.ts:15](https://github.com/seamapi/javascript/blob/main/src/client.ts#L15)
-
-___
-
-### shouldReportExceptions
-
-• `Optional` **shouldReportExceptions**: `boolean`
-
-If true, SDK exceptions will be automatically reported to Seam. This defaults to `false` and is opt-in.
-
-**`default`** false
-
-#### Defined in
-
-[src/client.ts:25](https://github.com/seamapi/javascript/blob/main/src/client.ts#L25)
+[src/client.ts:14](https://github.com/seamapi/javascript/blob/main/src/client.ts#L14)
 
 ___
 
@@ -71,4 +56,4 @@ or undefined
 
 #### Defined in
 
-[src/client.ts:20](https://github.com/seamapi/javascript/blob/main/src/client.ts#L20)
+[src/client.ts:19](https://github.com/seamapi/javascript/blob/main/src/client.ts#L19)
