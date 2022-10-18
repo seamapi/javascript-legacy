@@ -48,6 +48,7 @@ export interface LockProperties extends CommonDeviceProperties {
   locked: boolean
   door_open?: boolean
   battery_level?: number
+  has_direct_power?: boolean
   manufacturer?: string
 
   schlage_metadata?: {
