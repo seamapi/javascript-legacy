@@ -83,7 +83,7 @@ export class SeamOS {
   makeRequest<URL extends keyof Routes, Method extends Routes[URL]["method"]>(
     request: ExtendedAxiosRequestConfig<URL, Method>
   ): Promise<Routes[URL]["jsonResponse"]> {
-    return null as any
+    return this.axios.request(request)
   }
 
   get<URL extends keyof Routes>(
