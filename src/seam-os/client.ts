@@ -101,7 +101,27 @@ export class SeamOS {
     return this.makeRequest({ url, method: "POST", ...config })
   }
 
+  private curriedPost =
+    <URL extends keyof Routes>(url: URL) =>
+    (
+      data: ExtendedAxiosRequestConfig<URL, "POST">["data"]
+    ): Promise<Routes[URL]["jsonResponse"]> => {
+      return this.post(url, data)
+    }
+
+  private curriedGet =
+    <URL extends keyof Routes>(url: URL) =>
+    (
+      data: ExtendedAxiosRequestConfig<URL, "POST">["data"]
+    ): Promise<Routes[URL]["jsonResponse"]> => {
+      return this.post(url, data)
+    }
+
   public readonly organizations = {
     get: () => this.get("/organizations/get"),
+    create: this.curriedPost("/organizations/create"),
+    invite_user: this.curriedPost("/organizations/invite_user"),
+    remove_user: this.curriedPost("/organizations/remove_user"),
+    update: this.curriedPost("/organizations/update"),
   }
 }
