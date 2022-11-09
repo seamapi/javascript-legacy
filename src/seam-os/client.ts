@@ -80,10 +80,14 @@ export class SeamOS {
     })
   }
 
-  makeRequest<URL extends keyof Routes, Method extends Routes[URL]["method"]>(
+  async makeRequest<
+    URL extends keyof Routes,
+    Method extends Routes[URL]["method"]
+  >(
     request: ExtendedAxiosRequestConfig<URL, Method>
   ): Promise<Routes[URL]["jsonResponse"]> {
-    return this.axios.request(request)
+    const res = await this.axios.request(request)
+    return res.data
   }
 
   get<URL extends keyof Routes>(
