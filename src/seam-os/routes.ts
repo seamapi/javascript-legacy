@@ -595,7 +595,7 @@ export interface Routes {
     }
     commonParams: {}
     jsonResponse: {
-      connect_webview: {
+      login_portal: {
         connected_webview_id: string
         connected_account_id: string | null
         organization_id: string

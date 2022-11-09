@@ -101,7 +101,7 @@ export class SeamOS {
     return this.makeRequest({ url, method: "POST", ...config })
   }
 
-  private curriedPost =
+  private _curriedPost =
     <URL extends keyof Routes>(url: URL) =>
     (
       data: ExtendedAxiosRequestConfig<URL, "POST">["data"]
@@ -109,7 +109,37 @@ export class SeamOS {
       return this.post(url, data)
     }
 
-  private curriedGet =
+  private _postGrab =
+    <
+      URL extends keyof Routes,
+      InnerObject extends keyof Routes[URL]["jsonResponse"]
+    >(
+      url: URL,
+      innerObject: InnerObject
+    ) =>
+    async (
+      data: ExtendedAxiosRequestConfig<URL, "POST">["data"]
+    ): Promise<Routes[URL]["jsonResponse"][InnerObject]> => {
+      const res = await this.post(url, data)
+      return res[innerObject]
+    }
+
+  private _getGrab =
+    <
+      URL extends keyof Routes,
+      InnerObject extends keyof Routes[URL]["jsonResponse"]
+    >(
+      url: URL,
+      innerObject: InnerObject
+    ) =>
+    async (
+      data: ExtendedAxiosRequestConfig<URL, "GET">["data"]
+    ): Promise<Routes[URL]["jsonResponse"][InnerObject]> => {
+      const res = await this.post(url, data)
+      return res[innerObject]
+    }
+
+  private _curriedGet =
     <URL extends keyof Routes>(url: URL) =>
     (
       data: ExtendedAxiosRequestConfig<URL, "POST">["data"]
@@ -118,10 +148,77 @@ export class SeamOS {
     }
 
   public readonly organizations = {
-    get: () => this.get("/organizations/get"),
-    create: this.curriedPost("/organizations/create"),
-    invite_user: this.curriedPost("/organizations/invite_user"),
-    remove_user: this.curriedPost("/organizations/remove_user"),
-    update: this.curriedPost("/organizations/update"),
+    get: () => this._getGrab("/organizations/get", "organization"),
+    create: this._postGrab("/organizations/create", "organization"),
+    invite_user: this._curriedPost("/organizations/invite_user"),
+    remove_user: this._curriedPost("/organizations/remove_user"),
+    update: this._curriedPost("/organizations/update"),
+  }
+
+  public health = () => this._curriedGet("/health")
+
+  public readonly access_codes = {
+    create: this._postGrab("/access_codes/create", "access_code"),
+    get: this._getGrab("/access_codes/get", "access_code"),
+    list: this._getGrab("/access_codes/list", "access_codes"),
+    delete: this._curriedPost("/access_codes/delete"),
+    update: this._curriedPost("/access_codes/update"),
+  }
+
+  public readonly access_passes = {
+    create: this._postGrab("/access_passes/create", "access_pass"),
+    get: this._getGrab("/access_passes/get", "access_pass"),
+    list: this._getGrab("/access_passes/list", "access_passes"),
+    delete: this._curriedPost("/access_passes/delete"),
+    update: this._curriedPost("/access_passes/update"),
+  }
+
+  public readonly buildings = {
+    create: this._postGrab("/buildings/create", "building"),
+    get: this._getGrab("/buildings/get", "building"),
+    list: this._getGrab("/buildings/list", "buildings"),
+    delete: this._curriedPost("/buildings/delete"),
+    update: this._curriedPost("/buildings/update"),
+    add_device: this._curriedPost("/buildings/add_device"),
+    add_user: this._curriedPost("/buildings/add_user"),
+  }
+
+  public readonly device_groups = {
+    create: this._postGrab("/device_groups/create", "device_group"),
+    get: this._getGrab("/device_groups/get", "device_group"),
+    list: this._getGrab("/device_groups/list", "device_groups"),
+    delete: this._curriedPost("/device_groups/delete"),
+    update: this._curriedPost("/device_groups/update"),
+    add_device: this._curriedPost("/device_groups/add_device"),
+    // woops need to add
+    // remove_device: this._curriedPost("/device_groups/remove_device"),
+  }
+
+  public readonly devices = {
+    get: this._getGrab("/devices/get", "device"),
+    list: this._getGrab("/devices/list", "devices"),
+    delete: this._curriedPost("/devices/delete"),
+    update: this._curriedPost("/devices/update"),
+  }
+
+  public readonly login_portals = {
+    create: this._postGrab("/login_portals/create", "login_portal"),
+    get: this._getGrab("/login_portals/get", "login_portal"),
+    delete: this._curriedPost("/login_portals/delete"),
+  }
+
+  public readonly user_groups = {
+    create: this._postGrab("/user_groups/create", "user_group"),
+    get: this._getGrab("/user_groups/get", "user_group"),
+    list: this._getGrab("/user_groups/list", "user_groups"),
+    update: this._curriedPost("/user_groups/update"),
+    delete: this._curriedPost("/user_groups/delete"),
+  }
+
+  public readonly users = {
+    get: this._getGrab("/users/get", "user"),
+    list: this._getGrab("/users/list", "users"),
+    update: this._curriedPost("/users/update"),
+    delete: this._curriedPost("/users/delete"),
   }
 }

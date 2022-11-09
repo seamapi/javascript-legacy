@@ -882,11 +882,11 @@ ___
 | `jsonBody` | `Object` |
 | `jsonBody.login_portal_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.connect_webview` | `Object` |
-| `jsonResponse.connect_webview.connected_account_id` | ``null`` \| `string` |
-| `jsonResponse.connect_webview.connected_webview_id` | `string` |
-| `jsonResponse.connect_webview.created_at` | `string` \| `Date` |
-| `jsonResponse.connect_webview.organization_id` | `string` |
+| `jsonResponse.login_portal` | `Object` |
+| `jsonResponse.login_portal.connected_account_id` | ``null`` \| `string` |
+| `jsonResponse.login_portal.connected_webview_id` | `string` |
+| `jsonResponse.login_portal.created_at` | `string` \| `Date` |
+| `jsonResponse.login_portal.organization_id` | `string` |
 | `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
