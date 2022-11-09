@@ -1,5 +1,7 @@
 import { AxiosRequestConfig, AxiosInstance } from "axios"
-import { Routes } from "./routes"
+import { RouteRequestBody, RouteRequestParams, Routes } from "./routes"
+import defaultAxios from "axios"
+import { version } from "../../package.json"
 
 export interface SeamOSClientOptions {
   /* Seam API Key */
@@ -40,12 +42,44 @@ export interface ExtendedAxiosRequestConfig<
 > extends Omit<AxiosRequestConfig, "url" | "method" | "data"> {
   url: URL
   method: Method
-  data?: Method extends "GET"
-    ? Routes[URL]["queryParams"] & Routes[URL]["commonParams"]
-    : Routes[URL]["jsonBody"] & Routes[URL]["commonParams"]
+  params?: RouteRequestParams<URL>
+  data?: RouteRequestBody<URL>
 }
 
 export class SeamOS {
+  axios: AxiosInstance
+
+  constructor(apiKeyOrOptions?: string | SeamOSClientOptions) {
+    const { apiKey, endpoint, workspaceId, axiosOptions } =
+      getSeamOSClientOptionsWithDefaults(apiKeyOrOptions)
+
+    const isRegularAPIKey = apiKey?.startsWith("seam_")
+
+    if (isRegularAPIKey && workspaceId)
+      throw new Error(
+        "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
+      )
+
+    if (!apiKey) {
+      throw new Error(
+        "SEAM_API_KEY not found in environment, and apiKey not provided"
+      )
+    }
+
+    this.axios = defaultAxios.create({
+      ...axiosOptions,
+      baseURL: endpoint,
+      headers: {
+        ...axiosOptions?.headers,
+        Authorization: `Bearer ${apiKey}`,
+        ["User-Agent"]: `Javascript SDK v${version} (https://github.com/seamapi/javascript)`,
+
+        // only needed for session key authentication
+        ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }),
+      },
+    })
+  }
+
   makeRequest<URL extends keyof Routes, Method extends Routes[URL]["method"]>(
     request: ExtendedAxiosRequestConfig<URL, Method>
   ): Promise<Routes[URL]["jsonResponse"]> {
@@ -65,5 +99,9 @@ export class SeamOS {
     config?: ExtendedAxiosRequestConfig<URL, "POST">
   ): Promise<Routes[URL]["jsonResponse"]> {
     return this.makeRequest({ url, method: "POST", ...config })
+  }
+
+  public readonly organizations = {
+    get: () => this.get("/organizations/get"),
   }
 }

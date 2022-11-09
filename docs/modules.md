@@ -8,6 +8,10 @@
 
 - [default](modules.md#default)
 
+### Namespaces
+
+- [SeamOSRouteTypes](modules/SeamOSRouteTypes.md)
+
 ### Enumerations
 
 - [Provider](enums/Provider.md)
@@ -18,6 +22,7 @@
 - [SeamAPIError](classes/SeamAPIError.md)
 - [SeamActionAttemptError](classes/SeamActionAttemptError.md)
 - [SeamMalformedInputError](classes/SeamMalformedInputError.md)
+- [SeamOS](classes/SeamOS.md)
 - [SeamWebhook](classes/SeamWebhook.md)
 
 ### Interfaces
@@ -52,6 +57,7 @@
 - [ErroredAPIResponse](interfaces/ErroredAPIResponse.md)
 - [EventsListRequest](interfaces/EventsListRequest.md)
 - [EventsListResponse](interfaces/EventsListResponse.md)
+- [ExtendedAxiosRequestConfig](interfaces/ExtendedAxiosRequestConfig.md)
 - [LockGetResponse](interfaces/LockGetResponse.md)
 - [LockProperties](interfaces/LockProperties.md)
 - [LocksListResponse](interfaces/LocksListResponse.md)
@@ -59,6 +65,7 @@
 - [PendingActionAttempt](interfaces/PendingActionAttempt.md)
 - [SeamAPIErrorMetadata](interfaces/SeamAPIErrorMetadata.md)
 - [SeamClientOptions](interfaces/SeamClientOptions.md)
+- [SeamOSClientOptions](interfaces/SeamOSClientOptions.md)
 - [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
 - [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
 - [UserIdentifier](interfaces/UserIdentifier.md)
@@ -100,6 +107,7 @@
 ### Functions
 
 - [getSeamClientOptionsWithDefaults](modules.md#getseamclientoptionswithdefaults)
+- [getSeamOSClientOptionsWithDefaults](modules.md#getseamosclientoptionswithdefaults)
 
 ## References
 
@@ -433,3 +441,23 @@ ___
 #### Defined in
 
 [src/seam-connect/client.ts:26](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L26)
+
+___
+
+### getSeamOSClientOptionsWithDefaults
+
+▸ **getSeamOSClientOptionsWithDefaults**(`apiKeyOrOptions?`): [`SeamOSClientOptions`](interfaces/SeamOSClientOptions.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `apiKeyOrOptions?` | `string` \| [`SeamOSClientOptions`](interfaces/SeamOSClientOptions.md) |
+
+#### Returns
+
+[`SeamOSClientOptions`](interfaces/SeamOSClientOptions.md)
+
+#### Defined in
+
+[src/seam-os/client.ts:24](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L24)
