@@ -320,10 +320,10 @@ export interface Routes {
     route: "/buildings/get"
     method: "GET" | "POST"
     queryParams: {}
-    jsonBody: {
+    jsonBody: {}
+    commonParams: {
       building_id: string
     }
-    commonParams: {}
     jsonResponse: {
       building: {
         building_id: string

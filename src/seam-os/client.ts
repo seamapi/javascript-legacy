@@ -98,7 +98,7 @@ export class SeamOS {
     data: ExtendedAxiosRequestConfig<URL, "POST">["data"],
     config?: ExtendedAxiosRequestConfig<URL, "POST">
   ): Promise<Routes[URL]["jsonResponse"]> {
-    return this.makeRequest({ url, method: "POST", ...config })
+    return this.makeRequest({ url, method: "POST", data, ...config })
   }
 
   private _curriedPost =
