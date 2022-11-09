@@ -9,7 +9,7 @@
 - [apiKey](SeamOSClientOptions.md#apikey)
 - [axiosOptions](SeamOSClientOptions.md#axiosoptions)
 - [endpoint](SeamOSClientOptions.md#endpoint)
-- [workspaceId](SeamOSClientOptions.md#workspaceid)
+- [organizationId](SeamOSClientOptions.md#organizationid)
 
 ## Properties
 
@@ -47,11 +47,11 @@ Seam Endpoint to use, defaults to https://connect.getseam.com
 
 ___
 
-### workspaceId
+### organizationId
 
-• `Optional` **workspaceId**: `string`
+• `Optional` **organizationId**: `string`
 
-Workspace if using session authentication, defaults to SEAM_WORKSPACE_ID
+Organization if using session authentication, defaults to SEAM_ORGANIZATION_ID
 or undefined
 
 #### Defined in

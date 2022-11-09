@@ -11,10 +11,10 @@ export interface SeamOSClientOptions {
    **/
   endpoint?: string
   /**
-   * Workspace if using session authentication, defaults to SEAM_WORKSPACE_ID
+   * Organization if using session authentication, defaults to SEAM_ORGANIZATION_ID
    * or undefined
    **/
-  workspaceId?: string
+  organizationId?: string
   /**
    * Extended options to pass to Axios
    */
@@ -27,7 +27,7 @@ export const getSeamOSClientOptionsWithDefaults = (
   const seamClientDefaults: SeamOSClientOptions = {
     apiKey: process?.env?.SEAM_API_KEY,
     endpoint: process?.env?.SEAM_API_URL || "https://example.com",
-    workspaceId: process?.env?.SEAM_WORKSPACE_ID,
+    organizationId: process?.env?.SEAM_ORGANIZATION_ID,
   }
   if (typeof apiKeyOrOptions === "string") {
     return { ...seamClientDefaults, apiKey: apiKeyOrOptions }
@@ -50,12 +50,12 @@ export class SeamOS {
   axios: AxiosInstance
 
   constructor(apiKeyOrOptions?: string | SeamOSClientOptions) {
-    const { apiKey, endpoint, workspaceId, axiosOptions } =
+    const { apiKey, endpoint, organizationId, axiosOptions } =
       getSeamOSClientOptionsWithDefaults(apiKeyOrOptions)
 
     const isRegularAPIKey = apiKey?.startsWith("seam_")
 
-    if (isRegularAPIKey && workspaceId)
+    if (isRegularAPIKey && organizationId)
       throw new Error(
         "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
       )
@@ -75,7 +75,7 @@ export class SeamOS {
         ["User-Agent"]: `Javascript SDK v${version} (https://github.com/seamapi/javascript)`,
 
         // only needed for session key authentication
-        ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }),
+        ...(!organizationId ? {} : { "Seam-Organization-Id": organizationId }),
       },
     })
   }
