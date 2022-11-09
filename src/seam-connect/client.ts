@@ -1,9 +1,9 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
 import axiosRetry from "axios-retry"
-import { SeamAPIError, SeamMalformedInputError } from "./lib/api-error"
+import { SeamAPIError, SeamMalformedInputError } from "../lib/api-error"
 import { Routes } from "./routes"
-import { ErroredAPIResponse, SuccessfulAPIResponse } from "./types/globals"
-import { version } from "../package.json"
+import { ErroredAPIResponse, SuccessfulAPIResponse } from "../types/globals"
+import { version } from "../../package.json"
 
 export interface SeamClientOptions {
   /* Seam API Key */

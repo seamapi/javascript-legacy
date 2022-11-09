@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from "axios"
 import pRetry from "p-retry"
-import { SuccessfulAPIResponse } from "./types/globals"
+import { SuccessfulAPIResponse } from "../types/globals"
 import {
   ActionAttempt,
   SuccessfulActionAttempt,
@@ -8,7 +8,7 @@ import {
   ActionType,
   OngoingAccessCode,
   TimeBoundAccessCode,
-} from "./types/models"
+} from "../types/models"
 import {
   AccessCodeGetRequest,
   AccessCodeCreateRequest,
@@ -27,8 +27,8 @@ import {
   WebhookGetRequest,
   WebhookCreateRequest,
   EventsListRequest,
-} from "./types/route-requests"
-import { SeamActionAttemptError } from "./lib/api-error"
+} from "../types/route-requests"
+import { SeamActionAttemptError } from "../lib/api-error"
 import {
   AccessCodesListResponse,
   AccessCodeGetResponse,
@@ -49,7 +49,7 @@ import {
   WebhookListResponse,
   WebhookGetResponse,
   EventsListResponse,
-} from "./types/route-responses"
+} from "../types/route-responses"
 
 export abstract class Routes {
   public abstract makeRequest<T>(
