@@ -132,6 +132,7 @@ export interface ConnectWebview {
   status: "pending" | "authorized"
   connected_account_id?: null | string
   custom_redirect_url?: null | string
+  custom_redirect_failure_url?: null | string
   url: string
   authorized_at?: null | string
 }

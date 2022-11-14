@@ -14,6 +14,7 @@
 - [connect\_webview\_id](ConnectWebview.md#connect_webview_id)
 - [connected\_account\_id](ConnectWebview.md#connected_account_id)
 - [created\_at](ConnectWebview.md#created_at)
+- [custom\_redirect\_failure\_url](ConnectWebview.md#custom_redirect_failure_url)
 - [custom\_redirect\_url](ConnectWebview.md#custom_redirect_url)
 - [device\_selection\_mode](ConnectWebview.md#device_selection_mode)
 - [login\_successful](ConnectWebview.md#login_successful)
@@ -69,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L136)
+[src/types/models.ts:137](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L137)
 
 ___
 
@@ -100,6 +101,16 @@ ___
 #### Defined in
 
 [src/types/models.ts:130](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L130)
+
+___
+
+### custom\_redirect\_failure\_url
+
+• `Optional` **custom\_redirect\_failure\_url**: ``null`` \| `string`
+
+#### Defined in
+
+[src/types/models.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L135)
 
 ___
 
@@ -149,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L135)
+[src/types/models.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L136)
 
 ___
 

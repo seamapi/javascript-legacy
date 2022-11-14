@@ -562,6 +562,7 @@ export interface Routes {
       accepted_providers?: string[] | undefined
       device_selection_mode?: "none" | "single" | "multiple"
       custom_redirect_url?: string | undefined
+      custom_redirect_failure_url?: string | undefined
     }
     commonParams: {}
     jsonResponse: {

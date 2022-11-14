@@ -52,6 +52,7 @@ export interface ConnectWebviewGetResponse {
 export interface ConnectWebviewCreateResponse {
   connect_webview: Omit<ConnectWebview, "connected_account_id"> & {
     custom_redirect_url: null | string
+    custom_redirect_failure_url: null | string
   }
 }
 
