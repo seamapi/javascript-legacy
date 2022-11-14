@@ -170,7 +170,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`data`: `undefined` \| { `accepted_providers?`: `string`[] ; `custom_redirect_failure_url?`: `string` ; `custom_redirect_url?`: `string` ; `device_selection_mode?`: ``"none"`` \| ``"single"`` \| ``"multiple"``  }) => `Promise`<{ `connected_account_id`: ``null`` \| `string` ; `connected_webview_id`: `string` ; `created_at`: `string` \| `Date` ; `organization_id`: `string`  }\> |
+| `create` | (`data`: `undefined` \| { `accepted_providers?`: `string`[] ; `custom_redirect_url?`: `string` ; `device_selection_mode?`: ``"none"`` \| ``"single"`` \| ``"multiple"``  }) => `Promise`<{ `connected_account_id`: ``null`` \| `string` ; `connected_webview_id`: `string` ; `created_at`: `string` \| `Date` ; `organization_id`: `string`  }\> |
 | `delete` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
 | `get` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{ `connected_account_id`: ``null`` \| `string` ; `connected_webview_id`: `string` ; `created_at`: `string` \| `Date` ; `organization_id`: `string`  }\> |
 
