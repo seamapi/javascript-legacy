@@ -24,6 +24,7 @@ export interface DevicesListRequest {
   connected_account_id?: string
   connect_webview_id?: string
   device_type?: string
+  device_ids?: string[]
 }
 
 export interface AccessCodeCreateBaseRequest {
