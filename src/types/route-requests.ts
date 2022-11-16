@@ -3,6 +3,9 @@ import { CommonDeviceProperties, Provider } from "./models"
 
 export interface ConnectWebviewCreateRequest {
   accepted_providers: Provider[]
+  device_selection_mode?: "none" | "single" | "multiple"
+  custom_redirect_url?: string
+  custom_redirect_failure_url?: string
 }
 
 export interface ConnectWebviewDeleteRequest {
