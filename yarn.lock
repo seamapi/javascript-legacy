@@ -5094,10 +5094,10 @@ safe-stable-stringify@^2.3.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-seamapi-types@1.3.10:
-  version "1.3.10"
-  resolved "https://registry.yarnpkg.com/seamapi-types/-/seamapi-types-1.3.10.tgz#d90dcb140872226301bbff428e2d34b31ca174ec"
-  integrity sha512-OEZGrwp1A3oz60AbDrfvRIlz3SrURJZeY5jH4SiYG5mjKnoRdchkAjo7uCZOPrldadch2wiAojWD+qp2UOGdnA==
+seamapi-types@1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/seamapi-types/-/seamapi-types-1.11.0.tgz#ed62fcf9173bb8f540036b999b3ce7e0275affac"
+  integrity sha512-bo4bVjc3tbnS1jl8S/KGbfgS4bbrOhDTaORW0Cg6eLcd+3iDmwvatAPYFBmNNekj2IOcMKhMMrqbpldC4d8jGA==
 
 semantic-release@19.0.2:
   version "19.0.2"
