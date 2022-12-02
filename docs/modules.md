@@ -332,7 +332,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:189](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L189)
+[src/types/models.ts:190](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L190)
 
 ___
 

@@ -39,7 +39,7 @@ test.skip("webhook payload is correctly verified", async (t) => {
   )
 
   t.is(callback.event_type, "access_code.created")
-  t.is(callback.data.device_id, seed.devices.augustLock.id1)
+  t.is((callback.data as any).device_id, seed.devices.augustLock.id1)
   // Check types
   t.true(
     callback.event_type === "access_code.created" &&

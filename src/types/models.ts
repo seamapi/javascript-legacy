@@ -182,6 +182,7 @@ export interface Webhook {
 type Flatten<EventType extends SeamEvent["event_type"]> =
   EventType extends SeamEvent["event_type"]
     ? {
+        event_id: string
         event_type: EventType
       } & Extract<SeamEvent, { event_type: EventType }>["payload"]
     : never
