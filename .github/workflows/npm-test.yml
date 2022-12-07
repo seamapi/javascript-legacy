@@ -59,32 +59,33 @@ jobs:
         run: docker pull ${{ env.SEAM_CONNECT_IMAGE }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: "yarn"
 
       - run: yarn install --frozen-lockfile
+      - run: yarn why ava
       - run: yarn test -T 2m
         env:
           SEAM_CONNECT_IMAGE: ${{ env.SEAM_CONNECT_IMAGE }}
 
-      - name: Comment on failure
-        if: ${{ github.event.inputs.prNumber && failure() }}
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          number: ${{ github.event.inputs.prNumber }}
-          repo: ${{ github.event.inputs.prRepo }}
-          GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
-          message: |
-            ⛔️ [Javascript SDK tests failed](${{ env.RUN_URL }}).
+      # - name: Comment on failure
+      #   if: ${{ github.event.inputs.prNumber && failure() }}
+      #   uses: marocchino/sticky-pull-request-comment@v2
+      #   with:
+      #     number: ${{ github.event.inputs.prNumber }}
+      #     repo: ${{ github.event.inputs.prRepo }}
+      #     GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
+      #     message: |
+      #       ⛔️ [Javascript SDK tests failed](${{ env.RUN_URL }}).
 
-      - name: Comment on success
-        if: ${{ github.event.inputs.prNumber && success() }}
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          number: ${{ github.event.inputs.prNumber }}
-          repo: ${{ github.event.inputs.prRepo }}
-          GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
-          message: |
-            ✅ [Javascript SDK tests passed](${{ env.RUN_URL }}).
+      # - name: Comment on success
+      #   if: ${{ github.event.inputs.prNumber && success() }}
+      #   uses: marocchino/sticky-pull-request-comment@v2
+      #   with:
+      #     number: ${{ github.event.inputs.prNumber }}
+      #     repo: ${{ github.event.inputs.prRepo }}
+      #     GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
+      #     message: |
+      #       ✅ [Javascript SDK tests passed](${{ env.RUN_URL }}).
