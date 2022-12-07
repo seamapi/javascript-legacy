@@ -1,5 +1,5 @@
 // @Seam devs: This mapping is generated from the seamos-backend project, run
-// `yarn build:route-types` to update it
+// `yarn build:route-types` to generate a `routes-type` file and copy it here.
 // TODO automatically pull this from @seamapi/public-types
 export interface Routes {
   "/api/health": {
