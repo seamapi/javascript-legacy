@@ -2,8 +2,8 @@
 // `yarn build:route-types` to generate a `routes-type` file and copy it here.
 // TODO automatically pull this from @seamapi/public-types
 export interface Routes {
-  "/api/health": {
-    route: "/api/health"
+  "/health": {
+    route: "/health"
     method: "GET"
     queryParams: {}
     jsonBody: {}
@@ -11,8 +11,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/internal/organizations/delete": {
-    route: "/api/internal/organizations/delete"
+  "/internal/organizations/delete": {
+    route: "/internal/organizations/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {
@@ -22,8 +22,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/internal/organizations/list": {
-    route: "/api/internal/organizations/list"
+  "/internal/organizations/list": {
+    route: "/internal/organizations/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -37,8 +37,8 @@ export interface Routes {
       }[]
     }
   }
-  "/api/internal/user_sessions/create": {
-    route: "/api/internal/user_sessions/create"
+  "/internal/user_sessions/create": {
+    route: "/internal/user_sessions/create"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -56,8 +56,8 @@ export interface Routes {
       }
     }
   }
-  "/api/internal/users/reset-password": {
-    route: "/api/internal/users/reset-password"
+  "/internal/users/reset-password": {
+    route: "/internal/users/reset-password"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -67,8 +67,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/access_codes/create": {
-    route: "/api/access_codes/create"
+  "/access_codes/create": {
+    route: "/access_codes/create"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -98,8 +98,8 @@ export interface Routes {
           }
     }
   }
-  "/api/access_codes/delete": {
-    route: "/api/access_codes/delete"
+  "/access_codes/delete": {
+    route: "/access_codes/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -109,8 +109,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/access_codes/get": {
-    route: "/api/access_codes/get"
+  "/access_codes/get": {
+    route: "/access_codes/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -136,8 +136,8 @@ export interface Routes {
           }
     }
   }
-  "/api/access_codes/list": {
-    route: "/api/access_codes/list"
+  "/access_codes/list": {
+    route: "/access_codes/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -167,8 +167,8 @@ export interface Routes {
       )[]
     }
   }
-  "/api/access_codes/update": {
-    route: "/api/access_codes/update"
+  "/access_codes/update": {
+    route: "/access_codes/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
@@ -183,8 +183,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/device_groups/add_device": {
-    route: "/api/device_groups/add_device"
+  "/device_groups/add_device": {
+    route: "/device_groups/add_device"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -195,8 +195,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/device_groups/create": {
-    route: "/api/device_groups/create"
+  "/device_groups/create": {
+    route: "/device_groups/create"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -213,8 +213,8 @@ export interface Routes {
       }
     }
   }
-  "/api/device_groups/delete": {
-    route: "/api/device_groups/delete"
+  "/device_groups/delete": {
+    route: "/device_groups/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {
@@ -224,8 +224,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/device_groups/get": {
-    route: "/api/device_groups/get"
+  "/device_groups/get": {
+    route: "/device_groups/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {
@@ -242,8 +242,8 @@ export interface Routes {
       }
     }
   }
-  "/api/device_groups/list": {
-    route: "/api/device_groups/list"
+  "/device_groups/list": {
+    route: "/device_groups/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -258,8 +258,8 @@ export interface Routes {
       }[]
     }
   }
-  "/api/device_groups/update": {
-    route: "/api/device_groups/update"
+  "/device_groups/update": {
+    route: "/device_groups/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
@@ -270,8 +270,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/devices/delete": {
-    route: "/api/devices/delete"
+  "/devices/delete": {
+    route: "/devices/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -281,8 +281,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/devices/get": {
-    route: "/api/devices/get"
+  "/devices/get": {
+    route: "/devices/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -307,8 +307,8 @@ export interface Routes {
       }
     }
   }
-  "/api/devices/list": {
-    route: "/api/devices/list"
+  "/devices/list": {
+    route: "/devices/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -334,8 +334,8 @@ export interface Routes {
       }[]
     }
   }
-  "/api/devices/update": {
-    route: "/api/devices/update"
+  "/devices/update": {
+    route: "/devices/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
@@ -347,8 +347,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/access_passes/create": {
-    route: "/api/access_passes/create"
+  "/access_passes/create": {
+    route: "/access_passes/create"
     method: "POST"
     queryParams: {}
     jsonBody:
@@ -389,8 +389,8 @@ export interface Routes {
       }
     }
   }
-  "/api/access_passes/delete": {
-    route: "/api/access_passes/delete"
+  "/access_passes/delete": {
+    route: "/access_passes/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -400,8 +400,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/access_passes/get": {
-    route: "/api/access_passes/get"
+  "/access_passes/get": {
+    route: "/access_passes/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -426,8 +426,8 @@ export interface Routes {
       }
     }
   }
-  "/api/access_passes/list": {
-    route: "/api/access_passes/list"
+  "/access_passes/list": {
+    route: "/access_passes/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -453,8 +453,8 @@ export interface Routes {
       }[]
     }
   }
-  "/api/access_passes/update": {
-    route: "/api/access_passes/update"
+  "/access_passes/update": {
+    route: "/access_passes/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
@@ -469,8 +469,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/buildings/add_device": {
-    route: "/api/buildings/add_device"
+  "/buildings/add_device": {
+    route: "/buildings/add_device"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -481,8 +481,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/buildings/add_user": {
-    route: "/api/buildings/add_user"
+  "/buildings/add_user": {
+    route: "/buildings/add_user"
     method: "POST"
     queryParams: {}
     jsonBody:
@@ -498,8 +498,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/buildings/create": {
-    route: "/api/buildings/create"
+  "/buildings/create": {
+    route: "/buildings/create"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -523,8 +523,8 @@ export interface Routes {
       }
     }
   }
-  "/api/buildings/delete": {
-    route: "/api/buildings/delete"
+  "/buildings/delete": {
+    route: "/buildings/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -534,8 +534,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/buildings/get": {
-    route: "/api/buildings/get"
+  "/buildings/get": {
+    route: "/buildings/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -553,8 +553,8 @@ export interface Routes {
       }
     }
   }
-  "/api/buildings/list": {
-    route: "/api/buildings/list"
+  "/buildings/list": {
+    route: "/buildings/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -570,8 +570,8 @@ export interface Routes {
       }[]
     }
   }
-  "/api/buildings/remove_device": {
-    route: "/api/buildings/remove_device"
+  "/buildings/remove_device": {
+    route: "/buildings/remove_device"
     method: "POST" | "DELETE"
     queryParams: {}
     jsonBody: {}
@@ -582,8 +582,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/buildings/remove_user": {
-    route: "/api/buildings/remove_user"
+  "/buildings/remove_user": {
+    route: "/buildings/remove_user"
     method: "POST" | "DELETE"
     queryParams: {}
     jsonBody: {}
@@ -594,8 +594,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/buildings/update": {
-    route: "/api/buildings/update"
+  "/buildings/update": {
+    route: "/buildings/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {}
@@ -607,8 +607,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/organizations/create": {
-    route: "/api/organizations/create"
+  "/organizations/create": {
+    route: "/organizations/create"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -624,8 +624,8 @@ export interface Routes {
       }
     }
   }
-  "/api/organizations/get": {
-    route: "/api/organizations/get"
+  "/organizations/get": {
+    route: "/organizations/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -641,8 +641,8 @@ export interface Routes {
       }
     }
   }
-  "/api/organizations/invite_user": {
-    route: "/api/organizations/invite_user"
+  "/organizations/invite_user": {
+    route: "/organizations/invite_user"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
@@ -652,8 +652,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/organizations/remove_user": {
-    route: "/api/organizations/remove_user"
+  "/organizations/remove_user": {
+    route: "/organizations/remove_user"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
@@ -663,8 +663,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/organizations/update": {
-    route: "/api/organizations/update"
+  "/organizations/update": {
+    route: "/organizations/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
@@ -674,8 +674,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/login_portals/create": {
-    route: "/api/login_portals/create"
+  "/login_portals/create": {
+    route: "/login_portals/create"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -694,8 +694,8 @@ export interface Routes {
       }
     }
   }
-  "/api/login_portals/delete": {
-    route: "/api/login_portals/delete"
+  "/login_portals/delete": {
+    route: "/login_portals/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -705,8 +705,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/login_portals/get": {
-    route: "/api/login_portals/get"
+  "/login_portals/get": {
+    route: "/login_portals/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -723,8 +723,8 @@ export interface Routes {
       }
     }
   }
-  "/api/login_portals/list": {
-    route: "/api/login_portals/list"
+  "/login_portals/list": {
+    route: "/login_portals/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -741,8 +741,8 @@ export interface Routes {
       }[]
     }
   }
-  "/api/user_groups/add_user": {
-    route: "/api/user_groups/add_user"
+  "/user_groups/add_user": {
+    route: "/user_groups/add_user"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -753,8 +753,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/user_groups/create": {
-    route: "/api/user_groups/create"
+  "/user_groups/create": {
+    route: "/user_groups/create"
     method: "POST"
     queryParams: {}
     jsonBody: {
@@ -771,8 +771,8 @@ export interface Routes {
       }
     }
   }
-  "/api/user_groups/delete": {
-    route: "/api/user_groups/delete"
+  "/user_groups/delete": {
+    route: "/user_groups/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -782,8 +782,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/user_groups/get": {
-    route: "/api/user_groups/get"
+  "/user_groups/get": {
+    route: "/user_groups/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -800,8 +800,8 @@ export interface Routes {
       }
     }
   }
-  "/api/user_groups/list": {
-    route: "/api/user_groups/list"
+  "/user_groups/list": {
+    route: "/user_groups/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -816,8 +816,8 @@ export interface Routes {
       }[]
     }
   }
-  "/api/user_groups/remove_user": {
-    route: "/api/user_groups/remove_user"
+  "/user_groups/remove_user": {
+    route: "/user_groups/remove_user"
     method: "POST" | "DELETE" | "PATCH"
     queryParams: {}
     jsonBody: {}
@@ -828,8 +828,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/user_groups/update": {
-    route: "/api/user_groups/update"
+  "/user_groups/update": {
+    route: "/user_groups/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
@@ -840,8 +840,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/users/delete": {
-    route: "/api/users/delete"
+  "/users/delete": {
+    route: "/users/delete"
     method: "DELETE" | "POST"
     queryParams: {}
     jsonBody: {
@@ -851,8 +851,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/api/users/get": {
-    route: "/api/users/get"
+  "/users/get": {
+    route: "/users/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {
@@ -868,8 +868,8 @@ export interface Routes {
       }
     }
   }
-  "/api/users/list": {
-    route: "/api/users/list"
+  "/users/list": {
+    route: "/users/list"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {
@@ -886,8 +886,8 @@ export interface Routes {
       }[]
     }
   }
-  "/api/users/update": {
-    route: "/api/users/update"
+  "/users/update": {
+    route: "/users/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
