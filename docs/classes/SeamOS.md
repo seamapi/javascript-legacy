@@ -59,10 +59,10 @@
 | Name | Type |
 | :------ | :------ |
 | `create` | (`data`: `undefined` \| { `code?`: `string` ; `device_id`: `string` ; `ends_at?`: `string` \| `Date` ; `name?`: `string` ; `starts_at?`: `string` \| `Date`  }) => `Promise`<{ `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  }\> |
-| `delete` | (`data`: `undefined` \| { `access_code_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `delete` | (`data`: `undefined` \| { `access_code_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `access_code_id`: `string`  }) => `Promise`<{ `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  }\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_group_id?`: `string` ; `device_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<({ `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  })[]\> |
-| `update` | (`data`: `undefined` \| { `access_code_id`: `string` ; `code?`: `string` ; `device_id?`: `string` ; `ends_at?`: `string` \| `Date` ; `name?`: `string` ; `starts_at?`: `string` \| `Date`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `update` | (`data`: `undefined` \| { `access_code_id`: `string` ; `code?`: `string` ; `device_id?`: `string` ; `ends_at?`: `string` \| `Date` ; `name?`: `string` ; `starts_at?`: `string` \| `Date`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -79,10 +79,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `create` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/access_passes/create"``\>) => `Promise`<{ `access_methods`: ({ `access_method`: ``"remote_unlock"`` ; `device_id`: `string`  } \| { `access_method`: ``"access_code"`` ; `code`: `string` ; `device_id`: `string`  })[] ; `access_pass_id`: `string`  }\> |
-| `delete` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `delete` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{ `access_methods`: ({ `access_method`: ``"remote_unlock"`` ; `device_id`: `string`  } \| { `access_method`: ``"access_code"`` ; `code`: `string` ; `device_id`: `string`  })[] ; `access_pass_id`: `string`  }\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `access_methods`: ({ `access_method`: ``"remote_unlock"`` ; `device_id`: `string`  } \| { `access_method`: ``"access_code"`` ; `code`: `string` ; `device_id`: `string`  })[] ; `access_pass_id`: `string`  }[]\> |
-| `update` | (`data`: `undefined` \| { `device_group_id?`: `string` ; `device_id?`: `string`[] ; `device_ids?`: `string`[] ; `ends_at?`: `string` \| `Date` ; `name`: `string` ; `starts_at?`: `string` \| `Date`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `update` | (`data`: `undefined` \| { `device_group_id?`: `string` ; `device_id?`: `string`[] ; `device_ids?`: `string`[] ; `ends_at?`: `string` \| `Date` ; `name`: `string` ; `starts_at?`: `string` \| `Date`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -108,13 +108,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `add_device` | (`data`: `undefined` \| { `building_id`: `string` ; `device_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
-| `add_user` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/buildings/add_user"``\>) => `Promise`<{ `ok`: `boolean`  }\> |
-| `create` | (`data`: `undefined` \| { `location?`: `any` ; `name`: `string` ; `owner_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string`  }\> |
-| `delete` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `add_device` | (`data`: `undefined` \| { `building_id`: `string` ; `device_id`: `string`  }) => `Promise`<{}\> |
+| `add_user` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/buildings/add_user"``\>) => `Promise`<{}\> |
+| `create` | (`data`: `undefined` \| { `location?`: { [x: string]: `any`;  } ; `name`: `string` ; `owner_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string`  }\> |
+| `delete` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string`  }\> |
 | `list` | (`data`: `undefined` \| {}) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string`  }[]\> |
-| `update` | (`data`: `undefined` \| { `building_id`: `string` ; `name?`: `string` ; `owner_id?`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `update` | (`data`: `undefined` \| { `building_id`: `string` ; `name?`: `string` ; `owner_id?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -130,12 +130,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `add_device` | (`data`: `undefined` \| { `device_group_id`: `string` ; `device_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `add_device` | (`data`: `undefined` \| { `device_group_id`: `string` ; `device_id`: `string`  }) => `Promise`<{}\> |
 | `create` | (`data`: `undefined` \| { `name`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `name`: `string` ; `organization_id`: `string`  }\> |
-| `delete` | (`data`: `undefined` \| { `device_group_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `delete` | (`data`: `undefined` \| { `device_group_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `device_group_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `name`: `string` ; `organization_id`: `string`  }\> |
 | `list` | (`data`: `undefined` \| {}) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `name`: `string` ; `organization_id`: `string`  }[]\> |
-| `update` | (`data`: `undefined` \| { `device_group_id`: `string` ; `name?`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `update` | (`data`: `undefined` \| { `device_group_id`: `string` ; `name?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -151,10 +151,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `delete` | (`data`: `undefined` \| { `device_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
-| `get` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/devices/get"``\>) => `Promise`<{ `connected_account_id`: `string` ; `created_at`: `string` \| `Date` ; `device_id`: `string` ; `device_type`: `string` ; `name`: `string`  }\> |
-| `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `has_no_building?`: `boolean` ; `user_group_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `connected_account_id`: `string` ; `created_at`: `string` \| `Date` ; `device_id`: `string` ; `device_type`: `string` ; `name`: `string`  }[]\> |
-| `update` | (`data`: `undefined` \| { `device_id`: `string` ; `location?`: {} ; `name?`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `delete` | (`data`: `undefined` \| { `device_id`: `string`  }) => `Promise`<{}\> |
+| `get` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_id?`: `string` ; `device_name?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { [x: string]: `unknown`;  }  }\> |
+| `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `has_no_building?`: `boolean` ; `user_group_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { [x: string]: `unknown`;  }  }[]\> |
+| `update` | (`data`: `undefined` \| { `device_id`: `string` ; `location?`: {} ; `name?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -170,9 +170,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`data`: `undefined` \| { `accepted_providers?`: `string`[] ; `custom_redirect_url?`: `string` ; `device_selection_mode?`: ``"none"`` \| ``"single"`` \| ``"multiple"``  }) => `Promise`<{ `connected_account_id`: ``null`` \| `string` ; `connected_webview_id`: `string` ; `created_at`: `string` \| `Date` ; `organization_id`: `string`  }\> |
-| `delete` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
-| `get` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{ `connected_account_id`: ``null`` \| `string` ; `connected_webview_id`: `string` ; `created_at`: `string` \| `Date` ; `organization_id`: `string`  }\> |
+| `create` | (`data`: `undefined` \| { `accepted_providers?`: `string`[] ; `custom_redirect_url?`: `string` ; `device_selection_mode?`: ``"none"`` \| ``"single"`` \| ``"multiple"``  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `login_portal_id`: `string` ; `organization_id`: `string` ; `view_url`: `string`  }\> |
+| `delete` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{}\> |
+| `get` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `login_portal_id`: `string` ; `organization_id`: `string` ; `view_url`: `string`  }\> |
 
 #### Defined in
 
@@ -189,10 +189,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `create` | (`data`: `undefined` \| { `name`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
-| `get` | () => (`data`: `undefined` \| {}) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
-| `invite_user` | (`data`: `undefined` \| { `email`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
-| `remove_user` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
-| `update` | (`data`: `undefined` \| { `name?`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `get` | () => (`data`: `undefined` \| { `organization_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
+| `invite_user` | (`data`: `undefined` \| { `email`: `string`  }) => `Promise`<{}\> |
+| `remove_user` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
+| `update` | (`data`: `undefined` \| { `name?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -209,10 +209,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `create` | (`data`: `undefined` \| { `name`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }\> |
-| `delete` | (`data`: `undefined` \| { `user_group_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `delete` | (`data`: `undefined` \| { `user_group_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `user_group_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }\> |
 | `list` | (`data`: `undefined` \| {}) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }[]\> |
-| `update` | (`data`: `undefined` \| { `name?`: `string` ; `user_group_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `update` | (`data`: `undefined` \| { `name?`: `string` ; `user_group_id`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -228,10 +228,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `delete` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `delete` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  }\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `user_group_id?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  }[]\> |
-| `update` | (`data`: `undefined` \| { `first_name?`: `string` ; `last_name?`: `string` ; `title?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `ok`: `boolean`  }\> |
+| `update` | (`data`: `undefined` \| { `first_name?`: `string` ; `last_name?`: `string` ; `title?`: `string` ; `user_id?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -457,7 +457,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `URL` | extends keyof [`Routes`](../interfaces/SeamOSRouteTypes.Routes.md) |
-| `Method` | extends ``"GET"`` \| ``"POST"`` \| ``"DELETE"`` \| ``"PATCH"`` |
+| `Method` | extends ``"GET"`` \| ``"DELETE"`` \| ``"POST"`` \| ``"PATCH"`` |
 
 #### Parameters
 

@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/seam-os/routes.ts:863](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L863)
+[src/seam-os/routes.ts:908](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L908)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:866](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L866)
+[src/seam-os/routes.ts:911](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L911)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:860](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L860)
+[src/seam-os/routes.ts:905](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L905)

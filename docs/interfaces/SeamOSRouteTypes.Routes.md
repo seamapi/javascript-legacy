@@ -38,6 +38,10 @@
 - [/devices/list](SeamOSRouteTypes.Routes.md#/devices/list)
 - [/devices/update](SeamOSRouteTypes.Routes.md#/devices/update)
 - [/health](SeamOSRouteTypes.Routes.md#/health)
+- [/internal/organizations/delete](SeamOSRouteTypes.Routes.md#/internal/organizations/delete)
+- [/internal/organizations/list](SeamOSRouteTypes.Routes.md#/internal/organizations/list)
+- [/internal/user\_sessions/create](SeamOSRouteTypes.Routes.md#/internal/user_sessions/create)
+- [/internal/users/reset-password](SeamOSRouteTypes.Routes.md#/internal/users/reset-password)
 - [/login\_portals/create](SeamOSRouteTypes.Routes.md#/login_portals/create)
 - [/login\_portals/delete](SeamOSRouteTypes.Routes.md#/login_portals/delete)
 - [/login\_portals/get](SeamOSRouteTypes.Routes.md#/login_portals/get)
@@ -70,6 +74,7 @@
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.code?` | `string` |
 | `jsonBody.device_id` | `string` |
@@ -78,14 +83,13 @@
 | `jsonBody.starts_at?` | `string` \| `Date` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.access_code` | { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  } |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_codes/create"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:13](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L13)
+[src/seam-os/routes.ts:70](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L70)
 
 ___
 
@@ -99,16 +103,16 @@ ___
 | :------ | :------ |
 | `commonParams` | `Object` |
 | `commonParams.access_code_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_codes/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:44](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L44)
+[src/seam-os/routes.ts:101](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L101)
 
 ___
 
@@ -122,17 +126,17 @@ ___
 | :------ | :------ |
 | `commonParams` | `Object` |
 | `commonParams.access_code_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.access_code` | { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  } |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_codes/get"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:56](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L56)
+[src/seam-os/routes.ts:112](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L112)
 
 ___
 
@@ -149,17 +153,17 @@ ___
 | `commonParams.device_group_id?` | `string` |
 | `commonParams.device_id?` | `string` |
 | `commonParams.user_id?` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.access_codes` | ({ `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  })[] |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_codes/list"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:83](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L83)
+[src/seam-os/routes.ts:139](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L139)
 
 ___
 
@@ -172,6 +176,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.access_code_id` | `string` |
 | `jsonBody.code?` | `string` |
@@ -180,14 +185,13 @@ ___
 | `jsonBody.name?` | `string` |
 | `jsonBody.starts_at?` | `string` \| `Date` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_codes/update"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:114](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L114)
+[src/seam-os/routes.ts:170](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L170)
 
 ___
 
@@ -200,19 +204,19 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | { `device_id`: `string` ; `ends_at?`: `string` \| `Date` ; `name`: `string` ; `starts_at?`: `string` \| `Date`  } \| { `device_ids`: `string`[] ; `ends_at?`: `string` \| `Date` ; `name`: `string` ; `starts_at?`: `string` \| `Date`  } \| { `device_group_id`: `string` ; `ends_at?`: `string` \| `Date` ; `name`: `string` ; `starts_at?`: `string` \| `Date`  } |
 | `jsonResponse` | `Object` |
 | `jsonResponse.access_pass` | `Object` |
 | `jsonResponse.access_pass.access_methods` | ({ `access_method`: ``"remote_unlock"`` ; `device_id`: `string`  } \| { `access_method`: ``"access_code"`` ; `code`: `string` ; `device_id`: `string`  })[] |
 | `jsonResponse.access_pass.access_pass_id` | `string` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_passes/create"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:131](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L131)
+[src/seam-os/routes.ts:350](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L350)
 
 ___
 
@@ -226,16 +230,16 @@ ___
 | :------ | :------ |
 | `commonParams` | `Object` |
 | `commonParams.access_pass_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_passes/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:173](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L173)
+[src/seam-os/routes.ts:392](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L392)
 
 ___
 
@@ -249,19 +253,19 @@ ___
 | :------ | :------ |
 | `commonParams` | `Object` |
 | `commonParams.access_pass_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.access_pass` | `Object` |
 | `jsonResponse.access_pass.access_methods` | ({ `access_method`: ``"remote_unlock"`` ; `device_id`: `string`  } \| { `access_method`: ``"access_code"`` ; `code`: `string` ; `device_id`: `string`  })[] |
 | `jsonResponse.access_pass.access_pass_id` | `string` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_passes/get"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:185](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L185)
+[src/seam-os/routes.ts:403](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L403)
 
 ___
 
@@ -276,17 +280,17 @@ ___
 | `commonParams` | `Object` |
 | `commonParams.building_id?` | `string` |
 | `commonParams.user_id?` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.access_passes` | { `access_methods`: ({ `access_method`: ``"remote_unlock"`` ; `device_id`: `string`  } \| { `access_method`: ``"access_code"`` ; `code`: `string` ; `device_id`: `string`  })[] ; `access_pass_id`: `string`  }[] |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_passes/list"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:211](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L211)
+[src/seam-os/routes.ts:429](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L429)
 
 ___
 
@@ -299,6 +303,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.device_group_id?` | `string` |
 | `jsonBody.device_id?` | `string`[] |
@@ -307,14 +312,13 @@ ___
 | `jsonBody.name` | `string` |
 | `jsonBody.starts_at?` | `string` \| `Date` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_passes/update"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:238](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L238)
+[src/seam-os/routes.ts:456](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L456)
 
 ___
 
@@ -327,18 +331,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.building_id` | `string` |
 | `jsonBody.device_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/add_device"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:255](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L255)
+[src/seam-os/routes.ts:472](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L472)
 
 ___
 
@@ -351,16 +355,16 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | { `building_id`: `string` ; `user_id`: `string`  } \| { `building_id`: `string` ; `email`: `string`  } |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/add_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:268](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L268)
+[src/seam-os/routes.ts:484](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L484)
 
 ___
 
@@ -373,8 +377,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.location?` | `any` |
+| `jsonBody.location?` | `Object` |
 | `jsonBody.name` | `string` |
 | `jsonBody.owner_id` | `string` |
 | `jsonResponse` | `Object` |
@@ -384,14 +389,13 @@ ___
 | `jsonResponse.building.location?` | `any` |
 | `jsonResponse.building.name` | `string` |
 | `jsonResponse.building.organization_id` | `string` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/create"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:286](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L286)
+[src/seam-os/routes.ts:501](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L501)
 
 ___
 
@@ -404,17 +408,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.building_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.building_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:307](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L307)
+[src/seam-os/routes.ts:526](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L526)
 
 ___
 
@@ -428,6 +432,7 @@ ___
 | :------ | :------ |
 | `commonParams` | `Object` |
 | `commonParams.building_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.building` | `Object` |
@@ -436,14 +441,13 @@ ___
 | `jsonResponse.building.location?` | `any` |
 | `jsonResponse.building.name` | `string` |
 | `jsonResponse.building.organization_id` | `string` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/get"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:319](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L319)
+[src/seam-os/routes.ts:537](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L537)
 
 ___
 
@@ -456,17 +460,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.buildings` | { `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string`  }[] |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/list"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:338](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L338)
+[src/seam-os/routes.ts:556](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L556)
 
 ___
 
@@ -479,18 +483,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.building_id` | `string` |
+| `commonParams.device_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.building_id` | `string` |
-| `jsonBody.device_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/remove_device"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:355](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L355)
+[src/seam-os/routes.ts:573](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L573)
 
 ___
 
@@ -503,18 +507,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.building_id` | `string` |
+| `commonParams.user_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.building_id` | `string` |
-| `jsonBody.user_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/remove_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:368](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L368)
+[src/seam-os/routes.ts:585](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L585)
 
 ___
 
@@ -527,19 +531,19 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.building_id` | `string` |
+| `commonParams.name?` | `string` |
+| `commonParams.owner_id?` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.building_id` | `string` |
-| `jsonBody.name?` | `string` |
-| `jsonBody.owner_id?` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/update"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:381](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L381)
+[src/seam-os/routes.ts:597](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L597)
 
 ___
 
@@ -552,18 +556,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.device_group_id` | `string` |
 | `jsonBody.device_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/device_groups/add_device"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:395](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L395)
+[src/seam-os/routes.ts:186](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L186)
 
 ___
 
@@ -576,6 +580,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.name` | `string` |
 | `jsonResponse` | `Object` |
@@ -584,14 +589,13 @@ ___
 | `jsonResponse.device_group.device_group_id` | `string` |
 | `jsonResponse.device_group.name` | `string` |
 | `jsonResponse.device_group.organization_id` | `string` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/device_groups/create"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:408](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L408)
+[src/seam-os/routes.ts:198](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L198)
 
 ___
 
@@ -604,17 +608,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.device_group_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/device_groups/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:426](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L426)
+[src/seam-os/routes.ts:216](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L216)
 
 ___
 
@@ -627,6 +631,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.device_group_id` | `string` |
 | `jsonResponse` | `Object` |
@@ -635,14 +640,13 @@ ___
 | `jsonResponse.device_group.device_group_id` | `string` |
 | `jsonResponse.device_group.name` | `string` |
 | `jsonResponse.device_group.organization_id` | `string` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/device_groups/get"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:438](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L438)
+[src/seam-os/routes.ts:227](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L227)
 
 ___
 
@@ -655,17 +659,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.device_groups` | { `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `name`: `string` ; `organization_id`: `string`  }[] |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/device_groups/list"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:456](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L456)
+[src/seam-os/routes.ts:245](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L245)
 
 ___
 
@@ -678,18 +682,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.device_group_id` | `string` |
 | `jsonBody.name?` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/device_groups/update"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:472](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L472)
+[src/seam-os/routes.ts:261](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L261)
 
 ___
 
@@ -702,17 +706,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.device_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.device_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/devices/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:485](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L485)
+[src/seam-os/routes.ts:273](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L273)
 
 ___
 
@@ -725,22 +729,28 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
-| `jsonBody` | { `device_id?`: `string`  } \| { `building_id`: `string` ; `device_name`: `string`  } |
+| `commonParams.building_id?` | `string` |
+| `commonParams.device_id?` | `string` |
+| `commonParams.device_name?` | `string` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.device` | `Object` |
-| `jsonResponse.device.connected_account_id` | `string` |
+| `jsonResponse.device.building_id` | ``null`` \| `string` |
 | `jsonResponse.device.created_at` | `string` \| `Date` |
 | `jsonResponse.device.device_id` | `string` |
 | `jsonResponse.device.device_type` | `string` |
+| `jsonResponse.device.errors` | `unknown`[] |
+| `jsonResponse.device.linked_account_id` | `string` |
 | `jsonResponse.device.name` | `string` |
-| `jsonResponse.ok` | `boolean` |
+| `jsonResponse.device.properties` | `Object` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/devices/get"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:497](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L497)
+[src/seam-os/routes.ts:284](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L284)
 
 ___
 
@@ -753,21 +763,21 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.building_id?` | `string` |
+| `commonParams.has_no_building?` | `boolean` |
+| `commonParams.user_group_id?` | `string` |
+| `commonParams.user_id?` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.building_id?` | `string` |
-| `jsonBody.has_no_building?` | `boolean` |
-| `jsonBody.user_group_id?` | `string` |
-| `jsonBody.user_id?` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.devices` | { `connected_account_id`: `string` ; `created_at`: `string` \| `Date` ; `device_id`: `string` ; `device_type`: `string` ; `name`: `string`  }[] |
-| `jsonResponse.ok` | `boolean` |
+| `jsonResponse.devices` | { `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { [x: string]: `unknown`;  }  }[] |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/devices/list"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:521](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L521)
+[src/seam-os/routes.ts:310](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L310)
 
 ___
 
@@ -780,19 +790,19 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.device_id` | `string` |
 | `jsonBody.location?` | `Object` |
 | `jsonBody.name?` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/devices/update"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:543](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L543)
+[src/seam-os/routes.ts:337](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L337)
 
 ___
 
@@ -805,6 +815,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
 | `method` | ``"GET"`` |
@@ -817,6 +828,104 @@ ___
 
 ___
 
+### /internal/organizations/delete
+
+• **/internal/organizations/delete**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonBody.organization_id` | `string` |
+| `jsonResponse` | `Object` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/internal/organizations/delete"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:14](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L14)
+
+___
+
+### /internal/organizations/list
+
+• **/internal/organizations/list**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonResponse` | `Object` |
+| `jsonResponse.organizations` | { `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }[] |
+| `method` | ``"GET"`` \| ``"POST"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/internal/organizations/list"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:25](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L25)
+
+___
+
+### /internal/user\_sessions/create
+
+• **/internal/user\_sessions/create**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonBody.auth0_id_token` | `string` |
+| `jsonResponse` | `Object` |
+| `jsonResponse.session` | `Object` |
+| `jsonResponse.session.created_at` | `string` \| `Date` |
+| `jsonResponse.session.expires_at` | `string` \| `Date` |
+| `jsonResponse.session.organization_id` | `string` |
+| `jsonResponse.session.session_key?` | `string` |
+| `jsonResponse.session.user_session_id` | `string` |
+| `method` | ``"POST"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/internal/user_sessions/create"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:40](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L40)
+
+___
+
+### /internal/users/reset-password
+
+• **/internal/users/reset-password**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonBody.user_id?` | `string` |
+| `jsonResponse` | `Object` |
+| `method` | ``"POST"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/internal/users/reset-password"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:59](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L59)
+
+___
+
 ### /login\_portals/create
 
 • **/login\_portals/create**: `Object`
@@ -826,24 +935,24 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.accepted_providers?` | `string`[] |
 | `jsonBody.custom_redirect_url?` | `string` |
 | `jsonBody.device_selection_mode?` | ``"none"`` \| ``"single"`` \| ``"multiple"`` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.login_portal` | `Object` |
-| `jsonResponse.login_portal.connected_account_id` | ``null`` \| `string` |
-| `jsonResponse.login_portal.connected_webview_id` | `string` |
 | `jsonResponse.login_portal.created_at` | `string` \| `Date` |
+| `jsonResponse.login_portal.login_portal_id` | `string` |
 | `jsonResponse.login_portal.organization_id` | `string` |
-| `jsonResponse.ok` | `boolean` |
+| `jsonResponse.login_portal.view_url` | `string` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/login_portals/create"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:557](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L557)
+[src/seam-os/routes.ts:677](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L677)
 
 ___
 
@@ -856,17 +965,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.login_portal_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.login_portal_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/login_portals/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:577](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L577)
+[src/seam-os/routes.ts:697](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L697)
 
 ___
 
@@ -879,22 +988,22 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.login_portal_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.login_portal_id` | `string` |
 | `jsonResponse` | `Object` |
 | `jsonResponse.login_portal` | `Object` |
-| `jsonResponse.login_portal.connected_account_id` | ``null`` \| `string` |
-| `jsonResponse.login_portal.connected_webview_id` | `string` |
 | `jsonResponse.login_portal.created_at` | `string` \| `Date` |
+| `jsonResponse.login_portal.login_portal_id` | `string` |
 | `jsonResponse.login_portal.organization_id` | `string` |
-| `jsonResponse.ok` | `boolean` |
+| `jsonResponse.login_portal.view_url` | `string` |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/login_portals/get"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:589](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L589)
+[src/seam-os/routes.ts:708](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L708)
 
 ___
 
@@ -907,18 +1016,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.since?` | `string` \| `Date` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.since?` | `string` \| `Date` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.connect_webviews` | { `connected_account_id`: ``null`` \| `string` ; `connected_webview_id`: `string` ; `created_at`: `string` \| `Date` ; `organization_id`: `string`  }[] |
-| `jsonResponse.ok` | `boolean` |
+| `jsonResponse.login_portals` | { `created_at`: `string` \| `Date` ; `login_portal_id`: `string` ; `organization_id`: `string` ; `view_url`: `string`  }[] |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/login_portals/list"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:607](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L607)
+[src/seam-os/routes.ts:726](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L726)
 
 ___
 
@@ -931,10 +1040,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.name` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `jsonResponse.organization` | `Object` |
 | `jsonResponse.organization.created_at` | `string` \| `Date` |
 | `jsonResponse.organization.name` | `string` |
@@ -945,7 +1054,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:625](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L625)
+[src/seam-os/routes.ts:610](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L610)
 
 ___
 
@@ -958,9 +1067,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.organization_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `jsonResponse.organization` | `Object` |
 | `jsonResponse.organization.created_at` | `string` \| `Date` |
 | `jsonResponse.organization.name` | `string` |
@@ -971,7 +1081,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:642](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L642)
+[src/seam-os/routes.ts:627](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L627)
 
 ___
 
@@ -984,17 +1094,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.email` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/organizations/invite_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:657](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L657)
+[src/seam-os/routes.ts:644](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L644)
 
 ___
 
@@ -1007,17 +1117,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.user_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/organizations/remove_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:669](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L669)
+[src/seam-os/routes.ts:655](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L655)
 
 ___
 
@@ -1030,17 +1140,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.name?` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/organizations/update"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:681](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L681)
+[src/seam-os/routes.ts:666](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L666)
 
 ___
 
@@ -1053,18 +1163,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.user_group_id` | `string` |
 | `jsonBody.user_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/user_groups/add_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:693](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L693)
+[src/seam-os/routes.ts:744](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L744)
 
 ___
 
@@ -1077,10 +1187,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.name` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `jsonResponse.user_group` | `Object` |
 | `jsonResponse.user_group.created_at` | `string` \| `Date` |
 | `jsonResponse.user_group.name` | `string` |
@@ -1092,7 +1202,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:706](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L706)
+[src/seam-os/routes.ts:756](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L756)
 
 ___
 
@@ -1105,17 +1215,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.user_group_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.user_group_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/user_groups/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:724](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L724)
+[src/seam-os/routes.ts:774](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L774)
 
 ___
 
@@ -1128,10 +1238,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.user_group_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.user_group_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `jsonResponse.user_group` | `Object` |
 | `jsonResponse.user_group.created_at` | `string` \| `Date` |
 | `jsonResponse.user_group.name` | `string` |
@@ -1143,7 +1253,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:736](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L736)
+[src/seam-os/routes.ts:785](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L785)
 
 ___
 
@@ -1156,9 +1266,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `jsonResponse.user_groups` | { `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }[] |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
@@ -1166,7 +1276,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:754](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L754)
+[src/seam-os/routes.ts:803](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L803)
 
 ___
 
@@ -1179,18 +1289,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.user_group_id` | `string` |
+| `commonParams.user_id` | `string` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.user_group_id` | `string` |
-| `jsonBody.user_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` \| ``"PATCH"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/user_groups/remove_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:770](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L770)
+[src/seam-os/routes.ts:819](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L819)
 
 ___
 
@@ -1203,18 +1313,18 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.name?` | `string` |
 | `jsonBody.user_group_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/user_groups/update"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:783](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L783)
+[src/seam-os/routes.ts:831](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L831)
 
 ___
 
@@ -1227,17 +1337,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.user_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
-| `method` | ``"POST"`` \| ``"DELETE"`` |
+| `method` | ``"DELETE"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/users/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:796](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L796)
+[src/seam-os/routes.ts:843](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L843)
 
 ___
 
@@ -1250,10 +1360,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.user_id` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `jsonResponse.user` | `Object` |
 | `jsonResponse.user.created_at` | `string` \| `Date` |
 | `jsonResponse.user.organization_id` | `string` |
@@ -1264,7 +1374,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:808](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L808)
+[src/seam-os/routes.ts:854](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L854)
 
 ___
 
@@ -1277,11 +1387,11 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.building_id?` | `string` |
 | `jsonBody.user_group_id?` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `jsonResponse.users` | { `created_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  }[] |
 | `method` | ``"GET"`` \| ``"POST"`` |
 | `queryParams` | `Object` |
@@ -1289,7 +1399,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:825](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L825)
+[src/seam-os/routes.ts:871](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L871)
 
 ___
 
@@ -1302,17 +1412,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonBody.first_name?` | `string` |
 | `jsonBody.last_name?` | `string` |
 | `jsonBody.title?` | `string` |
 | `jsonBody.user_id?` | `string` |
 | `jsonResponse` | `Object` |
-| `jsonResponse.ok` | `boolean` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/users/update"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:843](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L843)
+[src/seam-os/routes.ts:889](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L889)
