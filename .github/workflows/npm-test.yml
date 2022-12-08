@@ -34,14 +34,15 @@ jobs:
       SEAM_CONNECT_IMAGE: ghcr.io/seamapi/seam-connect:${{ github.event.inputs.connectSha || 'latest' }}
       RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
-      - if: ${{ github.event.inputs.prNumber }}
-        uses: marocchino/sticky-pull-request-comment@v2
+      - uses: Sibz/github-status-action@v1
+        if: ${{ github.event.inputs.connectSha }}
         with:
-          number: ${{ github.event.inputs.prNumber }}
-          repo: ${{ github.event.inputs.prRepo }}
-          GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
-          message: |
-            ⌛️ [running Javascript SDK tests](${{ env.RUN_URL }})...
+          authToken: ${{ secrets.BOT_GH_TOKEN }}
+          context: Test Javascript SDK
+          state: pending
+          sha: ${{ github.event.inputs.connectSha }}
+          repository: seam-connect
+          target_url: ${{ env.RUN_URL }}
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -66,25 +67,15 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn test -T 2m
+        id: test
         env:
           SEAM_CONNECT_IMAGE: ${{ env.SEAM_CONNECT_IMAGE }}
 
-      - name: Comment on failure
-        if: ${{ github.event.inputs.prNumber && failure() }}
-        uses: marocchino/sticky-pull-request-comment@v2
+      - uses: Sibz/github-status-action@v1
+        if: ${{ github.event.inputs.connectSha }}
         with:
-          number: ${{ github.event.inputs.prNumber }}
-          repo: ${{ github.event.inputs.prRepo }}
-          GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
-          message: |
-            ⛔️ [Javascript SDK tests failed](${{ env.RUN_URL }}).
-
-      - name: Comment on success
-        if: ${{ github.event.inputs.prNumber && success() }}
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          number: ${{ github.event.inputs.prNumber }}
-          repo: ${{ github.event.inputs.prRepo }}
-          GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
-          message: |
-            ✅ [Javascript SDK tests passed](${{ env.RUN_URL }}).
+          authToken: ${{ secrets.BOT_GH_TOKEN }}
+          context: Test Javascript SDK
+          state: ${{ job.status }}
+          sha: ${{ github.event.inputs.connectSha }}
+          repository: seam-connect
