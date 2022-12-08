@@ -16,9 +16,11 @@
 - [code](OngoingAccessCode.md#code)
 - [created\_at](OngoingAccessCode.md#created_at)
 - [device\_id](OngoingAccessCode.md#device_id)
+- [errors](OngoingAccessCode.md#errors)
 - [name](OngoingAccessCode.md#name)
 - [status](OngoingAccessCode.md#status)
 - [type](OngoingAccessCode.md#type)
+- [warnings](OngoingAccessCode.md#warnings)
 
 ## Properties
 
@@ -32,7 +34,7 @@
 
 #### Defined in
 
-[src/types/models.ts:141](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L141)
+[src/types/models.ts:151](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L151)
 
 ___
 
@@ -46,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:144](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L144)
+[src/types/models.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L154)
 
 ___
 
@@ -56,7 +58,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:149](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L149)
+[src/types/models.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L161)
 
 ___
 
@@ -70,7 +72,21 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:142](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L142)
+[src/types/models.ts:152](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L152)
+
+___
+
+### errors
+
+• `Optional` **errors**: [`SeamError`](SeamError.md)[]
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[errors](AccessCodeBase.md#errors)
+
+#### Defined in
+
+[src/types/models.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L155)
 
 ___
 
@@ -84,7 +100,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:143](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L143)
+[src/types/models.ts:153](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L153)
 
 ___
 
@@ -94,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:150](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L150)
+[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
 
 ___
 
@@ -104,4 +120,18 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:148](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L148)
+[src/types/models.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L160)
+
+___
+
+### warnings
+
+• `Optional` **warnings**: [`SeamWarning`](SeamWarning.md)[]
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[warnings](AccessCodeBase.md#warnings)
+
+#### Defined in
+
+[src/types/models.ts:156](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L156)

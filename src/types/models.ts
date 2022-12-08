@@ -66,6 +66,16 @@ export interface LockProperties extends CommonDeviceProperties {
   smartthings_metadata?: unknown
 }
 
+export interface SeamError {
+  error_code: string
+  message: string
+}
+
+export interface SeamWarning {
+  warning_code: string
+  message: string
+}
+
 export type AnyDevice = Device<any, DeviceType>
 export type LockDevice = Device<LockProperties, LockDeviceType>
 
@@ -142,6 +152,8 @@ export interface AccessCodeBase {
   device_id?: string
   name?: string
   code: string
+  errors?: SeamError[]
+  warnings?: SeamWarning[]
 }
 
 export interface OngoingAccessCode extends AccessCodeBase {
