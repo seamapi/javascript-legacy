@@ -38,10 +38,14 @@
 - [/devices/list](SeamOSRouteTypes.Routes.md#/devices/list)
 - [/devices/update](SeamOSRouteTypes.Routes.md#/devices/update)
 - [/health](SeamOSRouteTypes.Routes.md#/health)
+- [/internal/organization\_invitations/accept](SeamOSRouteTypes.Routes.md#/internal/organization_invitations/accept)
+- [/internal/organization\_invitations/reject](SeamOSRouteTypes.Routes.md#/internal/organization_invitations/reject)
 - [/internal/organizations/delete](SeamOSRouteTypes.Routes.md#/internal/organizations/delete)
 - [/internal/organizations/list](SeamOSRouteTypes.Routes.md#/internal/organizations/list)
 - [/internal/user\_sessions/create](SeamOSRouteTypes.Routes.md#/internal/user_sessions/create)
 - [/internal/users/reset-password](SeamOSRouteTypes.Routes.md#/internal/users/reset-password)
+- [/linked\_accounts/get](SeamOSRouteTypes.Routes.md#/linked_accounts/get)
+- [/linked\_accounts/list](SeamOSRouteTypes.Routes.md#/linked_accounts/list)
 - [/login\_portals/create](SeamOSRouteTypes.Routes.md#/login_portals/create)
 - [/login\_portals/delete](SeamOSRouteTypes.Routes.md#/login_portals/delete)
 - [/login\_portals/get](SeamOSRouteTypes.Routes.md#/login_portals/get)
@@ -89,7 +93,7 @@
 
 #### Defined in
 
-[src/seam-os/routes.ts:70](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L70)
+[src/seam-os/routes.ts:14](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L14)
 
 ___
 
@@ -106,13 +110,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_codes/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:101](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L101)
+[src/seam-os/routes.ts:45](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L45)
 
 ___
 
@@ -136,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:112](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L112)
+[src/seam-os/routes.ts:56](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L56)
 
 ___
 
@@ -163,7 +167,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:139](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L139)
+[src/seam-os/routes.ts:83](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L83)
 
 ___
 
@@ -191,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:170](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L170)
+[src/seam-os/routes.ts:114](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L114)
 
 ___
 
@@ -224,7 +228,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:186](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L186)
+[src/seam-os/routes.ts:130](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L130)
 
 ___
 
@@ -241,13 +245,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/access_passes/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:236](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L236)
+[src/seam-os/routes.ts:180](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L180)
 
 ___
 
@@ -281,7 +285,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:247](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L247)
+[src/seam-os/routes.ts:191](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L191)
 
 ___
 
@@ -306,7 +310,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:281](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L281)
+[src/seam-os/routes.ts:225](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L225)
 
 ___
 
@@ -334,7 +338,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:316](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L316)
+[src/seam-os/routes.ts:260](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L260)
 
 ___
 
@@ -358,7 +362,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:332](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L332)
+[src/seam-os/routes.ts:276](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L276)
 
 ___
 
@@ -380,7 +384,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:344](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L344)
+[src/seam-os/routes.ts:288](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L288)
 
 ___
 
@@ -414,7 +418,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:361](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L361)
+[src/seam-os/routes.ts:305](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L305)
 
 ___
 
@@ -431,13 +435,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:389](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L389)
+[src/seam-os/routes.ts:333](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L333)
 
 ___
 
@@ -468,7 +472,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:400](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L400)
+[src/seam-os/routes.ts:344](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L344)
 
 ___
 
@@ -491,7 +495,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:421](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L421)
+[src/seam-os/routes.ts:365](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L365)
 
 ___
 
@@ -509,13 +513,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/remove_device"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:440](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L440)
+[src/seam-os/routes.ts:384](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L384)
 
 ___
 
@@ -533,13 +537,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/buildings/remove_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:452](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L452)
+[src/seam-os/routes.ts:396](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L396)
 
 ___
 
@@ -565,7 +569,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:464](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L464)
+[src/seam-os/routes.ts:408](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L408)
 
 ___
 
@@ -589,7 +593,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:478](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L478)
+[src/seam-os/routes.ts:422](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L422)
 
 ___
 
@@ -617,7 +621,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:490](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L490)
+[src/seam-os/routes.ts:434](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L434)
 
 ___
 
@@ -634,13 +638,13 @@ ___
 | `jsonBody` | `Object` |
 | `jsonBody.device_group_id` | `string` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/device_groups/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:508](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L508)
+[src/seam-os/routes.ts:452](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L452)
 
 ___
 
@@ -668,7 +672,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:519](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L519)
+[src/seam-os/routes.ts:463](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L463)
 
 ___
 
@@ -691,7 +695,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:537](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L537)
+[src/seam-os/routes.ts:481](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L481)
 
 ___
 
@@ -715,7 +719,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:553](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L553)
+[src/seam-os/routes.ts:497](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L497)
 
 ___
 
@@ -732,13 +736,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/devices/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:565](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L565)
+[src/seam-os/routes.ts:509](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L509)
 
 ___
 
@@ -772,7 +776,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:576](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L576)
+[src/seam-os/routes.ts:520](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L520)
 
 ___
 
@@ -787,6 +791,8 @@ ___
 | `commonParams` | `Object` |
 | `commonParams.building_id?` | `string` |
 | `commonParams.has_no_building?` | `boolean` |
+| `commonParams.linked_account_id?` | `string` |
+| `commonParams.query?` | `string` |
 | `commonParams.user_group_id?` | `string` |
 | `commonParams.user_id?` | `string` |
 | `formData` | `Object` |
@@ -799,7 +805,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:602](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L602)
+[src/seam-os/routes.ts:546](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L546)
 
 ___
 
@@ -824,7 +830,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:629](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L629)
+[src/seam-os/routes.ts:575](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L575)
 
 ___
 
@@ -850,6 +856,52 @@ ___
 
 ___
 
+### /internal/organization\_invitations/accept
+
+• **/internal/organization\_invitations/accept**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `commonParams.token` | `string` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonResponse` | `Object` |
+| `method` | ``"POST"`` \| ``"PATCH"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/internal/organization_invitations/accept"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:923](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L923)
+
+___
+
+### /internal/organization\_invitations/reject
+
+• **/internal/organization\_invitations/reject**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `commonParams.token` | `string` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonResponse` | `Object` |
+| `method` | ``"POST"`` \| ``"PATCH"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/internal/organization_invitations/reject"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:934](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L934)
+
+___
+
 ### /internal/organizations/delete
 
 • **/internal/organizations/delete**: `Object`
@@ -863,13 +915,13 @@ ___
 | `jsonBody` | `Object` |
 | `jsonBody.organization_id` | `string` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/internal/organizations/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:14](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L14)
+[src/seam-os/routes.ts:945](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L945)
 
 ___
 
@@ -892,7 +944,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:25](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L25)
+[src/seam-os/routes.ts:956](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L956)
 
 ___
 
@@ -921,7 +973,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:40](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L40)
+[src/seam-os/routes.ts:971](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L971)
 
 ___
 
@@ -944,7 +996,62 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:59](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L59)
+[src/seam-os/routes.ts:990](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L990)
+
+___
+
+### /linked\_accounts/get
+
+• **/linked\_accounts/get**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `commonParams.linked_account_id` | `string` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonResponse` | `Object` |
+| `jsonResponse.linked_account` | `Object` |
+| `jsonResponse.linked_account.created_at` | `string` \| `Date` |
+| `jsonResponse.linked_account.device_provider` | `string` |
+| `jsonResponse.linked_account.ext_seam_connected_account_id` | `string` |
+| `jsonResponse.linked_account.linked_account_id` | `string` |
+| `jsonResponse.linked_account.login_portal_id` | ``null`` \| `string` |
+| `jsonResponse.linked_account.organization_id` | `string` |
+| `jsonResponse.linked_account.user_identifier?` | `any` |
+| `method` | ``"GET"`` \| ``"POST"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/linked_accounts/get"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:588](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L588)
+
+___
+
+### /linked\_accounts/list
+
+• **/linked\_accounts/list**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `commonParams.since?` | `string` \| `Date` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonResponse` | `Object` |
+| `jsonResponse.linked_accounts` | { `created_at`: `string` \| `Date` ; `device_provider`: `string` ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any`  }[] |
+| `method` | ``"GET"`` \| ``"POST"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/linked_accounts/list"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:609](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L609)
 
 ___
 
@@ -974,7 +1081,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:642](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L642)
+[src/seam-os/routes.ts:630](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L630)
 
 ___
 
@@ -991,13 +1098,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/login_portals/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:662](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L662)
+[src/seam-os/routes.ts:650](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L650)
 
 ___
 
@@ -1025,7 +1132,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:673](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L673)
+[src/seam-os/routes.ts:661](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L661)
 
 ___
 
@@ -1049,7 +1156,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:691](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L691)
+[src/seam-os/routes.ts:679](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L679)
 
 ___
 
@@ -1076,7 +1183,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:709](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L709)
+[src/seam-os/routes.ts:697](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L697)
 
 ___
 
@@ -1103,7 +1210,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:726](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L726)
+[src/seam-os/routes.ts:714](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L714)
 
 ___
 
@@ -1116,9 +1223,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.email` | `string` |
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.email` | `string` |
 | `jsonResponse` | `Object` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
@@ -1126,7 +1233,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:743](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L743)
+[src/seam-os/routes.ts:731](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L731)
 
 ___
 
@@ -1139,17 +1246,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.user_id` | `string` |
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.user_id` | `string` |
 | `jsonResponse` | `Object` |
-| `method` | ``"POST"`` \| ``"PATCH"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/organizations/remove_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:754](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L754)
+[src/seam-os/routes.ts:742](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L742)
 
 ___
 
@@ -1162,9 +1269,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | `Object` |
+| `commonParams.name?` | `string` |
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
-| `jsonBody.name?` | `string` |
 | `jsonResponse` | `Object` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
@@ -1172,7 +1279,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:765](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L765)
+[src/seam-os/routes.ts:753](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L753)
 
 ___
 
@@ -1196,7 +1303,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:776](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L776)
+[src/seam-os/routes.ts:764](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L764)
 
 ___
 
@@ -1224,7 +1331,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:788](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L788)
+[src/seam-os/routes.ts:776](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L776)
 
 ___
 
@@ -1241,13 +1348,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/user_groups/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:806](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L806)
+[src/seam-os/routes.ts:794](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L794)
 
 ___
 
@@ -1275,7 +1382,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:817](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L817)
+[src/seam-os/routes.ts:805](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L805)
 
 ___
 
@@ -1298,7 +1405,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:835](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L835)
+[src/seam-os/routes.ts:823](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L823)
 
 ___
 
@@ -1316,13 +1423,13 @@ ___
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` \| ``"PATCH"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/user_groups/remove_user"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:851](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L851)
+[src/seam-os/routes.ts:839](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L839)
 
 ___
 
@@ -1346,7 +1453,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:863](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L863)
+[src/seam-os/routes.ts:851](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L851)
 
 ___
 
@@ -1363,13 +1470,13 @@ ___
 | `jsonBody` | `Object` |
 | `jsonBody.user_id` | `string` |
 | `jsonResponse` | `Object` |
-| `method` | ``"DELETE"`` \| ``"POST"`` |
+| `method` | ``"POST"`` \| ``"DELETE"`` |
 | `queryParams` | `Object` |
 | `route` | ``"/users/delete"`` |
 
 #### Defined in
 
-[src/seam-os/routes.ts:875](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L875)
+[src/seam-os/routes.ts:863](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L863)
 
 ___
 
@@ -1396,7 +1503,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:886](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L886)
+[src/seam-os/routes.ts:874](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L874)
 
 ___
 
@@ -1421,7 +1528,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:903](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L903)
+[src/seam-os/routes.ts:891](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L891)
 
 ___
 
@@ -1447,4 +1554,4 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:921](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L921)
+[src/seam-os/routes.ts:909](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L909)
