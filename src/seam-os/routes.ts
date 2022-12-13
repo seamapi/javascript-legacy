@@ -11,62 +11,6 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/internal/organizations/delete": {
-    route: "/internal/organizations/delete"
-    method: "DELETE" | "POST"
-    queryParams: {}
-    jsonBody: {
-      organization_id: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
-  "/internal/organizations/list": {
-    route: "/internal/organizations/list"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      organizations: {
-        organization_id: string
-        name: string
-        created_at: string | Date
-      }[]
-    }
-  }
-  "/internal/user_sessions/create": {
-    route: "/internal/user_sessions/create"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      auth0_id_token: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      session: {
-        user_session_id: string
-        organization_id: string
-        session_key?: string | undefined
-        expires_at: string | Date
-        created_at: string | Date
-      }
-    }
-  }
-  "/internal/users/reset-password": {
-    route: "/internal/users/reset-password"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      user_id?: string | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
   "/access_codes/create": {
     route: "/access_codes/create"
     method: "POST"
@@ -606,9 +550,11 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       building_id?: string | undefined
+      linked_account_id?: string | undefined
       user_group_id?: string | undefined
       user_id?: string | undefined
       has_no_building?: boolean | undefined
+      query?: string | undefined
     }
     formData: {}
     jsonResponse: {
@@ -638,6 +584,48 @@ export interface Routes {
     commonParams: {}
     formData: {}
     jsonResponse: {}
+  }
+  "/linked_accounts/get": {
+    route: "/linked_accounts/get"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      linked_account_id: string
+    }
+    formData: {}
+    jsonResponse: {
+      linked_account: {
+        linked_account_id: string
+        organization_id: string
+        login_portal_id: string | null
+        device_provider: string
+        user_identifier?: any
+        ext_seam_connected_account_id: string
+        created_at: string | Date
+      }
+    }
+  }
+  "/linked_accounts/list": {
+    route: "/linked_accounts/list"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      since?: (string | Date) | undefined
+    }
+    formData: {}
+    jsonResponse: {
+      linked_accounts: {
+        linked_account_id: string
+        organization_id: string
+        login_portal_id: string | null
+        device_provider: string
+        user_identifier?: any
+        ext_seam_connected_account_id: string
+        created_at: string | Date
+      }[]
+    }
   }
   "/login_portals/create": {
     route: "/login_portals/create"
@@ -744,21 +732,21 @@ export interface Routes {
     route: "/organizations/invite_user"
     method: "POST" | "PATCH"
     queryParams: {}
-    jsonBody: {
+    jsonBody: {}
+    commonParams: {
       email: string
     }
-    commonParams: {}
     formData: {}
     jsonResponse: {}
   }
   "/organizations/remove_user": {
     route: "/organizations/remove_user"
-    method: "POST" | "PATCH"
+    method: "POST" | "DELETE"
     queryParams: {}
-    jsonBody: {
+    jsonBody: {}
+    commonParams: {
       user_id: string
     }
-    commonParams: {}
     formData: {}
     jsonResponse: {}
   }
@@ -766,10 +754,10 @@ export interface Routes {
     route: "/organizations/update"
     method: "POST" | "PATCH"
     queryParams: {}
-    jsonBody: {
+    jsonBody: {}
+    commonParams: {
       name?: string | undefined
     }
-    commonParams: {}
     formData: {}
     jsonResponse: {}
   }
@@ -927,6 +915,84 @@ export interface Routes {
       first_name?: string | undefined
       last_name?: string | undefined
       title?: string | undefined
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/internal/organization_invitations/accept": {
+    route: "/internal/organization_invitations/accept"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      token: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/internal/organization_invitations/reject": {
+    route: "/internal/organization_invitations/reject"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      token: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/internal/organizations/delete": {
+    route: "/internal/organizations/delete"
+    method: "DELETE" | "POST"
+    queryParams: {}
+    jsonBody: {
+      organization_id: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/internal/organizations/list": {
+    route: "/internal/organizations/list"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      organizations: {
+        organization_id: string
+        name: string
+        created_at: string | Date
+      }[]
+    }
+  }
+  "/internal/user_sessions/create": {
+    route: "/internal/user_sessions/create"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      auth0_id_token: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      session: {
+        user_session_id: string
+        organization_id: string
+        session_key?: string | undefined
+        expires_at: string | Date
+        created_at: string | Date
+      }
+    }
+  }
+  "/internal/users/reset-password": {
+    route: "/internal/users/reset-password"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      user_id?: string | undefined
     }
     commonParams: {}
     formData: {}
