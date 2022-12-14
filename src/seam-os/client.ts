@@ -205,6 +205,11 @@ export class SeamOS {
     update: this._curriedPost("/devices/update"),
   }
 
+  public readonly linked_accounts = {
+    get: this._getGrab("/linked_accounts/get", "linked_account"),
+    list: this._getGrab("/linked_accounts/list", "linked_accounts"),
+  }
+
   public readonly login_portals = {
     create: this._postGrab("/login_portals/create", "login_portal"),
     get: this._getGrab("/login_portals/get", "login_portal"),
