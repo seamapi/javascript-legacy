@@ -16,6 +16,7 @@
 - [buildings](SeamOS.md#buildings)
 - [device\_groups](SeamOS.md#device_groups)
 - [devices](SeamOS.md#devices)
+- [linked\_accounts](SeamOS.md#linked_accounts)
 - [login\_portals](SeamOS.md#login_portals)
 - [organizations](SeamOS.md#organizations)
 - [user\_groups](SeamOS.md#user_groups)
@@ -162,6 +163,23 @@ ___
 
 ___
 
+### linked\_accounts
+
+• `Readonly` **linked\_accounts**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `get` | (`data`: `undefined` \| { `linked_account_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_provider`: `string` ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any`  }\> |
+| `list` | (`data`: `undefined` \| { `since?`: `string` \| `Date`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_provider`: `string` ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any`  }[]\> |
+
+#### Defined in
+
+[src/seam-os/client.ts:208](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L208)
+
+___
+
 ### login\_portals
 
 • `Readonly` **login\_portals**: `Object`
@@ -176,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:208](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L208)
+[src/seam-os/client.ts:213](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L213)
 
 ___
 
@@ -208,15 +226,17 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `add_user` | (`data`: `undefined` \| { `user_group_id`: `string` ; `user_id`: `string`  }) => `Promise`<{}\> |
 | `create` | (`data`: `undefined` \| { `name`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }\> |
 | `delete` | (`data`: `undefined` \| { `user_group_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `user_group_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }\> |
 | `list` | (`data`: `undefined` \| {}) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }[]\> |
+| `remove_user` | (`data`: `undefined` \| { `user_group_id`: `string` ; `user_id`: `string`  }) => `Promise`<{}\> |
 | `update` | (`data`: `undefined` \| { `name?`: `string` ; `user_group_id`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
-[src/seam-os/client.ts:214](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L214)
+[src/seam-os/client.ts:219](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L219)
 
 ___
 
@@ -235,7 +255,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:222](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L222)
+[src/seam-os/client.ts:229](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L229)
 
 ## Methods
 
