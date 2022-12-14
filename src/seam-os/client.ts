@@ -222,6 +222,8 @@ export class SeamOS {
     list: this._getGrab("/user_groups/list", "user_groups"),
     update: this._curriedPost("/user_groups/update"),
     delete: this._curriedPost("/user_groups/delete"),
+    add_user: this._curriedPost("/user_groups/add_user"),
+    remove_user: this._curriedPost("/user_groups/remove_user"),
   }
 
   public readonly users = {
