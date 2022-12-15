@@ -21,6 +21,7 @@
 - [errors](Device.md#errors)
 - [location](Device.md#location)
 - [properties](Device.md#properties)
+- [warnings](Device.md#warnings)
 - [workspace\_id](Device.md#workspace_id)
 
 ## Properties
@@ -31,7 +32,7 @@
 
 #### Defined in
 
-[src/types/models.ts:42](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L42)
+[src/types/models.ts:52](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L52)
 
 ___
 
@@ -41,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:41](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L41)
+[src/types/models.ts:51](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L51)
 
 ___
 
@@ -51,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:44](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L44)
+[src/types/models.ts:55](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L55)
 
 ___
 
@@ -61,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:36](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L36)
+[src/types/models.ts:46](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L46)
 
 ___
 
@@ -71,17 +72,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:40](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L40)
+[src/types/models.ts:50](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L50)
 
 ___
 
 ### errors
 
-• **errors**: `unknown`[]
+• **errors**: [`SeamError`](SeamError.md)[]
 
 #### Defined in
 
-[src/types/models.ts:43](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L43)
+[src/types/models.ts:53](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L53)
 
 ___
 
@@ -91,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:49](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L49)
 
 ___
 
@@ -101,7 +102,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:38](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L38)
+[src/types/models.ts:48](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L48)
+
+___
+
+### warnings
+
+• **warnings**: [`SeamWarning`](SeamWarning.md)[]
+
+#### Defined in
+
+[src/types/models.ts:54](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L54)
 
 ___
 
@@ -111,4 +122,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:37](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L37)
+[src/types/models.ts:47](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L47)

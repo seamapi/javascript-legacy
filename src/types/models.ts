@@ -25,6 +25,16 @@ export enum Provider {
   SMARTTHINGS = "smartthings",
 }
 
+export interface SeamError {
+  error_code: string
+  message: string
+}
+
+export interface SeamWarning {
+  warning_code: string
+  message: string
+}
+
 export type CommonDeviceProperties = {
   name: string
   online: boolean
@@ -40,7 +50,8 @@ export interface Device<
   device_type: Type
   connected_account_id: string
   capabilities_supported: unknown[]
-  errors: unknown[]
+  errors: SeamError[]
+  warnings: SeamWarning[]
   created_at: string
 }
 
@@ -64,16 +75,6 @@ export interface LockProperties extends CommonDeviceProperties {
   }
 
   smartthings_metadata?: unknown
-}
-
-export interface SeamError {
-  error_code: string
-  message: string
-}
-
-export interface SeamWarning {
-  warning_code: string
-  message: string
 }
 
 export type AnyDevice = Device<any, DeviceType>
