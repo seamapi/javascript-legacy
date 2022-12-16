@@ -11,6 +11,7 @@
 - [created\_at](ConnectedAccount.md#created_at)
 - [errors](ConnectedAccount.md#errors)
 - [user\_identifier](ConnectedAccount.md#user_identifier)
+- [warnings](ConnectedAccount.md#warnings)
 
 ## Properties
 
@@ -20,7 +21,7 @@
 
 #### Defined in
 
-[src/types/models.ts:184](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L184)
+[src/types/models.ts:186](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L186)
 
 ___
 
@@ -30,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:181](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L181)
+[src/types/models.ts:183](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L183)
 
 ___
 
@@ -40,17 +41,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:182](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L182)
+[src/types/models.ts:184](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L184)
 
 ___
 
 ### errors
 
-• **errors**: `string`[]
+• **errors**: [`SeamError`](SeamError.md)[]
 
 #### Defined in
 
-[src/types/models.ts:185](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L185)
+[src/types/models.ts:187](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L187)
 
 ___
 
@@ -60,4 +61,14 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:183](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L183)
+[src/types/models.ts:185](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L185)
+
+___
+
+### warnings
+
+• **warnings**: [`SeamWarning`](SeamWarning.md)[]
+
+#### Defined in
+
+[src/types/models.ts:188](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L188)

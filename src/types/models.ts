@@ -65,6 +65,7 @@ export interface LockProperties extends CommonDeviceProperties {
   schlage_metadata?: {
     device_id: string
     device_name: string
+    access_code_length: number
   }
 
   august_metadata?: {
@@ -153,6 +154,7 @@ export interface AccessCodeBase {
   device_id?: string
   name?: string
   code: string
+  common_code_key?: string | null
   errors?: SeamError[]
   warnings?: SeamWarning[]
 }
@@ -182,7 +184,8 @@ export interface ConnectedAccount {
   created_at: string
   user_identifier: UserIdentifier
   account_type: Provider
-  errors: string[]
+  errors: SeamError[]
+  warnings: SeamWarning[]
 }
 
 export interface Webhook {

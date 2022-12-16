@@ -16,6 +16,7 @@
 
 - [access\_code\_id](AccessCodeBase.md#access_code_id)
 - [code](AccessCodeBase.md#code)
+- [common\_code\_key](AccessCodeBase.md#common_code_key)
 - [device\_id](AccessCodeBase.md#device_id)
 - [errors](AccessCodeBase.md#errors)
 - [name](AccessCodeBase.md#name)
@@ -29,7 +30,7 @@
 
 #### Defined in
 
-[src/types/models.ts:152](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L152)
+[src/types/models.ts:153](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L153)
 
 ___
 
@@ -39,7 +40,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L155)
+[src/types/models.ts:156](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L156)
+
+___
+
+### common\_code\_key
+
+• `Optional` **common\_code\_key**: ``null`` \| `string`
+
+#### Defined in
+
+[src/types/models.ts:157](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L157)
 
 ___
 
@@ -49,7 +60,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:153](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L153)
+[src/types/models.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L154)
 
 ___
 
@@ -59,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:156](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L156)
+[src/types/models.ts:158](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L158)
 
 ___
 
@@ -69,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L154)
+[src/types/models.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L155)
 
 ___
 
@@ -79,4 +90,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:157](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L157)
+[src/types/models.ts:159](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L159)
