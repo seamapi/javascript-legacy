@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[src/types/models.ts:70](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L70)
+[src/types/models.ts:71](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L71)
 
 ___
 
@@ -130,6 +130,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `access_code_length` | `number` |
 | `device_id` | `string` |
 | `device_name` | `string` |
 
@@ -145,4 +146,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:77](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L77)
+[src/types/models.ts:78](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L78)
