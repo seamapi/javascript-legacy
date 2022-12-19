@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/types/globals.ts:4](https://github.com/seamapi/javascript/blob/main/src/types/globals.ts#L4)
+[src/types/globals.ts:4](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/globals.ts#L4)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/types/globals.ts:3](https://github.com/seamapi/javascript/blob/main/src/types/globals.ts#L3)
+[src/types/globals.ts:3](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/globals.ts#L3)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[src/types/globals.ts:2](https://github.com/seamapi/javascript/blob/main/src/types/globals.ts#L2)
+[src/types/globals.ts:2](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/globals.ts#L2)

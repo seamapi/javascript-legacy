@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[src/types/models.ts:58](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L58)
+[src/types/models.ts:58](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L58)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:50](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L50)
+[src/types/models.ts:50](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L50)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:49](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L49)
+[src/types/models.ts:49](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L49)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:48](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L48)
+[src/types/models.ts:48](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L48)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:51](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L51)
+[src/types/models.ts:51](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L51)
 
 ___
 
@@ -93,7 +93,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:29](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L29)
+[src/types/models.ts:29](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L29)
 
 ___
 
@@ -107,7 +107,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:30](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L30)
+[src/types/models.ts:30](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L30)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:53](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L53)
+[src/types/models.ts:53](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L53)
 
 ___
 
@@ -134,4 +134,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L65)
+[src/types/models.ts:65](https://github.com/seamapi/seamapi-javascript/blob/main/src/types/models.ts#L65)
