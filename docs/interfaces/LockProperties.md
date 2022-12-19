@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[src/types/models.ts:71](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L71)
+[src/types/models.ts:71](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L71)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:61](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L61)
+[src/types/models.ts:61](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L61)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:60](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L60)
+[src/types/models.ts:60](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L60)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:62](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L62)
+[src/types/models.ts:62](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L62)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:59](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L59)
+[src/types/models.ts:59](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L59)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:63](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L63)
+[src/types/models.ts:63](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L63)
 
 ___
 
@@ -104,7 +104,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:39](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L39)
 
 ___
 
@@ -118,7 +118,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:40](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L40)
+[src/types/models.ts:40](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L40)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L65)
+[src/types/models.ts:65](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L65)
 
 ___
 
@@ -146,4 +146,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:78](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L78)
+[src/types/models.ts:78](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L78)

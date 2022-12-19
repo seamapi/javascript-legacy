@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/types/models.ts:18](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L18)
+[src/types/models.ts:18](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L18)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:19](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L19)
+[src/types/models.ts:19](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L19)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:20](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L20)
+[src/types/models.ts:20](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L20)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:24](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L24)
+[src/types/models.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L24)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:21](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L21)
+[src/types/models.ts:21](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L21)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:22](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L22)
+[src/types/models.ts:22](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L22)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:25](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L25)
+[src/types/models.ts:25](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L25)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:23](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L23)
+[src/types/models.ts:23](https://github.com/hello-seam/seamapi-javascript/blob/main/src/types/models.ts#L23)

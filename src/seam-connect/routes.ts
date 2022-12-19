@@ -238,19 +238,15 @@ export abstract class Routes {
         url: "/access_codes/get",
         params,
       }),
-    create: (async (params: AccessCodeCreateRequest) => {
-      const action =
-        await this.createActionAttemptAndWait<"CREATE_ACCESS_CODE">({
-          url: "/access_codes/create",
-          method: "POST",
-          data: params,
-        })
-
-      return action.access_code
-    }) as {
-      (params: AccessCodeCreateOngoingRequest): Promise<OngoingAccessCode>
-      (params: AccessCodeCreateScheduledRequest): Promise<TimeBoundAccessCode>
-    },
+    create: async (params: AccessCodeCreateRequest) =>
+      (await this.makeRequest({
+        url: "/access_codes/create",
+        method: "POST",
+        data: params,
+      })) as {
+        (params: AccessCodeCreateOngoingRequest): Promise<OngoingAccessCode>
+        (params: AccessCodeCreateScheduledRequest): Promise<TimeBoundAccessCode>
+      },
 
     // We can't narrow the return type here like we do with create because we're given partial input
     update: async (

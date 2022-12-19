@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[src/seam-os/client.ts:52](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L52)
+[src/seam-os/client.ts:52](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L52)
 
 ## Properties
 
@@ -67,7 +67,7 @@
 
 #### Defined in
 
-[src/seam-os/client.ts:164](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L164)
+[src/seam-os/client.ts:164](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L164)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:172](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L172)
+[src/seam-os/client.ts:172](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L172)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:50](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L50)
+[src/seam-os/client.ts:50](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L50)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:180](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L180)
+[src/seam-os/client.ts:180](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L180)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:190](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L190)
+[src/seam-os/client.ts:190](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L190)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:201](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L201)
+[src/seam-os/client.ts:201](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L201)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:208](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L208)
+[src/seam-os/client.ts:208](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L208)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:213](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L213)
+[src/seam-os/client.ts:213](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L213)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:154](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L154)
+[src/seam-os/client.ts:154](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L154)
 
 ___
 
@@ -236,7 +236,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:219](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L219)
+[src/seam-os/client.ts:219](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L219)
 
 ___
 
@@ -255,7 +255,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:229](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L229)
+[src/seam-os/client.ts:229](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L229)
 
 ## Methods
 
@@ -293,7 +293,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:146](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L146)
+[src/seam-os/client.ts:146](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L146)
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:108](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L108)
+[src/seam-os/client.ts:108](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L108)
 
 ___
 
@@ -371,7 +371,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:131](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L131)
+[src/seam-os/client.ts:131](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L131)
 
 ___
 
@@ -411,7 +411,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:116](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L116)
+[src/seam-os/client.ts:116](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L116)
 
 ___
 
@@ -438,7 +438,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:93](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L93)
+[src/seam-os/client.ts:93](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L93)
 
 ___
 
@@ -464,7 +464,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:162](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L162)
+[src/seam-os/client.ts:162](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L162)
 
 ___
 
@@ -491,7 +491,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:83](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L83)
+[src/seam-os/client.ts:83](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L83)
 
 ___
 
@@ -519,4 +519,4 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:100](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L100)
+[src/seam-os/client.ts:100](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L100)

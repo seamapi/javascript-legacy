@@ -34,7 +34,7 @@ Create a new instance of SeamWebhook.
 
 #### Defined in
 
-[src/webhooks.ts:14](https://github.com/seamapi/javascript/blob/main/src/webhooks.ts#L14)
+[src/webhooks.ts:14](https://github.com/hello-seam/seamapi-javascript/blob/main/src/webhooks.ts#L14)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Create a new instance of SeamWebhook.
 
 #### Defined in
 
-[src/webhooks.ts:8](https://github.com/seamapi/javascript/blob/main/src/webhooks.ts#L8)
+[src/webhooks.ts:8](https://github.com/hello-seam/seamapi-javascript/blob/main/src/webhooks.ts#L8)
 
 ## Methods
 
@@ -69,4 +69,4 @@ event
 
 #### Defined in
 
-[src/webhooks.ts:24](https://github.com/seamapi/javascript/blob/main/src/webhooks.ts#L24)
+[src/webhooks.ts:24](https://github.com/hello-seam/seamapi-javascript/blob/main/src/webhooks.ts#L24)

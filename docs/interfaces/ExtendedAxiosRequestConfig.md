@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:46](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L46)
+[src/seam-os/client.ts:46](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L46)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:44](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L44)
+[src/seam-os/client.ts:44](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L44)
 
 ___
 
@@ -271,7 +271,7 @@ Omit.params
 
 #### Defined in
 
-[src/seam-os/client.ts:45](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L45)
+[src/seam-os/client.ts:45](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L45)
 
 ___
 
@@ -421,7 +421,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:43](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L43)
+[src/seam-os/client.ts:43](https://github.com/hello-seam/seamapi-javascript/blob/main/src/seam-os/client.ts#L43)
 
 ___
 
