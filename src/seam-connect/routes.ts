@@ -98,13 +98,18 @@ export abstract class Routes {
 
   private async createActionAttemptAndWait<T extends ActionType>(
     request: AxiosRequestConfig
-  ): Promise<ActionAttemptResultTypeMap[T]> {
+  ): Promise<
+    ActionAttemptResultTypeMap[T] & { actionAttempt: ActionAttempt<T> }
+  > {
     const pendingActionAttempt = await this.makeRequestAndFormat<
       ActionAttemptCreateResponse<T>
     >("action_attempt", request)
     const actionAttempt = await this.awaitActionAttempt<T>(pendingActionAttempt)
 
-    return actionAttempt.result
+    return {
+      ...(actionAttempt.result as any),
+      actionAttempt,
+    }
   }
 
   public readonly workspaces = {
