@@ -98,7 +98,9 @@ export abstract class Routes {
 
   private async createActionAttemptAndWait<T extends ActionType>(
     request: AxiosRequestConfig
-  ): Promise<ActionAttemptResultTypeMap[T] & { action_attempt_id: string }> {
+  ): Promise<
+    ActionAttemptResultTypeMap[T] & { actionAttempt: ActionAttempt<T> }
+  > {
     const pendingActionAttempt = await this.makeRequestAndFormat<
       ActionAttemptCreateResponse<T>
     >("action_attempt", request)
@@ -106,7 +108,7 @@ export abstract class Routes {
 
     return {
       ...(actionAttempt.result as any),
-      action_attempt_id: actionAttempt.action_attempt_id,
+      actionAttempt,
     }
   }
 
