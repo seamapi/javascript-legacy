@@ -2,6 +2,12 @@
 
 # Interface: AccessCodeGetResponse
 
+## Hierarchy
+
+- **`AccessCodeGetResponse`**
+
+  ↳ [`AccessCodeCreateResponse`](AccessCodeCreateResponse.md)
+
 ## Table of contents
 
 ### Properties
