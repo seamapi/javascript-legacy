@@ -63,6 +63,9 @@ export interface AccessCodesListResponse {
 export interface AccessCodeGetResponse {
   access_code: AccessCode
 }
+export interface AccessCodeCreateResponse
+  extends AccessCodeGetResponse,
+    ActionAttemptGetResponse {}
 
 // Connected Accounts
 export interface ConnectedAccountsListResponse {

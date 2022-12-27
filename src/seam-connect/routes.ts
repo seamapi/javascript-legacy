@@ -49,6 +49,7 @@ import {
   WebhookListResponse,
   WebhookGetResponse,
   EventsListResponse,
+  AccessCodeCreateResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -243,16 +244,12 @@ export abstract class Routes {
         url: "/access_codes/get",
         params,
       }),
-    create: (async (params: AccessCodeCreateRequest) => {
-      const action =
-        await this.createActionAttemptAndWait<"CREATE_ACCESS_CODE">({
-          url: "/access_codes/create",
-          method: "POST",
-          data: params,
-        })
-
-      return action.access_code
-    }) as {
+    create: (async (params: AccessCodeCreateRequest) =>
+      this.makeRequestAndFormat<AccessCodeCreateResponse>("access_code", {
+        url: "/access_codes/create",
+        method: "POST",
+        data: params,
+      })) as {
       (params: AccessCodeCreateOngoingRequest): Promise<OngoingAccessCode>
       (params: AccessCodeCreateScheduledRequest): Promise<TimeBoundAccessCode>
     },

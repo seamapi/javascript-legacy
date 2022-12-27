@@ -31,6 +31,7 @@
 - [AccessCodeBase](interfaces/AccessCodeBase.md)
 - [AccessCodeCreateBaseRequest](interfaces/AccessCodeCreateBaseRequest.md)
 - [AccessCodeCreateOngoingRequest](interfaces/AccessCodeCreateOngoingRequest.md)
+- [AccessCodeCreateResponse](interfaces/AccessCodeCreateResponse.md)
 - [AccessCodeCreateScheduledRequest](interfaces/AccessCodeCreateScheduledRequest.md)
 - [AccessCodeGetResponse](interfaces/AccessCodeGetResponse.md)
 - [AccessCodeUpdateBaseRequest](interfaces/AccessCodeUpdateBaseRequest.md)
