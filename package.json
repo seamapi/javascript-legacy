@@ -51,7 +51,7 @@
     "yargs": "17.3.1"
   },
   "devDependencies": {
-    "@ava/get-port": "1.0.0",
+    "@ava/get-port": "^2.0.0",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "9.0.0",
@@ -64,8 +64,8 @@
     "@types/uuid": "8.3.4",
     "@types/yargs": "17.0.8",
     "ajv": "8.9.0",
-    "ava": "4.0.1",
-    "ava-typescript-worker": "1.0.1",
+    "ava": "^5.1.0",
+    "ava-typescript-worker": "^1.1.0",
     "delay": "5.0.0",
     "esbuild": "0.14.39",
     "esbuild-plugin-cache": "0.2.9",
