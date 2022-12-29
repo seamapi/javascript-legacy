@@ -18,10 +18,10 @@ const getTestDatabase = async () => {
 
     container = await new GenericContainer("postgres:13")
       .withExposedPorts(5432)
-      .withEnv("POSTGRES_HOST_AUTH_METHOD", "trust")
-      .withNetworkMode(network.getName())
+      .withEnvironment({ POSTGRES_HOST_AUTH_METHOD: "trust" })
+      .withNetwork(network)
       .withNetworkAliases("database")
-      .withCmd(["-c", "max_connections=1000"])
+      .withCommand(["-c", "max_connections=1000"])
       .start()
   }
 
@@ -42,7 +42,7 @@ const getTestDatabase = async () => {
       5432
     )}/${databaseName}`,
     databaseName,
-    networkName: network.getName(),
+    network: network,
   }
 }
 
