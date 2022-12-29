@@ -66,6 +66,7 @@ export interface LockProperties extends CommonDeviceProperties {
     device_id: string
     device_name: string
     access_code_length: number
+    model: string
   }
 
   august_metadata?: {

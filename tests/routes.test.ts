@@ -8,8 +8,8 @@ test(testAPIMethod("workspaces.get"), {}, "Workspace")
 test(testAPIMethod("workspaces.resetSandbox"), { modifiesState: true }, "{}")
 
 // Locks
-test.failing(testAPIMethod("locks.list"), {}, "LockDevice[]")
-test.failing(
+test(testAPIMethod("locks.list"), {}, "LockDevice[]")
+test(
   "with connected account ID",
   testAPIMethod("locks.list"),
   {
@@ -17,7 +17,7 @@ test.failing(
   },
   "LockDevice[]"
 )
-test.failing(
+test(
   testAPIMethod("locks.get"),
   { args: (seed) => [seed.devices.schlageLock.id1] },
   "LockDevice"
