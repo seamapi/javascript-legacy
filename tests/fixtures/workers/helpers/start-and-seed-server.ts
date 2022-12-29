@@ -17,7 +17,7 @@ const startAndSeedServer = async () => {
       SVIX_JWT_SECRET: "somejwtsecret",
       SVIX_QUEUE_TYPE: "memory",
     },
-    networkName: database.networkName,
+    network: database.network,
   })
 
   // SERVER_BASE_URL needs to satisfy these two conditions:
@@ -32,24 +32,26 @@ const startAndSeedServer = async () => {
   // regardless of what context we're in.
   const hostPort = await getPort()
   const serverUrl = `http://localhost:${hostPort}`
-
-  const server = await new GenericContainer(
+  const seamConnectImage =
     process.env.SEAM_CONNECT_IMAGE ?? "ghcr.io/seamapi/seam-connect:latest"
-  )
+
+  const server = await new GenericContainer(seamConnectImage)
     .withExposedPorts({
       container: hostPort,
       host: hostPort,
     })
-    .withEnv("DATABASE_URL", database.internalDatabaseUrl)
-    .withEnv("POSTGRES_DATABASE", database.databaseName)
-    .withEnv("NODE_ENV", "test")
-    .withEnv("SERVER_BASE_URL", serverUrl)
-    .withEnv("PORT", hostPort.toString())
-    .withEnv("SEAMTEAM_ADMIN_PASSWORD", SEAM_ADMIN_PASSWORD)
-    .withEnv("SVIX_ENDPOINT", svix.endpoint)
-    .withEnv("SVIX_API_KEY", svix.apiKey)
-    .withCmd(["start:for-integration-testing"])
-    .withNetworkMode(database.networkName)
+    .withEnvironment({
+      DATABASE_URL: database.internalDatabaseUrl,
+      POSTGRES_DATABASE: database.databaseName,
+      NODE_ENV: "test",
+      SERVER_BASE_URL: serverUrl,
+      PORT: hostPort.toString(),
+      SEAMTEAM_ADMIN_PASSWORD: SEAM_ADMIN_PASSWORD,
+      SVIX_ENDPOINT: svix.endpoint,
+      SVIX_API_KEY: svix.apiKey,
+    })
+    .withCommand(["start:for-integration-testing"])
+    .withNetwork(database.network)
     .withNetworkAliases("api")
     .withWaitStrategy(Wait.forLogMessage("ready - started server"))
     .start()
