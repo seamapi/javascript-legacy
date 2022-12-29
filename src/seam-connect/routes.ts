@@ -74,6 +74,7 @@ export abstract class Routes {
             throw new Error("Action attempt is still pending")
           }
         },
+        // @ts-expect-error UPSTREAM: https://github.com/DefinitelyTyped/DefinitelyTyped/commit/6f77b38130593a06e1988f1d3df162823ae186af#commitcomment-72928468
         { maxTimeout: 60 * 1000 }
       )
     }
