@@ -72,7 +72,7 @@ jobs:
           SEAM_CONNECT_IMAGE: ${{ env.SEAM_CONNECT_IMAGE }}
 
       - uses: Sibz/github-status-action@v1
-        if: ${{ github.event.inputs.connectSha }}
+        if: ${{ github.event.inputs.connectSha && always() }}
         with:
           authToken: ${{ secrets.BOT_GH_TOKEN }}
           context: Test Javascript SDK
