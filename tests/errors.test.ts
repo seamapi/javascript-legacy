@@ -1,10 +1,6 @@
 import test from "ava"
 import { v4 as uuidv4, validate as validateUUID } from "uuid"
-import Seam, {
-  SeamActionAttemptError,
-  SeamAPIError,
-  SeamMalformedInputError,
-} from "../src"
+import Seam, { SeamAPIError, SeamMalformedInputError } from "../src"
 import { getServer } from "./fixtures/plugins/get-server-plugin"
 
 test("should throw instances of SeamAPIError", async (t) => {
@@ -50,7 +46,7 @@ test("should throw on malformed input with details", async (t) => {
   }
 })
 
-test.failing("waiting on an errored action attempt should throw", async (t) => {
+test("waiting on an errored action attempt should throw", async (t) => {
   const { client, seed } = await getServer(true)
 
   const ACCESS_CODE_TO_DUPLICATE = "111111"
@@ -66,7 +62,7 @@ test.failing("waiting on an errored action attempt should throw", async (t) => {
         code: ACCESS_CODE_TO_DUPLICATE,
       }),
     {
-      instanceOf: SeamActionAttemptError,
+      instanceOf: SeamAPIError,
     }
   )
 })
