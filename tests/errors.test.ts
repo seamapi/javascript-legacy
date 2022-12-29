@@ -71,10 +71,14 @@ test("waiting on an errored action attempt should throw", async (t) => {
   )
 })
 
-test("constructor throws if no API key is present", (t) => {
+test("constructor throws if empty API key passed", (t) => {
+  t.throws(() => new Seam(""))
+  t.notThrows(() => new Seam("some-api-key"))
+})
+
+test("constructor throws if no API key is present in env", (t) => {
+  process.env.SEAM_API_KEY = ""
   t.throws(() => new Seam())
-
   process.env.SEAM_API_KEY = "some-api-key"
-
   t.notThrows(() => new Seam())
 })
