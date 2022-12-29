@@ -37,6 +37,7 @@
 | `house_name` | `string` |
 | `lock_id` | `string` |
 | `lock_name` | `string` |
+| `model?` | `string` |
 
 #### Defined in
 
@@ -133,7 +134,7 @@ ___
 | `access_code_length` | `number` |
 | `device_id` | `string` |
 | `device_name` | `string` |
-| `model` | `string` |
+| `model?` | `string` |
 
 #### Defined in
 
@@ -147,4 +148,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:79](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L79)
+[src/types/models.ts:80](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L80)
