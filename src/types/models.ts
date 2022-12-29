@@ -66,6 +66,7 @@ export interface LockProperties extends CommonDeviceProperties {
     device_id: string
     device_name: string
     access_code_length: number
+    model?: string
   }
 
   august_metadata?: {
@@ -73,6 +74,7 @@ export interface LockProperties extends CommonDeviceProperties {
     lock_name: string
     house_name: string
     has_keypad: boolean
+    model?: string
   }
 
   smartthings_metadata?: unknown
