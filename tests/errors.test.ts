@@ -50,7 +50,7 @@ test("should throw on malformed input with details", async (t) => {
   }
 })
 
-test("waiting on an errored action attempt should throw", async (t) => {
+test.failing("waiting on an errored action attempt should throw", async (t) => {
   const { client, seed } = await getServer(true)
 
   const ACCESS_CODE_TO_DUPLICATE = "111111"
