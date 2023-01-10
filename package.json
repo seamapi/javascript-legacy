@@ -80,6 +80,7 @@
     "nanoid": "3.2.0",
     "nock": "13.2.7",
     "p-event": "4.2.0",
+    "patch-package": "6.5.1",
     "pgknexlove": "1.1.21",
     "pkg": "5.5.2",
     "playwright": "1.19.2",
@@ -106,6 +107,7 @@
   "scripts": {
     "prepare": "husky install",
     "prepack": "npm run build && npm run pack:cli",
+    "postinstall": "patch-package",
     "build:package": "tsup",
     "build:docs": "typedoc",
     "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
