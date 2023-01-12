@@ -61,6 +61,7 @@ export interface LockProperties extends CommonDeviceProperties {
   battery_level?: number
   has_direct_power?: boolean
   manufacturer?: string
+  supported_code_lengths?: number[]
 
   schlage_metadata?: {
     device_id: string
