@@ -153,6 +153,7 @@ export class SeamOS {
 
   public readonly organizations = {
     get: () => this._getGrab("/organizations/get", "organization"),
+    list: () => this._getGrab("/organizations/list", "organizations"),
     create: this._postGrab("/organizations/create", "organization"),
     invite_user: this._curriedPost("/organizations/invite_user"),
     remove_user: this._curriedPost("/organizations/remove_user"),
@@ -193,8 +194,8 @@ export class SeamOS {
     list: this._getGrab("/device_groups/list", "device_groups"),
     delete: this._curriedPost("/device_groups/delete"),
     update: this._curriedPost("/device_groups/update"),
-    // add_device: this._curriedPost("/device_groups/add_device"),
     // woops need to add
+    // add_device: this._curriedPost("/device_groups/add_device"),
     // remove_device: this._curriedPost("/device_groups/remove_device"),
   }
 
