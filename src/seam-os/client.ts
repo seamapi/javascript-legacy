@@ -173,6 +173,7 @@ export class SeamOS {
   public readonly access_passes = {
     create: this._postGrab("/access_passes/create", "access_pass"),
     get: this._getGrab("/access_passes/get", "access_pass"),
+    get_counts: this.get("/access_passes/get_counts"),
     list: this._getGrab("/access_passes/list", "access_passes"),
     delete: this._curriedPost("/access_passes/delete"),
     update: this._curriedPost("/access_passes/update"),
@@ -181,6 +182,7 @@ export class SeamOS {
   public readonly buildings = {
     create: this._postGrab("/buildings/create", "building"),
     get: this._getGrab("/buildings/get", "building"),
+    get_counts: this.get("/buildings/get_counts"),
     list: this._getGrab("/buildings/list", "buildings"),
     delete: this._curriedPost("/buildings/delete"),
     update: this._curriedPost("/buildings/update"),
@@ -201,14 +203,24 @@ export class SeamOS {
 
   public readonly devices = {
     get: this._getGrab("/devices/get", "device"),
+    get_counts: this.get("/devices/get_counts"),
     list: this._getGrab("/devices/list", "devices"),
     delete: this._curriedPost("/devices/delete"),
     update: this._curriedPost("/devices/update"),
   }
 
+  public readonly incidents = {
+    list: this._getGrab("/incidents/list", "incidents"),
+  }
+
   public readonly linked_accounts = {
     get: this._getGrab("/linked_accounts/get", "linked_account"),
     list: this._getGrab("/linked_accounts/list", "linked_accounts"),
+  }
+
+  public readonly locks = {
+    lock: this._curriedPost("/locks/lock"),
+    unlock: this._curriedPost("/locks/unlock"),
   }
 
   public readonly login_portals = {
