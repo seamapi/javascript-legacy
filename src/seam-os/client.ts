@@ -153,6 +153,7 @@ export class SeamOS {
 
   public readonly organizations = {
     get: () => this._getGrab("/organizations/get", "organization"),
+    list: () => this._getGrab("/organizations/list", "organizations"),
     create: this._postGrab("/organizations/create", "organization"),
     invite_user: this._curriedPost("/organizations/invite_user"),
     remove_user: this._curriedPost("/organizations/remove_user"),
@@ -172,14 +173,19 @@ export class SeamOS {
   public readonly access_passes = {
     create: this._postGrab("/access_passes/create", "access_pass"),
     get: this._getGrab("/access_passes/get", "access_pass"),
+    get_counts: this._getGrab(
+      "/access_passes/get_counts",
+      "access_pass_counts"
+    ),
     list: this._getGrab("/access_passes/list", "access_passes"),
     delete: this._curriedPost("/access_passes/delete"),
-    update: this._curriedPost("/access_passes/update"),
+    // update: this._curriedPost("/access_passes/update"),
   }
 
   public readonly buildings = {
     create: this._postGrab("/buildings/create", "building"),
     get: this._getGrab("/buildings/get", "building"),
+    get_counts: this._getGrab("/buildings/get_counts", "building_counts"),
     list: this._getGrab("/buildings/list", "buildings"),
     delete: this._curriedPost("/buildings/delete"),
     update: this._curriedPost("/buildings/update"),
@@ -193,21 +199,31 @@ export class SeamOS {
     list: this._getGrab("/device_groups/list", "device_groups"),
     delete: this._curriedPost("/device_groups/delete"),
     update: this._curriedPost("/device_groups/update"),
-    // add_device: this._curriedPost("/device_groups/add_device"),
     // woops need to add
+    // add_device: this._curriedPost("/device_groups/add_device"),
     // remove_device: this._curriedPost("/device_groups/remove_device"),
   }
 
   public readonly devices = {
     get: this._getGrab("/devices/get", "device"),
+    get_counts: this._getGrab("/devices/get_counts", "device_counts"),
     list: this._getGrab("/devices/list", "devices"),
     delete: this._curriedPost("/devices/delete"),
     update: this._curriedPost("/devices/update"),
   }
 
+  public readonly incidents = {
+    list: this._getGrab("/incidents/list", "incidents"),
+  }
+
   public readonly linked_accounts = {
     get: this._getGrab("/linked_accounts/get", "linked_account"),
     list: this._getGrab("/linked_accounts/list", "linked_accounts"),
+  }
+
+  public readonly locks = {
+    lock: this._curriedPost("/locks/lock"),
+    unlock: this._curriedPost("/locks/unlock"),
   }
 
   public readonly login_portals = {

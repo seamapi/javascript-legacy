@@ -11,28 +11,6 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/internal/organization_invitations/accept": {
-    route: "/internal/organization_invitations/accept"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      token: string
-    }
-    formData: {}
-    jsonResponse: {}
-  }
-  "/internal/organization_invitations/reject": {
-    route: "/internal/organization_invitations/reject"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      token: string
-    }
-    formData: {}
-    jsonResponse: {}
-  }
   "/internal/auth0/callback": {
     route: "/internal/auth0/callback"
     method: "GET"
@@ -58,6 +36,46 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       return_to: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/internal/user_sessions/create": {
+    route: "/internal/user_sessions/create"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      auth0_id_token: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      session: {
+        user_session_id: string
+        session_key: string
+        expires_at: string | Date
+        created_at: string | Date
+      }
+    }
+  }
+  "/internal/organization_invitations/accept": {
+    route: "/internal/organization_invitations/accept"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      token: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/internal/organization_invitations/reject": {
+    route: "/internal/organization_invitations/reject"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      token: string
     }
     formData: {}
     jsonResponse: {}
@@ -98,24 +116,6 @@ export interface Routes {
     commonParams: {}
     formData: {}
     jsonResponse: {}
-  }
-  "/internal/user_sessions/create": {
-    route: "/internal/user_sessions/create"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      auth0_id_token: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      session: {
-        user_session_id: string
-        session_key: string
-        expires_at: string | Date
-        created_at: string | Date
-      }
-    }
   }
   "/access_codes/create": {
     route: "/access_codes/create"
@@ -320,8 +320,10 @@ export interface Routes {
     }
     formData: {}
     jsonResponse: {
-      total_uses: number
-      uses_in_period: number
+      access_pass_counts: {
+        total_uses: number
+        uses_in_period: number
+      }
     }
   }
   "/access_passes/list": {
@@ -347,22 +349,6 @@ export interface Routes {
         created_at: string | Date
       }[]
     }
-  }
-  "/access_passes/update": {
-    route: "/access_passes/update"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody: {
-      name: string
-      starts_at?: (string | Date) | undefined
-      ends_at?: (string | Date) | undefined
-      device_id?: string[] | undefined
-      device_ids?: string[] | undefined
-      device_group_id?: string | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
   }
   "/buildings/add_device": {
     route: "/buildings/add_device"
@@ -465,9 +451,11 @@ export interface Routes {
     }
     formData: {}
     jsonResponse: {
-      devices: string | number | bigint
-      incidents: string | number | bigint
-      active_access_passes: string | number | bigint
+      building_counts: {
+        devices: string | number | bigint
+        incidents: string | number | bigint
+        active_access_passes: string | number | bigint
+      }
     }
   }
   "/buildings/list": {
@@ -657,7 +645,7 @@ export interface Routes {
     }
     formData: {}
     jsonResponse: {
-      counts: {
+      device_counts: {
         query: string
         count: number
       }[]
@@ -1157,6 +1145,52 @@ export interface Routes {
       last_name?: string | undefined
       title?: string | undefined
     }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/access_passes/update": {
+    route: "/access_passes/update"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody:
+      | {
+          access_pass_id: string
+          starts_at?: (string | Date) | undefined
+          ends_at?: ((string | Date) | null) | undefined
+          devices?:
+            | {
+                device_id: string
+                can_use_access_code: boolean
+                can_use_remote_unlock: boolean
+              }[]
+            | undefined
+          device_group_id?: string | undefined
+          access_method_flags?:
+            | {
+                can_use_access_code: boolean
+                can_use_remote_unlock: boolean
+              }
+            | undefined
+        }
+      | {
+          access_pass_id: string
+          starts_at?: (string | Date) | undefined
+          ends_at?: ((string | Date) | null) | undefined
+          devices: {
+            device_id: string
+            can_use_access_code: boolean
+            can_use_remote_unlock: boolean
+          }[]
+        }
+      | {
+          access_pass_id: string
+          starts_at?: (string | Date) | undefined
+          ends_at?: ((string | Date) | null) | undefined
+          device_group_id: string
+          can_use_access_code: boolean
+          can_use_remote_unlock: boolean
+        }
     commonParams: {}
     formData: {}
     jsonResponse: {}
