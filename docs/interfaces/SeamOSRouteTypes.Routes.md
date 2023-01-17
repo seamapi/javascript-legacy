@@ -18,7 +18,7 @@
 - [/access\_passes/get](SeamOSRouteTypes.Routes.md#/access_passes/get)
 - [/access\_passes/get\_counts](SeamOSRouteTypes.Routes.md#/access_passes/get_counts)
 - [/access\_passes/list](SeamOSRouteTypes.Routes.md#/access_passes/list)
-- [/access\_passes/update/index](SeamOSRouteTypes.Routes.md#/access_passes/update/index)
+- [/access\_passes/update](SeamOSRouteTypes.Routes.md#/access_passes/update)
 - [/buildings/add\_device](SeamOSRouteTypes.Routes.md#/buildings/add_device)
 - [/buildings/add\_user](SeamOSRouteTypes.Routes.md#/buildings/add_user)
 - [/buildings/create](SeamOSRouteTypes.Routes.md#/buildings/create)
@@ -351,9 +351,9 @@ ___
 
 ___
 
-### /access\_passes/update/index
+### /access\_passes/update
 
-• **/access\_passes/update/index**: `Object`
+• **/access\_passes/update**: `Object`
 
 #### Type declaration
 
@@ -365,7 +365,7 @@ ___
 | `jsonResponse` | `Object` |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
 | `queryParams` | `Object` |
-| `route` | ``"/access_passes/update/index"`` |
+| `route` | ``"/access_passes/update"`` |
 
 #### Defined in
 

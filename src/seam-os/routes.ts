@@ -1149,8 +1149,8 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/access_passes/update/index": {
-    route: "/access_passes/update/index"
+  "/access_passes/update": {
+    route: "/access_passes/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody:
