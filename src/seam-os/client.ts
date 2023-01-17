@@ -193,7 +193,7 @@ export class SeamOS {
     list: this._getGrab("/device_groups/list", "device_groups"),
     delete: this._curriedPost("/device_groups/delete"),
     update: this._curriedPost("/device_groups/update"),
-    add_device: this._curriedPost("/device_groups/add_device"),
+    // add_device: this._curriedPost("/device_groups/add_device"),
     // woops need to add
     // remove_device: this._curriedPost("/device_groups/remove_device"),
   }
