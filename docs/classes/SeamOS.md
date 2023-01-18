@@ -16,6 +16,7 @@
 - [buildings](SeamOS.md#buildings)
 - [device\_groups](SeamOS.md#device_groups)
 - [devices](SeamOS.md#devices)
+- [health](SeamOS.md#health)
 - [incidents](SeamOS.md#incidents)
 - [linked\_accounts](SeamOS.md#linked_accounts)
 - [locks](SeamOS.md#locks)
@@ -31,7 +32,6 @@
 - [\_getGrab](SeamOS.md#_getgrab)
 - [\_postGrab](SeamOS.md#_postgrab)
 - [get](SeamOS.md#get)
-- [health](SeamOS.md#health)
 - [makeRequest](SeamOS.md#makerequest)
 - [post](SeamOS.md#post)
 
@@ -166,6 +166,30 @@ ___
 
 ___
 
+### health
+
+• **health**: (`data`: `undefined` \| {}) => `Promise`<{}\>
+
+#### Type declaration
+
+▸ (`data`): `Promise`<{}\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `undefined` \| {} |
+
+##### Returns
+
+`Promise`<{}\>
+
+#### Defined in
+
+[src/seam-os/client.ts:163](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L163)
+
+___
+
 ### incidents
 
 • `Readonly` **incidents**: `Object`
@@ -243,9 +267,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `create` | (`data`: `undefined` \| { `ext_seam_connect_api_key?`: `string` ; `name`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
-| `get` | () => (`data`: `undefined` \| { `organization_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
+| `get` | (`data`: `undefined` \| { `organization_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
 | `invite_user` | (`data`: `undefined` \| { `email`: `string`  }) => `Promise`<{}\> |
-| `list` | () => (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }[]\> |
+| `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }[]\> |
 | `remove_user` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
 | `update` | (`data`: `undefined` \| { `ext_seam_connect_api_key?`: `string` ; `name?`: `string`  }) => `Promise`<{}\> |
 
@@ -476,32 +500,6 @@ ___
 #### Defined in
 
 [src/seam-os/client.ts:93](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L93)
-
-___
-
-### health
-
-▸ **health**(): (`data`: `undefined` \| {}) => `Promise`<{}\>
-
-#### Returns
-
-`fn`
-
-▸ (`data`): `Promise`<{}\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `undefined` \| {} |
-
-##### Returns
-
-`Promise`<{}\>
-
-#### Defined in
-
-[src/seam-os/client.ts:163](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L163)
 
 ___
 

@@ -152,15 +152,15 @@ export class SeamOS {
     }
 
   public readonly organizations = {
-    get: () => this._getGrab("/organizations/get", "organization"),
-    list: () => this._getGrab("/organizations/list", "organizations"),
+    get: this._getGrab("/organizations/get", "organization"),
+    list: this._getGrab("/organizations/list", "organizations"),
     create: this._postGrab("/organizations/create", "organization"),
     invite_user: this._curriedPost("/organizations/invite_user"),
     remove_user: this._curriedPost("/organizations/remove_user"),
     update: this._curriedPost("/organizations/update"),
   }
 
-  public health = () => this._curriedGet("/health")
+  public health = this._curriedGet("/health")
 
   public readonly access_codes = {
     create: this._postGrab("/access_codes/create", "access_code"),
