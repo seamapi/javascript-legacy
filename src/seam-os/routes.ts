@@ -1,10 +1,7 @@
-// @Seam devs: This mapping is generated from the seamos-backend project, run
-// `yarn build:route-types` to generate a `routes-type` file and copy it here.
-// TODO automatically pull this from @seamapi/public-types
 export interface Routes {
   "/health": {
     route: "/health"
-    method: "GET"
+    method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
     commonParams: {}
@@ -39,24 +36,6 @@ export interface Routes {
     }
     formData: {}
     jsonResponse: {}
-  }
-  "/internal/user_sessions/create": {
-    route: "/internal/user_sessions/create"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      auth0_id_token: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      session: {
-        user_session_id: string
-        session_key: string
-        expires_at: string | Date
-        created_at: string | Date
-      }
-    }
   }
   "/internal/organization_invitations/accept": {
     route: "/internal/organization_invitations/accept"
@@ -116,6 +95,24 @@ export interface Routes {
     commonParams: {}
     formData: {}
     jsonResponse: {}
+  }
+  "/internal/user_sessions/create": {
+    route: "/internal/user_sessions/create"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      auth0_id_token: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      session: {
+        user_session_id: string
+        session_key: string
+        expires_at: string | Date
+        created_at: string | Date
+      }
+    }
   }
   "/access_codes/create": {
     route: "/access_codes/create"
@@ -350,6 +347,52 @@ export interface Routes {
       }[]
     }
   }
+  "/access_passes/update": {
+    route: "/access_passes/update"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody:
+      | {
+          access_pass_id: string
+          starts_at?: (string | Date) | undefined
+          ends_at?: ((string | Date) | null) | undefined
+          devices?:
+            | {
+                device_id: string
+                can_use_access_code: boolean
+                can_use_remote_unlock: boolean
+              }[]
+            | undefined
+          device_group_id?: string | undefined
+          access_method_flags?:
+            | {
+                can_use_access_code: boolean
+                can_use_remote_unlock: boolean
+              }
+            | undefined
+        }
+      | {
+          access_pass_id: string
+          starts_at?: (string | Date) | undefined
+          ends_at?: ((string | Date) | null) | undefined
+          devices: {
+            device_id: string
+            can_use_access_code: boolean
+            can_use_remote_unlock: boolean
+          }[]
+        }
+      | {
+          access_pass_id: string
+          starts_at?: (string | Date) | undefined
+          ends_at?: ((string | Date) | null) | undefined
+          device_group_id: string
+          can_use_access_code: boolean
+          can_use_remote_unlock: boolean
+        }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
   "/buildings/add_device": {
     route: "/buildings/add_device"
     method: "POST"
@@ -441,7 +484,7 @@ export interface Routes {
   }
   "/buildings/get_counts": {
     route: "/buildings/get_counts"
-    method: "GET"
+    method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
     commonParams: {
@@ -642,6 +685,7 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       queries: string[]
+      building_id?: string | undefined
     }
     formData: {}
     jsonResponse: {
@@ -712,7 +756,7 @@ export interface Routes {
         organization_id: string
         building_id: string | null
         device_id: string | null
-        name: string
+        type: string
         started_at: string | Date
         ended_at: (string | Date) | null
         is_resolved: boolean
@@ -1145,52 +1189,6 @@ export interface Routes {
       last_name?: string | undefined
       title?: string | undefined
     }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
-  "/access_passes/update": {
-    route: "/access_passes/update"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody:
-      | {
-          access_pass_id: string
-          starts_at?: (string | Date) | undefined
-          ends_at?: ((string | Date) | null) | undefined
-          devices?:
-            | {
-                device_id: string
-                can_use_access_code: boolean
-                can_use_remote_unlock: boolean
-              }[]
-            | undefined
-          device_group_id?: string | undefined
-          access_method_flags?:
-            | {
-                can_use_access_code: boolean
-                can_use_remote_unlock: boolean
-              }
-            | undefined
-        }
-      | {
-          access_pass_id: string
-          starts_at?: (string | Date) | undefined
-          ends_at?: ((string | Date) | null) | undefined
-          devices: {
-            device_id: string
-            can_use_access_code: boolean
-            can_use_remote_unlock: boolean
-          }[]
-        }
-      | {
-          access_pass_id: string
-          starts_at?: (string | Date) | undefined
-          ends_at?: ((string | Date) | null) | undefined
-          device_group_id: string
-          can_use_access_code: boolean
-          can_use_remote_unlock: boolean
-        }
     commonParams: {}
     formData: {}
     jsonResponse: {}
