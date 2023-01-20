@@ -203,6 +203,7 @@ type Flatten<EventType extends SeamEvent["event_type"]> =
     ? {
         event_id: string
         event_type: EventType
+        occurred_at: string
         created_at: string
       } & Extract<SeamEvent, { event_type: EventType }>["payload"]
     : never
