@@ -15,6 +15,7 @@
 ### Properties
 
 - [code](AccessCodeCreateBaseRequest.md#code)
+- [common\_code\_key](AccessCodeCreateBaseRequest.md#common_code_key)
 - [device\_id](AccessCodeCreateBaseRequest.md#device_id)
 - [name](AccessCodeCreateBaseRequest.md#name)
 
@@ -27,6 +28,16 @@
 #### Defined in
 
 [src/types/route-requests.ts:36](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L36)
+
+___
+
+### common\_code\_key
+
+• `Optional` **common\_code\_key**: `string`
+
+#### Defined in
+
+[src/types/route-requests.ts:37](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L37)
 
 ___
 

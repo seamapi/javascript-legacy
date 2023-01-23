@@ -19,6 +19,7 @@
 - [common\_code\_key](AccessCodeBase.md#common_code_key)
 - [device\_id](AccessCodeBase.md#device_id)
 - [errors](AccessCodeBase.md#errors)
+- [is\_waiting\_for\_code\_assignment](AccessCodeBase.md#is_waiting_for_code_assignment)
 - [name](AccessCodeBase.md#name)
 - [warnings](AccessCodeBase.md#warnings)
 
@@ -36,7 +37,7 @@ ___
 
 ### code
 
-• **code**: `string`
+• **code**: ``null`` \| `string`
 
 #### Defined in
 
@@ -70,6 +71,16 @@ ___
 
 #### Defined in
 
+[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
+
+___
+
+### is\_waiting\_for\_code\_assignment
+
+• `Optional` **is\_waiting\_for\_code\_assignment**: ``true``
+
+#### Defined in
+
 [src/types/models.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L161)
 
 ___
@@ -90,4 +101,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
+[src/types/models.ts:163](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L163)

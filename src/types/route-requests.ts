@@ -34,6 +34,7 @@ export interface AccessCodeCreateBaseRequest {
   device_id: string
   name?: string
   code?: string
+  common_code_key?: string
 }
 
 export interface AccessCodeCreateOngoingRequest
@@ -48,6 +49,25 @@ export interface AccessCodeCreateScheduledRequest
 export type AccessCodeCreateRequest =
   | AccessCodeCreateOngoingRequest
   | AccessCodeCreateScheduledRequest
+
+export type AccessCodeCreateMultipleBaseRequest = {
+  device_ids: string[]
+  name?: string
+  behavior_when_code_cannot_be_shared?: "throw" | "create_random_code"
+}
+
+export interface AccessCodeCreateMultipleOngoingRequest
+  extends AccessCodeCreateMultipleBaseRequest {}
+
+export interface AccessCodeCreateMultipleScheduledRequest
+  extends AccessCodeCreateMultipleBaseRequest {
+  starts_at: string | Date
+  ends_at: string | Date
+}
+
+export type AccessCodeCreateMultipleRequest =
+  | AccessCodeCreateMultipleOngoingRequest
+  | AccessCodeCreateMultipleScheduledRequest
 
 export interface AccessCodeUpdateBaseRequest {
   device_id?: string

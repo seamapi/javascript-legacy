@@ -13,6 +13,7 @@
 ### Properties
 
 - [code](AccessCodeCreateScheduledRequest.md#code)
+- [common\_code\_key](AccessCodeCreateScheduledRequest.md#common_code_key)
 - [device\_id](AccessCodeCreateScheduledRequest.md#device_id)
 - [ends\_at](AccessCodeCreateScheduledRequest.md#ends_at)
 - [name](AccessCodeCreateScheduledRequest.md#name)
@@ -31,6 +32,20 @@
 #### Defined in
 
 [src/types/route-requests.ts:36](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L36)
+
+___
+
+### common\_code\_key
+
+• `Optional` **common\_code\_key**: `string`
+
+#### Inherited from
+
+[AccessCodeCreateBaseRequest](AccessCodeCreateBaseRequest.md).[common_code_key](AccessCodeCreateBaseRequest.md#common_code_key)
+
+#### Defined in
+
+[src/types/route-requests.ts:37](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L37)
 
 ___
 
@@ -54,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:45](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L45)
+[src/types/route-requests.ts:46](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L46)
 
 ___
 
@@ -78,4 +93,4 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:44](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L44)
+[src/types/route-requests.ts:45](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L45)

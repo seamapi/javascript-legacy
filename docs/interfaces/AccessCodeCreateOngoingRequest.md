@@ -13,6 +13,7 @@
 ### Properties
 
 - [code](AccessCodeCreateOngoingRequest.md#code)
+- [common\_code\_key](AccessCodeCreateOngoingRequest.md#common_code_key)
 - [device\_id](AccessCodeCreateOngoingRequest.md#device_id)
 - [name](AccessCodeCreateOngoingRequest.md#name)
 
@@ -29,6 +30,20 @@
 #### Defined in
 
 [src/types/route-requests.ts:36](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L36)
+
+___
+
+### common\_code\_key
+
+• `Optional` **common\_code\_key**: `string`
+
+#### Inherited from
+
+[AccessCodeCreateBaseRequest](AccessCodeCreateBaseRequest.md).[common_code_key](AccessCodeCreateBaseRequest.md#common_code_key)
+
+#### Defined in
+
+[src/types/route-requests.ts:37](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L37)
 
 ___
 
