@@ -18,6 +18,7 @@
 - [created\_at](OngoingAccessCode.md#created_at)
 - [device\_id](OngoingAccessCode.md#device_id)
 - [errors](OngoingAccessCode.md#errors)
+- [is\_waiting\_for\_code\_assignment](OngoingAccessCode.md#is_waiting_for_code_assignment)
 - [name](OngoingAccessCode.md#name)
 - [status](OngoingAccessCode.md#status)
 - [type](OngoingAccessCode.md#type)
@@ -41,7 +42,7 @@ ___
 
 ### code
 
-• **code**: `string`
+• **code**: ``null`` \| `string`
 
 #### Inherited from
 
@@ -73,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:167](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L167)
+[src/types/models.ts:168](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L168)
 
 ___
 
@@ -101,6 +102,20 @@ ___
 
 #### Defined in
 
+[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
+
+___
+
+### is\_waiting\_for\_code\_assignment
+
+• `Optional` **is\_waiting\_for\_code\_assignment**: ``true``
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[is_waiting_for_code_assignment](AccessCodeBase.md#is_waiting_for_code_assignment)
+
+#### Defined in
+
 [src/types/models.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L161)
 
 ___
@@ -125,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:168](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L168)
+[src/types/models.ts:169](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L169)
 
 ___
 
@@ -135,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:166](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L166)
+[src/types/models.ts:167](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L167)
 
 ___
 
@@ -149,4 +164,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
+[src/types/models.ts:163](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L163)

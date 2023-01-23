@@ -67,6 +67,10 @@ export interface AccessCodeCreateResponse
   extends AccessCodeGetResponse,
     ActionAttemptGetResponse {}
 
+export interface AccessCodeCreateMultipleResponse {
+  access_codes: AccessCode[]
+}
+
 // Connected Accounts
 export interface ConnectedAccountsListResponse {
   connected_accounts: ConnectedAccount[]

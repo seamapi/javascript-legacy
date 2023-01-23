@@ -156,8 +156,9 @@ export interface AccessCodeBase {
   access_code_id: string
   device_id?: string
   name?: string
-  code: string
+  code: string | null
   common_code_key?: string | null
+  is_waiting_for_code_assignment?: true
   errors?: SeamError[]
   warnings?: SeamWarning[]
 }

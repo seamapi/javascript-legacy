@@ -147,6 +147,19 @@ test(
   "AccessCode"
 )
 test(
+  testAPIMethod("accessCodes.createMultiple"),
+  {
+    args: (seed) => [
+      {
+        device_ids: [seed.devices.schlageLock.id1],
+        name: "Created by Ava",
+      },
+    ],
+    modifiesState: true,
+  },
+  "AccessCode[]"
+)
+test(
   "by access code ID",
   testAPIMethod("accessCodes.get"),
   {
@@ -165,7 +178,7 @@ test(
     args: (seed) => [
       {
         device_id: seed.devices.augustLock.id1,
-        code: seed.devices.augustLock.accessCode.code,
+        code: seed.devices.augustLock.accessCode.code!,
       },
     ],
   },

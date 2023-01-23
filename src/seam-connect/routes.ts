@@ -27,6 +27,9 @@ import {
   WebhookGetRequest,
   WebhookCreateRequest,
   EventsListRequest,
+  AccessCodeCreateMultipleRequest,
+  AccessCodeCreateMultipleOngoingRequest,
+  AccessCodeCreateMultipleScheduledRequest,
 } from "../types/route-requests"
 import { SeamActionAttemptError } from "../lib/api-error"
 import {
@@ -50,6 +53,7 @@ import {
   WebhookGetResponse,
   EventsListResponse,
   AccessCodeCreateResponse,
+  AccessCodeCreateMultipleResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -253,6 +257,22 @@ export abstract class Routes {
       })) as {
       (params: AccessCodeCreateOngoingRequest): Promise<OngoingAccessCode>
       (params: AccessCodeCreateScheduledRequest): Promise<TimeBoundAccessCode>
+    },
+    createMultiple: (async (params: AccessCodeCreateMultipleRequest) =>
+      this.makeRequestAndFormat<AccessCodeCreateMultipleResponse>(
+        "access_codes",
+        {
+          url: "/access_codes/create_multiple",
+          method: "POST",
+          data: params,
+        }
+      )) as {
+      (params: AccessCodeCreateMultipleOngoingRequest): Promise<
+        OngoingAccessCode[]
+      >
+      (params: AccessCodeCreateMultipleScheduledRequest): Promise<
+        TimeBoundAccessCode[]
+      >
     },
 
     // We can't narrow the return type here like we do with create because we're given partial input
