@@ -50,7 +50,7 @@ ___
 
 ### ends\_at
 
-• **ends\_at**: `string` \| `Date`
+• `Optional` **ends\_at**: `string` \| `Date`
 
 #### Defined in
 

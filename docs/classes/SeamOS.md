@@ -113,11 +113,11 @@ ___
 | :------ | :------ |
 | `add_device` | (`data`: `undefined` \| { `building_id`: `string` ; `device_id`: `string`  }) => `Promise`<{}\> |
 | `add_user` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/buildings/add_user"``\>) => `Promise`<{}\> |
-| `create` | (`data`: `undefined` \| { `location?`: { [x: string]: `any`;  } ; `name`: `string` ; `owner_id`: `string` ; `timezone`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: `string` ; `timezone`: `string`  }\> |
+| `create` | (`data`: `undefined` \| { `location?`: { [x: string]: `any`;  } ; `name`: `string` ; `owner_id`: `string` ; `timezone`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: ``null`` \| `string` ; `timezone`: `string`  }\> |
 | `delete` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{}\> |
-| `get` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: `string` ; `timezone`: `string`  }\> |
+| `get` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: ``null`` \| `string` ; `timezone`: `string`  }\> |
 | `get_counts` | (`data`: `undefined` \| { `building_id?`: `string` ; `end?`: `string` \| `Date` ; `start?`: `string` \| `Date`  }) => `Promise`<{ `active_access_passes`: `string` \| `number` \| `bigint` ; `devices`: `string` \| `number` \| `bigint` ; `incidents`: `string` \| `number` \| `bigint`  }\> |
-| `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: `string` ; `timezone`: `string`  }[]\> |
+| `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: ``null`` \| `string` ; `timezone`: `string`  }[]\> |
 | `update` | (`data`: `undefined` \| { `building_id`: `string` ; `name?`: `string` ; `owner_id?`: `string` ; `timezone?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
@@ -214,8 +214,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`data`: `undefined` \| { `linked_account_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_provider`: `string` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }\> |
-| `list` | (`data`: `undefined` \| { `query?`: `string` ; `since?`: `string` \| `Date`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_provider`: `string` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }[]\> |
+| `get` | (`data`: `undefined` \| { `linked_account_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_count`: `number` ; `device_provider`: `string` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }\> |
+| `list` | (`data`: `undefined` \| { `query?`: `string` ; `since?`: `string` \| `Date`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_count`: `number` ; `device_provider`: `string` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }[]\> |
 
 #### Defined in
 
@@ -310,8 +310,8 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `delete` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
-| `get` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  }\> |
-| `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `user_group_id?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  }[]\> |
+| `get` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id`: `string` ; `title`: ``null`` \| `string` ; `user_id`: `string`  }\> |
+| `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `user_group_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id`: `string` ; `title`: ``null`` \| `string` ; `user_id`: `string`  }[]\> |
 | `update` | (`data`: `undefined` \| { `first_name?`: `string` ; `last_name?`: `string` ; `title?`: `string` ; `user_id?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
