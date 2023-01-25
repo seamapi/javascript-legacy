@@ -65,7 +65,7 @@ ___
 
 ### ends\_at
 
-• `Optional` **ends\_at**: `string` \| `Date`
+• **ends\_at**: `string` \| `Date`
 
 #### Defined in
 
