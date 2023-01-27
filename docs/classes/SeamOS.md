@@ -84,7 +84,7 @@ ___
 | `create` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/access_passes/create"``\>) => `Promise`<{ `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }\> |
 | `delete` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{ `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }\> |
-| `get_counts` | (`data`: `undefined` \| { `access_pass_id`: `string` ; `end?`: `string` \| `Date` ; `start`: `string` \| `Date`  }) => `Promise`<{ `total_uses`: `number` ; `uses_in_period`: `number`  }\> |
+| `get_count_summary` | (`data`: `undefined` \| { `access_pass_id`: `string` ; `end?`: `string` \| `Date` ; `start`: `string` \| `Date`  }) => `Promise`<{ `total_uses`: `number` ; `uses_in_period`: `number`  }\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `query?`: `string`  }) => `Promise`<{ `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }[]\> |
 
 #### Defined in
@@ -113,12 +113,12 @@ ___
 | :------ | :------ |
 | `add_device` | (`data`: `undefined` \| { `building_id`: `string` ; `device_id`: `string`  }) => `Promise`<{}\> |
 | `add_user` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/buildings/add_user"``\>) => `Promise`<{}\> |
-| `create` | (`data`: `undefined` \| { `location?`: { [x: string]: `any`;  } ; `name`: `string` ; `owner_id`: `string` ; `timezone`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: ``null`` \| `string` ; `timezone`: `string`  }\> |
+| `create` | (`data`: `undefined` \| { `location?`: { [x: string]: `any`;  } ; `name`: `string` ; `timezone`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }\> |
 | `delete` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{}\> |
-| `get` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: ``null`` \| `string` ; `timezone`: `string`  }\> |
-| `get_counts` | (`data`: `undefined` \| { `building_id?`: `string` ; `end?`: `string` \| `Date` ; `start?`: `string` \| `Date`  }) => `Promise`<{ `active_access_passes`: `string` \| `number` \| `bigint` ; `devices`: `string` \| `number` \| `bigint` ; `incidents`: `string` \| `number` \| `bigint`  }\> |
-| `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `owner_id`: ``null`` \| `string` ; `timezone`: `string`  }[]\> |
-| `update` | (`data`: `undefined` \| { `building_id`: `string` ; `name?`: `string` ; `owner_id?`: `string` ; `timezone?`: `string`  }) => `Promise`<{}\> |
+| `get` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }\> |
+| `get_count_summary` | (`data`: `undefined` \| { `building_id?`: `string` ; `end?`: `string` \| `Date` ; `start?`: `string` \| `Date`  }) => `Promise`<{ `active_access_passes`: `string` \| `number` \| `bigint` ; `devices`: `string` \| `number` \| `bigint` ; `incidents`: `string` \| `number` \| `bigint`  }\> |
+| `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }[]\> |
+| `update` | (`data`: `undefined` \| { `building_id`: `string` ; `name?`: `string` ; `timezone?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:196](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L196)
+[src/seam-os/client.ts:199](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L199)
 
 ___
 
@@ -156,13 +156,13 @@ ___
 | :------ | :------ |
 | `delete` | (`data`: `undefined` \| { `device_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_id?`: `string` ; `device_name?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { [x: string]: `unknown`;  } ; `warnings`: `unknown`[]  }\> |
-| `get_counts` | (`data`: `undefined` \| { `building_id?`: `string` ; `queries`: `string`[]  }) => `Promise`<{ `count`: `number` ; `query`: `string`  }[]\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `has_no_building?`: `boolean` ; `linked_account_id?`: `string` ; `query?`: `string` ; `user_group_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { [x: string]: `unknown`;  } ; `warnings`: `unknown`[]  }[]\> |
+| `list_counts` | (`data`: `undefined` \| { `building_id?`: `string` ; `queries`: `string`[]  }) => `Promise`<{ `count`: `number` ; `query`: `string`  }[]\> |
 | `update` | (`data`: `undefined` \| { `device_id`: `string` ; `location?`: {} ; `name?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
-[src/seam-os/client.ts:207](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L207)
+[src/seam-os/client.ts:210](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L210)
 
 ___
 
@@ -198,11 +198,11 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `list` | (`data`: `undefined` \| { `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string` ; `is_resolved?`: `boolean`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `ended_at`: ``null`` \| `string` \| `Date` ; `incident_id`: `string` ; `is_resolved`: `boolean` ; `organization_id`: `string` ; `started_at`: `string` \| `Date` ; `type`: `string`  }[]\> |
+| `list` | (`data`: `undefined` \| { `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string` ; `is_resolved?`: `boolean`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `ended_at`: ``null`` \| `string` \| `Date` ; `incident_id`: `string` ; `is_resolved`: `boolean` ; `linked_account_id`: `string` ; `organization_id`: `string` ; `started_at`: `string` \| `Date` ; `type`: `string`  }[]\> |
 
 #### Defined in
 
-[src/seam-os/client.ts:215](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L215)
+[src/seam-os/client.ts:218](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L218)
 
 ___
 
@@ -214,12 +214,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`data`: `undefined` \| { `linked_account_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_count`: `number` ; `device_provider`: `string` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }\> |
-| `list` | (`data`: `undefined` \| { `query?`: `string` ; `since?`: `string` \| `Date`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `device_count`: `number` ; `device_provider`: `string` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }[]\> |
+| `get` | (`data`: `undefined` \| { `linked_account_id`: `string`  }) => `Promise`<{ `account_type`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `device_provider`: `string` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }\> |
+| `list` | (`data`: `undefined` \| { `query?`: `string` ; `since?`: `string` \| `Date`  }) => `Promise`<{ `account_type`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `device_provider`: `string` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `login_portal_id`: ``null`` \| `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }[]\> |
 
 #### Defined in
 
-[src/seam-os/client.ts:219](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L219)
+[src/seam-os/client.ts:222](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L222)
 
 ___
 
@@ -236,7 +236,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:224](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L224)
+[src/seam-os/client.ts:227](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L227)
 
 ___
 
@@ -254,7 +254,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:229](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L229)
+[src/seam-os/client.ts:232](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L232)
 
 ___
 
@@ -297,7 +297,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:235](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L235)
+[src/seam-os/client.ts:238](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L238)
 
 ___
 
@@ -316,7 +316,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:245](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L245)
+[src/seam-os/client.ts:248](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L248)
 
 ## Methods
 

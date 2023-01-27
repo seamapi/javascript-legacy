@@ -59,35 +59,6 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/internal/user_sessions/create": {
-    route: "/internal/user_sessions/create"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      auth0_id_token: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      session: {
-        user_session_id: string
-        session_key: string
-        expires_at: string | Date
-        created_at: string | Date
-      }
-    }
-  }
-  "/internal/users/reset-password": {
-    route: "/internal/users/reset-password"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      user_id?: string | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
   "/internal/organizations/delete": {
     route: "/internal/organizations/delete"
     method: "DELETE" | "POST"
@@ -112,6 +83,35 @@ export interface Routes {
         name: string
         created_at: string | Date
       }[]
+    }
+  }
+  "/internal/users/reset-password": {
+    route: "/internal/users/reset-password"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      user_id?: string | undefined
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/internal/user_sessions/create": {
+    route: "/internal/user_sessions/create"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      auth0_id_token: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      session: {
+        user_session_id: string
+        session_key: string
+        expires_at: string | Date
+        created_at: string | Date
+      }
     }
   }
   "/access_codes/create": {
@@ -305,8 +305,8 @@ export interface Routes {
       }
     }
   }
-  "/access_passes/get_counts": {
-    route: "/access_passes/get_counts"
+  "/access_passes/get_count_summary": {
+    route: "/access_passes/get_count_summary"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -427,7 +427,6 @@ export interface Routes {
     method: "POST"
     queryParams: {}
     jsonBody: {
-      owner_id: string
       name: string
       location?:
         | {
@@ -442,7 +441,6 @@ export interface Routes {
       building: {
         building_id: string
         organization_id: string
-        owner_id: string | null
         name: string
         location?: any | null
         timezone: string
@@ -474,7 +472,6 @@ export interface Routes {
       building: {
         building_id: string
         organization_id: string
-        owner_id: string | null
         name: string
         location?: any | null
         timezone: string
@@ -482,8 +479,8 @@ export interface Routes {
       }
     }
   }
-  "/buildings/get_counts": {
-    route: "/buildings/get_counts"
+  "/buildings/get_count_summary": {
+    route: "/buildings/get_count_summary"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -514,7 +511,6 @@ export interface Routes {
       buildings: {
         building_id: string
         organization_id: string
-        owner_id: string | null
         name: string
         location?: any | null
         timezone: string
@@ -555,7 +551,6 @@ export interface Routes {
       building_id: string
       name?: string | undefined
       timezone?: string | undefined
-      owner_id?: string | undefined
     }
     formData: {}
     jsonResponse: {}
@@ -691,23 +686,6 @@ export interface Routes {
       }
     }
   }
-  "/devices/get_counts": {
-    route: "/devices/get_counts"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      queries: string[]
-      building_id?: string | undefined
-    }
-    formData: {}
-    jsonResponse: {
-      device_counts: {
-        query: string
-        count: number
-      }[]
-    }
-  }
   "/devices/list": {
     route: "/devices/list"
     method: "GET" | "POST"
@@ -735,6 +713,23 @@ export interface Routes {
         }
         warnings: unknown[]
         errors: unknown[]
+      }[]
+    }
+  }
+  "/devices/list_counts": {
+    route: "/devices/list_counts"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      queries: string[]
+      building_id?: string | undefined
+    }
+    formData: {}
+    jsonResponse: {
+      device_counts: {
+        query: string
+        count: number
       }[]
     }
   }
@@ -767,6 +762,7 @@ export interface Routes {
       incidents: {
         incident_id: string
         organization_id: string
+        linked_account_id: string
         building_id: string | null
         device_id: string | null
         type: string
@@ -793,6 +789,7 @@ export interface Routes {
         login_portal_id: string | null
         device_provider: string
         device_count: number
+        account_type: string
         user_identifier?: any
         ext_seam_connected_account_id: string
         errors: {
@@ -840,6 +837,7 @@ export interface Routes {
         login_portal_id: string | null
         device_provider: string
         device_count: number
+        account_type: string
         user_identifier?: any
         ext_seam_connected_account_id: string
         errors: {
@@ -853,6 +851,30 @@ export interface Routes {
         created_at: string | Date
       }[]
     }
+  }
+  "/locks/lock": {
+    route: "/locks/lock"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      access_pass_id?: string | undefined
+      device_id: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/locks/unlock": {
+    route: "/locks/unlock"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      access_pass_id?: string | undefined
+      device_id: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
   }
   "/login_portals/create": {
     route: "/login_portals/create"
@@ -956,8 +978,8 @@ export interface Routes {
       }
     }
   }
-  "/organizations/get_counts": {
-    route: "/organizations/get_counts"
+  "/organizations/get_count_summary": {
+    route: "/organizations/get_count_summary"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
@@ -1032,32 +1054,11 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       user_id: string
-      organization_roles: ("org:superadmin" | "org:admin" | "org:member")[]
+      organization_roles?:
+        | ("org:superadmin" | "org:admin" | "org:member")[]
+        | undefined
+      can_view_all_buildings?: boolean | undefined
     }
-    formData: {}
-    jsonResponse: {}
-  }
-  "/locks/lock": {
-    route: "/locks/lock"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      access_pass_id?: string | undefined
-      device_id: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
-  "/locks/unlock": {
-    route: "/locks/unlock"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      access_pass_id?: string | undefined
-      device_id: string
-    }
-    commonParams: {}
     formData: {}
     jsonResponse: {}
   }
@@ -1245,6 +1246,7 @@ export interface Routes {
       user_organization_roles: {
         user_id: string
         organization_roles: ("org:superadmin" | "org:admin" | "org:member")[]
+        can_view_all_buildings: boolean
       }[]
     }
   }
