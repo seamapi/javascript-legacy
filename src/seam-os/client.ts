@@ -173,8 +173,8 @@ export class SeamOS {
   public readonly access_passes = {
     create: this._postGrab("/access_passes/create", "access_pass"),
     get: this._getGrab("/access_passes/get", "access_pass"),
-    get_counts: this._getGrab(
-      "/access_passes/get_counts",
+    get_count_summary: this._getGrab(
+      "/access_passes/get_count_summary",
       "access_pass_counts"
     ),
     list: this._getGrab("/access_passes/list", "access_passes"),
@@ -185,7 +185,10 @@ export class SeamOS {
   public readonly buildings = {
     create: this._postGrab("/buildings/create", "building"),
     get: this._getGrab("/buildings/get", "building"),
-    get_counts: this._getGrab("/buildings/get_counts", "building_counts"),
+    get_count_summary: this._getGrab(
+      "/buildings/get_count_summary",
+      "building_counts"
+    ),
     list: this._getGrab("/buildings/list", "buildings"),
     delete: this._curriedPost("/buildings/delete"),
     update: this._curriedPost("/buildings/update"),
@@ -206,7 +209,7 @@ export class SeamOS {
 
   public readonly devices = {
     get: this._getGrab("/devices/get", "device"),
-    get_counts: this._getGrab("/devices/get_counts", "device_counts"),
+    list_counts: this._getGrab("/devices/list_counts", "device_counts"),
     list: this._getGrab("/devices/list", "devices"),
     delete: this._curriedPost("/devices/delete"),
     update: this._curriedPost("/devices/update"),
