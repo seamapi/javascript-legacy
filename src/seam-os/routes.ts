@@ -787,7 +787,6 @@ export interface Routes {
         linked_account_id: string
         organization_id: string
         login_portal_id: string | null
-        device_provider: string
         device_count: number
         account_type: string
         user_identifier?: any
@@ -835,7 +834,6 @@ export interface Routes {
         linked_account_id: string
         organization_id: string
         login_portal_id: string | null
-        device_provider: string
         device_count: number
         account_type: string
         user_identifier?: any
