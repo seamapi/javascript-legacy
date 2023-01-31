@@ -85,7 +85,7 @@ ___
 | `delete` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{ `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }\> |
 | `get_count_summary` | (`data`: `undefined` \| { `access_pass_id`: `string` ; `end?`: `string` \| `Date` ; `start`: `string` \| `Date`  }) => `Promise`<{ `total_uses`: `number` ; `uses_in_period`: `number`  }\> |
-| `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `query?`: `string`  }) => `Promise`<{ `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }[]\> |
+| `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_id?`: `string` ; `query?`: `string`  }) => `Promise`<{ `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }[]\> |
 
 #### Defined in
 
@@ -248,9 +248,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`data`: `undefined` \| { `accepted_providers?`: `string`[] ; `custom_redirect_url?`: `string` ; `device_selection_mode?`: ``"none"`` \| ``"single"`` \| ``"multiple"``  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `login_portal_id`: `string` ; `organization_id`: `string` ; `view_url`: `string`  }\> |
+| `create` | (`data`: `undefined` \| { `accepted_providers?`: `string`[] ; `custom_redirect_url?`: `string` ; `device_selection_mode?`: ``"none"`` \| ``"single"`` \| ``"multiple"``  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `login_portal_id`: `string` ; `login_successful`: `boolean` ; `organization_id`: `string` ; `status`: ``"pending"`` \| ``"authorized"`` ; `view_url`: `string`  }\> |
 | `delete` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{}\> |
-| `get` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `login_portal_id`: `string` ; `organization_id`: `string` ; `view_url`: `string`  }\> |
+| `get` | (`data`: `undefined` \| { `login_portal_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `login_portal_id`: `string` ; `login_successful`: `boolean` ; `organization_id`: `string` ; `status`: ``"pending"`` \| ``"authorized"`` ; `view_url`: `string`  }\> |
 
 #### Defined in
 
@@ -512,7 +512,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `URL` | extends keyof [`Routes`](../interfaces/SeamOSRouteTypes.Routes.md) |
-| `Method` | extends ``"GET"`` \| ``"POST"`` \| ``"PATCH"`` \| ``"DELETE"`` |
+| `Method` | extends ``"DELETE"`` \| ``"POST"`` \| ``"GET"`` \| ``"PATCH"`` |
 
 #### Parameters
 
