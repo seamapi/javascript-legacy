@@ -154,7 +154,7 @@ export interface ConnectWebview {
 
 export interface AccessCodeBase {
   access_code_id: string
-  device_id?: string
+  device_id: string
   name?: string
   code: string | null
   common_code_key?: string | null
