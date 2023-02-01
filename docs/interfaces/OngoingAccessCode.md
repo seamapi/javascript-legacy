@@ -80,7 +80,7 @@ ___
 
 ### device\_id
 
-• `Optional` **device\_id**: `string`
+• **device\_id**: `string`
 
 #### Inherited from
 
