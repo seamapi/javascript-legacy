@@ -15,13 +15,17 @@ export type NoiseDetectionDeviceType = "noiseaware_activity_zone"
 export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
 
 export enum Provider {
+  AKUVOX = "akuvox",
   AUGUST = "august",
+  BRIVO = "brivo",
   BUTTERFLYMX = "butterflymx",
+  DOORKING = "doorking",
   GENIE = "genie",
+  LINEAR = "linear",
   SALTO = "salto",
   SCHLAGE = "schlage",
-  YALE = "yale",
-  NOISEAWARE = "noiseaware",
+  NUKI = "nuki",
+  YALE = "yale_access",
   SMARTTHINGS = "smartthings",
 }
 
