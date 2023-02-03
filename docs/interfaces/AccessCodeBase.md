@@ -18,9 +18,11 @@
 - [code](AccessCodeBase.md#code)
 - [common\_code\_key](AccessCodeBase.md#common_code_key)
 - [device\_id](AccessCodeBase.md#device_id)
+- [ends\_at](AccessCodeBase.md#ends_at)
 - [errors](AccessCodeBase.md#errors)
 - [is\_waiting\_for\_code\_assignment](AccessCodeBase.md#is_waiting_for_code_assignment)
 - [name](AccessCodeBase.md#name)
+- [starts\_at](AccessCodeBase.md#starts_at)
 - [warnings](AccessCodeBase.md#warnings)
 
 ## Properties
@@ -47,11 +49,11 @@ ___
 
 ### common\_code\_key
 
-• `Optional` **common\_code\_key**: ``null`` \| `string`
+• **common\_code\_key**: ``null`` \| `string`
 
 #### Defined in
 
-[src/types/models.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L160)
+[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
 
 ___
 
@@ -65,13 +67,23 @@ ___
 
 ___
 
+### ends\_at
+
+• **ends\_at**: `unknown`
+
+#### Defined in
+
+[src/types/models.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L161)
+
+___
+
 ### errors
 
 • `Optional` **errors**: [`SeamError`](SeamError.md)[]
 
 #### Defined in
 
-[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
+[src/types/models.ts:164](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L164)
 
 ___
 
@@ -81,17 +93,27 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L161)
+[src/types/models.ts:163](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L163)
 
 ___
 
 ### name
 
-• `Optional` **name**: `string`
+• **name**: ``null`` \| `string`
 
 #### Defined in
 
 [src/types/models.ts:158](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L158)
+
+___
+
+### starts\_at
+
+• **starts\_at**: `unknown`
+
+#### Defined in
+
+[src/types/models.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L160)
 
 ___
 
@@ -101,4 +123,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:163](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L163)
+[src/types/models.ts:165](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L165)

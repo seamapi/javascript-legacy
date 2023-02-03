@@ -155,9 +155,11 @@ export interface ConnectWebview {
 export interface AccessCodeBase {
   access_code_id: string
   device_id: string
-  name?: string
+  name: string | null
   code: string | null
-  common_code_key?: string | null
+  starts_at: unknown
+  ends_at: unknown
+  common_code_key: string | null
   is_waiting_for_code_assignment?: true
   errors?: SeamError[]
   warnings?: SeamWarning[]
@@ -167,6 +169,8 @@ export interface OngoingAccessCode extends AccessCodeBase {
   type: "ongoing"
   created_at: string
   status: "setting" | "set" | "removing" | "unset"
+  starts_at: null
+  ends_at: null
 }
 
 export interface TimeBoundAccessCode extends AccessCodeBase {
