@@ -5,7 +5,7 @@ import { getParserWithOptions } from "./lib/global-options"
 export const getCLI = (yargs: Argv) => {
   let builder = getParserWithOptions(yargs)
 
-  // We import commands manually instead of using `.commandDir()` so bundling works
+  // We import commands manually instead of using `.commandDir()` so that bundling works
   for (const command of Object.values(commands)) {
     builder = builder.command(command.default as any)
   }
