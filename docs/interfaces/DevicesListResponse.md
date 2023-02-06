@@ -12,7 +12,7 @@
 
 ### devices
 
-• **devices**: [`Device`](Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), [`DeviceType`](../modules.md#devicetype)\>[]
+• **devices**: [`Device`](Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), `string`\>[]
 
 #### Defined in
 

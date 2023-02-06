@@ -6,28 +6,47 @@ export interface Workspace {
   is_sandbox: boolean
 }
 
-export type LockDeviceType =
-  | "august_lock"
-  | "schlage_lock"
-  | "yale_lock"
-  | "smartthings_lock"
-export type NoiseDetectionDeviceType = "noiseaware_activity_zone"
+export const LOCK_DEVICE_TYPES = [
+  "akuvox_lock",
+  "august_lock",
+  "brivo_lock",
+  "butterflymx_lock",
+  "doorking_lock",
+  "genie_lock",
+  "igloo_lock",
+  "linear_lock",
+  "lockly_lock",
+  "nuki_lock",
+  "salto_lock",
+  "schlage_lock",
+  "smartthings_lock",
+  "yale_lock",
+]
+export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
+
+export const NOISE_DETECTION_DEVICE_TYPES = ["noiseaware_activity_zone"]
+export type NoiseDetectionDeviceType =
+  typeof NOISE_DETECTION_DEVICE_TYPES[number]
+
 export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
 
-export enum Provider {
-  AKUVOX = "akuvox",
-  AUGUST = "august",
-  BRIVO = "brivo",
-  BUTTERFLYMX = "butterflymx",
-  DOORKING = "doorking",
-  GENIE = "genie",
-  LINEAR = "linear",
-  SALTO = "salto",
-  SCHLAGE = "schlage",
-  NUKI = "nuki",
-  YALE = "yale_access",
-  SMARTTHINGS = "smartthings",
-}
+export const PROVIDERS = [
+  "akuvox",
+  "august",
+  "brivo",
+  "butterflymx",
+  "doorking",
+  "genie",
+  "igloo",
+  "linear",
+  "lockly",
+  "nuki",
+  "salto",
+  "schlage",
+  "smartthings",
+  "yale_access",
+]
+export type Provider = typeof PROVIDERS[number]
 
 export interface SeamError {
   error_code: string

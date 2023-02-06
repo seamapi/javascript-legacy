@@ -12,10 +12,6 @@
 
 - [SeamOSRouteTypes](modules/SeamOSRouteTypes.md)
 
-### Enumerations
-
-- [Provider](enums/Provider.md)
-
 ### Classes
 
 - [Seam](classes/Seam.md)
@@ -107,10 +103,17 @@
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
+- [Provider](modules.md#provider)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
 - [WebhookCreateRequest](modules.md#webhookcreaterequest)
 - [WebhookGetRequest](modules.md#webhookgetrequest)
+
+### Variables
+
+- [LOCK\_DEVICE\_TYPES](modules.md#lock_device_types)
+- [NOISE\_DETECTION\_DEVICE\_TYPES](modules.md#noise_detection_device_types)
+- [PROVIDERS](modules.md#providers)
 
 ### Functions
 
@@ -147,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:184](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L184)
+[src/types/models.ts:203](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L203)
 
 ___
 
@@ -266,7 +269,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L136)
+[src/types/models.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L155)
 
 ___
 
@@ -276,7 +279,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:91](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L91)
+[src/types/models.ts:110](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L110)
 
 ___
 
@@ -286,7 +289,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:88](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L88)
+[src/types/models.ts:107](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L107)
 
 ___
 
@@ -303,7 +306,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:42](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L42)
+[src/types/models.ts:61](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L61)
 
 ___
 
@@ -339,7 +342,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:15](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L15)
+[src/types/models.ts:31](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L31)
 
 ___
 
@@ -368,7 +371,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:216](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L216)
+[src/types/models.ts:235](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L235)
 
 ___
 
@@ -378,27 +381,37 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:89](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L89)
+[src/types/models.ts:108](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L108)
 
 ___
 
 ### LockDeviceType
 
-Ƭ **LockDeviceType**: ``"august_lock"`` \| ``"schlage_lock"`` \| ``"yale_lock"`` \| ``"smartthings_lock"``
+Ƭ **LockDeviceType**: typeof [`LOCK_DEVICE_TYPES`](modules.md#lock_device_types)[`number`]
 
 #### Defined in
 
-[src/types/models.ts:9](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L9)
+[src/types/models.ts:25](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L25)
 
 ___
 
 ### NoiseDetectionDeviceType
 
-Ƭ **NoiseDetectionDeviceType**: ``"noiseaware_activity_zone"``
+Ƭ **NoiseDetectionDeviceType**: typeof [`NOISE_DETECTION_DEVICE_TYPES`](modules.md#noise_detection_device_types)[`number`]
 
 #### Defined in
 
-[src/types/models.ts:14](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L14)
+[src/types/models.ts:28](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L28)
+
+___
+
+### Provider
+
+Ƭ **Provider**: typeof [`PROVIDERS`](modules.md#providers)[`number`]
+
+#### Defined in
+
+[src/types/models.ts:49](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L49)
 
 ___
 
@@ -457,6 +470,36 @@ ___
 #### Defined in
 
 [src/types/route-requests.ts:121](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L121)
+
+## Variables
+
+### LOCK\_DEVICE\_TYPES
+
+• `Const` **LOCK\_DEVICE\_TYPES**: `string`[]
+
+#### Defined in
+
+[src/types/models.ts:9](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L9)
+
+___
+
+### NOISE\_DETECTION\_DEVICE\_TYPES
+
+• `Const` **NOISE\_DETECTION\_DEVICE\_TYPES**: `string`[]
+
+#### Defined in
+
+[src/types/models.ts:27](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L27)
+
+___
+
+### PROVIDERS
+
+• `Const` **PROVIDERS**: `string`[]
+
+#### Defined in
+
+[src/types/models.ts:33](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L33)
 
 ## Functions
 

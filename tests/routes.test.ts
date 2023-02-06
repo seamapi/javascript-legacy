@@ -104,7 +104,7 @@ test(
   {
     args: [
       {
-        accepted_providers: [Provider.AUGUST],
+        accepted_providers: ["august"],
       },
     ],
     modifiesState: true,

@@ -15,7 +15,7 @@
 
 ### accepted\_providers
 
-• **accepted\_providers**: [`Provider`](../enums/Provider.md)[]
+• **accepted\_providers**: `string`[]
 
 #### Defined in
 
