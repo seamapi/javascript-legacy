@@ -32,7 +32,7 @@ Install with `yarn add seamapi` or `npm install seamapi -s`.
 Then:
 ```ts
 // Replace with
-// const Seam = require("seamapi")
+//   const { Seam } = require("seamapi")
 // if not using ES6 modules and/or TypeScript.
 import Seam from "seamapi";
 
@@ -94,9 +94,9 @@ Example for Express:
 
 ```ts
 // Replace with
-// const {SeamWebhook} = require("seamapi")
+//   const { SeamWebhook } = require("seamapi")
 // if not using ES6 modules and/or TypeScript.
-import {SeamWebhook} from "seamapi";
+import { SeamWebhook } from "seamapi";
 
 import bodyParser from "body-parser";
 
