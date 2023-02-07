@@ -1,5 +1,5 @@
 import { CommandModule } from "yargs"
-import { Provider } from "../../types/models"
+import { Provider, PROVIDERS } from "../../types/models"
 import completeInteractiveLogin from "../lib/interactive-login/complete-interactive-login"
 import executeCommand from "../lib/execute-command"
 import { GlobalOptions } from "../lib/global-options"
@@ -56,7 +56,7 @@ const command: CommandModule<GlobalOptions> = {
               describe: "providers to accept",
               demandOption: true,
               type: "array",
-              choices: Object.values(Provider),
+              choices: PROVIDERS,
               alias: "ap",
             })
             .option("login", {
