@@ -196,6 +196,10 @@ export class SeamOS {
     add_user: this._curriedPost("/buildings/add_user"),
   }
 
+  public readonly events = {
+    list: this._getGrab("/events/list", "events")
+  }
+
   public readonly device_groups = {
     create: this._postGrab("/device_groups/create", "device_group"),
     get: this._getGrab("/device_groups/get", "device_group"),
