@@ -197,7 +197,7 @@ export class SeamOS {
   }
 
   public readonly events = {
-    list: this._getGrab("/events/list", "events")
+    list: this._getGrab("/events/list", "events"),
   }
 
   public readonly device_groups = {

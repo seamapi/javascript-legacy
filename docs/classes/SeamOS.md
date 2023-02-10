@@ -16,6 +16,7 @@
 - [buildings](SeamOS.md#buildings)
 - [device\_groups](SeamOS.md#device_groups)
 - [devices](SeamOS.md#devices)
+- [events](SeamOS.md#events)
 - [health](SeamOS.md#health)
 - [incidents](SeamOS.md#incidents)
 - [linked\_accounts](SeamOS.md#linked_accounts)
@@ -142,7 +143,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:199](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L199)
+[src/seam-os/client.ts:203](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L203)
 
 ___
 
@@ -162,7 +163,23 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:210](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L210)
+[src/seam-os/client.ts:214](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L214)
+
+___
+
+### events
+
+• `Readonly` **events**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `list` | (`data`: `undefined` \| { `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `event_id`: `string` ; `event_type`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  }[]\> |
+
+#### Defined in
+
+[src/seam-os/client.ts:199](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L199)
 
 ___
 
@@ -202,7 +219,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:218](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L218)
+[src/seam-os/client.ts:222](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L222)
 
 ___
 
@@ -219,7 +236,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:222](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L222)
+[src/seam-os/client.ts:226](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L226)
 
 ___
 
@@ -236,7 +253,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:227](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L227)
+[src/seam-os/client.ts:231](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L231)
 
 ___
 
@@ -254,7 +271,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:232](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L232)
+[src/seam-os/client.ts:236](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L236)
 
 ___
 
@@ -297,7 +314,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:238](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L238)
+[src/seam-os/client.ts:242](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L242)
 
 ___
 
@@ -316,7 +333,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:248](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L248)
+[src/seam-os/client.ts:252](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L252)
 
 ## Methods
 
