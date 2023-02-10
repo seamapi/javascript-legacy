@@ -1,7 +1,56 @@
 export interface Routes {
+  "/admin/create_seed_data": {
+    route: "/admin/create_seed_data"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {
+      test_seed?: string | undefined
+    }
+    jsonResponse: {}
+  }
+  "/admin/index": {
+    route: "/admin/index"
+    method: "GET"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/admin/organizations": {
+    route: "/admin/organizations"
+    method: "GET"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/admin/view_organization": {
+    route: "/admin/view_organization"
+    method: "GET"
+    queryParams: {
+      organization_id: string
+    }
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
   "/health": {
     route: "/health"
     method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/admin/auth0/exchange_session": {
+    route: "/admin/auth0/exchange_session"
+    method: "POST"
     queryParams: {}
     jsonBody: {}
     commonParams: {}
@@ -37,6 +86,31 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
+  "/internal/organization_invitations/accept": {
+    route: "/internal/organization_invitations/accept"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      token: string
+      email?: string | undefined
+      first_name?: string | undefined
+      last_name?: string | undefined
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/internal/organization_invitations/reject": {
+    route: "/internal/organization_invitations/reject"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      token: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
   "/internal/organizations/delete": {
     route: "/internal/organizations/delete"
     method: "DELETE" | "POST"
@@ -63,39 +137,6 @@ export interface Routes {
       }[]
     }
   }
-  "/internal/users/reset-password": {
-    route: "/internal/users/reset-password"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      user_id?: string | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
-  "/internal/organization_invitations/accept": {
-    route: "/internal/organization_invitations/accept"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      token: string
-    }
-    formData: {}
-    jsonResponse: {}
-  }
-  "/internal/organization_invitations/reject": {
-    route: "/internal/organization_invitations/reject"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      token: string
-    }
-    formData: {}
-    jsonResponse: {}
-  }
   "/internal/user_sessions/create": {
     route: "/internal/user_sessions/create"
     method: "POST"
@@ -109,10 +150,22 @@ export interface Routes {
       session: {
         user_session_id: string
         session_key: string
+        user_id: string
         expires_at: string | Date
         created_at: string | Date
       }
     }
+  }
+  "/internal/users/reset-password": {
+    route: "/internal/users/reset-password"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      user_id?: string | undefined
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
   }
   "/access_codes/create": {
     route: "/access_codes/create"
@@ -131,17 +184,21 @@ export interface Routes {
       access_code:
         | {
             access_code_id: string
-            code: string
-            type: "ongoing"
+            code: string | null
+            status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            type: "ongoing"
+            starts_at: null
+            ends_at: null
           }
         | {
             access_code_id: string
-            code: string
-            type: "time_bound"
+            code: string | null
+            status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
-            starts_at: string | Date
-            ends_at: string | Date
+            type: "time_bound"
+            starts_at: string
+            ends_at: string
           }
     }
   }
@@ -169,17 +226,21 @@ export interface Routes {
       access_code:
         | {
             access_code_id: string
-            code: string
-            type: "ongoing"
+            code: string | null
+            status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            type: "ongoing"
+            starts_at: null
+            ends_at: null
           }
         | {
             access_code_id: string
-            code: string
-            type: "time_bound"
+            code: string | null
+            status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
-            starts_at: string | Date
-            ends_at: string | Date
+            type: "time_bound"
+            starts_at: string
+            ends_at: string
           }
     }
   }
@@ -190,26 +251,28 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       building_id?: string | undefined
-      user_id?: string | undefined
       device_id?: string | undefined
-      device_group_id?: string | undefined
     }
     formData: {}
     jsonResponse: {
       access_codes: (
         | {
             access_code_id: string
-            code: string
-            type: "ongoing"
+            code: string | null
+            status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            type: "ongoing"
+            starts_at: null
+            ends_at: null
           }
         | {
             access_code_id: string
-            code: string
-            type: "time_bound"
+            code: string | null
+            status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
-            starts_at: string | Date
-            ends_at: string | Date
+            type: "time_bound"
+            starts_at: string
+            ends_at: string
           }
       )[]
     }
@@ -255,6 +318,30 @@ export interface Routes {
           can_use_access_code: boolean
           can_use_remote_unlock: boolean
         }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      access_pass: {
+        access_pass_id: string
+        organization_id: string
+        access_pass_name: string
+        url: string
+        starts_at: string | Date
+        ends_at: (string | Date) | null
+        does_not_end: boolean
+        last_used_at: (string | Date) | null
+        created_at: string | Date
+      }
+    }
+  }
+  "/access_passes/create_from_access_code": {
+    route: "/access_passes/create_from_access_code"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      access_code_id: string
+      can_use_remote_unlock?: boolean
+    }
     commonParams: {}
     formData: {}
     jsonResponse: {
@@ -1030,9 +1117,15 @@ export interface Routes {
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {}
-    commonParams: {
-      email: string
-    }
+    commonParams:
+      | {
+          user_id?: string | undefined
+          email: string
+        }
+      | {
+          user_id: string
+          email?: string | undefined
+        }
     formData: {}
     jsonResponse: {}
   }
@@ -1264,7 +1357,7 @@ export interface Routes {
   }
   "/users/list_organization_roles": {
     route: "/users/list_organization_roles"
-    method: "GET" | "POST"
+    method: "POST"
     queryParams: {}
     jsonBody: {
       user_ids?: string[] | undefined
@@ -1315,7 +1408,8 @@ export interface Routes {
       pending_users: {
         organization_invitation_id: string
         organization_id: string
-        email: string
+        email: string | null
+        user_id: string | null
         status: "pending" | "accepted" | "declined"
         created_at: string | Date
       }[]
@@ -1331,3 +1425,4 @@ export type RouteRequestBody<Path extends keyof Routes> =
 
 export type RouteRequestParams<Path extends keyof Routes> =
   Routes[Path]["queryParams"] & Routes[Path]["commonParams"]
+
