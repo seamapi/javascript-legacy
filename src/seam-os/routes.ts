@@ -756,6 +756,7 @@ export interface Routes {
       building_id?: string | undefined
       device_id?: string | undefined
       between?: (string | Date)[] | undefined
+      query?: string | undefined
     }
     formData: {}
     jsonResponse: {
