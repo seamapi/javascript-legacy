@@ -781,6 +781,7 @@ export interface Routes {
       device_id?: string | undefined
       is_resolved?: boolean | undefined
       between?: (string | Date)[] | undefined
+      query?: string | undefined
     }
     formData: {}
     jsonResponse: {
