@@ -158,6 +158,11 @@ export class SeamOS {
     invite_user: this._curriedPost("/organizations/invite_user"),
     remove_user: this._curriedPost("/organizations/remove_user"),
     update: this._curriedPost("/organizations/update"),
+
+    pending_users: {
+      list: this._getGrab("/organizations/pending_users/list", "pending_users"),
+      delete: this._curriedPost("/organizations/pending_users/delete"),
+    },
   }
 
   public health = this._curriedGet("/health")
