@@ -134,6 +134,86 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
+  "/device_groups/create": {
+    route: "/device_groups/create"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      name: string
+      device_ids?: string[] | undefined
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      device_group: {
+        device_group_id: string
+        organization_id: string
+        name: string
+        device_ids: string[]
+        created_at: string | Date
+      }
+    }
+  }
+  "/device_groups/delete": {
+    route: "/device_groups/delete"
+    method: "DELETE" | "POST"
+    queryParams: {}
+    jsonBody: {
+      device_group_id: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/device_groups/get": {
+    route: "/device_groups/get"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      device_group_id: string
+    }
+    formData: {}
+    jsonResponse: {
+      device_group: {
+        device_group_id: string
+        organization_id: string
+        name: string
+        device_ids: string[]
+        created_at: string | Date
+      }
+    }
+  }
+  "/device_groups/list": {
+    route: "/device_groups/list"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      device_groups: {
+        device_group_id: string
+        organization_id: string
+        name: string
+        device_ids: string[]
+        created_at: string | Date
+      }[]
+    }
+  }
+  "/device_groups/update": {
+    route: "/device_groups/update"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {
+      device_group_id: string
+      name?: string | undefined
+      device_ids?: string[] | undefined
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
   "/buildings/add_device": {
     route: "/buildings/add_device"
     method: "POST"
@@ -342,111 +422,13 @@ export interface Routes {
       events: {
         event_id: string
         event_type: string
-        occurred_at: string | Date
+        occurred_at: string
         device_id: string | null
         building_id: string | null
         organization_id: string
-        created_at: string | Date
+        created_at: string
       }[]
     }
-  }
-  "/devices/delete": {
-    route: "/devices/delete"
-    method: "DELETE" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      device_id: string
-    }
-    formData: {}
-    jsonResponse: {}
-  }
-  "/devices/get": {
-    route: "/devices/get"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      device_id?: string | undefined
-      device_name?: string | undefined
-      building_id?: string | undefined
-    }
-    formData: {}
-    jsonResponse: {
-      device: {
-        device_id: string
-        name: string
-        device_type: string
-        linked_account_id: string
-        created_at: string | Date
-        building_id: string | null
-        properties: {
-          [x: string]: unknown
-        }
-        warnings: unknown[]
-        errors: unknown[]
-      }
-    }
-  }
-  "/devices/list": {
-    route: "/devices/list"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      building_id?: string | undefined
-      linked_account_id?: string | undefined
-      user_group_id?: string | undefined
-      user_id?: string | undefined
-      has_no_building?: boolean | undefined
-      query?: string | undefined
-    }
-    formData: {}
-    jsonResponse: {
-      devices: {
-        device_id: string
-        name: string
-        device_type: string
-        linked_account_id: string
-        created_at: string | Date
-        building_id: string | null
-        properties: {
-          [x: string]: unknown
-        }
-        warnings: unknown[]
-        errors: unknown[]
-      }[]
-    }
-  }
-  "/devices/list_counts": {
-    route: "/devices/list_counts"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      queries: string[]
-      building_id?: string | undefined
-    }
-    formData: {}
-    jsonResponse: {
-      device_counts: {
-        query: string
-        count: number
-      }[]
-    }
-  }
-  "/devices/update": {
-    route: "/devices/update"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody: {
-      device_id: string
-      name?: string | undefined
-      location?: {} | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
   }
   "/access_passes/create": {
     route: "/access_passes/create"
@@ -455,23 +437,25 @@ export interface Routes {
     jsonBody:
       | {
           name: string
-          building_id: string
+          building_id?: string | undefined
+          building_ids?: string[] | undefined
           starts_at?: (string | Date) | undefined
           ends_at?: (string | Date) | undefined
           devices: {
             device_id: string
-            can_use_access_code: boolean
-            can_use_remote_unlock: boolean
+            can_use_access_code?: boolean | undefined
+            can_use_remote_unlock?: boolean | undefined
           }[]
         }
       | {
           name: string
-          building_id: string
+          building_id?: string | undefined
+          building_ids?: string[] | undefined
           starts_at?: (string | Date) | undefined
           ends_at?: (string | Date) | undefined
           device_group_id: string
-          can_use_access_code: boolean
-          can_use_remote_unlock: boolean
+          can_use_access_code?: boolean | undefined
+          can_use_remote_unlock?: boolean | undefined
         }
     commonParams: {}
     formData: {}
@@ -602,8 +586,8 @@ export interface Routes {
           devices?:
             | {
                 device_id: string
-                can_use_access_code: boolean
-                can_use_remote_unlock: boolean
+                can_use_access_code?: boolean | undefined
+                can_use_remote_unlock?: boolean | undefined
               }[]
             | undefined
           device_group_id?: string | undefined
@@ -620,8 +604,8 @@ export interface Routes {
           ends_at?: ((string | Date) | null) | undefined
           devices: {
             device_id: string
-            can_use_access_code: boolean
-            can_use_remote_unlock: boolean
+            can_use_access_code?: boolean | undefined
+            can_use_remote_unlock?: boolean | undefined
           }[]
         }
       | {
@@ -636,81 +620,114 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/device_groups/create": {
-    route: "/device_groups/create"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      name: string
-      device_ids?: string[] | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      device_group: {
-        device_group_id: string
-        organization_id: string
-        name: string
-        device_ids: string[]
-        created_at: string | Date
-      }
-    }
-  }
-  "/device_groups/delete": {
-    route: "/device_groups/delete"
+  "/devices/delete": {
+    route: "/devices/delete"
     method: "DELETE" | "POST"
     queryParams: {}
-    jsonBody: {
-      device_group_id: string
+    jsonBody: {}
+    commonParams: {
+      device_id: string
     }
-    commonParams: {}
     formData: {}
     jsonResponse: {}
   }
-  "/device_groups/get": {
-    route: "/device_groups/get"
+  "/devices/get": {
+    route: "/devices/get"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
     commonParams: {
-      device_group_id: string
+      device_id?: string | undefined
+      device_name?: string | undefined
+      building_id?: string | undefined
     }
     formData: {}
     jsonResponse: {
-      device_group: {
-        device_group_id: string
-        organization_id: string
+      device: {
+        device_id: string
         name: string
-        device_ids: string[]
-        created_at: string | Date
+        device_type: string
+        linked_account_id: string
+        created_at: string
+        building_id: string | null
+        properties: {
+          [x: string]: unknown
+        }
+        warnings: unknown[]
+        errors: unknown[]
       }
     }
   }
-  "/device_groups/list": {
-    route: "/device_groups/list"
+  "/devices/get_count_summary": {
+    route: "/devices/get_count_summary"
     method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
-    commonParams: {}
+    commonParams: {
+      device_id: string
+    }
     formData: {}
     jsonResponse: {
-      device_groups: {
-        device_group_id: string
-        organization_id: string
+      device_count_summary: {
+        active_access_passes: number
+      }
+    }
+  }
+  "/devices/list": {
+    route: "/devices/list"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      building_id?: string | undefined
+      linked_account_id?: string | undefined
+      user_group_id?: string | undefined
+      user_id?: string | undefined
+      has_no_building?: boolean | undefined
+      query?: string | undefined
+    }
+    formData: {}
+    jsonResponse: {
+      devices: {
+        device_id: string
         name: string
-        device_ids: string[]
-        created_at: string | Date
+        device_type: string
+        linked_account_id: string
+        created_at: string
+        building_id: string | null
+        properties: {
+          [x: string]: unknown
+        }
+        warnings: unknown[]
+        errors: unknown[]
       }[]
     }
   }
-  "/device_groups/update": {
-    route: "/device_groups/update"
+  "/devices/list_counts": {
+    route: "/devices/list_counts"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      queries: string[]
+      building_id?: string | undefined
+    }
+    formData: {}
+    jsonResponse: {
+      device_counts: {
+        query: string
+        count: number
+      }[]
+    }
+  }
+  "/devices/update": {
+    route: "/devices/update"
     method: "POST" | "PATCH"
     queryParams: {}
     jsonBody: {
-      device_group_id: string
+      device_id: string
       name?: string | undefined
-      device_ids?: string[] | undefined
+      location?: {} | undefined
     }
     commonParams: {}
     formData: {}
@@ -918,6 +935,105 @@ export interface Routes {
       }[]
     }
   }
+  "/user_groups/add_user": {
+    route: "/user_groups/add_user"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      user_group_id: string
+      user_id: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/user_groups/create": {
+    route: "/user_groups/create"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      name: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      user_group: {
+        user_group_id: string
+        organization_id: string
+        name: string
+        created_at: string | Date
+      }
+    }
+  }
+  "/user_groups/delete": {
+    route: "/user_groups/delete"
+    method: "DELETE" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      user_group_id: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/user_groups/get": {
+    route: "/user_groups/get"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      user_group_id: string
+    }
+    formData: {}
+    jsonResponse: {
+      user_group: {
+        user_group_id: string
+        organization_id: string
+        name: string
+        created_at: string | Date
+      }
+    }
+  }
+  "/user_groups/list": {
+    route: "/user_groups/list"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      user_groups: {
+        user_group_id: string
+        organization_id: string
+        name: string
+        created_at: string | Date
+      }[]
+    }
+  }
+  "/user_groups/remove_user": {
+    route: "/user_groups/remove_user"
+    method: "POST" | "DELETE" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      user_group_id: string
+      user_id: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/user_groups/update": {
+    route: "/user_groups/update"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {
+      user_group_id: string
+      name?: string | undefined
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
   "/organizations/create": {
     route: "/organizations/create"
     method: "POST"
@@ -1042,105 +1158,6 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/user_groups/add_user": {
-    route: "/user_groups/add_user"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      user_group_id: string
-      user_id: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
-  "/user_groups/create": {
-    route: "/user_groups/create"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      name: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      user_group: {
-        user_group_id: string
-        organization_id: string
-        name: string
-        created_at: string | Date
-      }
-    }
-  }
-  "/user_groups/delete": {
-    route: "/user_groups/delete"
-    method: "DELETE" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      user_group_id: string
-    }
-    formData: {}
-    jsonResponse: {}
-  }
-  "/user_groups/get": {
-    route: "/user_groups/get"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      user_group_id: string
-    }
-    formData: {}
-    jsonResponse: {
-      user_group: {
-        user_group_id: string
-        organization_id: string
-        name: string
-        created_at: string | Date
-      }
-    }
-  }
-  "/user_groups/list": {
-    route: "/user_groups/list"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      user_groups: {
-        user_group_id: string
-        organization_id: string
-        name: string
-        created_at: string | Date
-      }[]
-    }
-  }
-  "/user_groups/remove_user": {
-    route: "/user_groups/remove_user"
-    method: "POST" | "DELETE" | "PATCH"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      user_group_id: string
-      user_id: string
-    }
-    formData: {}
-    jsonResponse: {}
-  }
-  "/user_groups/update": {
-    route: "/user_groups/update"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody: {
-      user_group_id: string
-      name?: string | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
   "/users/delete": {
     route: "/users/delete"
     method: "DELETE" | "POST"
@@ -1192,7 +1209,7 @@ export interface Routes {
   }
   "/users/list": {
     route: "/users/list"
-    method: "GET"
+    method: "GET" | "POST"
     queryParams: {}
     jsonBody: {}
     commonParams: {

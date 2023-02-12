@@ -221,6 +221,10 @@ export class SeamOS {
     list: this._getGrab("/devices/list", "devices"),
     delete: this._curriedPost("/devices/delete"),
     update: this._curriedPost("/devices/update"),
+    get_count_summary: this._getGrab(
+      "/devices/get_count_summary",
+      "device_count_summary"
+    ),
   }
 
   public readonly incidents = {
