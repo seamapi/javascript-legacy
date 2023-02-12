@@ -62,10 +62,10 @@
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`data`: `undefined` \| { `code?`: `string` ; `device_id`: `string` ; `ends_at?`: `string` \| `Date` ; `name?`: `string` ; `starts_at?`: `string` \| `Date`  }) => `Promise`<{ `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  }\> |
+| `create` | (`data`: `undefined` \| { `code?`: `string` ; `device_id`: `string` ; `ends_at?`: `string` \| `Date` ; `name?`: `string` ; `starts_at?`: `string` \| `Date`  }) => `Promise`<{ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"time_bound"``  }\> |
 | `delete` | (`data`: `undefined` \| { `access_code_id`: `string`  }) => `Promise`<{}\> |
-| `get` | (`data`: `undefined` \| { `access_code_id`: `string`  }) => `Promise`<{ `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  }\> |
-| `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_group_id?`: `string` ; `device_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<({ `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` \| `Date` ; `starts_at`: `string` \| `Date` ; `type`: ``"time_bound"``  })[]\> |
+| `get` | (`data`: `undefined` \| { `access_code_id`: `string`  }) => `Promise`<{ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"time_bound"``  }\> |
+| `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_id?`: `string`  }) => `Promise`<({ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"time_bound"``  })[]\> |
 | `update` | (`data`: `undefined` \| { `access_code_id`: `string` ; `code?`: `string` ; `device_id?`: `string` ; `ends_at?`: `string` \| `Date` ; `name?`: `string` ; `starts_at?`: `string` \| `Date`  }) => `Promise`<{}\> |
 
 #### Defined in
@@ -117,8 +117,9 @@ ___
 | `create` | (`data`: `undefined` \| { `location?`: { [x: string]: `any`;  } ; `name`: `string` ; `timezone`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }\> |
 | `delete` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }\> |
-| `get_count_summary` | (`data`: `undefined` \| { `building_id?`: `string` ; `end?`: `string` \| `Date` ; `start?`: `string` \| `Date`  }) => `Promise`<{ `active_access_passes`: `string` \| `number` \| `bigint` ; `devices`: `string` \| `number` \| `bigint` ; `incidents`: `string` \| `number` \| `bigint`  }\> |
+| `get_count_summary` | (`data`: `undefined` \| { `building_id?`: `string` ; `end?`: `string` \| `Date` ; `start?`: `string` \| `Date`  }) => `Promise`<{ `active_access_passes`: `number` ; `devices`: `number` ; `incidents`: `number`  }\> |
 | `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }[]\> |
+| `list_count_summaries` | (`data`: `undefined` \| { `building_ids`: `string`[]  }) => `Promise`<{ `active_access_passes`: `number` ; `devices`: `number` ; `incidents`: `number`  }[]\> |
 | `update` | (`data`: `undefined` \| { `building_id`: `string` ; `name?`: `string` ; `timezone?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
@@ -143,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:203](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L203)
+[src/seam-os/client.ts:207](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L207)
 
 ___
 
@@ -163,7 +164,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:214](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L214)
+[src/seam-os/client.ts:218](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L218)
 
 ___
 
@@ -175,11 +176,11 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `list` | (`data`: `undefined` \| { `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `event_id`: `string` ; `event_type`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  }[]\> |
+| `list` | (`data`: `undefined` \| { `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string` ; `query?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `event_id`: `string` ; `event_type`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  }[]\> |
 
 #### Defined in
 
-[src/seam-os/client.ts:199](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L199)
+[src/seam-os/client.ts:203](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L203)
 
 ___
 
@@ -219,7 +220,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:222](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L222)
+[src/seam-os/client.ts:226](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L226)
 
 ___
 
@@ -236,7 +237,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:226](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L226)
+[src/seam-os/client.ts:230](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L230)
 
 ___
 
@@ -253,7 +254,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:231](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L231)
+[src/seam-os/client.ts:235](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L235)
 
 ___
 
@@ -271,7 +272,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:236](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L236)
+[src/seam-os/client.ts:240](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L240)
 
 ___
 
@@ -283,9 +284,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`data`: `undefined` \| { `ext_seam_connect_api_key?`: `string` ; `name`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
+| `create` | (`data`: `undefined` \| { `name`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
 | `get` | (`data`: `undefined` \| { `organization_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }\> |
-| `invite_user` | (`data`: `undefined` \| { `email`: `string`  }) => `Promise`<{}\> |
+| `invite_user` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/organizations/invite_user"``\>) => `Promise`<{}\> |
 | `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }[]\> |
 | `remove_user` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
 | `update` | (`data`: `undefined` \| { `ext_seam_connect_api_key?`: `string` ; `name?`: `string`  }) => `Promise`<{}\> |
@@ -314,7 +315,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:242](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L242)
+[src/seam-os/client.ts:246](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L246)
 
 ___
 
@@ -333,7 +334,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:252](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L252)
+[src/seam-os/client.ts:256](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L256)
 
 ## Methods
 

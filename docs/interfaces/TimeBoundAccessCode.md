@@ -158,7 +158,7 @@ ___
 
 ### status
 
-• **status**: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"``
+• **status**: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"``
 
 #### Defined in
 
