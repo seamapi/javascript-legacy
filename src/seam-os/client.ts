@@ -187,7 +187,11 @@ export class SeamOS {
     get: this._getGrab("/buildings/get", "building"),
     get_count_summary: this._getGrab(
       "/buildings/get_count_summary",
-      "building_counts"
+      "building_count_summary"
+    ),
+    list_count_summaries: this._getGrab(
+      "/buildings/list_count_summaries",
+      "building_count_summaries"
     ),
     list: this._getGrab("/buildings/list", "buildings"),
     delete: this._curriedPost("/buildings/delete"),
