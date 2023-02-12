@@ -162,6 +162,9 @@ export class SeamOS {
     pending_users: {
       list: this._getGrab("/organizations/pending_users/list", "pending_users"),
       delete: this._curriedPost("/organizations/pending_users/delete"),
+      resend_invitation: this._curriedPost(
+        "/organizations/pending_users/resend_invitation"
+      ),
     },
   }
 
@@ -267,5 +270,13 @@ export class SeamOS {
     list: this._getGrab("/users/list", "users"),
     update: this._curriedPost("/users/update"),
     delete: this._curriedPost("/users/delete"),
+    get_building_roles: this._getGrab(
+      "/users/get_building_roles",
+      "user_building_roles"
+    ),
+    list_organization_roles: this._getGrab(
+      "/users/list_organization_roles",
+      "user_organization_roles"
+    ),
   }
 }
