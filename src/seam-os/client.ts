@@ -158,6 +158,7 @@ export class SeamOS {
     invite_user: this._curriedPost("/organizations/invite_user"),
     remove_user: this._curriedPost("/organizations/remove_user"),
     update: this._curriedPost("/organizations/update"),
+    update_user_role: this._curriedPost("/organizations/update_user_role"),
 
     pending_users: {
       list: this._getGrab("/organizations/pending_users/list", "pending_users"),
@@ -206,6 +207,7 @@ export class SeamOS {
     update: this._curriedPost("/buildings/update"),
     add_device: this._curriedPost("/buildings/add_device"),
     add_user: this._curriedPost("/buildings/add_user"),
+    update_user_role: this._curriedPost("/buildings/update_user_role"),
   }
 
   public readonly events = {

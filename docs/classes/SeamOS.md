@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[src/seam-os/client.ts:173](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L173)
+[src/seam-os/client.ts:174](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L174)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:181](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L181)
+[src/seam-os/client.ts:182](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L182)
 
 ___
 
@@ -121,10 +121,11 @@ ___
 | `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location?`: `any` ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }[]\> |
 | `list_count_summaries` | (`data`: `undefined` \| { `building_ids`: `string`[]  }) => `Promise`<{ `active_access_passes`: `number` ; `devices`: `number` ; `incidents`: `number`  }[]\> |
 | `update` | (`data`: `undefined` \| { `building_id`: `string` ; `name?`: `string` ; `timezone?`: `string`  }) => `Promise`<{}\> |
+| `update_user_role` | (`data`: `undefined` \| { `building_id`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[] ; `user_id`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
-[src/seam-os/client.ts:193](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L193)
+[src/seam-os/client.ts:194](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L194)
 
 ___
 
@@ -144,7 +145,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:215](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L215)
+[src/seam-os/client.ts:217](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L217)
 
 ___
 
@@ -165,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:226](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L226)
+[src/seam-os/client.ts:228](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L228)
 
 ___
 
@@ -181,7 +182,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:211](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L211)
+[src/seam-os/client.ts:213](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L213)
 
 ___
 
@@ -205,7 +206,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:171](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L171)
+[src/seam-os/client.ts:172](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L172)
 
 ___
 
@@ -221,7 +222,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:238](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L238)
+[src/seam-os/client.ts:240](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L240)
 
 ___
 
@@ -238,7 +239,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:242](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L242)
+[src/seam-os/client.ts:244](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L244)
 
 ___
 
@@ -255,7 +256,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:247](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L247)
+[src/seam-os/client.ts:249](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L249)
 
 ___
 
@@ -273,7 +274,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:252](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L252)
+[src/seam-os/client.ts:254](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L254)
 
 ___
 
@@ -295,6 +296,7 @@ ___
 | `pending_users.resend_invitation` | (`data`: `undefined` \| { `organization_invitation_id`: `string`  }) => `Promise`<{}\> |
 | `remove_user` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
 | `update` | (`data`: `undefined` \| { `ext_seam_connect_api_key?`: `string` ; `name?`: `string`  }) => `Promise`<{}\> |
+| `update_user_role` | (`data`: `undefined` \| { `can_view_all_buildings?`: `boolean` ; `organization_roles?`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -320,7 +322,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:258](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L258)
+[src/seam-os/client.ts:260](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L260)
 
 ___
 
@@ -341,7 +343,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:268](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L268)
+[src/seam-os/client.ts:270](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L270)
 
 ## Methods
 
