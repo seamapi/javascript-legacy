@@ -158,6 +158,15 @@ export class SeamOS {
     invite_user: this._curriedPost("/organizations/invite_user"),
     remove_user: this._curriedPost("/organizations/remove_user"),
     update: this._curriedPost("/organizations/update"),
+    update_user_role: this._curriedPost("/organizations/update_user_role"),
+
+    pending_users: {
+      list: this._getGrab("/organizations/pending_users/list", "pending_users"),
+      delete: this._curriedPost("/organizations/pending_users/delete"),
+      resend_invitation: this._curriedPost(
+        "/organizations/pending_users/resend_invitation"
+      ),
+    },
   }
 
   public health = this._curriedGet("/health")
@@ -187,13 +196,18 @@ export class SeamOS {
     get: this._getGrab("/buildings/get", "building"),
     get_count_summary: this._getGrab(
       "/buildings/get_count_summary",
-      "building_counts"
+      "building_count_summary"
+    ),
+    list_count_summaries: this._getGrab(
+      "/buildings/list_count_summaries",
+      "building_count_summaries"
     ),
     list: this._getGrab("/buildings/list", "buildings"),
     delete: this._curriedPost("/buildings/delete"),
     update: this._curriedPost("/buildings/update"),
     add_device: this._curriedPost("/buildings/add_device"),
     add_user: this._curriedPost("/buildings/add_user"),
+    update_user_role: this._curriedPost("/buildings/update_user_role"),
   }
 
   public readonly events = {
@@ -217,6 +231,10 @@ export class SeamOS {
     list: this._getGrab("/devices/list", "devices"),
     delete: this._curriedPost("/devices/delete"),
     update: this._curriedPost("/devices/update"),
+    get_count_summary: this._getGrab(
+      "/devices/get_count_summary",
+      "device_count_summary"
+    ),
   }
 
   public readonly incidents = {
@@ -254,5 +272,13 @@ export class SeamOS {
     list: this._getGrab("/users/list", "users"),
     update: this._curriedPost("/users/update"),
     delete: this._curriedPost("/users/delete"),
+    get_building_roles: this._getGrab(
+      "/users/get_building_roles",
+      "user_building_roles"
+    ),
+    list_organization_roles: this._getGrab(
+      "/users/list_organization_roles",
+      "user_organization_roles"
+    ),
   }
 }
