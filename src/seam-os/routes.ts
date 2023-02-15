@@ -756,7 +756,7 @@ export interface Routes {
         linked_account_id: string
         building_id: string | null
         device_id: string | null
-        type: string
+        incident_type: string
         started_at: string | Date
         ended_at: (string | Date) | null
         is_resolved: boolean
