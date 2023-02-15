@@ -337,7 +337,7 @@ ___
 | :------ | :------ |
 | `delete` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
 | `get` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id`: `string` ; `title`: ``null`` \| `string` ; `user_id`: `string`  }\> |
-| `get_building_roles` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `building_name`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[]  }[]\> |
+| `get_building_roles` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `building_name`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[] ; `created_at`: `string`  }[]\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `user_group_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id`: `string` ; `title`: ``null`` \| `string` ; `user_id`: `string`  }[]\> |
 | `list_organization_roles` | (`data`: `undefined` \| { `user_ids?`: `string`[]  }) => `Promise`<{ `can_view_all_buildings`: `boolean` ; `organization_roles`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  }[]\> |
 | `update` | (`data`: `undefined` \| { `first_name?`: `string` ; `last_name?`: `string` ; `title?`: `string` ; `user_id?`: `string`  }) => `Promise`<{}\> |
@@ -540,7 +540,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `URL` | extends keyof [`Routes`](../interfaces/SeamOSRouteTypes.Routes.md) |
-| `Method` | extends ``"GET"`` \| ``"POST"`` \| ``"DELETE"`` \| ``"PATCH"`` |
+| `Method` | extends ``"POST"`` \| ``"DELETE"`` \| ``"GET"`` \| ``"PATCH"`` |
 
 #### Parameters
 
