@@ -208,6 +208,7 @@ export class SeamOS {
     add_device: this._curriedPost("/buildings/add_device"),
     add_user: this._curriedPost("/buildings/add_user"),
     update_user_role: this._curriedPost("/buildings/update_user_role"),
+    remove_user: this._curriedPost("/buildings/remove_user"),
   }
 
   public readonly events = {

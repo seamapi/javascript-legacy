@@ -1,13 +1,4 @@
 export interface Routes {
-  "/health": {
-    route: "/health"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
   "/access_codes/create": {
     route: "/access_codes/create"
     method: "POST"
@@ -511,6 +502,86 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
+  "/device_groups/create": {
+    route: "/device_groups/create"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      name: string
+      device_ids?: string[] | undefined
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      device_group: {
+        device_group_id: string
+        organization_id: string
+        name: string
+        device_ids: string[]
+        created_at: string | Date
+      }
+    }
+  }
+  "/device_groups/delete": {
+    route: "/device_groups/delete"
+    method: "DELETE" | "POST"
+    queryParams: {}
+    jsonBody: {
+      device_group_id: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/device_groups/get": {
+    route: "/device_groups/get"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      device_group_id: string
+    }
+    formData: {}
+    jsonResponse: {
+      device_group: {
+        device_group_id: string
+        organization_id: string
+        name: string
+        device_ids: string[]
+        created_at: string | Date
+      }
+    }
+  }
+  "/device_groups/list": {
+    route: "/device_groups/list"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      device_groups: {
+        device_group_id: string
+        organization_id: string
+        name: string
+        device_ids: string[]
+        created_at: string | Date
+      }[]
+    }
+  }
+  "/device_groups/update": {
+    route: "/device_groups/update"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {
+      device_group_id: string
+      name?: string | undefined
+      device_ids?: string[] | undefined
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
   "/devices/delete": {
     route: "/devices/delete"
     method: "DELETE" | "POST"
@@ -632,86 +703,6 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
-  "/device_groups/create": {
-    route: "/device_groups/create"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      name: string
-      device_ids?: string[] | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      device_group: {
-        device_group_id: string
-        organization_id: string
-        name: string
-        device_ids: string[]
-        created_at: string | Date
-      }
-    }
-  }
-  "/device_groups/delete": {
-    route: "/device_groups/delete"
-    method: "DELETE" | "POST"
-    queryParams: {}
-    jsonBody: {
-      device_group_id: string
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
-  "/device_groups/get": {
-    route: "/device_groups/get"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      device_group_id: string
-    }
-    formData: {}
-    jsonResponse: {
-      device_group: {
-        device_group_id: string
-        organization_id: string
-        name: string
-        device_ids: string[]
-        created_at: string | Date
-      }
-    }
-  }
-  "/device_groups/list": {
-    route: "/device_groups/list"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      device_groups: {
-        device_group_id: string
-        organization_id: string
-        name: string
-        device_ids: string[]
-        created_at: string | Date
-      }[]
-    }
-  }
-  "/device_groups/update": {
-    route: "/device_groups/update"
-    method: "POST" | "PATCH"
-    queryParams: {}
-    jsonBody: {
-      device_group_id: string
-      name?: string | undefined
-      device_ids?: string[] | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
   "/events/list": {
     route: "/events/list"
     method: "GET" | "POST"
@@ -735,6 +726,15 @@ export interface Routes {
         created_at: string
       }[]
     }
+  }
+  "/health": {
+    route: "/health"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
   }
   "/incidents/list": {
     route: "/incidents/list"
@@ -1025,6 +1025,46 @@ export interface Routes {
       }[]
     }
   }
+  "/organizations/pending_users/delete": {
+    route: "/organizations/pending_users/delete"
+    method: "POST" | "DELETE"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      organization_invitation_id: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/organizations/pending_users/list": {
+    route: "/organizations/pending_users/list"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      pending_users: {
+        organization_invitation_id: string
+        organization_id: string
+        email: string | null
+        user_id: string | null
+        status: "pending" | "accepted" | "declined"
+        created_at: string | Date
+      }[]
+    }
+  }
+  "/organizations/pending_users/resend_invitation": {
+    route: "/organizations/pending_users/resend_invitation"
+    method: "POST"
+    queryParams: {}
+    jsonBody: {
+      organization_invitation_id: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
   "/organizations/remove_user": {
     route: "/organizations/remove_user"
     method: "POST" | "DELETE"
@@ -1208,6 +1248,7 @@ export interface Routes {
         building_id: string
         building_name: string
         building_roles: ("building:manager" | "building:operator")[]
+        created_at: string
       }[]
     }
   }
@@ -1260,46 +1301,6 @@ export interface Routes {
       first_name?: string | undefined
       last_name?: string | undefined
       title?: string | undefined
-    }
-    commonParams: {}
-    formData: {}
-    jsonResponse: {}
-  }
-  "/organizations/pending_users/delete": {
-    route: "/organizations/pending_users/delete"
-    method: "POST" | "DELETE"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {
-      organization_invitation_id: string
-    }
-    formData: {}
-    jsonResponse: {}
-  }
-  "/organizations/pending_users/list": {
-    route: "/organizations/pending_users/list"
-    method: "GET" | "POST"
-    queryParams: {}
-    jsonBody: {}
-    commonParams: {}
-    formData: {}
-    jsonResponse: {
-      pending_users: {
-        organization_invitation_id: string
-        organization_id: string
-        email: string | null
-        user_id: string | null
-        status: "pending" | "accepted" | "declined"
-        created_at: string | Date
-      }[]
-    }
-  }
-  "/organizations/pending_users/resend_invitation": {
-    route: "/organizations/pending_users/resend_invitation"
-    method: "POST"
-    queryParams: {}
-    jsonBody: {
-      organization_invitation_id: string
     }
     commonParams: {}
     formData: {}
