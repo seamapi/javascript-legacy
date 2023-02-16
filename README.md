@@ -3,7 +3,7 @@
 Control locks, lights and other internet of things devices with Seam's simple
 API.
 
-Check out [the documentation](./docs/modules.md) or some examples:
+Check out [the generated typescript docs](./docs/modules.md) or some examples:
 - [Getting Started Guide with Examples](https://docs.seam.co/github-seam-api-docs/device-guides/get-started-with-august-locks)
 - [CLI Usage](#cli-usage)
 - [Library Usage](#library-usage)
