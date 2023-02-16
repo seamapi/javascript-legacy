@@ -540,7 +540,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `URL` | extends keyof [`Routes`](../interfaces/SeamOSRouteTypes.Routes.md) |
-| `Method` | extends ``"GET"`` \| ``"POST"`` \| ``"DELETE"`` \| ``"PATCH"`` |
+| `Method` | extends ``"POST"`` \| ``"DELETE"`` \| ``"GET"`` \| ``"PATCH"`` |
 
 #### Parameters
 
