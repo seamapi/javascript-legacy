@@ -412,6 +412,9 @@ export interface Routes {
         devices: number
         incidents: number
         active_access_passes: number
+        low_battery_incidents: number
+        offline_account_incidents: number
+        device_incidents: number
       }
     }
   }
@@ -642,6 +645,7 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       building_id?: string | undefined
+      device_ids?: string[] | undefined
       linked_account_id?: string | undefined
       user_group_id?: string | undefined
       user_id?: string | undefined
@@ -742,8 +746,11 @@ export interface Routes {
     queryParams: {}
     jsonBody: {}
     commonParams: {
+      access_code_id?: string | undefined
+      access_pass_id?: string | undefined
       building_id?: string | undefined
       device_id?: string | undefined
+      linked_account_id?: string | undefined
       is_resolved?: boolean | undefined
       between?: (string | Date)[] | undefined
       query?: string | undefined
@@ -753,10 +760,12 @@ export interface Routes {
       incidents: {
         incident_id: string
         organization_id: string
-        linked_account_id: string
+        access_code_id: string | null
+        access_pass_id: string | null
         building_id: string | null
         device_id: string | null
         incident_type: string
+        linked_account_id: string | null
         started_at: string | Date
         ended_at: (string | Date) | null
         is_resolved: boolean
@@ -988,6 +997,7 @@ export interface Routes {
         total_active_access_passes: number
         incidents_in_period: number
         total_online_devices: number
+        total_devices: number
       }
     }
   }
