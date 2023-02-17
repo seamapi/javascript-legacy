@@ -87,6 +87,7 @@ ___
 | `get` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{ `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }\> |
 | `get_count_summary` | (`data`: `undefined` \| { `access_pass_id`: `string` ; `end?`: `string` \| `Date` ; `start`: `string` \| `Date`  }) => `Promise`<{ `total_uses`: `number` ; `uses_in_period`: `number`  }\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_id?`: `string` ; `query?`: `string`  }) => `Promise`<{ `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }[]\> |
+| `list_accessible_devices` | (`data`: `undefined` \| { `access_pass_id`: `string`  }) => `Promise`<{ `access_code_id`: ``null`` \| `string` ; `can_use_access_code`: `boolean` ; `can_use_remote_unlock`: `boolean` ; `code`: ``null`` \| `string` ; `device_id`: `string`  }[]\> |
 
 #### Defined in
 
@@ -126,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:199](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L199)
+[src/seam-os/client.ts:203](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L203)
 
 ___
 
@@ -146,7 +147,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:223](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L223)
+[src/seam-os/client.ts:227](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L227)
 
 ___
 
@@ -167,7 +168,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:234](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L234)
+[src/seam-os/client.ts:238](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L238)
 
 ___
 
@@ -183,7 +184,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:219](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L219)
+[src/seam-os/client.ts:223](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L223)
 
 ___
 
@@ -223,7 +224,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:246](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L246)
+[src/seam-os/client.ts:250](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L250)
 
 ___
 
@@ -240,7 +241,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:250](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L250)
+[src/seam-os/client.ts:254](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L254)
 
 ___
 
@@ -257,7 +258,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:255](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L255)
+[src/seam-os/client.ts:259](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L259)
 
 ___
 
@@ -275,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:260](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L260)
+[src/seam-os/client.ts:264](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L264)
 
 ___
 
@@ -294,12 +295,12 @@ ___
 | `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string`  }[]\> |
 | `pending_users` | `Object` |
 | `pending_users.delete` | (`data`: `undefined` \| { `organization_invitation_id`: `string`  }) => `Promise`<{}\> |
-| `pending_users.list` | (`data`: `undefined` \| {}) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `organization_id`: `string` ; `organization_invitation_id`: `string` ; `role`: ``null`` \| `string` ; `status`: ``"pending"`` \| ``"accepted"`` \| ``"declined"`` ; `user_id`: ``null`` \| `string`  }[]\> |
+| `pending_users.list` | (`data`: `undefined` \| {}) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `organization_id`: `string` ; `organization_invitation_id`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `status`: ``"pending"`` \| ``"accepted"`` \| ``"declined"`` ; `user_id`: ``null`` \| `string`  }[]\> |
 | `pending_users.resend_invitation` | (`data`: `undefined` \| { `organization_invitation_id`: `string`  }) => `Promise`<{}\> |
 | `pending_users.update` | (`data`: `undefined` \| { `organization_invitation_id`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``  }) => `Promise`<{}\> |
 | `remove_user` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
 | `update` | (`data`: `undefined` \| { `ext_seam_connect_api_key?`: `string` ; `name?`: `string`  }) => `Promise`<{}\> |
-| `update_user_role` | (`data`: `undefined` \| { `can_view_all_buildings?`: `boolean` ; `organization_roles?`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  }) => `Promise`<{}\> |
+| `update_user_role` | (`data`: `undefined` \| { `can_view_all_buildings?`: `boolean` ; `organization_roles`: `string`[] ; `user_id`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -325,7 +326,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:266](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L266)
+[src/seam-os/client.ts:270](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L270)
 
 ___
 
@@ -341,12 +342,12 @@ ___
 | `get` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id`: `string` ; `title`: ``null`` \| `string` ; `user_id`: `string`  }\> |
 | `get_building_roles` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `building_name`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[] ; `created_at`: `string`  }[]\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `user_group_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id`: `string` ; `title`: ``null`` \| `string` ; `user_id`: `string`  }[]\> |
-| `list_organization_roles` | (`data`: `undefined` \| { `user_ids?`: `string`[]  }) => `Promise`<{ `can_view_all_buildings`: `boolean` ; `organization_roles`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  }[]\> |
+| `list_organization_roles` | (`data`: `undefined` \| { `user_ids?`: `string`[]  }) => `Promise`<{ `can_view_all_buildings`: `boolean` ; `organization_roles`: `string`[] ; `user_id`: `string`  }[]\> |
 | `update` | (`data`: `undefined` \| { `first_name?`: `string` ; `last_name?`: `string` ; `title?`: `string` ; `user_id?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
-[src/seam-os/client.ts:276](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L276)
+[src/seam-os/client.ts:280](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L280)
 
 ## Methods
 

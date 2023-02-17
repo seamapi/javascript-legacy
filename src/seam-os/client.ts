@@ -193,6 +193,10 @@ export class SeamOS {
     ),
     list: this._getGrab("/access_passes/list", "access_passes"),
     delete: this._curriedPost("/access_passes/delete"),
+    list_accessible_devices: this._getGrab(
+      "/access_passes/list_accessible_devices",
+      "accessible_devices"
+    ),
     // update: this._curriedPost("/access_passes/update"),
   }
 
