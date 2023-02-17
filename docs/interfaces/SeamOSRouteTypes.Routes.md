@@ -1430,7 +1430,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | { `email`: `string` ; `role`: `string` ; `user_id?`: `string`  } \| { `email?`: `string` ; `role`: `string` ; `user_id`: `string`  } |
+| `commonParams` | { `email`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `user_id?`: `string`  } \| { `email?`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `user_id`: `string`  } |
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |

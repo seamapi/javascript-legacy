@@ -1010,12 +1010,12 @@ export interface Routes {
       | {
           user_id?: string | undefined
           email: string
-          role: string
+          role: "org:superadmin" | "org:admin" | "org:member"
         }
       | {
           user_id: string
           email?: string | undefined
-          role: string
+          role: "org:superadmin" | "org:admin" | "org:member"
         }
     formData: {}
     jsonResponse: {}
