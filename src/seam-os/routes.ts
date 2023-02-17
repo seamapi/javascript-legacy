@@ -1010,10 +1010,12 @@ export interface Routes {
       | {
           user_id?: string | undefined
           email: string
+          role: string
         }
       | {
           user_id: string
           email?: string | undefined
+          role: string
         }
     formData: {}
     jsonResponse: {}
