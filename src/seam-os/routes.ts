@@ -1077,6 +1077,18 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
+  "/organizations/pending_users/update": {
+    route: "/organizations/pending_users/update"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      organization_invitation_id: string
+      role: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
   "/organizations/remove_user": {
     route: "/organizations/remove_user"
     method: "POST" | "DELETE"
