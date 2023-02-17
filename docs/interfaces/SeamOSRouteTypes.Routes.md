@@ -63,6 +63,7 @@
 - [/organizations/pending\_users/delete](SeamOSRouteTypes.Routes.md#/organizations/pending_users/delete)
 - [/organizations/pending\_users/list](SeamOSRouteTypes.Routes.md#/organizations/pending_users/list)
 - [/organizations/pending\_users/resend\_invitation](SeamOSRouteTypes.Routes.md#/organizations/pending_users/resend_invitation)
+- [/organizations/pending\_users/update](SeamOSRouteTypes.Routes.md#/organizations/pending_users/update)
 - [/organizations/remove\_user](SeamOSRouteTypes.Routes.md#/organizations/remove_user)
 - [/organizations/update](SeamOSRouteTypes.Routes.md#/organizations/update)
 - [/organizations/update\_user\_role](SeamOSRouteTypes.Routes.md#/organizations/update_user_role)
@@ -1436,7 +1437,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | { `email`: `string` ; `user_id?`: `string`  } \| { `email?`: `string` ; `user_id`: `string`  } |
+| `commonParams` | { `email`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `user_id?`: `string`  } \| { `email?`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `user_id`: `string`  } |
 | `formData` | `Object` |
 | `jsonBody` | `Object` |
 | `jsonResponse` | `Object` |
@@ -1470,7 +1471,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1028](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1028)
+[src/seam-os/routes.ts:1030](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1030)
 
 ___
 
@@ -1493,7 +1494,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1045](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1045)
+[src/seam-os/routes.ts:1047](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1047)
 
 ___
 
@@ -1516,7 +1517,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1056](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1056)
+[src/seam-os/routes.ts:1058](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1058)
 
 ___
 
@@ -1539,7 +1540,31 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1074](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1074)
+[src/seam-os/routes.ts:1076](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1076)
+
+___
+
+### /organizations/pending\_users/update
+
+• **/organizations/pending\_users/update**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `commonParams` | `Object` |
+| `commonParams.organization_invitation_id` | `string` |
+| `commonParams.role` | `string` |
+| `formData` | `Object` |
+| `jsonBody` | `Object` |
+| `jsonResponse` | `Object` |
+| `method` | ``"POST"`` \| ``"PATCH"`` |
+| `queryParams` | `Object` |
+| `route` | ``"/organizations/pending_users/update"`` |
+
+#### Defined in
+
+[src/seam-os/routes.ts:1087](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1087)
 
 ___
 
@@ -1562,7 +1587,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1085](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1085)
+[src/seam-os/routes.ts:1099](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1099)
 
 ___
 
@@ -1586,7 +1611,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1096](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1096)
+[src/seam-os/routes.ts:1110](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1110)
 
 ___
 
@@ -1611,7 +1636,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1108](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1108)
+[src/seam-os/routes.ts:1122](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1122)
 
 ___
 
@@ -1635,7 +1660,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1123](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1123)
+[src/seam-os/routes.ts:1137](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1137)
 
 ___
 
@@ -1663,7 +1688,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1135](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1135)
+[src/seam-os/routes.ts:1149](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1149)
 
 ___
 
@@ -1686,7 +1711,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1153](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1153)
+[src/seam-os/routes.ts:1167](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1167)
 
 ___
 
@@ -1714,7 +1739,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1164](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1164)
+[src/seam-os/routes.ts:1178](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1178)
 
 ___
 
@@ -1737,7 +1762,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1182](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1182)
+[src/seam-os/routes.ts:1196](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1196)
 
 ___
 
@@ -1761,7 +1786,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1198](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1198)
+[src/seam-os/routes.ts:1212](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1212)
 
 ___
 
@@ -1785,7 +1810,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1210](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1210)
+[src/seam-os/routes.ts:1224](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1224)
 
 ___
 
@@ -1808,7 +1833,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1222](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1222)
+[src/seam-os/routes.ts:1236](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1236)
 
 ___
 
@@ -1839,7 +1864,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1233](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1233)
+[src/seam-os/routes.ts:1247](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1247)
 
 ___
 
@@ -1863,7 +1888,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1254](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1254)
+[src/seam-os/routes.ts:1268](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1268)
 
 ___
 
@@ -1889,7 +1914,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1272](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1272)
+[src/seam-os/routes.ts:1286](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1286)
 
 ___
 
@@ -1913,7 +1938,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1295](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1295)
+[src/seam-os/routes.ts:1309](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1309)
 
 ___
 
@@ -1939,4 +1964,4 @@ ___
 
 #### Defined in
 
-[src/seam-os/routes.ts:1312](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1312)
+[src/seam-os/routes.ts:1326](https://github.com/seamapi/javascript/blob/main/src/seam-os/routes.ts#L1326)

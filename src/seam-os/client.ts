@@ -170,6 +170,7 @@ export class SeamOS {
       resend_invitation: this._curriedPost(
         "/organizations/pending_users/resend_invitation"
       ),
+      update: this._curriedPost("/organizations/pending_users/update"),
     },
   }
 

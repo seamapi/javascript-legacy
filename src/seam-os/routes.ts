@@ -1017,10 +1017,12 @@ export interface Routes {
       | {
           user_id?: string | undefined
           email: string
+          role: "org:superadmin" | "org:admin" | "org:member"
         }
       | {
           user_id: string
           email?: string | undefined
+          role: "org:superadmin" | "org:admin" | "org:member"
         }
     formData: {}
     jsonResponse: {}
@@ -1079,6 +1081,18 @@ export interface Routes {
       organization_invitation_id: string
     }
     commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
+  "/organizations/pending_users/update": {
+    route: "/organizations/pending_users/update"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      organization_invitation_id: string
+      role: string
+    }
     formData: {}
     jsonResponse: {}
   }
