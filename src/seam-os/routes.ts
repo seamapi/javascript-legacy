@@ -1000,6 +1000,11 @@ export interface Routes {
         incidents_in_period: number
         total_online_devices: number
         total_devices: number
+        total_buildings: number
+        total_linked_accounts: number
+        total_super_admins: number
+        total_admins: number
+        total_members: number
       }
     }
   }
