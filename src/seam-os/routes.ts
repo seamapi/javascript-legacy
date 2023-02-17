@@ -677,6 +677,7 @@ export interface Routes {
     commonParams: {
       queries: string[]
       building_id?: string | undefined
+      linked_account_id?: string | undefined
     }
     formData: {}
     jsonResponse: {
@@ -750,6 +751,7 @@ export interface Routes {
       access_pass_id?: string | undefined
       building_id?: string | undefined
       device_id?: string | undefined
+      device_ids?: string[] | undefined
       linked_account_id?: string | undefined
       is_resolved?: boolean | undefined
       between?: (string | Date)[] | undefined
