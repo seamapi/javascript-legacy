@@ -264,6 +264,25 @@ export interface Routes {
       }[]
     }
   }
+  "/access_passes/list_accessible_devices": {
+    route: "/access_passes/list_accessible_devices"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      access_pass_id: string
+    }
+    formData: {}
+    jsonResponse: {
+      accessible_devices: {
+        can_use_access_code: boolean
+        can_use_remote_unlock: boolean
+        device_id: string
+        access_code_id: string | null
+        code: string | null
+      }[]
+    }
+  }
   "/access_passes/update": {
     route: "/access_passes/update"
     method: "POST" | "PATCH"
@@ -1047,12 +1066,12 @@ export interface Routes {
       | {
           user_id?: string | undefined
           email: string
-          role?: ("org:superadmin" | "org:admin" | "org:member") | undefined
+          role: "org:superadmin" | "org:admin" | "org:member"
         }
       | {
           user_id: string
           email?: string | undefined
-          role?: ("org:superadmin" | "org:admin" | "org:member") | undefined
+          role: "org:superadmin" | "org:admin" | "org:member"
         }
     formData: {}
     jsonResponse: {}
@@ -1099,7 +1118,7 @@ export interface Routes {
         email: string | null
         user_id: string | null
         status: "pending" | "accepted" | "declined"
-        role: string | null
+        role: "org:superadmin" | "org:admin" | "org:member"
         created_at: string | Date
       }[]
     }
@@ -1157,9 +1176,7 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       user_id: string
-      organization_roles?:
-        | ("org:superadmin" | "org:admin" | "org:member")[]
-        | undefined
+      organization_roles: string[]
       can_view_all_buildings?: boolean | undefined
     }
     formData: {}
@@ -1349,7 +1366,7 @@ export interface Routes {
     jsonResponse: {
       user_organization_roles: {
         user_id: string
-        organization_roles: ("org:superadmin" | "org:admin" | "org:member")[]
+        organization_roles: string[]
         can_view_all_buildings: boolean
       }[]
     }
