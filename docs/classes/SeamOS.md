@@ -162,7 +162,7 @@ ___
 | `get` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_id?`: `string` ; `device_name?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { [x: string]: `unknown`;  } ; `warnings`: `unknown`[]  }\> |
 | `get_count_summary` | (`data`: `undefined` \| { `device_id`: `string`  }) => `Promise`<{ `active_access_passes`: `number`  }\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `device_ids?`: `string`[] ; `has_no_building?`: `boolean` ; `linked_account_id?`: `string` ; `query?`: `string` ; `user_group_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `building_id`: ``null`` \| `string` ; `created_at`: `string` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { [x: string]: `unknown`;  } ; `warnings`: `unknown`[]  }[]\> |
-| `list_counts` | (`data`: `undefined` \| { `building_id?`: `string` ; `queries`: `string`[]  }) => `Promise`<{ `count`: `number` ; `query`: `string`  }[]\> |
+| `list_counts` | (`data`: `undefined` \| { `building_id?`: `string` ; `linked_account_id?`: `string` ; `queries`: `string`[]  }) => `Promise`<{ `count`: `number` ; `query`: `string`  }[]\> |
 | `update` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/devices/update"``\>) => `Promise`<{}\> |
 
 #### Defined in
@@ -219,7 +219,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `list` | (`data`: `undefined` \| { `access_code_id?`: `string` ; `access_pass_id?`: `string` ; `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string` ; `is_resolved?`: `boolean` ; `linked_account_id?`: `string` ; `query?`: `string`  }) => `Promise`<{ `access_code_id`: ``null`` \| `string` ; `access_pass_id`: ``null`` \| `string` ; `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `ended_at`: ``null`` \| `string` \| `Date` ; `incident_id`: `string` ; `incident_type`: `string` ; `is_resolved`: `boolean` ; `linked_account_id`: ``null`` \| `string` ; `organization_id`: `string` ; `started_at`: `string` \| `Date`  }[]\> |
+| `list` | (`data`: `undefined` \| { `access_code_id?`: `string` ; `access_pass_id?`: `string` ; `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string` ; `device_ids?`: `string`[] ; `is_resolved?`: `boolean` ; `linked_account_id?`: `string` ; `query?`: `string`  }) => `Promise`<{ `access_code_id`: ``null`` \| `string` ; `access_pass_id`: ``null`` \| `string` ; `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `ended_at`: ``null`` \| `string` \| `Date` ; `incident_id`: `string` ; `incident_type`: `string` ; `is_resolved`: `boolean` ; `linked_account_id`: ``null`` \| `string` ; `organization_id`: `string` ; `started_at`: `string` \| `Date`  }[]\> |
 
 #### Defined in
 
