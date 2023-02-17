@@ -159,6 +159,10 @@ export class SeamOS {
     remove_user: this._curriedPost("/organizations/remove_user"),
     update: this._curriedPost("/organizations/update"),
     update_user_role: this._curriedPost("/organizations/update_user_role"),
+    get_count_summary: this._postGrab(
+      "/organizations/get_count_summary",
+      "organization_counts"
+    ),
 
     pending_users: {
       list: this._getGrab("/organizations/pending_users/list", "pending_users"),

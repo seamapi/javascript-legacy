@@ -677,6 +677,7 @@ export interface Routes {
     commonParams: {
       queries: string[]
       building_id?: string | undefined
+      linked_account_id?: string | undefined
     }
     formData: {}
     jsonResponse: {
@@ -750,6 +751,7 @@ export interface Routes {
       access_pass_id?: string | undefined
       building_id?: string | undefined
       device_id?: string | undefined
+      device_ids?: string[] | undefined
       linked_account_id?: string | undefined
       is_resolved?: boolean | undefined
       between?: (string | Date)[] | undefined
@@ -998,6 +1000,11 @@ export interface Routes {
         incidents_in_period: number
         total_online_devices: number
         total_devices: number
+        total_buildings: number
+        total_linked_accounts: number
+        total_super_admins: number
+        total_admins: number
+        total_members: number
       }
     }
   }
