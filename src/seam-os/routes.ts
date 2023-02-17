@@ -345,12 +345,8 @@ export interface Routes {
     queryParams: {}
     jsonBody: {
       name: string
-      location?:
-        | {
-            [x: string]: any
-          }
-        | undefined
       timezone: string
+      ext_google_place_id: string
     }
     commonParams: {}
     formData: {}
@@ -359,7 +355,18 @@ export interface Routes {
         building_id: string
         organization_id: string
         name: string
-        location?: any | null
+        location: {
+          full_address_string: string
+          city: string
+          state: string
+          addr1: string
+          addr2: string | null
+          zip_code: string
+          latitude: number
+          longitude: number
+          country: string
+          ext_google_place_id: string | null
+        }
         timezone: string
         created_at: string | Date
       }
@@ -390,7 +397,18 @@ export interface Routes {
         building_id: string
         organization_id: string
         name: string
-        location?: any | null
+        location: {
+          full_address_string: string
+          city: string
+          state: string
+          addr1: string
+          addr2: string | null
+          zip_code: string
+          latitude: number
+          longitude: number
+          country: string
+          ext_google_place_id: string | null
+        }
         timezone: string
         created_at: string | Date
       }
@@ -432,7 +450,18 @@ export interface Routes {
         building_id: string
         organization_id: string
         name: string
-        location?: any | null
+        location: {
+          full_address_string: string
+          city: string
+          state: string
+          addr1: string
+          addr2: string | null
+          zip_code: string
+          latitude: number
+          longitude: number
+          country: string
+          ext_google_place_id: string | null
+        }
         timezone: string
         created_at: string | Date
       }[]
@@ -488,6 +517,7 @@ export interface Routes {
       building_id: string
       name?: string | undefined
       timezone?: string | undefined
+      ext_google_place_id?: string | undefined
     }
     formData: {}
     jsonResponse: {}
@@ -1017,12 +1047,12 @@ export interface Routes {
       | {
           user_id?: string | undefined
           email: string
-          role: "org:superadmin" | "org:admin" | "org:member"
+          role?: ("org:superadmin" | "org:admin" | "org:member") | undefined
         }
       | {
           user_id: string
           email?: string | undefined
-          role: "org:superadmin" | "org:admin" | "org:member"
+          role?: ("org:superadmin" | "org:admin" | "org:member") | undefined
         }
     formData: {}
     jsonResponse: {}
@@ -1069,6 +1099,7 @@ export interface Routes {
         email: string | null
         user_id: string | null
         status: "pending" | "accepted" | "declined"
+        role: string | null
         created_at: string | Date
       }[]
     }
@@ -1091,7 +1122,7 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       organization_invitation_id: string
-      role: string
+      role: "org:superadmin" | "org:admin" | "org:member"
     }
     formData: {}
     jsonResponse: {}
