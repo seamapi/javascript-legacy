@@ -115,14 +115,14 @@ ___
 | :------ | :------ |
 | `add_device` | (`data`: `undefined` \| { `building_id`: `string` ; `device_id`: `string`  }) => `Promise`<{}\> |
 | `add_user` | (`data`: `undefined` \| [`RouteRequestBody`](../modules/SeamOSRouteTypes.md#routerequestbody)<``"/buildings/add_user"``\>) => `Promise`<{}\> |
-| `create` | (`data`: `undefined` \| { `ext_google_place_id`: `string` ; `name`: `string` ; `timezone`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }\> |
+| `create` | (`data`: `undefined` \| { `ext_google_place_id`: `string` ; `image_url?`: `string` ; `name`: `string` ; `timezone`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }\> |
 | `delete` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{}\> |
-| `get` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }\> |
+| `get` | (`data`: `undefined` \| { `building_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }\> |
 | `get_count_summary` | (`data`: `undefined` \| { `building_id?`: `string` ; `end?`: `string` \| `Date` ; `start?`: `string` \| `Date`  }) => `Promise`<{ `active_access_passes`: `number` ; `device_incidents`: `number` ; `devices`: `number` ; `incidents`: `number` ; `low_battery_incidents`: `number` ; `offline_account_incidents`: `number`  }\> |
-| `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }[]\> |
+| `list` | (`data`: `undefined` \| { `query?`: `string`  }) => `Promise`<{ `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }[]\> |
 | `list_count_summaries` | (`data`: `undefined` \| { `building_ids`: `string`[]  }) => `Promise`<{ `active_access_passes`: `number` ; `devices`: `number` ; `incidents`: `number`  }[]\> |
 | `remove_user` | (`data`: `undefined` \| { `building_id`: `string` ; `user_id`: `string`  }) => `Promise`<{}\> |
-| `update` | (`data`: `undefined` \| { `building_id`: `string` ; `ext_google_place_id?`: `string` ; `name?`: `string` ; `timezone?`: `string`  }) => `Promise`<{}\> |
+| `update` | (`data`: `undefined` \| { `building_id`: `string` ; `ext_google_place_id?`: `string` ; `image_url?`: `string` ; `name?`: `string` ; `timezone?`: `string`  }) => `Promise`<{}\> |
 | `update_user_role` | (`data`: `undefined` \| { `building_id`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[] ; `user_id`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
@@ -300,7 +300,7 @@ ___
 | `pending_users.update` | (`data`: `undefined` \| { `organization_invitation_id`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``  }) => `Promise`<{}\> |
 | `remove_user` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{}\> |
 | `update` | (`data`: `undefined` \| { `ext_seam_connect_api_key?`: `string` ; `name?`: `string`  }) => `Promise`<{}\> |
-| `update_user_role` | (`data`: `undefined` \| { `can_view_all_buildings?`: `boolean` ; `organization_roles`: `string`[] ; `user_id`: `string`  }) => `Promise`<{}\> |
+| `update_user_role` | (`data`: `undefined` \| { `can_view_all_buildings?`: `boolean` ; `organization_roles?`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
 
@@ -342,7 +342,7 @@ ___
 | `get` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id`: `string` ; `title`: ``null`` \| `string` ; `user_id`: `string`  }\> |
 | `get_building_roles` | (`data`: `undefined` \| { `user_id`: `string`  }) => `Promise`<{ `building_id`: `string` ; `building_name`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[] ; `created_at`: `string`  }[]\> |
 | `list` | (`data`: `undefined` \| { `building_id?`: `string` ; `user_group_id?`: `string` ; `user_id?`: `string`  }) => `Promise`<{ `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id`: `string` ; `title`: ``null`` \| `string` ; `user_id`: `string`  }[]\> |
-| `list_organization_roles` | (`data`: `undefined` \| { `user_ids?`: `string`[]  }) => `Promise`<{ `can_view_all_buildings`: `boolean` ; `organization_roles`: `string`[] ; `user_id`: `string`  }[]\> |
+| `list_organization_roles` | (`data`: `undefined` \| { `user_ids?`: `string`[]  }) => `Promise`<{ `can_view_all_buildings`: `boolean` ; `organization_roles`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  }[]\> |
 | `update` | (`data`: `undefined` \| { `first_name?`: `string` ; `last_name?`: `string` ; `title?`: `string` ; `user_id?`: `string`  }) => `Promise`<{}\> |
 
 #### Defined in
