@@ -364,6 +364,7 @@ export interface Routes {
     queryParams: {}
     jsonBody: {
       name: string
+      image_url?: string | undefined
       timezone: string
       ext_google_place_id: string
     }
@@ -373,6 +374,7 @@ export interface Routes {
       building: {
         building_id: string
         organization_id: string
+        image_url: string | null
         name: string
         location: {
           full_address_string: string
@@ -415,6 +417,7 @@ export interface Routes {
       building: {
         building_id: string
         organization_id: string
+        image_url: string | null
         name: string
         location: {
           full_address_string: string
@@ -468,6 +471,7 @@ export interface Routes {
       buildings: {
         building_id: string
         organization_id: string
+        image_url: string | null
         name: string
         location: {
           full_address_string: string
@@ -535,6 +539,7 @@ export interface Routes {
     commonParams: {
       building_id: string
       name?: string | undefined
+      image_url?: string | undefined
       timezone?: string | undefined
       ext_google_place_id?: string | undefined
     }
@@ -1176,7 +1181,9 @@ export interface Routes {
     jsonBody: {}
     commonParams: {
       user_id: string
-      organization_roles: string[]
+      organization_roles?:
+        | ("org:superadmin" | "org:admin" | "org:member")[]
+        | undefined
       can_view_all_buildings?: boolean | undefined
     }
     formData: {}
@@ -1366,7 +1373,7 @@ export interface Routes {
     jsonResponse: {
       user_organization_roles: {
         user_id: string
-        organization_roles: string[]
+        organization_roles: ("org:superadmin" | "org:admin" | "org:member")[]
         can_view_all_buildings: boolean
       }[]
     }
