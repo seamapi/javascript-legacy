@@ -1,5 +1,9 @@
 import { AxiosRequestConfig, AxiosInstance } from "axios"
-import { RouteRequestBody, RouteRequestParams, Routes } from "./routes"
+import {
+  RouteRequestBody,
+  RouteRequestParams,
+  Routes as BuiltinRoutes,
+} from "./routes"
 import defaultAxios from "axios"
 import { version } from "../../package.json"
 
@@ -37,16 +41,27 @@ export const getSeamOSClientOptionsWithDefaults = (
 }
 
 export interface ExtendedAxiosRequestConfig<
+  Routes extends {
+    [route: string]: {
+      route: string
+      method: "GET" | "POST" | "PUT" | "DELETE" | "PATCH"
+      queryParams: any
+      jsonBody: any
+      commonParams: any
+      formData: any
+      jsonResponse: any
+    }
+  },
   URL extends keyof Routes,
   Method extends Routes[URL]["method"]
 > extends Omit<AxiosRequestConfig, "url" | "method" | "data"> {
   url: URL
   method: Method
-  params?: RouteRequestParams<URL>
-  data?: RouteRequestBody<URL>
+  params?: RouteRequestParams<Routes, URL>
+  data?: RouteRequestBody<Routes, URL>
 }
 
-export class SeamOS {
+export class SeamOS<Routes = BuiltinRoutes> {
   axios: AxiosInstance
 
   constructor(apiKeyOrOptions?: string | SeamOSClientOptions) {
@@ -84,7 +99,7 @@ export class SeamOS {
     URL extends keyof Routes,
     Method extends Routes[URL]["method"]
   >(
-    request: ExtendedAxiosRequestConfig<URL, Method>
+    request: ExtendedAxiosRequestConfig<Routes, URL, Method>
   ): Promise<Routes[URL]["jsonResponse"]> {
     const res = await this.axios.request(request)
     return res.data
@@ -92,15 +107,15 @@ export class SeamOS {
 
   get<URL extends keyof Routes>(
     url: URL,
-    config?: ExtendedAxiosRequestConfig<URL, "GET">
+    config?: ExtendedAxiosRequestConfig<Routes, URL, "GET">
   ): Promise<Routes[URL]["jsonResponse"]> {
     return this.makeRequest({ url, method: "GET", ...config })
   }
 
   post<URL extends keyof Routes>(
     url: URL,
-    data: ExtendedAxiosRequestConfig<URL, "POST">["data"],
-    config?: ExtendedAxiosRequestConfig<URL, "POST">
+    data: ExtendedAxiosRequestConfig<Routes, URL, "POST">["data"],
+    config?: ExtendedAxiosRequestConfig<Routes, URL, "POST">
   ): Promise<Routes[URL]["jsonResponse"]> {
     return this.makeRequest({ url, method: "POST", data, ...config })
   }
@@ -108,7 +123,7 @@ export class SeamOS {
   private _curriedPost =
     <URL extends keyof Routes>(url: URL) =>
     (
-      data: ExtendedAxiosRequestConfig<URL, "POST">["data"]
+      data: ExtendedAxiosRequestConfig<Routes, URL, "POST">["data"]
     ): Promise<Routes[URL]["jsonResponse"]> => {
       return this.post(url, data)
     }
@@ -122,7 +137,7 @@ export class SeamOS {
       innerObject: InnerObject
     ) =>
     async (
-      data: ExtendedAxiosRequestConfig<URL, "POST">["data"]
+      data: ExtendedAxiosRequestConfig<Routes, URL, "POST">["data"]
     ): Promise<Routes[URL]["jsonResponse"][InnerObject]> => {
       const res = await this.post(url, data)
       return res[innerObject]
@@ -137,7 +152,7 @@ export class SeamOS {
       innerObject: InnerObject
     ) =>
     async (
-      data: ExtendedAxiosRequestConfig<URL, "GET">["data"]
+      data: ExtendedAxiosRequestConfig<Routes, URL, "GET">["data"]
     ): Promise<Routes[URL]["jsonResponse"][InnerObject]> => {
       const res = await this.post(url, data)
       return res[innerObject]
@@ -146,7 +161,7 @@ export class SeamOS {
   private _curriedGet =
     <URL extends keyof Routes>(url: URL) =>
     (
-      data: ExtendedAxiosRequestConfig<URL, "POST">["data"]
+      data: ExtendedAxiosRequestConfig<Routes, URL, "POST">["data"]
     ): Promise<Routes[URL]["jsonResponse"]> => {
       return this.post(url, data)
     }
