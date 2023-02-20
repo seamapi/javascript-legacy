@@ -132,4 +132,5 @@ export interface EventsListRequest {
   device_id?: string
   event_types?: string[]
   event_type?: string
+  connected_account_id?: string
 }
