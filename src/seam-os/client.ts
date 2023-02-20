@@ -6,6 +6,13 @@ import {
 } from "./routes"
 import defaultAxios from "axios"
 import { version } from "../../package.json"
+import TypedAxios, {
+  ExtendedAxiosRequestConfig,
+  APIDef,
+  RouteResponse,
+  AnyRoutePath,
+  HTTPMethod,
+} from "typed-axios-instance"
 
 export interface SeamOSClientOptions {
   /* Seam API Key */
@@ -40,28 +47,30 @@ export const getSeamOSClientOptionsWithDefaults = (
   }
 }
 
-export interface ExtendedAxiosRequestConfig<
-  Routes extends {
-    [route: string]: {
-      route: string
-      method: "GET" | "POST" | "PUT" | "DELETE" | "PATCH"
-      queryParams: any
-      jsonBody: any
-      commonParams: any
-      formData: any
-      jsonResponse: any
-    }
-  },
-  URL extends keyof Routes,
-  Method extends Routes[URL]["method"]
-> extends Omit<AxiosRequestConfig, "url" | "method" | "data"> {
-  url: URL
-  method: Method
-  params?: RouteRequestParams<Routes, URL>
-  data?: RouteRequestBody<Routes, URL>
-}
+// export interface ExtendedAxiosRequestConfig<
+//   Routes extends {
+//     [route: string]: {
+//       route: string
+//       method: "GET" | "POST" | "PUT" | "DELETE" | "PATCH"
+//       queryParams: any
+//       jsonBody: any
+//       commonParams: any
+//       formData: any
+//       jsonResponse: any
+//     }
+//   },
+//   URL extends AnyRoutePath<Routes>,
+//   Method extends Routes[URL]["method"]
+// > extends Omit<AxiosRequestConfig, "url" | "method" | "data"> {
+//   url: URL
+//   method: Method
+//   params?: RouteRequestParams<Routes, URL>
+//   data?: RouteRequestBody<Routes, URL>
+// }
 
-export class SeamOS<Routes = BuiltinRoutes> {
+type BuiltinRoutePaths = keyof BuiltinRoutes
+
+export class SeamOS<Routes extends APIDef = BuiltinRoutes> {
   axios: AxiosInstance
 
   constructor(apiKeyOrOptions?: string | SeamOSClientOptions) {
@@ -95,74 +104,79 @@ export class SeamOS<Routes = BuiltinRoutes> {
     })
   }
 
-  async makeRequest<
-    URL extends keyof Routes,
-    Method extends Routes[URL]["method"]
-  >(
-    request: ExtendedAxiosRequestConfig<Routes, URL, Method>
-  ): Promise<Routes[URL]["jsonResponse"]> {
-    const res = await this.axios.request(request)
+  async makeRequest<URL extends string, Method extends HTTPMethod>(
+    request: URL extends AnyRoutePath<Routes>
+      ? ExtendedAxiosRequestConfig<Routes, URL, Method>
+      : never
+  ): Promise<
+    URL extends AnyRoutePath<Routes> ? RouteResponse<Routes, URL> : never
+  > {
+    const res = await this.axios.request(request as any)
     return res.data
   }
 
-  get<URL extends keyof Routes>(
+  get<URL extends AnyRoutePath<Routes> | BuiltinRoutePaths>(
     url: URL,
-    config?: ExtendedAxiosRequestConfig<Routes, URL, "GET">
-  ): Promise<Routes[URL]["jsonResponse"]> {
-    return this.makeRequest({ url, method: "GET", ...config })
+    config?: URL extends AnyRoutePath<Routes>
+      ? ExtendedAxiosRequestConfig<Routes, URL, "GET">
+      : never
+  ): Promise<
+    URL extends AnyRoutePath<Routes> ? RouteResponse<Routes, URL> : never
+  > {
+    return this.makeRequest({ url, method: "GET", ...config } as any)
   }
 
-  post<URL extends keyof Routes>(
+  post<URL extends AnyRoutePath<Routes>>(
     url: URL,
     data: ExtendedAxiosRequestConfig<Routes, URL, "POST">["data"],
     config?: ExtendedAxiosRequestConfig<Routes, URL, "POST">
-  ): Promise<Routes[URL]["jsonResponse"]> {
-    return this.makeRequest({ url, method: "POST", data, ...config })
+  ): Promise<RouteResponse<Routes, URL>> {
+    return this.makeRequest({ url, method: "POST", data, ...config } as any)
   }
 
   private _curriedPost =
-    <URL extends keyof Routes>(url: URL) =>
+    <URL extends AnyRoutePath<Routes>>(url: URL) =>
     (
       data: ExtendedAxiosRequestConfig<Routes, URL, "POST">["data"]
-    ): Promise<Routes[URL]["jsonResponse"]> => {
+    ): Promise<RouteResponse<Routes, URL>> => {
       return this.post(url, data)
     }
 
   private _postGrab =
     <
-      URL extends keyof Routes,
-      InnerObject extends keyof Routes[URL]["jsonResponse"]
+      URL extends AnyRoutePath<Routes>,
+      InnerObject extends keyof RouteResponse<Routes, URL>
     >(
       url: URL,
       innerObject: InnerObject
     ) =>
     async (
       data: ExtendedAxiosRequestConfig<Routes, URL, "POST">["data"]
-    ): Promise<Routes[URL]["jsonResponse"][InnerObject]> => {
-      const res = await this.post(url, data)
+    ): Promise<RouteResponse<Routes, URL>[InnerObject]> => {
+      const res: any = await this.post(url, data)
       return res[innerObject]
     }
 
   private _getGrab =
     <
-      URL extends keyof Routes,
-      InnerObject extends keyof Routes[URL]["jsonResponse"]
+      URL extends AnyRoutePath<Routes> | keyof BuiltinRoutes,
+      InnerObject extends keyof RouteResponse<Routes, URL>
     >(
       url: URL,
       innerObject: InnerObject
     ) =>
     async (
       data: ExtendedAxiosRequestConfig<Routes, URL, "GET">["data"]
-    ): Promise<Routes[URL]["jsonResponse"][InnerObject]> => {
-      const res = await this.post(url, data)
+    ): Promise<RouteResponse<Routes, URL>[InnerObject]> => {
+      const res: any = await this.post(url, data)
       return res[innerObject]
     }
 
   private _curriedGet =
-    <URL extends keyof Routes>(url: URL) =>
+    <URL extends AnyRoutePath<Routes>>(url: URL) =>
     (
       data: ExtendedAxiosRequestConfig<Routes, URL, "POST">["data"]
-    ): Promise<Routes[URL]["jsonResponse"]> => {
+    ): Promise<RouteResponse<Routes, URL>> => {
       return this.post(url, data)
     }
 

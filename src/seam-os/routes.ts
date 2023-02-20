@@ -1,4 +1,4 @@
-export interface Routes {
+export type Routes = {
   "/access_codes/create": {
     route: "/access_codes/create"
     method: "POST"
