@@ -6,6 +6,7 @@
 
 ### Properties
 
+- [connected\_account\_id](EventsListRequest.md#connected_account_id)
 - [device\_id](EventsListRequest.md#device_id)
 - [device\_ids](EventsListRequest.md#device_ids)
 - [event\_type](EventsListRequest.md#event_type)
@@ -13,6 +14,16 @@
 - [since](EventsListRequest.md#since)
 
 ## Properties
+
+### connected\_account\_id
+
+• `Optional` **connected\_account\_id**: `string`
+
+#### Defined in
+
+[src/types/route-requests.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L135)
+
+___
 
 ### device\_id
 
