@@ -184,7 +184,22 @@ test(
   },
   "AccessCode"
 )
-
+test(
+  "change type to timebound",
+  testAPIMethod("accessCodes.update"),
+  {
+    args: (seed) => [
+      {
+        access_code_id: seed.devices.schlageLock.accessCode.access_code_id,
+        name: "new name",
+        starts_at: new Date(),
+        ends_at: new Date(Date.now() + 1000 * 60 * 60),
+      },
+    ],
+    modifiesState: true,
+  },
+  "TimeBoundAccessCode"
+)
 test(
   "scheduled",
   testAPIMethod("accessCodes.create"),
@@ -202,7 +217,6 @@ test(
   },
   "AccessCode"
 )
-
 test(
   testAPIMethod("accessCodes.update"),
   {
@@ -216,7 +230,20 @@ test(
   },
   "AccessCode"
 )
-
+test(
+  "change type to ongoing",
+  testAPIMethod("accessCodes.update"),
+  {
+    args: (seed) => [
+      {
+        access_code_id: seed.devices.augustLock.accessCode.access_code_id,
+        type: "ongoing",
+      },
+    ],
+    modifiesState: true,
+  },
+  "OngoingAccessCode"
+)
 test(testAPIMethod("connectedAccounts.list"), {}, "ConnectedAccount[]")
 test(
   "by email",
