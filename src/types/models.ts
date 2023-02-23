@@ -58,9 +58,15 @@ export interface SeamWarning {
   message: string
 }
 
+export type BatteryStatus = "low" | "good" | "full"
+
 export type CommonDeviceProperties = {
   name: string
   online: boolean
+  battery?: {
+    level: number
+    status: BatteryStatus
+  }
 }
 export interface Device<
   Properties extends CommonDeviceProperties,
