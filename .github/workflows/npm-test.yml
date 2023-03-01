@@ -79,3 +79,4 @@ jobs:
           state: ${{ job.status }}
           sha: ${{ github.event.inputs.connectSha }}
           repository: seam-connect
+          target_url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
