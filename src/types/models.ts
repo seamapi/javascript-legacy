@@ -71,7 +71,7 @@ export type CommonDeviceProperties = {
 
 export type DeviceLocation = {
   location_name?: string
-  time_zone?: string
+  timezone?: string
 }
 
 export interface Device<

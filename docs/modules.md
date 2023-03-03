@@ -360,7 +360,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `location_name?` | `string` |
-| `time_zone?` | `string` |
+| `timezone?` | `string` |
 
 #### Defined in
 
