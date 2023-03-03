@@ -98,6 +98,7 @@
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
 - [DeviceDeleteRequest](modules.md#devicedeleterequest)
 - [DeviceGetRequest](modules.md#devicegetrequest)
+- [DeviceLocation](modules.md#devicelocation)
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [Event](modules.md#event)
@@ -151,7 +152,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:209](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L209)
+[src/types/models.ts:218](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L218)
 
 ___
 
@@ -270,7 +271,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L161)
+[src/types/models.ts:170](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L170)
 
 ___
 
@@ -280,7 +281,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:116](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L116)
+[src/types/models.ts:125](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L125)
 
 ___
 
@@ -290,7 +291,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:113](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L113)
+[src/types/models.ts:122](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L122)
 
 ___
 
@@ -350,6 +351,23 @@ ___
 
 ___
 
+### DeviceLocation
+
+Ƭ **DeviceLocation**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `location_name?` | `string` |
+| `time_zone?` | `string` |
+
+#### Defined in
+
+[src/types/models.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L72)
+
+___
+
 ### DeviceType
 
 Ƭ **DeviceType**: [`LockDeviceType`](modules.md#lockdevicetype) \| [`NoiseDetectionDeviceType`](modules.md#noisedetectiondevicetype)
@@ -385,7 +403,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:241](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L241)
+[src/types/models.ts:250](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L250)
 
 ___
 
@@ -395,7 +413,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:114](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L114)
+[src/types/models.ts:123](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L123)
 
 ___
 
