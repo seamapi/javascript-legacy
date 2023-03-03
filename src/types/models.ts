@@ -68,6 +68,12 @@ export type CommonDeviceProperties = {
     status: BatteryStatus
   }
 }
+
+export type DeviceLocation = {
+  location_name?: string
+  timezone?: string
+}
+
 export interface Device<
   Properties extends CommonDeviceProperties,
   Type = DeviceType
@@ -75,7 +81,7 @@ export interface Device<
   device_id: string
   workspace_id: string
   properties: Properties
-  location: null
+  location?: DeviceLocation | null
   device_type: Type
   connected_account_id: string
   capabilities_supported: unknown[]
@@ -91,18 +97,21 @@ export interface LockProperties extends CommonDeviceProperties {
   has_direct_power?: boolean
   manufacturer?: string
   supported_code_lengths?: number[]
+  serial_number?: string
 
   schlage_metadata?: {
     device_id: string
     device_name: string
     access_code_length: number
     model?: string
+    location_id?: string
   }
 
   august_metadata?: {
     lock_id: string
     lock_name: string
     house_name: string
+    house_id?: string
     has_keypad: boolean
     model?: string
   }

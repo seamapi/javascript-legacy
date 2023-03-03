@@ -22,6 +22,7 @@
 - [name](LockProperties.md#name)
 - [online](LockProperties.md#online)
 - [schlage\_metadata](LockProperties.md#schlage_metadata)
+- [serial\_number](LockProperties.md#serial_number)
 - [smartthings\_metadata](LockProperties.md#smartthings_metadata)
 - [supported\_code\_lengths](LockProperties.md#supported_code_lengths)
 
@@ -36,6 +37,7 @@
 | Name | Type |
 | :------ | :------ |
 | `has_keypad` | `boolean` |
+| `house_id?` | `string` |
 | `house_name` | `string` |
 | `lock_id` | `string` |
 | `lock_name` | `string` |
@@ -43,7 +45,7 @@
 
 #### Defined in
 
-[src/types/models.ts:102](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L102)
+[src/types/models.ts:110](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L110)
 
 ___
 
@@ -74,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:90](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L90)
+[src/types/models.ts:96](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L96)
 
 ___
 
@@ -84,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:89](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L89)
+[src/types/models.ts:95](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L95)
 
 ___
 
@@ -94,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:91](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L91)
+[src/types/models.ts:97](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L97)
 
 ___
 
@@ -104,7 +106,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:88](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L88)
+[src/types/models.ts:94](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L94)
 
 ___
 
@@ -114,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:92](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L92)
+[src/types/models.ts:98](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L98)
 
 ___
 
@@ -157,11 +159,22 @@ ___
 | `access_code_length` | `number` |
 | `device_id` | `string` |
 | `device_name` | `string` |
+| `location_id?` | `string` |
 | `model?` | `string` |
 
 #### Defined in
 
-[src/types/models.ts:95](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L95)
+[src/types/models.ts:102](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L102)
+
+___
+
+### serial\_number
+
+• `Optional` **serial\_number**: `string`
+
+#### Defined in
+
+[src/types/models.ts:100](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L100)
 
 ___
 
@@ -171,7 +184,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:110](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L110)
+[src/types/models.ts:119](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L119)
 
 ___
 
@@ -181,4 +194,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:93](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L93)
+[src/types/models.ts:99](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L99)
