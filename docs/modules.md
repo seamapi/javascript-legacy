@@ -297,7 +297,7 @@ ___
 
 ### BatteryStatus
 
-Ƭ **BatteryStatus**: ``"low"`` \| ``"good"`` \| ``"full"``
+Ƭ **BatteryStatus**: ``"critical"`` \| ``"low"`` \| ``"good"`` \| ``"full"``
 
 #### Defined in
 

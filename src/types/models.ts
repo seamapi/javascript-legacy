@@ -58,7 +58,7 @@ export interface SeamWarning {
   message: string
 }
 
-export type BatteryStatus = "low" | "good" | "full"
+export type BatteryStatus = "critical" | "low" | "good" | "full"
 
 export type CommonDeviceProperties = {
   name: string
