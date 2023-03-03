@@ -81,7 +81,7 @@ export interface Device<
   device_id: string
   workspace_id: string
   properties: Properties
-  location?: DeviceLocation
+  location?: DeviceLocation | null
   device_type: Type
   connected_account_id: string
   capabilities_supported: unknown[]

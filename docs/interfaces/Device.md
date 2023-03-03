@@ -88,7 +88,7 @@ ___
 
 ### location
 
-• `Optional` **location**: [`DeviceLocation`](../modules.md#devicelocation)
+• `Optional` **location**: ``null`` \| [`DeviceLocation`](../modules.md#devicelocation)
 
 #### Defined in
 
