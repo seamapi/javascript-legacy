@@ -19,6 +19,7 @@
 - [has\_direct\_power](LockProperties.md#has_direct_power)
 - [locked](LockProperties.md#locked)
 - [manufacturer](LockProperties.md#manufacturer)
+- [max\_active\_codes\_supported](LockProperties.md#max_active_codes_supported)
 - [name](LockProperties.md#name)
 - [online](LockProperties.md#online)
 - [schlage\_metadata](LockProperties.md#schlage_metadata)
@@ -45,7 +46,7 @@
 
 #### Defined in
 
-[src/types/models.ts:110](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L110)
+[src/types/models.ts:111](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L111)
 
 ___
 
@@ -120,6 +121,16 @@ ___
 
 ___
 
+### max\_active\_codes\_supported
+
+• `Optional` **max\_active\_codes\_supported**: `number`
+
+#### Defined in
+
+[src/types/models.ts:100](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L100)
+
+___
+
 ### name
 
 • **name**: `string`
@@ -164,7 +175,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:102](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L102)
+[src/types/models.ts:103](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L103)
 
 ___
 
@@ -174,7 +185,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:100](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L100)
+[src/types/models.ts:101](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L101)
 
 ___
 
@@ -184,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:119](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L119)
+[src/types/models.ts:120](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L120)
 
 ___
 
