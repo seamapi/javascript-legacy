@@ -27,7 +27,7 @@ ConnectedAccountBaseRequest.connected\_account\_id
 
 #### Defined in
 
-[src/types/route-requests.ts:16](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L16)
+[src/types/route-requests.ts:18](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L18)
 
 ___
 
@@ -41,4 +41,4 @@ ConnectedAccountBaseRequest.email
 
 #### Defined in
 
-[src/types/route-requests.ts:17](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L17)
+[src/types/route-requests.ts:19](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L19)

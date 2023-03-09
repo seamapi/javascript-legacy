@@ -1,4 +1,6 @@
 import { SeamEvent } from "seamapi-types"
+import { CustomMetadata } from "./globals"
+
 export interface Workspace {
   workspace_id: string
   connect_partner_name?: string
@@ -189,6 +191,7 @@ export interface ConnectWebview {
   custom_redirect_failure_url?: null | string
   url: string
   authorized_at?: null | string
+  custom_metadata: CustomMetadata
 }
 
 export interface AccessCodeBase {
@@ -229,6 +232,7 @@ export interface ConnectedAccount {
   account_type: Provider
   errors: SeamError[]
   warnings: SeamWarning[]
+  custom_metadata: CustomMetadata
 }
 
 export interface Webhook {
