@@ -97,6 +97,7 @@ export interface LockProperties extends CommonDeviceProperties {
   has_direct_power?: boolean
   manufacturer?: string
   supported_code_lengths?: number[]
+  max_active_codes_supported?: number
   serial_number?: string
 
   schlage_metadata?: {
