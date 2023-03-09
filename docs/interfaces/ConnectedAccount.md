@@ -9,6 +9,7 @@
 - [account\_type](ConnectedAccount.md#account_type)
 - [connected\_account\_id](ConnectedAccount.md#connected_account_id)
 - [created\_at](ConnectedAccount.md#created_at)
+- [custom\_metadata](ConnectedAccount.md#custom_metadata)
 - [errors](ConnectedAccount.md#errors)
 - [user\_identifier](ConnectedAccount.md#user_identifier)
 - [warnings](ConnectedAccount.md#warnings)
@@ -21,7 +22,7 @@
 
 #### Defined in
 
-[src/types/models.ts:229](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L229)
+[src/types/models.ts:232](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L232)
 
 ___
 
@@ -31,7 +32,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:226](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L226)
+[src/types/models.ts:229](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L229)
 
 ___
 
@@ -41,7 +42,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:227](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L227)
+[src/types/models.ts:230](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L230)
+
+___
+
+### custom\_metadata
+
+• **custom\_metadata**: [`CustomMetadata`](../modules.md#custommetadata)
+
+#### Defined in
+
+[src/types/models.ts:235](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L235)
 
 ___
 
@@ -51,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:230](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L230)
+[src/types/models.ts:233](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L233)
 
 ___
 
@@ -61,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:228](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L228)
+[src/types/models.ts:231](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L231)
 
 ___
 
@@ -71,4 +82,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:231](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L231)
+[src/types/models.ts:234](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L234)

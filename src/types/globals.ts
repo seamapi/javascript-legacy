@@ -14,3 +14,5 @@ export interface ErroredAPIResponse {
 }
 
 export type APIResponse<T> = SuccessfulAPIResponse<T> | ErroredAPIResponse
+
+export type CustomMetadata = Record<string, string | number | boolean | null>
