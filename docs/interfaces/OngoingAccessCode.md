@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`AccessCodeBase`](AccessCodeBase.md)
+- [`ManagedAccessCodeBase`](ManagedAccessCodeBase.md)
 
   ↳ **`OngoingAccessCode`**
 
@@ -32,7 +32,7 @@
 
 #### Inherited from
 
-[AccessCodeBase](AccessCodeBase.md).[access_code_id](AccessCodeBase.md#access_code_id)
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[access_code_id](ManagedAccessCodeBase.md#access_code_id)
 
 #### Defined in
 
@@ -46,7 +46,7 @@ ___
 
 #### Inherited from
 
-[AccessCodeBase](AccessCodeBase.md).[code](AccessCodeBase.md#code)
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[code](ManagedAccessCodeBase.md#code)
 
 #### Defined in
 
@@ -60,11 +60,11 @@ ___
 
 #### Inherited from
 
-[AccessCodeBase](AccessCodeBase.md).[common_code_key](AccessCodeBase.md#common_code_key)
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[common_code_key](ManagedAccessCodeBase.md#common_code_key)
 
 #### Defined in
 
-[src/types/models.ts:202](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L202)
+[src/types/models.ts:207](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L207)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:210](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L210)
+[src/types/models.ts:213](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L213)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Inherited from
 
-[AccessCodeBase](AccessCodeBase.md).[device_id](AccessCodeBase.md#device_id)
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[device_id](ManagedAccessCodeBase.md#device_id)
 
 #### Defined in
 
@@ -98,11 +98,11 @@ ___
 
 #### Inherited from
 
-[AccessCodeBase](AccessCodeBase.md).[errors](AccessCodeBase.md#errors)
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[errors](ManagedAccessCodeBase.md#errors)
 
 #### Defined in
 
-[src/types/models.ts:204](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L204)
+[src/types/models.ts:202](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L202)
 
 ___
 
@@ -112,11 +112,11 @@ ___
 
 #### Inherited from
 
-[AccessCodeBase](AccessCodeBase.md).[is_waiting_for_code_assignment](AccessCodeBase.md#is_waiting_for_code_assignment)
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[is_waiting_for_code_assignment](ManagedAccessCodeBase.md#is_waiting_for_code_assignment)
 
 #### Defined in
 
-[src/types/models.ts:203](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L203)
+[src/types/models.ts:208](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L208)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Inherited from
 
-[AccessCodeBase](AccessCodeBase.md).[name](AccessCodeBase.md#name)
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[name](ManagedAccessCodeBase.md#name)
 
 #### Defined in
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:211](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L211)
+[src/types/models.ts:214](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L214)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:209](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L209)
+[src/types/models.ts:212](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L212)
 
 ___
 
@@ -160,8 +160,8 @@ ___
 
 #### Inherited from
 
-[AccessCodeBase](AccessCodeBase.md).[warnings](AccessCodeBase.md#warnings)
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[warnings](ManagedAccessCodeBase.md#warnings)
 
 #### Defined in
 
-[src/types/models.ts:205](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L205)
+[src/types/models.ts:203](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L203)

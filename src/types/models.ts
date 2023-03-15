@@ -199,24 +199,33 @@ export interface AccessCodeBase {
   device_id: string
   name?: string
   code: string | null
-  common_code_key?: string | null
-  is_waiting_for_code_assignment?: true
   errors?: SeamError[]
   warnings?: SeamWarning[]
 }
 
-export interface OngoingAccessCode extends AccessCodeBase {
+export interface ManagedAccessCodeBase extends AccessCodeBase {
+  common_code_key?: string | null
+  is_waiting_for_code_assignment?: true
+}
+
+export interface OngoingAccessCode extends ManagedAccessCodeBase {
   type: "ongoing"
   created_at: string
   status: "setting" | "set" | "removing" | "unset"
 }
 
-export interface TimeBoundAccessCode extends AccessCodeBase {
+export interface TimeBoundAccessCode extends ManagedAccessCodeBase {
   type: "time_bound"
   created_at: string
   status: "setting" | "set" | "removing" | "unset"
   starts_at: string
   ends_at: string
+}
+
+export interface UnmanagedAccessCode extends AccessCodeBase {
+  type: "ongoing"
+  created_at: string
+  status: "set"
 }
 
 export type AccessCode = OngoingAccessCode | TimeBoundAccessCode

@@ -61,6 +61,7 @@
 - [LockGetResponse](interfaces/LockGetResponse.md)
 - [LockProperties](interfaces/LockProperties.md)
 - [LocksListResponse](interfaces/LocksListResponse.md)
+- [ManagedAccessCodeBase](interfaces/ManagedAccessCodeBase.md)
 - [OngoingAccessCode](interfaces/OngoingAccessCode.md)
 - [PendingActionAttempt](interfaces/PendingActionAttempt.md)
 - [SeamAPIErrorMetadata](interfaces/SeamAPIErrorMetadata.md)
@@ -70,6 +71,8 @@
 - [SeamWarning](interfaces/SeamWarning.md)
 - [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
 - [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
+- [UnmanagedAccessCode](interfaces/UnmanagedAccessCode.md)
+- [UnmanagedAccessCodesListResponse](interfaces/UnmanagedAccessCodesListResponse.md)
 - [UserIdentifier](interfaces/UserIdentifier.md)
 - [Webhook](interfaces/Webhook.md)
 - [WebhookGetResponse](interfaces/WebhookGetResponse.md)
@@ -153,7 +156,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:222](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L222)
+[src/types/models.ts:231](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L231)
 
 ___
 
@@ -414,7 +417,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:255](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L255)
+[src/types/models.ts:264](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L264)
 
 ___
 
