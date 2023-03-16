@@ -10,6 +10,7 @@ import {
   CommonDeviceProperties,
   Webhook,
   Event,
+  UnmanagedAccessCode,
 } from "./models"
 
 // Workspaces
@@ -69,6 +70,11 @@ export interface AccessCodeCreateResponse
 
 export interface AccessCodeCreateMultipleResponse {
   access_codes: AccessCode[]
+}
+
+// Unmanaged Access Codes
+export interface UnmanagedAccessCodesListResponse {
+  access_codes: UnmanagedAccessCode[]
 }
 
 // Connected Accounts

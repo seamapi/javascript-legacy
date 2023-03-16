@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:96](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L96)
+[src/types/route-responses.ts:102](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L102)

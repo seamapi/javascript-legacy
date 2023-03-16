@@ -6,9 +6,9 @@
 
 - **`AccessCodeBase`**
 
-  ↳ [`OngoingAccessCode`](OngoingAccessCode.md)
+  ↳ [`ManagedAccessCodeBase`](ManagedAccessCodeBase.md)
 
-  ↳ [`TimeBoundAccessCode`](TimeBoundAccessCode.md)
+  ↳ [`UnmanagedAccessCode`](UnmanagedAccessCode.md)
 
 ## Table of contents
 
@@ -16,10 +16,8 @@
 
 - [access\_code\_id](AccessCodeBase.md#access_code_id)
 - [code](AccessCodeBase.md#code)
-- [common\_code\_key](AccessCodeBase.md#common_code_key)
 - [device\_id](AccessCodeBase.md#device_id)
 - [errors](AccessCodeBase.md#errors)
-- [is\_waiting\_for\_code\_assignment](AccessCodeBase.md#is_waiting_for_code_assignment)
 - [name](AccessCodeBase.md#name)
 - [warnings](AccessCodeBase.md#warnings)
 
@@ -45,16 +43,6 @@ ___
 
 ___
 
-### common\_code\_key
-
-• `Optional` **common\_code\_key**: ``null`` \| `string`
-
-#### Defined in
-
-[src/types/models.ts:202](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L202)
-
-___
-
 ### device\_id
 
 • **device\_id**: `string`
@@ -71,17 +59,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:204](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L204)
-
-___
-
-### is\_waiting\_for\_code\_assignment
-
-• `Optional` **is\_waiting\_for\_code\_assignment**: ``true``
-
-#### Defined in
-
-[src/types/models.ts:203](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L203)
+[src/types/models.ts:202](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L202)
 
 ___
 
@@ -101,4 +79,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:205](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L205)
+[src/types/models.ts:203](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L203)
