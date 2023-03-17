@@ -158,7 +158,7 @@ ___
 
 ### selected\_provider
 
-• **selected\_provider**: ``null`` \| `string`
+• `Optional` **selected\_provider**: ``null`` \| `string`
 
 #### Defined in
 
