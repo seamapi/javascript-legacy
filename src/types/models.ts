@@ -180,7 +180,7 @@ export interface ConnectWebview {
   workspace_id: string
   device_selection_mode: string
   accepted_providers: Provider[]
-  selected_provider?: Provider
+  selected_provider: Provider | null
   accepted_devices: unknown[]
   any_provider_allowed: boolean
   any_device_allowed: null | boolean
