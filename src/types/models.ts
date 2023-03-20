@@ -69,6 +69,7 @@ export type CommonDeviceProperties = {
     level: number
     status: BatteryStatus
   }
+  image_url?: string
 }
 
 export type DeviceLocation = {
