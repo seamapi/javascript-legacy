@@ -50,6 +50,9 @@ export const PROVIDERS = [
 ]
 export type Provider = typeof PROVIDERS[number]
 
+/** This type can allow for other provider categories as they are added  */
+export type ProviderCategory = "stable"
+
 export interface SeamError {
   error_code: string
   message: string
@@ -90,6 +93,13 @@ export interface Device<
   errors: SeamError[]
   warnings: SeamWarning[]
   created_at: string
+}
+
+export interface DeviceProvider {
+  device_provider_name: string
+  display_name: string
+  image_url: string
+  provider_categories: ProviderCategory[]
 }
 
 export interface LockProperties extends CommonDeviceProperties {

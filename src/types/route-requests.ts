@@ -32,6 +32,10 @@ export interface DevicesListRequest {
   device_ids?: string[]
 }
 
+export interface DeviceProvidersListRequest {
+  provider_category?: string
+}
+
 export interface AccessCodeCreateBaseRequest {
   device_id: string
   name?: string
