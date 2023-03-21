@@ -3,6 +3,7 @@ import {
   ActionAttempt,
   ConnectWebview,
   Device,
+  DeviceProvider,
   LockDevice,
   Workspace,
   ConnectedAccount,
@@ -41,6 +42,11 @@ export interface DevicesListResponse {
 }
 export interface DeviceGetResponse {
   device: Device<CommonDeviceProperties>
+}
+
+// Device Providers
+export interface DeviceProvidersListResponse {
+  device_providers: DeviceProvider[]
 }
 
 // Connect Webview

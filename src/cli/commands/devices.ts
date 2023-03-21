@@ -111,6 +111,23 @@ const command: CommandModule<GlobalOptions> = {
           await executeCommand("devices.delete", [{ device_id: argv.id }], argv)
         }
       )
+      .command(
+        "list_device_providers",
+        "list device providers by provider category (optional)",
+        (yargs) => {
+          return yargs.option("provider-category", {
+            describe: "filter by provider category",
+            type: "string",
+          })
+        },
+        async (argv) => {
+          await executeCommand(
+            "devices.listDeviceProviders",
+            [{ provider_category: argv.providerCategory }],
+            argv
+          )
+        }
+      )
   },
   handler: () => {},
 }

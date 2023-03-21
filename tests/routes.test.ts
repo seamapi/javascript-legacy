@@ -89,6 +89,19 @@ test(
   },
   "{}"
 )
+test(testAPIMethod("devices.listDeviceProviders"), {}, "DeviceProvider[]")
+test(
+  "with provider_category",
+  testAPIMethod("devices.listDeviceProviders"),
+  {
+    args: [
+      {
+        provider_category: "stable",
+      },
+    ],
+  },
+  "DeviceProvider[]"
+)
 
 // Connect Webviews
 test(testAPIMethod("connectWebviews.list"), {}, "ConnectWebview[]")

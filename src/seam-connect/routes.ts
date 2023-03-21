@@ -22,6 +22,7 @@ import {
   DeviceUpdateRequest,
   DeviceGetRequest,
   DevicesListRequest,
+  DeviceProvidersListRequest,
   DeviceDeleteRequest,
   AccessCodeUpdateRequest,
   WebhookGetRequest,
@@ -43,6 +44,7 @@ import {
   ConnectWebviewsListResponse,
   DeviceGetResponse,
   DevicesListResponse,
+  DeviceProvidersListResponse,
   LockGetResponse,
   LocksListResponse,
   WorkspaceResetSandboxResponse,
@@ -176,6 +178,14 @@ export abstract class Routes {
         url: "/devices/list",
         params,
       }),
+    listDeviceProviders: (params?: DeviceProvidersListRequest) =>
+      this.makeRequestAndFormat<DeviceProvidersListResponse>(
+        "device_providers",
+        {
+          url: "/devices/list_device_providers",
+          params,
+        }
+      ),
     get: (params: DeviceGetRequest) =>
       this.makeRequestAndFormat<DeviceGetResponse>("device", {
         url: "/devices/get",
