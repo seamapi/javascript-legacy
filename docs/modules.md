@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:242](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L242)
+[src/types/models.ts:243](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L243)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:183](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L183)
+[src/types/models.ts:184](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L184)
 
 ___
 
@@ -289,7 +289,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:138](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L138)
+[src/types/models.ts:139](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L139)
 
 ___
 
@@ -299,7 +299,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L135)
+[src/types/models.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L136)
 
 ___
 
@@ -324,6 +324,7 @@ ___
 | `battery?` | `Object` |
 | `battery.level` | `number` |
 | `battery.status` | [`BatteryStatus`](modules.md#batterystatus) |
+| `image_url?` | `string` |
 | `name` | `string` |
 | `online` | `boolean` |
 
@@ -382,7 +383,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:77](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L77)
+[src/types/models.ts:78](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L78)
 
 ___
 
@@ -421,7 +422,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:275](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L275)
+[src/types/models.ts:276](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L276)
 
 ___
 
@@ -431,7 +432,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L136)
+[src/types/models.ts:137](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L137)
 
 ___
 
