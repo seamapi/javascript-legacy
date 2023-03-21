@@ -112,7 +112,7 @@ const command: CommandModule<GlobalOptions> = {
         }
       )
       .command(
-        "list device providers",
+        "list_device_providers",
         "list device providers by provider category (optional)",
         (yargs) => {
           return yargs.option("provider-category", {
