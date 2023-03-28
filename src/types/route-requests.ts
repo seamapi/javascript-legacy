@@ -133,6 +133,11 @@ export type WebhookCreateRequest = {
   url: string
 }
 
+export type UnmanagedDeviceUpdateRequest = {
+  device_id: string
+  is_managed?: boolean
+}
+
 export interface EventsListRequest {
   since?: string | Date
   device_ids?: string[]

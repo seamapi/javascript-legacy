@@ -118,6 +118,7 @@
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
 - [UnmanagedDevice](modules.md#unmanageddevice)
+- [UnmanagedDeviceUpdateRequest](modules.md#unmanageddeviceupdaterequest)
 - [WebhookCreateRequest](modules.md#webhookcreaterequest)
 - [WebhookGetRequest](modules.md#webhookgetrequest)
 
@@ -514,6 +515,23 @@ ___
 #### Defined in
 
 [src/types/models.ts:99](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L99)
+
+___
+
+### UnmanagedDeviceUpdateRequest
+
+Ƭ **UnmanagedDeviceUpdateRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `device_id` | `string` |
+| `is_managed?` | `boolean` |
+
+#### Defined in
+
+[src/types/route-requests.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L136)
 
 ___
 

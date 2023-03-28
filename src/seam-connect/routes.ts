@@ -24,6 +24,7 @@ import {
   DevicesListRequest,
   DeviceProvidersListRequest,
   DeviceDeleteRequest,
+  UnmanagedDeviceUpdateRequest,
   AccessCodeUpdateRequest,
   WebhookGetRequest,
   WebhookCreateRequest,
@@ -179,6 +180,12 @@ export abstract class Routes {
         this.makeRequestAndFormat<UnmanagedDeviceListResponse>("devices", {
           url: "/devices/unmanaged/list",
           params,
+        }),
+      update: (params: UnmanagedDeviceUpdateRequest) =>
+        this.makeRequest({
+          url: "/devices/unmanaged/update",
+          method: "PATCH",
+          data: params,
         }),
     },
 
