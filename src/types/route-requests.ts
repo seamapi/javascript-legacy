@@ -115,6 +115,7 @@ export type DeviceGetRequest =
 
 export type DeviceUpdateRequest = {
   device_id: string
+  is_managed?: boolean
   properties?: Partial<CommonDeviceProperties>
   name?: string
   location?: object

@@ -356,7 +356,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:123](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L123)
+[src/types/route-requests.ts:124](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L124)
 
 ___
 
@@ -406,6 +406,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `device_id` | `string` |
+| `is_managed?` | `boolean` |
 | `location?` | `object` |
 | `name?` | `string` |
 | `properties?` | `Partial`<[`CommonDeviceProperties`](modules.md#commondeviceproperties)\> |
@@ -516,7 +517,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:131](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L131)
+[src/types/route-requests.ts:132](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L132)
 
 ___
 
@@ -532,7 +533,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:127](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L127)
+[src/types/route-requests.ts:128](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L128)
 
 ## Variables
 
