@@ -57,6 +57,7 @@ import {
   AccessCodeCreateResponse,
   AccessCodeCreateMultipleResponse,
   UnmanagedAccessCodesListResponse,
+  UnmanagedDeviceListResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -173,6 +174,14 @@ export abstract class Routes {
   }
 
   public readonly devices = {
+    unmanaged: {
+      list: (params: DevicesListRequest) =>
+        this.makeRequestAndFormat<UnmanagedDeviceListResponse>("devices", {
+          url: "/devices/unmanaged/list",
+          params,
+        }),
+    },
+
     list: (params?: DevicesListRequest) =>
       this.makeRequestAndFormat<DevicesListResponse>("devices", {
         url: "/devices/list",

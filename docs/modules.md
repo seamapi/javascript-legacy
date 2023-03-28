@@ -76,6 +76,7 @@
 - [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
 - [UnmanagedAccessCode](interfaces/UnmanagedAccessCode.md)
 - [UnmanagedAccessCodesListResponse](interfaces/UnmanagedAccessCodesListResponse.md)
+- [UnmanagedDeviceListResponse](interfaces/UnmanagedDeviceListResponse.md)
 - [UserIdentifier](interfaces/UserIdentifier.md)
 - [Webhook](interfaces/Webhook.md)
 - [WebhookGetResponse](interfaces/WebhookGetResponse.md)
@@ -116,6 +117,7 @@
 - [ProviderCategory](modules.md#providercategory)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
+- [UnmanagedDevice](modules.md#unmanageddevice)
 - [WebhookCreateRequest](modules.md#webhookcreaterequest)
 - [WebhookGetRequest](modules.md#webhookgetrequest)
 
@@ -160,7 +162,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:243](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L243)
+[src/types/models.ts:254](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L254)
 
 ___
 
@@ -279,7 +281,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:184](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L184)
+[src/types/models.ts:195](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L195)
 
 ___
 
@@ -289,7 +291,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:139](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L139)
+[src/types/models.ts:150](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L150)
 
 ___
 
@@ -299,7 +301,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L136)
+[src/types/models.ts:147](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L147)
 
 ___
 
@@ -423,7 +425,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:276](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L276)
+[src/types/models.ts:287](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L287)
 
 ___
 
@@ -433,7 +435,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:137](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L137)
+[src/types/models.ts:148](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L148)
 
 ___
 
@@ -502,6 +504,16 @@ ___
 #### Defined in
 
 [src/types/globals.ts:7](https://github.com/seamapi/javascript/blob/main/src/types/globals.ts#L7)
+
+___
+
+### UnmanagedDevice
+
+Ƭ **UnmanagedDevice**: `Pick`<[`Device`](interfaces/Device.md)<[`CommonDeviceProperties`](modules.md#commondeviceproperties)\>, ``"device_id"`` \| ``"device_type"`` \| ``"connected_account_id"`` \| ``"workspace_id"`` \| ``"errors"`` \| ``"warnings"`` \| ``"created_at"``\>
+
+#### Defined in
+
+[src/types/models.ts:99](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L99)
 
 ___
 

@@ -96,6 +96,17 @@ export interface Device<
   created_at: string
 }
 
+export type UnmanagedDevice = Pick<
+  Device<CommonDeviceProperties>,
+  | "device_id"
+  | "device_type"
+  | "connected_account_id"
+  | "workspace_id"
+  | "errors"
+  | "warnings"
+  | "created_at"
+>
+
 export interface DeviceProvider {
   device_provider_name: string
   display_name: string

@@ -12,6 +12,7 @@ import {
   Webhook,
   Event,
   UnmanagedAccessCode,
+  UnmanagedDevice,
 } from "./models"
 
 // Workspaces
@@ -42,6 +43,11 @@ export interface DevicesListResponse {
 }
 export interface DeviceGetResponse {
   device: Device<CommonDeviceProperties>
+}
+
+// Unmanaged Devices
+export interface UnmanagedDeviceListResponse {
+  devices: UnmanagedDevice[]
 }
 
 // Device Providers
