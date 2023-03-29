@@ -24,6 +24,7 @@ import {
   DevicesListRequest,
   DeviceProvidersListRequest,
   DeviceDeleteRequest,
+  UnmanagedDeviceUpdateRequest,
   AccessCodeUpdateRequest,
   WebhookGetRequest,
   WebhookCreateRequest,
@@ -57,6 +58,7 @@ import {
   AccessCodeCreateResponse,
   AccessCodeCreateMultipleResponse,
   UnmanagedAccessCodesListResponse,
+  UnmanagedDeviceListResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -173,6 +175,20 @@ export abstract class Routes {
   }
 
   public readonly devices = {
+    unmanaged: {
+      list: (params: DevicesListRequest) =>
+        this.makeRequestAndFormat<UnmanagedDeviceListResponse>("devices", {
+          url: "/devices/unmanaged/list",
+          params,
+        }),
+      update: (params: UnmanagedDeviceUpdateRequest) =>
+        this.makeRequest({
+          url: "/devices/unmanaged/update",
+          method: "PATCH",
+          data: params,
+        }),
+    },
+
     list: (params?: DevicesListRequest) =>
       this.makeRequestAndFormat<DevicesListResponse>("devices", {
         url: "/devices/list",

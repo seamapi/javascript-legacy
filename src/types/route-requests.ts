@@ -115,6 +115,7 @@ export type DeviceGetRequest =
 
 export type DeviceUpdateRequest = {
   device_id: string
+  is_managed?: boolean
   properties?: Partial<CommonDeviceProperties>
   name?: string
   location?: object
@@ -130,6 +131,11 @@ export type WebhookGetRequest = {
 
 export type WebhookCreateRequest = {
   url: string
+}
+
+export type UnmanagedDeviceUpdateRequest = {
+  device_id: string
+  is_managed?: boolean
 }
 
 export interface EventsListRequest {
