@@ -26,12 +26,20 @@ export interface SeamClientOptions {
 export const getSeamClientOptionsWithDefaults = (
   apiKeyOrOptions?: string | SeamClientOptions
 ): SeamClientOptions => {
-  const seamClientDefaults: SeamClientOptions = {
-    apiKey: process?.env?.SEAM_API_KEY,
-    endpoint: process?.env?.SEAM_API_URL || "https://connect.getseam.com",
-    workspaceId: process?.env?.SEAM_WORKSPACE_ID,
+  let seamClientDefaults: SeamClientOptions = {}
+  try {
+    // try to get defaults from environment (for server-side use)
+    seamClientDefaults = {
+      apiKey: process?.env?.SEAM_API_KEY,
+      endpoint: process?.env?.SEAM_API_URL || "https://connect.getseam.com",
+      workspaceId: process?.env?.SEAM_WORKSPACE_ID,
+    }
+  } catch (error) {
+    // we are in a browser, so use the apiKeyOrOptions
+    // do nothing
   }
   if (typeof apiKeyOrOptions === "string") {
+    // for both browser and server, if apiKeyOrOptions is a string, use it as the apiKey, and merge with defaults
     return { ...seamClientDefaults, apiKey: apiKeyOrOptions }
   } else {
     return { ...seamClientDefaults, ...apiKeyOrOptions }
