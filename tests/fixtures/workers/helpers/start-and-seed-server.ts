@@ -49,6 +49,7 @@ const startAndSeedServer = async () => {
       SEAMTEAM_ADMIN_PASSWORD: SEAM_ADMIN_PASSWORD,
       SVIX_ENDPOINT: svix.endpoint,
       SVIX_API_KEY: svix.apiKey,
+      ENABLE_UNMANAGED_DEVICES: "true",
     })
     .withCommand(["start:for-integration-testing"])
     .withNetwork(database.network)
