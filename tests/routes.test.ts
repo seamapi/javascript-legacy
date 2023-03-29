@@ -89,7 +89,7 @@ test(
   },
   "{}"
 )
-test.failing(testAPIMethod("devices.unmanaged.list"), {}, "UnmanagedDevice[]")
+test(testAPIMethod("devices.unmanaged.list"), {}, "UnmanagedDevice[]")
 test(testAPIMethod("devices.listDeviceProviders"), {}, "DeviceProvider[]")
 test(
   "with provider_category",
