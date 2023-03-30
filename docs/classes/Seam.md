@@ -68,6 +68,7 @@ Routes.constructor
 | `list` | (`params`: { `device_id`: `string`  }) => `Promise`<[`AccessCode`](../modules.md#accesscode)[]\> |
 | `unmanaged` | `Object` |
 | `unmanaged.list` | (`params`: { `device_id`: `string`  }) => `Promise`<[`UnmanagedAccessCode`](../interfaces/UnmanagedAccessCode.md)[]\> |
+| `unmanaged.update` | (`params`: { `access_code_id`: `string` ; `is_managed`: ``true``  }) => `Promise`<{ `ok`: ``true``  }\> |
 | `update` | (`params`: [`AccessCodeUpdateRequest`](../modules.md#accesscodeupdaterequest)) => `Promise`<[`OngoingAccessCode`](../interfaces/OngoingAccessCode.md) \| [`TimeBoundAccessCode`](../interfaces/TimeBoundAccessCode.md)\> |
 
 #### Inherited from
@@ -96,7 +97,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:337](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L337)
+[src/seam-connect/routes.ts:343](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L343)
 
 ___
 
@@ -151,7 +152,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:312](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L312)
+[src/seam-connect/routes.ts:318](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L318)
 
 ___
 
@@ -240,7 +241,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:347](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L347)
+[src/seam-connect/routes.ts:353](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L353)
 
 ___
 

@@ -123,7 +123,27 @@ test(
   },
   "{}"
 )
-
+// Unmanaged Access Codes
+test(
+  testAPIMethod("accessCodes.unmanaged.list"),
+  {
+    args: (seed) => [{ device_id: seed.devices.schlageLock.id1 }],
+  },
+  "AccessCode[]"
+)
+test(
+  testAPIMethod("accessCodes.unmanaged.update"),
+  {
+    args: (seed) => [
+      {
+        access_code_id: seed.devices.augustLock.accessCode.access_code_id,
+        is_managed: true,
+      },
+    ],
+    modifiesState: true,
+  },
+  "AccessCode"
+)
 // Access Codes
 test(
   testAPIMethod("accessCodes.list"),

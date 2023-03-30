@@ -249,6 +249,12 @@ export abstract class Routes {
             params,
           }
         ),
+      update: (params: { access_code_id: string; is_managed: true }) =>
+        this.makeRequest({
+          url: "/access_codes/unmanaged/update",
+          method: "PATCH",
+          data: params,
+        }),
     },
 
     list: (params: { device_id: string }) =>
