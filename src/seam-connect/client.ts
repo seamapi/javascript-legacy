@@ -13,6 +13,8 @@ import { ClientAccessTokenResponseInterface } from "../types"
 export interface SeamClientOptions {
   /* Seam API Key */
   apiKey?: string
+  /* Seam Client Access Token */
+  clientAccessToken?: string
   /**
    * Seam Endpoint to use, defaults to https://connect.getseam.com
    **/
@@ -57,7 +59,7 @@ export class Seam extends Routes {
   constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
 
-    const { apiKey, endpoint, workspaceId, axiosOptions } =
+    const { apiKey, endpoint, workspaceId, axiosOptions, clientAccessToken } =
       getSeamClientOptionsWithDefaults(apiKeyOrOptions)
 
     const isRegularAPIKey = apiKey?.startsWith("seam_")
@@ -78,8 +80,8 @@ export class Seam extends Routes {
       baseURL: endpoint,
       headers: {
         ...axiosOptions?.headers,
-        Authorization: `Bearer ${apiKey}`,
-        ["User-Agent"]: `Javascript SDK v${version} (https://github.com/seamapi/javascript)`,
+        Authorization: `Bearer ${apiKey || clientAccessToken}`,
+        // ["User-Agent"]: `Javascript SDK v${version} (https://github.com/seamapi/javascript)`,
 
         // only needed for session key authentication
         ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }),
