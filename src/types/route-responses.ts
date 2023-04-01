@@ -13,6 +13,7 @@ import {
   Event,
   UnmanagedAccessCode,
   UnmanagedDevice,
+  ClientAccessTokenInterface,
 } from "./models"
 
 // Workspaces
@@ -121,4 +122,8 @@ export interface ActionAttemptGetResponse<T extends ActionType = ActionType> {
 // Events
 export interface EventsListResponse {
   events: Event[]
+}
+
+export interface ClientAccessTokenResponseInterface {
+  client_access_token: ClientAccessTokenInterface
 }

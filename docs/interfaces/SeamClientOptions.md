@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/seam-connect/client.ts:10](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L10)
+[src/seam-connect/client.ts:15](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L15)
 
 ___
 
@@ -31,7 +31,7 @@ Extended options to pass to Axios
 
 #### Defined in
 
-[src/seam-connect/client.ts:23](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L23)
+[src/seam-connect/client.ts:28](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L28)
 
 ___
 
@@ -43,7 +43,7 @@ Seam Endpoint to use, defaults to https://connect.getseam.com
 
 #### Defined in
 
-[src/seam-connect/client.ts:14](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L14)
+[src/seam-connect/client.ts:19](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L19)
 
 ___
 
@@ -56,4 +56,4 @@ or undefined
 
 #### Defined in
 
-[src/seam-connect/client.ts:19](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L19)
+[src/seam-connect/client.ts:24](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L24)

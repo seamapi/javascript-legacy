@@ -285,3 +285,11 @@ type Flatten<EventType extends SeamEvent["event_type"]> =
     : never
 
 export type Event = Flatten<SeamEvent["event_type"]>
+
+export interface ClientAccessTokenInterface {
+  client_access_token_id: string
+  token: string
+  short_token: string
+  user_id: string
+  created_at: string
+}

@@ -2,8 +2,13 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
 import axiosRetry from "axios-retry"
 import { SeamAPIError, SeamMalformedInputError } from "../lib/api-error"
 import { Routes } from "./routes"
-import { ErroredAPIResponse, SuccessfulAPIResponse } from "../types/globals"
+import {
+  APIResponse,
+  ErroredAPIResponse,
+  SuccessfulAPIResponse,
+} from "../types/globals"
 import { version } from "../../package.json"
+import { ClientAccessTokenResponseInterface } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -110,5 +115,21 @@ export class Seam extends Routes {
 
       throw error
     }
+  }
+  static async getClientAccessToken(
+    pubKey: string,
+    extHostUserId: string,
+    endpoint: string,
+    workspaceId?: string
+  ): Promise<APIResponse<ClientAccessTokenResponseInterface>> {
+    const response = await axios.post(
+      endpoint + "internal/client_access_tokens/create",
+      {
+        pub_key: pubKey,
+        ext_host_user_id: extHostUserId,
+        workspace_id: workspaceId,
+      }
+    )
+    return await response.data
   }
 }

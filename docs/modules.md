@@ -39,6 +39,8 @@
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
+- [ClientAccessTokenInterface](interfaces/ClientAccessTokenInterface.md)
+- [ClientAccessTokenResponseInterface](interfaces/ClientAccessTokenResponseInterface.md)
 - [ConnectWebview](interfaces/ConnectWebview.md)
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
@@ -613,7 +615,7 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:26](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L26)
+[src/seam-connect/client.ts:31](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L31)
 
 ___
 

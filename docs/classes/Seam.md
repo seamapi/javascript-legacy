@@ -30,6 +30,7 @@
 ### Methods
 
 - [makeRequest](Seam.md#makerequest)
+- [getClientAccessToken](Seam.md#getclientaccesstoken)
 
 ## Constructors
 
@@ -49,7 +50,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/seam-connect/client.ts:52](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L52)
+[src/seam-connect/client.ts:57](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L57)
 
 ## Properties
 
@@ -106,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:50](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L50)
+[src/seam-connect/client.ts:55](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L55)
 
 ___
 
@@ -296,4 +297,27 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/seam-connect/client.ts:90](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L90)
+[src/seam-connect/client.ts:95](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L95)
+
+___
+
+### getClientAccessToken
+
+▸ `Static` **getClientAccessToken**(`pubKey`, `extHostUserId`, `endpoint`, `workspaceId?`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientAccessTokenResponseInterface`](../interfaces/ClientAccessTokenResponseInterface.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pubKey` | `string` |
+| `extHostUserId` | `string` |
+| `endpoint` | `string` |
+| `workspaceId?` | `string` |
+
+#### Returns
+
+`Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientAccessTokenResponseInterface`](../interfaces/ClientAccessTokenResponseInterface.md)\>\>
+
+#### Defined in
+
+[src/seam-connect/client.ts:119](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L119)
