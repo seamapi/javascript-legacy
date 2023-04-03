@@ -303,16 +303,17 @@ ___
 
 ### getClientAccessToken
 
-▸ `Static` **getClientAccessToken**(`pubKey`, `extHostUserId`, `endpoint`, `workspaceId?`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientAccessTokenResponseInterface`](../interfaces/ClientAccessTokenResponseInterface.md)\>\>
+▸ `Static` **getClientAccessToken**(`pubKey?`, `extHostUserId?`, `endpoint?`, `workspaceId?`, `apiKey?`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientAccessTokenResponseInterface`](../interfaces/ClientAccessTokenResponseInterface.md)\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `pubKey` | `string` |
-| `extHostUserId` | `string` |
-| `endpoint` | `string` |
+| `pubKey?` | `string` |
+| `extHostUserId?` | `string` |
+| `endpoint?` | `string` |
 | `workspaceId?` | `string` |
+| `apiKey?` | `string` |
 
 #### Returns
 
