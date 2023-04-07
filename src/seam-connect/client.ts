@@ -8,7 +8,7 @@ import {
   SuccessfulAPIResponse,
 } from "../types/globals"
 import { version } from "../../package.json"
-import { ClientAccessTokenResponseInterface } from "../types"
+import { ClientSessionResponseInterface } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -121,8 +121,9 @@ export class Seam extends Routes {
 
   static async getClientAccessToken(
     ops: catParams
-  ): Promise<APIResponse<ClientAccessTokenResponseInterface>> {
+  ): Promise<APIResponse<ClientSessionResponseInterface>> {
     let params: any = {}
+
     if (ops.apiKey?.startsWith("seam_test")) {
       // backend mode
       params["api_key"] = ops.apiKey
@@ -130,12 +131,31 @@ export class Seam extends Routes {
       // frontend mode
       params["pub_key"] = ops.pubKey
     }
-    params["ext_host_user_id"] = ops.userIdentifierKey // TODO: rename this to user_identifier_key in DB later
-    const response = await axios.post(
-      ops.endpoint + "internal/client_access_tokens/create",
-      params
-    )
-    return await response.data
+    params["user_identifier_key"] = ops.userIdentifierKey // TODO: rename this to user_identifier_key in DB later
+    try {
+      const response = await axios.post(
+        ops.endpoint + "internal/client_access_tokens/create",
+        params
+      )
+      if (response.data.error) {
+        return {
+          ok: false,
+          error: {
+            type: response.data.error.type,
+            message: response.data.error.message,
+          },
+        }
+      }
+      return await response.data
+    } catch (e: any) {
+      return {
+        ok: false,
+        error: {
+          type: "unknown",
+          message: e.toString() ?? "Something went wrong",
+        },
+      }
+    }
   }
 }
 

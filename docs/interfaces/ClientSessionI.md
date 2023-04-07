@@ -1,16 +1,16 @@
-[seamapi](../README.md) / [Exports](../modules.md) / ClientAccessTokenInterface
+[seamapi](../README.md) / [Exports](../modules.md) / ClientSessionI
 
-# Interface: ClientAccessTokenInterface
+# Interface: ClientSessionI
 
 ## Table of contents
 
 ### Properties
 
-- [client\_access\_token\_id](ClientAccessTokenInterface.md#client_access_token_id)
-- [created\_at](ClientAccessTokenInterface.md#created_at)
-- [short\_token](ClientAccessTokenInterface.md#short_token)
-- [token](ClientAccessTokenInterface.md#token)
-- [user\_id](ClientAccessTokenInterface.md#user_id)
+- [client\_access\_token\_id](ClientSessionI.md#client_access_token_id)
+- [created\_at](ClientSessionI.md#created_at)
+- [short\_token](ClientSessionI.md#short_token)
+- [token](ClientSessionI.md#token)
+- [user\_id](ClientSessionI.md#user_id)
 
 ## Properties
 

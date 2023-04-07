@@ -13,7 +13,7 @@ import {
   Event,
   UnmanagedAccessCode,
   UnmanagedDevice,
-  ClientAccessTokenInterface,
+  ClientSessionI,
 } from "./models"
 
 // Workspaces
@@ -124,6 +124,6 @@ export interface EventsListResponse {
   events: Event[]
 }
 
-export interface ClientAccessTokenResponseInterface {
-  client_access_token: ClientAccessTokenInterface
+export interface ClientSessionResponseInterface {
+  client_session: ClientSessionI
 }

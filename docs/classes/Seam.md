@@ -303,7 +303,7 @@ ___
 
 ### getClientAccessToken
 
-▸ `Static` **getClientAccessToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientAccessTokenResponseInterface`](../interfaces/ClientAccessTokenResponseInterface.md)\>\>
+▸ `Static` **getClientAccessToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponseInterface`](../interfaces/ClientSessionResponseInterface.md)\>\>
 
 #### Parameters
 
@@ -313,7 +313,7 @@ ___
 
 #### Returns
 
-`Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientAccessTokenResponseInterface`](../interfaces/ClientAccessTokenResponseInterface.md)\>\>
+`Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponseInterface`](../interfaces/ClientSessionResponseInterface.md)\>\>
 
 #### Defined in
 
