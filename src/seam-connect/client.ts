@@ -124,8 +124,10 @@ export class Seam extends Routes {
   ): Promise<APIResponse<ClientAccessTokenResponseInterface>> {
     let params: any = {}
     if (ops.apiKey?.startsWith("seam_test")) {
+      // backend mode
       params["api_key"] = ops.apiKey
     } else if (ops.pubKey?.startsWith("seam_pk")) {
+      // frontend mode
       params["pub_key"] = ops.pubKey
     }
     params["ext_host_user_id"] = ops.userIdentifierKey // TODO: rename this to user_identifier_key in DB later
