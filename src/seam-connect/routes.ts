@@ -267,7 +267,7 @@ export abstract class Routes {
 
   public readonly accessCodes = {
     unmanaged: {
-      delete: (params: { access_code_id: string; device_id: string }) =>
+      delete: (params: { access_code_id: string; device_id?: string }) =>
         this.makeRequest({
           url: "/access_codes/unmanaged/delete",
           method: "DELETE",
