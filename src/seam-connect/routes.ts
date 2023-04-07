@@ -267,6 +267,12 @@ export abstract class Routes {
 
   public readonly accessCodes = {
     unmanaged: {
+      delete: (params: { access_code_id: string; device_id: string }) =>
+        this.makeRequest({
+          url: "/access_codes/unmanaged/delete",
+          method: "DELETE",
+          data: params,
+        }),
       list: (params: { device_id: string }) =>
         this.makeRequestAndFormat<UnmanagedAccessCodesListResponse>(
           "access_codes",
@@ -275,6 +281,12 @@ export abstract class Routes {
             params,
           }
         ),
+      update: (params: { access_code_id: string; is_managed: true }) =>
+        this.makeRequest({
+          url: "/access_codes/unmanaged/update",
+          method: "PATCH",
+          data: params,
+        }),
     },
 
     list: (params: { device_id: string }) =>
