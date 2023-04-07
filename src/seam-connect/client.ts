@@ -118,25 +118,29 @@ export class Seam extends Routes {
       throw error
     }
   }
+
   static async getClientAccessToken(
-    pubKey?: string,
-    extHostUserId?: string,
-    endpoint?: string,
-    workspaceId?: string,
-    apiKey?: string
+    ops: catParams
   ): Promise<APIResponse<ClientAccessTokenResponseInterface>> {
     let params: any = {}
-    if (apiKey) {
-      params["api_key"] = apiKey
-    } else {
-      params["pub_key"] = pubKey
-      params["workspace_id"] = workspaceId
+    if (ops.apiKey?.startsWith("seam_test")) {
+      params["api_key"] = ops.apiKey
+    } else if (ops.pubKey?.startsWith("seam_pk")) {
+      params["pub_key"] = ops.pubKey
     }
-    params["ext_host_user_id"] = extHostUserId
+    params["ext_host_user_id"] = ops.userIdentifierKey // TODO: rename this to user_identifier_key in DB later
     const response = await axios.post(
-      endpoint + "internal/client_access_tokens/create",
+      ops.endpoint + "internal/client_access_tokens/create",
       params
     )
     return await response.data
   }
+}
+
+type catParams = {
+  pubKey?: string
+  userIdentifierKey: string
+  endpoint: string
+  workspaceId?: string
+  apiKey?: string
 }

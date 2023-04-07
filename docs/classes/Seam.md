@@ -303,17 +303,13 @@ ___
 
 ### getClientAccessToken
 
-▸ `Static` **getClientAccessToken**(`pubKey?`, `extHostUserId?`, `endpoint?`, `workspaceId?`, `apiKey?`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientAccessTokenResponseInterface`](../interfaces/ClientAccessTokenResponseInterface.md)\>\>
+▸ `Static` **getClientAccessToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientAccessTokenResponseInterface`](../interfaces/ClientAccessTokenResponseInterface.md)\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `pubKey?` | `string` |
-| `extHostUserId?` | `string` |
-| `endpoint?` | `string` |
-| `workspaceId?` | `string` |
-| `apiKey?` | `string` |
+| `ops` | `catParams` |
 
 #### Returns
 
@@ -321,4 +317,4 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:121](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L121)
+[src/seam-connect/client.ts:122](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L122)
