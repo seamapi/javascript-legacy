@@ -131,7 +131,7 @@ export class Seam extends Routes {
       // frontend mode
       params["pub_key"] = ops.pubKey
     }
-    params["user_identifier_key"] = ops.userIdentifierKey // TODO: rename this to user_identifier_key in DB later
+    params["user_identifier_key"] = ops.userIdentifierKey
     try {
       const response = await axios.post(
         ops.endpoint + "internal/client_access_tokens/create",
