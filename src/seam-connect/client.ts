@@ -127,14 +127,14 @@ export class Seam extends Routes {
     if (ops.apiKey?.startsWith("seam_test")) {
       // backend mode
       params["api_key"] = ops.apiKey
-    } else if (ops.pubKey?.startsWith("seam_pk")) {
+    } else if (ops.publishedKey?.startsWith("seam_pk")) {
       // frontend mode
-      params["pub_key"] = ops.pubKey
+      params["publishable_key"] = ops.publishedKey
     }
     params["user_identifier_key"] = ops.userIdentifierKey
     try {
       const response = await axios.post(
-        ops.endpoint + "internal/client_access_tokens/create",
+        ops.endpoint + "internal/client_session_tokens/create",
         params
       )
       if (response.data.error) {
@@ -160,7 +160,7 @@ export class Seam extends Routes {
 }
 
 type catParams = {
-  pubKey?: string
+  publishedKey?: string
   userIdentifierKey: string
   endpoint: string
   workspaceId?: string
