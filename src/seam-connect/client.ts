@@ -119,7 +119,7 @@ export class Seam extends Routes {
     }
   }
 
-  static async getClientAccessToken(
+  static async getClientSessionToken(
     ops: catParams
   ): Promise<APIResponse<ClientSessionResponseInterface>> {
     let params: any = {}

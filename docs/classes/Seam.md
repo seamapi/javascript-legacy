@@ -30,7 +30,7 @@
 ### Methods
 
 - [makeRequest](Seam.md#makerequest)
-- [getClientAccessToken](Seam.md#getclientaccesstoken)
+- [getClientSessionToken](Seam.md#getclientsessiontoken)
 
 ## Constructors
 
@@ -301,9 +301,9 @@ Routes.makeRequest
 
 ___
 
-### getClientAccessToken
+### getClientSessionToken
 
-▸ `Static` **getClientAccessToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponseInterface`](../interfaces/ClientSessionResponseInterface.md)\>\>
+▸ `Static` **getClientSessionToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponseInterface`](../interfaces/ClientSessionResponseInterface.md)\>\>
 
 #### Parameters
 
