@@ -32,6 +32,8 @@ import {
   AccessCodeCreateMultipleRequest,
   AccessCodeCreateMultipleOngoingRequest,
   AccessCodeCreateMultipleScheduledRequest,
+  NoiseThresholdsListRequest,
+  NoiseThresholdsListResponse,
 } from "../types/route-requests"
 import { SeamActionAttemptError } from "../lib/api-error"
 import {
@@ -380,6 +382,19 @@ export abstract class Routes {
           action_attempt_id: actionAttemptId,
         },
       }),
+  }
+
+  public readonly noiseThresholds = {
+    list: (params: NoiseThresholdsListRequest) =>
+      this.makeRequestAndFormat<NoiseThresholdsListResponse>(
+        "noise_thresholds",
+        {
+          url: "/noise_sensors/noise_thresholds/list",
+          params: {
+            device_id: params.device_id,
+          },
+        }
+      ),
   }
 
   public readonly webhooks = {

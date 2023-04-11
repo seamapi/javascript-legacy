@@ -47,6 +47,7 @@ export const PROVIDERS = [
   "schlage",
   "smartthings",
   "yale_access",
+  "minut",
 ]
 export type Provider = typeof PROVIDERS[number]
 

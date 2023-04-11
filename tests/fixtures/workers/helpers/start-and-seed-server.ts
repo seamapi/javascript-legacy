@@ -6,6 +6,7 @@ import getTestDatabase from "./get-test-database"
 import getTestSvix from "./get-test-svix"
 import addFakeSchlageDevices from "./add-fake-schlage-devices"
 import addFakeAugustDevices from "./add-fake-august-devices"
+import addFakeMinutDevices from "./add-fake-minut-devices"
 
 const SEAM_ADMIN_PASSWORD = "1234"
 
@@ -77,9 +78,10 @@ const startAndSeedServer = async () => {
 
   ;(axios.defaults.headers as any).Authorization = `Bearer ${api_key}`
 
-  const [schlageLock, augustLock, connectWebview] = await Promise.all([
+  const [schlageLock, augustLock, minut, connectWebview] = await Promise.all([
     addFakeSchlageDevices(axios),
     addFakeAugustDevices(axios),
+    addFakeMinutDevices(axios),
     axios.post("/connect_webviews/create", {
       accepted_providers: ["schlage", "august"],
     }),
@@ -94,6 +96,7 @@ const startAndSeedServer = async () => {
       workspaceId: workspace.workspace_id,
       connectWebviewId: connectWebview.data.connect_webview.connect_webview_id,
       devices: {
+        minut,
         schlageLock,
         augustLock,
       },

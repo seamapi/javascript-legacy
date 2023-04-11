@@ -146,3 +146,22 @@ export interface EventsListRequest {
   event_type?: string
   connected_account_id?: string
 }
+
+export type NoiseThresholdsListRequest = {
+  device_id: string
+}
+
+export type NoiseThresholdsListResponse = {
+  noise_thresholds: {
+    device_id: string
+    noise_threshold_id: string
+    starts_daily_at: string
+    ends_daily_at: string
+    noise_threshold_decibels: number
+    name: string
+    /**
+     * Only present if the noise threshold is from Noiseaware
+     */
+    noise_threshold_nrs?: number
+  }[]
+}
