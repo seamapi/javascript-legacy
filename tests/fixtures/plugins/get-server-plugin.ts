@@ -3,13 +3,18 @@ import { URL } from "url"
 import defaultAxios from "axios"
 import knex from "knex"
 import path from "path"
-import Seam, { AccessCode } from "../../../src"
+import Seam, { AccessCode, Device } from "../../../src"
 
 type SeedLock = {
   connectedAccountId: string
   id1: string
   name1: string
   accessCode: AccessCode
+}
+
+type SeedNoiseSensors = {
+  device_with_quiet_hours: Device<any, "minut">
+  device_without_quiet_hours: Device<any, "minut">
 }
 
 export type WorkerPublishedMessage = {
@@ -21,6 +26,7 @@ export type WorkerPublishedMessage = {
     workspaceId: string
     connectWebviewId: string
     devices: {
+      minut: SeedNoiseSensors
       schlageLock: SeedLock
       augustLock: SeedLock
     }
