@@ -19,6 +19,7 @@ export interface Routes {
             code: string | null
             status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            is_managed: boolean
             type: "ongoing"
             starts_at: null
             ends_at: null
@@ -28,6 +29,7 @@ export interface Routes {
             code: string | null
             status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            is_managed: boolean
             type: "time_bound"
             starts_at: string
             ends_at: string
@@ -61,6 +63,7 @@ export interface Routes {
             code: string | null
             status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            is_managed: boolean
             type: "ongoing"
             starts_at: null
             ends_at: null
@@ -70,6 +73,7 @@ export interface Routes {
             code: string | null
             status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            is_managed: boolean
             type: "time_bound"
             starts_at: string
             ends_at: string
@@ -93,6 +97,7 @@ export interface Routes {
             code: string | null
             status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            is_managed: boolean
             type: "ongoing"
             starts_at: null
             ends_at: null
@@ -102,12 +107,74 @@ export interface Routes {
             code: string | null
             status: "setting" | "set" | "unset" | "removing"
             created_at: string | Date
+            is_managed: boolean
             type: "time_bound"
             starts_at: string
             ends_at: string
           }
       )[]
     }
+  }
+  "/access_codes/unmanaged/delete": {
+    route: "/access_codes/unmanaged/delete"
+    method: "DELETE" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      device_id?: string | undefined
+      access_code_id: string
+    }
+    formData: {}
+    jsonResponse: {}
+  }
+  "/access_codes/unmanaged/list": {
+    route: "/access_codes/unmanaged/list"
+    method: "GET"
+    queryParams: {
+      device_id: string
+    }
+    jsonBody: {}
+    commonParams: {
+      building_id?: string | undefined
+      device_id?: string | undefined
+    }
+    formData: {}
+    jsonResponse: {
+      access_codes: (
+        | {
+            access_code_id: string
+            code: string | null
+            status: "setting" | "set" | "unset" | "removing"
+            created_at: string | Date
+            is_managed: boolean
+            type: "ongoing"
+            starts_at: null
+            ends_at: null
+          }
+        | {
+            access_code_id: string
+            code: string | null
+            status: "setting" | "set" | "unset" | "removing"
+            created_at: string | Date
+            is_managed: boolean
+            type: "time_bound"
+            starts_at: string
+            ends_at: string
+          }
+      )[]
+    }
+  }
+  "/access_codes/unmanaged/update": {
+    route: "/access_codes/unmanaged/update"
+    method: "POST" | "PATCH"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      access_code_id: string
+      is_managed: boolean
+    }
+    formData: {}
+    jsonResponse: {}
   }
   "/access_codes/update": {
     route: "/access_codes/update"
@@ -160,6 +227,7 @@ export interface Routes {
         does_not_end: boolean
         last_used_at: (string | Date) | null
         created_at: string | Date
+        device_count: number
       }
     }
   }
@@ -184,6 +252,7 @@ export interface Routes {
         does_not_end: boolean
         last_used_at: (string | Date) | null
         created_at: string | Date
+        device_count: number
       }
     }
   }
@@ -218,6 +287,7 @@ export interface Routes {
         does_not_end: boolean
         last_used_at: (string | Date) | null
         created_at: string | Date
+        device_count: number
       }
     }
   }
@@ -261,6 +331,7 @@ export interface Routes {
         does_not_end: boolean
         last_used_at: (string | Date) | null
         created_at: string | Date
+        device_count: number
       }[]
     }
   }
@@ -731,6 +802,7 @@ export interface Routes {
     commonParams: {
       queries: string[]
       building_id?: string | undefined
+      organization_id?: string | undefined
       linked_account_id?: string | undefined
     }
     formData: {}
@@ -762,6 +834,28 @@ export interface Routes {
     formData: {}
     jsonResponse: {}
   }
+  "/events/get_count_summary": {
+    route: "/events/get_count_summary"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {
+      building_id?: string | undefined
+      device_id?: string | undefined
+      access_pass_id?: string | undefined
+      between?: (string | Date)[] | undefined
+      query?: string | undefined
+    }
+    formData: {}
+    jsonResponse: {
+      event_count_summary: {
+        lock_unlock_events: number
+        access_pass_events: number
+        connection_events: number
+        battery_events: number
+      }
+    }
+  }
   "/events/list": {
     route: "/events/list"
     method: "GET" | "POST"
@@ -770,20 +864,145 @@ export interface Routes {
     commonParams: {
       building_id?: string | undefined
       device_id?: string | undefined
+      access_pass_id?: string | undefined
       between?: (string | Date)[] | undefined
       query?: string | undefined
     }
     formData: {}
     jsonResponse: {
-      events: {
-        event_id: string
-        event_type: string
-        occurred_at: string
-        device_id: string | null
-        building_id: string | null
-        organization_id: string
-        created_at: string
-      }[]
+      events: (
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            event_type: "linked_account.connected"
+            linked_account_id: string
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            event_type: "linked_account.completed_first_sync"
+            linked_account_id: string
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            event_type: "device.connected"
+            device_id: string
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.disconnected"
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.tampered"
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.unlocked"
+            method: "access_pass"
+            user_id: string | null
+            access_pass_id: string
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.unlocked"
+            method: "manual"
+            user_id: string
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.unlocked"
+            method: "keycode" | "unknown"
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.locked"
+            method: "access_pass"
+            user_id: string | null
+            access_pass_id: string
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.locked"
+            method: "manual"
+            user_id: string
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.locked"
+            method: "keycode" | "unknown"
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            building_id: string | null
+            event_type: "device.low_battery"
+            battery_level: number
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            event_type: "access_pass.used"
+            access_pass_id: string
+            building_id: string | null
+            user_id: string | null
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            access_code_id: string
+            event_type: "access_code.created"
+          }
+        | {
+            event_id: string
+            occurred_at: string | Date
+            organization_id: string
+            device_id: string
+            access_code_id: string
+            event_type: "access_code.deleted"
+          }
+      )[]
     }
   }
   "/health": {
@@ -829,6 +1048,17 @@ export interface Routes {
       }[]
     }
   }
+  "/linked_accounts/delete": {
+    route: "/linked_accounts/delete"
+    method: "DELETE" | "POST"
+    queryParams: {}
+    jsonBody: {
+      linked_account_id: string
+    }
+    commonParams: {}
+    formData: {}
+    jsonResponse: {}
+  }
   "/linked_accounts/get": {
     route: "/linked_accounts/get"
     method: "GET" | "POST"
@@ -846,6 +1076,7 @@ export interface Routes {
         account_type: string
         user_identifier?: any
         ext_seam_connected_account_id: string
+        did_complete_first_sync: boolean
         errors: {
           message: string
           error_code: string
@@ -892,6 +1123,7 @@ export interface Routes {
         account_type: string
         user_identifier?: any
         ext_seam_connected_account_id: string
+        did_complete_first_sync: boolean
         errors: {
           message: string
           error_code: string
@@ -934,7 +1166,7 @@ export interface Routes {
     queryParams: {}
     jsonBody: {
       accepted_providers?: string[] | undefined
-      device_selection_mode?: "none" | "single" | "multiple"
+      device_selection_mode?: ("none" | "single" | "multiple") | undefined
       custom_redirect_url?: string | undefined
     }
     commonParams: {}
@@ -1010,6 +1242,7 @@ export interface Routes {
     queryParams: {}
     jsonBody: {
       name: string
+      is_sandbox?: boolean
     }
     commonParams: {}
     formData: {}
@@ -1017,6 +1250,7 @@ export interface Routes {
       organization: {
         organization_id: string
         name: string
+        created_by: string | null
         created_at: string | Date
       }
     }
@@ -1034,6 +1268,7 @@ export interface Routes {
       organization: {
         organization_id: string
         name: string
+        created_by: string | null
         created_at: string | Date
       }
     }
@@ -1094,6 +1329,7 @@ export interface Routes {
       organizations: {
         organization_id: string
         name: string
+        created_by: string | null
         created_at: string | Date
       }[]
     }
@@ -1314,8 +1550,7 @@ export interface Routes {
         email: string | null
         first_name: string | null
         last_name: string | null
-        title: string | null
-        organization_id: string
+        organization_id?: string | undefined
         created_at: string | Date
       }
     }
@@ -1355,9 +1590,23 @@ export interface Routes {
         email: string | null
         first_name: string | null
         last_name: string | null
-        title: string | null
-        organization_id: string
+        organization_id?: string | undefined
         created_at: string | Date
+      }[]
+    }
+  }
+  "/users/list_my_organizations": {
+    route: "/users/list_my_organizations"
+    method: "GET" | "POST"
+    queryParams: {}
+    jsonBody: {}
+    commonParams: {}
+    formData: {}
+    jsonResponse: {
+      organizations_with_roles: {
+        organization_id: string
+        organization_name: string
+        user_organization_roles: string[]
       }[]
     }
   }
@@ -1386,7 +1635,6 @@ export interface Routes {
       user_id?: string | undefined
       first_name?: string | undefined
       last_name?: string | undefined
-      title?: string | undefined
     }
     commonParams: {}
     formData: {}
