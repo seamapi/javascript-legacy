@@ -1,16 +1,16 @@
-[seamapi](../README.md) / [Exports](../modules.md) / ClientSessionI
+[seamapi](../README.md) / [Exports](../modules.md) / ClientSession
 
-# Interface: ClientSessionI
+# Interface: ClientSession
 
 ## Table of contents
 
 ### Properties
 
-- [client\_access\_token\_id](ClientSessionI.md#client_access_token_id)
-- [created\_at](ClientSessionI.md#created_at)
-- [short\_token](ClientSessionI.md#short_token)
-- [token](ClientSessionI.md#token)
-- [user\_id](ClientSessionI.md#user_id)
+- [client\_access\_token\_id](ClientSession.md#client_access_token_id)
+- [created\_at](ClientSession.md#created_at)
+- [short\_token](ClientSession.md#short_token)
+- [token](ClientSession.md#token)
+- [user\_id](ClientSession.md#user_id)
 
 ## Properties
 

@@ -12,7 +12,7 @@
 
 ### client\_session
 
-• **client\_session**: [`ClientSessionI`](ClientSessionI.md)
+• **client\_session**: [`ClientSession`](ClientSession.md)
 
 #### Defined in
 

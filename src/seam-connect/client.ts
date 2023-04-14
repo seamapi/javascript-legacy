@@ -1,4 +1,8 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
+import axios, {
+  AxiosInstance,
+  AxiosRequestConfig,
+  AxiosRequestHeaders,
+} from "axios"
 import axiosRetry from "axios-retry"
 import { SeamAPIError, SeamMalformedInputError } from "../lib/api-error"
 import { Routes } from "./routes"
@@ -122,20 +126,22 @@ export class Seam extends Routes {
   static async getClientSessionToken(
     ops: catParams
   ): Promise<APIResponse<ClientSessionResponseInterface>> {
-    let params: any = {}
+    let headers: AxiosRequestHeaders = {}
 
-    if (ops.apiKey?.startsWith("seam_test")) {
-      // backend mode
-      params["api_key"] = ops.apiKey
-    } else if (ops.publishedKey?.startsWith("seam_pk")) {
+    if (ops.publishedKey?.startsWith("seam_pk")) {
       // frontend mode
-      params["publishable_key"] = ops.publishedKey
+      headers["seam-publishable-key"] = ops.publishedKey
+    } else if (ops.apiKey?.startsWith("seam_")) {
+      // backend mode
+      headers["seam-api-key"] = ops.apiKey
     }
-    params["user_identifier_key"] = ops.userIdentifierKey
+    headers["seam-user-identifier-key"] = ops.userIdentifierKey
+
     try {
       const response = await axios.post(
-        ops.endpoint + "internal/client_session_tokens/create",
-        params
+        ops.endpoint + "internal/client_sessions/create",
+        {},
+        { headers }
       )
       if (response.data.error) {
         return {
