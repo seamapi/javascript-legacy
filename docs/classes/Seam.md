@@ -309,7 +309,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ops` | `catParams` |
+| `ops` | `CSTParams` |
 
 #### Returns
 

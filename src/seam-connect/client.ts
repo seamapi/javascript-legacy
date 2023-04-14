@@ -128,7 +128,7 @@ export class Seam extends Routes {
   }
 
   static async getClientSessionToken(
-    ops: catParams
+    ops: CSTParams
   ): Promise<APIResponse<ClientSessionResponseInterface>> {
     let headers: AxiosRequestHeaders = {}
 
@@ -167,7 +167,7 @@ export class Seam extends Routes {
   }
 }
 
-type catParams = {
+type CSTParams = {
   publishedKey?: string
   userIdentifierKey: string
   endpoint: string
