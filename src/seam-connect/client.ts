@@ -73,7 +73,7 @@ export class Seam extends Routes {
         "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
       )
 
-    if (!apiKey) {
+    if (!clientSessionToken && !apiKey) {
       throw new Error(
         "SEAM_API_KEY not found in environment, and apiKey not provided"
       )
