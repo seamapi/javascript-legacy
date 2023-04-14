@@ -147,9 +147,14 @@ export class Seam extends Routes {
       headers["seam-user-identifier-key"] = options.userIdentifierKey
     }
 
+    const endpoint =
+      options.endpoint ??
+      globalThis?.process?.env?.SEAM_API_URL ??
+      "https://connect.getseam.com"
+
     try {
       const response = await axios.post(
-        options.endpoint + "internal/client_sessions/create",
+        endpoint + "/internal/client_sessions/create",
         {},
         { headers }
       )
