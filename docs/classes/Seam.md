@@ -303,13 +303,13 @@ ___
 
 ### getClientSessionToken
 
-▸ `Static` **getClientSessionToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponseInterface`](../interfaces/ClientSessionResponseInterface.md)\>\>
+▸ `Static` **getClientSessionToken**(`options`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponseInterface`](../interfaces/ClientSessionResponseInterface.md)\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ops` | [`SeamClientOptions`](../interfaces/SeamClientOptions.md) & { `userIdentifierKey?`: ``null`` \| `string`  } |
+| `options` | `Omit`<[`SeamClientOptions`](../interfaces/SeamClientOptions.md), ``"clientSessionToken"``\> & { `publishableKey`: `string` ; `userIdentifierKey?`: ``null`` \| `string`  } |
 
 #### Returns
 
