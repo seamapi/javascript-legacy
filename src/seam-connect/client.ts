@@ -79,17 +79,20 @@ export class Seam extends Routes {
       )
     }
 
+    const headers: AxiosRequestHeaders = {
+      ...axiosOptions?.headers,
+      Authorization: `Bearer ${apiKey || clientAccessToken}`,
+      ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }), // only needed for session key authentication
+    }
+    if (typeof window === "undefined") {
+      headers[
+        "User-Agent"
+      ] = `Javascript SDK v${version}, Node.js mode, (https://github.com/seamapi/javascript)`
+    }
     this.client = axios.create({
       ...axiosOptions,
       baseURL: endpoint,
-      headers: {
-        ...axiosOptions?.headers,
-        Authorization: `Bearer ${apiKey || clientAccessToken}`,
-        // ["User-Agent"]: `Javascript SDK v${version} (https://github.com/seamapi/javascript)`,
-
-        // only needed for session key authentication
-        ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }),
-      },
+      headers,
     })
 
     axiosRetry(this.client, {

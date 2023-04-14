@@ -297,7 +297,7 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/seam-connect/client.ts:101](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L101)
+[src/seam-connect/client.ts:104](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L104)
 
 ___
 
@@ -317,4 +317,4 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:126](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L126)
+[src/seam-connect/client.ts:129](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L129)
