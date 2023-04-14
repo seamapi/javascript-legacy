@@ -135,9 +135,9 @@ export class Seam extends Routes {
   ): Promise<APIResponse<ClientSessionResponseInterface>> {
     let headers: AxiosRequestHeaders = {}
 
-    if (options.apiKey?.startsWith("seam_pk")) {
+    if (options.publishableKey?.startsWith("seam_pk")) {
       // frontend mode
-      headers["seam-publishable-key"] = options.apiKey
+      headers["seam-publishable-key"] = options.publishableKey
     } else if (options.apiKey?.startsWith("seam_")) {
       // backend mode
       headers["seam-api-key"] = options.apiKey
