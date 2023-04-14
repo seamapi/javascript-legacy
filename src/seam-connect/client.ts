@@ -83,6 +83,7 @@ export class Seam extends Routes {
       ...axiosOptions?.headers,
       Authorization: `Bearer ${apiKey || clientAccessToken}`,
       ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }), // only needed for session key authentication
+      // 'seam-sdk-version': version // TODO: resolve error Access to XMLHttpRequest at 'http://localhost:3020/devices/list' from origin 'http://localhost:5173' has been blocked by CORS policy: Request header field seam-sdk-version is not allowed by Access-Control-Allow-Headers in preflight response.
     }
     if (typeof window === "undefined") {
       headers[
