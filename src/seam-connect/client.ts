@@ -132,9 +132,9 @@ export class Seam extends Routes {
   ): Promise<APIResponse<ClientSessionResponseInterface>> {
     let headers: AxiosRequestHeaders = {}
 
-    if (ops.publishedKey?.startsWith("seam_pk")) {
+    if (ops.publishableKey?.startsWith("seam_pk")) {
       // frontend mode
-      headers["seam-publishable-key"] = ops.publishedKey
+      headers["seam-publishable-key"] = ops.publishableKey
     } else if (ops.apiKey?.startsWith("seam_")) {
       // backend mode
       headers["seam-api-key"] = ops.apiKey
@@ -168,7 +168,7 @@ export class Seam extends Routes {
 }
 
 type CSTParams = {
-  publishedKey?: string
+  publishableKey?: string
   userIdentifierKey: string
   endpoint: string
   workspaceId?: string
