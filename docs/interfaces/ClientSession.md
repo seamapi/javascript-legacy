@@ -6,7 +6,7 @@
 
 ### Properties
 
-- [client\_access\_token\_id](ClientSession.md#client_access_token_id)
+- [client\_session\_token\_id](ClientSession.md#client_session_token_id)
 - [created\_at](ClientSession.md#created_at)
 - [short\_token](ClientSession.md#short_token)
 - [token](ClientSession.md#token)
@@ -14,9 +14,9 @@
 
 ## Properties
 
-### client\_access\_token\_id
+### client\_session\_token\_id
 
-• **client\_access\_token\_id**: `string`
+• **client\_session\_token\_id**: `string`
 
 #### Defined in
 

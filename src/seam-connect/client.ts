@@ -18,7 +18,7 @@ export interface SeamClientOptions {
   /* Seam API Key */
   apiKey?: string
   /* Seam Client Access Token */
-  clientAccessToken?: string
+  clientSessionToken?: string
   /**
    * Seam Endpoint to use, defaults to https://connect.getseam.com
    **/
@@ -63,7 +63,7 @@ export class Seam extends Routes {
   constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
 
-    const { apiKey, endpoint, workspaceId, axiosOptions, clientAccessToken } =
+    const { apiKey, endpoint, workspaceId, axiosOptions, clientSessionToken } =
       getSeamClientOptionsWithDefaults(apiKeyOrOptions)
 
     const isRegularAPIKey = apiKey?.startsWith("seam_")
@@ -81,7 +81,7 @@ export class Seam extends Routes {
 
     const headers: AxiosRequestHeaders = {
       ...axiosOptions?.headers,
-      Authorization: `Bearer ${apiKey || clientAccessToken}`,
+      Authorization: `Bearer ${apiKey || clientSessionToken}`,
       ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }), // only needed for session key authentication
       // 'seam-sdk-version': version // TODO: resolve error Access to XMLHttpRequest at 'http://localhost:3020/devices/list' from origin 'http://localhost:5173' has been blocked by CORS policy: Request header field seam-sdk-version is not allowed by Access-Control-Allow-Headers in preflight response.
     }
@@ -128,22 +128,33 @@ export class Seam extends Routes {
   }
 
   static async getClientSessionToken(
-    ops: CSTParams
+    options: Omit<SeamClientOptions, "clientSessionToken"> & {
+      publishableKey: string
+      userIdentifierKey?: string | undefined | null
+    }
   ): Promise<APIResponse<ClientSessionResponseInterface>> {
     let headers: AxiosRequestHeaders = {}
 
-    if (ops.publishedKey?.startsWith("seam_pk")) {
+    if (options.publishableKey?.startsWith("seam_pk")) {
       // frontend mode
-      headers["seam-publishable-key"] = ops.publishedKey
-    } else if (ops.apiKey?.startsWith("seam_")) {
+      headers["seam-publishable-key"] = options.publishableKey
+    } else if (options.apiKey?.startsWith("seam_")) {
       // backend mode
-      headers["seam-api-key"] = ops.apiKey
+      headers["seam-api-key"] = options.apiKey
     }
-    headers["seam-user-identifier-key"] = ops.userIdentifierKey
+
+    if (options.userIdentifierKey) {
+      headers["seam-user-identifier-key"] = options.userIdentifierKey
+    }
+
+    const endpoint =
+      options.endpoint ??
+      globalThis?.process?.env?.SEAM_API_URL ??
+      "https://connect.getseam.com"
 
     try {
       const response = await axios.post(
-        ops.endpoint + "internal/client_sessions/create",
+        endpoint + "/internal/client_sessions/create",
         {},
         { headers }
       )
@@ -165,12 +176,4 @@ export class Seam extends Routes {
       )
     }
   }
-}
-
-type CSTParams = {
-  publishedKey?: string
-  userIdentifierKey: string
-  endpoint: string
-  workspaceId?: string
-  apiKey?: string
 }

@@ -8,7 +8,7 @@
 
 - [apiKey](SeamClientOptions.md#apikey)
 - [axiosOptions](SeamClientOptions.md#axiosoptions)
-- [clientAccessToken](SeamClientOptions.md#clientaccesstoken)
+- [clientSessionToken](SeamClientOptions.md#clientsessiontoken)
 - [endpoint](SeamClientOptions.md#endpoint)
 - [workspaceId](SeamClientOptions.md#workspaceid)
 
@@ -36,9 +36,9 @@ Extended options to pass to Axios
 
 ___
 
-### clientAccessToken
+### clientSessionToken
 
-• `Optional` **clientAccessToken**: `string`
+• `Optional` **clientSessionToken**: `string`
 
 #### Defined in
 
