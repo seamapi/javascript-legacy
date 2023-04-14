@@ -157,14 +157,12 @@ export class Seam extends Routes {
         }
       }
       return await response.data
-    } catch (e: any) {
-      return {
-        ok: false,
-        error: {
-          type: "unknown",
-          message: e.toString() ?? "Something went wrong",
-        },
-      }
+    } catch (error: any) {
+      throw new SeamAPIError(
+        error.response.status,
+        error.response.headers["seam-request-id"],
+        (error.response.data as ErroredAPIResponse).error
+      )
     }
   }
 }
