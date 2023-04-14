@@ -18,7 +18,7 @@ export interface SeamClientOptions {
   /* Seam API Key */
   apiKey?: string
   /* Seam Client Access Token */
-  clientAccessToken?: string
+  clientSessionToken?: string
   /**
    * Seam Endpoint to use, defaults to https://connect.getseam.com
    **/
@@ -63,7 +63,7 @@ export class Seam extends Routes {
   constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
 
-    const { apiKey, endpoint, workspaceId, axiosOptions, clientAccessToken } =
+    const { apiKey, endpoint, workspaceId, axiosOptions, clientSessionToken } =
       getSeamClientOptionsWithDefaults(apiKeyOrOptions)
 
     const isRegularAPIKey = apiKey?.startsWith("seam_")
@@ -81,7 +81,7 @@ export class Seam extends Routes {
 
     const headers: AxiosRequestHeaders = {
       ...axiosOptions?.headers,
-      Authorization: `Bearer ${apiKey || clientAccessToken}`,
+      Authorization: `Bearer ${apiKey || clientSessionToken}`,
       ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }), // only needed for session key authentication
       // 'seam-sdk-version': version // TODO: resolve error Access to XMLHttpRequest at 'http://localhost:3020/devices/list' from origin 'http://localhost:5173' has been blocked by CORS policy: Request header field seam-sdk-version is not allowed by Access-Control-Allow-Headers in preflight response.
     }
