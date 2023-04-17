@@ -197,7 +197,7 @@ export class Seam extends Routes {
 type CSTParams = {
   publishableKey?: string
   userIdentifierKey: string
-  endpoint: string
+  endpoint?: string
   workspaceId?: string
   apiKey?: string
 }
