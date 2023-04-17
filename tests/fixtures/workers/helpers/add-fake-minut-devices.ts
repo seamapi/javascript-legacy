@@ -35,7 +35,7 @@ const addFakeMinutDevices = async (axios: Axios) => {
     sync: true,
   })
 
-  const devices = await getDeviceType(axios, "minut")
+  const devices = await getDeviceType(axios, "minut_sensor")
   const [device_with_quiet_hours, device_without_quiet_hours] = devices
 
   return {

@@ -35,7 +35,6 @@ import {
   WebhookCreateRequest,
   WebhookGetRequest,
   NoiseThresholdsListRequest,
-  NoiseThresholdsListResponse,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -63,6 +62,7 @@ import {
   WorkspaceGetResponse,
   WorkspaceResetSandboxResponse,
   WorkspacesListResponse,
+  NoiseThresholdsListResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
