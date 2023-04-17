@@ -19,6 +19,8 @@ export interface SeamClientOptions {
   apiKey?: string
   /* Seam Client Access Token */
   clientAccessToken?: string
+  /* Seam Client Session Token */
+  clientSessionToken?: string
   /**
    * Seam Endpoint to use, defaults to https://connect.getseam.com
    **/
@@ -63,25 +65,38 @@ export class Seam extends Routes {
   constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
 
-    const { apiKey, endpoint, workspaceId, axiosOptions, clientAccessToken } =
-      getSeamClientOptionsWithDefaults(apiKeyOrOptions)
-
-    const isRegularAPIKey = apiKey?.startsWith("seam_")
-
-    if (isRegularAPIKey && workspaceId)
-      throw new Error(
-        "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
-      )
-
-    if (!apiKey) {
-      throw new Error(
-        "SEAM_API_KEY not found in environment, and apiKey not provided"
-      )
+    const {
+      apiKey,
+      endpoint,
+      workspaceId,
+      axiosOptions,
+      clientAccessToken,
+      clientSessionToken,
+    } = getSeamClientOptionsWithDefaults(apiKeyOrOptions)
+    let bearer = `Bearer `
+    if (
+      (clientSessionToken && clientSessionToken?.startsWith("seam_cst")) ||
+      (apiKey && apiKey.startsWith("seam_cst"))
+    ) {
+      bearer += clientSessionToken || apiKey
+    } else if (clientAccessToken && clientAccessToken?.startsWith("seam_at")) {
+      bearer += clientAccessToken
+    } else {
+      const isRegularAPIKey = apiKey?.startsWith("seam_")
+      if (isRegularAPIKey && workspaceId)
+        throw new Error(
+          "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
+        )
+      if (!apiKey) {
+        throw new Error(
+          "SEAM_API_KEY not found in environment, and apiKey not provided"
+        )
+      }
+      bearer += apiKey
     }
-
     const headers: AxiosRequestHeaders = {
       ...axiosOptions?.headers,
-      Authorization: `Bearer ${apiKey || clientAccessToken}`,
+      Authorization: bearer,
       ...(!workspaceId ? {} : { "Seam-Workspace": workspaceId }), // only needed for session key authentication
       // 'seam-sdk-version': version // TODO: resolve error Access to XMLHttpRequest at 'http://localhost:3020/devices/list' from origin 'http://localhost:5173' has been blocked by CORS policy: Request header field seam-sdk-version is not allowed by Access-Control-Allow-Headers in preflight response.
     }

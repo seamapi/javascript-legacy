@@ -9,6 +9,7 @@
 - [apiKey](SeamClientOptions.md#apikey)
 - [axiosOptions](SeamClientOptions.md#axiosoptions)
 - [clientAccessToken](SeamClientOptions.md#clientaccesstoken)
+- [clientSessionToken](SeamClientOptions.md#clientsessiontoken)
 - [endpoint](SeamClientOptions.md#endpoint)
 - [workspaceId](SeamClientOptions.md#workspaceid)
 
@@ -32,7 +33,7 @@ Extended options to pass to Axios
 
 #### Defined in
 
-[src/seam-connect/client.ts:34](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L34)
+[src/seam-connect/client.ts:36](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L36)
 
 ___
 
@@ -46,6 +47,16 @@ ___
 
 ___
 
+### clientSessionToken
+
+• `Optional` **clientSessionToken**: `string`
+
+#### Defined in
+
+[src/seam-connect/client.ts:23](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L23)
+
+___
+
 ### endpoint
 
 • `Optional` **endpoint**: `string`
@@ -54,7 +65,7 @@ Seam Endpoint to use, defaults to https://connect.getseam.com
 
 #### Defined in
 
-[src/seam-connect/client.ts:25](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L25)
+[src/seam-connect/client.ts:27](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L27)
 
 ___
 
@@ -67,4 +78,4 @@ or undefined
 
 #### Defined in
 
-[src/seam-connect/client.ts:30](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L30)
+[src/seam-connect/client.ts:32](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L32)

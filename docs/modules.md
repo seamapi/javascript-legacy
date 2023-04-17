@@ -615,7 +615,7 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:37](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L37)
+[src/seam-connect/client.ts:39](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L39)
 
 ___
 
