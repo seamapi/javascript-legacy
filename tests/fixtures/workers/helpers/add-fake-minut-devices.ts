@@ -61,7 +61,7 @@ const addFakeMinutDevices = async (axios: Axios) => {
     }
   )
 
-  retryAxiosCall(create_minut_devices, 5)
+  await retryAxiosCall(create_minut_devices, 5)
 
   const devices = await getDeviceType(axios, "minut_sensor")
   const [device_with_quiet_hours, device_without_quiet_hours] = devices
