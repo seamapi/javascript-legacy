@@ -2,6 +2,7 @@ import axios, {
   AxiosInstance,
   AxiosRequestConfig,
   AxiosRequestHeaders,
+  AxiosResponse,
 } from "axios"
 import axiosRetry from "axios-retry"
 import { SeamAPIError, SeamMalformedInputError } from "../lib/api-error"
@@ -12,7 +13,7 @@ import {
   SuccessfulAPIResponse,
 } from "../types/globals"
 import { version } from "../../package.json"
-import { ClientSessionResponse } from "../types"
+import { ClientSession, ClientSessionResponse } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -157,7 +158,9 @@ export class Seam extends Routes {
     headers["seam-user-identifier-key"] = ops.userIdentifierKey
 
     try {
-      const response = await axios.post(
+      const response: AxiosResponse & {
+        data: { client_session: ClientSession }
+      } = await axios.post(
         ops.endpoint + "internal/client_sessions/create",
         {},
         { headers }
