@@ -178,7 +178,8 @@ export class Seam extends Routes {
       const response: AxiosResponse & {
         data: { client_session: ClientSession }
       } = await axios.post(
-        ops.endpoint + "internal/client_sessions/create",
+        (ops.endpoint ?? "https://connect.getseam.com") +
+          "/internal/client_sessions/create",
         {},
         { headers }
       )
