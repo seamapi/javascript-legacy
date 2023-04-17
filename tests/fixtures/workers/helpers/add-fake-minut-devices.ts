@@ -18,22 +18,28 @@ const addFakeMinutDevices = async (axios: Axios) => {
     },
   }
 
-  await axios.post("/internal/scenarios/factories/load", {
-    factory_name: "create_minut_devices",
-    input: {
-      devicesConfig: [
-        defaultConfig,
-        {
-          ...defaultConfig,
-          sound_level_high_quiet_hours: {
-            ...defaultConfig.sound_level_high_quiet_hours,
-            enabled: false,
+  try {
+    await axios.post("/internal/scenarios/factories/load", {
+      factory_name: "create_minut_devices",
+      input: {
+        devicesConfig: [
+          defaultConfig,
+          {
+            ...defaultConfig,
+            sound_level_high_quiet_hours: {
+              ...defaultConfig.sound_level_high_quiet_hours,
+              enabled: false,
+            },
           },
-        },
-      ],
-    },
-    sync: true,
-  })
+        ],
+      },
+      sync: true,
+    })
+  } catch (e) {
+    // @ts-ignore
+    console.log(e.response.data)
+    throw new Error(`Failed load minut scenario`)
+  }
 
   const devices = await getDeviceType(axios, "minut_sensor")
   const [device_with_quiet_hours, device_without_quiet_hours] = devices
