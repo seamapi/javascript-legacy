@@ -75,13 +75,30 @@ export class Seam extends Routes {
       clientSessionToken,
     } = getSeamClientOptionsWithDefaults(apiKeyOrOptions)
     let bearer = `Bearer `
-    if (
-      (clientSessionToken && clientSessionToken?.startsWith("seam_cst")) ||
-      (apiKey && apiKey.startsWith("seam_cst"))
-    ) {
-      bearer += clientSessionToken || apiKey
-    } else if (clientAccessToken && clientAccessToken?.startsWith("seam_at")) {
-      bearer += clientAccessToken
+    if (clientSessionToken) {
+      if (clientSessionToken?.startsWith("seam_cst"))
+        bearer += clientSessionToken || apiKey
+      else throw new Error("clientSessionToken must start with seam_cst")
+      if (apiKey || clientAccessToken)
+        throw new Error(
+          "You can't use clientSessionToken AND specify apiKey or clientAccessToken."
+        )
+    } else if (apiKey && apiKey.startsWith("seam_cst")) {
+      if (clientAccessToken || clientSessionToken)
+        throw new Error(
+          "You can't use clientSessionToken in apiKey AND specify clientSessionToken or clientAccessToken."
+        )
+      bearer += apiKey
+      console.warn(
+        "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
+      )
+    } else if (clientAccessToken) {
+      if (clientAccessToken?.startsWith("seam_at")) bearer += clientAccessToken
+      else throw new Error("clientAccessToken must start with seam_at")
+      if (apiKey || clientSessionToken)
+        throw new Error(
+          "You can't use clientAccessToken AND specify apiKey or clientSessionToken."
+        )
     } else {
       const isRegularAPIKey = apiKey?.startsWith("seam_")
       if (isRegularAPIKey && workspaceId)
