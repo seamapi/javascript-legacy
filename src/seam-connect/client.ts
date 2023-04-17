@@ -165,15 +165,6 @@ export class Seam extends Routes {
         {},
         { headers }
       )
-      if (response.data.error) {
-        return {
-          ok: false,
-          error: {
-            type: response.data.error.type,
-            message: response.data.error.message,
-          },
-        }
-      }
       return await response.data
     } catch (error: any) {
       throw new SeamAPIError(
