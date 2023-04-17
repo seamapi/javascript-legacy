@@ -33,7 +33,6 @@ import {
   AccessCodeCreateMultipleOngoingRequest,
   AccessCodeCreateMultipleScheduledRequest,
   NoiseThresholdsListRequest,
-  NoiseThresholdsListResponse,
 } from "../types/route-requests"
 import { SeamActionAttemptError } from "../lib/api-error"
 import {
@@ -61,6 +60,7 @@ import {
   AccessCodeCreateMultipleResponse,
   UnmanagedAccessCodesListResponse,
   UnmanagedDeviceListResponse,
+  NoiseThresholdsListResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {

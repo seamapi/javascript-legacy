@@ -83,7 +83,12 @@ const startAndSeedServer = async () => {
     addFakeAugustDevices(axios),
     addFakeMinutDevices(axios),
     axios.post("/connect_webviews/create", {
-      accepted_providers: ["schlage", "august"],
+      accepted_providers: [
+        "schlage",
+        "august",
+        // TODO: Uncomment this line when Minut is ready
+        // "minut"
+      ],
     }),
   ])
 

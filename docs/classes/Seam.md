@@ -236,7 +236,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `list` | (`params`: [`NoiseThresholdsListRequest`](../modules.md#noisethresholdslistrequest)) => `Promise`<{ `device_id`: `string` ; `ends_daily_at`: `string` ; `name`: `string` ; `noise_threshold_decibels`: `number` ; `noise_threshold_id`: `string` ; `noise_threshold_nrs?`: `number` ; `starts_daily_at`: `string`  }[]\> |
+| `list` | (`params`: [`NoiseThresholdsListRequest`](../modules.md#noisethresholdslistrequest)) => `Promise`<[`NoiseThresholds`](../modules.md#noisethresholds)[]\> |
 
 #### Inherited from
 

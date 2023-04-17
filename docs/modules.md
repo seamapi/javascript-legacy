@@ -113,6 +113,7 @@
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
+- [NoiseThresholds](modules.md#noisethresholds)
 - [NoiseThresholdsListRequest](modules.md#noisethresholdslistrequest)
 - [NoiseThresholdsListResponse](modules.md#noisethresholdslistresponse)
 - [Provider](modules.md#provider)
@@ -462,6 +463,28 @@ ___
 
 ___
 
+### NoiseThresholds
+
+Ƭ **NoiseThresholds**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `device_id` | `string` | - |
+| `ends_daily_at` | `string` | - |
+| `name` | `string` | - |
+| `noise_threshold_decibels` | `number` | - |
+| `noise_threshold_id` | `string` | - |
+| `noise_threshold_nrs?` | `number` | Only present if the noise threshold is from Noiseaware |
+| `starts_daily_at` | `string` | - |
+
+#### Defined in
+
+[src/types/models.ts:290](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L290)
+
+___
+
 ### NoiseThresholdsListRequest
 
 Ƭ **NoiseThresholdsListRequest**: `Object`
@@ -486,11 +509,11 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `noise_thresholds` | { `device_id`: `string` ; `ends_daily_at`: `string` ; `name`: `string` ; `noise_threshold_decibels`: `number` ; `noise_threshold_id`: `string` ; `noise_threshold_nrs?`: `number` ; `starts_daily_at`: `string`  }[] |
+| `noise_thresholds` | [`NoiseThresholds`](modules.md#noisethresholds)[] |
 
 #### Defined in
 
-[src/types/route-requests.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L154)
+[src/types/route-responses.ts:127](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L127)
 
 ___
 
