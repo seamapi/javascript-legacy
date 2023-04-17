@@ -13,6 +13,7 @@ const getDeviceType = async (axios: Axios, deviceType: string) => {
     return filteredDevices
   }
 
+  console.log("devices", devices)
   throw new Error(`Failed to find ${deviceType} devices`)
 }
 
