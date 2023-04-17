@@ -12,7 +12,7 @@ import {
   SuccessfulAPIResponse,
 } from "../types/globals"
 import { version } from "../../package.json"
-import { ClientSessionResponseInterface } from "../types"
+import { ClientSessionResponse } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -129,7 +129,7 @@ export class Seam extends Routes {
 
   static async getClientSessionToken(
     ops: CSTParams
-  ): Promise<APIResponse<ClientSessionResponseInterface>> {
+  ): Promise<APIResponse<ClientSessionResponse>> {
     let headers: AxiosRequestHeaders = {}
 
     if (ops.publishedKey?.startsWith("seam_pk")) {

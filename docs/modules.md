@@ -40,7 +40,7 @@
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
 - [ClientSession](interfaces/ClientSession.md)
-- [ClientSessionResponseInterface](interfaces/ClientSessionResponseInterface.md)
+- [ClientSessionResponse](interfaces/ClientSessionResponse.md)
 - [ConnectWebview](interfaces/ConnectWebview.md)
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)

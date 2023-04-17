@@ -1,12 +1,12 @@
-[seamapi](../README.md) / [Exports](../modules.md) / ClientSessionResponseInterface
+[seamapi](../README.md) / [Exports](../modules.md) / ClientSessionResponse
 
-# Interface: ClientSessionResponseInterface
+# Interface: ClientSessionResponse
 
 ## Table of contents
 
 ### Properties
 
-- [client\_session](ClientSessionResponseInterface.md#client_session)
+- [client\_session](ClientSessionResponse.md#client_session)
 
 ## Properties
 

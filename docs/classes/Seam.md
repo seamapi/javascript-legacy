@@ -303,7 +303,7 @@ ___
 
 ### getClientSessionToken
 
-▸ `Static` **getClientSessionToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponseInterface`](../interfaces/ClientSessionResponseInterface.md)\>\>
+▸ `Static` **getClientSessionToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponse`](../interfaces/ClientSessionResponse.md)\>\>
 
 #### Parameters
 
@@ -313,7 +313,7 @@ ___
 
 #### Returns
 
-`Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponseInterface`](../interfaces/ClientSessionResponseInterface.md)\>\>
+`Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponse`](../interfaces/ClientSessionResponse.md)\>\>
 
 #### Defined in
 

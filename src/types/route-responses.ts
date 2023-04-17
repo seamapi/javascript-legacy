@@ -124,6 +124,6 @@ export interface EventsListResponse {
   events: Event[]
 }
 
-export interface ClientSessionResponseInterface {
+export interface ClientSessionResponse {
   client_session: ClientSession
 }
