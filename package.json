@@ -113,7 +113,7 @@
     "pack:cli": "pkg -c package.json dist/cli/entry.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "npm run build:json-response-schemas && ava",
+    "test": "DEBUG=testcontainers* && npm run build:json-response-schemas && ava",
     "test:watch": "npm run build:json-response-schemas && ava --watch",
     "cli:dev": "esr src/cli/entry.ts"
   },
