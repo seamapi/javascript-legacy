@@ -30,6 +30,7 @@ import {
   DeviceUpdateRequest,
   DevicesListRequest,
   EventsListRequest,
+  UnmanagedAccessCodeGetRequest,
   UnmanagedDeviceUpdateRequest,
   WebhookCreateRequest,
   WebhookGetRequest,
@@ -274,7 +275,7 @@ export abstract class Routes {
           method: "DELETE",
           data: params,
         }),
-      get: (params: { access_code_id: string }) =>
+      get: (params: UnmanagedAccessCodeGetRequest) =>
         this.makeRequestAndFormat<UnmanagedAccessCodesGetResponse>(
           "access_code",
           {

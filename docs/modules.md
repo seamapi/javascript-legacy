@@ -118,6 +118,7 @@
 - [ProviderCategory](modules.md#providercategory)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
+- [UnmanagedAccessCodeGetRequest](modules.md#unmanagedaccesscodegetrequest)
 - [UnmanagedDevice](modules.md#unmanageddevice)
 - [UnmanagedDeviceUpdateRequest](modules.md#unmanageddeviceupdaterequest)
 - [WebhookCreateRequest](modules.md#webhookcreaterequest)
@@ -360,7 +361,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:124](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L124)
+[src/types/route-requests.ts:130](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L130)
 
 ___
 
@@ -370,7 +371,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:108](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L108)
+[src/types/route-requests.ts:114](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L114)
 
 ___
 
@@ -417,7 +418,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:116](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L116)
+[src/types/route-requests.ts:122](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L122)
 
 ___
 
@@ -509,6 +510,24 @@ ___
 
 ___
 
+### UnmanagedAccessCodeGetRequest
+
+Ƭ **UnmanagedAccessCodeGetRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `access_code_id?` | `string` |
+| `code?` | `string` |
+| `device_id?` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:108](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L108)
+
+___
+
 ### UnmanagedDevice
 
 Ƭ **UnmanagedDevice**: `Pick`<[`Device`](interfaces/Device.md)<[`CommonDeviceProperties`](modules.md#commondeviceproperties)\>, ``"device_id"`` \| ``"device_type"`` \| ``"connected_account_id"`` \| ``"workspace_id"`` \| ``"errors"`` \| ``"warnings"`` \| ``"created_at"``\>
@@ -532,7 +551,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L136)
+[src/types/route-requests.ts:142](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L142)
 
 ___
 
@@ -548,7 +567,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:132](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L132)
+[src/types/route-requests.ts:138](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L138)
 
 ___
 
@@ -564,7 +583,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:128](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L128)
+[src/types/route-requests.ts:134](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L134)
 
 ## Variables
 
