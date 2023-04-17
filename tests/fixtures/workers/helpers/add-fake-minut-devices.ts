@@ -19,7 +19,7 @@ const addFakeMinutDevices = async (axios: Axios) => {
   }
 
   try {
-    await axios.post("/internal/scenarios/factories/load", {
+    const { data } = await axios.post("/internal/scenarios/factories/load", {
       factory_name: "create_minut_devices",
       input: {
         devicesConfig: [
@@ -35,6 +35,7 @@ const addFakeMinutDevices = async (axios: Axios) => {
       },
       sync: true,
     })
+    console.log({ data })
   } catch (e) {
     // @ts-ignore
     console.log(e.response.data)
