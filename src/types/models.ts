@@ -26,7 +26,10 @@ export const LOCK_DEVICE_TYPES = [
 ]
 export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
 
-export const NOISE_DETECTION_DEVICE_TYPES = ["noiseaware_activity_zone"]
+export const NOISE_DETECTION_DEVICE_TYPES = [
+  "noiseaware_activity_zone",
+  "minut_sensor",
+]
 export type NoiseDetectionDeviceType =
   typeof NOISE_DETECTION_DEVICE_TYPES[number]
 
