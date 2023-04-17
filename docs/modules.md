@@ -75,6 +75,7 @@
 - [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
 - [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
 - [UnmanagedAccessCode](interfaces/UnmanagedAccessCode.md)
+- [UnmanagedAccessCodesGetResponse](interfaces/UnmanagedAccessCodesGetResponse.md)
 - [UnmanagedAccessCodesListResponse](interfaces/UnmanagedAccessCodesListResponse.md)
 - [UnmanagedDeviceListResponse](interfaces/UnmanagedDeviceListResponse.md)
 - [UserIdentifier](interfaces/UserIdentifier.md)

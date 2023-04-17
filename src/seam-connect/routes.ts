@@ -281,7 +281,7 @@ export abstract class Routes {
             url: "/access_codes/unmanaged/get",
             params,
           }
-        ), 
+        ),
       list: (params: { device_id: string }) =>
         this.makeRequestAndFormat<UnmanagedAccessCodesListResponse>(
           "access_codes",

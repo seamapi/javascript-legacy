@@ -50,7 +50,6 @@ export interface UnmanagedDeviceListResponse {
   devices: UnmanagedDevice[]
 }
 
-
 // Device Providers
 export interface DeviceProvidersListResponse {
   device_providers: DeviceProvider[]
