@@ -105,6 +105,12 @@ export type AccessCodeGetRequest = {
   code?: string
 }
 
+export type UnmanagedAccessCodeGetRequest = {
+  access_code_id?: string
+  device_id?: string
+  code?: string
+}
+
 export type DeviceGetRequest =
   | {
       device_id: string

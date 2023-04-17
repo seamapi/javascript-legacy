@@ -1,18 +1,18 @@
 import {
   AccessCode,
   ActionAttempt,
-  ConnectWebview,
-  Device,
-  DeviceProvider,
-  LockDevice,
-  Workspace,
-  ConnectedAccount,
   ActionType,
   CommonDeviceProperties,
-  Webhook,
+  ConnectWebview,
+  ConnectedAccount,
+  Device,
+  DeviceProvider,
   Event,
+  LockDevice,
   UnmanagedAccessCode,
   UnmanagedDevice,
+  Webhook,
+  Workspace,
 } from "./models"
 
 // Workspaces
@@ -87,6 +87,9 @@ export interface AccessCodeCreateMultipleResponse {
 // Unmanaged Access Codes
 export interface UnmanagedAccessCodesListResponse {
   access_codes: UnmanagedAccessCode[]
+}
+export interface UnmanagedAccessCodesGetResponse {
+  access_code: UnmanagedAccessCode
 }
 
 // Connected Accounts
