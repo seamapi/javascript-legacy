@@ -45,7 +45,7 @@
     "ora": "5.4.1",
     "p-retry": "4.6.1",
     "prompts": "2.4.2",
-    "seamapi-types": "^1.14.0",
+    "seamapi-types": "^1.16.9",
     "svix": "0.54.2",
     "typed-emitter": "2.1.0",
     "yargs": "17.3.1"
