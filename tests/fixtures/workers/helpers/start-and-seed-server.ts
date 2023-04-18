@@ -80,36 +80,29 @@ const startAndSeedServer = async (
 
   ;(axios.defaults.headers as any).Authorization = `Bearer ${api_key}`
 
-  const providersMap = {
-    schlage: () => addFakeSchlageDevices(axios),
-    august: () => addFakeAugustDevices(axios),
-    minut: () => addFakeMinutDevices(axios),
+  const connectWebview = await axios.post("/connect_webviews/create", {
+    // TODO: remove filter when minut is ready
+    accepted_providers: load_devices_from.filter(
+      (provider) => provider !== "minut"
+    ),
+  })
+
+  const devices: {
+    augustLock?: Awaited<ReturnType<typeof addFakeAugustDevices>>
+    minut?: Awaited<ReturnType<typeof addFakeMinutDevices>>
+    schlageLock?: Awaited<ReturnType<typeof addFakeSchlageDevices>>
+  } = {}
+
+  if (load_devices_from.includes("schlage")) {
+    devices["schlageLock"] = await addFakeSchlageDevices(axios)
   }
-  const [connectWebview, ...devicesByProvider] = await Promise.all([
-    axios.post("/connect_webviews/create", {
-      // TODO: remove filter when minut is ready
-      accepted_providers: load_devices_from.filter(
-        (provider) => provider !== "minut"
-      ),
-    }),
-    ...load_devices_from.map((provider) => providersMap[provider]()),
-  ])
 
-  const devices = {
-    ...load_devices_from.reduce((acc, provider, index) => {
-      if (provider === "schlage") {
-        acc["schlageLock"] = devicesByProvider[index]
-        return acc
-      }
+  if (load_devices_from.includes("schlage")) {
+    devices["augustLock"] = await addFakeAugustDevices(axios)
+  }
 
-      if (provider === "august") {
-        acc["augustLock"] = devicesByProvider[index]
-        return acc
-      }
-
-      acc[provider] = devicesByProvider[index]
-      return acc
-    }, {} as Record<"augustLock" | "minut" | "schlageLock", any>),
+  if (load_devices_from.includes("schlage")) {
+    devices["minut"] = await addFakeMinutDevices(axios)
   }
 
   return {
