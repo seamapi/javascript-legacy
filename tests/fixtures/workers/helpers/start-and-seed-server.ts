@@ -98,24 +98,19 @@ const startAndSeedServer = async (
   const devices = {
     ...load_devices_from.reduce((acc, provider, index) => {
       if (provider === "schlage") {
-        // @ts-ignore
         acc["schlageLock"] = devicesByProvider[index]
         return acc
       }
 
       if (provider === "august") {
-        // @ts-ignore
         acc["augustLock"] = devicesByProvider[index]
         return acc
       }
 
-      // @ts-ignore
       acc[provider] = devicesByProvider[index]
       return acc
-    }, {}),
+    }, {} as Record<"augustLock" | "minut" | "schlageLock", any>),
   }
-
-  console.log(devices)
 
   return {
     serverUrl,
