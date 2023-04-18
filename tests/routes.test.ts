@@ -2,7 +2,7 @@ import test from "ava"
 import { testAPIMethod } from "./fixtures/helpers/test-api-method-macro"
 
 // Noise Thresholds
-test.serial(
+test(
   testAPIMethod("noiseThresholds.list"),
   {
     args: (seed) => [
@@ -17,17 +17,13 @@ test.serial(
 )
 
 // Workspaces
-test.serial(testAPIMethod("workspaces.list"), {}, "Workspace[]")
-test.serial(testAPIMethod("workspaces.get"), {}, "Workspace")
-test.serial(
-  testAPIMethod("workspaces.resetSandbox"),
-  { modifiesState: true },
-  "{}"
-)
+test(testAPIMethod("workspaces.list"), {}, "Workspace[]")
+test(testAPIMethod("workspaces.get"), {}, "Workspace")
+test(testAPIMethod("workspaces.resetSandbox"), { modifiesState: true }, "{}")
 
 // Locks
-test.serial(testAPIMethod("locks.list"), {}, "LockDevice[]")
-test.serial(
+test(testAPIMethod("locks.list"), {}, "LockDevice[]")
+test(
   "with connected account ID",
   testAPIMethod("locks.list"),
   {
@@ -35,12 +31,12 @@ test.serial(
   },
   "LockDevice[]"
 )
-test.serial(
+test(
   testAPIMethod("locks.get"),
   { args: (seed) => [seed.devices.schlageLock.id1] },
   "LockDevice"
 )
-test.serial(
+test(
   testAPIMethod("locks.lockDoor"),
   {
     args: (seed) => [seed.devices.schlageLock.id1],
@@ -48,7 +44,7 @@ test.serial(
   },
   "{}"
 )
-test.serial(
+test(
   testAPIMethod("locks.unlockDoor"),
   {
     args: (seed) => [seed.devices.schlageLock.id1],
@@ -58,8 +54,8 @@ test.serial(
 )
 
 // Devices
-test.serial(testAPIMethod("devices.list"), {}, "AnyDevice[]")
-test.serial(
+test(testAPIMethod("devices.list"), {}, "AnyDevice[]")
+test(
   "with connected account ID",
   testAPIMethod("devices.list"),
   {
@@ -69,7 +65,7 @@ test.serial(
   },
   "AnyDevice[]"
 )
-test.serial(
+test(
   "by ID",
   testAPIMethod("devices.get"),
   {
@@ -77,7 +73,7 @@ test.serial(
   },
   "AnyDevice"
 )
-test.serial(
+test(
   "by name",
   testAPIMethod("devices.get"),
   {
@@ -85,7 +81,7 @@ test.serial(
   },
   "AnyDevice"
 )
-test.serial(
+test(
   testAPIMethod("devices.update"),
   {
     args: (seed) => [
@@ -98,7 +94,7 @@ test.serial(
   },
   "{}"
 )
-test.serial(
+test(
   "delete",
   testAPIMethod("devices.delete"),
   {
@@ -107,13 +103,9 @@ test.serial(
   },
   "{}"
 )
-test.serial(testAPIMethod("devices.unmanaged.list"), {}, "UnmanagedDevice[]")
-test.serial(
-  testAPIMethod("devices.listDeviceProviders"),
-  {},
-  "DeviceProvider[]"
-)
-test.serial(
+test(testAPIMethod("devices.unmanaged.list"), {}, "UnmanagedDevice[]")
+test(testAPIMethod("devices.listDeviceProviders"), {}, "DeviceProvider[]")
+test(
   "with provider_category",
   testAPIMethod("devices.listDeviceProviders"),
   {
@@ -127,15 +119,15 @@ test.serial(
 )
 
 // Connect Webviews
-test.serial(testAPIMethod("connectWebviews.list"), {}, "ConnectWebview[]")
-test.serial(
+test(testAPIMethod("connectWebviews.list"), {}, "ConnectWebview[]")
+test(
   testAPIMethod("connectWebviews.get"),
   {
     args: (seed) => [seed.connectWebviewId],
   },
   "ConnectWebview"
 )
-test.serial(
+test(
   testAPIMethod("connectWebviews.create"),
   {
     args: [
@@ -147,7 +139,7 @@ test.serial(
   },
   "ConnectWebview"
 )
-test.serial(
+test(
   testAPIMethod("connectWebviews.delete"),
   {
     args: (seed) => [
@@ -161,14 +153,14 @@ test.serial(
 )
 
 // Access Codes
-test.serial(
+test(
   testAPIMethod("accessCodes.list"),
   {
     args: (seed) => [{ device_id: seed.devices.schlageLock.id1 }],
   },
   "AccessCode[]"
 )
-test.serial(
+test(
   testAPIMethod("accessCodes.create"),
   {
     args: (seed) => [
@@ -182,7 +174,7 @@ test.serial(
   },
   "AccessCode"
 )
-test.serial(
+test(
   testAPIMethod("accessCodes.createMultiple"),
   {
     args: (seed) => [
@@ -195,7 +187,7 @@ test.serial(
   },
   "AccessCode[]"
 )
-test.serial(
+test(
   "by access code ID",
   testAPIMethod("accessCodes.get"),
   {
@@ -207,7 +199,7 @@ test.serial(
   },
   "AccessCode"
 )
-test.serial(
+test(
   "by device ID and code",
   testAPIMethod("accessCodes.get"),
   {
@@ -220,7 +212,7 @@ test.serial(
   },
   "AccessCode"
 )
-test.serial(
+test(
   "change type to timebound",
   testAPIMethod("accessCodes.update"),
   {
@@ -236,7 +228,7 @@ test.serial(
   },
   "TimeBoundAccessCode"
 )
-test.serial(
+test(
   "scheduled",
   testAPIMethod("accessCodes.create"),
   {
@@ -253,7 +245,7 @@ test.serial(
   },
   "AccessCode"
 )
-test.serial(
+test(
   testAPIMethod("accessCodes.update"),
   {
     args: (seed) => [
@@ -266,7 +258,7 @@ test.serial(
   },
   "AccessCode"
 )
-test.serial(
+test(
   "change type to ongoing",
   testAPIMethod("accessCodes.update"),
   {
@@ -280,8 +272,8 @@ test.serial(
   },
   "OngoingAccessCode"
 )
-test.serial(testAPIMethod("connectedAccounts.list"), {}, "ConnectedAccount[]")
-test.serial(
+test(testAPIMethod("connectedAccounts.list"), {}, "ConnectedAccount[]")
+test(
   "by email",
   testAPIMethod("connectedAccounts.get"),
   {
@@ -293,7 +285,7 @@ test.serial(
   },
   "ConnectedAccount"
 )
-test.serial(
+test(
   "by ID",
   testAPIMethod("connectedAccounts.get"),
   {
@@ -305,7 +297,7 @@ test.serial(
   },
   "ConnectedAccount"
 )
-test.serial(
+test(
   testAPIMethod("connectedAccounts.delete"),
   {
     args: (seed) => [
