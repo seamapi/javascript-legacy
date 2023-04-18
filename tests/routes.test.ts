@@ -305,6 +305,7 @@ test(
         device_id: seed.devices.minut.device_with_quiet_hours.device_id,
       },
     ],
+    load_devices_from: ["minut"],
   },
   "NoiseThresholds[]"
 )

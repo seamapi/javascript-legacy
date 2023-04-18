@@ -39,9 +39,14 @@ const serverWorker = registerSharedTypeScriptWorker({
   ),
 })
 
-export const getServer = async (writable = false) => {
+export const getServer = async (
+  writable = false,
+  load_devices_from: ("minut" | "schlage" | "august")[] = ["august", "schlage"]
+) => {
   const message = serverWorker.publish(
-    writable ? "GET_WRITABLE_SERVER" : "GET_READABLE_SERVER"
+    writable
+      ? `GET_WRITABLE_SERVER:${load_devices_from.join(",")}`
+      : `GET_READABLE_SERVER:${load_devices_from.join(",")}`
   )
 
   const reply = await message.replies().next()
