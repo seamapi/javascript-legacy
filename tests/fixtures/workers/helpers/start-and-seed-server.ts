@@ -101,7 +101,7 @@ const startAndSeedServer = async (
     devices["augustLock"] = await addFakeAugustDevices(axios)
   }
 
-  if (load_devices_from.includes("schlage")) {
+  if (load_devices_from.includes("minut")) {
     devices["minut"] = await addFakeMinutDevices(axios)
   }
 
