@@ -15,6 +15,12 @@ type SeedLock = {
 type SeedNoiseSensors = {
   device_with_quiet_hours: Device<any, "minut">
   device_without_quiet_hours: Device<any, "minut">
+  noise_threshold_quiet_hours: {
+    noise_threshold_id: string
+  }
+  noise_threshold_normal_hours: {
+    noise_threshold_id: string
+  }
 }
 
 export type WorkerPublishedMessage = {

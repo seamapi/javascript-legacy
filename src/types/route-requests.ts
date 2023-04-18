@@ -156,3 +156,8 @@ export interface EventsListRequest {
 export type NoiseThresholdsListRequest = {
   device_id: string
 }
+
+export type NoiseThresholdsDeleteRequest = {
+  device_id: string
+  noise_threshold_id: string
+}
