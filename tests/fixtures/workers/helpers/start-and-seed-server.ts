@@ -10,7 +10,9 @@ import addFakeMinutDevices from "./add-fake-minut-devices"
 
 const SEAM_ADMIN_PASSWORD = "1234"
 
-const startAndSeedServer = async () => {
+const startAndSeedServer = async (
+  load_devices_from: ("minut" | "schlage" | "august")[] = ["august", "schlage"]
+) => {
   const database = await getTestDatabase()
   const svix = await getTestSvix({
     env: {
@@ -78,19 +80,42 @@ const startAndSeedServer = async () => {
 
   ;(axios.defaults.headers as any).Authorization = `Bearer ${api_key}`
 
-  const [schlageLock, augustLock, minut, connectWebview] = await Promise.all([
-    addFakeSchlageDevices(axios),
-    addFakeAugustDevices(axios),
-    addFakeMinutDevices(axios),
+  const providersMap = {
+    schlage: () => addFakeSchlageDevices(axios),
+    august: () => addFakeAugustDevices(axios),
+    minut: () => addFakeMinutDevices(axios),
+  }
+  const [connectWebview, ...devicesByProvider] = await Promise.all([
     axios.post("/connect_webviews/create", {
-      accepted_providers: [
-        "schlage",
-        "august",
-        // TODO: Uncomment this line when Minut is ready
-        // "minut"
-      ],
+      // TODO: remove filter when minut is ready
+      accepted_providers: load_devices_from.filter(
+        (provider) => provider !== "minut"
+      ),
     }),
+    ...load_devices_from.map((provider) => providersMap[provider]()),
   ])
+
+  const devices = {
+    ...load_devices_from.reduce((acc, provider, index) => {
+      if (provider === "schlage") {
+        // @ts-ignore
+        acc["schlageLock"] = devicesByProvider[index]
+        return acc
+      }
+
+      if (provider === "august") {
+        // @ts-ignore
+        acc["augustLock"] = devicesByProvider[index]
+        return acc
+      }
+
+      // @ts-ignore
+      acc[provider] = devicesByProvider[index]
+      return acc
+    }, {}),
+  }
+
+  console.log(devices)
 
   return {
     serverUrl,
@@ -100,11 +125,7 @@ const startAndSeedServer = async () => {
       apiKey: api_key,
       workspaceId: workspace.workspace_id,
       connectWebviewId: connectWebview.data.connect_webview.connect_webview_id,
-      devices: {
-        minut,
-        schlageLock,
-        augustLock,
-      },
+      devices,
     },
     teardownFn: () => server.stop(),
   }
