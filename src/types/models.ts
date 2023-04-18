@@ -250,7 +250,6 @@ export interface TimeBoundAccessCode extends ManagedAccessCodeBase {
 }
 
 export interface UnmanagedAccessCode extends AccessCodeBase {
-  type: "ongoing"
   created_at: string
   status: "set"
 }

@@ -19,7 +19,6 @@
 - [errors](UnmanagedAccessCode.md#errors)
 - [name](UnmanagedAccessCode.md#name)
 - [status](UnmanagedAccessCode.md#status)
-- [type](UnmanagedAccessCode.md#type)
 - [warnings](UnmanagedAccessCode.md#warnings)
 
 ## Properties
@@ -58,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:254](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L254)
+[src/types/models.ts:253](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L253)
 
 ___
 
@@ -110,17 +109,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:255](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L255)
-
-___
-
-### type
-
-• **type**: ``"ongoing"``
-
-#### Defined in
-
-[src/types/models.ts:253](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L253)
+[src/types/models.ts:254](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L254)
 
 ___
 
