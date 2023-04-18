@@ -6,10 +6,13 @@ import getTestDatabase from "./get-test-database"
 import getTestSvix from "./get-test-svix"
 import addFakeSchlageDevices from "./add-fake-schlage-devices"
 import addFakeAugustDevices from "./add-fake-august-devices"
+import addFakeMinutDevices from "./add-fake-minut-devices"
 
 const SEAM_ADMIN_PASSWORD = "1234"
 
-const startAndSeedServer = async () => {
+const startAndSeedServer = async (
+  load_devices_from: ("minut" | "schlage" | "august")[] = ["august", "schlage"]
+) => {
   const database = await getTestDatabase()
   const svix = await getTestSvix({
     env: {
@@ -77,13 +80,30 @@ const startAndSeedServer = async () => {
 
   ;(axios.defaults.headers as any).Authorization = `Bearer ${api_key}`
 
-  const [schlageLock, augustLock, connectWebview] = await Promise.all([
-    addFakeSchlageDevices(axios),
-    addFakeAugustDevices(axios),
-    axios.post("/connect_webviews/create", {
-      accepted_providers: ["schlage", "august"],
-    }),
-  ])
+  const connectWebview = await axios.post("/connect_webviews/create", {
+    // TODO: remove filter when minut is ready
+    accepted_providers: load_devices_from.filter(
+      (provider) => provider !== "minut"
+    ),
+  })
+
+  const devices: {
+    augustLock?: Awaited<ReturnType<typeof addFakeAugustDevices>>
+    minut?: Awaited<ReturnType<typeof addFakeMinutDevices>>
+    schlageLock?: Awaited<ReturnType<typeof addFakeSchlageDevices>>
+  } = {}
+
+  if (load_devices_from.includes("schlage")) {
+    devices["schlageLock"] = await addFakeSchlageDevices(axios)
+  }
+
+  if (load_devices_from.includes("schlage")) {
+    devices["augustLock"] = await addFakeAugustDevices(axios)
+  }
+
+  if (load_devices_from.includes("minut")) {
+    devices["minut"] = await addFakeMinutDevices(axios)
+  }
 
   return {
     serverUrl,
@@ -93,10 +113,7 @@ const startAndSeedServer = async () => {
       apiKey: api_key,
       workspaceId: workspace.workspace_id,
       connectWebviewId: connectWebview.data.connect_webview.connect_webview_id,
-      devices: {
-        schlageLock,
-        augustLock,
-      },
+      devices,
     },
     teardownFn: () => server.stop(),
   }

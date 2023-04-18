@@ -152,3 +152,7 @@ export interface EventsListRequest {
   event_type?: string
   connected_account_id?: string
 }
+
+export type NoiseThresholdsListRequest = {
+  device_id: string
+}

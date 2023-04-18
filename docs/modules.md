@@ -114,6 +114,9 @@
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
+- [NoiseThresholds](modules.md#noisethresholds)
+- [NoiseThresholdsListRequest](modules.md#noisethresholdslistrequest)
+- [NoiseThresholdsListResponse](modules.md#noisethresholdslistresponse)
 - [Provider](modules.md#provider)
 - [ProviderCategory](modules.md#providercategory)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
@@ -165,7 +168,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:254](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L254)
+[src/types/models.ts:258](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L258)
 
 ___
 
@@ -284,7 +287,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:195](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L195)
+[src/types/models.ts:199](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L199)
 
 ___
 
@@ -294,7 +297,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:150](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L150)
+[src/types/models.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L154)
 
 ___
 
@@ -304,7 +307,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:147](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L147)
+[src/types/models.ts:151](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L151)
 
 ___
 
@@ -314,7 +317,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:66](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L66)
+[src/types/models.ts:70](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L70)
 
 ___
 
@@ -335,7 +338,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:68](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L68)
+[src/types/models.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L72)
 
 ___
 
@@ -388,7 +391,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:78](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L78)
+[src/types/models.ts:82](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L82)
 
 ___
 
@@ -398,7 +401,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:33](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L33)
+[src/types/models.ts:36](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L36)
 
 ___
 
@@ -428,7 +431,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:287](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L287)
+[src/types/models.ts:291](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L291)
 
 ___
 
@@ -438,7 +441,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:148](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L148)
+[src/types/models.ts:152](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L152)
 
 ___
 
@@ -458,7 +461,61 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:30](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L30)
+[src/types/models.ts:33](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L33)
+
+___
+
+### NoiseThresholds
+
+Ƭ **NoiseThresholds**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `device_id` | `string` | - |
+| `ends_daily_at` | `string` | - |
+| `name` | `string` | - |
+| `noise_threshold_decibels` | `number` | - |
+| `noise_threshold_id` | `string` | - |
+| `noise_threshold_nrs?` | `number` | Only present if the noise threshold is from Noiseaware |
+| `starts_daily_at` | `string` | - |
+
+#### Defined in
+
+[src/types/models.ts:293](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L293)
+
+___
+
+### NoiseThresholdsListRequest
+
+Ƭ **NoiseThresholdsListRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `device_id` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:156](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L156)
+
+___
+
+### NoiseThresholdsListResponse
+
+Ƭ **NoiseThresholdsListResponse**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `noise_thresholds` | [`NoiseThresholds`](modules.md#noisethresholds)[] |
+
+#### Defined in
+
+[src/types/route-responses.ts:130](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L130)
 
 ___
 
@@ -468,7 +525,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:51](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L51)
+[src/types/models.ts:55](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L55)
 
 ___
 
@@ -480,7 +537,7 @@ This type can allow for other provider categories as they are added
 
 #### Defined in
 
-[src/types/models.ts:54](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L54)
+[src/types/models.ts:58](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L58)
 
 ___
 
@@ -534,7 +591,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:99](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L99)
+[src/types/models.ts:103](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L103)
 
 ___
 
@@ -613,7 +670,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:35](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L35)
+[src/types/models.ts:38](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L38)
 
 ## Functions
 

@@ -24,6 +24,7 @@
 - [devices](Seam.md#devices)
 - [events](Seam.md#events)
 - [locks](Seam.md#locks)
+- [noiseThresholds](Seam.md#noisethresholds)
 - [webhooks](Seam.md#webhooks)
 - [workspaces](Seam.md#workspaces)
 
@@ -79,7 +80,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/seam-connect/routes.ts:270](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L270)
+[src/seam-connect/routes.ts:272](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L272)
 
 ___
 
@@ -99,7 +100,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:385](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L385)
+[src/seam-connect/routes.ts:387](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L387)
 
 ___
 
@@ -132,7 +133,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/seam-connect/routes.ts:238](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L238)
+[src/seam-connect/routes.ts:240](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L240)
 
 ___
 
@@ -154,7 +155,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:360](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L360)
+[src/seam-connect/routes.ts:362](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L362)
 
 ___
 
@@ -181,7 +182,7 @@ Routes.devices
 
 #### Defined in
 
-[src/seam-connect/routes.ts:179](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L179)
+[src/seam-connect/routes.ts:181](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L181)
 
 ___
 
@@ -201,7 +202,7 @@ Routes.events
 
 #### Defined in
 
-[src/seam-connect/routes.ts:226](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L226)
+[src/seam-connect/routes.ts:228](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L228)
 
 ___
 
@@ -224,7 +225,27 @@ Routes.locks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:144](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L144)
+[src/seam-connect/routes.ts:146](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L146)
+
+___
+
+### noiseThresholds
+
+• `Readonly` **noiseThresholds**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `list` | (`params`: [`NoiseThresholdsListRequest`](../modules.md#noisethresholdslistrequest)) => `Promise`<[`NoiseThresholds`](../modules.md#noisethresholds)[]\> |
+
+#### Inherited from
+
+Routes.noiseThresholds
+
+#### Defined in
+
+[src/seam-connect/routes.ts:397](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L397)
 
 ___
 
@@ -247,7 +268,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:395](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L395)
+[src/seam-connect/routes.ts:410](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L410)
 
 ___
 
@@ -269,7 +290,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/seam-connect/routes.ts:128](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L128)
+[src/seam-connect/routes.ts:130](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L130)
 
 ## Methods
 

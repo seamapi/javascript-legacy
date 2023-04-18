@@ -34,6 +34,7 @@ import {
   UnmanagedDeviceUpdateRequest,
   WebhookCreateRequest,
   WebhookGetRequest,
+  NoiseThresholdsListRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -61,6 +62,7 @@ import {
   WorkspaceGetResponse,
   WorkspaceResetSandboxResponse,
   WorkspacesListResponse,
+  NoiseThresholdsListResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -390,6 +392,19 @@ export abstract class Routes {
           action_attempt_id: actionAttemptId,
         },
       }),
+  }
+
+  public readonly noiseThresholds = {
+    list: (params: NoiseThresholdsListRequest) =>
+      this.makeRequestAndFormat<NoiseThresholdsListResponse>(
+        "noise_thresholds",
+        {
+          url: "/noise_sensors/noise_thresholds/list",
+          params: {
+            device_id: params.device_id,
+          },
+        }
+      ),
   }
 
   public readonly webhooks = {

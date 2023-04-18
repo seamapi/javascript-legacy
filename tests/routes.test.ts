@@ -1,6 +1,20 @@
 import test from "ava"
-import { Provider } from "../src"
 import { testAPIMethod } from "./fixtures/helpers/test-api-method-macro"
+
+// Noise Thresholds
+test(
+  testAPIMethod("noiseThresholds.list"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.minut.device_with_quiet_hours.device_id,
+      },
+    ],
+    modifiesState: true,
+    load_devices_from: ["minut"],
+  },
+  "NoiseThresholds[]"
+)
 
 // Workspaces
 test(testAPIMethod("workspaces.list"), {}, "Workspace[]")

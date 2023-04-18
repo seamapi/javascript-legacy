@@ -13,6 +13,7 @@ import {
   UnmanagedDevice,
   Webhook,
   Workspace,
+  NoiseThresholds,
 } from "./models"
 
 // Workspaces
@@ -124,4 +125,8 @@ export interface ActionAttemptGetResponse<T extends ActionType = ActionType> {
 // Events
 export interface EventsListResponse {
   events: Event[]
+}
+
+export type NoiseThresholdsListResponse = {
+  noise_thresholds: NoiseThresholds[]
 }

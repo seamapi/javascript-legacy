@@ -26,7 +26,10 @@ export const LOCK_DEVICE_TYPES = [
 ]
 export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
 
-export const NOISE_DETECTION_DEVICE_TYPES = ["noiseaware_activity_zone"]
+export const NOISE_DETECTION_DEVICE_TYPES = [
+  "noiseaware_activity_zone",
+  "minut_sensor",
+]
 export type NoiseDetectionDeviceType =
   typeof NOISE_DETECTION_DEVICE_TYPES[number]
 
@@ -47,6 +50,7 @@ export const PROVIDERS = [
   "schlage",
   "smartthings",
   "yale_access",
+  "minut",
 ]
 export type Provider = typeof PROVIDERS[number]
 
@@ -285,3 +289,16 @@ type Flatten<EventType extends SeamEvent["event_type"]> =
     : never
 
 export type Event = Flatten<SeamEvent["event_type"]>
+
+export type NoiseThresholds = {
+  device_id: string
+  noise_threshold_id: string
+  starts_daily_at: string
+  ends_daily_at: string
+  noise_threshold_decibels: number
+  name: string
+  /**
+   * Only present if the noise threshold is from Noiseaware
+   */
+  noise_threshold_nrs?: number
+}
