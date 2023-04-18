@@ -1,5 +1,4 @@
 import test from "ava"
-import { Provider } from "../src"
 import { testAPIMethod } from "./fixtures/helpers/test-api-method-macro"
 
 // Workspaces
@@ -297,7 +296,7 @@ test(
 )
 
 // Noise Thresholds
-test(
+test.serial(
   testAPIMethod("noiseThresholds.list"),
   {
     args: (seed) => [
