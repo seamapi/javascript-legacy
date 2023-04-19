@@ -155,8 +155,11 @@ export class Seam extends Routes {
       // backend mode
       headers["seam-api-key"] = ops.apiKey
     }
-    headers["seam-user-identifier-key"] = ops.userIdentifierKey
-
+    if (ops.userIdentifierKey) {
+      headers["seam-user-identifier-key"] = ops.userIdentifierKey
+    } else {
+      throw new Error("userIdentifierKey is required")
+    }
     try {
       const response: AxiosResponse & {
         data: { client_session: ClientSession }
