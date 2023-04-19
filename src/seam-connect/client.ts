@@ -146,14 +146,18 @@ export class Seam extends Routes {
   static async getClientSessionToken(
     ops: CSTParams
   ): Promise<APIResponse<ClientSessionResponse>> {
-    let headers: AxiosRequestHeaders = {}
+    const { apiKey, endpoint, axiosOptions } =
+      getSeamClientOptionsWithDefaults(ops)
+    let headers: AxiosRequestHeaders = {
+      ...axiosOptions?.headers,
+    }
 
     if (ops.publishableKey?.startsWith("seam_pk")) {
       // frontend mode
       headers["seam-publishable-key"] = ops.publishableKey
-    } else if (ops.apiKey?.startsWith("seam_")) {
+    } else if (apiKey?.startsWith("seam_")) {
       // backend mode
-      headers["seam-api-key"] = ops.apiKey
+      headers["seam-api-key"] = apiKey
     }
     if (ops.userIdentifierKey) {
       headers["seam-user-identifier-key"] = ops.userIdentifierKey
@@ -164,8 +168,7 @@ export class Seam extends Routes {
       const response: AxiosResponse & {
         data: { client_session: ClientSession }
       } = await axios.post(
-        (ops.endpoint ?? "https://connect.getseam.com") +
-          "/internal/client_sessions/create",
+        endpoint + "/internal/client_sessions/create",
         {},
         { headers }
       )
