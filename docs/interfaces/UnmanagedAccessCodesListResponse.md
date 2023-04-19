@@ -12,7 +12,7 @@
 
 ### access\_codes
 
-• **access\_codes**: [`UnmanagedAccessCode`](UnmanagedAccessCode.md)[]
+• **access\_codes**: [`UnmanagedAccessCode`](../modules.md#unmanagedaccesscode)[]
 
 #### Defined in
 

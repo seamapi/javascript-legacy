@@ -8,7 +8,7 @@
 
   ↳ [`ManagedAccessCodeBase`](ManagedAccessCodeBase.md)
 
-  ↳ [`UnmanagedAccessCode`](UnmanagedAccessCode.md)
+  ↳ [`UnmanagedAccessCodeBase`](UnmanagedAccessCodeBase.md)
 
 ## Table of contents
 
