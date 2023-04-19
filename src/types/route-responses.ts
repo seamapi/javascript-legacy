@@ -11,6 +11,7 @@ import {
   LockDevice,
   UnmanagedAccessCode,
   UnmanagedDevice,
+  ClientSession,
   Webhook,
   Workspace,
   NoiseThresholds,
@@ -125,6 +126,10 @@ export interface ActionAttemptGetResponse<T extends ActionType = ActionType> {
 // Events
 export interface EventsListResponse {
   events: Event[]
+}
+
+export interface ClientSessionResponse {
+  client_session: ClientSession
 }
 
 export type NoiseThresholdsListResponse = {

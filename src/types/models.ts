@@ -302,6 +302,12 @@ type Flatten<EventType extends SeamEvent["event_type"]> =
 
 export type Event = Flatten<SeamEvent["event_type"]>
 
+export interface ClientSession {
+  token: string
+  user_id: string
+  created_at: string
+}
+
 export type NoiseThresholds = {
   device_id: string
   noise_threshold_id: string

@@ -39,6 +39,8 @@
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
+- [ClientSession](interfaces/ClientSession.md)
+- [ClientSessionResponse](interfaces/ClientSessionResponse.md)
 - [ConnectWebview](interfaces/ConnectWebview.md)
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
@@ -486,7 +488,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:305](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L305)
+[src/types/models.ts:311](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L311)
 
 ___
 
@@ -518,7 +520,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:130](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L130)
+[src/types/route-responses.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L135)
 
 ___
 
@@ -703,7 +705,7 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:26](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L26)
+[src/seam-connect/client.ts:38](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L38)
 
 ___
 
