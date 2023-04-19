@@ -18,8 +18,6 @@ import { ClientSession, ClientSessionResponse } from "../types"
 export interface SeamClientOptions {
   /* Seam API Key */
   apiKey?: string
-  /* Seam Client Access Token */
-  clientAccessToken?: string
   /* Seam Client Session Token */
   clientSessionToken?: string
   /**
@@ -66,39 +64,24 @@ export class Seam extends Routes {
   constructor(apiKeyOrOptions?: string | SeamClientOptions) {
     super()
 
-    const {
-      apiKey,
-      endpoint,
-      workspaceId,
-      axiosOptions,
-      clientAccessToken,
-      clientSessionToken,
-    } = getSeamClientOptionsWithDefaults(apiKeyOrOptions)
+    const { apiKey, endpoint, workspaceId, axiosOptions, clientSessionToken } =
+      getSeamClientOptionsWithDefaults(apiKeyOrOptions)
     let bearer = `Bearer `
     if (clientSessionToken) {
       if (clientSessionToken?.startsWith("seam_cst"))
         bearer += clientSessionToken || apiKey
       else throw new Error("clientSessionToken must start with seam_cst")
-      if (apiKey || clientAccessToken)
-        throw new Error(
-          "You can't use clientSessionToken AND specify apiKey or clientAccessToken."
-        )
+      if (apiKey)
+        throw new Error("You can't use clientSessionToken AND specify apiKey.")
     } else if (apiKey && apiKey.startsWith("seam_cst")) {
-      if (clientAccessToken || clientSessionToken)
+      if (clientSessionToken)
         throw new Error(
-          "You can't use clientSessionToken in apiKey AND specify clientSessionToken or clientAccessToken."
+          "You can't use clientSessionToken in apiKey AND specify clientSessionToken."
         )
       bearer += apiKey
       console.warn(
         "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
       )
-    } else if (clientAccessToken) {
-      if (clientAccessToken?.startsWith("seam_at")) bearer += clientAccessToken
-      else throw new Error("clientAccessToken must start with seam_at")
-      if (apiKey || clientSessionToken)
-        throw new Error(
-          "You can't use clientAccessToken AND specify apiKey or clientSessionToken."
-        )
     } else {
       const isRegularAPIKey = apiKey?.startsWith("seam_")
       if (isRegularAPIKey && workspaceId)
