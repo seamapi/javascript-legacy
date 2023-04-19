@@ -58,6 +58,40 @@ export const getSeamClientOptionsWithDefaults = (
   }
 }
 
+const getBearerToken = ({
+  clientSessionToken,
+  apiKey,
+  workspaceId,
+}: {
+  clientSessionToken?: string
+  apiKey?: string
+  workspaceId?: string
+}): string => {
+  if (apiKey && clientSessionToken) {
+    throw new Error("You can't use clientSessionToken AND specify apiKey.")
+  }
+  if (clientSessionToken) {
+    if (clientSessionToken.startsWith("seam_cst")) return clientSessionToken
+    else throw new Error("clientSessionToken must start with seam_cst")
+  }
+  if (apiKey) {
+    if (apiKey.startsWith("seam_cst")) {
+      console.warn(
+        "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
+      )
+      return apiKey
+    }
+    if (!apiKey.startsWith("seam_at") && workspaceId)
+      throw new Error(
+        "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
+      )
+    return apiKey
+  }
+  throw new Error(
+    "Must provide either clientSessionToken or apiKey (API Key or Access Token with Workspace ID)."
+  )
+}
+
 export class Seam extends Routes {
   public client: AxiosInstance
 
@@ -66,35 +100,10 @@ export class Seam extends Routes {
 
     const { apiKey, endpoint, workspaceId, axiosOptions, clientSessionToken } =
       getSeamClientOptionsWithDefaults(apiKeyOrOptions)
-    let bearer = `Bearer `
-    if (clientSessionToken) {
-      if (clientSessionToken?.startsWith("seam_cst"))
-        bearer += clientSessionToken || apiKey
-      else throw new Error("clientSessionToken must start with seam_cst")
-      if (apiKey)
-        throw new Error("You can't use clientSessionToken AND specify apiKey.")
-    } else if (apiKey && apiKey.startsWith("seam_cst")) {
-      if (clientSessionToken)
-        throw new Error(
-          "You can't use clientSessionToken in apiKey AND specify clientSessionToken."
-        )
-      bearer += apiKey
-      console.warn(
-        "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
-      )
-    } else {
-      const isRegularAPIKey = apiKey?.startsWith("seam_")
-      if (isRegularAPIKey && workspaceId)
-        throw new Error(
-          "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
-        )
-      if (!apiKey) {
-        throw new Error(
-          "SEAM_API_KEY not found in environment, and apiKey not provided"
-        )
-      }
-      bearer += apiKey
-    }
+
+    const bearer =
+      `Bearer ` + getBearerToken({ clientSessionToken, apiKey, workspaceId })
+
     const headers: AxiosRequestHeaders = {
       ...axiosOptions?.headers,
       Authorization: bearer,
