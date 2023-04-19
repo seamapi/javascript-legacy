@@ -173,13 +173,19 @@ export class Seam extends Routes {
     } else {
       throw new Error("userIdentifierKey is required")
     }
+    const client = axios.create({
+      ...axiosOptions,
+      baseURL: endpoint,
+      headers,
+    })
     try {
       const response: AxiosResponse & {
         data: { client_session: ClientSession }
-      } = await axios.post(
-        endpoint + "/internal/client_sessions/create",
+      } = await client.post(
+        "/internal/client_sessions/create",
         {},
-        { headers }
+        // { headers: { "seam-sdk-version": version } }
+        {}
       )
       return await response.data
     } catch (error: any) {
