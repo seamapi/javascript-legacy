@@ -58,13 +58,13 @@ ___
 
 • **created\_at**: `string`
 
-#### Overrides
+#### Inherited from
 
 [UnmanagedAccessCodeBase](UnmanagedAccessCodeBase.md).[created_at](UnmanagedAccessCodeBase.md#created_at)
 
 #### Defined in
 
-[src/types/models.ts:265](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L265)
+[src/types/models.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L256)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:267](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L267)
+[src/types/models.ts:265](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L265)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:266](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L266)
+[src/types/models.ts:264](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L264)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L256)
+[src/types/models.ts:255](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L255)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:264](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L264)
+[src/types/models.ts:263](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L263)
 
 ___
 

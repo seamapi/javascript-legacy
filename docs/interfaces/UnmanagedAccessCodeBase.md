@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:255](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L255)
+[src/types/models.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L256)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L256)
+[src/types/models.ts:255](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L255)
 
 ___
 

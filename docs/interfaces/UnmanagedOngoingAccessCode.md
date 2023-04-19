@@ -56,13 +56,13 @@ ___
 
 • **created\_at**: `string`
 
-#### Overrides
+#### Inherited from
 
 [UnmanagedAccessCodeBase](UnmanagedAccessCodeBase.md).[created_at](UnmanagedAccessCodeBase.md#created_at)
 
 #### Defined in
 
-[src/types/models.ts:261](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L261)
+[src/types/models.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L256)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L256)
+[src/types/models.ts:255](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L255)
 
 ___
 

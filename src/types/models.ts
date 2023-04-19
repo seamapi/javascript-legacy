@@ -252,17 +252,15 @@ export interface TimeBoundAccessCode extends ManagedAccessCodeBase {
 export type AccessCode = OngoingAccessCode | TimeBoundAccessCode
 
 export interface UnmanagedAccessCodeBase extends AccessCodeBase {
-  created_at: string
   status: "set"
+  created_at: string
 }
 
 export interface UnmanagedOngoingAccessCode extends UnmanagedAccessCodeBase {
   type: "ongoing"
-  created_at: string
 }
 export interface UnmanagedTimeBoundAccessCode extends UnmanagedAccessCodeBase {
   type: "time_bound"
-  created_at: string
   starts_at: string
   ends_at: string
 }
