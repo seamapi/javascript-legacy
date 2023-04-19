@@ -1,5 +1,6 @@
 import { Axios, AxiosResponse } from "axios"
 import getDeviceType from "./get-device-type"
+import { Device } from "../../../../src"
 
 const addFakeMinutDevices = async (axios: Axios) => {
   const defaultConfig = {
@@ -35,12 +36,32 @@ const addFakeMinutDevices = async (axios: Axios) => {
     sync: true,
   })
 
-  const devices = await getDeviceType(axios, "minut_sensor")
+  const devices: Device<any, "minut">[] = await getDeviceType(
+    axios,
+    "minut_sensor"
+  )
   const [device_with_quiet_hours, device_without_quiet_hours] = devices
+  const device_id = device_with_quiet_hours.device_id
+  const {
+    data: { noise_thresholds },
+  } = await axios.post("/noise_sensors/noise_thresholds/list", {
+    device_id,
+    sync: true,
+  })
+
+  const noise_threshold_normal_hours = (noise_thresholds as any[]).find(
+    (noise_threshold) => noise_threshold.name === "builtin_normal_hours"
+  )
+
+  const noise_threshold_quiet_hours = (noise_thresholds as any[]).find(
+    (noise_threshold) => noise_threshold.name === "builtin_quiet_hours"
+  )
 
   return {
     device_with_quiet_hours,
     device_without_quiet_hours,
+    noise_threshold_normal_hours,
+    noise_threshold_quiet_hours,
   }
 }
 

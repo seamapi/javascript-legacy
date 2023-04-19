@@ -35,6 +35,7 @@ import {
   WebhookCreateRequest,
   WebhookGetRequest,
   NoiseThresholdsListRequest,
+  NoiseThresholdsDeleteRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -405,6 +406,12 @@ export abstract class Routes {
           },
         }
       ),
+    delete: (params: NoiseThresholdsDeleteRequest) =>
+      this.makeRequest({
+        url: "/noise_sensors/noise_thresholds/delete",
+        method: "DELETE",
+        data: params,
+      }),
   }
 
   public readonly webhooks = {

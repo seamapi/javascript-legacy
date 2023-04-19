@@ -16,6 +16,22 @@ test(
   "NoiseThresholds[]"
 )
 
+test(
+  testAPIMethod("noiseThresholds.delete"),
+  {
+    args: (seed) => [
+      {
+        noise_threshold_id:
+          seed.devices.minut.noise_threshold_quiet_hours.noise_threshold_id,
+        device_id: seed.devices.minut.device_with_quiet_hours.device_id,
+      },
+    ],
+    modifiesState: true,
+    load_devices_from: ["minut"],
+  },
+  "{}"
+)
+
 // Workspaces
 test(testAPIMethod("workspaces.list"), {}, "Workspace[]")
 test(testAPIMethod("workspaces.get"), {}, "Workspace")
