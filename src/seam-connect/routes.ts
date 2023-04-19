@@ -1,64 +1,68 @@
 import { AxiosRequestConfig } from "axios"
 import pRetry from "p-retry"
+import { SeamActionAttemptError } from "../lib/api-error"
 import { SuccessfulAPIResponse } from "../types/globals"
 import {
   ActionAttempt,
-  SuccessfulActionAttempt,
   ActionAttemptResultTypeMap,
   ActionType,
   OngoingAccessCode,
+  SuccessfulActionAttempt,
   TimeBoundAccessCode,
 } from "../types/models"
 import {
-  AccessCodeGetRequest,
-  AccessCodeCreateRequest,
-  AccessCodeDeleteRequest,
-  AccessCodeCreateScheduledRequest,
+  AccessCodeCreateMultipleOngoingRequest,
+  AccessCodeCreateMultipleRequest,
+  AccessCodeCreateMultipleScheduledRequest,
   AccessCodeCreateOngoingRequest,
+  AccessCodeCreateRequest,
+  AccessCodeCreateScheduledRequest,
+  AccessCodeDeleteRequest,
+  AccessCodeGetRequest,
+  AccessCodeUpdateRequest,
   ConnectWebviewCreateRequest,
   ConnectWebviewDeleteRequest,
-  ConnectedAccountsGetRequest,
   ConnectedAccountsDeleteRequest,
-  DeviceUpdateRequest,
-  DeviceGetRequest,
-  DevicesListRequest,
-  DeviceProvidersListRequest,
+  ConnectedAccountsGetRequest,
   DeviceDeleteRequest,
-  UnmanagedDeviceUpdateRequest,
-  AccessCodeUpdateRequest,
-  WebhookGetRequest,
-  WebhookCreateRequest,
+  DeviceGetRequest,
+  DeviceProvidersListRequest,
+  DeviceUpdateRequest,
+  DevicesListRequest,
   EventsListRequest,
-  AccessCodeCreateMultipleRequest,
-  AccessCodeCreateMultipleOngoingRequest,
-  AccessCodeCreateMultipleScheduledRequest,
+  UnmanagedAccessCodeGetRequest,
+  UnmanagedDeviceUpdateRequest,
+  WebhookCreateRequest,
+  WebhookGetRequest,
+  NoiseThresholdsListRequest,
 } from "../types/route-requests"
-import { SeamActionAttemptError } from "../lib/api-error"
 import {
-  AccessCodesListResponse,
+  AccessCodeCreateMultipleResponse,
+  AccessCodeCreateResponse,
   AccessCodeGetResponse,
+  AccessCodesListResponse,
+  ActionAttemptCreateResponse,
   ActionAttemptGetResponse,
-  ConnectedAccountsGetResponse,
-  ConnectedAccountsListResponse,
   ConnectWebviewCreateResponse,
   ConnectWebviewGetResponse,
   ConnectWebviewsListResponse,
+  ConnectedAccountsGetResponse,
+  ConnectedAccountsListResponse,
   DeviceGetResponse,
-  DevicesListResponse,
   DeviceProvidersListResponse,
+  DevicesListResponse,
+  EventsListResponse,
   LockGetResponse,
   LocksListResponse,
-  WorkspaceResetSandboxResponse,
-  WorkspacesListResponse,
-  WorkspaceGetResponse,
-  ActionAttemptCreateResponse,
-  WebhookListResponse,
-  WebhookGetResponse,
-  EventsListResponse,
-  AccessCodeCreateResponse,
-  AccessCodeCreateMultipleResponse,
+  UnmanagedAccessCodesGetResponse,
   UnmanagedAccessCodesListResponse,
   UnmanagedDeviceListResponse,
+  WebhookGetResponse,
+  WebhookListResponse,
+  WorkspaceGetResponse,
+  WorkspaceResetSandboxResponse,
+  WorkspacesListResponse,
+  NoiseThresholdsListResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -267,6 +271,20 @@ export abstract class Routes {
 
   public readonly accessCodes = {
     unmanaged: {
+      delete: (params: { access_code_id: string; device_id?: string }) =>
+        this.makeRequest({
+          url: "/access_codes/unmanaged/delete",
+          method: "DELETE",
+          data: params,
+        }),
+      get: (params: UnmanagedAccessCodeGetRequest) =>
+        this.makeRequestAndFormat<UnmanagedAccessCodesGetResponse>(
+          "access_code",
+          {
+            url: "/access_codes/unmanaged/get",
+            params,
+          }
+        ),
       list: (params: { device_id: string }) =>
         this.makeRequestAndFormat<UnmanagedAccessCodesListResponse>(
           "access_codes",
@@ -275,6 +293,12 @@ export abstract class Routes {
             params,
           }
         ),
+      update: (params: { access_code_id: string; is_managed: true }) =>
+        this.makeRequest({
+          url: "/access_codes/unmanaged/update",
+          method: "PATCH",
+          data: params,
+        }),
     },
 
     list: (params: { device_id: string }) =>
@@ -368,6 +392,19 @@ export abstract class Routes {
           action_attempt_id: actionAttemptId,
         },
       }),
+  }
+
+  public readonly noiseThresholds = {
+    list: (params: NoiseThresholdsListRequest) =>
+      this.makeRequestAndFormat<NoiseThresholdsListResponse>(
+        "noise_thresholds",
+        {
+          url: "/noise_sensors/noise_thresholds/list",
+          params: {
+            device_id: params.device_id,
+          },
+        }
+      ),
   }
 
   public readonly webhooks = {

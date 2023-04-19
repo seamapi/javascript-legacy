@@ -3,13 +3,18 @@ import { URL } from "url"
 import defaultAxios from "axios"
 import knex from "knex"
 import path from "path"
-import Seam, { AccessCode } from "../../../src"
+import Seam, { AccessCode, Device } from "../../../src"
 
 type SeedLock = {
   connectedAccountId: string
   id1: string
   name1: string
   accessCode: AccessCode
+}
+
+type SeedNoiseSensors = {
+  device_with_quiet_hours: Device<any, "minut">
+  device_without_quiet_hours: Device<any, "minut">
 }
 
 export type WorkerPublishedMessage = {
@@ -21,6 +26,7 @@ export type WorkerPublishedMessage = {
     workspaceId: string
     connectWebviewId: string
     devices: {
+      minut: SeedNoiseSensors
       schlageLock: SeedLock
       augustLock: SeedLock
     }
@@ -33,9 +39,14 @@ const serverWorker = registerSharedTypeScriptWorker({
   ),
 })
 
-export const getServer = async (writable = false) => {
+export const getServer = async (
+  writable = false,
+  load_devices_from: ("minut" | "schlage" | "august")[] = ["august", "schlage"]
+) => {
   const message = serverWorker.publish(
-    writable ? "GET_WRITABLE_SERVER" : "GET_READABLE_SERVER"
+    writable
+      ? `GET_WRITABLE_SERVER:${load_devices_from.join(",")}`
+      : `GET_READABLE_SERVER:${load_devices_from.join(",")}`
   )
 
   const reply = await message.replies().next()

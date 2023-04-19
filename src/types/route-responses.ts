@@ -1,19 +1,20 @@
 import {
   AccessCode,
   ActionAttempt,
-  ConnectWebview,
-  Device,
-  DeviceProvider,
-  LockDevice,
-  Workspace,
-  ConnectedAccount,
   ActionType,
   CommonDeviceProperties,
-  Webhook,
+  ConnectWebview,
+  ConnectedAccount,
+  Device,
+  DeviceProvider,
   Event,
+  LockDevice,
   UnmanagedAccessCode,
   UnmanagedDevice,
   ClientSession,
+  Webhook,
+  Workspace,
+  NoiseThresholds,
 } from "./models"
 
 // Workspaces
@@ -89,6 +90,9 @@ export interface AccessCodeCreateMultipleResponse {
 export interface UnmanagedAccessCodesListResponse {
   access_codes: UnmanagedAccessCode[]
 }
+export interface UnmanagedAccessCodesGetResponse {
+  access_code: UnmanagedAccessCode
+}
 
 // Connected Accounts
 export interface ConnectedAccountsListResponse {
@@ -126,4 +130,8 @@ export interface EventsListResponse {
 
 export interface ClientSessionResponse {
   client_session: ClientSession
+}
+
+export type NoiseThresholdsListResponse = {
+  noise_thresholds: NoiseThresholds[]
 }
