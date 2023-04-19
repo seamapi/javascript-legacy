@@ -249,12 +249,27 @@ export interface TimeBoundAccessCode extends ManagedAccessCodeBase {
   ends_at: string
 }
 
-export interface UnmanagedAccessCode extends AccessCodeBase {
+export type AccessCode = OngoingAccessCode | TimeBoundAccessCode
+
+export interface UnmanagedAccessCodeBase extends AccessCodeBase {
   created_at: string
   status: "set"
 }
 
-export type AccessCode = OngoingAccessCode | TimeBoundAccessCode
+export interface UnmanagedOngoingAccessCode extends UnmanagedAccessCodeBase {
+  type: "ongoing"
+  created_at: string
+}
+export interface UnmanagedTimeBoundAccessCode extends UnmanagedAccessCodeBase {
+  type: "time_bound"
+  created_at: string
+  starts_at: string
+  ends_at: string
+}
+
+export type UnmanagedAccessCode =
+  | UnmanagedOngoingAccessCode
+  | UnmanagedTimeBoundAccessCode
 
 export interface UserIdentifier {
   email: string

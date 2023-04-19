@@ -74,10 +74,12 @@
 - [SeamWarning](interfaces/SeamWarning.md)
 - [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
 - [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
-- [UnmanagedAccessCode](interfaces/UnmanagedAccessCode.md)
+- [UnmanagedAccessCodeBase](interfaces/UnmanagedAccessCodeBase.md)
 - [UnmanagedAccessCodesGetResponse](interfaces/UnmanagedAccessCodesGetResponse.md)
 - [UnmanagedAccessCodesListResponse](interfaces/UnmanagedAccessCodesListResponse.md)
 - [UnmanagedDeviceListResponse](interfaces/UnmanagedDeviceListResponse.md)
+- [UnmanagedOngoingAccessCode](interfaces/UnmanagedOngoingAccessCode.md)
+- [UnmanagedTimeBoundAccessCode](interfaces/UnmanagedTimeBoundAccessCode.md)
 - [UserIdentifier](interfaces/UserIdentifier.md)
 - [Webhook](interfaces/Webhook.md)
 - [WebhookGetResponse](interfaces/WebhookGetResponse.md)
@@ -121,6 +123,7 @@
 - [ProviderCategory](modules.md#providercategory)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
+- [UnmanagedAccessCode](modules.md#unmanagedaccesscode)
 - [UnmanagedAccessCodeGetRequest](modules.md#unmanagedaccesscodegetrequest)
 - [UnmanagedDevice](modules.md#unmanageddevice)
 - [UnmanagedDeviceUpdateRequest](modules.md#unmanageddeviceupdaterequest)
@@ -168,7 +171,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:257](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L257)
+[src/types/models.ts:252](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L252)
 
 ___
 
@@ -431,7 +434,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:290](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L290)
+[src/types/models.ts:305](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L305)
 
 ___
 
@@ -483,7 +486,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:292](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L292)
+[src/types/models.ts:307](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L307)
 
 ___
 
@@ -564,6 +567,16 @@ ___
 #### Defined in
 
 [src/types/globals.ts:7](https://github.com/seamapi/javascript/blob/main/src/types/globals.ts#L7)
+
+___
+
+### UnmanagedAccessCode
+
+Ƭ **UnmanagedAccessCode**: [`UnmanagedOngoingAccessCode`](interfaces/UnmanagedOngoingAccessCode.md) \| [`UnmanagedTimeBoundAccessCode`](interfaces/UnmanagedTimeBoundAccessCode.md)
+
+#### Defined in
+
+[src/types/models.ts:270](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L270)
 
 ___
 

@@ -1,25 +1,29 @@
-[seamapi](../README.md) / [Exports](../modules.md) / UnmanagedAccessCode
+[seamapi](../README.md) / [Exports](../modules.md) / UnmanagedAccessCodeBase
 
-# Interface: UnmanagedAccessCode
+# Interface: UnmanagedAccessCodeBase
 
 ## Hierarchy
 
 - [`AccessCodeBase`](AccessCodeBase.md)
 
-  ↳ **`UnmanagedAccessCode`**
+  ↳ **`UnmanagedAccessCodeBase`**
+
+  ↳↳ [`UnmanagedOngoingAccessCode`](UnmanagedOngoingAccessCode.md)
+
+  ↳↳ [`UnmanagedTimeBoundAccessCode`](UnmanagedTimeBoundAccessCode.md)
 
 ## Table of contents
 
 ### Properties
 
-- [access\_code\_id](UnmanagedAccessCode.md#access_code_id)
-- [code](UnmanagedAccessCode.md#code)
-- [created\_at](UnmanagedAccessCode.md#created_at)
-- [device\_id](UnmanagedAccessCode.md#device_id)
-- [errors](UnmanagedAccessCode.md#errors)
-- [name](UnmanagedAccessCode.md#name)
-- [status](UnmanagedAccessCode.md#status)
-- [warnings](UnmanagedAccessCode.md#warnings)
+- [access\_code\_id](UnmanagedAccessCodeBase.md#access_code_id)
+- [code](UnmanagedAccessCodeBase.md#code)
+- [created\_at](UnmanagedAccessCodeBase.md#created_at)
+- [device\_id](UnmanagedAccessCodeBase.md#device_id)
+- [errors](UnmanagedAccessCodeBase.md#errors)
+- [name](UnmanagedAccessCodeBase.md#name)
+- [status](UnmanagedAccessCodeBase.md#status)
+- [warnings](UnmanagedAccessCodeBase.md#warnings)
 
 ## Properties
 
@@ -57,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:253](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L253)
+[src/types/models.ts:255](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L255)
 
 ___
 
@@ -109,7 +113,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:254](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L254)
+[src/types/models.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L256)
 
 ___
 
