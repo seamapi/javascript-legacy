@@ -17,6 +17,23 @@ test(
 )
 
 test(
+  testAPIMethod("noiseThresholds.create"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.minut.device_without_quiet_hours.device_id,
+        starts_daily_at: "13:00:00[America/Los_Angeles]",
+        ends_daily_at: "13:00:00[America/Los_Angeles]",
+        noise_threshold_decibels: 80,
+      },
+    ],
+    modifiesState: true,
+    load_devices_from: ["minut"],
+  },
+  "{}"
+)
+
+test(
   testAPIMethod("noiseThresholds.delete"),
   {
     args: (seed) => [

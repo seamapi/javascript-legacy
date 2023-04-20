@@ -36,6 +36,7 @@ import {
   WebhookGetRequest,
   NoiseThresholdsListRequest,
   NoiseThresholdsDeleteRequest,
+  NoiseThresholdsCreateRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -406,6 +407,12 @@ export abstract class Routes {
           },
         }
       ),
+    create: (params: NoiseThresholdsCreateRequest) =>
+      this.makeRequest({
+        url: "/noise_sensors/noise_thresholds/create",
+        method: "POST",
+        data: params,
+      }),
     delete: (params: NoiseThresholdsDeleteRequest) =>
       this.makeRequest({
         url: "/noise_sensors/noise_thresholds/delete",
