@@ -119,6 +119,7 @@
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
 - [NoiseThresholds](modules.md#noisethresholds)
+- [NoiseThresholdsCreateRequest](modules.md#noisethresholdscreaterequest)
 - [NoiseThresholdsDeleteRequest](modules.md#noisethresholdsdeleterequest)
 - [NoiseThresholdsListRequest](modules.md#noisethresholdslistrequest)
 - [NoiseThresholdsListResponse](modules.md#noisethresholdslistresponse)
@@ -493,6 +494,27 @@ ___
 
 ___
 
+### NoiseThresholdsCreateRequest
+
+Ƭ **NoiseThresholdsCreateRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `device_id` | `string` | - |
+| `ends_daily_at` | `string` | - |
+| `name?` | `string` | - |
+| `noise_threshold_decibels?` | `number` | - |
+| `noise_threshold_nrs?` | `number` | only available for NoiseAware devices |
+| `starts_daily_at` | `string` | - |
+
+#### Defined in
+
+[src/types/route-requests.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L160)
+
+___
+
 ### NoiseThresholdsDeleteRequest
 
 Ƭ **NoiseThresholdsDeleteRequest**: `Object`
@@ -506,7 +528,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L160)
+[src/types/route-requests.ts:172](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L172)
 
 ___
 
