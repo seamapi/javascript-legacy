@@ -169,6 +169,19 @@ export type NoiseThresholdsCreateRequest = {
   noise_threshold_nrs?: number
 }
 
+export type NoiseThresholdsUpdateRequest = {
+  device_id: string
+  noise_threshold_id: string
+  name?: string
+  starts_daily_at?: string
+  ends_daily_at?: string
+  noise_threshold_decibels?: number
+  /**
+   * only available for NoiseAware devices
+   */
+  noise_threshold_nrs?: number
+}
+
 export type NoiseThresholdsDeleteRequest = {
   device_id: string
   noise_threshold_id: string
