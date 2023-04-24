@@ -87,6 +87,67 @@ const command: CommandModule<GlobalOptions> = {
         }
       )
       .command(
+        "update",
+        "update a noise threshold",
+        (yargs) => {
+          return yargs
+            .option("device_id", {
+              describe: "the device ID",
+              type: "string",
+              demandOption: true,
+            })
+            .option("noise_threshold_id", {
+              describe: "the noise threshold ID",
+              type: "string",
+              demandOption: true,
+            })
+            .option("name", {
+              describe: "the name of the noise threshold",
+              type: "string",
+              demandOption: false,
+            })
+            .option("starts_daily_at", {
+              describe: "the time the noise threshold starts",
+              type: "string",
+              demandOption: false,
+            })
+            .option("ends_daily_at", {
+              describe: "the time the noise threshold ends",
+              type: "string",
+              demandOption: false,
+            })
+            .option("noise_threshold_decibels", {
+              describe: "the noise threshold in decibels",
+              type: "number",
+              demandOption: false,
+              conflicts: "noise_threshold_nrs",
+            })
+            .option("noise_threshold_nrs", {
+              describe: "the noise threshold in NRS",
+              type: "number",
+              demandOption: false,
+              conflicts: "noise_threshold_decibels",
+            })
+        },
+        async (argv) => {
+          await executeCommand(
+            "noiseThresholds.update",
+            [
+              {
+                device_id: argv.device_id,
+                noise_threshold_id: argv.noise_threshold_id,
+                name: argv.name,
+                starts_daily_at: argv.starts_daily_at,
+                ends_daily_at: argv.ends_daily_at,
+                noise_threshold_decibels: argv.noise_threshold_decibels,
+                noise_threshold_nrs: argv.noise_threshold_nrs,
+              },
+            ],
+            argv
+          )
+        }
+      )
+      .command(
         "delete",
         "delete a noise threshold",
         (yargs) => {

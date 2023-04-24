@@ -123,6 +123,7 @@
 - [NoiseThresholdsDeleteRequest](modules.md#noisethresholdsdeleterequest)
 - [NoiseThresholdsListRequest](modules.md#noisethresholdslistrequest)
 - [NoiseThresholdsListResponse](modules.md#noisethresholdslistresponse)
+- [NoiseThresholdsUpdateRequest](modules.md#noisethresholdsupdaterequest)
 - [Provider](modules.md#provider)
 - [ProviderCategory](modules.md#providercategory)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
@@ -528,7 +529,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:172](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L172)
+[src/types/route-requests.ts:185](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L185)
 
 ___
 
@@ -561,6 +562,28 @@ ___
 #### Defined in
 
 [src/types/route-responses.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L135)
+
+___
+
+### NoiseThresholdsUpdateRequest
+
+Ƭ **NoiseThresholdsUpdateRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `device_id` | `string` | - |
+| `ends_daily_at?` | `string` | - |
+| `name?` | `string` | - |
+| `noise_threshold_decibels?` | `number` | - |
+| `noise_threshold_id` | `string` | - |
+| `noise_threshold_nrs?` | `number` | only available for NoiseAware devices |
+| `starts_daily_at?` | `string` | - |
+
+#### Defined in
+
+[src/types/route-requests.ts:172](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L172)
 
 ___
 
