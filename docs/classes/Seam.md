@@ -330,13 +330,18 @@ ___
 
 ### getClientSessionToken
 
-▸ `Static` **getClientSessionToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponse`](../interfaces/ClientSessionResponse.md)\>\>
+▸ `Static` **getClientSessionToken**(`options`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponse`](../interfaces/ClientSessionResponse.md)\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ops` | `CSTParams` |
+| `options` | `Object` |
+| `options.apiKey?` | `string` |
+| `options.endpoint?` | `string` |
+| `options.publishableKey?` | `string` |
+| `options.userIdentifierKey` | `string` |
+| `options.workspaceId?` | `string` |
 
 #### Returns
 

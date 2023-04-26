@@ -159,24 +159,28 @@ export class Seam extends Routes {
     }
   }
 
-  static async getClientSessionToken(
-    ops: CSTParams
-  ): Promise<APIResponse<ClientSessionResponse>> {
+  static async getClientSessionToken(options: {
+    publishableKey?: string
+    userIdentifierKey: string
+    endpoint?: string
+    workspaceId?: string
+    apiKey?: string
+  }): Promise<APIResponse<ClientSessionResponse>> {
     const { apiKey, endpoint, axiosOptions } =
-      getSeamClientOptionsWithDefaults(ops)
+      getSeamClientOptionsWithDefaults(options)
     let headers: AxiosRequestHeaders = {
       ...axiosOptions?.headers,
     }
 
-    if (ops.publishableKey?.startsWith("seam_pk")) {
+    if (options.publishableKey?.startsWith("seam_pk")) {
       // frontend mode
-      headers["seam-publishable-key"] = ops.publishableKey
+      headers["seam-publishable-key"] = options.publishableKey
     } else if (apiKey?.startsWith("seam_")) {
       // backend mode
       headers["seam-api-key"] = apiKey
     }
-    if (ops.userIdentifierKey) {
-      headers["seam-user-identifier-key"] = ops.userIdentifierKey
+    if (options.userIdentifierKey) {
+      headers["seam-user-identifier-key"] = options.userIdentifierKey
     } else {
       throw new Error("userIdentifierKey is required")
     }
@@ -203,12 +207,4 @@ export class Seam extends Routes {
       )
     }
   }
-}
-
-type CSTParams = {
-  publishableKey?: string
-  userIdentifierKey: string
-  endpoint?: string
-  workspaceId?: string
-  apiKey?: string
 }
