@@ -1,8 +1,8 @@
 import axios, {
+  Axios,
   AxiosInstance,
   AxiosRequestConfig,
   AxiosRequestHeaders,
-  AxiosResponse,
 } from "axios"
 import axiosRetry from "axios-retry"
 import { SeamAPIError, SeamMalformedInputError } from "../lib/api-error"
@@ -13,7 +13,7 @@ import {
   SuccessfulAPIResponse,
 } from "../types/globals"
 import { version } from "../../package.json"
-import { ClientSession, ClientSessionResponse } from "../types"
+import { ClientSessionResponse } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -137,26 +137,7 @@ export class Seam extends Routes {
   public async makeRequest<T>(
     request: AxiosRequestConfig
   ): Promise<SuccessfulAPIResponse<T>> {
-    try {
-      const response = await this.client.request(request)
-      return response.data
-    } catch (error) {
-      if (axios.isAxiosError(error) && error.response) {
-        if (error.response.data.error?.type === "invalid_input") {
-          throw new SeamMalformedInputError(
-            error.response.data.error.validation_errors
-          )
-        }
-
-        throw new SeamAPIError(
-          error.response.status,
-          error.response.headers["seam-request-id"],
-          (error.response.data as ErroredAPIResponse).error
-        )
-      }
-
-      throw error
-    }
+    return makeRequest<T>(this.client, request)
   }
 
   static async getClientSessionToken(options: {
@@ -203,22 +184,36 @@ export class Seam extends Routes {
       baseURL: endpoint,
       headers,
     })
-    try {
-      const response: AxiosResponse & {
-        data: { client_session: ClientSession }
-      } = await client.post(
-        "/internal/client_sessions/create",
-        {},
-        // { headers: { "seam-sdk-version": version } }
-        {}
-      )
-      return await response.data
-    } catch (error: any) {
+
+    return makeRequest(client, {
+      method: "POST",
+      url: "/internal/client_sessions/create",
+    })
+  }
+}
+
+const makeRequest = async <T>(
+  client: Axios,
+  request: AxiosRequestConfig
+): Promise<SuccessfulAPIResponse<T>> => {
+  try {
+    const response = await client.request(request)
+    return response.data
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
+      if (error.response.data.error?.type === "invalid_input") {
+        throw new SeamMalformedInputError(
+          error.response.data.error.validation_errors
+        )
+      }
+
       throw new SeamAPIError(
         error.response.status,
         error.response.headers["seam-request-id"],
         (error.response.data as ErroredAPIResponse).error
       )
     }
+
+    throw error
   }
 }

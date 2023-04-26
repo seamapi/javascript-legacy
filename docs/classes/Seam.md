@@ -349,4 +349,4 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:162](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L162)
+[src/seam-connect/client.ts:143](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L143)
