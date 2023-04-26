@@ -168,22 +168,36 @@ export class Seam extends Routes {
   }): Promise<APIResponse<ClientSessionResponse>> {
     const { apiKey, endpoint, axiosOptions } =
       getSeamClientOptionsWithDefaults(options)
-    let headers: AxiosRequestHeaders = {
+
+    if (!options.userIdentifierKey) {
+      throw new Error("userIdentifierKey is required")
+    }
+
+    const getKeyHeaders = (): AxiosRequestHeaders => {
+      const { publishableKey } = options
+      if (publishableKey) {
+        if (!publishableKey.startsWith("seam_pk")) {
+          throw new Error("Invalid publishableKey")
+        }
+        return { "seam-publishable-key": publishableKey }
+      }
+
+      if (apiKey) {
+        if (!apiKey?.startsWith("seam_")) {
+          throw new Error("Invalid apiKey")
+        }
+        return { "seam-api-key": apiKey }
+      }
+
+      throw new Error("Must provide a publishableKey or apiKey")
+    }
+
+    const headers = {
+      "seam-user-identifier-key": options.userIdentifierKey,
+      ...getKeyHeaders(),
       ...axiosOptions?.headers,
     }
 
-    if (options.publishableKey?.startsWith("seam_pk")) {
-      // frontend mode
-      headers["seam-publishable-key"] = options.publishableKey
-    } else if (apiKey?.startsWith("seam_")) {
-      // backend mode
-      headers["seam-api-key"] = apiKey
-    }
-    if (options.userIdentifierKey) {
-      headers["seam-user-identifier-key"] = options.userIdentifierKey
-    } else {
-      throw new Error("userIdentifierKey is required")
-    }
     const client = axios.create({
       ...axiosOptions,
       baseURL: endpoint,
