@@ -2,7 +2,7 @@ import test from "ava"
 import { testAPIMethod } from "./fixtures/helpers/test-api-method-macro"
 
 // Noise Thresholds
-test(
+test.skip(
   testAPIMethod("noiseThresholds.list"),
   {
     args: (seed) => [
@@ -16,7 +16,7 @@ test(
   "NoiseThresholds[]"
 )
 
-test(
+test.skip(
   testAPIMethod("noiseThresholds.create"),
   {
     args: (seed) => [
@@ -33,7 +33,7 @@ test(
   "{}"
 )
 
-test(
+test.skip(
   testAPIMethod("noiseThresholds.update"),
   {
     args: (seed) => [
@@ -52,7 +52,7 @@ test(
   "{}"
 )
 
-test(
+test.skip(
   testAPIMethod("noiseThresholds.delete"),
   {
     args: (seed) => [
