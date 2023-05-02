@@ -38,12 +38,13 @@ export interface SeamClientOptions {
 export const getSeamClientOptionsWithDefaults = (
   apiKeyOrOptions?: string | SeamClientOptions
 ): SeamClientOptions => {
-  let seamClientDefaults: SeamClientOptions = {}
+  const defaultEndpoint = "https://connect.getseam.com"
+  let seamClientDefaults: SeamClientOptions = { endpoint: defaultEndpoint }
   try {
     // try to get defaults from environment (for server-side use)
     seamClientDefaults = {
       apiKey: process?.env?.SEAM_API_KEY,
-      endpoint: process?.env?.SEAM_API_URL || "https://connect.getseam.com",
+      endpoint: process?.env?.SEAM_API_URL ?? defaultEndpoint,
       workspaceId: process?.env?.SEAM_WORKSPACE_ID,
     }
   } catch (error) {
