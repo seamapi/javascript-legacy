@@ -1,8 +1,8 @@
 import axios, {
+  Axios,
   AxiosInstance,
   AxiosRequestConfig,
   AxiosRequestHeaders,
-  AxiosResponse,
 } from "axios"
 import axiosRetry from "axios-retry"
 import { SeamAPIError, SeamMalformedInputError } from "../lib/api-error"
@@ -13,7 +13,7 @@ import {
   SuccessfulAPIResponse,
 } from "../types/globals"
 import { version } from "../../package.json"
-import { ClientSession, ClientSessionResponse } from "../types"
+import { ClientSessionResponse } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -38,17 +38,11 @@ export interface SeamClientOptions {
 export const getSeamClientOptionsWithDefaults = (
   apiKeyOrOptions?: string | SeamClientOptions
 ): SeamClientOptions => {
-  let seamClientDefaults: SeamClientOptions = {}
-  try {
-    // try to get defaults from environment (for server-side use)
-    seamClientDefaults = {
-      apiKey: process?.env?.SEAM_API_KEY,
-      endpoint: process?.env?.SEAM_API_URL || "https://connect.getseam.com",
-      workspaceId: process?.env?.SEAM_WORKSPACE_ID,
-    }
-  } catch (error) {
-    // we are in a browser, so use the apiKeyOrOptions
-    // do nothing
+  const seamClientDefaults = {
+    apiKey: globalThis?.process?.env?.SEAM_API_KEY ?? undefined,
+    endpoint:
+      globalThis?.process?.env?.SEAM_API_URL ?? "https://connect.getseam.com",
+    workspaceId: globalThis?.process?.env?.SEAM_WORKSPACE_ID ?? undefined,
   }
   if (typeof apiKeyOrOptions === "string") {
     // for both browser and server, if apiKeyOrOptions is a string, use it as the apiKey, and merge with defaults
@@ -56,44 +50,6 @@ export const getSeamClientOptionsWithDefaults = (
   } else {
     return { ...seamClientDefaults, ...apiKeyOrOptions }
   }
-}
-
-const getAuthHeaders = ({
-  clientSessionToken,
-  apiKey,
-  workspaceId,
-}: {
-  clientSessionToken?: string
-  apiKey?: string
-  workspaceId?: string
-}): Record<string, string> => {
-  if (apiKey && clientSessionToken) {
-    throw new Error("You can't use clientSessionToken AND specify apiKey.")
-  }
-
-  if (clientSessionToken) {
-    if (!clientSessionToken.startsWith("seam_cst")) {
-      throw new Error("clientSessionToken must start with seam_cst")
-    }
-    return { "client-session-token": clientSessionToken }
-  }
-
-  if (apiKey) {
-    if (apiKey.startsWith("seam_cst")) {
-      console.warn(
-        "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
-      )
-      return { "client-session-token": apiKey }
-    }
-    if (!apiKey.startsWith("seam_at") && workspaceId)
-      throw new Error(
-        "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
-      )
-    return { authorization: `Bearer ${apiKey}` }
-  }
-  throw new Error(
-    "Must provide either clientSessionToken or apiKey (API Key or Access Token with Workspace ID)."
-  )
 }
 
 export class Seam extends Routes {
@@ -137,78 +93,121 @@ export class Seam extends Routes {
   public async makeRequest<T>(
     request: AxiosRequestConfig
   ): Promise<SuccessfulAPIResponse<T>> {
-    try {
-      const response = await this.client.request(request)
-      return response.data
-    } catch (error) {
-      if (axios.isAxiosError(error) && error.response) {
-        if (error.response.data.error?.type === "invalid_input") {
-          throw new SeamMalformedInputError(
-            error.response.data.error.validation_errors
-          )
-        }
-
-        throw new SeamAPIError(
-          error.response.status,
-          error.response.headers["seam-request-id"],
-          (error.response.data as ErroredAPIResponse).error
-        )
-      }
-
-      throw error
-    }
+    return makeRequest<T>(this.client, request)
   }
 
-  static async getClientSessionToken(
-    ops: CSTParams
-  ): Promise<APIResponse<ClientSessionResponse>> {
+  static async getClientSessionToken(options: {
+    publishableKey?: string
+    userIdentifierKey: string
+    endpoint?: string
+    workspaceId?: string
+    apiKey?: string
+  }): Promise<APIResponse<ClientSessionResponse>> {
     const { apiKey, endpoint, axiosOptions } =
-      getSeamClientOptionsWithDefaults(ops)
-    let headers: AxiosRequestHeaders = {
+      getSeamClientOptionsWithDefaults(options)
+
+    if (!options.userIdentifierKey) {
+      throw new Error("userIdentifierKey is required")
+    }
+
+    const getKeyHeaders = (): AxiosRequestHeaders => {
+      const { publishableKey } = options
+      if (publishableKey) {
+        if (!publishableKey.startsWith("seam_pk")) {
+          throw new Error("Invalid publishableKey")
+        }
+        return { "seam-publishable-key": publishableKey }
+      }
+
+      if (apiKey) {
+        if (!apiKey?.startsWith("seam_")) {
+          throw new Error("Invalid apiKey")
+        }
+        return { "seam-api-key": apiKey }
+      }
+
+      throw new Error("Must provide a publishableKey or apiKey")
+    }
+
+    const headers = {
+      "seam-user-identifier-key": options.userIdentifierKey,
+      ...getKeyHeaders(),
       ...axiosOptions?.headers,
     }
 
-    if (ops.publishableKey?.startsWith("seam_pk")) {
-      // frontend mode
-      headers["seam-publishable-key"] = ops.publishableKey
-    } else if (apiKey?.startsWith("seam_")) {
-      // backend mode
-      headers["seam-api-key"] = apiKey
-    }
-    if (ops.userIdentifierKey) {
-      headers["seam-user-identifier-key"] = ops.userIdentifierKey
-    } else {
-      throw new Error("userIdentifierKey is required")
-    }
     const client = axios.create({
       ...axiosOptions,
       baseURL: endpoint,
       headers,
     })
-    try {
-      const response: AxiosResponse & {
-        data: { client_session: ClientSession }
-      } = await client.post(
-        "/internal/client_sessions/create",
-        {},
-        // { headers: { "seam-sdk-version": version } }
-        {}
-      )
-      return await response.data
-    } catch (error: any) {
+
+    return makeRequest(client, {
+      method: "POST",
+      url: "/internal/client_sessions/create",
+    })
+  }
+}
+
+const makeRequest = async <T>(
+  client: Axios,
+  request: AxiosRequestConfig
+): Promise<SuccessfulAPIResponse<T>> => {
+  try {
+    const response = await client.request(request)
+    return response.data
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
+      if (error.response.data.error?.type === "invalid_input") {
+        throw new SeamMalformedInputError(
+          error.response.data.error.validation_errors
+        )
+      }
+
       throw new SeamAPIError(
         error.response.status,
         error.response.headers["seam-request-id"],
         (error.response.data as ErroredAPIResponse).error
       )
     }
+
+    throw error
   }
 }
 
-type CSTParams = {
-  publishableKey?: string
-  userIdentifierKey: string
-  endpoint?: string
-  workspaceId?: string
+const getAuthHeaders = ({
+  clientSessionToken,
+  apiKey,
+  workspaceId,
+}: {
+  clientSessionToken?: string
   apiKey?: string
+  workspaceId?: string
+}): Record<string, string> => {
+  if (apiKey && clientSessionToken) {
+    throw new Error("You can't use clientSessionToken AND specify apiKey.")
+  }
+
+  if (clientSessionToken) {
+    if (!clientSessionToken.startsWith("seam_cst")) {
+      throw new Error("clientSessionToken must start with seam_cst")
+    }
+    return { "client-session-token": clientSessionToken }
+  }
+
+  if (apiKey) {
+    if (apiKey.startsWith("seam_cst")) {
+      console.warn(
+        "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
+      )
+      return { "client-session-token": apiKey }
+    }
+    if (!apiKey.startsWith("seam_at") && workspaceId)
+      throw new Error(
+        "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
+      )
+    return { authorization: `Bearer ${apiKey}` }
+  }
+  throw new Error(
+    "Must provide either clientSessionToken or apiKey (API Key or Access Token with Workspace ID)."
+  )
 }

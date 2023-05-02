@@ -51,7 +51,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/seam-connect/client.ts:102](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L102)
+[src/seam-connect/client.ts:58](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L58)
 
 ## Properties
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:100](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L100)
+[src/seam-connect/client.ts:56](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L56)
 
 ___
 
@@ -324,19 +324,24 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/seam-connect/client.ts:137](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L137)
+[src/seam-connect/client.ts:93](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L93)
 
 ___
 
 ### getClientSessionToken
 
-▸ `Static` **getClientSessionToken**(`ops`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponse`](../interfaces/ClientSessionResponse.md)\>\>
+▸ `Static` **getClientSessionToken**(`options`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionResponse`](../interfaces/ClientSessionResponse.md)\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ops` | `CSTParams` |
+| `options` | `Object` |
+| `options.apiKey?` | `string` |
+| `options.endpoint?` | `string` |
+| `options.publishableKey?` | `string` |
+| `options.userIdentifierKey` | `string` |
+| `options.workspaceId?` | `string` |
 
 #### Returns
 
@@ -344,4 +349,4 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:162](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L162)
+[src/seam-connect/client.ts:99](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L99)
