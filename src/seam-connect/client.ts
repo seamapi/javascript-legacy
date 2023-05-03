@@ -130,7 +130,6 @@ export class Seam extends Routes {
     }
 
     const headers = {
-      "seam-user-identifier-key": options.userIdentifierKey,
       ...getKeyHeaders(),
       ...axiosOptions?.headers,
     }
@@ -143,7 +142,10 @@ export class Seam extends Routes {
 
     return makeRequest(client, {
       method: "POST",
-      url: "/internal/client_sessions/create",
+      url: "/client_sessions/create",
+      data: {
+        user_identifier_key: options.userIdentifierKey,
+      },
     })
   }
 }
