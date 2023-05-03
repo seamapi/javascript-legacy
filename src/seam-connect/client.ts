@@ -142,7 +142,8 @@ export class Seam extends Routes {
     })
 
     return makeRequest(client, {
-      method: "POST",
+      method: "PUT",
+      // TODO change to /client_sessions/get_or_create
       url: "/internal/client_sessions/create",
     })
   }
