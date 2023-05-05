@@ -148,10 +148,10 @@ export class Seam extends Routes {
   }
 }
 
-const isValueUsedForAPIKeyAuthentication = (apiKey: string) =>
-  !apiKey.startsWith("seam_at") &&
+const isValueUsedForBearerAuthentication = (value: string) =>
+  value.startsWith("seam_at") ||
   /** Exclude JWT tokens as well */
-  !apiKey.startsWith("ey")
+  value.startsWith("ey")
 
 const makeRequest = async <T>(
   client: Axios,
@@ -206,7 +206,7 @@ const getAuthHeaders = ({
       )
       return { "client-session-token": apiKey }
     }
-    if (isValueUsedForAPIKeyAuthentication(apiKey) && workspaceId)
+    if (!isValueUsedForBearerAuthentication(apiKey) && workspaceId)
       throw new Error(
         "You can't use API Key Authentication AND specify a workspace. Your API Key only works for the workspace it was created in. To use Session Key Authentication with multi-workspace support, contact Seam support."
       )
