@@ -110,6 +110,12 @@ export class Seam extends Routes {
       throw new Error("userIdentifierKey is required")
     }
 
+    if (isEmail(options.userIdentifierKey)) {
+      console.warn(`Using an email for the userIdentifierKey!
+This is insecure because an email is common knowledge or easily guessed.
+Use something with sufficient entropy know only to the owner of the client session (like a server-generated UUID).`)
+    }
+
     const getKeyHeaders = (): AxiosRequestHeaders => {
       const { publishableKey } = options
       if (publishableKey) {
@@ -216,3 +222,6 @@ const getAuthHeaders = ({
     "Must provide either clientSessionToken or apiKey (API Key or Access Token with Workspace ID)."
   )
 }
+
+const isEmail = (value: string): boolean =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
