@@ -22,6 +22,7 @@
 - [manufacturer](LockProperties.md#manufacturer)
 - [max\_active\_codes\_supported](LockProperties.md#max_active_codes_supported)
 - [name](LockProperties.md#name)
+- [nuki\_metadata](LockProperties.md#nuki_metadata)
 - [online](LockProperties.md#online)
 - [schlage\_metadata](LockProperties.md#schlage_metadata)
 - [serial\_number](LockProperties.md#serial_number)
@@ -41,6 +42,7 @@
 | `has_keypad` | `boolean` |
 | `house_id?` | `string` |
 | `house_name` | `string` |
+| `keypad_battery_level?` | `string` |
 | `lock_id` | `string` |
 | `lock_name` | `string` |
 | `model?` | `string` |
@@ -160,6 +162,22 @@ CommonDeviceProperties.name
 
 ___
 
+### nuki\_metadata
+
+• `Optional` **nuki\_metadata**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `keypad_battery_critical?` | `boolean` |
+
+#### Defined in
+
+[src/types/models.ts:149](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L149)
+
+___
+
 ### online
 
 • **online**: `boolean`
@@ -210,7 +228,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:148](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L148)
+[src/types/models.ts:153](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L153)
 
 ___
 

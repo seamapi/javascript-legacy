@@ -143,6 +143,11 @@ export interface LockProperties extends CommonDeviceProperties {
     house_id?: string
     has_keypad: boolean
     model?: string
+    keypad_battery_level?: string
+  }
+
+  nuki_metadata?: {
+    keypad_battery_critical?: boolean
   }
 
   smartthings_metadata?: unknown
