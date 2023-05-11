@@ -223,5 +223,6 @@ const getAuthHeaders = ({
   )
 }
 
+// SOURCE: https://stackoverflow.com/a/46181
 const isEmail = (value: string): boolean =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
