@@ -148,8 +148,8 @@ Use something with sufficient entropy know only to the owner of the client sessi
     })
 
     return makeRequest(client, {
-      method: "POST",
-      url: "/internal/client_sessions/create",
+      method: "PUT",
+      url: "/client_sessions/create",
     })
   }
 }
