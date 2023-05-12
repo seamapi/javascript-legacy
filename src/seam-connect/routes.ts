@@ -31,6 +31,9 @@ import {
   DeviceUpdateRequest,
   DevicesListRequest,
   EventsListRequest,
+  UnmanagedAccessCodeDeleteRequest,
+  UnmanagedAccessCodesListRequest,
+  UnmanagedAccessCodeUpdateRequest,
   UnmanagedAccessCodeGetRequest,
   UnmanagedDeviceUpdateRequest,
   WebhookCreateRequest,
@@ -275,7 +278,7 @@ export abstract class Routes {
 
   public readonly accessCodes = {
     unmanaged: {
-      delete: (params: { access_code_id: string; device_id?: string }) =>
+      delete: (params: UnmanagedAccessCodeDeleteRequest) =>
         this.makeRequest({
           url: "/access_codes/unmanaged/delete",
           method: "DELETE",
@@ -289,7 +292,7 @@ export abstract class Routes {
             params,
           }
         ),
-      list: (params: { device_id: string }) =>
+      list: (params: UnmanagedAccessCodesListRequest) =>
         this.makeRequestAndFormat<UnmanagedAccessCodesListResponse>(
           "access_codes",
           {
@@ -297,7 +300,7 @@ export abstract class Routes {
             params,
           }
         ),
-      update: (params: { access_code_id: string; is_managed: true }) =>
+      update: (params: UnmanagedAccessCodeUpdateRequest) =>
         this.makeRequest({
           url: "/access_codes/unmanaged/update",
           method: "PATCH",
