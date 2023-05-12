@@ -38,6 +38,8 @@ import {
   NoiseThresholdsDeleteRequest,
   NoiseThresholdsCreateRequest,
   NoiseThresholdsUpdateRequest,
+  ClientSessionPostRequest,
+  ClientSessionPostResponse,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -449,6 +451,21 @@ export abstract class Routes {
       this.makeRequest({
         url: `/webhooks/delete`,
         method: "DELETE",
+        params,
+      }),
+  }
+
+  public readonly clientSessions = {
+    create: (params: ClientSessionPostRequest) =>
+      this.makeRequestAndFormat<ClientSessionPostResponse>("client_session", {
+        url: "/client_sessions/create",
+        method: "POST",
+        params,
+      }),
+    get_or_create: (params: ClientSessionPostResponse) =>
+      this.makeRequestAndFormat<ClientSessionPostResponse>("client_session", {
+        url: "/client_sessions/create", // TODO use explicit url WHEN it's implemented on connect
+        method: "PUT",
         params,
       }),
   }

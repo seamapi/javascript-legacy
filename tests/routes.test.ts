@@ -361,3 +361,11 @@ test(
   },
   "{}"
 )
+
+test(
+  testAPIMethod("clientSessions.create"),
+  {
+    args: (seed) => [{}],
+  },
+  "ClientSession"
+)
