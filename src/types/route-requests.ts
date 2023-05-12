@@ -94,6 +94,10 @@ export type AccessCodeUpdateRequest =
   | AccessCodeUpdateOngoingRequest
   | AccessCodeUpdateScheduledRequest
 
+export type AccessCodesListRequest = {
+  device_id: string
+}
+
 export type AccessCodeDeleteRequest = {
   device_id?: string
   access_code_id: string

@@ -19,6 +19,7 @@ import {
   AccessCodeCreateScheduledRequest,
   AccessCodeDeleteRequest,
   AccessCodeGetRequest,
+  AccessCodesListRequest,
   AccessCodeUpdateRequest,
   ConnectWebviewCreateRequest,
   ConnectWebviewDeleteRequest,
@@ -304,7 +305,7 @@ export abstract class Routes {
         }),
     },
 
-    list: (params: { device_id: string }) =>
+    list: (params: AccessCodesListRequest) =>
       this.makeRequestAndFormat<AccessCodesListResponse>("access_codes", {
         url: "/access_codes/list",
         params,
