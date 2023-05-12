@@ -136,7 +136,6 @@ Use something with sufficient entropy know only to the owner of the client sessi
     }
 
     const headers = {
-      "seam-user-identifier-key": options.userIdentifierKey,
       ...getKeyHeaders(),
       ...axiosOptions?.headers,
     }
@@ -150,6 +149,7 @@ Use something with sufficient entropy know only to the owner of the client sessi
     return makeRequest(client, {
       method: "PUT",
       url: "/client_sessions/create",
+      data: { user_identifier_key: options.userIdentifierKey },
     })
   }
 }
