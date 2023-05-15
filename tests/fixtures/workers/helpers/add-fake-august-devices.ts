@@ -13,11 +13,7 @@ const addFakeAugustDevices = async (axios: Axios) => {
   const [firstDevice] = await getDeviceType(axios, "august_lock")
 
   const {
-    data: {
-      action_attempt: {
-        result: { access_code },
-      },
-    },
+    data: { access_code },
   } = await axios.post("/access_codes/create", {
     device_id: firstDevice.device_id,
     name: "Sample Code",
