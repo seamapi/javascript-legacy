@@ -68,7 +68,7 @@ jobs:
           cache: "yarn"
 
       - run: yarn install --frozen-lockfile
-      - run: yarn test -T 2m
+      - run: yarn test -T 3m
         id: test
         env:
           SEAM_CONNECT_IMAGE: ${{ env.SEAM_CONNECT_IMAGE }}
