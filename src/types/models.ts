@@ -23,6 +23,7 @@ export const LOCK_DEVICE_TYPES = [
   "schlage_lock",
   "smartthings_lock",
   "yale_lock",
+  "ttlock_lock",
 ]
 export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
 
@@ -51,6 +52,7 @@ export const PROVIDERS = [
   "smartthings",
   "yale_access",
   "minut",
+  "ttlock",
 ]
 export type Provider = typeof PROVIDERS[number]
 
@@ -151,6 +153,11 @@ export interface LockProperties extends CommonDeviceProperties {
   }
 
   smartthings_metadata?: unknown
+
+  ttlock_metadata?: {
+    lock_id: number
+    lock_alias: string
+  }
 }
 
 export type AnyDevice = Device<any, DeviceType>
