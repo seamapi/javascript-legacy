@@ -120,14 +120,36 @@ export interface DeviceProvider {
   provider_categories: ProviderCategory[]
 }
 
+type SimpleAccessCodeConstraint = {
+  constraint_type:
+    | "no_zeros"
+    | "cannot_start_with_12"
+    | "no_triple_consecutive_ints"
+    | "cannot_specify_pin_code"
+    | "pin_code_matches_existing_set"
+    | "start_date_in_future"
+}
+
+export type AccessCodeConstraint =
+  | SimpleAccessCodeConstraint
+  | {
+      constraint_type: "name_length"
+      min_length?: number
+      max_length?: number
+    }
+
 export interface LockProperties extends CommonDeviceProperties {
   locked: boolean
   door_open?: boolean
   battery_level?: number
+  keypad_battery?: {
+    level: number
+  }
   has_direct_power?: boolean
   manufacturer?: string
   supported_code_lengths?: number[]
   max_active_codes_supported?: number
+  code_constraints?: AccessCodeConstraint[]
   serial_number?: string
 
   schlage_metadata?: {
