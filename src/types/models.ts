@@ -50,7 +50,7 @@ export const PROVIDERS = [
   "salto",
   "schlage",
   "smartthings",
-  "yale_access",
+  "yale",
   "minut",
   "ttlock",
 ]
