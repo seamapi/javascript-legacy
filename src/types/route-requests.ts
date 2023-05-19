@@ -129,6 +129,10 @@ export type UnmanagedAccessCodeUpdateRequest = {
   is_managed: true
 }
 
+export type UnmanagedAccessCodeConvertToManagedRequest = {
+  access_code_id: string
+}
+
 export type DeviceGetRequest =
   | {
       device_id: string

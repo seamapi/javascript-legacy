@@ -69,6 +69,7 @@ Routes.constructor
 | `get` | (`params`: [`AccessCodeGetRequest`](../modules.md#accesscodegetrequest)) => `Promise`<[`AccessCode`](../modules.md#accesscode)\> |
 | `list` | (`params`: [`AccessCodesListRequest`](../modules.md#accesscodeslistrequest)) => `Promise`<[`AccessCode`](../modules.md#accesscode)[]\> |
 | `unmanaged` | `Object` |
+| `unmanaged.convert_to_managed` | (`params`: [`UnmanagedAccessCodeConvertToManagedRequest`](../modules.md#unmanagedaccesscodeconverttomanagedrequest)) => `Promise`<{ `actionAttempt`: [`ActionAttempt`](../modules.md#actionattempt)<[`ActionType`](../modules.md#actiontype)\>  }\> |
 | `unmanaged.delete` | (`params`: [`UnmanagedAccessCodeDeleteRequest`](../modules.md#unmanagedaccesscodedeleterequest)) => `Promise`<{ `ok`: ``true``  }\> |
 | `unmanaged.get` | (`params`: [`UnmanagedAccessCodeGetRequest`](../modules.md#unmanagedaccesscodegetrequest)) => `Promise`<[`UnmanagedAccessCode`](../modules.md#unmanagedaccesscode)\> |
 | `unmanaged.list` | (`params`: [`UnmanagedAccessCodesListRequest`](../modules.md#unmanagedaccesscodeslistrequest)) => `Promise`<[`UnmanagedAccessCode`](../modules.md#unmanagedaccesscode)[]\> |
@@ -81,7 +82,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/seam-connect/routes.ts:279](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L279)
+[src/seam-connect/routes.ts:280](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L280)
 
 ___
 
@@ -101,7 +102,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:394](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L394)
+[src/seam-connect/routes.ts:404](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L404)
 
 ___
 
@@ -134,7 +135,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/seam-connect/routes.ts:247](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L247)
+[src/seam-connect/routes.ts:248](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L248)
 
 ___
 
@@ -156,7 +157,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:369](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L369)
+[src/seam-connect/routes.ts:379](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L379)
 
 ___
 
@@ -183,7 +184,7 @@ Routes.devices
 
 #### Defined in
 
-[src/seam-connect/routes.ts:188](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L188)
+[src/seam-connect/routes.ts:189](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L189)
 
 ___
 
@@ -203,7 +204,7 @@ Routes.events
 
 #### Defined in
 
-[src/seam-connect/routes.ts:235](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L235)
+[src/seam-connect/routes.ts:236](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L236)
 
 ___
 
@@ -226,7 +227,7 @@ Routes.locks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:153](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L153)
+[src/seam-connect/routes.ts:154](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L154)
 
 ___
 
@@ -249,7 +250,7 @@ Routes.noiseThresholds
 
 #### Defined in
 
-[src/seam-connect/routes.ts:404](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L404)
+[src/seam-connect/routes.ts:414](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L414)
 
 ___
 
@@ -272,7 +273,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:435](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L435)
+[src/seam-connect/routes.ts:445](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L445)
 
 ___
 
@@ -294,7 +295,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/seam-connect/routes.ts:137](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L137)
+[src/seam-connect/routes.ts:138](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L138)
 
 ## Methods
 
