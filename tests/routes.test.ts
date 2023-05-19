@@ -331,7 +331,7 @@ test(
   {
     args: (seed) => [
       {
-        email: "user-3@example.com",
+        email: "user-4@example.com",
       },
     ],
   },
