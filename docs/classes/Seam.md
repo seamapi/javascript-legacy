@@ -69,7 +69,7 @@ Routes.constructor
 | `get` | (`params`: [`AccessCodeGetRequest`](../modules.md#accesscodegetrequest)) => `Promise`<[`AccessCode`](../modules.md#accesscode)\> |
 | `list` | (`params`: [`AccessCodesListRequest`](../modules.md#accesscodeslistrequest)) => `Promise`<[`AccessCode`](../modules.md#accesscode)[]\> |
 | `unmanaged` | `Object` |
-| `unmanaged.convert_to_managed` | (`params`: [`UnmanagedAccessCodeConvertToManagedRequest`](../modules.md#unmanagedaccesscodeconverttomanagedrequest)) => `Promise`<{ `actionAttempt`: [`ActionAttempt`](../modules.md#actionattempt)<[`ActionType`](../modules.md#actiontype)\>  }\> |
+| `unmanaged.convertToManaged` | (`params`: [`UnmanagedAccessCodeConvertToManagedRequest`](../modules.md#unmanagedaccesscodeconverttomanagedrequest)) => `Promise`<{ `actionAttempt`: [`ActionAttempt`](../modules.md#actionattempt)<[`ActionType`](../modules.md#actiontype)\>  }\> |
 | `unmanaged.delete` | (`params`: [`UnmanagedAccessCodeDeleteRequest`](../modules.md#unmanagedaccesscodedeleterequest)) => `Promise`<{ `ok`: ``true``  }\> |
 | `unmanaged.get` | (`params`: [`UnmanagedAccessCodeGetRequest`](../modules.md#unmanagedaccesscodegetrequest)) => `Promise`<[`UnmanagedAccessCode`](../modules.md#unmanagedaccesscode)\> |
 | `unmanaged.list` | (`params`: [`UnmanagedAccessCodesListRequest`](../modules.md#unmanagedaccesscodeslistrequest)) => `Promise`<[`UnmanagedAccessCode`](../modules.md#unmanagedaccesscode)[]\> |
@@ -102,7 +102,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:404](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L404)
+[src/seam-connect/routes.ts:402](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L402)
 
 ___
 
@@ -157,7 +157,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:379](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L379)
+[src/seam-connect/routes.ts:377](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L377)
 
 ___
 
@@ -250,7 +250,7 @@ Routes.noiseThresholds
 
 #### Defined in
 
-[src/seam-connect/routes.ts:414](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L414)
+[src/seam-connect/routes.ts:412](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L412)
 
 ___
 
@@ -273,7 +273,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:445](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L445)
+[src/seam-connect/routes.ts:443](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L443)
 
 ___
 

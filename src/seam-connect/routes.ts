@@ -308,9 +308,7 @@ export abstract class Routes {
           data: params,
         }),
 
-      convert_to_managed: (
-        params: UnmanagedAccessCodeConvertToManagedRequest
-      ) =>
+      convertToManaged: (params: UnmanagedAccessCodeConvertToManagedRequest) =>
         this.createActionAttemptAndWait({
           url: "/access_codes/unmanaged/convert_to_managed",
           method: "PATCH",
