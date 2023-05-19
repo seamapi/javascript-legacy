@@ -42,6 +42,8 @@ import {
   NoiseThresholdsDeleteRequest,
   NoiseThresholdsCreateRequest,
   NoiseThresholdsUpdateRequest,
+  ClientSessionsCreateRequest,
+  ClientSessionsGetOrCreateRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -70,6 +72,7 @@ import {
   WorkspaceResetSandboxResponse,
   WorkspacesListResponse,
   NoiseThresholdsListResponse,
+  ClientSessionsResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -453,6 +456,21 @@ export abstract class Routes {
       this.makeRequest({
         url: `/webhooks/delete`,
         method: "DELETE",
+        params,
+      }),
+  }
+
+  public readonly clientSessions = {
+    create: (params: ClientSessionsCreateRequest) =>
+      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
+        url: "/client_sessions/create",
+        method: "POST",
+        params,
+      }),
+    getOrCreate: (params: ClientSessionsGetOrCreateRequest) =>
+      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
+        url: "/client_sessions/create",
+        method: "PUT",
         params,
       }),
   }

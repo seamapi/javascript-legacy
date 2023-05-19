@@ -128,10 +128,12 @@ export interface EventsListResponse {
   events: Event[]
 }
 
-export interface ClientSessionResponse {
-  client_session: ClientSession
-}
-
+// Noise Thresholds
 export type NoiseThresholdsListResponse = {
   noise_thresholds: NoiseThresholds[]
+}
+
+// Client Sessions
+export type ClientSessionsResponse = {
+  client_session: ClientSession
 }

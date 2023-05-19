@@ -40,7 +40,6 @@
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
 - [ClientSession](interfaces/ClientSession.md)
-- [ClientSessionResponse](interfaces/ClientSessionResponse.md)
 - [ConnectWebview](interfaces/ConnectWebview.md)
 - [ConnectWebviewCreateRequest](interfaces/ConnectWebviewCreateRequest.md)
 - [ConnectWebviewCreateResponse](interfaces/ConnectWebviewCreateResponse.md)
@@ -109,6 +108,9 @@
 - [ActionType](modules.md#actiontype)
 - [AnyDevice](modules.md#anydevice)
 - [BatteryStatus](modules.md#batterystatus)
+- [ClientSessionsCreateRequest](modules.md#clientsessionscreaterequest)
+- [ClientSessionsGetOrCreateRequest](modules.md#clientsessionsgetorcreaterequest)
+- [ClientSessionsResponse](modules.md#clientsessionsresponse)
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
 - [CustomMetadata](modules.md#custommetadata)
 - [DeviceDeleteRequest](modules.md#devicedeleterequest)
@@ -360,6 +362,50 @@ ___
 
 ___
 
+### ClientSessionsCreateRequest
+
+Ƭ **ClientSessionsCreateRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `connect_webview_ids?` | `string`[] |
+| `connected_account_ids?` | `string`[] |
+| `user_identifier_key` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:208](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L208)
+
+___
+
+### ClientSessionsGetOrCreateRequest
+
+Ƭ **ClientSessionsGetOrCreateRequest**: [`ClientSessionsCreateRequest`](modules.md#clientsessionscreaterequest)
+
+#### Defined in
+
+[src/types/route-requests.ts:214](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L214)
+
+___
+
+### ClientSessionsResponse
+
+Ƭ **ClientSessionsResponse**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `client_session` | [`ClientSession`](interfaces/ClientSession.md) |
+
+#### Defined in
+
+[src/types/route-responses.ts:137](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L137)
+
+___
+
 ### CommonDeviceProperties
 
 Ƭ **CommonDeviceProperties**: `Object`
@@ -592,7 +638,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L135)
+[src/types/route-responses.ts:132](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L132)
 
 ___
 
