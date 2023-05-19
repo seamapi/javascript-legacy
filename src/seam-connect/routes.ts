@@ -42,6 +42,7 @@ import {
   NoiseThresholdsDeleteRequest,
   NoiseThresholdsCreateRequest,
   NoiseThresholdsUpdateRequest,
+  UnmanagedAccessCodeConvertToManagedRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -303,6 +304,13 @@ export abstract class Routes {
       update: (params: UnmanagedAccessCodeUpdateRequest) =>
         this.makeRequest({
           url: "/access_codes/unmanaged/update",
+          method: "PATCH",
+          data: params,
+        }),
+
+      convertToManaged: (params: UnmanagedAccessCodeConvertToManagedRequest) =>
+        this.createActionAttemptAndWait({
+          url: "/access_codes/unmanaged/convert_to_managed",
           method: "PATCH",
           data: params,
         }),
