@@ -53,6 +53,7 @@ const startAndSeedServer = async (
       SVIX_ENDPOINT: svix.endpoint,
       SVIX_API_KEY: svix.apiKey,
       ENABLE_UNMANAGED_DEVICES: "true",
+      DISABLE_CLERK_JWKS_REFRESH: "true",
     })
     .withCommand(["start:for-integration-testing"])
     .withNetwork(database.network)
