@@ -54,7 +54,7 @@ const startAndSeedServer = async (
       SVIX_API_KEY: svix.apiKey,
       ENABLE_UNMANAGED_DEVICES: "true",
       DISABLE_TASKS:
-        "update_clerk_jwts,devops_average_worker_time_spent_in_execution_metric",
+        "update_clerk_jwks,devops_average_worker_time_spent_in_execution_metric",
     })
     .withCommand(["start:for-integration-testing"])
     .withNetwork(database.network)
