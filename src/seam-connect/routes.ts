@@ -470,7 +470,7 @@ export abstract class Routes {
   public readonly deviceModels = {
     list: (params?: DeviceModelsListRequest) =>
       this.makeRequestAndFormat<DeviceModelsListResponse>("device_models", {
-        url: "/device_models/list",
+        url: "/internal/device_models/list",
         params,
       }),
   }
