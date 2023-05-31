@@ -208,3 +208,10 @@ export type NoiseThresholdsDeleteRequest = {
   device_id: string
   noise_threshold_id: string
 }
+
+export type DeviceModelsListRequest = {
+  main_category?: string
+  support_level?: string
+  brand?: string
+  text_search?: string
+}
