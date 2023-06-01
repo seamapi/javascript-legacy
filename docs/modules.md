@@ -54,6 +54,7 @@
 - [ConnectedAccountsListResponse](interfaces/ConnectedAccountsListResponse.md)
 - [Device](interfaces/Device.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
+- [DeviceModel](interfaces/DeviceModel.md)
 - [DeviceProvider](interfaces/DeviceProvider.md)
 - [DeviceProvidersListRequest](interfaces/DeviceProvidersListRequest.md)
 - [DeviceProvidersListResponse](interfaces/DeviceProvidersListResponse.md)
@@ -114,6 +115,8 @@
 - [DeviceDeleteRequest](modules.md#devicedeleterequest)
 - [DeviceGetRequest](modules.md#devicegetrequest)
 - [DeviceLocation](modules.md#devicelocation)
+- [DeviceModelsListRequest](modules.md#devicemodelslistrequest)
+- [DeviceModelsListResponse](modules.md#devicemodelslistresponse)
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [Event](modules.md#event)
@@ -435,6 +438,41 @@ ___
 
 ___
 
+### DeviceModelsListRequest
+
+Ƭ **DeviceModelsListRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `brand?` | `string` |
+| `main_category?` | `string` |
+| `support_level?` | `string` |
+| `text_search?` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:212](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L212)
+
+___
+
+### DeviceModelsListResponse
+
+Ƭ **DeviceModelsListResponse**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `device_models` | [`DeviceModel`](interfaces/DeviceModel.md)[] |
+
+#### Defined in
+
+[src/types/route-responses.ts:140](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L140)
+
+___
+
 ### DeviceType
 
 Ƭ **DeviceType**: [`LockDeviceType`](modules.md#lockdevicetype) \| [`NoiseDetectionDeviceType`](modules.md#noisedetectiondevicetype)
@@ -593,7 +631,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L135)
+[src/types/route-responses.ts:136](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L136)
 
 ___
 

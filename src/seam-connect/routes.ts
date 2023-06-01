@@ -43,6 +43,7 @@ import {
   NoiseThresholdsCreateRequest,
   NoiseThresholdsUpdateRequest,
   UnmanagedAccessCodeConvertToManagedRequest,
+  DeviceModelsListRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -71,6 +72,7 @@ import {
   WorkspaceResetSandboxResponse,
   WorkspacesListResponse,
   NoiseThresholdsListResponse,
+  DeviceModelsListResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -461,6 +463,14 @@ export abstract class Routes {
       this.makeRequest({
         url: `/webhooks/delete`,
         method: "DELETE",
+        params,
+      }),
+  }
+
+  public readonly deviceModels = {
+    list: (params?: DeviceModelsListRequest) =>
+      this.makeRequestAndFormat<DeviceModelsListResponse>("device_models", {
+        url: "/internal/device_models/list",
         params,
       }),
   }
