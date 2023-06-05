@@ -15,6 +15,7 @@ import {
   Webhook,
   Workspace,
   NoiseThresholds,
+  DeviceModel,
 } from "./models"
 
 // Workspaces
@@ -136,4 +137,8 @@ export type NoiseThresholdsListResponse = {
 // Client Sessions
 export type ClientSessionsResponse = {
   client_session: ClientSession
+}
+
+export type DeviceModelsListResponse = {
+  device_models: DeviceModel[]
 }

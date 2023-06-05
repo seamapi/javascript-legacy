@@ -129,6 +129,10 @@ export type UnmanagedAccessCodeUpdateRequest = {
   is_managed: true
 }
 
+export type UnmanagedAccessCodeConvertToManagedRequest = {
+  access_code_id: string
+}
+
 export type DeviceGetRequest =
   | {
       device_id: string
@@ -212,3 +216,10 @@ export type ClientSessionsCreateRequest = {
 }
 
 export type ClientSessionsGetOrCreateRequest = ClientSessionsCreateRequest
+
+export type DeviceModelsListRequest = {
+  main_category?: string
+  support_level?: string
+  brand?: string
+  text_search?: string
+}

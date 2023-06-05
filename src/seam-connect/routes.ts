@@ -44,6 +44,8 @@ import {
   NoiseThresholdsUpdateRequest,
   ClientSessionsCreateRequest,
   ClientSessionsGetOrCreateRequest,
+  UnmanagedAccessCodeConvertToManagedRequest,
+  DeviceModelsListRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -73,6 +75,7 @@ import {
   WorkspacesListResponse,
   NoiseThresholdsListResponse,
   ClientSessionsResponse,
+  DeviceModelsListResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -309,6 +312,13 @@ export abstract class Routes {
           method: "PATCH",
           data: params,
         }),
+
+      convertToManaged: (params: UnmanagedAccessCodeConvertToManagedRequest) =>
+        this.createActionAttemptAndWait({
+          url: "/access_codes/unmanaged/convert_to_managed",
+          method: "PATCH",
+          data: params,
+        }),
     },
 
     list: (params: AccessCodesListRequest) =>
@@ -471,6 +481,13 @@ export abstract class Routes {
       this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
         url: "/client_sessions/create",
         method: "PUT",
+      }),
+  }
+
+  public readonly deviceModels = {
+    list: (params?: DeviceModelsListRequest) =>
+      this.makeRequestAndFormat<DeviceModelsListResponse>("device_models", {
+        url: "/internal/device_models/list",
         params,
       }),
   }
