@@ -16,6 +16,7 @@ import {
   Workspace,
   NoiseThresholds,
   DeviceModel,
+  ClimateSettingSchedule,
 } from "./models"
 
 // Workspaces
@@ -139,4 +140,25 @@ export type NoiseThresholdsListResponse = {
 
 export type DeviceModelsListResponse = {
   device_models: DeviceModel[]
+}
+
+// Thermostats
+export interface ThermostatsListResponse {
+  thermostats: Device<CommonDeviceProperties>[]
+}
+export interface ThermostatGetResponse {
+  thermostat: Device<CommonDeviceProperties>
+}
+
+// Climate Setting Schedules
+export interface ClimateSettingSchedulesListResponse {
+  climate_setting_schedules: ClimateSettingSchedule[]
+}
+
+export interface ClimateSettingScheduleGetResponse {
+  climate_setting_schedule: ClimateSettingSchedule
+}
+
+export interface ClimateSettingScheduleCreateResponse {
+  climate_setting_schedule: ClimateSettingSchedule
 }

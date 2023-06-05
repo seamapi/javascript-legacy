@@ -17,6 +17,7 @@
 - [LOCK\_DOOR](ActionAttemptResultTypeMap.md#lock_door)
 - [UNLOCK\_DOOR](ActionAttemptResultTypeMap.md#unlock_door)
 - [UPDATE\_ACCESS\_CODE](ActionAttemptResultTypeMap.md#update_access_code)
+- [UPDATE\_THERMOSTAT](ActionAttemptResultTypeMap.md#update_thermostat)
 
 ## Properties
 
@@ -36,7 +37,7 @@ Record.CREATE\_ACCESS\_CODE
 
 #### Defined in
 
-[src/types/models.ts:222](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L222)
+[src/types/models.ts:223](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L223)
 
 ___
 
@@ -86,4 +87,14 @@ Record.UPDATE\_ACCESS\_CODE
 
 #### Defined in
 
-[src/types/models.ts:223](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L223)
+[src/types/models.ts:224](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L224)
+
+___
+
+### UPDATE\_THERMOSTAT
+
+• **UPDATE\_THERMOSTAT**: `unknown`
+
+#### Inherited from
+
+Record.UPDATE\_THERMOSTAT

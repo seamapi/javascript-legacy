@@ -191,6 +191,7 @@ export type ActionType =
   | "CREATE_ACCESS_CODE"
   | "UPDATE_ACCESS_CODE"
   | "DELETE_ACCESS_CODE"
+  | "UPDATE_THERMOSTAT"
 
 interface ActionAttemptBase<T extends ActionType> {
   action_attempt_id: string
@@ -364,4 +365,28 @@ export interface DeviceModel {
   brand: string
   icon_url: string
   seam_device_model_page_url: string
+}
+
+export type ClimateSetting = {
+  automatic_heating_enabled?: boolean
+  automatic_cooling_enabled?: boolean
+  hvac_mode_setting?: "off" | "heat" | "cool" | "heatcool"
+  cooling_set_point_celsius?: number
+  heating_set_point_celsius?: number
+  cooling_set_point_fahrenheit?: number
+  heating_set_point_fahrenheit?: number
+  manual_override_allowed?: boolean
+}
+
+export type ClimateSettingScheduleBase = Partial<ClimateSetting> & {
+  schedule_type?: "time_bound"
+  device_id: string
+  name?: string
+  schedule_starts_at: string
+  schedule_ends_at: string
+}
+
+export type ClimateSettingSchedule = ClimateSettingScheduleBase & {
+  climate_setting_schedule_id: string
+  created_at: string
 }

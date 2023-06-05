@@ -1,5 +1,11 @@
 import { Except } from "type-fest"
-import { CommonDeviceProperties, Provider } from "./models"
+import {
+  ClimateSetting,
+  ClimateSettingSchedule,
+  ClimateSettingScheduleBase,
+  CommonDeviceProperties,
+  Provider,
+} from "./models"
 import { CustomMetadata } from "./globals"
 
 export interface ConnectWebviewCreateRequest {
@@ -214,4 +220,33 @@ export type DeviceModelsListRequest = {
   support_level?: string
   brand?: string
   text_search?: string
+}
+
+// Climate Setting Schedules
+
+export type ClimateSettingSchedulesListRequest = {
+  device_id: string
+}
+
+export type ClimateSettingScheduleGetRequest = {
+  device_id: string
+  climate_setting_schedule_id: string
+}
+
+export type ClimateSettingScheduleCreateRequest = ClimateSettingScheduleBase
+
+export type ClimateSettingScheduleUpdateRequest = ClimateSettingScheduleBase & {
+  climate_setting_schedule_id: string
+}
+
+export type ClimateSettingScheduleDeleteRequest = {
+  climate_setting_schedule_id: string
+}
+
+// Thermostats
+
+export type ThermostatUpdateRequest = {
+  device_id: string
+  sync?: boolean
+  default_climate_setting: Partial<ClimateSetting>
 }
