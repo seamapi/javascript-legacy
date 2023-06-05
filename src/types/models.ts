@@ -191,7 +191,6 @@ export type ActionType =
   | "CREATE_ACCESS_CODE"
   | "UPDATE_ACCESS_CODE"
   | "DELETE_ACCESS_CODE"
-  | "UPDATE_THERMOSTAT"
 
 interface ActionAttemptBase<T extends ActionType> {
   action_attempt_id: string

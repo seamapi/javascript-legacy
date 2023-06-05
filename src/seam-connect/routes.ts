@@ -498,7 +498,7 @@ export abstract class Routes {
         params,
       }),
     update: (params: ThermostatUpdateRequest) =>
-      this.makeRequest<ActionAttemptGetResponse<"UPDATE_THERMOSTAT">>({
+      this.makeRequest({
         url: "/thermostats/update",
         method: "PATCH",
         data: params,
