@@ -10,6 +10,7 @@
 - [connected\_account\_id](DevicesListRequest.md#connected_account_id)
 - [device\_ids](DevicesListRequest.md#device_ids)
 - [device\_type](DevicesListRequest.md#device_type)
+- [device\_types](DevicesListRequest.md#device_types)
 
 ## Properties
 
@@ -39,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:38](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L38)
+[src/types/route-requests.ts:39](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L39)
 
 ___
 
@@ -50,3 +51,13 @@ ___
 #### Defined in
 
 [src/types/route-requests.ts:37](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L37)
+
+___
+
+### device\_types
+
+• `Optional` **device\_types**: `string`[]
+
+#### Defined in
+
+[src/types/route-requests.ts:38](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L38)
