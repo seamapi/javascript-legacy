@@ -3,7 +3,8 @@ import { CommonDeviceProperties, Provider } from "./models"
 import { CustomMetadata } from "./globals"
 
 export interface ConnectWebviewCreateRequest {
-  accepted_providers: Provider[]
+  accepted_providers?: Provider[]
+  provider_category?: "stable" | "internal_beta"
   device_selection_mode?: "none" | "single" | "multiple"
   custom_redirect_url?: string
   custom_redirect_failure_url?: string
