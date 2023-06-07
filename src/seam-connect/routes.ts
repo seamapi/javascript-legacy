@@ -509,45 +509,45 @@ export abstract class Routes {
         method: "DELETE",
         params,
       }),
-  }
 
-  public readonly climateSettingSchedules = {
-    list: (params: ClimateSettingSchedulesListRequest) =>
-      this.makeRequestAndFormat<ClimateSettingSchedulesListResponse>(
-        "climate_setting_schedules",
-        {
-          url: "/thermostats/climate_setting_schedules/list",
+    climateSettingSchedules: {
+      list: (params: ClimateSettingSchedulesListRequest) =>
+        this.makeRequestAndFormat<ClimateSettingSchedulesListResponse>(
+          "climate_setting_schedules",
+          {
+            url: "/thermostats/climate_setting_schedules/list",
+            params,
+          }
+        ),
+      get: (params: ClimateSettingScheduleGetRequest) =>
+        this.makeRequestAndFormat<ClimateSettingScheduleGetResponse>(
+          "climate_setting_schedule",
+          {
+            url: "/thermostats/climate_setting_schedules/get",
+            params,
+          }
+        ),
+      create: (data: ClimateSettingScheduleCreateRequest) =>
+        this.makeRequestAndFormat<ClimateSettingScheduleCreateResponse>(
+          "climate_setting_schedule",
+          {
+            url: "/thermostats/climate_setting_schedules/create",
+            method: "POST",
+            data,
+          }
+        ),
+      update: (params: ClimateSettingScheduleUpdateRequest) =>
+        this.makeRequest({
+          url: "/thermostats/climate_setting_schedules/update",
+          method: "PATCH",
+          data: params,
+        }),
+      delete: (params: ClimateSettingScheduleDeleteRequest) =>
+        this.makeRequest({
+          url: `/thermostats/climate_setting_schedules/delete`,
+          method: "DELETE",
           params,
-        }
-      ),
-    get: (params: ClimateSettingScheduleGetRequest) =>
-      this.makeRequestAndFormat<ClimateSettingScheduleGetResponse>(
-        "climate_setting_schedule",
-        {
-          url: "/thermostats/climate_setting_schedules/get",
-          params,
-        }
-      ),
-    create: (data: ClimateSettingScheduleCreateRequest) =>
-      this.makeRequestAndFormat<ClimateSettingScheduleCreateResponse>(
-        "climate_setting_schedule",
-        {
-          url: "/thermostats/climate_setting_schedules/create",
-          method: "POST",
-          data,
-        }
-      ),
-    update: (params: ClimateSettingScheduleUpdateRequest) =>
-      this.makeRequest({
-        url: "/thermostats/climate_setting_schedules/update",
-        method: "PATCH",
-        data: params,
-      }),
-    delete: (params: ClimateSettingScheduleDeleteRequest) =>
-      this.makeRequest({
-        url: `/thermostats/climate_setting_schedules/delete`,
-        method: "DELETE",
-        params,
-      }),
+        }),
+    },
   }
 }

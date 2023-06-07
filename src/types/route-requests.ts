@@ -229,15 +229,15 @@ export type ClimateSettingSchedulesListRequest = {
 }
 
 export type ClimateSettingScheduleGetRequest = {
-  device_id: string
   climate_setting_schedule_id: string
 }
 
 export type ClimateSettingScheduleCreateRequest = ClimateSettingScheduleBase
 
-export type ClimateSettingScheduleUpdateRequest = ClimateSettingScheduleBase & {
-  climate_setting_schedule_id: string
-}
+export type ClimateSettingScheduleUpdateRequest =
+  Partial<ClimateSettingScheduleBase> & {
+    climate_setting_schedule_id: string
+  }
 
 export type ClimateSettingScheduleDeleteRequest = {
   climate_setting_schedule_id: string

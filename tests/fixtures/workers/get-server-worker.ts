@@ -19,7 +19,12 @@ const getServer = async (protocol: SharedWorker.Protocol) => {
       if (!readableServer) {
         // We don't care about the teardown function for a long running server
         const { teardownFn, ...server } = await startAndSeedServer(
-          load_devices_from.split(",") as ("minut" | "schlage" | "august")[]
+          load_devices_from.split(",") as (
+            | "minut"
+            | "schlage"
+            | "august"
+            | "nest"
+          )[]
         )
         readableServer = server
       }
@@ -27,7 +32,12 @@ const getServer = async (protocol: SharedWorker.Protocol) => {
       message.reply(readableServer)
     } else if (command === "GET_WRITABLE_SERVER") {
       const writableServer = await startAndSeedServer(
-        load_devices_from.split(",") as ("minut" | "schlage" | "august")[]
+        load_devices_from.split(",") as (
+          | "minut"
+          | "schlage"
+          | "august"
+          | "nest"
+        )[]
       )
 
       const { teardownFn, ...server } = writableServer

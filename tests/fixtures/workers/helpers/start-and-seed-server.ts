@@ -11,7 +11,11 @@ import addFakeMinutDevices from "./add-fake-minut-devices"
 const SEAM_ADMIN_PASSWORD = "1234"
 
 const startAndSeedServer = async (
-  load_devices_from: ("minut" | "schlage" | "august")[] = ["august", "schlage"]
+  load_devices_from: ("minut" | "schlage" | "august" | "nest")[] = [
+    "august",
+    "schlage",
+    "nest",
+  ]
 ) => {
   const database = await getTestDatabase()
   const svix = await getTestSvix({

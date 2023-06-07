@@ -361,3 +361,110 @@ test(
   },
   "{}"
 )
+test(
+  testAPIMethod("thermostats.get"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+      },
+    ],
+  },
+  "AnyDevice"
+)
+test(
+  testAPIMethod("thermostats.list"),
+  {
+    args: (seed) => [
+      {
+        connected_account_id: seed.devices.nest.connectedAccountId,
+      },
+    ],
+  },
+  "AnyDevice[]"
+)
+test(
+  testAPIMethod("thermostats.update"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+        default_climate_setting: {
+          automatic_heating_enabled: true,
+          heating_set_point_celsius: 20,
+        },
+      },
+    ],
+  },
+  "{}"
+)
+test(
+  testAPIMethod("thermostats.delete"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+      },
+    ],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
+  testAPIMethod("thermostats.climateSettingSchedules.get"),
+  {
+    args: (seed) => [
+      {
+        climate_setting_schedule_id:
+          seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
+      },
+    ],
+  },
+  "ClimateSettingSchedule"
+)
+test(
+  testAPIMethod("thermostats.climateSettingSchedules.create"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+        name: "Vacation Setting",
+        schedule_starts_at: new Date().toUTCString(),
+        schedule_ends_at: new Date(
+          Date.now() + 1000 * 60 * 60 * 24 * 7
+        ).toUTCString(),
+        schedule_type: "time_bound",
+        automatic_heating_enabled: true,
+        automatic_cooling_enabled: true,
+        heating_set_point_fahrenheit: 40,
+        cooling_set_point_fahrenheit: 80,
+      },
+    ],
+  },
+  "ClimateSettingSchedule"
+)
+test(
+  testAPIMethod("thermostats.climateSettingSchedules.update"),
+  {
+    args: (seed) => [
+      {
+        climate_setting_schedule_id:
+          seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
+        name: "Vacation Setting 2",
+      },
+    ],
+  },
+  "ClimateSettingSchedule"
+)
+test(
+  testAPIMethod("thermostats.climateSettingSchedules.delete"),
+  {
+    args: (seed) => [
+      {
+        climate_setting_schedule_id:
+          seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
+      },
+    ],
+  },
+  "{}"
+)

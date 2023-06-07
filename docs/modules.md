@@ -427,7 +427,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:236](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L236)
+[src/types/route-requests.ts:235](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L235)
 
 ___
 
@@ -456,7 +456,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `climate_setting_schedule_id` | `string` |
-| `device_id` | `string` |
 
 #### Defined in
 
@@ -466,11 +465,11 @@ ___
 
 ### ClimateSettingScheduleUpdateRequest
 
-Ƭ **ClimateSettingScheduleUpdateRequest**: [`ClimateSettingScheduleBase`](modules.md#climatesettingschedulebase) & { `climate_setting_schedule_id`: `string`  }
+Ƭ **ClimateSettingScheduleUpdateRequest**: `Partial`<[`ClimateSettingScheduleBase`](modules.md#climatesettingschedulebase)\> & { `climate_setting_schedule_id`: `string`  }
 
 #### Defined in
 
-[src/types/route-requests.ts:238](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L238)
+[src/types/route-requests.ts:237](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L237)
 
 ___
 
