@@ -7,6 +7,7 @@ import getTestSvix from "./get-test-svix"
 import addFakeSchlageDevices from "./add-fake-schlage-devices"
 import addFakeAugustDevices from "./add-fake-august-devices"
 import addFakeMinutDevices from "./add-fake-minut-devices"
+import addFakeNestDevices from "./add-fake-nest-devices"
 
 const SEAM_ADMIN_PASSWORD = "1234"
 
@@ -95,6 +96,7 @@ const startAndSeedServer = async (
     augustLock?: Awaited<ReturnType<typeof addFakeAugustDevices>>
     minut?: Awaited<ReturnType<typeof addFakeMinutDevices>>
     schlageLock?: Awaited<ReturnType<typeof addFakeSchlageDevices>>
+    nest?: Awaited<ReturnType<typeof addFakeNestDevices>>
   } = {}
 
   if (load_devices_from.includes("schlage")) {
@@ -107,6 +109,10 @@ const startAndSeedServer = async (
 
   if (load_devices_from.includes("minut")) {
     devices["minut"] = await addFakeMinutDevices(axios)
+  }
+
+  if (load_devices_from.includes("nest")) {
+    devices["nest"] = await addFakeNestDevices(axios)
   }
 
   return {

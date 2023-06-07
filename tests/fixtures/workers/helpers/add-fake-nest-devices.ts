@@ -17,7 +17,7 @@ const addFakeNestDevices = async (axios: Axios) => {
 
   const {
     data: { climate_setting_schedule },
-  } = await axios.post("/thermostats/climate_setting_schedule", {
+  } = await axios.post("/thermostats/climate_setting_schedules/create", {
     device_id: firstDevice.device_id,
     name: "Vacation Setting",
     schedule_starts_at: schedule_starts_at.toUTCString(),
