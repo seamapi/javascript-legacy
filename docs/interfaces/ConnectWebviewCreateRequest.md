@@ -11,12 +11,13 @@
 - [custom\_redirect\_failure\_url](ConnectWebviewCreateRequest.md#custom_redirect_failure_url)
 - [custom\_redirect\_url](ConnectWebviewCreateRequest.md#custom_redirect_url)
 - [device\_selection\_mode](ConnectWebviewCreateRequest.md#device_selection_mode)
+- [provider\_category](ConnectWebviewCreateRequest.md#provider_category)
 
 ## Properties
 
 ### accepted\_providers
 
-• **accepted\_providers**: `string`[]
+• `Optional` **accepted\_providers**: `string`[]
 
 #### Defined in
 
@@ -30,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:10](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L10)
+[src/types/route-requests.ts:11](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L11)
 
 ___
 
@@ -40,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:9](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L9)
+[src/types/route-requests.ts:10](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L10)
 
 ___
 
@@ -50,13 +51,23 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:8](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L8)
+[src/types/route-requests.ts:9](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L9)
 
 ___
 
 ### device\_selection\_mode
 
 • `Optional` **device\_selection\_mode**: ``"none"`` \| ``"single"`` \| ``"multiple"``
+
+#### Defined in
+
+[src/types/route-requests.ts:8](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L8)
+
+___
+
+### provider\_category
+
+• `Optional` **provider\_category**: ``"stable"`` \| ``"internal_beta"``
 
 #### Defined in
 
