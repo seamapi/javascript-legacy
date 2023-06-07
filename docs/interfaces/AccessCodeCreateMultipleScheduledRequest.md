@@ -30,7 +30,7 @@ AccessCodeCreateMultipleBaseRequest.behavior\_when\_code\_cannot\_be\_shared
 
 #### Defined in
 
-[src/types/route-requests.ts:63](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L63)
+[src/types/route-requests.ts:64](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L64)
 
 ___
 
@@ -44,7 +44,7 @@ AccessCodeCreateMultipleBaseRequest.device\_ids
 
 #### Defined in
 
-[src/types/route-requests.ts:61](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L61)
+[src/types/route-requests.ts:62](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L62)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L72)
+[src/types/route-requests.ts:73](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L73)
 
 ___
 
@@ -68,7 +68,7 @@ AccessCodeCreateMultipleBaseRequest.name
 
 #### Defined in
 
-[src/types/route-requests.ts:62](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L62)
+[src/types/route-requests.ts:63](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L63)
 
 ___
 
@@ -78,4 +78,4 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:71](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L71)
+[src/types/route-requests.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L72)
