@@ -79,6 +79,7 @@ export type CommonDeviceProperties = {
     status: BatteryStatus
   }
   image_url?: string
+  image_alt_text?: string
 }
 
 export type DeviceLocation = {
@@ -111,7 +112,15 @@ export type UnmanagedDevice = Pick<
   | "errors"
   | "warnings"
   | "created_at"
->
+> & {
+  properties: UnmanagedDeviceProperties
+}
+
+type UnmanagedDeviceProperties = Pick<
+  CommonDeviceProperties,
+  "name" | "image_url" | "image_alt_text"
+> &
+  Pick<LockProperties, "manufacturer">
 
 export interface DeviceProvider {
   device_provider_name: string
