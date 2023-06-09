@@ -481,6 +481,7 @@ export abstract class Routes {
       this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
         url: "/client_sessions/create",
         method: "PUT",
+        params,
       }),
   }
 
