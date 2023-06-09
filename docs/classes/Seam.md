@@ -200,7 +200,7 @@ Routes.deviceModels
 
 #### Defined in
 
-[src/seam-connect/routes.ts:487](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L487)
+[src/seam-connect/routes.ts:488](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L488)
 
 ___
 
