@@ -42,6 +42,8 @@ import {
   NoiseThresholdsDeleteRequest,
   NoiseThresholdsCreateRequest,
   NoiseThresholdsUpdateRequest,
+  ClientSessionsCreateRequest,
+  ClientSessionsGetOrCreateRequest,
   UnmanagedAccessCodeConvertToManagedRequest,
   DeviceModelsListRequest,
 } from "../types/route-requests"
@@ -72,6 +74,7 @@ import {
   WorkspaceResetSandboxResponse,
   WorkspacesListResponse,
   NoiseThresholdsListResponse,
+  ClientSessionsResponse,
   DeviceModelsListResponse,
 } from "../types/route-responses"
 
@@ -463,6 +466,21 @@ export abstract class Routes {
       this.makeRequest({
         url: `/webhooks/delete`,
         method: "DELETE",
+        params,
+      }),
+  }
+
+  public readonly clientSessions = {
+    create: (params: ClientSessionsCreateRequest) =>
+      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
+        url: "/client_sessions/create",
+        method: "POST",
+        params,
+      }),
+    getOrCreate: (params: ClientSessionsGetOrCreateRequest) =>
+      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
+        url: "/client_sessions/create",
+        method: "PUT",
         params,
       }),
   }

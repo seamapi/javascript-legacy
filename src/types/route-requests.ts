@@ -211,6 +211,14 @@ export type NoiseThresholdsDeleteRequest = {
   noise_threshold_id: string
 }
 
+export type ClientSessionsCreateRequest = {
+  user_identifier_key: string
+  connect_webview_ids?: string[]
+  connected_account_ids?: string[]
+}
+
+export type ClientSessionsGetOrCreateRequest = ClientSessionsCreateRequest
+
 export type DeviceModelsListRequest = {
   main_category?: string
   support_level?: string

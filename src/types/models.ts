@@ -347,7 +347,7 @@ export type Event = Flatten<SeamEvent["event_type"]>
 
 export interface ClientSession {
   token: string
-  user_id: string
+  client_session_id: string
   created_at: string
 }
 
