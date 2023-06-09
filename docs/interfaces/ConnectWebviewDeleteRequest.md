@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[src/types/route-requests.ts:14](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L14)
+[src/types/route-requests.ts:15](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L15)
