@@ -81,6 +81,22 @@ const startAndSeedServer = async (
     baseURL: serverUrl,
   })
 
+  axios.interceptors.response.use(
+    (response) => response,
+    (error) => {
+      if (defaultAxios.isAxiosError(error)) {
+        throw new Error(
+          `Failed Request to ${error.config.url} with ${JSON.stringify(
+            error.config.data
+          )} with status ${error.response?.status} and data ${JSON.stringify(
+            error.response?.data
+          )}`
+        )
+      }
+      throw error
+    }
+  )
+
   const api_key = "seam_sandykey_0000000000000000000sand"
 
   ;(axios.defaults.headers as any).Authorization = `Bearer ${api_key}`
