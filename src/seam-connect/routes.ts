@@ -87,6 +87,7 @@ import {
   ClimateSettingSchedulesListResponse,
   ClimateSettingScheduleGetResponse,
   ClimateSettingScheduleCreateResponse,
+  ClimateSettingScheduleUpdateResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -555,11 +556,14 @@ export abstract class Routes {
           }
         ),
       update: (params: ClimateSettingScheduleUpdateRequest) =>
-        this.makeRequest({
-          url: "/thermostats/climate_setting_schedules/update",
-          method: "POST",
-          data: params,
-        }),
+        this.makeRequestAndFormat<ClimateSettingScheduleUpdateResponse>(
+          "climate_setting_schedule",
+          {
+            url: "/thermostats/climate_setting_schedules/update",
+            method: "POST",
+            data: params,
+          }
+        ),
       delete: (params: ClimateSettingScheduleDeleteRequest) =>
         this.makeRequest({
           url: `/thermostats/climate_setting_schedules/delete`,

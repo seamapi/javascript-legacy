@@ -65,11 +65,6 @@ const startAndSeedServer = async (
     .withWaitStrategy(Wait.forLogMessage("ready - started server"))
     .start()
 
-  const stream = await server.logs()
-  stream
-    .on("data", (line) => console.log(line))
-    .on("err", (line) => console.error(line))
-
   const db = knex(database.externalDatabaseUrl)
 
   const workspace = await db("seam.workspace")

@@ -34,7 +34,13 @@ export const NOISE_DETECTION_DEVICE_TYPES = [
 export type NoiseDetectionDeviceType =
   typeof NOISE_DETECTION_DEVICE_TYPES[number]
 
-export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
+export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat"]
+export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
+
+export type DeviceType =
+  | LockDeviceType
+  | NoiseDetectionDeviceType
+  | ThermostatDeviceType
 
 export const PROVIDERS = [
   "akuvox",

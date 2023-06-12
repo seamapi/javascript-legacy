@@ -164,3 +164,7 @@ export interface ClimateSettingScheduleGetResponse {
 export interface ClimateSettingScheduleCreateResponse {
   climate_setting_schedule: ClimateSettingSchedule
 }
+
+export interface ClimateSettingScheduleUpdateResponse {
+  climate_setting_schedule: ClimateSettingSchedule
+}

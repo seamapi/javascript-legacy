@@ -240,6 +240,7 @@ export type ClimateSettingSchedulesListRequest = {
 
 export type ClimateSettingScheduleGetRequest = {
   climate_setting_schedule_id: string
+  device_id: string
 }
 
 export type ClimateSettingScheduleCreateRequest = ClimateSettingScheduleBase
