@@ -88,7 +88,7 @@ const startAndSeedServer = async (
   const connectWebview = await axios.post("/connect_webviews/create", {
     // TODO: remove filter when minut is ready
     accepted_providers: load_devices_from.filter(
-      (provider) => provider !== "minut"
+      (provider) => provider !== "minut" && provider !== "nest"
     ),
   })
 
