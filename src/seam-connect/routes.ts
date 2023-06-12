@@ -518,7 +518,7 @@ export abstract class Routes {
     update: (params: ThermostatUpdateRequest) =>
       this.makeRequest({
         url: "/thermostats/update",
-        method: "PATCH",
+        method: "POST",
         data: params,
       }),
     delete: (params: DeviceDeleteRequest) =>
@@ -557,7 +557,7 @@ export abstract class Routes {
       update: (params: ClimateSettingScheduleUpdateRequest) =>
         this.makeRequest({
           url: "/thermostats/climate_setting_schedules/update",
-          method: "PATCH",
+          method: "POST",
           data: params,
         }),
       delete: (params: ClimateSettingScheduleDeleteRequest) =>

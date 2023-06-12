@@ -58,11 +58,17 @@ const startAndSeedServer = async (
       SVIX_API_KEY: svix.apiKey,
       ENABLE_UNMANAGED_DEVICES: "true",
     })
+    .withStartupTimeout(60_000) // 1 minute
     .withCommand(["start:for-integration-testing"])
     .withNetwork(database.network)
     .withNetworkAliases("api")
     .withWaitStrategy(Wait.forLogMessage("ready - started server"))
     .start()
+
+  const stream = await server.logs()
+  stream
+    .on("data", (line) => console.log(line))
+    .on("err", (line) => console.error(line))
 
   const db = knex(database.externalDatabaseUrl)
 
