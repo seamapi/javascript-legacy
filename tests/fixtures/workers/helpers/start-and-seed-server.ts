@@ -15,7 +15,6 @@ const startAndSeedServer = async (
   load_devices_from: ("minut" | "schlage" | "august" | "nest")[] = [
     "august",
     "schlage",
-    "nest",
   ]
 ) => {
   const database = await getTestDatabase()

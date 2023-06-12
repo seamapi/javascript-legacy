@@ -370,6 +370,7 @@ test(
         device_id: seed.devices.nest.id1,
       },
     ],
+    load_devices_from: ["nest"],
   },
   "AnyDevice"
 )
@@ -381,6 +382,7 @@ test(
         connected_account_id: seed.devices.nest.connectedAccountId,
       },
     ],
+    load_devices_from: ["nest"],
   },
   "AnyDevice[]"
 )
@@ -408,6 +410,7 @@ test(
       },
     ],
     modifiesState: true,
+    load_devices_from: ["nest"],
   },
   "{}"
 )
@@ -420,6 +423,7 @@ test(
           seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
       },
     ],
+    load_devices_from: ["nest"],
   },
   "ClimateSettingSchedule"
 )
@@ -441,6 +445,7 @@ test(
         cooling_set_point_fahrenheit: 80,
       },
     ],
+    load_devices_from: ["nest"],
   },
   "ClimateSettingSchedule"
 )
@@ -454,6 +459,7 @@ test(
         name: "Vacation Setting 2",
       },
     ],
+    load_devices_from: ["nest"],
   },
   "ClimateSettingSchedule"
 )
@@ -466,6 +472,7 @@ test(
           seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
       },
     ],
+    load_devices_from: ["nest"],
   },
   "{}"
 )
