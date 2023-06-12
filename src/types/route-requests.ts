@@ -9,7 +9,8 @@ import {
 import { CustomMetadata } from "./globals"
 
 export interface ConnectWebviewCreateRequest {
-  accepted_providers: Provider[]
+  accepted_providers?: Provider[]
+  provider_category?: "stable" | "internal_beta"
   device_selection_mode?: "none" | "single" | "multiple"
   custom_redirect_url?: string
   custom_redirect_failure_url?: string
@@ -215,6 +216,14 @@ export type NoiseThresholdsDeleteRequest = {
   device_id: string
   noise_threshold_id: string
 }
+
+export type ClientSessionsCreateRequest = {
+  user_identifier_key: string
+  connect_webview_ids?: string[]
+  connected_account_ids?: string[]
+}
+
+export type ClientSessionsGetOrCreateRequest = ClientSessionsCreateRequest
 
 export type DeviceModelsListRequest = {
   main_category?: string

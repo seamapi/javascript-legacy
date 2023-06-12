@@ -13,7 +13,7 @@ import {
   SuccessfulAPIResponse,
 } from "../types/globals"
 import { version } from "../../package.json"
-import { ClientSessionResponse } from "../types"
+import { ClientSessionsResponse } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -102,7 +102,7 @@ export class Seam extends Routes {
     endpoint?: string
     workspaceId?: string
     apiKey?: string
-  }): Promise<APIResponse<ClientSessionResponse>> {
+  }): Promise<APIResponse<ClientSessionsResponse>> {
     const { apiKey, endpoint, axiosOptions } =
       getSeamClientOptionsWithDefaults(options)
 

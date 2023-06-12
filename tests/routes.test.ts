@@ -361,6 +361,7 @@ test(
   },
   "{}"
 )
+// Thermostats
 test(
   testAPIMethod("thermostats.get"),
   {
@@ -467,4 +468,16 @@ test(
     ],
   },
   "{}"
+)
+
+// Client Sessions
+test(
+  testAPIMethod("clientSessions.create"),
+  { modifiesState: true },
+  "ClientSession"
+)
+test(
+  testAPIMethod("clientSessions.getOrCreate"),
+  { modifiesState: true },
+  "ClientSession"
 )

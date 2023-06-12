@@ -6,11 +6,21 @@
 
 ### Properties
 
+- [client\_session\_id](ClientSession.md#client_session_id)
 - [created\_at](ClientSession.md#created_at)
 - [token](ClientSession.md#token)
-- [user\_id](ClientSession.md#user_id)
 
 ## Properties
+
+### client\_session\_id
+
+• **client\_session\_id**: `string`
+
+#### Defined in
+
+[src/types/models.ts:350](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L350)
+
+___
 
 ### created\_at
 
@@ -18,7 +28,7 @@
 
 #### Defined in
 
-[src/types/models.ts:342](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L342)
+[src/types/models.ts:351](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L351)
 
 ___
 
@@ -28,14 +38,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:340](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L340)
-
-___
-
-### user\_id
-
-• **user\_id**: `string`
-
-#### Defined in
-
-[src/types/models.ts:341](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L341)
+[src/types/models.ts:349](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L349)
