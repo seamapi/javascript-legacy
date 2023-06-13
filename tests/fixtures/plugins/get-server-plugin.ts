@@ -3,13 +3,20 @@ import { URL } from "url"
 import defaultAxios from "axios"
 import knex from "knex"
 import path from "path"
-import Seam, { AccessCode, Device } from "../../../src"
+import Seam, { AccessCode, Device, ClimateSettingSchedule } from "../../../src"
 
 type SeedLock = {
   connectedAccountId: string
   id1: string
   name1: string
   accessCode: AccessCode
+}
+
+type SeedThermostat = {
+  connectedAccountId: string
+  id1: string
+  name1: string
+  climateSettingSchedule: ClimateSettingSchedule
 }
 
 type SeedNoiseSensors = {
@@ -35,6 +42,7 @@ export type WorkerPublishedMessage = {
       minut: SeedNoiseSensors
       schlageLock: SeedLock
       augustLock: SeedLock
+      nest: SeedThermostat
     }
   }
 }
@@ -47,7 +55,11 @@ const serverWorker = registerSharedTypeScriptWorker({
 
 export const getServer = async (
   writable = false,
-  load_devices_from: ("minut" | "schlage" | "august")[] = ["august", "schlage"]
+  load_devices_from: ("minut" | "schlage" | "august" | "nest")[] = [
+    "august",
+    "schlage",
+    "nest",
+  ]
 ) => {
   const message = serverWorker.publish(
     writable

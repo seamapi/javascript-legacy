@@ -7,11 +7,15 @@ import getTestSvix from "./get-test-svix"
 import addFakeSchlageDevices from "./add-fake-schlage-devices"
 import addFakeAugustDevices from "./add-fake-august-devices"
 import addFakeMinutDevices from "./add-fake-minut-devices"
+import addFakeNestDevices from "./add-fake-nest-devices"
 
 const SEAM_ADMIN_PASSWORD = "1234"
 
 const startAndSeedServer = async (
-  load_devices_from: ("minut" | "schlage" | "august")[] = ["august", "schlage"]
+  load_devices_from: ("minut" | "schlage" | "august" | "nest")[] = [
+    "august",
+    "schlage",
+  ]
 ) => {
   const database = await getTestDatabase()
   const svix = await getTestSvix({
@@ -54,6 +58,7 @@ const startAndSeedServer = async (
       SVIX_API_KEY: svix.apiKey,
       ENABLE_UNMANAGED_DEVICES: "true",
     })
+    .withStartupTimeout(60_000) // 1 minute
     .withCommand(["start:for-integration-testing"])
     .withNetwork(database.network)
     .withNetworkAliases("api")
@@ -76,33 +81,52 @@ const startAndSeedServer = async (
     baseURL: serverUrl,
   })
 
+  axios.interceptors.response.use(
+    (response) => response,
+    (error) => {
+      if (defaultAxios.isAxiosError(error)) {
+        throw new Error(
+          `Failed Request to ${error.config.url} with ${JSON.stringify(
+            error.config.data
+          )} with status ${error.response?.status} and data ${JSON.stringify(
+            error.response?.data
+          )}`
+        )
+      }
+      throw error
+    }
+  )
+
   const api_key = "seam_sandykey_0000000000000000000sand"
 
   ;(axios.defaults.headers as any).Authorization = `Bearer ${api_key}`
 
   const connectWebview = await axios.post("/connect_webviews/create", {
     // TODO: remove filter when minut is ready
-    accepted_providers: load_devices_from.filter(
-      (provider) => provider !== "minut"
-    ),
+    accepted_providers: ["schlage", "august"],
   })
 
   const devices: {
     augustLock?: Awaited<ReturnType<typeof addFakeAugustDevices>>
     minut?: Awaited<ReturnType<typeof addFakeMinutDevices>>
     schlageLock?: Awaited<ReturnType<typeof addFakeSchlageDevices>>
+    nest?: Awaited<ReturnType<typeof addFakeNestDevices>>
   } = {}
 
   if (load_devices_from.includes("schlage")) {
     devices["schlageLock"] = await addFakeSchlageDevices(axios)
   }
 
-  if (load_devices_from.includes("schlage")) {
+  if (load_devices_from.includes("august")) {
     devices["augustLock"] = await addFakeAugustDevices(axios)
   }
 
   if (load_devices_from.includes("minut")) {
     devices["minut"] = await addFakeMinutDevices(axios)
+  }
+
+  if (load_devices_from.includes("nest")) {
+    devices["nest"] = await addFakeNestDevices(axios)
   }
 
   return {

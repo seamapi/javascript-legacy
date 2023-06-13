@@ -33,9 +33,15 @@ export const NOISE_SENSOR_DEVICE_TYPES = [
 ]
 export type NoiseSensorDeviceType = typeof NOISE_SENSOR_DEVICE_TYPES[number]
 
+export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat"]
+export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
+
 export type NoiseSensorDeviceProperties = CommonDeviceProperties
 
-export type DeviceType = LockDeviceType | NoiseSensorDeviceType
+export type DeviceType =
+  | LockDeviceType
+  | NoiseSensorDeviceType
+  | ThermostatDeviceType
 
 /** @deprecated use NOISE_SENSOR_DEVICE_TYPES instead */
 export const NOISE_DETECTION_DEVICE_TYPES = NOISE_SENSOR_DEVICE_TYPES
@@ -59,6 +65,7 @@ export const PROVIDERS = [
   "yale",
   "minut",
   "ttlock",
+  "nest",
 ]
 export type Provider = typeof PROVIDERS[number]
 
@@ -401,4 +408,29 @@ export interface DeviceModel {
   brand: string
   icon_url: string
   seam_device_model_page_url: string
+}
+
+export type ClimateSetting = {
+  automatic_heating_enabled?: boolean
+  automatic_cooling_enabled?: boolean
+  hvac_mode_setting?: "off" | "heat" | "cool" | "heatcool"
+  cooling_set_point_celsius?: number
+  heating_set_point_celsius?: number
+  cooling_set_point_fahrenheit?: number
+  heating_set_point_fahrenheit?: number
+  manual_override_allowed: boolean
+}
+
+export type ClimateSettingScheduleBase = Partial<ClimateSetting> & {
+  schedule_type?: "time_bound"
+  device_id: string
+  name?: string
+  schedule_starts_at: string
+  schedule_ends_at: string
+}
+
+export type ClimateSettingSchedule = ClimateSettingScheduleBase & {
+  climate_setting_schedule_id: string
+  is_set_on_device: boolean
+  created_at: string
 }

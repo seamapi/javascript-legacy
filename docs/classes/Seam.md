@@ -27,6 +27,7 @@
 - [events](Seam.md#events)
 - [locks](Seam.md#locks)
 - [noiseThresholds](Seam.md#noisethresholds)
+- [thermostats](Seam.md#thermostats)
 - [webhooks](Seam.md#webhooks)
 - [workspaces](Seam.md#workspaces)
 
@@ -84,7 +85,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/seam-connect/routes.ts:285](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L285)
+[src/seam-connect/routes.ts:297](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L297)
 
 ___
 
@@ -104,7 +105,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:407](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L407)
+[src/seam-connect/routes.ts:419](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L419)
 
 ___
 
@@ -135,7 +136,7 @@ Routes.clientSessions
 
 #### Defined in
 
-[src/seam-connect/routes.ts:473](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L473)
+[src/seam-connect/routes.ts:485](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L485)
 
 ___
 
@@ -158,7 +159,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/seam-connect/routes.ts:253](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L253)
+[src/seam-connect/routes.ts:265](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L265)
 
 ___
 
@@ -180,7 +181,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:382](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L382)
+[src/seam-connect/routes.ts:394](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L394)
 
 ___
 
@@ -200,7 +201,7 @@ Routes.deviceModels
 
 #### Defined in
 
-[src/seam-connect/routes.ts:488](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L488)
+[src/seam-connect/routes.ts:500](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L500)
 
 ___
 
@@ -227,7 +228,7 @@ Routes.devices
 
 #### Defined in
 
-[src/seam-connect/routes.ts:194](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L194)
+[src/seam-connect/routes.ts:206](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L206)
 
 ___
 
@@ -247,7 +248,7 @@ Routes.events
 
 #### Defined in
 
-[src/seam-connect/routes.ts:241](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L241)
+[src/seam-connect/routes.ts:253](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L253)
 
 ___
 
@@ -270,7 +271,7 @@ Routes.locks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:159](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L159)
+[src/seam-connect/routes.ts:171](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L171)
 
 ___
 
@@ -293,7 +294,36 @@ Routes.noiseThresholds
 
 #### Defined in
 
-[src/seam-connect/routes.ts:417](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L417)
+[src/seam-connect/routes.ts:429](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L429)
+
+___
+
+### thermostats
+
+• `Readonly` **thermostats**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `climateSettingSchedules` | `Object` |
+| `climateSettingSchedules.create` | (`data`: [`ClimateSettingScheduleBase`](../modules.md#climatesettingschedulebase)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)\> |
+| `climateSettingSchedules.delete` | (`params`: [`ClimateSettingScheduleDeleteRequest`](../modules.md#climatesettingscheduledeleterequest)) => `Promise`<{ `ok`: ``true``  }\> |
+| `climateSettingSchedules.get` | (`params`: [`ClimateSettingScheduleGetRequest`](../modules.md#climatesettingschedulegetrequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)\> |
+| `climateSettingSchedules.list` | (`params`: [`ClimateSettingSchedulesListRequest`](../modules.md#climatesettingscheduleslistrequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)[]\> |
+| `climateSettingSchedules.update` | (`params`: [`ClimateSettingScheduleUpdateRequest`](../modules.md#climatesettingscheduleupdaterequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)\> |
+| `delete` | (`params`: [`DeviceDeleteRequest`](../modules.md#devicedeleterequest)) => `Promise`<{ `ok`: ``true``  }\> |
+| `get` | (`params`: [`DeviceGetRequest`](../modules.md#devicegetrequest)) => `Promise`<[`Device`](../interfaces/Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), `string`\>\> |
+| `list` | (`params?`: [`DevicesListRequest`](../interfaces/DevicesListRequest.md)) => `Promise`<[`Device`](../interfaces/Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), `string`\>[]\> |
+| `update` | (`params`: [`ThermostatUpdateRequest`](../modules.md#thermostatupdaterequest)) => `Promise`<{ `ok`: ``true``  }\> |
+
+#### Inherited from
+
+Routes.thermostats
+
+#### Defined in
+
+[src/seam-connect/routes.ts:508](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L508)
 
 ___
 
@@ -316,7 +346,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:448](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L448)
+[src/seam-connect/routes.ts:460](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L460)
 
 ___
 
@@ -338,7 +368,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/seam-connect/routes.ts:143](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L143)
+[src/seam-connect/routes.ts:155](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L155)
 
 ## Methods
 

@@ -20,7 +20,7 @@ interface Input<Path extends string> {
     | ParametersByPath<Path>
     | ((seed: WorkerPublishedMessage["seed"]) => ParametersByPath<Path>)
   modifiesState?: boolean
-  load_devices_from?: ("minut" | "schlage" | "august")[]
+  load_devices_from?: ("minut" | "schlage" | "august" | "nest")[]
 }
 
 // Ava simplifies types so unfortunately we need to wrap the macro

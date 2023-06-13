@@ -46,6 +46,12 @@ import {
   ClientSessionsGetOrCreateRequest,
   UnmanagedAccessCodeConvertToManagedRequest,
   DeviceModelsListRequest,
+  ThermostatUpdateRequest,
+  ClimateSettingSchedulesListRequest,
+  ClimateSettingScheduleGetRequest,
+  ClimateSettingScheduleCreateRequest,
+  ClimateSettingScheduleDeleteRequest,
+  ClimateSettingScheduleUpdateRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -76,6 +82,12 @@ import {
   NoiseThresholdsListResponse,
   ClientSessionsResponse,
   DeviceModelsListResponse,
+  ThermostatsListResponse,
+  ThermostatGetResponse,
+  ClimateSettingSchedulesListResponse,
+  ClimateSettingScheduleGetResponse,
+  ClimateSettingScheduleCreateResponse,
+  ClimateSettingScheduleUpdateResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -491,5 +503,73 @@ export abstract class Routes {
         url: "/internal/device_models/list",
         params,
       }),
+  }
+
+  public readonly thermostats = {
+    list: (params?: DevicesListRequest) =>
+      this.makeRequestAndFormat<ThermostatsListResponse>("thermostats", {
+        url: "/thermostats/list",
+        params,
+      }),
+    get: (params: DeviceGetRequest) =>
+      this.makeRequestAndFormat<ThermostatGetResponse>("thermostat", {
+        url: "/thermostats/get",
+        params,
+      }),
+    update: (params: ThermostatUpdateRequest) =>
+      this.makeRequest({
+        url: "/thermostats/update",
+        method: "POST",
+        data: params,
+      }),
+    delete: (params: DeviceDeleteRequest) =>
+      this.makeRequest({
+        url: "/thermostats/delete",
+        method: "DELETE",
+        params,
+      }),
+
+    climateSettingSchedules: {
+      list: (params: ClimateSettingSchedulesListRequest) =>
+        this.makeRequestAndFormat<ClimateSettingSchedulesListResponse>(
+          "climate_setting_schedules",
+          {
+            url: "/thermostats/climate_setting_schedules/list",
+            params,
+          }
+        ),
+      get: (params: ClimateSettingScheduleGetRequest) =>
+        this.makeRequestAndFormat<ClimateSettingScheduleGetResponse>(
+          "climate_setting_schedule",
+          {
+            url: "/thermostats/climate_setting_schedules/get",
+            params,
+          }
+        ),
+      create: (data: ClimateSettingScheduleCreateRequest) =>
+        this.makeRequestAndFormat<ClimateSettingScheduleCreateResponse>(
+          "climate_setting_schedule",
+          {
+            url: "/thermostats/climate_setting_schedules/create",
+            method: "POST",
+            data,
+          }
+        ),
+      update: (params: ClimateSettingScheduleUpdateRequest) =>
+        this.makeRequestAndFormat<ClimateSettingScheduleUpdateResponse>(
+          "climate_setting_schedule",
+          {
+            url: "/thermostats/climate_setting_schedules/update",
+            method: "POST",
+            data: params,
+          }
+        ),
+      delete: (params: ClimateSettingScheduleDeleteRequest) =>
+        this.makeRequest({
+          url: `/thermostats/climate_setting_schedules/delete`,
+          method: "DELETE",
+          params,
+        }),
+    },
   }
 }

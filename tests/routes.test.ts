@@ -93,6 +93,7 @@ test(
   {
     args: (seed) => [seed.devices.schlageLock.id1],
     modifiesState: true,
+    load_devices_from: ["schlage"],
   },
   "{}"
 )
@@ -101,6 +102,7 @@ test(
   {
     args: (seed) => [seed.devices.schlageLock.id1],
     modifiesState: true,
+    load_devices_from: ["schlage"],
   },
   "{}"
 )
@@ -143,6 +145,7 @@ test(
       },
     ],
     modifiesState: true,
+    load_devices_from: ["schlage"],
   },
   "{}"
 )
@@ -152,6 +155,7 @@ test(
   {
     args: (seed) => [{ device_id: seed.devices.schlageLock.id1 }],
     modifiesState: true,
+    load_devices_from: ["schlage"],
   },
   "{}"
 )
@@ -187,6 +191,7 @@ test(
         accepted_providers: ["august"],
       },
     ],
+    load_devices_from: [],
     modifiesState: true,
   },
   "ConnectWebview"
@@ -199,6 +204,7 @@ test(
         connect_webview_id: seed.connectWebviewId,
       },
     ],
+    load_devices_from: [],
     modifiesState: true,
   },
   "{}"
@@ -222,6 +228,7 @@ test(
         code: "4321",
       },
     ],
+    load_devices_from: ["schlage"],
     modifiesState: true,
   },
   "AccessCode"
@@ -235,6 +242,7 @@ test(
         name: "Created by Ava",
       },
     ],
+    load_devices_from: ["schlage"],
     modifiesState: true,
   },
   "AccessCode[]"
@@ -276,6 +284,7 @@ test(
         ends_at: new Date(Date.now() + 1000 * 60 * 60),
       },
     ],
+    load_devices_from: ["schlage"],
     modifiesState: true,
   },
   "TimeBoundAccessCode"
@@ -293,6 +302,7 @@ test(
         ends_at: new Date(Date.now() + 1000 * 60 * 60),
       },
     ],
+    load_devices_from: ["august"],
     modifiesState: true,
   },
   "AccessCode"
@@ -302,10 +312,11 @@ test(
   {
     args: (seed) => [
       {
-        access_code_id: seed.devices.augustLock.accessCode.access_code_id,
+        access_code_id: seed.devices.schlageLock.accessCode.access_code_id,
         name: "new name",
       },
     ],
+    load_devices_from: ["schlage"],
     modifiesState: true,
   },
   "AccessCode"
@@ -316,10 +327,11 @@ test(
   {
     args: (seed) => [
       {
-        access_code_id: seed.devices.augustLock.accessCode.access_code_id,
+        access_code_id: seed.devices.schlageLock.accessCode.access_code_id,
         type: "ongoing",
       },
     ],
+    load_devices_from: ["schlage"],
     modifiesState: true,
   },
   "OngoingAccessCode"
@@ -357,6 +369,126 @@ test(
         connected_account_id: seed.devices.augustLock.connectedAccountId,
       },
     ],
+    load_devices_from: ["august"],
+    modifiesState: true,
+  },
+  "{}"
+)
+
+// Thermostats
+test(
+  testAPIMethod("thermostats.get"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+      },
+    ],
+  },
+  "AnyDevice"
+)
+test(
+  testAPIMethod("thermostats.list"),
+  {
+    args: (seed) => [
+      {
+        connected_account_id: seed.devices.nest.connectedAccountId,
+      },
+    ],
+  },
+  "AnyDevice[]"
+)
+test(
+  testAPIMethod("thermostats.update"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+        default_climate_setting: {
+          automatic_heating_enabled: true,
+          heating_set_point_celsius: 20,
+        },
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
+  testAPIMethod("thermostats.delete"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
+  testAPIMethod("thermostats.climateSettingSchedules.get"),
+  {
+    args: (seed) => [
+      {
+        climate_setting_schedule_id:
+          seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
+        device_id: seed.devices.nest.id1,
+      },
+    ],
+  },
+  "ClimateSettingSchedule"
+)
+test(
+  testAPIMethod("thermostats.climateSettingSchedules.create"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+        name: "Vacation Setting",
+        schedule_starts_at: new Date().toUTCString(),
+        schedule_ends_at: new Date(
+          Date.now() + 1000 * 60 * 60 * 24 * 7
+        ).toUTCString(),
+        schedule_type: "time_bound",
+        automatic_heating_enabled: true,
+        automatic_cooling_enabled: true,
+        heating_set_point_fahrenheit: 40,
+        cooling_set_point_fahrenheit: 80,
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "ClimateSettingSchedule"
+)
+test(
+  testAPIMethod("thermostats.climateSettingSchedules.update"),
+  {
+    args: (seed) => [
+      {
+        climate_setting_schedule_id:
+          seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
+        name: "Vacation Setting 2",
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "ClimateSettingSchedule"
+)
+test(
+  testAPIMethod("thermostats.climateSettingSchedules.delete"),
+  {
+    args: (seed) => [
+      {
+        climate_setting_schedule_id:
+          seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
+      },
+    ],
+    load_devices_from: ["nest"],
     modifiesState: true,
   },
   "{}"
@@ -365,11 +497,11 @@ test(
 // Client Sessions
 test(
   testAPIMethod("clientSessions.create"),
-  { modifiesState: true },
+  { modifiesState: true, load_devices_from: [] },
   "ClientSession"
 )
 test(
   testAPIMethod("clientSessions.getOrCreate"),
-  { modifiesState: true },
+  { modifiesState: true, load_devices_from: [] },
   "ClientSession"
 )
