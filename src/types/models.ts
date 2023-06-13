@@ -79,6 +79,9 @@ export type BatteryStatus = "critical" | "low" | "good" | "full"
 
 export type CommonDeviceProperties = {
   name: string
+  model: {
+    display_name: string
+  }
   online: boolean
   battery?: {
     level: number
