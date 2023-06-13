@@ -112,6 +112,7 @@
 - [ClientSessionsCreateRequest](modules.md#clientsessionscreaterequest)
 - [ClientSessionsGetOrCreateRequest](modules.md#clientsessionsgetorcreaterequest)
 - [ClientSessionsResponse](modules.md#clientsessionsresponse)
+- [CommonDevice](modules.md#commondevice)
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
 - [CustomMetadata](modules.md#custommetadata)
 - [DeviceDeleteRequest](modules.md#devicedeleterequest)
@@ -125,6 +126,9 @@
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
+- [NoiseSensorDevice](modules.md#noisesensordevice)
+- [NoiseSensorDeviceProperties](modules.md#noisesensordeviceproperties)
+- [NoiseSensorDeviceType](modules.md#noisesensordevicetype)
 - [NoiseThresholds](modules.md#noisethresholds)
 - [NoiseThresholdsCreateRequest](modules.md#noisethresholdscreaterequest)
 - [NoiseThresholdsDeleteRequest](modules.md#noisethresholdsdeleterequest)
@@ -150,12 +154,15 @@
 
 - [LOCK\_DEVICE\_TYPES](modules.md#lock_device_types)
 - [NOISE\_DETECTION\_DEVICE\_TYPES](modules.md#noise_detection_device_types)
+- [NOISE\_SENSOR\_DEVICE\_TYPES](modules.md#noise_sensor_device_types)
 - [PROVIDERS](modules.md#providers)
 
 ### Functions
 
 - [getSeamClientOptionsWithDefaults](modules.md#getseamclientoptionswithdefaults)
 - [getSeamOSClientOptionsWithDefaults](modules.md#getseamosclientoptionswithdefaults)
+- [isLockDevice](modules.md#islockdevice)
+- [isNoiseSensorDevice](modules.md#isnoisesensordevice)
 
 ## References
 
@@ -187,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:295](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L295)
+[src/types/models.ts:320](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L320)
 
 ___
 
@@ -197,7 +204,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:142](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L142)
+[src/types/models.ts:148](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L148)
 
 ___
 
@@ -332,7 +339,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:242](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L242)
+[src/types/models.ts:267](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L267)
 
 ___
 
@@ -342,7 +349,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:197](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L197)
+[src/types/models.ts:222](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L222)
 
 ___
 
@@ -350,9 +357,11 @@ ___
 
 Ƭ **AnyDevice**: [`Device`](interfaces/Device.md)<`any`, [`DeviceType`](modules.md#devicetype)\>
 
+**`deprecated`** use CommonDevice instead
+
 #### Defined in
 
-[src/types/models.ts:194](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L194)
+[src/types/models.ts:201](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L201)
 
 ___
 
@@ -362,7 +371,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L72)
+[src/types/models.ts:78](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L78)
 
 ___
 
@@ -410,6 +419,16 @@ ___
 
 ___
 
+### CommonDevice
+
+Ƭ **CommonDevice**: [`Device`](interfaces/Device.md)<[`CommonDeviceProperties`](modules.md#commondeviceproperties), [`DeviceType`](modules.md#devicetype)\>
+
+#### Defined in
+
+[src/types/models.ts:203](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L203)
+
+___
+
 ### CommonDeviceProperties
 
 Ƭ **CommonDeviceProperties**: `Object`
@@ -428,7 +447,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:74](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L74)
+[src/types/models.ts:80](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L80)
 
 ___
 
@@ -481,7 +500,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:85](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L85)
+[src/types/models.ts:91](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L91)
 
 ___
 
@@ -522,11 +541,11 @@ ___
 
 ### DeviceType
 
-Ƭ **DeviceType**: [`LockDeviceType`](modules.md#lockdevicetype) \| [`NoiseDetectionDeviceType`](modules.md#noisedetectiondevicetype)
+Ƭ **DeviceType**: [`LockDeviceType`](modules.md#lockdevicetype) \| [`NoiseSensorDeviceType`](modules.md#noisesensordevicetype)
 
 #### Defined in
 
-[src/types/models.ts:37](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L37)
+[src/types/models.ts:38](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L38)
 
 ___
 
@@ -556,7 +575,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:346](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L346)
+[src/types/models.ts:371](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L371)
 
 ___
 
@@ -566,7 +585,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:195](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L195)
+[src/types/models.ts:204](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L204)
 
 ___
 
@@ -582,7 +601,39 @@ ___
 
 ### NoiseDetectionDeviceType
 
-Ƭ **NoiseDetectionDeviceType**: typeof [`NOISE_DETECTION_DEVICE_TYPES`](modules.md#noise_detection_device_types)[`number`]
+Ƭ **NoiseDetectionDeviceType**: [`NoiseSensorDeviceType`](modules.md#noisesensordevicetype)
+
+**`deprecated`** use NoiseSensorDeviceType instead
+
+#### Defined in
+
+[src/types/models.ts:43](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L43)
+
+___
+
+### NoiseSensorDevice
+
+Ƭ **NoiseSensorDevice**: [`Device`](interfaces/Device.md)<[`NoiseSensorDeviceProperties`](modules.md#noisesensordeviceproperties), [`NoiseSensorDeviceType`](modules.md#noisesensordevicetype)\>
+
+#### Defined in
+
+[src/types/models.ts:205](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L205)
+
+___
+
+### NoiseSensorDeviceProperties
+
+Ƭ **NoiseSensorDeviceProperties**: [`CommonDeviceProperties`](modules.md#commondeviceproperties)
+
+#### Defined in
+
+[src/types/models.ts:36](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L36)
+
+___
+
+### NoiseSensorDeviceType
+
+Ƭ **NoiseSensorDeviceType**: typeof [`NOISE_SENSOR_DEVICE_TYPES`](modules.md#noise_sensor_device_types)[`number`]
 
 #### Defined in
 
@@ -608,7 +659,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:354](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L354)
+[src/types/models.ts:379](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L379)
 
 ___
 
@@ -710,7 +761,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:57](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L57)
+[src/types/models.ts:63](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L63)
 
 ___
 
@@ -722,7 +773,7 @@ This type can allow for other provider categories as they are added
 
 #### Defined in
 
-[src/types/models.ts:60](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L60)
+[src/types/models.ts:66](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L66)
 
 ___
 
@@ -758,7 +809,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:311](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L311)
+[src/types/models.ts:336](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L336)
 
 ___
 
@@ -852,7 +903,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:106](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L106)
+[src/types/models.ts:112](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L112)
 
 ___
 
@@ -917,7 +968,19 @@ ___
 
 ### NOISE\_DETECTION\_DEVICE\_TYPES
 
-• `Const` **NOISE\_DETECTION\_DEVICE\_TYPES**: `string`[]
+• `Const` **NOISE\_DETECTION\_DEVICE\_TYPES**: `string`[] = `NOISE_SENSOR_DEVICE_TYPES`
+
+**`deprecated`** use NOISE_SENSOR_DEVICE_TYPES instead
+
+#### Defined in
+
+[src/types/models.ts:41](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L41)
+
+___
+
+### NOISE\_SENSOR\_DEVICE\_TYPES
+
+• `Const` **NOISE\_SENSOR\_DEVICE\_TYPES**: `string`[]
 
 #### Defined in
 
@@ -931,7 +994,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:39](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L39)
+[src/types/models.ts:45](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L45)
 
 ## Functions
 
@@ -972,3 +1035,43 @@ ___
 #### Defined in
 
 [src/seam-os/client.ts:24](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L24)
+
+___
+
+### isLockDevice
+
+▸ **isLockDevice**(`device`): device is LockDevice
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `device` | [`LockDevice`](modules.md#lockdevice) \| [`CommonDevice`](modules.md#commondevice) |
+
+#### Returns
+
+device is LockDevice
+
+#### Defined in
+
+[src/types/models.ts:210](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L210)
+
+___
+
+### isNoiseSensorDevice
+
+▸ **isNoiseSensorDevice**(`device`): device is NoiseSensorDevice
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `device` | [`CommonDevice`](modules.md#commondevice) \| [`NoiseSensorDevice`](modules.md#noisesensordevice) |
+
+#### Returns
+
+device is NoiseSensorDevice
+
+#### Defined in
+
+[src/types/models.ts:216](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L216)

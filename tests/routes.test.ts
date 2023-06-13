@@ -106,7 +106,7 @@ test(
 )
 
 // Devices
-test(testAPIMethod("devices.list"), {}, "AnyDevice[]")
+test(testAPIMethod("devices.list"), {}, "CommonDevice[]")
 test(
   "with connected account ID",
   testAPIMethod("devices.list"),
@@ -115,7 +115,7 @@ test(
       { connected_account_id: seed.devices.schlageLock.connectedAccountId },
     ],
   },
-  "AnyDevice[]"
+  "CommonDevice[]"
 )
 test(
   "by ID",
@@ -123,7 +123,7 @@ test(
   {
     args: (seed) => [{ device_id: seed.devices.schlageLock.id1 }],
   },
-  "AnyDevice"
+  "CommonDevice"
 )
 test(
   "by name",
@@ -131,7 +131,7 @@ test(
   {
     args: (seed) => [{ name: seed.devices.schlageLock.name1 }],
   },
-  "AnyDevice"
+  "CommonDevice"
 )
 test(
   testAPIMethod("devices.update"),
