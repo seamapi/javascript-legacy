@@ -196,6 +196,12 @@ export type CommonDevice = Device<CommonDeviceProperties, DeviceType>
 
 export type LockDevice = Device<LockProperties, LockDeviceType>
 
+export const isLockDevice = (
+  device: CommonDevice | LockDevice
+): device is LockDevice => {
+  return LOCK_DEVICE_TYPES.includes(device.device_type)
+}
+
 export type ActionType =
   | "LOCK_DOOR"
   | "UNLOCK_DOOR"
