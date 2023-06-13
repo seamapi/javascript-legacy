@@ -24,6 +24,7 @@
 - [locked](LockProperties.md#locked)
 - [manufacturer](LockProperties.md#manufacturer)
 - [max\_active\_codes\_supported](LockProperties.md#max_active_codes_supported)
+- [model](LockProperties.md#model)
 - [name](LockProperties.md#name)
 - [nuki\_metadata](LockProperties.md#nuki_metadata)
 - [online](LockProperties.md#online)
@@ -53,7 +54,7 @@
 
 #### Defined in
 
-[src/types/models.ts:172](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L172)
+[src/types/models.ts:175](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L175)
 
 ___
 
@@ -74,7 +75,7 @@ CommonDeviceProperties.battery
 
 #### Defined in
 
-[src/types/models.ts:77](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L77)
+[src/types/models.ts:80](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L80)
 
 ___
 
@@ -84,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:153](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L153)
+[src/types/models.ts:156](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L156)
 
 ___
 
@@ -94,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L161)
+[src/types/models.ts:164](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L164)
 
 ___
 
@@ -104,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:152](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L152)
+[src/types/models.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L155)
 
 ___
 
@@ -114,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:157](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L157)
+[src/types/models.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L160)
 
 ___
 
@@ -128,7 +129,7 @@ CommonDeviceProperties.image\_alt\_text
 
 #### Defined in
 
-[src/types/models.ts:82](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L82)
+[src/types/models.ts:85](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L85)
 
 ___
 
@@ -142,7 +143,7 @@ CommonDeviceProperties.image\_url
 
 #### Defined in
 
-[src/types/models.ts:81](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L81)
+[src/types/models.ts:84](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L84)
 
 ___
 
@@ -158,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L154)
+[src/types/models.ts:157](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L157)
 
 ___
 
@@ -168,7 +169,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:151](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L151)
+[src/types/models.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L154)
 
 ___
 
@@ -178,7 +179,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:158](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L158)
+[src/types/models.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L161)
 
 ___
 
@@ -188,7 +189,27 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L160)
+[src/types/models.ts:163](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L163)
+
+___
+
+### model
+
+• **model**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `display_name` | `string` |
+
+#### Inherited from
+
+CommonDeviceProperties.model
+
+#### Defined in
+
+[src/types/models.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L76)
 
 ___
 
@@ -218,7 +239,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:182](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L182)
+[src/types/models.ts:185](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L185)
 
 ___
 
@@ -232,7 +253,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L76)
+[src/types/models.ts:79](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L79)
 
 ___
 
@@ -252,7 +273,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:164](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L164)
+[src/types/models.ts:167](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L167)
 
 ___
 
@@ -262,7 +283,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
+[src/types/models.ts:165](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L165)
 
 ___
 
@@ -272,7 +293,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:186](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L186)
+[src/types/models.ts:189](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L189)
 
 ___
 
@@ -282,7 +303,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:159](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L159)
+[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
 
 ___
 
@@ -299,4 +320,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:188](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L188)
+[src/types/models.ts:191](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L191)
