@@ -33,11 +33,6 @@ jobs:
     env:
       SEAM_CONNECT_IMAGE: ghcr.io/seamapi/seam-connect:${{ github.event.inputs.connectSha || 'latest' }}
       RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-    strategy:
-      fail-fast: false
-      matrix:
-        node: [0, 1]
-        total_nodes: [2]
     steps:
       - uses: Sibz/github-status-action@v1
         if: ${{ github.event.inputs.connectSha }}
@@ -75,8 +70,6 @@ jobs:
         id: test
         env:
           SEAM_CONNECT_IMAGE: ${{ env.SEAM_CONNECT_IMAGE }}
-          CI_NODE_INDEX: ${{ matrix.node }}
-          CI_NODE_TOTAL: ${{ matrix.total_nodes }}
 
       - uses: Sibz/github-status-action@v1
         if: ${{ github.event.inputs.connectSha && always() }}
