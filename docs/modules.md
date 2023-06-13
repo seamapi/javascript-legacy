@@ -461,7 +461,7 @@ ___
 
 ### ClimateSettingSchedule
 
-Ƭ **ClimateSettingSchedule**: [`ClimateSettingScheduleBase`](modules.md#climatesettingschedulebase) & { `climate_setting_schedule_id`: `string` ; `created_at`: `string`  }
+Ƭ **ClimateSettingSchedule**: [`ClimateSettingScheduleBase`](modules.md#climatesettingschedulebase) & { `climate_setting_schedule_id`: `string` ; `created_at`: `string` ; `is_set_on_device`: `boolean`  }
 
 #### Defined in
 

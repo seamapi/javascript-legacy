@@ -431,5 +431,6 @@ export type ClimateSettingScheduleBase = Partial<ClimateSetting> & {
 
 export type ClimateSettingSchedule = ClimateSettingScheduleBase & {
   climate_setting_schedule_id: string
+  is_set_on_device: boolean
   created_at: string
 }
