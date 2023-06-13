@@ -36,8 +36,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [0, 1, 2]
-        total_nodes: [3]
+        node: [0, 1]
+        total_nodes: [2]
     steps:
       - uses: Sibz/github-status-action@v1
         if: ${{ github.event.inputs.connectSha }}
