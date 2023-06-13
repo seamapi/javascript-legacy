@@ -27,14 +27,20 @@ export const LOCK_DEVICE_TYPES = [
 ]
 export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
 
-export const NOISE_DETECTION_DEVICE_TYPES = [
+export const NOISE_SENSOR_DEVICE_TYPES = [
   "noiseaware_activity_zone",
   "minut_sensor",
 ]
-export type NoiseDetectionDeviceType =
-  typeof NOISE_DETECTION_DEVICE_TYPES[number]
+export type NoiseSensorDeviceType = typeof NOISE_SENSOR_DEVICE_TYPES[number]
 
-export type DeviceType = LockDeviceType | NoiseDetectionDeviceType
+export type NoiseSensorDeviceProperties = CommonDeviceProperties
+
+export type DeviceType = LockDeviceType | NoiseSensorDeviceType
+
+/** @deprecated use NOISE_SENSOR_DEVICE_TYPES instead */
+export const NOISE_DETECTION_DEVICE_TYPES = NOISE_SENSOR_DEVICE_TYPES
+/** @deprecated use NoiseSensorDeviceType instead */
+export type NoiseDetectionDeviceType = NoiseSensorDeviceType
 
 export const PROVIDERS = [
   "akuvox",
@@ -194,8 +200,27 @@ export interface LockProperties extends CommonDeviceProperties {
   }
 }
 
+/** @deprecated use CommonDevice instead */
 export type AnyDevice = Device<any, DeviceType>
+
+export type CommonDevice = Device<CommonDeviceProperties, DeviceType>
 export type LockDevice = Device<LockProperties, LockDeviceType>
+export type NoiseSensorDevice = Device<
+  NoiseSensorDeviceProperties,
+  NoiseSensorDeviceType
+>
+
+export const isLockDevice = (
+  device: CommonDevice | LockDevice
+): device is LockDevice => {
+  return LOCK_DEVICE_TYPES.includes(device.device_type)
+}
+
+export const isNoiseSensorDevice = (
+  device: CommonDevice | NoiseSensorDevice
+): device is NoiseSensorDevice => {
+  return NOISE_SENSOR_DEVICE_TYPES.includes(device.device_type)
+}
 
 export type ActionType =
   | "LOCK_DOOR"
