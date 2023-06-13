@@ -192,6 +192,8 @@ export interface LockProperties extends CommonDeviceProperties {
 }
 
 export type AnyDevice = Device<any, DeviceType>
+export type CommonDevice = Device<CommonDeviceProperties, DeviceType>
+
 export type LockDevice = Device<LockProperties, LockDeviceType>
 
 export type ActionType =
