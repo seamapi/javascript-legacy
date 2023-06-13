@@ -58,6 +58,7 @@ export const getServer = async (
   load_devices_from: ("minut" | "schlage" | "august" | "nest")[] = [
     "august",
     "schlage",
+    "nest",
   ]
 ) => {
   const message = serverWorker.publish(

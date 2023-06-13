@@ -103,9 +103,7 @@ const startAndSeedServer = async (
 
   const connectWebview = await axios.post("/connect_webviews/create", {
     // TODO: remove filter when minut is ready
-    accepted_providers: load_devices_from.filter(
-      (provider) => provider !== "minut" && provider !== "nest"
-    ),
+    accepted_providers: ["schlage", "august"],
   })
 
   const devices: {
@@ -119,7 +117,7 @@ const startAndSeedServer = async (
     devices["schlageLock"] = await addFakeSchlageDevices(axios)
   }
 
-  if (load_devices_from.includes("schlage")) {
+  if (load_devices_from.includes("august")) {
     devices["augustLock"] = await addFakeAugustDevices(axios)
   }
 

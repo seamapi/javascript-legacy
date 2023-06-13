@@ -59,6 +59,7 @@ export const PROVIDERS = [
   "yale",
   "minut",
   "ttlock",
+  "nest",
 ]
 export type Provider = typeof PROVIDERS[number]
 
