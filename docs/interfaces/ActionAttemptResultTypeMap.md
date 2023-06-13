@@ -36,7 +36,7 @@ Record.CREATE\_ACCESS\_CODE
 
 #### Defined in
 
-[src/types/models.ts:242](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L242)
+[src/types/models.ts:251](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L251)
 
 ___
 
@@ -86,4 +86,4 @@ Record.UPDATE\_ACCESS\_CODE
 
 #### Defined in
 
-[src/types/models.ts:243](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L243)
+[src/types/models.ts:252](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L252)
