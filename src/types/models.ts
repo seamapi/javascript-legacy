@@ -211,6 +211,12 @@ export const isLockDevice = (
   return LOCK_DEVICE_TYPES.includes(device.device_type)
 }
 
+export const isNoiseSensorDevice = (
+  device: CommonDevice | NoiseSensorDevice
+): device is NoiseSensorDevice => {
+  return NOISE_SENSOR_DEVICE_TYPES.includes(device.device_type)
+}
+
 export type ActionType =
   | "LOCK_DOOR"
   | "UNLOCK_DOOR"
