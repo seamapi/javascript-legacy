@@ -914,7 +914,7 @@ ___
 
 #### Defined in
 
-[src/types/webhook-events.ts:10](https://github.com/seamapi/javascript/blob/main/src/types/webhook-events.ts#L10)
+[src/types/webhook-events.ts:9](https://github.com/seamapi/javascript/blob/main/src/types/webhook-events.ts#L9)
 
 ___
 
