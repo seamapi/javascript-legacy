@@ -86,6 +86,7 @@ export type BatteryStatus = "critical" | "low" | "good" | "full"
 
 export type CommonDeviceProperties = {
   name: string
+  manufacturer?: string
   model: {
     display_name: string
   }
@@ -134,9 +135,8 @@ export type UnmanagedDevice = Pick<
 
 type UnmanagedDeviceProperties = Pick<
   CommonDeviceProperties,
-  "name" | "image_url" | "image_alt_text" | "online"
-> &
-  Pick<LockProperties, "manufacturer">
+  "name" | "image_url" | "image_alt_text" | "online" | "manufacturer"
+>
 
 export interface DeviceProvider {
   device_provider_name: string
@@ -171,7 +171,6 @@ export interface LockProperties extends CommonDeviceProperties {
     level: number
   }
   has_direct_power?: boolean
-  manufacturer?: string
   supported_code_lengths?: number[]
   max_active_codes_supported?: number
   code_constraints?: AccessCodeConstraint[]
