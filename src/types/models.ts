@@ -134,7 +134,7 @@ export type UnmanagedDevice = Pick<
 
 type UnmanagedDeviceProperties = Pick<
   CommonDeviceProperties,
-  "name" | "image_url" | "image_alt_text"
+  "name" | "image_url" | "image_alt_text" | "online"
 > &
   Pick<LockProperties, "manufacturer">
 
