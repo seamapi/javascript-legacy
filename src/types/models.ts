@@ -118,6 +118,7 @@ export interface Device<
   errors: SeamError[]
   warnings: SeamWarning[]
   created_at: string
+  is_managed: true
 }
 
 export type UnmanagedDevice = Pick<
@@ -130,6 +131,7 @@ export type UnmanagedDevice = Pick<
   | "warnings"
   | "created_at"
 > & {
+  is_managed: false
   properties: UnmanagedDeviceProperties
 }
 
