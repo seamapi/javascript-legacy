@@ -19,6 +19,7 @@
 - [device\_id](TimeBoundAccessCode.md#device_id)
 - [ends\_at](TimeBoundAccessCode.md#ends_at)
 - [errors](TimeBoundAccessCode.md#errors)
+- [is\_scheduled\_on\_device](TimeBoundAccessCode.md#is_scheduled_on_device)
 - [is\_waiting\_for\_code\_assignment](TimeBoundAccessCode.md#is_waiting_for_code_assignment)
 - [name](TimeBoundAccessCode.md#name)
 - [starts\_at](TimeBoundAccessCode.md#starts_at)
@@ -100,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:328](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L328)
+[src/types/models.ts:329](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L329)
 
 ___
 
@@ -115,6 +116,16 @@ ___
 #### Defined in
 
 [src/types/models.ts:308](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L308)
+
+___
+
+### is\_scheduled\_on\_device
+
+• `Optional` **is\_scheduled\_on\_device**: `boolean`
+
+#### Defined in
+
+[src/types/models.ts:327](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L327)
 
 ___
 
@@ -152,7 +163,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:327](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L327)
+[src/types/models.ts:328](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L328)
 
 ___
 
