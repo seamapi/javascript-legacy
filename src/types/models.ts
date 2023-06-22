@@ -137,7 +137,7 @@ export type UnmanagedDevice = Pick<
 
 type UnmanagedDeviceProperties = Pick<
   CommonDeviceProperties,
-  "name" | "image_url" | "image_alt_text" | "online" | "manufacturer"
+  "name" | "image_url" | "image_alt_text" | "online" | "manufacturer" | "model"
 >
 
 export interface DeviceProvider {
