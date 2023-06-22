@@ -19,6 +19,7 @@
 - [device\_id](Device.md#device_id)
 - [device\_type](Device.md#device_type)
 - [errors](Device.md#errors)
+- [is\_managed](Device.md#is_managed)
 - [location](Device.md#location)
 - [properties](Device.md#properties)
 - [warnings](Device.md#warnings)
@@ -83,6 +84,16 @@ ___
 #### Defined in
 
 [src/types/models.ts:118](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L118)
+
+___
+
+### is\_managed
+
+• **is\_managed**: ``true``
+
+#### Defined in
+
+[src/types/models.ts:121](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L121)
 
 ___
 
