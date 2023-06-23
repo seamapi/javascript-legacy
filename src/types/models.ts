@@ -324,6 +324,7 @@ export interface TimeBoundAccessCode extends ManagedAccessCodeBase {
   type: "time_bound"
   created_at: string
   status: "setting" | "set" | "removing" | "unset"
+  is_scheduled_on_device?: boolean
   starts_at: string
   ends_at: string
 }
