@@ -498,11 +498,23 @@ export abstract class Routes {
   }
 
   public readonly deviceModels = {
-    list: (params?: DeviceModelsListRequest) =>
-      this.makeRequestAndFormat<DeviceModelsListResponse>("device_models", {
-        url: "/internal/device_models/list",
-        params,
-      }),
+    list: ({
+      acknowledge_intentional_use_of_internal_api = false,
+      ...params
+    }: DeviceModelsListRequest & {
+      acknowledge_intentional_use_of_internal_api?: boolean
+    } = {}) => {
+      if (acknowledge_intentional_use_of_internal_api !== true) {
+        throw new Error("This is an internal endpoint and should not be used.")
+      }
+      return this.makeRequestAndFormat<DeviceModelsListResponse>(
+        "device_models",
+        {
+          url: "/internal/device_models/list",
+          params,
+        }
+      )
+    },
   }
 
   public readonly thermostats = {
