@@ -18,8 +18,11 @@
 - [created\_at](OngoingAccessCode.md#created_at)
 - [device\_id](OngoingAccessCode.md#device_id)
 - [errors](OngoingAccessCode.md#errors)
+- [is\_backup](OngoingAccessCode.md#is_backup)
+- [is\_backup\_access\_code\_available](OngoingAccessCode.md#is_backup_access_code_available)
 - [is\_waiting\_for\_code\_assignment](OngoingAccessCode.md#is_waiting_for_code_assignment)
 - [name](OngoingAccessCode.md#name)
+- [pulled\_backup\_access\_code\_id](OngoingAccessCode.md#pulled_backup_access_code_id)
 - [status](OngoingAccessCode.md#status)
 - [type](OngoingAccessCode.md#type)
 - [warnings](OngoingAccessCode.md#warnings)
@@ -64,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:313](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L313)
+[src/types/models.ts:316](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L316)
 
 ___
 
@@ -74,7 +77,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:319](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L319)
+[src/types/models.ts:322](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L322)
 
 ___
 
@@ -102,7 +105,35 @@ ___
 
 #### Defined in
 
+[src/types/models.ts:311](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L311)
+
+___
+
+### is\_backup
+
+• `Optional` **is\_backup**: `boolean`
+
+#### Inherited from
+
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[is_backup](ManagedAccessCodeBase.md#is_backup)
+
+#### Defined in
+
 [src/types/models.ts:308](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L308)
+
+___
+
+### is\_backup\_access\_code\_available
+
+• **is\_backup\_access\_code\_available**: `boolean`
+
+#### Inherited from
+
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[is_backup_access_code_available](ManagedAccessCodeBase.md#is_backup_access_code_available)
+
+#### Defined in
+
+[src/types/models.ts:310](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L310)
 
 ___
 
@@ -116,7 +147,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:314](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L314)
+[src/types/models.ts:317](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L317)
 
 ___
 
@@ -134,13 +165,27 @@ ___
 
 ___
 
+### pulled\_backup\_access\_code\_id
+
+• `Optional` **pulled\_backup\_access\_code\_id**: ``null`` \| `string`
+
+#### Inherited from
+
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[pulled_backup_access_code_id](ManagedAccessCodeBase.md#pulled_backup_access_code_id)
+
+#### Defined in
+
+[src/types/models.ts:309](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L309)
+
+___
+
 ### status
 
 • **status**: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"``
 
 #### Defined in
 
-[src/types/models.ts:320](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L320)
+[src/types/models.ts:323](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L323)
 
 ___
 
@@ -150,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:318](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L318)
+[src/types/models.ts:321](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L321)
 
 ___
 
@@ -164,4 +209,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:309](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L309)
+[src/types/models.ts:312](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L312)

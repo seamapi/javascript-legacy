@@ -18,7 +18,10 @@
 - [code](AccessCodeBase.md#code)
 - [device\_id](AccessCodeBase.md#device_id)
 - [errors](AccessCodeBase.md#errors)
+- [is\_backup](AccessCodeBase.md#is_backup)
+- [is\_backup\_access\_code\_available](AccessCodeBase.md#is_backup_access_code_available)
 - [name](AccessCodeBase.md#name)
+- [pulled\_backup\_access\_code\_id](AccessCodeBase.md#pulled_backup_access_code_id)
 - [warnings](AccessCodeBase.md#warnings)
 
 ## Properties
@@ -59,7 +62,27 @@ ___
 
 #### Defined in
 
+[src/types/models.ts:311](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L311)
+
+___
+
+### is\_backup
+
+• `Optional` **is\_backup**: `boolean`
+
+#### Defined in
+
 [src/types/models.ts:308](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L308)
+
+___
+
+### is\_backup\_access\_code\_available
+
+• **is\_backup\_access\_code\_available**: `boolean`
+
+#### Defined in
+
+[src/types/models.ts:310](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L310)
 
 ___
 
@@ -73,10 +96,20 @@ ___
 
 ___
 
+### pulled\_backup\_access\_code\_id
+
+• `Optional` **pulled\_backup\_access\_code\_id**: ``null`` \| `string`
+
+#### Defined in
+
+[src/types/models.ts:309](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L309)
+
+___
+
 ### warnings
 
 • `Optional` **warnings**: [`SeamWarning`](SeamWarning.md)[]
 
 #### Defined in
 
-[src/types/models.ts:309](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L309)
+[src/types/models.ts:312](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L312)

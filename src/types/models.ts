@@ -305,6 +305,9 @@ export interface AccessCodeBase {
   device_id: string
   name?: string
   code: string | null
+  is_backup?: boolean
+  pulled_backup_access_code_id?: string | null
+  is_backup_access_code_available: boolean
   errors?: SeamError[]
   warnings?: SeamWarning[]
 }
