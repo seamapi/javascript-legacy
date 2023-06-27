@@ -193,7 +193,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `list` | (`params?`: [`DeviceModelsListRequest`](../modules.md#devicemodelslistrequest)) => `Promise`<[`DeviceModel`](../interfaces/DeviceModel.md)[]\> |
+| `list` | (`__namedParameters`: [`DeviceModelsListRequest`](../modules.md#devicemodelslistrequest) & { `acknowledge_intentional_use_of_internal_api?`: `boolean`  }) => `Promise`<[`DeviceModel`](../interfaces/DeviceModel.md)[]\> |
 
 #### Inherited from
 
@@ -323,7 +323,7 @@ Routes.thermostats
 
 #### Defined in
 
-[src/seam-connect/routes.ts:508](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L508)
+[src/seam-connect/routes.ts:520](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L520)
 
 ___
 
