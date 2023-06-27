@@ -21,8 +21,11 @@
 - [common\_code\_key](ManagedAccessCodeBase.md#common_code_key)
 - [device\_id](ManagedAccessCodeBase.md#device_id)
 - [errors](ManagedAccessCodeBase.md#errors)
+- [is\_backup](ManagedAccessCodeBase.md#is_backup)
+- [is\_backup\_access\_code\_available](ManagedAccessCodeBase.md#is_backup_access_code_available)
 - [is\_waiting\_for\_code\_assignment](ManagedAccessCodeBase.md#is_waiting_for_code_assignment)
 - [name](ManagedAccessCodeBase.md#name)
+- [pulled\_backup\_access\_code\_id](ManagedAccessCodeBase.md#pulled_backup_access_code_id)
 - [warnings](ManagedAccessCodeBase.md#warnings)
 
 ## Properties
@@ -61,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:313](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L313)
+[src/types/models.ts:316](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L316)
 
 ___
 
@@ -89,7 +92,35 @@ ___
 
 #### Defined in
 
+[src/types/models.ts:311](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L311)
+
+___
+
+### is\_backup
+
+• `Optional` **is\_backup**: `boolean`
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[is_backup](AccessCodeBase.md#is_backup)
+
+#### Defined in
+
 [src/types/models.ts:308](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L308)
+
+___
+
+### is\_backup\_access\_code\_available
+
+• **is\_backup\_access\_code\_available**: `boolean`
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[is_backup_access_code_available](AccessCodeBase.md#is_backup_access_code_available)
+
+#### Defined in
+
+[src/types/models.ts:310](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L310)
 
 ___
 
@@ -99,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:314](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L314)
+[src/types/models.ts:317](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L317)
 
 ___
 
@@ -117,6 +148,20 @@ ___
 
 ___
 
+### pulled\_backup\_access\_code\_id
+
+• `Optional` **pulled\_backup\_access\_code\_id**: ``null`` \| `string`
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[pulled_backup_access_code_id](AccessCodeBase.md#pulled_backup_access_code_id)
+
+#### Defined in
+
+[src/types/models.ts:309](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L309)
+
+___
+
 ### warnings
 
 • `Optional` **warnings**: [`SeamWarning`](SeamWarning.md)[]
@@ -127,4 +172,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:309](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L309)
+[src/types/models.ts:312](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L312)

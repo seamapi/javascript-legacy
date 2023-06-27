@@ -52,6 +52,7 @@ import {
   ClimateSettingScheduleCreateRequest,
   ClimateSettingScheduleDeleteRequest,
   ClimateSettingScheduleUpdateRequest,
+  PullBackupAccessCodeRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -88,6 +89,7 @@ import {
   ClimateSettingScheduleGetResponse,
   ClimateSettingScheduleCreateResponse,
   ClimateSettingScheduleUpdateResponse,
+  PullBackupAccessCodeResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -389,6 +391,16 @@ export abstract class Routes {
         method: "POST",
         data: params,
       }),
+
+    pullBackupAccessCode: (params: PullBackupAccessCodeRequest) =>
+      this.makeRequestAndFormat<PullBackupAccessCodeResponse>(
+        "backup_access_code",
+        {
+          url: "/access_codes/pull_backup_access_code",
+          method: "POST",
+          data: params,
+        }
+      ),
   }
 
   public readonly connectedAccounts = {

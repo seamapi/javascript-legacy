@@ -141,6 +141,10 @@ export type UnmanagedAccessCodeConvertToManagedRequest = {
   access_code_id: string
 }
 
+export type PullBackupAccessCodeRequest = {
+  access_code_id: string
+}
+
 export type DeviceGetRequest =
   | {
       device_id: string
