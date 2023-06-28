@@ -111,6 +111,7 @@
     "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
     "build": "npm run build:json-response-schemas && npm run build:package && npm run build:docs",
     "pack:cli": "pkg -c package.json dist/cli/entry.js",
+    "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "DEBUG=testcontainers* && npm run build:json-response-schemas && ava",
