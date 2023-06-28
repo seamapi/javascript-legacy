@@ -110,7 +110,7 @@ ___
 
 ### errors
 
-• `Optional` **errors**: [`SeamError`](SeamError.md)[]
+• **errors**: [`SeamError`](SeamError.md)[]
 
 #### Inherited from
 
@@ -234,7 +234,7 @@ ___
 
 ### warnings
 
-• `Optional` **warnings**: [`SeamWarning`](SeamWarning.md)[]
+• **warnings**: [`SeamWarning`](SeamWarning.md)[]
 
 #### Inherited from
 
