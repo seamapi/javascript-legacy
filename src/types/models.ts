@@ -316,7 +316,7 @@ export interface AccessCodeBase {
   is_backup?: boolean
   pulled_backup_access_code_id?: string | null
   is_backup_access_code_available: boolean
-  errors?: Array<AccessCodeError | DeviceError | ConnectedAccountError>
+  errors: Array<AccessCodeError | DeviceError | ConnectedAccountError>
   warnings: SeamWarning[]
 }
 
