@@ -23,7 +23,6 @@ runs:
       uses: actions/setup-node@v3
       if: inputs.install_dependencies == 'true'
       with:
-        cache: npm
         node-version: ${{ inputs.node_version }}
         registry-url: ${{ inputs.registry_url }}
     - name: Setup Node.js without cache
