@@ -110,6 +110,7 @@
     "build:docs": "typedoc",
     "build:json-response-schemas": "ts-json-schema-generator --path src/types/route-responses.ts -o src/types/route-responses.generated.json && ts-json-schema-generator --path src/types/models.ts -o src/types/models.generated.json",
     "build": "npm run build:json-response-schemas && npm run build:package && npm run build:docs",
+    "semantic-release": "semantic-release",
     "pack:cli": "pkg -c package.json dist/cli/entry.js",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
