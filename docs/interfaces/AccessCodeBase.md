@@ -58,7 +58,7 @@ ___
 
 ### errors
 
-• `Optional` **errors**: [`SeamError`](SeamError.md)[]
+• **errors**: [`SeamError`](SeamError.md)[]
 
 #### Defined in
 
@@ -108,7 +108,7 @@ ___
 
 ### warnings
 
-• `Optional` **warnings**: [`SeamWarning`](SeamWarning.md)[]
+• **warnings**: [`SeamWarning`](SeamWarning.md)[]
 
 #### Defined in
 

@@ -308,8 +308,8 @@ export interface AccessCodeBase {
   is_backup?: boolean
   pulled_backup_access_code_id?: string | null
   is_backup_access_code_available: boolean
-  errors?: SeamError[]
-  warnings?: SeamWarning[]
+  errors: SeamError[]
+  warnings: SeamWarning[]
 }
 
 export interface ManagedAccessCodeBase extends AccessCodeBase {
