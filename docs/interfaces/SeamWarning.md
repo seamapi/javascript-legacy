@@ -2,6 +2,16 @@
 
 # Interface: SeamWarning
 
+## Hierarchy
+
+- **`SeamWarning`**
+
+  ↳ [`DeviceWarning`](DeviceWarning.md)
+
+  ↳ [`AccessCodeWarning`](AccessCodeWarning.md)
+
+  ↳ [`ConnectedAccountWarning`](ConnectedAccountWarning.md)
+
 ## Table of contents
 
 ### Properties

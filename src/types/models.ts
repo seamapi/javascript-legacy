@@ -104,6 +104,14 @@ export type DeviceLocation = {
   timezone?: string
 }
 
+export interface DeviceError extends SeamError {
+  is_device_error: true
+}
+
+export interface DeviceWarning extends SeamWarning {
+  is_device_warning: true
+}
+
 export interface Device<
   Properties extends CommonDeviceProperties,
   Type = DeviceType
@@ -115,8 +123,8 @@ export interface Device<
   device_type: Type
   connected_account_id: string
   capabilities_supported: unknown[]
-  errors: SeamError[]
-  warnings: SeamWarning[]
+  errors: Array<DeviceError | ConnectedAccountError>
+  warnings: Array<DeviceWarning | ConnectedAccountWarning>
   created_at: string
   is_managed: true
 }
@@ -300,6 +308,14 @@ export interface ConnectWebview {
   custom_metadata: CustomMetadata
 }
 
+export interface AccessCodeError extends SeamError {
+  is_access_code_error: true
+}
+
+export interface AccessCodeWarning extends SeamWarning {
+  is_access_code_warning: true
+}
+
 export interface AccessCodeBase {
   access_code_id: string
   device_id: string
@@ -308,8 +324,8 @@ export interface AccessCodeBase {
   is_backup?: boolean
   pulled_backup_access_code_id?: string | null
   is_backup_access_code_available: boolean
-  errors?: SeamError[]
-  warnings?: SeamWarning[]
+  errors?: Array<AccessCodeError | DeviceError | ConnectedAccountError>
+  warnings?: Array<AccessCodeWarning | DeviceWarning | ConnectedAccountWarning>
 }
 
 export interface ManagedAccessCodeBase extends AccessCodeBase {
@@ -356,13 +372,21 @@ export interface UserIdentifier {
   email: string
 }
 
+export interface ConnectedAccountError extends SeamError {
+  is_connected_account_error: true
+}
+
+export interface ConnectedAccountWarning extends SeamWarning {
+  is_connected_account_warning: true
+}
+
 export interface ConnectedAccount {
   connected_account_id: string
   created_at: string
   user_identifier: UserIdentifier
   account_type: Provider
-  errors: SeamError[]
-  warnings: SeamWarning[]
+  errors: ConnectedAccountError[]
+  warnings: ConnectedAccountWarning[]
   custom_metadata: CustomMetadata
 }
 
