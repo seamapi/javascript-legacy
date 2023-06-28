@@ -32,6 +32,7 @@
 - [AccessCodeCreateOngoingRequest](interfaces/AccessCodeCreateOngoingRequest.md)
 - [AccessCodeCreateResponse](interfaces/AccessCodeCreateResponse.md)
 - [AccessCodeCreateScheduledRequest](interfaces/AccessCodeCreateScheduledRequest.md)
+- [AccessCodeError](interfaces/AccessCodeError.md)
 - [AccessCodeGetResponse](interfaces/AccessCodeGetResponse.md)
 - [AccessCodeUpdateBaseRequest](interfaces/AccessCodeUpdateBaseRequest.md)
 - [AccessCodesListResponse](interfaces/AccessCodesListResponse.md)
@@ -51,11 +52,13 @@
 - [ConnectWebviewGetResponse](interfaces/ConnectWebviewGetResponse.md)
 - [ConnectWebviewsListResponse](interfaces/ConnectWebviewsListResponse.md)
 - [ConnectedAccount](interfaces/ConnectedAccount.md)
+- [ConnectedAccountError](interfaces/ConnectedAccountError.md)
 - [ConnectedAccountsDeleteRequest](interfaces/ConnectedAccountsDeleteRequest.md)
 - [ConnectedAccountsGetRequest](interfaces/ConnectedAccountsGetRequest.md)
 - [ConnectedAccountsGetResponse](interfaces/ConnectedAccountsGetResponse.md)
 - [ConnectedAccountsListResponse](interfaces/ConnectedAccountsListResponse.md)
 - [Device](interfaces/Device.md)
+- [DeviceError](interfaces/DeviceError.md)
 - [DeviceGetResponse](interfaces/DeviceGetResponse.md)
 - [DeviceModel](interfaces/DeviceModel.md)
 - [DeviceProvider](interfaces/DeviceProvider.md)
@@ -213,7 +216,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:335](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L335)
+[src/types/models.ts:343](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L343)
 
 ___
 
@@ -223,7 +226,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L160)
+[src/types/models.ts:164](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L164)
 
 ___
 
@@ -358,7 +361,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:278](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L278)
+[src/types/models.ts:282](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L282)
 
 ___
 
@@ -368,7 +371,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:233](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L233)
+[src/types/models.ts:237](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L237)
 
 ___
 
@@ -380,7 +383,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:212](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L212)
+[src/types/models.ts:216](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L216)
 
 ___
 
@@ -457,7 +460,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:418](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L418)
+[src/types/models.ts:430](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L430)
 
 ___
 
@@ -467,7 +470,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:437](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L437)
+[src/types/models.ts:449](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L449)
 
 ___
 
@@ -477,7 +480,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:429](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L429)
+[src/types/models.ts:441](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L441)
 
 ___
 
@@ -556,7 +559,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:214](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L214)
+[src/types/models.ts:218](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L218)
 
 ___
 
@@ -709,7 +712,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:386](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L386)
+[src/types/models.ts:398](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L398)
 
 ___
 
@@ -719,7 +722,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:215](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L215)
+[src/types/models.ts:219](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L219)
 
 ___
 
@@ -751,7 +754,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:216](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L216)
+[src/types/models.ts:220](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L220)
 
 ___
 
@@ -793,7 +796,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:394](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L394)
+[src/types/models.ts:406](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L406)
 
 ___
 
@@ -987,7 +990,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:351](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L351)
+[src/types/models.ts:359](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L359)
 
 ___
 
@@ -1081,7 +1084,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:124](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L124)
+[src/types/models.ts:128](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L128)
 
 ___
 
@@ -1242,7 +1245,7 @@ device is LockDevice
 
 #### Defined in
 
-[src/types/models.ts:221](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L221)
+[src/types/models.ts:225](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L225)
 
 ___
 
@@ -1262,4 +1265,4 @@ device is NoiseSensorDevice
 
 #### Defined in
 
-[src/types/models.ts:227](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L227)
+[src/types/models.ts:231](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L231)

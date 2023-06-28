@@ -2,6 +2,16 @@
 
 # Interface: SeamError
 
+## Hierarchy
+
+- **`SeamError`**
+
+  ↳ [`DeviceError`](DeviceError.md)
+
+  ↳ [`AccessCodeError`](AccessCodeError.md)
+
+  ↳ [`ConnectedAccountError`](ConnectedAccountError.md)
+
 ## Table of contents
 
 ### Properties
