@@ -34,9 +34,11 @@ export interface ConnectedAccountsDeleteRequest
 
 export interface DevicesListRequest {
   connected_account_id?: string
+  connected_account_ids?: string[]
   connect_webview_id?: string
   device_type?: string
   device_types?: string[]
+  manufacturer?: string
   device_ids?: string[]
 }
 
