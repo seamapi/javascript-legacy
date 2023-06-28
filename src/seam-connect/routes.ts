@@ -52,6 +52,7 @@ import {
   ClimateSettingScheduleCreateRequest,
   ClimateSettingScheduleDeleteRequest,
   ClimateSettingScheduleUpdateRequest,
+  PullBackupAccessCodeRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -88,6 +89,7 @@ import {
   ClimateSettingScheduleGetResponse,
   ClimateSettingScheduleCreateResponse,
   ClimateSettingScheduleUpdateResponse,
+  PullBackupAccessCodeResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -389,6 +391,16 @@ export abstract class Routes {
         method: "POST",
         data: params,
       }),
+
+    pullBackupAccessCode: (params: PullBackupAccessCodeRequest) =>
+      this.makeRequestAndFormat<PullBackupAccessCodeResponse>(
+        "backup_access_code",
+        {
+          url: "/access_codes/pull_backup_access_code",
+          method: "POST",
+          data: params,
+        }
+      ),
   }
 
   public readonly connectedAccounts = {
@@ -498,11 +510,23 @@ export abstract class Routes {
   }
 
   public readonly deviceModels = {
-    list: (params?: DeviceModelsListRequest) =>
-      this.makeRequestAndFormat<DeviceModelsListResponse>("device_models", {
-        url: "/internal/device_models/list",
-        params,
-      }),
+    list: ({
+      acknowledge_intentional_use_of_internal_api = false,
+      ...params
+    }: DeviceModelsListRequest & {
+      acknowledge_intentional_use_of_internal_api?: boolean
+    } = {}) => {
+      if (acknowledge_intentional_use_of_internal_api !== true) {
+        throw new Error("This is an internal endpoint and should not be used.")
+      }
+      return this.makeRequestAndFormat<DeviceModelsListResponse>(
+        "device_models",
+        {
+          url: "/internal/device_models/list",
+          params,
+        }
+      )
+    },
   }
 
   public readonly thermostats = {

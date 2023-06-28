@@ -88,6 +88,10 @@ export interface AccessCodeCreateMultipleResponse {
   access_codes: AccessCode[]
 }
 
+export interface PullBackupAccessCodeResponse {
+  backup_access_code: AccessCode
+}
+
 // Unmanaged Access Codes
 export interface UnmanagedAccessCodesListResponse {
   access_codes: UnmanagedAccessCode[]

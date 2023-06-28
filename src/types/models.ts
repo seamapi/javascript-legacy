@@ -305,6 +305,9 @@ export interface AccessCodeBase {
   device_id: string
   name?: string
   code: string | null
+  is_backup?: boolean
+  pulled_backup_access_code_id?: string | null
+  is_backup_access_code_available: boolean
   errors?: SeamError[]
   warnings?: SeamWarning[]
 }
@@ -324,6 +327,7 @@ export interface TimeBoundAccessCode extends ManagedAccessCodeBase {
   type: "time_bound"
   created_at: string
   status: "setting" | "set" | "removing" | "unset"
+  is_scheduled_on_device?: boolean
   starts_at: string
   ends_at: string
 }

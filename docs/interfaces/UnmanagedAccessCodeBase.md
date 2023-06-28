@@ -21,7 +21,10 @@
 - [created\_at](UnmanagedAccessCodeBase.md#created_at)
 - [device\_id](UnmanagedAccessCodeBase.md#device_id)
 - [errors](UnmanagedAccessCodeBase.md#errors)
+- [is\_backup](UnmanagedAccessCodeBase.md#is_backup)
+- [is\_backup\_access\_code\_available](UnmanagedAccessCodeBase.md#is_backup_access_code_available)
 - [name](UnmanagedAccessCodeBase.md#name)
+- [pulled\_backup\_access\_code\_id](UnmanagedAccessCodeBase.md#pulled_backup_access_code_id)
 - [status](UnmanagedAccessCodeBase.md#status)
 - [warnings](UnmanagedAccessCodeBase.md#warnings)
 
@@ -61,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:335](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L335)
+[src/types/models.ts:339](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L339)
 
 ___
 
@@ -89,7 +92,35 @@ ___
 
 #### Defined in
 
+[src/types/models.ts:311](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L311)
+
+___
+
+### is\_backup
+
+• `Optional` **is\_backup**: `boolean`
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[is_backup](AccessCodeBase.md#is_backup)
+
+#### Defined in
+
 [src/types/models.ts:308](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L308)
+
+___
+
+### is\_backup\_access\_code\_available
+
+• **is\_backup\_access\_code\_available**: `boolean`
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[is_backup_access_code_available](AccessCodeBase.md#is_backup_access_code_available)
+
+#### Defined in
+
+[src/types/models.ts:310](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L310)
 
 ___
 
@@ -107,13 +138,27 @@ ___
 
 ___
 
+### pulled\_backup\_access\_code\_id
+
+• `Optional` **pulled\_backup\_access\_code\_id**: ``null`` \| `string`
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[pulled_backup_access_code_id](AccessCodeBase.md#pulled_backup_access_code_id)
+
+#### Defined in
+
+[src/types/models.ts:309](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L309)
+
+___
+
 ### status
 
 • **status**: ``"set"``
 
 #### Defined in
 
-[src/types/models.ts:334](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L334)
+[src/types/models.ts:338](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L338)
 
 ___
 
@@ -127,4 +172,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:309](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L309)
+[src/types/models.ts:312](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L312)
