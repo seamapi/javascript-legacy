@@ -35,6 +35,7 @@
 - [AccessCodeError](interfaces/AccessCodeError.md)
 - [AccessCodeGetResponse](interfaces/AccessCodeGetResponse.md)
 - [AccessCodeUpdateBaseRequest](interfaces/AccessCodeUpdateBaseRequest.md)
+- [AccessCodeUpdateResponse](interfaces/AccessCodeUpdateResponse.md)
 - [AccessCodesListResponse](interfaces/AccessCodesListResponse.md)
 - [ActionAttemptCreateResponse](interfaces/ActionAttemptCreateResponse.md)
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
@@ -437,7 +438,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:143](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L143)
+[src/types/route-responses.ts:146](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L146)
 
 ___
 
@@ -672,7 +673,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:147](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L147)
+[src/types/route-responses.ts:150](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L150)
 
 ___
 
@@ -866,7 +867,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:138](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L138)
+[src/types/route-responses.ts:141](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L141)
 
 ___
 

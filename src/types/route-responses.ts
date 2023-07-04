@@ -84,6 +84,9 @@ export interface AccessCodeCreateResponse
   extends AccessCodeGetResponse,
     ActionAttemptGetResponse {}
 
+export interface AccessCodeUpdateResponse
+  extends ActionAttemptCreateResponse<"UPDATE_ACCESS_CODE"> {}
+
 export interface AccessCodeCreateMultipleResponse {
   access_codes: AccessCode[]
 }
