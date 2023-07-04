@@ -90,6 +90,7 @@ import {
   ClimateSettingScheduleCreateResponse,
   ClimateSettingScheduleUpdateResponse,
   PullBackupAccessCodeResponse,
+  AccessCodeUpdateResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -373,16 +374,23 @@ export abstract class Routes {
 
     // We can't narrow the return type here like we do with create because we're given partial input
     update: async (
-      params: AccessCodeUpdateRequest
-    ): Promise<OngoingAccessCode | TimeBoundAccessCode> => {
-      const action =
-        await this.createActionAttemptAndWait<"UPDATE_ACCESS_CODE">({
+      params: AccessCodeUpdateRequest,
+      options?: { waitForCompletion?: boolean }
+    ): Promise<ActionAttempt<"UPDATE_ACCESS_CODE">> => {
+      const action = await this.makeRequestAndFormat<AccessCodeUpdateResponse>(
+        "action_attempt",
+        {
           url: "/access_codes/update",
           method: "POST",
           data: params,
-        })
+        }
+      )
 
-      return action.access_code
+      if (options?.waitForCompletion) {
+        await this.awaitActionAttempt(action)
+      }
+
+      return action
     },
 
     delete: (params: AccessCodeDeleteRequest) =>

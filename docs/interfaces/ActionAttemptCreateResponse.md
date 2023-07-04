@@ -8,6 +8,12 @@
 | :------ | :------ |
 | `T` | extends [`ActionType`](../modules.md#actiontype) = [`ActionType`](../modules.md#actiontype) |
 
+## Hierarchy
+
+- **`ActionAttemptCreateResponse`**
+
+  ↳ [`AccessCodeUpdateResponse`](AccessCodeUpdateResponse.md)
+
 ## Table of contents
 
 ### Properties
@@ -22,4 +28,4 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:125](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L125)
+[src/types/route-responses.ts:128](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L128)
