@@ -387,7 +387,7 @@ export abstract class Routes {
       )
 
       if (options?.waitForCompletion) {
-        await this.awaitActionAttempt(action)
+        return await this.awaitActionAttempt(action)
       }
 
       return action
