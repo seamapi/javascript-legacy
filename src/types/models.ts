@@ -129,6 +129,7 @@ export type UnmanagedDevice = Pick<
   Device<CommonDeviceProperties>,
   | "device_id"
   | "device_type"
+  | "capabilities_supported"
   | "connected_account_id"
   | "workspace_id"
   | "errors"
