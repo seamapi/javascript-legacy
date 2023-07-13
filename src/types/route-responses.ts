@@ -137,6 +137,10 @@ export interface EventsListResponse {
   events: Event[]
 }
 
+export interface EventGetResponse {
+  event: Event
+}
+
 // Noise Thresholds
 export type NoiseThresholdsListResponse = {
   noise_thresholds: NoiseThresholds[]

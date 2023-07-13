@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/route-requests.ts:189](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L189)
+[src/types/route-requests.ts:193](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L193)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:186](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L186)
+[src/types/route-requests.ts:190](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L190)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:185](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L185)
+[src/types/route-requests.ts:189](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L189)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:188](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L188)
+[src/types/route-requests.ts:192](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L192)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:187](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L187)
+[src/types/route-requests.ts:191](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L191)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:184](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L184)
+[src/types/route-requests.ts:188](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L188)

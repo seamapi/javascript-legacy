@@ -53,6 +53,7 @@ import {
   ClimateSettingScheduleDeleteRequest,
   ClimateSettingScheduleUpdateRequest,
   PullBackupAccessCodeRequest,
+  EventGetRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -91,6 +92,7 @@ import {
   ClimateSettingScheduleUpdateResponse,
   PullBackupAccessCodeResponse,
   AccessCodeUpdateResponse,
+  EventGetResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -262,6 +264,12 @@ export abstract class Routes {
           ...params,
           since: params?.since ?? new Date(0).toISOString(),
         },
+      }),
+
+    get: (params: EventGetRequest) =>
+      this.makeRequestAndFormat<EventGetResponse>("event", {
+        url: "/events/get",
+        params,
       }),
   }
 

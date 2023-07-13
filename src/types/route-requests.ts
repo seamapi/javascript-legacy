@@ -180,6 +180,10 @@ export type UnmanagedDeviceUpdateRequest = {
   is_managed?: boolean
 }
 
+export interface EventGetRequest {
+  event_id: string
+}
+
 export interface EventsListRequest {
   since?: string | Date
   device_ids?: string[]
