@@ -113,7 +113,7 @@ export class Seam extends Routes {
     if (isEmail(options.userIdentifierKey)) {
       console.warn(`Using an email for the userIdentifierKey!
 This is insecure because an email is common knowledge or easily guessed.
-Use something with sufficient entropy know only to the owner of the client session (like a server-generated UUID).`)
+Use something with sufficient entropy known only to the owner of the client session (like a server-generated UUID).`)
     }
 
     const getKeyHeaders = (): AxiosRequestHeaders => {
