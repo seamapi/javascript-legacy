@@ -152,6 +152,10 @@ export type ClientSessionsCreateResponse = {
   client_session: ClientSession
 }
 
+export type ClientSessionsListResponse = {
+  client_sessions: ClientSession[]
+}
+
 export type ClientSessionsGetOrCreateResponse = ClientSessionsCreateResponse
 
 /** @deprecated use ClientSessionsCreateResponse instead */

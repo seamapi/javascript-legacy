@@ -44,6 +44,7 @@ import {
   NoiseThresholdsUpdateRequest,
   ClientSessionsCreateRequest,
   ClientSessionsGetOrCreateRequest,
+  ClientSessionsListRequest,
   ClientSessionsDeleteRequest,
   UnmanagedAccessCodeConvertToManagedRequest,
   DeviceModelsListRequest,
@@ -85,6 +86,7 @@ import {
   NoiseThresholdsListResponse,
   ClientSessionsCreateResponse,
   ClientSessionsGetOrCreateResponse,
+  ClientSessionsListResponse,
   DeviceModelsListResponse,
   ThermostatsListResponse,
   ThermostatGetResponse,
@@ -531,6 +533,12 @@ export abstract class Routes {
           params,
         }
       ),
+    list: (params: ClientSessionsListRequest) =>
+      this.makeRequestAndFormat<ClientSessionsListResponse>("client_sessions", {
+        url: "/client_sessions/list",
+        method: "GET",
+        params,
+      }),
     delete: (params: ClientSessionsDeleteRequest) =>
       this.makeRequest({
         url: "/client_sessions/delete",
