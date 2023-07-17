@@ -233,6 +233,10 @@ export type ClientSessionsCreateRequest = {
   connected_account_ids?: string[]
 }
 
+export type ClientSessionsDeleteRequest = {
+  client_session_id: string
+}
+
 export type ClientSessionsGetOrCreateRequest = ClientSessionsCreateRequest
 
 export type DeviceModelsListRequest = {

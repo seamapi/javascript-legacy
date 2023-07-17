@@ -124,6 +124,7 @@
 - [BatteryStatus](modules.md#batterystatus)
 - [ClientSessionsCreateRequest](modules.md#clientsessionscreaterequest)
 - [ClientSessionsCreateResponse](modules.md#clientsessionscreateresponse)
+- [ClientSessionsDeleteRequest](modules.md#clientsessionsdeleterequest)
 - [ClientSessionsGetOrCreateRequest](modules.md#clientsessionsgetorcreaterequest)
 - [ClientSessionsGetOrCreateResponse](modules.md#clientsessionsgetorcreateresponse)
 - [ClientSessionsResponse](modules.md#clientsessionsresponse)
@@ -436,13 +437,29 @@ ___
 
 ___
 
+### ClientSessionsDeleteRequest
+
+Ƭ **ClientSessionsDeleteRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `client_session_id` | `string` |
+
+#### Defined in
+
+[src/types/route-requests.ts:236](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L236)
+
+___
+
 ### ClientSessionsGetOrCreateRequest
 
 Ƭ **ClientSessionsGetOrCreateRequest**: [`ClientSessionsCreateRequest`](modules.md#clientsessionscreaterequest)
 
 #### Defined in
 
-[src/types/route-requests.ts:236](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L236)
+[src/types/route-requests.ts:240](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L240)
 
 ___
 
@@ -517,7 +534,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L256)
+[src/types/route-requests.ts:260](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L260)
 
 ___
 
@@ -533,7 +550,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:263](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L263)
+[src/types/route-requests.ts:267](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L267)
 
 ___
 
@@ -550,7 +567,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:251](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L251)
+[src/types/route-requests.ts:255](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L255)
 
 ___
 
@@ -560,7 +577,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:258](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L258)
+[src/types/route-requests.ts:262](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L262)
 
 ___
 
@@ -576,7 +593,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:247](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L247)
+[src/types/route-requests.ts:251](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L251)
 
 ___
 
@@ -683,7 +700,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:238](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L238)
+[src/types/route-requests.ts:242](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L242)
 
 ___
 
@@ -1007,7 +1024,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:269](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L269)
+[src/types/route-requests.ts:273](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L273)
 
 ___
 

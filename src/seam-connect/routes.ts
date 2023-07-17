@@ -44,6 +44,7 @@ import {
   NoiseThresholdsUpdateRequest,
   ClientSessionsCreateRequest,
   ClientSessionsGetOrCreateRequest,
+  ClientSessionsDeleteRequest,
   UnmanagedAccessCodeConvertToManagedRequest,
   DeviceModelsListRequest,
   ThermostatUpdateRequest,
@@ -530,6 +531,12 @@ export abstract class Routes {
           params,
         }
       ),
+    delete: (params: ClientSessionsDeleteRequest) =>
+      this.makeRequest({
+        url: "/client_sessions/delete",
+        method: "DELETE",
+        params,
+      }),
   }
 
   public readonly deviceModels = {
