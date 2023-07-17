@@ -147,9 +147,15 @@ export type NoiseThresholdsListResponse = {
 }
 
 // Client Sessions
-export type ClientSessionsResponse = {
+
+export type ClientSessionsCreateResponse = {
   client_session: ClientSession
 }
+
+export type ClientSessionsGetOrCreateResponse = ClientSessionsCreateResponse
+
+/** @deprecated use ClientSessionsCreateResponse instead */
+export type ClientSessionsResponse = ClientSessionsCreateResponse
 
 export type DeviceModelsListResponse = {
   device_models: DeviceModel[]

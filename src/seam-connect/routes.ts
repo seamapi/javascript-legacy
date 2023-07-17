@@ -82,7 +82,8 @@ import {
   WorkspaceResetSandboxResponse,
   WorkspacesListResponse,
   NoiseThresholdsListResponse,
-  ClientSessionsResponse,
+  ClientSessionsCreateResponse,
+  ClientSessionsGetOrCreateResponse,
   DeviceModelsListResponse,
   ThermostatsListResponse,
   ThermostatGetResponse,
@@ -512,17 +513,23 @@ export abstract class Routes {
 
   public readonly clientSessions = {
     create: (params: ClientSessionsCreateRequest) =>
-      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
-        url: "/client_sessions/create",
-        method: "POST",
-        params,
-      }),
+      this.makeRequestAndFormat<ClientSessionsCreateResponse>(
+        "client_session",
+        {
+          url: "/client_sessions/create",
+          method: "POST",
+          params,
+        }
+      ),
     getOrCreate: (params: ClientSessionsGetOrCreateRequest) =>
-      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
-        url: "/client_sessions/create",
-        method: "PUT",
-        params,
-      }),
+      this.makeRequestAndFormat<ClientSessionsGetOrCreateResponse>(
+        "client_session",
+        {
+          url: "/client_sessions/create",
+          method: "PUT",
+          params,
+        }
+      ),
   }
 
   public readonly deviceModels = {
