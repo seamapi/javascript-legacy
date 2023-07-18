@@ -358,31 +358,6 @@ export abstract class Routes {
         url: "/access_codes/get",
         params,
       }),
-    create: (async (params: AccessCodeCreateRequest) =>
-      this.makeRequestAndFormat<AccessCodeCreateResponse>("access_code", {
-        url: "/access_codes/create",
-        method: "POST",
-        data: params,
-      })) as {
-      (params: AccessCodeCreateOngoingRequest): Promise<OngoingAccessCode>
-      (params: AccessCodeCreateScheduledRequest): Promise<TimeBoundAccessCode>
-    },
-    createMultiple: (async (params: AccessCodeCreateMultipleRequest) =>
-      this.makeRequestAndFormat<AccessCodeCreateMultipleResponse>(
-        "access_codes",
-        {
-          url: "/access_codes/create_multiple",
-          method: "POST",
-          data: params,
-        }
-      )) as {
-      (params: AccessCodeCreateMultipleOngoingRequest): Promise<
-        OngoingAccessCode[]
-      >
-      (params: AccessCodeCreateMultipleScheduledRequest): Promise<
-        TimeBoundAccessCode[]
-      >
-    },
 
     // We can't narrow the return type here like we do with create because we're given partial input
     update: async (

@@ -104,32 +104,9 @@ const command: CommandModule<GlobalOptions> = {
         },
         async (argv) => {
           if (argv.startsAt && argv.endsAt) {
-            await executeCommand(
-              "accessCodes.create",
-              [
-                {
-                  device_id: argv.deviceId,
-                  name: argv.name,
-                  code: argv.code,
-                  starts_at: argv.startsAt,
-                  ends_at: argv.endsAt,
-                },
-              ],
-              argv
-            )
+            // TODO
           } else {
-            await executeCommand(
-              "accessCodes.create",
-              [
-                {
-                  device_id: argv.deviceId,
-                  name: argv.name,
-                  code: argv.code,
-                  // see https://github.com/microsoft/TypeScript/issues/32164
-                } as any,
-              ],
-              argv
-            )
+            // TODO
           }
         }
       )
