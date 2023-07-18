@@ -3,6 +3,7 @@ import pRetry from "p-retry"
 import { SeamActionAttemptError } from "../lib/api-error"
 import { SuccessfulAPIResponse } from "../types/globals"
 import {
+  AccessCode,
   ActionAttempt,
   ActionAttemptResultTypeMap,
   ActionType,
@@ -388,7 +389,11 @@ export abstract class Routes {
     update: async (
       params: AccessCodeUpdateRequest,
       options?: { waitForCompletion?: boolean }
-    ): Promise<ActionAttempt<"UPDATE_ACCESS_CODE">> => {
+    ): Promise<
+      typeof options extends { waitForCompletion: true }
+        ? AccessCode
+        : ActionAttempt<"UPDATE_ACCESS_CODE">
+    > => {
       const action = await this.makeRequestAndFormat<AccessCodeUpdateResponse>(
         "action_attempt",
         {
