@@ -233,7 +233,11 @@ export type ClientSessionsCreateRequest = {
   connected_account_ids?: string[]
 }
 
-export type ClientSessionsListRequest = {}
+export type ClientSessionsListRequest = {
+  client_session_id?: string
+  user_identifier_key?: string
+  without_user_identifier_key?: boolean
+}
 
 export type ClientSessionsDeleteRequest = {
   client_session_id: string
