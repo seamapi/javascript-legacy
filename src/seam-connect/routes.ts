@@ -515,22 +515,22 @@ export abstract class Routes {
   }
 
   public readonly clientSessions = {
-    create: (params: ClientSessionsCreateRequest) =>
+    create: (data: ClientSessionsCreateRequest) =>
       this.makeRequestAndFormat<ClientSessionsCreateResponse>(
         "client_session",
         {
           url: "/client_sessions/create",
           method: "POST",
-          params,
+          data,
         }
       ),
-    getOrCreate: (params: ClientSessionsGetOrCreateRequest) =>
+    getOrCreate: (data: ClientSessionsGetOrCreateRequest) =>
       this.makeRequestAndFormat<ClientSessionsGetOrCreateResponse>(
         "client_session",
         {
           url: "/client_sessions/create",
           method: "PUT",
-          params,
+          data,
         }
       ),
     list: (params: ClientSessionsListRequest) =>
