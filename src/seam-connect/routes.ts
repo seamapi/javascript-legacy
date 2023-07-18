@@ -44,6 +44,8 @@ import {
   NoiseThresholdsUpdateRequest,
   ClientSessionsCreateRequest,
   ClientSessionsGetOrCreateRequest,
+  ClientSessionsListRequest,
+  ClientSessionsDeleteRequest,
   UnmanagedAccessCodeConvertToManagedRequest,
   DeviceModelsListRequest,
   ThermostatUpdateRequest,
@@ -82,7 +84,9 @@ import {
   WorkspaceResetSandboxResponse,
   WorkspacesListResponse,
   NoiseThresholdsListResponse,
-  ClientSessionsResponse,
+  ClientSessionsCreateResponse,
+  ClientSessionsGetOrCreateResponse,
+  ClientSessionsListResponse,
   DeviceModelsListResponse,
   ThermostatsListResponse,
   ThermostatGetResponse,
@@ -512,15 +516,33 @@ export abstract class Routes {
 
   public readonly clientSessions = {
     create: (params: ClientSessionsCreateRequest) =>
-      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
-        url: "/client_sessions/create",
-        method: "POST",
+      this.makeRequestAndFormat<ClientSessionsCreateResponse>(
+        "client_session",
+        {
+          url: "/client_sessions/create",
+          method: "POST",
+          params,
+        }
+      ),
+    getOrCreate: (params: ClientSessionsGetOrCreateRequest) =>
+      this.makeRequestAndFormat<ClientSessionsGetOrCreateResponse>(
+        "client_session",
+        {
+          url: "/client_sessions/create",
+          method: "PUT",
+          params,
+        }
+      ),
+    list: (params: ClientSessionsListRequest) =>
+      this.makeRequestAndFormat<ClientSessionsListResponse>("client_sessions", {
+        url: "/client_sessions/list",
+        method: "GET",
         params,
       }),
-    getOrCreate: (params: ClientSessionsGetOrCreateRequest) =>
-      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
-        url: "/client_sessions/create",
-        method: "PUT",
+    delete: (params: ClientSessionsDeleteRequest) =>
+      this.makeRequest({
+        url: "/client_sessions/delete",
+        method: "DELETE",
         params,
       }),
   }
