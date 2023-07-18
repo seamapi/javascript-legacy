@@ -88,6 +88,7 @@ export type AccessCodeCreateMultipleRequest =
 export interface AccessCodeUpdateBaseRequest {
   device_id?: string
   access_code_id: string
+  type?: "ongoing" | "time_bound"
 }
 
 export type AccessCodeUpdateOngoingRequest = Except<
