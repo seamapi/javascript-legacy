@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/types/models.ts:121](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L121)
+[src/types/models.ts:127](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L127)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:120](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L120)
+[src/types/models.ts:126](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L126)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:124](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L124)
+[src/types/models.ts:130](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L130)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:115](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L115)
+[src/types/models.ts:121](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L121)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:119](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L119)
+[src/types/models.ts:125](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L125)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:122](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L122)
+[src/types/models.ts:128](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L128)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:125](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L125)
+[src/types/models.ts:131](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L131)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:118](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L118)
+[src/types/models.ts:124](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L124)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:117](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L117)
+[src/types/models.ts:123](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L123)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:123](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L123)
+[src/types/models.ts:129](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L129)
 
 ___
 
@@ -133,4 +133,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:116](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L116)
+[src/types/models.ts:122](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L122)
