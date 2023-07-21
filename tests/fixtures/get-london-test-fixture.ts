@@ -4,7 +4,7 @@ import type { ExecutionContext } from "ava"
 
 /**
  * A london test fixture has everything you need to run a test against the Seam
- * API, it's the only import you should need in a test file.
+ * API, it's the only import you should need in a test file besides ava.
  *
  * Usage:
  * ```ts
@@ -25,14 +25,12 @@ export const getLondonTestFixture = async (t: ExecutionContext) => {
 
   const { serverUrl } = await fake.startServer()
 
-  await new Promise((resolve) => setTimeout(resolve, 100000))
-
   const seam = new Seam({
     apiKey: "1234",
     endpoint: serverUrl,
   })
 
-  // TODO move to separate file if it gets more complex
+  // TODO move to separate file if it complex
   function mutateEnv() {}
 
   return {
