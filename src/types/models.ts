@@ -11,19 +11,25 @@ export interface Workspace {
 export const LOCK_DEVICE_TYPES = [
   "akuvox_lock",
   "august_lock",
-  "brivo_lock",
-  "butterflymx_lock",
+  "brivo_access_point",
+  "butterflymx_panel",
   "doorking_lock",
-  "genie_lock",
+  "genie_door",
   "igloo_lock",
   "linear_lock",
   "lockly_lock",
+  "kwikset_lock",
   "nuki_lock",
   "salto_lock",
   "schlage_lock",
+  "seam_relay",
   "smartthings_lock",
   "yale_lock",
+  "two_n_intercom",
+  "controlbyweb_device",
   "ttlock_lock",
+  "igloohome_lock",
+  "hubitat_lock",
 ]
 export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
 
