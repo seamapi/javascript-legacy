@@ -40,6 +40,8 @@ export interface DevicesListRequest {
   device_types?: string[]
   manufacturer?: string
   device_ids?: string[]
+  limit?: number
+  created_before?: string | Date
 }
 
 export interface DeviceProvidersListRequest {
