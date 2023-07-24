@@ -32,11 +32,31 @@ export const NOISE_SENSOR_DEVICE_TYPES = [
   "minut_sensor",
 ]
 export type NoiseSensorDeviceType = typeof NOISE_SENSOR_DEVICE_TYPES[number]
-
-export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat"]
-export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
-
 export type NoiseSensorDeviceProperties = CommonDeviceProperties
+
+export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
+export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
+export type ThermostatDeviceProperties = CommonDeviceProperties & {
+  is_cooling: boolean
+  is_heating: boolean
+  is_fan_running: boolean
+  has_direct_power: boolean
+  relative_humidity: number
+  temperature_celsius: number
+  temperature_fahrenheit: number
+  current_climate_setting: {
+    hvac_mode_setting: "off" | "heat" | "cool" | "heatcool"
+    manual_override_allowed: boolean
+    automatic_cooling_enabled: boolean
+    automatic_heating_enabled: boolean
+    cooling_set_point_celsius: number
+    cooling_set_point_fahrenheit: number
+  }
+  available_hvac_mode_settings: ["off", "cool", "heat", "heatcool"]
+  can_enable_automatic_cooling: boolean
+  can_enable_automatic_heating: boolean
+  is_temporary_manual_override_active: boolean
+}
 
 export type DeviceType =
   | LockDeviceType
@@ -222,6 +242,10 @@ export type NoiseSensorDevice = Device<
   NoiseSensorDeviceProperties,
   NoiseSensorDeviceType
 >
+export type ThermostatDevice = Device<
+  CommonDeviceProperties,
+  ThermostatDeviceType
+>
 
 export const isLockDevice = (
   device: CommonDevice | LockDevice
@@ -233,6 +257,12 @@ export const isNoiseSensorDevice = (
   device: CommonDevice | NoiseSensorDevice
 ): device is NoiseSensorDevice => {
   return NOISE_SENSOR_DEVICE_TYPES.includes(device.device_type)
+}
+
+export const isThermostatDevice = (
+  device: CommonDevice | ThermostatDevice
+): device is ThermostatDevice => {
+  return THERMOSTAT_DEVICE_TYPES.includes(device.device_type)
 }
 
 export type ActionType =
