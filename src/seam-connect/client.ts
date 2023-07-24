@@ -49,7 +49,7 @@ export const getSeamClientOptionsWithDefaults = (
         ? null
         : providedOptions.apiKey ??
           globalThis?.process?.env?.SEAM_API_KEY ??
-          undefined,
+          null,
     endpoint:
       providedOptions.endpoint ??
       globalThis?.process?.env?.SEAM_API_URL ??
