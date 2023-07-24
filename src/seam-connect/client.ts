@@ -17,9 +17,9 @@ import { ClientSessionsResponse } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
-  apiKey?: string
+  apiKey?: string | null
   /* Seam Client Session Token */
-  clientSessionToken?: string
+  clientSessionToken?: string | null
   /**
    * Seam Endpoint to use, defaults to https://connect.getseam.com
    **/
@@ -45,9 +45,11 @@ export const getSeamClientOptionsWithDefaults = (
 
   return {
     apiKey:
-      providedOptions.apiKey ??
-      globalThis?.process?.env?.SEAM_API_KEY ??
-      undefined,
+      providedOptions.apiKey === null
+        ? null
+        : providedOptions.apiKey ??
+          globalThis?.process?.env?.SEAM_API_KEY ??
+          undefined,
     endpoint:
       providedOptions.endpoint ??
       globalThis?.process?.env?.SEAM_API_URL ??
@@ -57,7 +59,10 @@ export const getSeamClientOptionsWithDefaults = (
       globalThis?.process?.env?.SEAM_WORKSPACE_ID ??
       undefined,
     axiosOptions: providedOptions.axiosOptions ?? {},
-    clientSessionToken: providedOptions.clientSessionToken ?? undefined,
+    clientSessionToken:
+      providedOptions.clientSessionToken === null
+        ? null
+        : providedOptions.clientSessionToken ?? null,
   }
 }
 
@@ -199,8 +204,8 @@ const getAuthHeaders = ({
   apiKey,
   workspaceId,
 }: {
-  clientSessionToken?: string
-  apiKey?: string
+  clientSessionToken?: string | null
+  apiKey?: string | null
   workspaceId?: string
 }): Record<string, string> => {
   if (apiKey && clientSessionToken) {

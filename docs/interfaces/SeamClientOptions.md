@@ -16,7 +16,7 @@
 
 ### apiKey
 
-• `Optional` **apiKey**: `string`
+• `Optional` **apiKey**: ``null`` \| `string`
 
 #### Defined in
 
@@ -38,7 +38,7 @@ ___
 
 ### clientSessionToken
 
-• `Optional` **clientSessionToken**: `string`
+• `Optional` **clientSessionToken**: ``null`` \| `string`
 
 #### Defined in
 
