@@ -17,9 +17,9 @@ import { ClientSessionsResponse } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
-  apiKey?: string
+  apiKey?: string | null
   /* Seam Client Session Token */
-  clientSessionToken?: string
+  clientSessionToken?: string | null
   /**
    * Seam Endpoint to use, defaults to https://connect.getseam.com
    **/
@@ -38,17 +38,31 @@ export interface SeamClientOptions {
 export const getSeamClientOptionsWithDefaults = (
   apiKeyOrOptions?: string | SeamClientOptions
 ): SeamClientOptions => {
-  const seamClientDefaults = {
-    apiKey: globalThis?.process?.env?.SEAM_API_KEY ?? undefined,
+  const providedOptions =
+    typeof apiKeyOrOptions === "string"
+      ? { apiKey: apiKeyOrOptions }
+      : apiKeyOrOptions ?? {}
+
+  return {
+    apiKey:
+      providedOptions.apiKey === null
+        ? null
+        : providedOptions.apiKey ??
+          globalThis?.process?.env?.SEAM_API_KEY ??
+          null,
     endpoint:
-      globalThis?.process?.env?.SEAM_API_URL ?? "https://connect.getseam.com",
-    workspaceId: globalThis?.process?.env?.SEAM_WORKSPACE_ID ?? undefined,
-  }
-  if (typeof apiKeyOrOptions === "string") {
-    // for both browser and server, if apiKeyOrOptions is a string, use it as the apiKey, and merge with defaults
-    return { ...seamClientDefaults, apiKey: apiKeyOrOptions }
-  } else {
-    return { ...seamClientDefaults, ...apiKeyOrOptions }
+      providedOptions.endpoint ??
+      globalThis?.process?.env?.SEAM_API_URL ??
+      "https://connect.getseam.com",
+    workspaceId:
+      providedOptions.workspaceId ??
+      globalThis?.process?.env?.SEAM_WORKSPACE_ID ??
+      undefined,
+    axiosOptions: providedOptions.axiosOptions ?? {},
+    clientSessionToken:
+      providedOptions.clientSessionToken === null
+        ? null
+        : providedOptions.clientSessionToken ?? null,
   }
 }
 
@@ -190,8 +204,8 @@ const getAuthHeaders = ({
   apiKey,
   workspaceId,
 }: {
-  clientSessionToken?: string
-  apiKey?: string
+  clientSessionToken?: string | null
+  apiKey?: string | null
   workspaceId?: string
 }): Record<string, string> => {
   if (apiKey && clientSessionToken) {
