@@ -251,6 +251,11 @@ export type ClientSessionsDeleteRequest = {
 
 export type ClientSessionsGetOrCreateRequest = ClientSessionsCreateRequest
 
+export type ClientSessionsGetRequest = {
+  client_session_id?: string
+  user_identifier_key?: string
+}
+
 export type DeviceModelsListRequest = {
   main_category?: string
   support_level?: string

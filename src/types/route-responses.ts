@@ -152,8 +152,15 @@ export type ClientSessionsCreateResponse = {
   client_session: ClientSession
 }
 
+export type ClientSessionsGetResponse = {
+  client_session: ClientSession
+}
+
 export type ClientSessionsListResponse = {
-  client_sessions: ClientSession[]
+  client_sessions: Omit<
+    ClientSession,
+    "connected_account_ids" | "connect_webview_ids"
+  >[]
 }
 
 export type ClientSessionsGetOrCreateResponse = ClientSessionsCreateResponse
