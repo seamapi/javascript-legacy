@@ -56,6 +56,7 @@ import {
   ClimateSettingScheduleUpdateRequest,
   PullBackupAccessCodeRequest,
   EventGetRequest,
+  ClientSessionsGetRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -97,6 +98,7 @@ import {
   PullBackupAccessCodeResponse,
   AccessCodeUpdateResponse,
   EventGetResponse,
+  ClientSessionsGetResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -524,6 +526,12 @@ export abstract class Routes {
           data,
         }
       ),
+    get: (params: ClientSessionsGetRequest) =>
+      this.makeRequestAndFormat<ClientSessionsGetResponse>("client_session", {
+        url: "/client_sessions/get",
+        method: "GET",
+        params,
+      }),
     getOrCreate: (data: ClientSessionsGetOrCreateRequest) =>
       this.makeRequestAndFormat<ClientSessionsGetOrCreateResponse>(
         "client_session",
