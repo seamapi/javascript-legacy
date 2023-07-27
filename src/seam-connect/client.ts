@@ -224,10 +224,7 @@ const getAuthHeaders = ({
 
   if (apiKey) {
     if (apiKey.startsWith("seam_cst")) {
-      console.warn(
-        "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
-      )
-      return { authorization: `Bearer ${apiKey}` }
+      throw new Error("You can't use a Client Session Token as an apiKey.")
     }
     if (!isValueUsedForBearerAuthentication(apiKey) && workspaceId)
       throw new Error(
