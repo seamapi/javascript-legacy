@@ -216,7 +216,10 @@ const getAuthHeaders = ({
     if (!clientSessionToken.startsWith("seam_cst")) {
       throw new Error("clientSessionToken must start with seam_cst")
     }
-    return { "client-session-token": clientSessionToken }
+    return {
+      authorization: `Bearer ${clientSessionToken}`,
+      "client-session-token": clientSessionToken,
+    }
   }
 
   if (apiKey) {
@@ -224,7 +227,7 @@ const getAuthHeaders = ({
       console.warn(
         "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
       )
-      return { "client-session-token": apiKey }
+      return { authorization: `Bearer ${apiKey}` }
     }
     if (!isValueUsedForBearerAuthentication(apiKey) && workspaceId)
       throw new Error(
