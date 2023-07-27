@@ -93,6 +93,7 @@ export class Seam extends Routes {
       ] = `Javascript SDK v${version}, Node.js mode, (https://github.com/seamapi/javascript)`
     }
     this.client = axios.create({
+      withCredentials: clientSessionToken ? true : false,
       ...axiosOptions,
       baseURL: endpoint,
       headers,
