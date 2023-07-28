@@ -93,7 +93,6 @@ export class Seam extends Routes {
       ] = `Javascript SDK v${version}, Node.js mode, (https://github.com/seamapi/javascript)`
     }
     this.client = axios.create({
-      withCredentials: clientSessionToken ? true : false,
       ...axiosOptions,
       baseURL: endpoint,
       headers,
@@ -217,15 +216,15 @@ const getAuthHeaders = ({
     if (!clientSessionToken.startsWith("seam_cst")) {
       throw new Error("clientSessionToken must start with seam_cst")
     }
-    return {
-      authorization: `Bearer ${clientSessionToken}`,
-      "client-session-token": clientSessionToken,
-    }
+    return { "client-session-token": clientSessionToken }
   }
 
   if (apiKey) {
     if (apiKey.startsWith("seam_cst")) {
-      throw new Error("You can't use a Client Session Token as an apiKey.")
+      console.warn(
+        "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
+      )
+      return { "client-session-token": apiKey }
     }
     if (!isValueUsedForBearerAuthentication(apiKey) && workspaceId)
       throw new Error(
