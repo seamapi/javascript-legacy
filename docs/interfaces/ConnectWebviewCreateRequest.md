@@ -7,6 +7,7 @@
 ### Properties
 
 - [accepted\_providers](ConnectWebviewCreateRequest.md#accepted_providers)
+- [automatically\_manage\_new\_devices](ConnectWebviewCreateRequest.md#automatically_manage_new_devices)
 - [custom\_metadata](ConnectWebviewCreateRequest.md#custom_metadata)
 - [custom\_redirect\_failure\_url](ConnectWebviewCreateRequest.md#custom_redirect_failure_url)
 - [custom\_redirect\_url](ConnectWebviewCreateRequest.md#custom_redirect_url)
@@ -22,6 +23,16 @@
 #### Defined in
 
 [src/types/route-requests.ts:12](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L12)
+
+___
+
+### automatically\_manage\_new\_devices
+
+• `Optional` **automatically\_manage\_new\_devices**: `boolean`
+
+#### Defined in
+
+[src/types/route-requests.ts:18](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L18)
 
 ___
 

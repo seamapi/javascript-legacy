@@ -15,6 +15,7 @@ export interface ConnectWebviewCreateRequest {
   custom_redirect_url?: string
   custom_redirect_failure_url?: string
   custom_metadata?: CustomMetadata
+  automatically_manage_new_devices?: boolean
 }
 
 export interface ConnectWebviewDeleteRequest {
