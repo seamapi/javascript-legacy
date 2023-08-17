@@ -115,6 +115,7 @@ export type CommonDeviceProperties = {
   manufacturer?: string
   model: {
     display_name: string
+    manufacturer_display_name: string
   }
   online: boolean
   battery?: {
