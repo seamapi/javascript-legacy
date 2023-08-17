@@ -13,6 +13,7 @@ export const LOCK_DEVICE_TYPES = [
   "august_lock",
   "brivo_access_point",
   "butterflymx_panel",
+  "avigilon_alta_entry",
   "doorking_lock",
   "genie_door",
   "igloo_lock",
