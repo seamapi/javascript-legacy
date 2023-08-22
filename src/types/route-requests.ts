@@ -1,7 +1,6 @@
 import { Except } from "type-fest"
 import {
   ClimateSetting,
-  ClimateSettingSchedule,
   ClimateSettingScheduleBase,
   CommonDeviceProperties,
   Provider,
@@ -273,7 +272,7 @@ export type ClimateSettingSchedulesListRequest = {
 
 export type ClimateSettingScheduleGetRequest = {
   climate_setting_schedule_id: string
-  device_id: string
+  device_id?: string
 }
 
 export type ClimateSettingScheduleCreateRequest = ClimateSettingScheduleBase
