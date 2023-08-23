@@ -11,19 +11,26 @@ export interface Workspace {
 export const LOCK_DEVICE_TYPES = [
   "akuvox_lock",
   "august_lock",
-  "brivo_lock",
-  "butterflymx_lock",
+  "brivo_access_point",
+  "butterflymx_panel",
+  "avigilon_alta_entry",
   "doorking_lock",
-  "genie_lock",
+  "genie_door",
   "igloo_lock",
   "linear_lock",
   "lockly_lock",
+  "kwikset_lock",
   "nuki_lock",
   "salto_lock",
   "schlage_lock",
+  "seam_relay",
   "smartthings_lock",
   "yale_lock",
+  "two_n_intercom",
+  "controlbyweb_device",
   "ttlock_lock",
+  "igloohome_lock",
+  "hubitat_lock",
 ]
 export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
 
@@ -32,11 +39,31 @@ export const NOISE_SENSOR_DEVICE_TYPES = [
   "minut_sensor",
 ]
 export type NoiseSensorDeviceType = typeof NOISE_SENSOR_DEVICE_TYPES[number]
-
-export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat"]
-export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
-
 export type NoiseSensorDeviceProperties = CommonDeviceProperties
+
+export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
+export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
+export type ThermostatDeviceProperties = CommonDeviceProperties & {
+  is_cooling: boolean
+  is_heating: boolean
+  is_fan_running: boolean
+  has_direct_power: boolean
+  relative_humidity: number
+  temperature_celsius: number
+  temperature_fahrenheit: number
+  current_climate_setting: {
+    hvac_mode_setting: "off" | "heat" | "cool" | "heatcool"
+    manual_override_allowed: boolean
+    automatic_cooling_enabled: boolean
+    automatic_heating_enabled: boolean
+    cooling_set_point_celsius: number
+    cooling_set_point_fahrenheit: number
+  }
+  available_hvac_mode_settings: ["off", "cool", "heat", "heatcool"]
+  can_enable_automatic_cooling: boolean
+  can_enable_automatic_heating: boolean
+  is_temporary_manual_override_active: boolean
+}
 
 export type DeviceType =
   | LockDeviceType
@@ -89,6 +116,7 @@ export type CommonDeviceProperties = {
   manufacturer?: string
   model: {
     display_name: string
+    manufacturer_display_name: string
   }
   online: boolean
   battery?: {
@@ -129,6 +157,7 @@ export type UnmanagedDevice = Pick<
   Device<CommonDeviceProperties>,
   | "device_id"
   | "device_type"
+  | "capabilities_supported"
   | "connected_account_id"
   | "workspace_id"
   | "errors"
@@ -221,6 +250,10 @@ export type NoiseSensorDevice = Device<
   NoiseSensorDeviceProperties,
   NoiseSensorDeviceType
 >
+export type ThermostatDevice = Device<
+  CommonDeviceProperties,
+  ThermostatDeviceType
+>
 
 export const isLockDevice = (
   device: CommonDevice | LockDevice
@@ -232,6 +265,12 @@ export const isNoiseSensorDevice = (
   device: CommonDevice | NoiseSensorDevice
 ): device is NoiseSensorDevice => {
   return NOISE_SENSOR_DEVICE_TYPES.includes(device.device_type)
+}
+
+export const isThermostatDevice = (
+  device: CommonDevice | ThermostatDevice
+): device is ThermostatDevice => {
+  return THERMOSTAT_DEVICE_TYPES.includes(device.device_type)
 }
 
 export type ActionType =
@@ -399,7 +438,10 @@ export type Event = Flatten<SeamEvent["event_type"]>
 
 export interface ClientSession {
   token: string
+  connected_account_ids: string[]
+  connect_webview_ids: string[]
   client_session_id: string
+  user_identifier_key: string | null
   created_at: string
 }
 

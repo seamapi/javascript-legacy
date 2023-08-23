@@ -17,9 +17,9 @@ import { ClientSessionsResponse } from "../types"
 
 export interface SeamClientOptions {
   /* Seam API Key */
-  apiKey?: string
+  apiKey?: string | null
   /* Seam Client Session Token */
-  clientSessionToken?: string
+  clientSessionToken?: string | null
   /**
    * Seam Endpoint to use, defaults to https://connect.getseam.com
    **/
@@ -38,17 +38,31 @@ export interface SeamClientOptions {
 export const getSeamClientOptionsWithDefaults = (
   apiKeyOrOptions?: string | SeamClientOptions
 ): SeamClientOptions => {
-  const seamClientDefaults = {
-    apiKey: globalThis?.process?.env?.SEAM_API_KEY ?? undefined,
+  const providedOptions =
+    typeof apiKeyOrOptions === "string"
+      ? { apiKey: apiKeyOrOptions }
+      : apiKeyOrOptions ?? {}
+
+  return {
+    apiKey:
+      providedOptions.apiKey === null
+        ? null
+        : providedOptions.apiKey ??
+          globalThis?.process?.env?.SEAM_API_KEY ??
+          null,
     endpoint:
-      globalThis?.process?.env?.SEAM_API_URL ?? "https://connect.getseam.com",
-    workspaceId: globalThis?.process?.env?.SEAM_WORKSPACE_ID ?? undefined,
-  }
-  if (typeof apiKeyOrOptions === "string") {
-    // for both browser and server, if apiKeyOrOptions is a string, use it as the apiKey, and merge with defaults
-    return { ...seamClientDefaults, apiKey: apiKeyOrOptions }
-  } else {
-    return { ...seamClientDefaults, ...apiKeyOrOptions }
+      providedOptions.endpoint ??
+      globalThis?.process?.env?.SEAM_API_URL ??
+      "https://connect.getseam.com",
+    workspaceId:
+      providedOptions.workspaceId ??
+      globalThis?.process?.env?.SEAM_WORKSPACE_ID ??
+      undefined,
+    axiosOptions: providedOptions.axiosOptions ?? {},
+    clientSessionToken:
+      providedOptions.clientSessionToken === null
+        ? null
+        : providedOptions.clientSessionToken ?? null,
   }
 }
 
@@ -79,6 +93,7 @@ export class Seam extends Routes {
       ] = `Javascript SDK v${version}, Node.js mode, (https://github.com/seamapi/javascript)`
     }
     this.client = axios.create({
+      withCredentials: clientSessionToken ? true : false,
       ...axiosOptions,
       baseURL: endpoint,
       headers,
@@ -113,7 +128,7 @@ export class Seam extends Routes {
     if (isEmail(options.userIdentifierKey)) {
       console.warn(`Using an email for the userIdentifierKey!
 This is insecure because an email is common knowledge or easily guessed.
-Use something with sufficient entropy know only to the owner of the client session (like a server-generated UUID).`)
+Use something with sufficient entropy known only to the owner of the client session (like a server-generated UUID).`)
     }
 
     const getKeyHeaders = (): AxiosRequestHeaders => {
@@ -190,8 +205,8 @@ const getAuthHeaders = ({
   apiKey,
   workspaceId,
 }: {
-  clientSessionToken?: string
-  apiKey?: string
+  clientSessionToken?: string | null
+  apiKey?: string | null
   workspaceId?: string
 }): Record<string, string> => {
   if (apiKey && clientSessionToken) {
@@ -202,15 +217,15 @@ const getAuthHeaders = ({
     if (!clientSessionToken.startsWith("seam_cst")) {
       throw new Error("clientSessionToken must start with seam_cst")
     }
-    return { "client-session-token": clientSessionToken }
+    return {
+      authorization: `Bearer ${clientSessionToken}`,
+      "client-session-token": clientSessionToken,
+    }
   }
 
   if (apiKey) {
     if (apiKey.startsWith("seam_cst")) {
-      console.warn(
-        "Using API Key as Client Session Token is deprecated. Please use the clientSessionToken option instead."
-      )
-      return { "client-session-token": apiKey }
+      throw new Error("You can't use a Client Session Token as an apiKey.")
     }
     if (!isValueUsedForBearerAuthentication(apiKey) && workspaceId)
       throw new Error(

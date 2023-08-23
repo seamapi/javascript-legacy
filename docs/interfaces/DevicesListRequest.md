@@ -9,9 +9,11 @@
 - [connect\_webview\_id](DevicesListRequest.md#connect_webview_id)
 - [connected\_account\_id](DevicesListRequest.md#connected_account_id)
 - [connected\_account\_ids](DevicesListRequest.md#connected_account_ids)
+- [created\_before](DevicesListRequest.md#created_before)
 - [device\_ids](DevicesListRequest.md#device_ids)
 - [device\_type](DevicesListRequest.md#device_type)
 - [device\_types](DevicesListRequest.md#device_types)
+- [limit](DevicesListRequest.md#limit)
 - [manufacturer](DevicesListRequest.md#manufacturer)
 
 ## Properties
@@ -22,7 +24,7 @@
 
 #### Defined in
 
-[src/types/route-requests.ts:38](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L38)
+[src/types/route-requests.ts:40](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L40)
 
 ___
 
@@ -32,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:36](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L36)
+[src/types/route-requests.ts:38](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L38)
 
 ___
 
@@ -42,7 +44,17 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:37](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L37)
+[src/types/route-requests.ts:39](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L39)
+
+___
+
+### created\_before
+
+• `Optional` **created\_before**: `string` \| `Date`
+
+#### Defined in
+
+[src/types/route-requests.ts:46](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L46)
 
 ___
 
@@ -52,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:42](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L42)
+[src/types/route-requests.ts:44](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L44)
 
 ___
 
@@ -62,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:39](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L39)
+[src/types/route-requests.ts:41](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L41)
 
 ___
 
@@ -72,7 +84,17 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:40](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L40)
+[src/types/route-requests.ts:42](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L42)
+
+___
+
+### limit
+
+• `Optional` **limit**: `number`
+
+#### Defined in
+
+[src/types/route-requests.ts:45](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L45)
 
 ___
 
@@ -82,4 +104,4 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:41](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L41)
+[src/types/route-requests.ts:43](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L43)

@@ -84,6 +84,9 @@ export interface AccessCodeCreateResponse
   extends AccessCodeGetResponse,
     ActionAttemptGetResponse {}
 
+export interface AccessCodeUpdateResponse
+  extends ActionAttemptCreateResponse<"UPDATE_ACCESS_CODE"> {}
+
 export interface AccessCodeCreateMultipleResponse {
   access_codes: AccessCode[]
 }
@@ -134,15 +137,36 @@ export interface EventsListResponse {
   events: Event[]
 }
 
+export interface EventGetResponse {
+  event: Event
+}
+
 // Noise Thresholds
 export type NoiseThresholdsListResponse = {
   noise_thresholds: NoiseThresholds[]
 }
 
 // Client Sessions
-export type ClientSessionsResponse = {
+
+export type ClientSessionsCreateResponse = {
   client_session: ClientSession
 }
+
+export type ClientSessionsGetResponse = {
+  client_session: ClientSession
+}
+
+export type ClientSessionsListResponse = {
+  client_sessions: Omit<
+    ClientSession,
+    "connected_account_ids" | "connect_webview_ids"
+  >[]
+}
+
+export type ClientSessionsGetOrCreateResponse = ClientSessionsCreateResponse
+
+/** @deprecated use ClientSessionsCreateResponse instead */
+export type ClientSessionsResponse = ClientSessionsCreateResponse
 
 export type DeviceModelsListResponse = {
   device_models: DeviceModel[]

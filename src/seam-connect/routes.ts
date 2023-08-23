@@ -44,6 +44,8 @@ import {
   NoiseThresholdsUpdateRequest,
   ClientSessionsCreateRequest,
   ClientSessionsGetOrCreateRequest,
+  ClientSessionsListRequest,
+  ClientSessionsDeleteRequest,
   UnmanagedAccessCodeConvertToManagedRequest,
   DeviceModelsListRequest,
   ThermostatUpdateRequest,
@@ -53,6 +55,8 @@ import {
   ClimateSettingScheduleDeleteRequest,
   ClimateSettingScheduleUpdateRequest,
   PullBackupAccessCodeRequest,
+  EventGetRequest,
+  ClientSessionsGetRequest,
 } from "../types/route-requests"
 import {
   AccessCodeCreateMultipleResponse,
@@ -81,7 +85,9 @@ import {
   WorkspaceResetSandboxResponse,
   WorkspacesListResponse,
   NoiseThresholdsListResponse,
-  ClientSessionsResponse,
+  ClientSessionsCreateResponse,
+  ClientSessionsGetOrCreateResponse,
+  ClientSessionsListResponse,
   DeviceModelsListResponse,
   ThermostatsListResponse,
   ThermostatGetResponse,
@@ -91,6 +97,9 @@ import {
   ClimateSettingScheduleUpdateResponse,
   PullBackupAccessCodeResponse,
   ClimateSettingScheduleDeleteResponse,
+  AccessCodeUpdateResponse,
+  EventGetResponse,
+  ClientSessionsGetResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -263,6 +272,12 @@ export abstract class Routes {
           since: params?.since ?? new Date(0).toISOString(),
         },
       }),
+
+    get: (params: EventGetRequest) =>
+      this.makeRequestAndFormat<EventGetResponse>("event", {
+        url: "/events/get",
+        params,
+      }),
   }
 
   public readonly connectWebviews = {
@@ -374,16 +389,23 @@ export abstract class Routes {
 
     // We can't narrow the return type here like we do with create because we're given partial input
     update: async (
-      params: AccessCodeUpdateRequest
-    ): Promise<OngoingAccessCode | TimeBoundAccessCode> => {
-      const action =
-        await this.createActionAttemptAndWait<"UPDATE_ACCESS_CODE">({
+      params: AccessCodeUpdateRequest,
+      options?: { waitForCompletion?: boolean }
+    ): Promise<ActionAttempt<"UPDATE_ACCESS_CODE">> => {
+      const action = await this.makeRequestAndFormat<AccessCodeUpdateResponse>(
+        "action_attempt",
+        {
           url: "/access_codes/update",
           method: "POST",
           data: params,
-        })
+        }
+      )
 
-      return action.access_code
+      if (options?.waitForCompletion) {
+        return await this.awaitActionAttempt(action)
+      }
+
+      return action
     },
 
     delete: (params: AccessCodeDeleteRequest) =>
@@ -496,16 +518,40 @@ export abstract class Routes {
   }
 
   public readonly clientSessions = {
-    create: (params: ClientSessionsCreateRequest) =>
-      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
-        url: "/client_sessions/create",
-        method: "POST",
+    create: (data: ClientSessionsCreateRequest) =>
+      this.makeRequestAndFormat<ClientSessionsCreateResponse>(
+        "client_session",
+        {
+          url: "/client_sessions/create",
+          method: "POST",
+          data,
+        }
+      ),
+    get: (params: ClientSessionsGetRequest) =>
+      this.makeRequestAndFormat<ClientSessionsGetResponse>("client_session", {
+        url: "/client_sessions/get",
+        method: "GET",
         params,
       }),
-    getOrCreate: (params: ClientSessionsGetOrCreateRequest) =>
-      this.makeRequestAndFormat<ClientSessionsResponse>("client_session", {
-        url: "/client_sessions/create",
-        method: "PUT",
+    getOrCreate: (data: ClientSessionsGetOrCreateRequest) =>
+      this.makeRequestAndFormat<ClientSessionsGetOrCreateResponse>(
+        "client_session",
+        {
+          url: "/client_sessions/create",
+          method: "PUT",
+          data,
+        }
+      ),
+    list: (params: ClientSessionsListRequest) =>
+      this.makeRequestAndFormat<ClientSessionsListResponse>("client_sessions", {
+        url: "/client_sessions/list",
+        method: "GET",
+        params,
+      }),
+    delete: (params: ClientSessionsDeleteRequest) =>
+      this.makeRequest({
+        url: "/client_sessions/delete",
+        method: "DELETE",
         params,
       }),
   }

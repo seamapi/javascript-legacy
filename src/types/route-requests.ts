@@ -15,6 +15,8 @@ export interface ConnectWebviewCreateRequest {
   custom_redirect_url?: string
   custom_redirect_failure_url?: string
   custom_metadata?: CustomMetadata
+  automatically_manage_new_devices?: boolean
+  wait_for_device_creation?: boolean
 }
 
 export interface ConnectWebviewDeleteRequest {
@@ -40,6 +42,8 @@ export interface DevicesListRequest {
   device_types?: string[]
   manufacturer?: string
   device_ids?: string[]
+  limit?: number
+  created_before?: string | Date
 }
 
 export interface DeviceProvidersListRequest {
@@ -94,12 +98,16 @@ export type AccessCodeUpdateOngoingRequest = Except<
   AccessCodeCreateOngoingRequest,
   "device_id"
 > &
-  AccessCodeUpdateBaseRequest
+  AccessCodeUpdateBaseRequest & {
+    type?: "ongoing"
+  }
 export type AccessCodeUpdateScheduledRequest = Except<
   AccessCodeCreateScheduledRequest,
   "device_id"
 > &
-  AccessCodeUpdateBaseRequest
+  AccessCodeUpdateBaseRequest & {
+    type?: "time_bound"
+  }
 export type AccessCodeUpdateRequest =
   | AccessCodeUpdateOngoingRequest
   | AccessCodeUpdateScheduledRequest
@@ -180,6 +188,10 @@ export type UnmanagedDeviceUpdateRequest = {
   is_managed?: boolean
 }
 
+export interface EventGetRequest {
+  event_id: string
+}
+
 export interface EventsListRequest {
   since?: string | Date
   device_ids?: string[]
@@ -229,7 +241,22 @@ export type ClientSessionsCreateRequest = {
   connected_account_ids?: string[]
 }
 
+export type ClientSessionsListRequest = {
+  client_session_id?: string
+  user_identifier_key?: string
+  without_user_identifier_key?: boolean
+}
+
+export type ClientSessionsDeleteRequest = {
+  client_session_id: string
+}
+
 export type ClientSessionsGetOrCreateRequest = ClientSessionsCreateRequest
+
+export type ClientSessionsGetRequest = {
+  client_session_id?: string
+  user_identifier_key?: string
+}
 
 export type DeviceModelsListRequest = {
   main_category?: string

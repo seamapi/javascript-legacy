@@ -54,7 +54,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/seam-connect/client.ts:58](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L58)
+[src/seam-connect/client.ts:72](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L72)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Routes.constructor
 | `unmanaged.get` | (`params`: [`UnmanagedAccessCodeGetRequest`](../modules.md#unmanagedaccesscodegetrequest)) => `Promise`<[`UnmanagedAccessCode`](../modules.md#unmanagedaccesscode)\> |
 | `unmanaged.list` | (`params`: [`UnmanagedAccessCodesListRequest`](../modules.md#unmanagedaccesscodeslistrequest)) => `Promise`<[`UnmanagedAccessCode`](../modules.md#unmanagedaccesscode)[]\> |
 | `unmanaged.update` | (`params`: [`UnmanagedAccessCodeUpdateRequest`](../modules.md#unmanagedaccesscodeupdaterequest)) => `Promise`<{ `ok`: ``true``  }\> |
-| `update` | (`params`: [`AccessCodeUpdateRequest`](../modules.md#accesscodeupdaterequest)) => `Promise`<[`OngoingAccessCode`](../interfaces/OngoingAccessCode.md) \| [`TimeBoundAccessCode`](../interfaces/TimeBoundAccessCode.md)\> |
+| `update` | (`params`: [`AccessCodeUpdateRequest`](../modules.md#accesscodeupdaterequest), `options?`: { `waitForCompletion?`: `boolean`  }) => `Promise`<[`ActionAttempt`](../modules.md#actionattempt)<``"UPDATE_ACCESS_CODE"``\>\> |
 
 #### Inherited from
 
@@ -86,7 +86,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/seam-connect/routes.ts:300](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L300)
+[src/seam-connect/routes.ts:315](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L315)
 
 ___
 
@@ -106,7 +106,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:432](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L432)
+[src/seam-connect/routes.ts:454](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L454)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:56](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L56)
+[src/seam-connect/client.ts:70](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L70)
 
 ___
 
@@ -128,8 +128,11 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`params`: [`ClientSessionsCreateRequest`](../modules.md#clientsessionscreaterequest)) => `Promise`<[`ClientSession`](../interfaces/ClientSession.md)\> |
-| `getOrCreate` | (`params`: [`ClientSessionsCreateRequest`](../modules.md#clientsessionscreaterequest)) => `Promise`<[`ClientSession`](../interfaces/ClientSession.md)\> |
+| `create` | (`data`: [`ClientSessionsCreateRequest`](../modules.md#clientsessionscreaterequest)) => `Promise`<[`ClientSession`](../interfaces/ClientSession.md)\> |
+| `delete` | (`params`: [`ClientSessionsDeleteRequest`](../modules.md#clientsessionsdeleterequest)) => `Promise`<{ `ok`: ``true``  }\> |
+| `get` | (`params`: [`ClientSessionsGetRequest`](../modules.md#clientsessionsgetrequest)) => `Promise`<[`ClientSession`](../interfaces/ClientSession.md)\> |
+| `getOrCreate` | (`data`: [`ClientSessionsCreateRequest`](../modules.md#clientsessionscreaterequest)) => `Promise`<[`ClientSession`](../interfaces/ClientSession.md)\> |
+| `list` | (`params`: [`ClientSessionsListRequest`](../modules.md#clientsessionslistrequest)) => `Promise`<`Omit`<[`ClientSession`](../interfaces/ClientSession.md), ``"connected_account_ids"`` \| ``"connect_webview_ids"``\>[]\> |
 
 #### Inherited from
 
@@ -137,7 +140,7 @@ Routes.clientSessions
 
 #### Defined in
 
-[src/seam-connect/routes.ts:498](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L498)
+[src/seam-connect/routes.ts:520](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L520)
 
 ___
 
@@ -160,7 +163,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/seam-connect/routes.ts:268](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L268)
+[src/seam-connect/routes.ts:283](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L283)
 
 ___
 
@@ -182,7 +185,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:407](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L407)
+[src/seam-connect/routes.ts:429](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L429)
 
 ___
 
@@ -202,7 +205,7 @@ Routes.deviceModels
 
 #### Defined in
 
-[src/seam-connect/routes.ts:513](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L513)
+[src/seam-connect/routes.ts:559](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L559)
 
 ___
 
@@ -229,7 +232,7 @@ Routes.devices
 
 #### Defined in
 
-[src/seam-connect/routes.ts:209](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L209)
+[src/seam-connect/routes.ts:218](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L218)
 
 ___
 
@@ -241,6 +244,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `get` | (`params`: [`EventGetRequest`](../interfaces/EventGetRequest.md)) => `Promise`<[`Event`](../modules.md#event)\> |
 | `list` | (`params?`: [`EventsListRequest`](../interfaces/EventsListRequest.md)) => `Promise`<[`Event`](../modules.md#event)[]\> |
 
 #### Inherited from
@@ -249,7 +253,7 @@ Routes.events
 
 #### Defined in
 
-[src/seam-connect/routes.ts:256](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L256)
+[src/seam-connect/routes.ts:265](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L265)
 
 ___
 
@@ -272,7 +276,7 @@ Routes.locks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:174](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L174)
+[src/seam-connect/routes.ts:183](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L183)
 
 ___
 
@@ -295,7 +299,7 @@ Routes.noiseThresholds
 
 #### Defined in
 
-[src/seam-connect/routes.ts:442](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L442)
+[src/seam-connect/routes.ts:464](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L464)
 
 ___
 
@@ -309,7 +313,7 @@ ___
 | :------ | :------ |
 | `climateSettingSchedules` | `Object` |
 | `climateSettingSchedules.create` | (`data`: [`ClimateSettingScheduleBase`](../modules.md#climatesettingschedulebase)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)\> |
-| `climateSettingSchedules.delete` | (`params`: [`ClimateSettingScheduleDeleteRequest`](../modules.md#climatesettingscheduledeleterequest)) => `Promise`<[`SuccessfulAPIResponse`](../modules.md#successfulapiresponse)<[`ClimateSettingScheduleDeleteResponse`](../modules.md#climatesettingscheduledeleteresponse)\>\> |
+| `climateSettingSchedules.delete` | (`params`: [`ClimateSettingScheduleDeleteRequest`](../modules.md#climatesettingscheduledeleterequest)) => `Promise`<`never`\> |
 | `climateSettingSchedules.get` | (`params`: [`ClimateSettingScheduleGetRequest`](../modules.md#climatesettingschedulegetrequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)\> |
 | `climateSettingSchedules.list` | (`params`: [`ClimateSettingSchedulesListRequest`](../modules.md#climatesettingscheduleslistrequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)[]\> |
 | `climateSettingSchedules.update` | (`params`: [`ClimateSettingScheduleUpdateRequest`](../modules.md#climatesettingscheduleupdaterequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)\> |
@@ -324,7 +328,7 @@ Routes.thermostats
 
 #### Defined in
 
-[src/seam-connect/routes.ts:533](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L533)
+[src/seam-connect/routes.ts:579](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L579)
 
 ___
 
@@ -347,7 +351,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:473](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L473)
+[src/seam-connect/routes.ts:495](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L495)
 
 ___
 
@@ -369,7 +373,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/seam-connect/routes.ts:158](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L158)
+[src/seam-connect/routes.ts:167](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L167)
 
 ## Methods
 
@@ -399,13 +403,13 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/seam-connect/client.ts:93](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L93)
+[src/seam-connect/client.ts:108](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L108)
 
 ___
 
 ### getClientSessionToken
 
-▸ `Static` **getClientSessionToken**(`options`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionsResponse`](../modules.md#clientsessionsresponse)\>\>
+▸ `Static` **getClientSessionToken**(`options`): `Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionsCreateResponse`](../modules.md#clientsessionscreateresponse)\>\>
 
 #### Parameters
 
@@ -420,8 +424,8 @@ ___
 
 #### Returns
 
-`Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionsResponse`](../modules.md#clientsessionsresponse)\>\>
+`Promise`<[`APIResponse`](../modules.md#apiresponse)<[`ClientSessionsCreateResponse`](../modules.md#clientsessionscreateresponse)\>\>
 
 #### Defined in
 
-[src/seam-connect/client.ts:99](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L99)
+[src/seam-connect/client.ts:114](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L114)

@@ -28,7 +28,7 @@ AccessCodeCreateMultipleBaseRequest.behavior\_when\_code\_cannot\_be\_shared
 
 #### Defined in
 
-[src/types/route-requests.ts:72](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L72)
+[src/types/route-requests.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L76)
 
 ___
 
@@ -42,7 +42,7 @@ AccessCodeCreateMultipleBaseRequest.device\_ids
 
 #### Defined in
 
-[src/types/route-requests.ts:70](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L70)
+[src/types/route-requests.ts:74](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L74)
 
 ___
 
@@ -56,4 +56,4 @@ AccessCodeCreateMultipleBaseRequest.name
 
 #### Defined in
 
-[src/types/route-requests.ts:71](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L71)
+[src/types/route-requests.ts:75](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L75)

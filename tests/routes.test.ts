@@ -287,7 +287,7 @@ test(
     load_devices_from: ["schlage"],
     modifiesState: true,
   },
-  "TimeBoundAccessCode"
+  "ActionAttempt"
 )
 test(
   "scheduled",
@@ -319,7 +319,7 @@ test(
     load_devices_from: ["schlage"],
     modifiesState: true,
   },
-  "AccessCode"
+  "ActionAttempt"
 )
 test(
   "change type to ongoing",
@@ -334,7 +334,7 @@ test(
     load_devices_from: ["schlage"],
     modifiesState: true,
   },
-  "OngoingAccessCode"
+  "ActionAttempt"
 )
 test(testAPIMethod("connectedAccounts.list"), {}, "ConnectedAccount[]")
 test(

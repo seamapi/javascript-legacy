@@ -7,11 +7,13 @@
 ### Properties
 
 - [accepted\_providers](ConnectWebviewCreateRequest.md#accepted_providers)
+- [automatically\_manage\_new\_devices](ConnectWebviewCreateRequest.md#automatically_manage_new_devices)
 - [custom\_metadata](ConnectWebviewCreateRequest.md#custom_metadata)
 - [custom\_redirect\_failure\_url](ConnectWebviewCreateRequest.md#custom_redirect_failure_url)
 - [custom\_redirect\_url](ConnectWebviewCreateRequest.md#custom_redirect_url)
 - [device\_selection\_mode](ConnectWebviewCreateRequest.md#device_selection_mode)
 - [provider\_category](ConnectWebviewCreateRequest.md#provider_category)
+- [wait\_for\_device\_creation](ConnectWebviewCreateRequest.md#wait_for_device_creation)
 
 ## Properties
 
@@ -22,6 +24,16 @@
 #### Defined in
 
 [src/types/route-requests.ts:12](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L12)
+
+___
+
+### automatically\_manage\_new\_devices
+
+• `Optional` **automatically\_manage\_new\_devices**: `boolean`
+
+#### Defined in
+
+[src/types/route-requests.ts:18](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L18)
 
 ___
 
@@ -72,3 +84,13 @@ ___
 #### Defined in
 
 [src/types/route-requests.ts:13](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L13)
+
+___
+
+### wait\_for\_device\_creation
+
+• `Optional` **wait\_for\_device\_creation**: `boolean`
+
+#### Defined in
+
+[src/types/route-requests.ts:19](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L19)
