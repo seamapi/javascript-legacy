@@ -137,6 +137,7 @@
 - [ClimateSettingScheduleBase](modules.md#climatesettingschedulebase)
 - [ClimateSettingScheduleCreateRequest](modules.md#climatesettingschedulecreaterequest)
 - [ClimateSettingScheduleDeleteRequest](modules.md#climatesettingscheduledeleterequest)
+- [ClimateSettingScheduleDeleteResponse](modules.md#climatesettingscheduledeleteresponse)
 - [ClimateSettingScheduleGetRequest](modules.md#climatesettingschedulegetrequest)
 - [ClimateSettingScheduleUpdateRequest](modules.md#climatesettingscheduleupdaterequest)
 - [ClimateSettingSchedulesListRequest](modules.md#climatesettingscheduleslistrequest)
@@ -625,6 +626,16 @@ ___
 #### Defined in
 
 [src/types/route-requests.ts:285](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L285)
+
+___
+
+### ClimateSettingScheduleDeleteResponse
+
+Ƭ **ClimateSettingScheduleDeleteResponse**: `void`
+
+#### Defined in
+
+[src/types/route-responses.ts:200](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L200)
 
 ___
 
