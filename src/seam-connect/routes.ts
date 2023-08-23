@@ -99,6 +99,7 @@ import {
   AccessCodeUpdateResponse,
   EventGetResponse,
   ClientSessionsGetResponse,
+  ClimateSettingScheduleDeleteResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -634,7 +635,9 @@ export abstract class Routes {
             data: params,
           }
         ),
-      delete: async (params: ClimateSettingScheduleDeleteRequest): Promise<ClimateSettingScheduleDeleteResponse> => {
+      delete: async (
+        params: ClimateSettingScheduleDeleteRequest
+      ): Promise<ClimateSettingScheduleDeleteResponse> => {
         await this.makeRequest({
           url: `/thermostats/climate_setting_schedules/delete`,
           method: "DELETE",
