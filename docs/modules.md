@@ -631,7 +631,7 @@ ___
 
 ### ClimateSettingScheduleDeleteResponse
 
-Ƭ **ClimateSettingScheduleDeleteResponse**: ``null``
+Ƭ **ClimateSettingScheduleDeleteResponse**: `void`
 
 #### Defined in
 

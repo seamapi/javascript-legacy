@@ -197,4 +197,4 @@ export interface ClimateSettingScheduleUpdateResponse {
   climate_setting_schedule: ClimateSettingSchedule
 }
 
-export type ClimateSettingScheduleDeleteResponse = null
+export type ClimateSettingScheduleDeleteResponse = void

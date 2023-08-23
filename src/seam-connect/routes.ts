@@ -96,7 +96,6 @@ import {
   ClimateSettingScheduleCreateResponse,
   ClimateSettingScheduleUpdateResponse,
   PullBackupAccessCodeResponse,
-  ClimateSettingScheduleDeleteResponse,
   AccessCodeUpdateResponse,
   EventGetResponse,
   ClientSessionsGetResponse,
@@ -635,12 +634,14 @@ export abstract class Routes {
             data: params,
           }
         ),
-      delete: (params: ClimateSettingScheduleDeleteRequest) =>
-        this.makeRequest<ClimateSettingScheduleDeleteResponse>({
+      delete: async (params: ClimateSettingScheduleDeleteRequest) => {
+        await this.makeRequest({
           url: `/thermostats/climate_setting_schedules/delete`,
           method: "DELETE",
           params,
-        }),
+        })
+        return
+      },
     },
   }
 }
