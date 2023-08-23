@@ -90,6 +90,7 @@ import {
   ClimateSettingScheduleCreateResponse,
   ClimateSettingScheduleUpdateResponse,
   PullBackupAccessCodeResponse,
+  ClimateSettingScheduleDeleteResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -589,7 +590,7 @@ export abstract class Routes {
           }
         ),
       delete: (params: ClimateSettingScheduleDeleteRequest) =>
-        this.makeRequest({
+        this.makeRequest<ClimateSettingScheduleDeleteResponse>({
           url: `/thermostats/climate_setting_schedules/delete`,
           method: "DELETE",
           params,

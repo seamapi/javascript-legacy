@@ -127,6 +127,7 @@
 - [ClimateSettingScheduleBase](modules.md#climatesettingschedulebase)
 - [ClimateSettingScheduleCreateRequest](modules.md#climatesettingschedulecreaterequest)
 - [ClimateSettingScheduleDeleteRequest](modules.md#climatesettingscheduledeleterequest)
+- [ClimateSettingScheduleDeleteResponse](modules.md#climatesettingscheduledeleteresponse)
 - [ClimateSettingScheduleGetRequest](modules.md#climatesettingschedulegetrequest)
 - [ClimateSettingScheduleUpdateRequest](modules.md#climatesettingscheduleupdaterequest)
 - [ClimateSettingSchedulesListRequest](modules.md#climatesettingscheduleslistrequest)
@@ -507,6 +508,16 @@ ___
 #### Defined in
 
 [src/types/route-requests.ts:259](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L259)
+
+___
+
+### ClimateSettingScheduleDeleteResponse
+
+Ƭ **ClimateSettingScheduleDeleteResponse**: `Record`<`string`, `never`\>
+
+#### Defined in
+
+[src/types/route-responses.ts:176](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L176)
 
 ___
 
