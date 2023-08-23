@@ -634,7 +634,7 @@ export abstract class Routes {
             data: params,
           }
         ),
-      delete: async (params: ClimateSettingScheduleDeleteRequest) => {
+      delete: async (params: ClimateSettingScheduleDeleteRequest): Promise<ClimateSettingScheduleDeleteResponse> => {
         await this.makeRequest({
           url: `/thermostats/climate_setting_schedules/delete`,
           method: "DELETE",
