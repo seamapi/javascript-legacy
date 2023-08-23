@@ -173,4 +173,4 @@ export interface ClimateSettingScheduleUpdateResponse {
   climate_setting_schedule: ClimateSettingSchedule
 }
 
-export type ClimateSettingScheduleDeleteResponse = Record<string, never>
+export type ClimateSettingScheduleDeleteResponse = null
