@@ -435,7 +435,6 @@ test(
       {
         climate_setting_schedule_id:
           seed.devices.nest.climateSettingSchedule.climate_setting_schedule_id,
-        device_id: seed.devices.nest.id1,
       },
     ],
   },
