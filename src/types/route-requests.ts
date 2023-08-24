@@ -111,6 +111,10 @@ export type AccessCodeUpdateRequest =
   | AccessCodeUpdateOngoingRequest
   | AccessCodeUpdateScheduledRequest
 
+export type AccessCodeGenerateCodeRequest = {
+  device_id: string
+}
+
 export type AccessCodesListRequest = {
   device_id: string
 }
