@@ -251,7 +251,7 @@ export type NoiseSensorDevice = Device<
   NoiseSensorDeviceType
 >
 export type ThermostatDevice = Device<
-  CommonDeviceProperties,
+  ThermostatDeviceProperties,
   ThermostatDeviceType
 >
 

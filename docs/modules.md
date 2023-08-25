@@ -1088,7 +1088,7 @@ ___
 
 ### ThermostatDevice
 
-Ƭ **ThermostatDevice**: [`Device`](interfaces/Device.md)<[`CommonDeviceProperties`](modules.md#commondeviceproperties), [`ThermostatDeviceType`](modules.md#thermostatdevicetype)\>
+Ƭ **ThermostatDevice**: [`Device`](interfaces/Device.md)<[`ThermostatDeviceProperties`](modules.md#thermostatdeviceproperties), [`ThermostatDeviceType`](modules.md#thermostatdevicetype)\>
 
 #### Defined in
 
