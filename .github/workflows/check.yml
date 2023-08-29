@@ -104,5 +104,7 @@ jobs:
         uses: ./.github/actions/setup
         with:
           node_version: ${{ matrix.node }}
+      - name: Generate types
+        run: npm run build:json-response-schemas
       - name: Typecheck
         run: npm run typecheck
