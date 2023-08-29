@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:81](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L81)
+[src/types/route-responses.ts:84](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L84)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:132](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L132)
+[src/types/route-responses.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L135)
