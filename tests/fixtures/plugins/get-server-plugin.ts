@@ -41,6 +41,7 @@ export type WorkerPublishedMessage = {
     devices: {
       minut: SeedNoiseSensors
       schlageLock: SeedLock
+      unmanagedSchlageLock: SeedLock
       augustLock: SeedLock
       nest: SeedThermostat
     }

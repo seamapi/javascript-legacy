@@ -159,6 +159,15 @@ test(
   },
   "{}"
 )
+test(
+  testAPIMethod("devices.unmanaged.get"),
+  {
+    args: (seed) => [{ device_id: seed.devices.unmanagedSchlageLock.id1 }],
+    load_devices_from: ["schlage"],
+  },
+
+  "UnmanagedDevice"
+)
 test(testAPIMethod("devices.unmanaged.list"), {}, "UnmanagedDevice[]")
 test(testAPIMethod("devices.listDeviceProviders"), {}, "DeviceProvider[]")
 test(
