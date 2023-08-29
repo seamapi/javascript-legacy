@@ -6,7 +6,7 @@ run-name: Semantic Release from ${{ github.ref_name }}
 on:
   push:
     branches:
-      - '**'
+      - "**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
@@ -30,7 +30,7 @@ jobs:
         uses: cycjimmy/semantic-release-action@v3
         with:
           dry_run: true
-          semantic_version: '^19.0.0'
+          semantic_version: "^19.0.0"
   release:
     name: Release version
     runs-on: ubuntu-latest

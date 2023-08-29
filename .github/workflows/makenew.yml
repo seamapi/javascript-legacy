@@ -58,7 +58,7 @@ jobs:
       - name: Replace makenew boilerplate
         run: ./makenew.sh
         env:
-          CI: 'true'
+          CI: "true"
           mk_codeowner: ${{ github.actor }}
           mk_repo: ${{ github.event.inputs.repo }}
           mk_slug: ${{ github.event.inputs.package }}

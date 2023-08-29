@@ -7,7 +7,7 @@ on:
       - main
   pull_request:
     branches:
-      - '**'
+      - "**"
 
 jobs:
   lint:
@@ -18,8 +18,8 @@ jobs:
       fail-fast: false
       matrix:
         node:
-          - '16'
-          - '18'
+          - "16"
+          - "18"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -45,8 +45,8 @@ jobs:
           - macos-latest
           - windows-latest
         node:
-          - '16'
-          - '18'
+          - "16"
+          - "18"
         include:
           - os: ubuntu-latest
             os_name: Linux
@@ -68,7 +68,7 @@ jobs:
         uses: tj-actions/glob@v16
         id: packages
         with:
-          files: '*.tgz'
+          files: "*.tgz"
       - name: Create package.json
         uses: DamianReeves/write-file-action@v1.2
         with:
@@ -95,8 +95,8 @@ jobs:
       fail-fast: false
       matrix:
         node:
-          - '16'
-          - '18'
+          - "16"
+          - "18"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
