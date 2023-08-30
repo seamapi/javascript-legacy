@@ -115,6 +115,7 @@
     "generate": "npm run build:docs",
     "pregenerate": "npm run build:json-response-schemas",
     "lint": "prettier --check .",
+    "postversion": "git push --follow-tags",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "DEBUG=testcontainers* && npm run build:json-response-schemas && ava",
