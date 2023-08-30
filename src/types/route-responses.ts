@@ -50,6 +50,9 @@ export interface DeviceGetResponse {
 }
 
 // Unmanaged Devices
+export interface UnmanagedDeviceGetResponse {
+  device: UnmanagedDevice
+}
 export interface UnmanagedDeviceListResponse {
   devices: UnmanagedDevice[]
 }

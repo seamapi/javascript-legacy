@@ -92,6 +92,7 @@
 - [UnmanagedAccessCodeBase](interfaces/UnmanagedAccessCodeBase.md)
 - [UnmanagedAccessCodesGetResponse](interfaces/UnmanagedAccessCodesGetResponse.md)
 - [UnmanagedAccessCodesListResponse](interfaces/UnmanagedAccessCodesListResponse.md)
+- [UnmanagedDeviceGetResponse](interfaces/UnmanagedDeviceGetResponse.md)
 - [UnmanagedDeviceListResponse](interfaces/UnmanagedDeviceListResponse.md)
 - [UnmanagedOngoingAccessCode](interfaces/UnmanagedOngoingAccessCode.md)
 - [UnmanagedTimeBoundAccessCode](interfaces/UnmanagedTimeBoundAccessCode.md)
@@ -331,7 +332,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:90](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L90)
+[src/types/route-responses.ts:93](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L93)
 
 ___
 
@@ -477,7 +478,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:158](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L158)
+[src/types/route-responses.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L161)
 
 ___
 
@@ -513,7 +514,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:173](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L173)
+[src/types/route-responses.ts:176](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L176)
 
 ___
 
@@ -546,7 +547,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L162)
+[src/types/route-responses.ts:165](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L165)
 
 ___
 
@@ -580,7 +581,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:166](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L166)
+[src/types/route-responses.ts:169](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L169)
 
 ___
 
@@ -592,7 +593,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:176](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L176)
+[src/types/route-responses.ts:179](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L179)
 
 ___
 
@@ -671,7 +672,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:207](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L207)
+[src/types/route-responses.ts:210](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L210)
 
 ___
 
@@ -838,7 +839,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:178](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L178)
+[src/types/route-responses.ts:181](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L181)
 
 ___
 
@@ -1032,7 +1033,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:152](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L152)
+[src/types/route-responses.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L155)
 
 ___
 

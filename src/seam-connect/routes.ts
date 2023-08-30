@@ -102,6 +102,7 @@ import {
   EventGetResponse,
   ClientSessionsGetResponse,
   ClimateSettingScheduleDeleteResponse,
+  UnmanagedDeviceGetResponse,
 } from "../types/route-responses"
 
 export abstract class Routes {
@@ -219,6 +220,11 @@ export abstract class Routes {
 
   public readonly devices = {
     unmanaged: {
+      get: (params: DeviceGetRequest) =>
+        this.makeRequestAndFormat<UnmanagedDeviceGetResponse>("device", {
+          url: "/devices/unmanaged/get",
+          params,
+        }),
       list: (params: DevicesListRequest) =>
         this.makeRequestAndFormat<UnmanagedDeviceListResponse>("devices", {
           url: "/devices/unmanaged/list",

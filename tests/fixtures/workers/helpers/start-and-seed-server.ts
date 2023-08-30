@@ -110,11 +110,15 @@ const startAndSeedServer = async (
     augustLock?: Awaited<ReturnType<typeof addFakeAugustDevices>>
     minut?: Awaited<ReturnType<typeof addFakeMinutDevices>>
     schlageLock?: Awaited<ReturnType<typeof addFakeSchlageDevices>>
+    unmanagedSchlageLock?: Awaited<ReturnType<typeof addFakeSchlageDevices>>
     nest?: Awaited<ReturnType<typeof addFakeNestDevices>>
   } = {}
 
   if (load_devices_from.includes("schlage")) {
     devices["schlageLock"] = await addFakeSchlageDevices(axios)
+    devices["unmanagedSchlageLock"] = await addFakeSchlageDevices(axios, {
+      add_unmanaged_devices: true,
+    })
   }
 
   if (load_devices_from.includes("august")) {
