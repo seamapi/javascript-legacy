@@ -125,5 +125,7 @@
     "seamapi": "./dist/cli/entry.js",
     "seam": "./dist/cli/entry.js"
   },
-  "repository": "https://github.com/seamapi/javascript"
+  "homepage": "https://github.com/seamapi/javascript",
+  "bugs": "https://github.com/seamapi/javascript/issues",
+  "repository": "seamapi/javascript"
 }
