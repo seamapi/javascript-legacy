@@ -90,6 +90,13 @@ export interface AccessCodeCreateResponse
 export interface AccessCodeUpdateResponse
   extends ActionAttemptCreateResponse<"UPDATE_ACCESS_CODE"> {}
 
+export type AccessCodeGenerateCodeResponse = {
+  generated_code: {
+    device_id: string
+    code: string
+  }
+}
+
 export interface AccessCodeCreateMultipleResponse {
   access_codes: AccessCode[]
 }

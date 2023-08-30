@@ -11,6 +11,7 @@ import {
   TimeBoundAccessCode,
 } from "../types/models"
 import {
+  AccessCodeGenerateCodeRequest,
   AccessCodeCreateMultipleOngoingRequest,
   AccessCodeCreateMultipleRequest,
   AccessCodeCreateMultipleScheduledRequest,
@@ -59,6 +60,7 @@ import {
   ClientSessionsGetRequest,
 } from "../types/route-requests"
 import {
+  AccessCodeGenerateCodeResponse,
   AccessCodeCreateMultipleResponse,
   AccessCodeCreateResponse,
   AccessCodeGetResponse,
@@ -392,6 +394,16 @@ export abstract class Routes {
         TimeBoundAccessCode[]
       >
     },
+
+    generateCode: async (params: AccessCodeGenerateCodeRequest) =>
+      this.makeRequestAndFormat<AccessCodeGenerateCodeResponse>(
+        "generated_code",
+        {
+          url: "/access_codes/generate_code",
+          method: "GET",
+          data: params,
+        }
+      ),
 
     // We can't narrow the return type here like we do with create because we're given partial input
     update: async (
