@@ -115,6 +115,7 @@
     "generate": "npm run build:docs",
     "pregenerate": "npm run build:json-response-schemas",
     "lint": "prettier --check .",
+    "postversion": "git push --follow-tags",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "DEBUG=testcontainers* && npm run build:json-response-schemas && ava",
@@ -125,5 +126,7 @@
     "seamapi": "./dist/cli/entry.js",
     "seam": "./dist/cli/entry.js"
   },
-  "repository": "https://github.com/seamapi/javascript"
+  "homepage": "https://github.com/seamapi/javascript",
+  "bugs": "https://github.com/seamapi/javascript/issues",
+  "repository": "seamapi/javascript"
 }
