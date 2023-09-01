@@ -44,7 +44,7 @@ export type NoiseSensorDeviceProperties = CommonDeviceProperties
 export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
 export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
 
-type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
+export type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
 
 export type ClimateSetting = {
   automatic_heating_enabled?: boolean
@@ -56,7 +56,7 @@ export type ClimateSetting = {
   heating_set_point_fahrenheit?: number
   manual_override_allowed: boolean
 }
-interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
+export interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
   temperature_fahrenheit: number
   temperature_celsius: number
   relative_humidity: number // [0,1]
@@ -75,7 +75,7 @@ interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
   is_heating_available: false
 }
 
-type CoolingThermostatProperties = BaseThermostatDeviceProperties & {
+export type CoolingThermostatProperties = BaseThermostatDeviceProperties & {
   is_cooling_available: true
   min_cooling_set_point_celsius: number
   min_cooling_set_point_fahrenheit: number
@@ -83,7 +83,7 @@ type CoolingThermostatProperties = BaseThermostatDeviceProperties & {
   max_cooling_set_point_fahrenheit: number
 }
 
-type HeatingThermostatProperties = BaseThermostatDeviceProperties & {
+export type HeatingThermostatProperties = BaseThermostatDeviceProperties & {
   is_heating_available: true
   min_heating_set_point_celsius: number
   min_heating_set_point_fahrenheit: number
@@ -91,7 +91,7 @@ type HeatingThermostatProperties = BaseThermostatDeviceProperties & {
   max_heating_set_point_fahrenheit: number
 }
 
-type HeatCoolThermostatProperties = BaseThermostatDeviceProperties &
+export type HeatCoolThermostatProperties = BaseThermostatDeviceProperties &
   CoolingThermostatProperties &
   HeatingThermostatProperties & {
     min_heating_cooling_delta_celsius: number

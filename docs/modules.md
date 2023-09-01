@@ -41,6 +41,7 @@
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
+- [BaseThermostatDeviceProperties](interfaces/BaseThermostatDeviceProperties.md)
 - [ClientSession](interfaces/ClientSession.md)
 - [ClimateSettingScheduleCreateResponse](interfaces/ClimateSettingScheduleCreateResponse.md)
 - [ClimateSettingScheduleGetResponse](interfaces/ClimateSettingScheduleGetResponse.md)
@@ -146,6 +147,7 @@
 - [ClimateSettingSchedulesListRequest](modules.md#climatesettingscheduleslistrequest)
 - [CommonDevice](modules.md#commondevice)
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
+- [CoolingThermostatProperties](modules.md#coolingthermostatproperties)
 - [CustomMetadata](modules.md#custommetadata)
 - [DeviceDeleteRequest](modules.md#devicedeleterequest)
 - [DeviceGetRequest](modules.md#devicegetrequest)
@@ -155,6 +157,9 @@
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [Event](modules.md#event)
+- [HeatCoolThermostatProperties](modules.md#heatcoolthermostatproperties)
+- [HeatingThermostatProperties](modules.md#heatingthermostatproperties)
+- [HvacModeSetting](modules.md#hvacmodesetting)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
@@ -611,7 +616,7 @@ ___
 | `cooling_set_point_fahrenheit?` | `number` |
 | `heating_set_point_celsius?` | `number` |
 | `heating_set_point_fahrenheit?` | `number` |
-| `hvac_mode_setting?` | `HvacModeSetting` |
+| `hvac_mode_setting?` | [`HvacModeSetting`](modules.md#hvacmodesetting) |
 | `manual_override_allowed` | `boolean` |
 
 #### Defined in
@@ -755,6 +760,16 @@ ___
 
 ___
 
+### CoolingThermostatProperties
+
+Ƭ **CoolingThermostatProperties**: [`BaseThermostatDeviceProperties`](interfaces/BaseThermostatDeviceProperties.md) & { `is_cooling_available`: ``true`` ; `max_cooling_set_point_celsius`: `number` ; `max_cooling_set_point_fahrenheit`: `number` ; `min_cooling_set_point_celsius`: `number` ; `min_cooling_set_point_fahrenheit`: `number`  }
+
+#### Defined in
+
+[src/types/models.ts:78](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L78)
+
+___
+
 ### CustomMetadata
 
 Ƭ **CustomMetadata**: `Record`<`string`, `string` \| `number` \| `boolean` \| ``null``\>
@@ -880,6 +895,36 @@ ___
 #### Defined in
 
 [src/types/models.ts:475](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L475)
+
+___
+
+### HeatCoolThermostatProperties
+
+Ƭ **HeatCoolThermostatProperties**: [`BaseThermostatDeviceProperties`](interfaces/BaseThermostatDeviceProperties.md) & [`CoolingThermostatProperties`](modules.md#coolingthermostatproperties) & [`HeatingThermostatProperties`](modules.md#heatingthermostatproperties) & { `min_heating_cooling_delta_celsius`: `number` ; `min_heating_cooling_delta_fahrenheit`: `number`  }
+
+#### Defined in
+
+[src/types/models.ts:94](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L94)
+
+___
+
+### HeatingThermostatProperties
+
+Ƭ **HeatingThermostatProperties**: [`BaseThermostatDeviceProperties`](interfaces/BaseThermostatDeviceProperties.md) & { `is_heating_available`: ``true`` ; `max_heating_set_point_celsius`: `number` ; `max_heating_set_point_fahrenheit`: `number` ; `min_heating_set_point_celsius`: `number` ; `min_heating_set_point_fahrenheit`: `number`  }
+
+#### Defined in
+
+[src/types/models.ts:86](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L86)
+
+___
+
+### HvacModeSetting
+
+Ƭ **HvacModeSetting**: ``"off"`` \| ``"heat"`` \| ``"cool"`` \| ``"heat_cool"``
+
+#### Defined in
+
+[src/types/models.ts:47](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L47)
 
 ___
 
@@ -1135,7 +1180,7 @@ ___
 
 ### ThermostatDeviceProperties
 
-Ƭ **ThermostatDeviceProperties**: `CoolingThermostatProperties` \| `HeatingThermostatProperties` \| `HeatCoolThermostatProperties`
+Ƭ **ThermostatDeviceProperties**: [`CoolingThermostatProperties`](modules.md#coolingthermostatproperties) \| [`HeatingThermostatProperties`](modules.md#heatingthermostatproperties) \| [`HeatCoolThermostatProperties`](modules.md#heatcoolthermostatproperties)
 
 #### Defined in
 
