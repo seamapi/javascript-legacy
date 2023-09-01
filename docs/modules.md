@@ -41,6 +41,7 @@
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
+- [BaseThermostatDeviceProperties](interfaces/BaseThermostatDeviceProperties.md)
 - [ClientSession](interfaces/ClientSession.md)
 - [ClimateSettingScheduleCreateResponse](interfaces/ClimateSettingScheduleCreateResponse.md)
 - [ClimateSettingScheduleGetResponse](interfaces/ClimateSettingScheduleGetResponse.md)
@@ -86,7 +87,6 @@
 - [SeamOSClientOptions](interfaces/SeamOSClientOptions.md)
 - [SeamWarning](interfaces/SeamWarning.md)
 - [SuccessfulActionAttempt](interfaces/SuccessfulActionAttempt.md)
-- [ThermostatDeviceProperties](interfaces/ThermostatDeviceProperties.md)
 - [ThermostatGetResponse](interfaces/ThermostatGetResponse.md)
 - [ThermostatsListResponse](interfaces/ThermostatsListResponse.md)
 - [TimeBoundAccessCode](interfaces/TimeBoundAccessCode.md)
@@ -147,6 +147,7 @@
 - [ClimateSettingSchedulesListRequest](modules.md#climatesettingscheduleslistrequest)
 - [CommonDevice](modules.md#commondevice)
 - [CommonDeviceProperties](modules.md#commondeviceproperties)
+- [CoolingThermostatProperties](modules.md#coolingthermostatproperties)
 - [CustomMetadata](modules.md#custommetadata)
 - [DeviceDeleteRequest](modules.md#devicedeleterequest)
 - [DeviceGetRequest](modules.md#devicegetrequest)
@@ -156,6 +157,8 @@
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [Event](modules.md#event)
+- [HeatCoolThermostatProperties](modules.md#heatcoolthermostatproperties)
+- [HeatingThermostatProperties](modules.md#heatingthermostatproperties)
 - [HvacModeSetting](modules.md#hvacmodesetting)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
@@ -175,6 +178,7 @@
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
 - [ThermostatDevice](modules.md#thermostatdevice)
+- [ThermostatDeviceProperties](modules.md#thermostatdeviceproperties)
 - [ThermostatDeviceType](modules.md#thermostatdevicetype)
 - [ThermostatUpdateRequest](modules.md#thermostatupdaterequest)
 - [UnmanagedAccessCode](modules.md#unmanagedaccesscode)
@@ -234,7 +238,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:385](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L385)
+[src/types/models.ts:420](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L420)
 
 ___
 
@@ -244,7 +248,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:196](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L196)
+[src/types/models.ts:231](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L231)
 
 ___
 
@@ -413,7 +417,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:324](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L324)
+[src/types/models.ts:359](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L359)
 
 ___
 
@@ -423,7 +427,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:279](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L279)
+[src/types/models.ts:314](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L314)
 
 ___
 
@@ -435,7 +439,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:248](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L248)
+[src/types/models.ts:283](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L283)
 
 ___
 
@@ -445,7 +449,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:115](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L115)
+[src/types/models.ts:150](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L150)
 
 ___
 
@@ -617,7 +621,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:475](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L475)
+[src/types/models.ts:49](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L49)
 
 ___
 
@@ -627,7 +631,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:494](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L494)
+[src/types/models.ts:518](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L518)
 
 ___
 
@@ -637,7 +641,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:486](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L486)
+[src/types/models.ts:510](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L510)
 
 ___
 
@@ -726,7 +730,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:250](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L250)
+[src/types/models.ts:285](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L285)
 
 ___
 
@@ -752,7 +756,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:117](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L117)
+[src/types/models.ts:152](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L152)
+
+___
+
+### CoolingThermostatProperties
+
+Ƭ **CoolingThermostatProperties**: [`BaseThermostatDeviceProperties`](interfaces/BaseThermostatDeviceProperties.md) & { `is_cooling_available`: ``true`` ; `max_cooling_set_point_celsius`: `number` ; `max_cooling_set_point_fahrenheit`: `number` ; `min_cooling_set_point_celsius`: `number` ; `min_cooling_set_point_fahrenheit`: `number`  }
+
+#### Defined in
+
+[src/types/models.ts:78](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L78)
 
 ___
 
@@ -805,7 +819,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:133](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L133)
+[src/types/models.ts:168](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L168)
 
 ___
 
@@ -850,7 +864,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:71](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L71)
+[src/types/models.ts:106](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L106)
 
 ___
 
@@ -880,7 +894,27 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:440](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L440)
+[src/types/models.ts:475](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L475)
+
+___
+
+### HeatCoolThermostatProperties
+
+Ƭ **HeatCoolThermostatProperties**: [`BaseThermostatDeviceProperties`](interfaces/BaseThermostatDeviceProperties.md) & [`CoolingThermostatProperties`](modules.md#coolingthermostatproperties) & [`HeatingThermostatProperties`](modules.md#heatingthermostatproperties) & { `min_heating_cooling_delta_celsius`: `number` ; `min_heating_cooling_delta_fahrenheit`: `number`  }
+
+#### Defined in
+
+[src/types/models.ts:94](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L94)
+
+___
+
+### HeatingThermostatProperties
+
+Ƭ **HeatingThermostatProperties**: [`BaseThermostatDeviceProperties`](interfaces/BaseThermostatDeviceProperties.md) & { `is_heating_available`: ``true`` ; `max_heating_set_point_celsius`: `number` ; `max_heating_set_point_fahrenheit`: `number` ; `min_heating_set_point_celsius`: `number` ; `min_heating_set_point_fahrenheit`: `number`  }
+
+#### Defined in
+
+[src/types/models.ts:86](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L86)
 
 ___
 
@@ -900,7 +934,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:251](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L251)
+[src/types/models.ts:286](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L286)
 
 ___
 
@@ -922,7 +956,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:79](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L79)
+[src/types/models.ts:114](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L114)
 
 ___
 
@@ -932,7 +966,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:252](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L252)
+[src/types/models.ts:287](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L287)
 
 ___
 
@@ -974,7 +1008,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:451](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L451)
+[src/types/models.ts:486](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L486)
 
 ___
 
@@ -1076,7 +1110,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:100](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L100)
+[src/types/models.ts:135](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L135)
 
 ___
 
@@ -1088,7 +1122,7 @@ This type can allow for other provider categories as they are added
 
 #### Defined in
 
-[src/types/models.ts:103](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L103)
+[src/types/models.ts:138](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L138)
 
 ___
 
@@ -1136,11 +1170,21 @@ ___
 
 ### ThermostatDevice
 
-Ƭ **ThermostatDevice**: [`Device`](interfaces/Device.md)<[`ThermostatDeviceProperties`](interfaces/ThermostatDeviceProperties.md), [`ThermostatDeviceType`](modules.md#thermostatdevicetype)\>
+Ƭ **ThermostatDevice**: [`Device`](interfaces/Device.md)<[`ThermostatDeviceProperties`](modules.md#thermostatdeviceproperties), [`ThermostatDeviceType`](modules.md#thermostatdevicetype)\>
 
 #### Defined in
 
-[src/types/models.ts:256](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L256)
+[src/types/models.ts:291](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L291)
+
+___
+
+### ThermostatDeviceProperties
+
+Ƭ **ThermostatDeviceProperties**: [`CoolingThermostatProperties`](modules.md#coolingthermostatproperties) \| [`HeatingThermostatProperties`](modules.md#heatingthermostatproperties) \| [`HeatCoolThermostatProperties`](modules.md#heatcoolthermostatproperties)
+
+#### Defined in
+
+[src/types/models.ts:101](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L101)
 
 ___
 
@@ -1178,7 +1222,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:401](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L401)
+[src/types/models.ts:436](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L436)
 
 ___
 
@@ -1272,7 +1316,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:159](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L159)
+[src/types/models.ts:194](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L194)
 
 ___
 
@@ -1343,7 +1387,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:77](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L77)
+[src/types/models.ts:112](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L112)
 
 ___
 
@@ -1363,7 +1407,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:81](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L81)
+[src/types/models.ts:116](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L116)
 
 ___
 
@@ -1433,7 +1477,7 @@ device is LockDevice
 
 #### Defined in
 
-[src/types/models.ts:261](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L261)
+[src/types/models.ts:296](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L296)
 
 ___
 
@@ -1453,7 +1497,7 @@ device is NoiseSensorDevice
 
 #### Defined in
 
-[src/types/models.ts:267](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L267)
+[src/types/models.ts:302](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L302)
 
 ___
 
@@ -1473,4 +1517,4 @@ device is ThermostatDevice
 
 #### Defined in
 
-[src/types/models.ts:273](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L273)
+[src/types/models.ts:308](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L308)
