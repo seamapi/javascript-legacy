@@ -62,6 +62,14 @@ export interface ThermostatDeviceProperties extends CommonDeviceProperties {
     cooling_set_point_celsius: number
     cooling_set_point_fahrenheit: number
   }
+  default_climate_setting?: {
+    hvac_mode_setting: HvacModeSetting
+    manual_override_allowed: boolean
+    automatic_cooling_enabled: boolean
+    automatic_heating_enabled: boolean
+    cooling_set_point_celsius: number
+    cooling_set_point_fahrenheit: number
+  }
   available_hvac_mode_settings: HvacModeSetting[]
   can_enable_automatic_cooling: boolean
   can_enable_automatic_heating: boolean
