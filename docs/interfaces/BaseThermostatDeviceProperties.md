@@ -23,10 +23,8 @@
 - [image\_url](BaseThermostatDeviceProperties.md#image_url)
 - [is\_climate\_setting\_schedule\_active](BaseThermostatDeviceProperties.md#is_climate_setting_schedule_active)
 - [is\_cooling](BaseThermostatDeviceProperties.md#is_cooling)
-- [is\_cooling\_available](BaseThermostatDeviceProperties.md#is_cooling_available)
 - [is\_fan\_running](BaseThermostatDeviceProperties.md#is_fan_running)
 - [is\_heating](BaseThermostatDeviceProperties.md#is_heating)
-- [is\_heating\_available](BaseThermostatDeviceProperties.md#is_heating_available)
 - [is\_temporary\_manual\_override\_active](BaseThermostatDeviceProperties.md#is_temporary_manual_override_active)
 - [manufacturer](BaseThermostatDeviceProperties.md#manufacturer)
 - [model](BaseThermostatDeviceProperties.md#model)
@@ -75,7 +73,7 @@ CommonDeviceProperties.battery
 
 #### Defined in
 
-[src/types/models.ts:160](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L160)
+[src/types/models.ts:158](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L158)
 
 ___
 
@@ -129,7 +127,7 @@ CommonDeviceProperties.image\_alt\_text
 
 #### Defined in
 
-[src/types/models.ts:165](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L165)
+[src/types/models.ts:163](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L163)
 
 ___
 
@@ -143,7 +141,7 @@ CommonDeviceProperties.image\_url
 
 #### Defined in
 
-[src/types/models.ts:164](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L164)
+[src/types/models.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L162)
 
 ___
 
@@ -167,16 +165,6 @@ ___
 
 ___
 
-### is\_cooling\_available
-
-• **is\_cooling\_available**: ``false``
-
-#### Defined in
-
-[src/types/models.ts:74](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L74)
-
-___
-
 ### is\_fan\_running
 
 • **is\_fan\_running**: `boolean`
@@ -194,16 +182,6 @@ ___
 #### Defined in
 
 [src/types/models.ts:66](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L66)
-
-___
-
-### is\_heating\_available
-
-• **is\_heating\_available**: ``false``
-
-#### Defined in
-
-[src/types/models.ts:75](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L75)
 
 ___
 
@@ -227,7 +205,7 @@ CommonDeviceProperties.manufacturer
 
 #### Defined in
 
-[src/types/models.ts:154](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L154)
+[src/types/models.ts:152](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L152)
 
 ___
 
@@ -248,7 +226,7 @@ CommonDeviceProperties.model
 
 #### Defined in
 
-[src/types/models.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L155)
+[src/types/models.ts:153](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L153)
 
 ___
 
@@ -262,7 +240,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:153](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L153)
+[src/types/models.ts:151](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L151)
 
 ___
 
@@ -276,7 +254,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:159](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L159)
+[src/types/models.ts:157](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L157)
 
 ___
 

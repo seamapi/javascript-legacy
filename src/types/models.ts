@@ -71,8 +71,6 @@ export interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
   default_climate_setting?: ClimateSetting
   is_climate_setting_schedule_active: boolean
   active_climate_setting_schedule?: ClimateSettingSchedule
-  is_cooling_available: false
-  is_heating_available: false
 }
 
 export type CoolingThermostatProperties = BaseThermostatDeviceProperties & {
