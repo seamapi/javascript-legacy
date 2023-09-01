@@ -17,6 +17,7 @@
 - [can\_enable\_automatic\_cooling](ThermostatDeviceProperties.md#can_enable_automatic_cooling)
 - [can\_enable\_automatic\_heating](ThermostatDeviceProperties.md#can_enable_automatic_heating)
 - [current\_climate\_setting](ThermostatDeviceProperties.md#current_climate_setting)
+- [default\_climate\_setting](ThermostatDeviceProperties.md#default_climate_setting)
 - [has\_direct\_power](ThermostatDeviceProperties.md#has_direct_power)
 - [image\_alt\_text](ThermostatDeviceProperties.md#image_alt_text)
 - [image\_url](ThermostatDeviceProperties.md#image_url)
@@ -40,7 +41,7 @@
 
 #### Defined in
 
-[src/types/models.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L65)
+[src/types/models.ts:73](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L73)
 
 ___
 
@@ -61,7 +62,7 @@ CommonDeviceProperties.battery
 
 #### Defined in
 
-[src/types/models.ts:125](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L125)
+[src/types/models.ts:133](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L133)
 
 ___
 
@@ -71,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:66](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L66)
+[src/types/models.ts:74](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L74)
 
 ___
 
@@ -81,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:67](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L67)
+[src/types/models.ts:75](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L75)
 
 ___
 
@@ -106,6 +107,27 @@ ___
 
 ___
 
+### default\_climate\_setting
+
+• `Optional` **default\_climate\_setting**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `automatic_cooling_enabled` | `boolean` |
+| `automatic_heating_enabled` | `boolean` |
+| `cooling_set_point_celsius` | `number` |
+| `cooling_set_point_fahrenheit` | `number` |
+| `hvac_mode_setting` | [`HvacModeSetting`](../modules.md#hvacmodesetting) |
+| `manual_override_allowed` | `boolean` |
+
+#### Defined in
+
+[src/types/models.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L65)
+
+___
+
 ### has\_direct\_power
 
 • **has\_direct\_power**: `boolean`
@@ -126,7 +148,7 @@ CommonDeviceProperties.image\_alt\_text
 
 #### Defined in
 
-[src/types/models.ts:130](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L130)
+[src/types/models.ts:138](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L138)
 
 ___
 
@@ -140,7 +162,7 @@ CommonDeviceProperties.image\_url
 
 #### Defined in
 
-[src/types/models.ts:129](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L129)
+[src/types/models.ts:137](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L137)
 
 ___
 
@@ -180,7 +202,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:68](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L68)
+[src/types/models.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L76)
 
 ___
 
@@ -194,7 +216,7 @@ CommonDeviceProperties.manufacturer
 
 #### Defined in
 
-[src/types/models.ts:119](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L119)
+[src/types/models.ts:127](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L127)
 
 ___
 
@@ -215,7 +237,7 @@ CommonDeviceProperties.model
 
 #### Defined in
 
-[src/types/models.ts:120](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L120)
+[src/types/models.ts:128](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L128)
 
 ___
 
@@ -229,7 +251,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:118](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L118)
+[src/types/models.ts:126](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L126)
 
 ___
 
@@ -243,7 +265,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:124](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L124)
+[src/types/models.ts:132](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L132)
 
 ___
 
