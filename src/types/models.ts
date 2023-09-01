@@ -43,7 +43,10 @@ export type NoiseSensorDeviceProperties = CommonDeviceProperties
 
 export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
 export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
-export type ThermostatDeviceProperties = CommonDeviceProperties & {
+
+export type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
+
+export interface ThermostatDeviceProperties extends CommonDeviceProperties {
   is_cooling: boolean
   is_heating: boolean
   is_fan_running: boolean
@@ -52,14 +55,14 @@ export type ThermostatDeviceProperties = CommonDeviceProperties & {
   temperature_celsius: number
   temperature_fahrenheit: number
   current_climate_setting: {
-    hvac_mode_setting: "off" | "heat" | "cool" | "heatcool"
+    hvac_mode_setting: HvacModeSetting
     manual_override_allowed: boolean
     automatic_cooling_enabled: boolean
     automatic_heating_enabled: boolean
     cooling_set_point_celsius: number
     cooling_set_point_fahrenheit: number
   }
-  available_hvac_mode_settings: ["off", "cool", "heat", "heatcool"]
+  available_hvac_mode_settings: HvacModeSetting[]
   can_enable_automatic_cooling: boolean
   can_enable_automatic_heating: boolean
   is_temporary_manual_override_active: boolean
@@ -472,7 +475,7 @@ export interface DeviceModel {
 export type ClimateSetting = {
   automatic_heating_enabled?: boolean
   automatic_cooling_enabled?: boolean
-  hvac_mode_setting?: "off" | "heat" | "cool" | "heatcool"
+  hvac_mode_setting?: HvacModeSetting
   cooling_set_point_celsius?: number
   heating_set_point_celsius?: number
   cooling_set_point_fahrenheit?: number
