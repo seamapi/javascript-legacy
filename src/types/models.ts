@@ -44,6 +44,8 @@ export type NoiseSensorDeviceProperties = CommonDeviceProperties
 export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
 export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
 
+type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
+
 export type ClimateSetting = {
   automatic_heating_enabled?: boolean
   automatic_cooling_enabled?: boolean
@@ -54,9 +56,6 @@ export type ClimateSetting = {
   heating_set_point_fahrenheit?: number
   manual_override_allowed: boolean
 }
-
-type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
-
 interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
   temperature_fahrenheit: number
   temperature_celsius: number
