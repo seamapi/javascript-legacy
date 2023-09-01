@@ -36,7 +36,7 @@
 
 ### available\_hvac\_mode\_settings
 
-• **available\_hvac\_mode\_settings**: [``"off"``, ``"cool"``, ``"heat"``, ``"heatcool"``]
+• **available\_hvac\_mode\_settings**: [``"off"``, ``"cool"``, ``"heat"``, ``"heat_cool"``]
 
 #### Defined in
 
@@ -97,7 +97,7 @@ ___
 | `automatic_heating_enabled` | `boolean` |
 | `cooling_set_point_celsius` | `number` |
 | `cooling_set_point_fahrenheit` | `number` |
-| `hvac_mode_setting` | ``"off"`` \| ``"heat"`` \| ``"cool"`` \| ``"heatcool"`` |
+| `hvac_mode_setting` | ``"off"`` \| ``"heat"`` \| ``"cool"`` \| ``"heat_cool"`` |
 | `manual_override_allowed` | `boolean` |
 
 #### Defined in

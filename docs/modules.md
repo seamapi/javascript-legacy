@@ -611,7 +611,7 @@ ___
 | `cooling_set_point_fahrenheit?` | `number` |
 | `heating_set_point_celsius?` | `number` |
 | `heating_set_point_fahrenheit?` | `number` |
-| `hvac_mode_setting?` | ``"off"`` \| ``"heat"`` \| ``"cool"`` \| ``"heatcool"`` |
+| `hvac_mode_setting?` | ``"off"`` \| ``"heat"`` \| ``"cool"`` \| ``"heat_cool"`` |
 | `manual_override_allowed` | `boolean` |
 
 #### Defined in
