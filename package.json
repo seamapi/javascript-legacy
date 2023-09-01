@@ -52,10 +52,6 @@
   },
   "devDependencies": {
     "@ava/get-port": "^2.0.0",
-    "@semantic-release/commit-analyzer": "^10.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^10.0.4",
-    "@semantic-release/release-notes-generator": "^11.0.3",
     "@swc/core": "1.2.133",
     "@types/lodash": "^4.14.179",
     "@types/ms": "0.7.31",
@@ -84,7 +80,6 @@
     "pkg": "5.5.2",
     "playwright": "1.19.2",
     "prettier": "2.5.1",
-    "semantic-release": "^21.0.5",
     "testcontainers": "^9.1.1",
     "ts-json-schema-generator": "0.98.0",
     "tsup": "^7.2.0",
