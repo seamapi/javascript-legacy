@@ -55,9 +55,9 @@ export type ClimateSetting = {
   manual_override_allowed: boolean
 }
 
-export type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
+type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
 
-export interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
+interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
   temperature_fahrenheit: number
   temperature_celsius: number
   relative_humidity: number // [0,1]

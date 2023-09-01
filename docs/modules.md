@@ -41,7 +41,6 @@
 - [ActionAttemptGetResponse](interfaces/ActionAttemptGetResponse.md)
 - [ActionAttemptResultTypeMap](interfaces/ActionAttemptResultTypeMap.md)
 - [ActionAttemptWithError](interfaces/ActionAttemptWithError.md)
-- [BaseThermostatDeviceProperties](interfaces/BaseThermostatDeviceProperties.md)
 - [ClientSession](interfaces/ClientSession.md)
 - [ClimateSettingScheduleCreateResponse](interfaces/ClimateSettingScheduleCreateResponse.md)
 - [ClimateSettingScheduleGetResponse](interfaces/ClimateSettingScheduleGetResponse.md)
@@ -156,7 +155,6 @@
 - [DeviceType](modules.md#devicetype)
 - [DeviceUpdateRequest](modules.md#deviceupdaterequest)
 - [Event](modules.md#event)
-- [HvacModeSetting](modules.md#hvacmodesetting)
 - [LockDevice](modules.md#lockdevice)
 - [LockDeviceType](modules.md#lockdevicetype)
 - [NoiseDetectionDeviceType](modules.md#noisedetectiondevicetype)
@@ -613,7 +611,7 @@ ___
 | `cooling_set_point_fahrenheit?` | `number` |
 | `heating_set_point_celsius?` | `number` |
 | `heating_set_point_fahrenheit?` | `number` |
-| `hvac_mode_setting?` | [`HvacModeSetting`](modules.md#hvacmodesetting) |
+| `hvac_mode_setting?` | `HvacModeSetting` |
 | `manual_override_allowed` | `boolean` |
 
 #### Defined in
@@ -882,16 +880,6 @@ ___
 #### Defined in
 
 [src/types/models.ts:474](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L474)
-
-___
-
-### HvacModeSetting
-
-Ƭ **HvacModeSetting**: ``"off"`` \| ``"heat"`` \| ``"cool"`` \| ``"heat_cool"``
-
-#### Defined in
-
-[src/types/models.ts:58](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L58)
 
 ___
 
