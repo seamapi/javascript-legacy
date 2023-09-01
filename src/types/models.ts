@@ -44,29 +44,63 @@ export type NoiseSensorDeviceProperties = CommonDeviceProperties
 export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
 export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
 
+export type ClimateSetting = {
+  automatic_heating_enabled?: boolean
+  automatic_cooling_enabled?: boolean
+  hvac_mode_setting?: HvacModeSetting
+  cooling_set_point_celsius?: number
+  heating_set_point_celsius?: number
+  cooling_set_point_fahrenheit?: number
+  heating_set_point_fahrenheit?: number
+  manual_override_allowed: boolean
+}
+
 export type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
 
-export interface ThermostatDeviceProperties extends CommonDeviceProperties {
-  is_cooling: boolean
-  is_heating: boolean
-  is_fan_running: boolean
-  has_direct_power: boolean
-  relative_humidity: number
-  temperature_celsius: number
+export interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
   temperature_fahrenheit: number
-  current_climate_setting: {
-    hvac_mode_setting: HvacModeSetting
-    manual_override_allowed: boolean
-    automatic_cooling_enabled: boolean
-    automatic_heating_enabled: boolean
-    cooling_set_point_celsius: number
-    cooling_set_point_fahrenheit: number
-  }
-  available_hvac_mode_settings: HvacModeSetting[]
-  can_enable_automatic_cooling: boolean
+  temperature_celsius: number
+  relative_humidity: number // [0,1]
   can_enable_automatic_heating: boolean
-  is_temporary_manual_override_active: boolean
+  can_enable_automatic_cooling: boolean
+  available_hvac_mode_settings: Array<HvacModeSetting>
+  is_heating: boolean
+  is_cooling: boolean
+  is_fan_running: boolean
+  is_temporary_manual_override_active: boolean // this is true if the current thermostat settings differ that what is on seam, and `current_climate_setting.manual_override_allowed: true`
+  current_climate_setting: ClimateSetting // this field has the actual climate setting as it is on the device
+  default_climate_setting?: ClimateSetting
+  is_climate_setting_schedule_active: boolean
+  active_climate_setting_schedule?: ClimateSettingSchedule
 }
+
+type CoolingThermostatProperties = BaseThermostatDeviceProperties & {
+  is_cooling_available: true
+  min_cooling_set_point_celsius: number
+  min_cooling_set_point_fahrenheit: number
+  max_cooling_set_point_celsius: number
+  max_cooling_set_point_fahrenheit: number
+}
+
+type HeatingThermostatProperties = BaseThermostatDeviceProperties & {
+  is_heating_available: true
+  min_heating_set_point_celsius: number
+  min_heating_set_point_fahrenheit: number
+  max_heating_set_point_celsius: number
+  max_heating_set_point_fahrenheit: number
+}
+
+type HeatCoolThermostatProperties = BaseThermostatDeviceProperties &
+  CoolingThermostatProperties &
+  HeatingThermostatProperties & {
+    min_heating_cooling_delta_celsius: number
+    min_heating_cooling_delta_fahrenheit: number
+  }
+
+export type ThermostatDeviceProperties =
+  | CoolingThermostatProperties
+  | HeatingThermostatProperties
+  | HeatCoolThermostatProperties
 
 export type DeviceType =
   | LockDeviceType
@@ -470,17 +504,6 @@ export interface DeviceModel {
   brand: string
   icon_url: string
   seam_device_model_page_url: string
-}
-
-export type ClimateSetting = {
-  automatic_heating_enabled?: boolean
-  automatic_cooling_enabled?: boolean
-  hvac_mode_setting?: HvacModeSetting
-  cooling_set_point_celsius?: number
-  heating_set_point_celsius?: number
-  cooling_set_point_fahrenheit?: number
-  heating_set_point_fahrenheit?: number
-  manual_override_allowed: boolean
 }
 
 export type ClimateSettingScheduleBase = ClimateSetting & {
