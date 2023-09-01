@@ -43,7 +43,8 @@ export type NoiseSensorDeviceProperties = CommonDeviceProperties
 
 export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
 export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
-export type ThermostatDeviceProperties = CommonDeviceProperties & {
+
+export interface ThermostatDeviceProperties extends CommonDeviceProperties {
   is_cooling: boolean
   is_heating: boolean
   is_fan_running: boolean
