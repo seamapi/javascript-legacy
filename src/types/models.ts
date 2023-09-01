@@ -483,7 +483,7 @@ export type ClimateSetting = {
   manual_override_allowed: boolean
 }
 
-export type ClimateSettingScheduleBase = Partial<ClimateSetting> & {
+export type ClimateSettingScheduleBase = ClimateSetting & {
   schedule_type?: "time_bound"
   device_id: string
   name?: string

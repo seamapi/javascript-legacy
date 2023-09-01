@@ -633,7 +633,7 @@ ___
 
 ### ClimateSettingScheduleBase
 
-Ƭ **ClimateSettingScheduleBase**: `Partial`<[`ClimateSetting`](modules.md#climatesetting)\> & { `device_id`: `string` ; `name?`: `string` ; `schedule_ends_at`: `string` ; `schedule_starts_at`: `string` ; `schedule_type?`: ``"time_bound"``  }
+Ƭ **ClimateSettingScheduleBase**: [`ClimateSetting`](modules.md#climatesetting) & { `device_id`: `string` ; `name?`: `string` ; `schedule_ends_at`: `string` ; `schedule_starts_at`: `string` ; `schedule_type?`: ``"time_bound"``  }
 
 #### Defined in
 
