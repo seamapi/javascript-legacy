@@ -98,18 +98,18 @@
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `code?`: `string` ; `device_id`: `string` ; `ends_at?`: `string` \| `Date` ; `name?`: `string` ; `starts_at?`: `string` \| `Date`  } |
 | `jsonBody.code?` | `string` |
 | `jsonBody.device_id` | `string` |
 | `jsonBody.ends_at?` | `string` \| `Date` |
 | `jsonBody.name?` | `string` |
 | `jsonBody.starts_at?` | `string` \| `Date` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.access_code` | { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"time_bound"``  } |
+| `jsonResponse` | { `access_code`: { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"time_bound"``  }  } |
+| `jsonResponse.access_code` | { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"time_bound"``  } |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_codes/create"`` |
 
 #### Defined in
@@ -126,13 +126,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_code_id`: `string`  } |
 | `commonParams.access_code_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_codes/delete"`` |
 
 #### Defined in
@@ -149,14 +149,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_code_id`: `string`  } |
 | `commonParams.access_code_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.access_code` | { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"time_bound"``  } |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `access_code`: { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"time_bound"``  }  } |
+| `jsonResponse.access_code` | { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"time_bound"``  } |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_codes/get"`` |
 
 #### Defined in
@@ -173,15 +173,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id?`: `string` ; `device_id?`: `string`  } |
 | `commonParams.building_id?` | `string` |
 | `commonParams.device_id?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.access_codes` | ({ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"time_bound"``  })[] |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `access_codes`: ({ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"time_bound"``  })[]  } |
+| `jsonResponse.access_codes` | ({ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"time_bound"``  })[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_codes/list"`` |
 
 #### Defined in
@@ -198,14 +198,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_code_id`: `string` ; `device_id?`: `string`  } |
 | `commonParams.access_code_id` | `string` |
 | `commonParams.device_id?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_codes/unmanaged/delete"`` |
 
 #### Defined in
@@ -222,15 +222,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id?`: `string` ; `device_id?`: `string`  } |
 | `commonParams.building_id?` | `string` |
 | `commonParams.device_id?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.access_codes` | ({ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"`` ; `type`: ``"time_bound"``  })[] |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `access_codes`: ({ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"time_bound"``  })[]  } |
+| `jsonResponse.access_codes` | ({ `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: ``null`` ; `is_managed`: `boolean` ; `starts_at`: ``null`` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"ongoing"``  } \| { `access_code_id`: `string` ; `code`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `ends_at`: `string` ; `is_managed`: `boolean` ; `starts_at`: `string` ; `status`: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"`` ; `type`: ``"time_bound"``  })[] |
 | `method` | ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | { `device_id`: `string`  } |
 | `queryParams.device_id` | `string` |
 | `route` | ``"/access_codes/unmanaged/list"`` |
 
@@ -248,14 +248,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_code_id`: `string` ; `is_managed`: `boolean`  } |
 | `commonParams.access_code_id` | `string` |
 | `commonParams.is_managed` | `boolean` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_codes/unmanaged/update"`` |
 
 #### Defined in
@@ -272,18 +272,18 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `access_code_id`: `string` ; `code?`: `string` ; `device_id?`: `string` ; `ends_at?`: `string` \| `Date` ; `name?`: `string` ; `starts_at?`: `string` \| `Date`  } |
 | `jsonBody.access_code_id` | `string` |
 | `jsonBody.code?` | `string` |
 | `jsonBody.device_id?` | `string` |
 | `jsonBody.ends_at?` | `string` \| `Date` |
 | `jsonBody.name?` | `string` |
 | `jsonBody.starts_at?` | `string` \| `Date` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_codes/update"`` |
 
 #### Defined in
@@ -300,9 +300,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `building_id?`: `string` ; `building_ids?`: `string`[] ; `can_use_access_code?`: `boolean` ; `can_use_remote_unlock?`: `boolean` ; `device_group_id?`: `string` ; `devices?`: { `can_use_access_code?`: `boolean` ; `can_use_remote_unlock?`: `boolean` ; `device_id`: `string`  }[] ; `ends_at?`: `string` \| `Date` ; `grant_mixed_building_device_access?`: `boolean` ; `name`: `string` ; `starts_at?`: `string` \| `Date`  } |
 | `jsonBody.building_id?` | `string` |
 | `jsonBody.building_ids?` | `string`[] |
 | `jsonBody.can_use_access_code?` | `boolean` |
@@ -313,8 +313,8 @@ ___
 | `jsonBody.grant_mixed_building_device_access?` | `boolean` |
 | `jsonBody.name` | `string` |
 | `jsonBody.starts_at?` | `string` \| `Date` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.access_pass` | `Object` |
+| `jsonResponse` | { `access_pass`: { `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }  } |
+| `jsonResponse.access_pass` | { `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  } |
 | `jsonResponse.access_pass.access_pass_id` | `string` |
 | `jsonResponse.access_pass.access_pass_name` | `string` |
 | `jsonResponse.access_pass.created_at` | `string` \| `Date` |
@@ -326,7 +326,7 @@ ___
 | `jsonResponse.access_pass.starts_at` | `string` \| `Date` |
 | `jsonResponse.access_pass.url` | `string` |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_passes/create"`` |
 
 #### Defined in
@@ -343,13 +343,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `access_code_id`: `string` ; `can_use_remote_unlock?`: `boolean`  } |
 | `jsonBody.access_code_id` | `string` |
 | `jsonBody.can_use_remote_unlock?` | `boolean` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.access_pass` | `Object` |
+| `jsonResponse` | { `access_pass`: { `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }  } |
+| `jsonResponse.access_pass` | { `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  } |
 | `jsonResponse.access_pass.access_pass_id` | `string` |
 | `jsonResponse.access_pass.access_pass_name` | `string` |
 | `jsonResponse.access_pass.created_at` | `string` \| `Date` |
@@ -361,7 +361,7 @@ ___
 | `jsonResponse.access_pass.starts_at` | `string` \| `Date` |
 | `jsonResponse.access_pass.url` | `string` |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_passes/create_from_access_code"`` |
 
 #### Defined in
@@ -378,13 +378,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_pass_id`: `string`  } |
 | `commonParams.access_pass_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_passes/delete"`` |
 
 #### Defined in
@@ -401,12 +401,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_pass_id`: `string`  } |
 | `commonParams.access_pass_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.access_pass` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `access_pass`: { `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }  } |
+| `jsonResponse.access_pass` | { `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  } |
 | `jsonResponse.access_pass.access_pass_id` | `string` |
 | `jsonResponse.access_pass.access_pass_name` | `string` |
 | `jsonResponse.access_pass.created_at` | `string` \| `Date` |
@@ -418,7 +418,7 @@ ___
 | `jsonResponse.access_pass.starts_at` | `string` \| `Date` |
 | `jsonResponse.access_pass.url` | `string` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_passes/get"`` |
 
 #### Defined in
@@ -435,18 +435,18 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_pass_id`: `string` ; `end?`: `string` \| `Date` ; `start`: `string` \| `Date`  } |
 | `commonParams.access_pass_id` | `string` |
 | `commonParams.end?` | `string` \| `Date` |
 | `commonParams.start` | `string` \| `Date` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.access_pass_counts` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `access_pass_counts`: { `total_uses`: `number` ; `uses_in_period`: `number`  }  } |
+| `jsonResponse.access_pass_counts` | { `total_uses`: `number` ; `uses_in_period`: `number`  } |
 | `jsonResponse.access_pass_counts.total_uses` | `number` |
 | `jsonResponse.access_pass_counts.uses_in_period` | `number` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_passes/get_count_summary"`` |
 
 #### Defined in
@@ -463,16 +463,16 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id?`: `string` ; `device_id?`: `string` ; `query?`: `string`  } |
 | `commonParams.building_id?` | `string` |
 | `commonParams.device_id?` | `string` |
 | `commonParams.query?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `access_passes`: { `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }[]  } |
 | `jsonResponse.access_passes` | { `access_pass_id`: `string` ; `access_pass_name`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `does_not_end`: `boolean` ; `ends_at`: ``null`` \| `string` \| `Date` ; `last_used_at`: ``null`` \| `string` \| `Date` ; `organization_id`: `string` ; `starts_at`: `string` \| `Date` ; `url`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_passes/list"`` |
 
 #### Defined in
@@ -489,14 +489,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_pass_id`: `string`  } |
 | `commonParams.access_pass_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `accessible_devices`: { `access_code_id`: ``null`` \| `string` ; `can_use_access_code`: `boolean` ; `can_use_remote_unlock`: `boolean` ; `code`: ``null`` \| `string` ; `device_id`: `string`  }[]  } |
 | `jsonResponse.accessible_devices` | { `access_code_id`: ``null`` \| `string` ; `can_use_access_code`: `boolean` ; `can_use_remote_unlock`: `boolean` ; `code`: ``null`` \| `string` ; `device_id`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_passes/list_accessible_devices"`` |
 
 #### Defined in
@@ -513,12 +513,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
 | `jsonBody` | { `access_method_flags?`: { `can_use_access_code`: `boolean` ; `can_use_remote_unlock`: `boolean`  } ; `access_pass_id`: `string` ; `device_group_id?`: `string` ; `devices?`: { `can_use_access_code?`: `boolean` ; `can_use_remote_unlock?`: `boolean` ; `device_id`: `string`  }[] ; `ends_at?`: ``null`` \| `string` \| `Date` ; `starts_at?`: `string` \| `Date`  } \| { `access_pass_id`: `string` ; `devices`: { `can_use_access_code?`: `boolean` ; `can_use_remote_unlock?`: `boolean` ; `device_id`: `string`  }[] ; `ends_at?`: ``null`` \| `string` \| `Date` ; `starts_at?`: `string` \| `Date`  } \| { `access_pass_id`: `string` ; `can_use_access_code`: `boolean` ; `can_use_remote_unlock`: `boolean` ; `device_group_id`: `string` ; `ends_at?`: ``null`` \| `string` \| `Date` ; `starts_at?`: `string` \| `Date`  } |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/access_passes/update"`` |
 
 #### Defined in
@@ -535,14 +535,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `building_id`: `string` ; `device_id`: `string`  } |
 | `jsonBody.building_id` | `string` |
 | `jsonBody.device_id` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/add_device"`` |
 
 #### Defined in
@@ -559,12 +559,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
 | `jsonBody` | { `building_id`: `string` ; `user_id`: `string`  } \| { `building_id`: `string` ; `email`: `string`  } |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/add_user"`` |
 
 #### Defined in
@@ -581,19 +581,19 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `ext_google_place_id`: `string` ; `image_url?`: `string` ; `name`: `string` ; `timezone`: `string`  } |
 | `jsonBody.ext_google_place_id` | `string` |
 | `jsonBody.image_url?` | `string` |
 | `jsonBody.name` | `string` |
 | `jsonBody.timezone` | `string` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.building` | `Object` |
+| `jsonResponse` | { `building`: { `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }  } |
+| `jsonResponse.building` | { `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  } |
 | `jsonResponse.building.building_id` | `string` |
 | `jsonResponse.building.created_at` | `string` \| `Date` |
 | `jsonResponse.building.image_url` | ``null`` \| `string` |
-| `jsonResponse.building.location` | `Object` |
+| `jsonResponse.building.location` | { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } |
 | `jsonResponse.building.location.addr1` | `string` |
 | `jsonResponse.building.location.addr2` | ``null`` \| `string` |
 | `jsonResponse.building.location.city` | `string` |
@@ -608,7 +608,7 @@ ___
 | `jsonResponse.building.organization_id` | `string` |
 | `jsonResponse.building.timezone` | `string` |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/create"`` |
 
 #### Defined in
@@ -625,13 +625,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id`: `string`  } |
 | `commonParams.building_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/delete"`` |
 
 #### Defined in
@@ -648,16 +648,16 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id`: `string`  } |
 | `commonParams.building_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.building` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `building`: { `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }  } |
+| `jsonResponse.building` | { `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  } |
 | `jsonResponse.building.building_id` | `string` |
 | `jsonResponse.building.created_at` | `string` \| `Date` |
 | `jsonResponse.building.image_url` | ``null`` \| `string` |
-| `jsonResponse.building.location` | `Object` |
+| `jsonResponse.building.location` | { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } |
 | `jsonResponse.building.location.addr1` | `string` |
 | `jsonResponse.building.location.addr2` | ``null`` \| `string` |
 | `jsonResponse.building.location.city` | `string` |
@@ -672,7 +672,7 @@ ___
 | `jsonResponse.building.organization_id` | `string` |
 | `jsonResponse.building.timezone` | `string` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/get"`` |
 
 #### Defined in
@@ -689,14 +689,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id?`: `string` ; `end?`: `string` \| `Date` ; `start?`: `string` \| `Date`  } |
 | `commonParams.building_id?` | `string` |
 | `commonParams.end?` | `string` \| `Date` |
 | `commonParams.start?` | `string` \| `Date` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.building_count_summary` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `building_count_summary`: { `active_access_passes`: `number` ; `device_incidents`: `number` ; `devices`: `number` ; `incidents`: `number` ; `low_battery_incidents`: `number` ; `offline_account_incidents`: `number`  }  } |
+| `jsonResponse.building_count_summary` | { `active_access_passes`: `number` ; `device_incidents`: `number` ; `devices`: `number` ; `incidents`: `number` ; `low_battery_incidents`: `number` ; `offline_account_incidents`: `number`  } |
 | `jsonResponse.building_count_summary.active_access_passes` | `number` |
 | `jsonResponse.building_count_summary.device_incidents` | `number` |
 | `jsonResponse.building_count_summary.devices` | `number` |
@@ -704,7 +704,7 @@ ___
 | `jsonResponse.building_count_summary.low_battery_incidents` | `number` |
 | `jsonResponse.building_count_summary.offline_account_incidents` | `number` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/get_count_summary"`` |
 
 #### Defined in
@@ -721,14 +721,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `query?`: `string`  } |
 | `commonParams.query?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `buildings`: { `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }[]  } |
 | `jsonResponse.buildings` | { `building_id`: `string` ; `created_at`: `string` \| `Date` ; `image_url`: ``null`` \| `string` ; `location`: { `addr1`: `string` ; `addr2`: ``null`` \| `string` ; `city`: `string` ; `country`: `string` ; `ext_google_place_id`: ``null`` \| `string` ; `full_address_string`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `state`: `string` ; `zip_code`: `string`  } ; `name`: `string` ; `organization_id`: `string` ; `timezone`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/list"`` |
 
 #### Defined in
@@ -745,14 +745,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_ids`: `string`[]  } |
 | `commonParams.building_ids` | `string`[] |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `building_count_summaries`: { `active_access_passes`: `number` ; `devices`: `number` ; `incidents`: `number`  }[]  } |
 | `jsonResponse.building_count_summaries` | { `active_access_passes`: `number` ; `devices`: `number` ; `incidents`: `number`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/list_count_summaries"`` |
 
 #### Defined in
@@ -769,14 +769,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id`: `string` ; `device_id`: `string`  } |
 | `commonParams.building_id` | `string` |
 | `commonParams.device_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/remove_device"`` |
 
 #### Defined in
@@ -793,14 +793,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id`: `string` ; `user_id`: `string`  } |
 | `commonParams.building_id` | `string` |
 | `commonParams.user_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/remove_user"`` |
 
 #### Defined in
@@ -817,17 +817,17 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id`: `string` ; `ext_google_place_id?`: `string` ; `image_url?`: `string` ; `name?`: `string` ; `timezone?`: `string`  } |
 | `commonParams.building_id` | `string` |
 | `commonParams.ext_google_place_id?` | `string` |
 | `commonParams.image_url?` | `string` |
 | `commonParams.name?` | `string` |
 | `commonParams.timezone?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/update"`` |
 
 #### Defined in
@@ -844,15 +844,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[] ; `user_id`: `string`  } |
 | `commonParams.building_id` | `string` |
 | `commonParams.building_roles` | (``"building:manager"`` \| ``"building:operator"``)[] |
 | `commonParams.user_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/buildings/update_user_role"`` |
 
 #### Defined in
@@ -869,20 +869,20 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `device_ids?`: `string`[] ; `name`: `string`  } |
 | `jsonBody.device_ids?` | `string`[] |
 | `jsonBody.name` | `string` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.device_group` | `Object` |
+| `jsonResponse` | { `device_group`: { `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `device_ids`: `string`[] ; `name`: `string` ; `organization_id`: `string`  }  } |
+| `jsonResponse.device_group` | { `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `device_ids`: `string`[] ; `name`: `string` ; `organization_id`: `string`  } |
 | `jsonResponse.device_group.created_at` | `string` \| `Date` |
 | `jsonResponse.device_group.device_group_id` | `string` |
 | `jsonResponse.device_group.device_ids` | `string`[] |
 | `jsonResponse.device_group.name` | `string` |
 | `jsonResponse.device_group.organization_id` | `string` |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/device_groups/create"`` |
 
 #### Defined in
@@ -899,13 +899,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `device_group_id`: `string`  } |
 | `jsonBody.device_group_id` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/device_groups/delete"`` |
 
 #### Defined in
@@ -922,19 +922,19 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `device_group_id`: `string`  } |
 | `commonParams.device_group_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.device_group` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `device_group`: { `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `device_ids`: `string`[] ; `name`: `string` ; `organization_id`: `string`  }  } |
+| `jsonResponse.device_group` | { `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `device_ids`: `string`[] ; `name`: `string` ; `organization_id`: `string`  } |
 | `jsonResponse.device_group.created_at` | `string` \| `Date` |
 | `jsonResponse.device_group.device_group_id` | `string` |
 | `jsonResponse.device_group.device_ids` | `string`[] |
 | `jsonResponse.device_group.name` | `string` |
 | `jsonResponse.device_group.organization_id` | `string` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/device_groups/get"`` |
 
 #### Defined in
@@ -951,13 +951,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `device_groups`: { `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `device_ids`: `string`[] ; `name`: `string` ; `organization_id`: `string`  }[]  } |
 | `jsonResponse.device_groups` | { `created_at`: `string` \| `Date` ; `device_group_id`: `string` ; `device_ids`: `string`[] ; `name`: `string` ; `organization_id`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/device_groups/list"`` |
 
 #### Defined in
@@ -974,15 +974,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `device_group_id`: `string` ; `device_ids?`: `string`[] ; `name?`: `string`  } |
 | `jsonBody.device_group_id` | `string` |
 | `jsonBody.device_ids?` | `string`[] |
 | `jsonBody.name?` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/device_groups/update"`` |
 
 #### Defined in
@@ -999,13 +999,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `device_id`: `string`  } |
 | `commonParams.device_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/devices/delete"`` |
 
 #### Defined in
@@ -1022,14 +1022,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id?`: `string` ; `device_id?`: `string` ; `device_name?`: `string`  } |
 | `commonParams.building_id?` | `string` |
 | `commonParams.device_id?` | `string` |
 | `commonParams.device_name?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.device` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `device`: { `building_id`: ``null`` \| `string` ; `created_at`: `string` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { `[x: string]`: `unknown`;  } ; `warnings`: `unknown`[]  }  } |
+| `jsonResponse.device` | { `building_id`: ``null`` \| `string` ; `created_at`: `string` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { `[x: string]`: `unknown`;  } ; `warnings`: `unknown`[]  } |
 | `jsonResponse.device.building_id` | ``null`` \| `string` |
 | `jsonResponse.device.created_at` | `string` |
 | `jsonResponse.device.device_id` | `string` |
@@ -1037,10 +1037,10 @@ ___
 | `jsonResponse.device.errors` | `unknown`[] |
 | `jsonResponse.device.linked_account_id` | `string` |
 | `jsonResponse.device.name` | `string` |
-| `jsonResponse.device.properties` | `Object` |
+| `jsonResponse.device.properties` | { `[x: string]`: `unknown`;  } |
 | `jsonResponse.device.warnings` | `unknown`[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/devices/get"`` |
 
 #### Defined in
@@ -1057,15 +1057,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `device_id`: `string`  } |
 | `commonParams.device_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.device_count_summary` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `device_count_summary`: { `active_access_passes`: `number`  }  } |
+| `jsonResponse.device_count_summary` | { `active_access_passes`: `number`  } |
 | `jsonResponse.device_count_summary.active_access_passes` | `number` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/devices/get_count_summary"`` |
 
 #### Defined in
@@ -1082,7 +1082,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id?`: `string` ; `device_ids?`: `string`[] ; `has_no_building?`: `boolean` ; `linked_account_id?`: `string` ; `query?`: `string` ; `user_group_id?`: `string` ; `user_id?`: `string`  } |
 | `commonParams.building_id?` | `string` |
 | `commonParams.device_ids?` | `string`[] |
 | `commonParams.has_no_building?` | `boolean` |
@@ -1090,12 +1090,12 @@ ___
 | `commonParams.query?` | `string` |
 | `commonParams.user_group_id?` | `string` |
 | `commonParams.user_id?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.devices` | { `building_id`: ``null`` \| `string` ; `created_at`: `string` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { [x: string]: `unknown`;  } ; `warnings`: `unknown`[]  }[] |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `devices`: { `building_id`: ``null`` \| `string` ; `created_at`: `string` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { `[x: string]`: `unknown`;  } ; `warnings`: `unknown`[]  }[]  } |
+| `jsonResponse.devices` | { `building_id`: ``null`` \| `string` ; `created_at`: `string` ; `device_id`: `string` ; `device_type`: `string` ; `errors`: `unknown`[] ; `linked_account_id`: `string` ; `name`: `string` ; `properties`: { `[x: string]`: `unknown`;  } ; `warnings`: `unknown`[]  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/devices/list"`` |
 
 #### Defined in
@@ -1112,17 +1112,17 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id?`: `string` ; `linked_account_id?`: `string` ; `organization_id?`: `string` ; `queries`: `string`[]  } |
 | `commonParams.building_id?` | `string` |
 | `commonParams.linked_account_id?` | `string` |
 | `commonParams.organization_id?` | `string` |
 | `commonParams.queries` | `string`[] |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `device_counts`: { `count`: `number` ; `query`: `string`  }[]  } |
 | `jsonResponse.device_counts` | { `count`: `number` ; `query`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/devices/list_counts"`` |
 
 #### Defined in
@@ -1139,12 +1139,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
 | `jsonBody` | { `building_id?`: `string` ; `device_id`: `string` ; `location?`: {} ; `name?`: `string`  } \| { `building_id?`: `string` ; `device_ids`: `string`[] ; `location?`: {} ; `name?`: `string`  } |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/devices/update"`` |
 
 #### Defined in
@@ -1161,22 +1161,22 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_pass_id?`: `string` ; `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string` ; `query?`: `string`  } |
 | `commonParams.access_pass_id?` | `string` |
 | `commonParams.between?` | (`string` \| `Date`)[] |
 | `commonParams.building_id?` | `string` |
 | `commonParams.device_id?` | `string` |
 | `commonParams.query?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.event_count_summary` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `event_count_summary`: { `access_pass_events`: `number` ; `battery_events`: `number` ; `connection_events`: `number` ; `lock_unlock_events`: `number`  }  } |
+| `jsonResponse.event_count_summary` | { `access_pass_events`: `number` ; `battery_events`: `number` ; `connection_events`: `number` ; `lock_unlock_events`: `number`  } |
 | `jsonResponse.event_count_summary.access_pass_events` | `number` |
 | `jsonResponse.event_count_summary.battery_events` | `number` |
 | `jsonResponse.event_count_summary.connection_events` | `number` |
 | `jsonResponse.event_count_summary.lock_unlock_events` | `number` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/events/get_count_summary"`` |
 
 #### Defined in
@@ -1193,18 +1193,18 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_pass_id?`: `string` ; `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string` ; `query?`: `string`  } |
 | `commonParams.access_pass_id?` | `string` |
 | `commonParams.between?` | (`string` \| `Date`)[] |
 | `commonParams.building_id?` | `string` |
 | `commonParams.device_id?` | `string` |
 | `commonParams.query?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.events` | ({ `event_id`: `string` ; `event_type`: ``"linked_account.connected"`` ; `linked_account_id`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `event_id`: `string` ; `event_type`: ``"linked_account.completed_first_sync"`` ; `linked_account_id`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.connected"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.disconnected"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.tampered"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"access_pass"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"manual"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"keycode"`` \| ``"unknown"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"access_pass"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"manual"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"keycode"`` \| ``"unknown"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `battery_level`: `number` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.low_battery"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `event_id`: `string` ; `event_type`: ``"access_pass.used"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `access_code_id`: `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"access_code.created"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_code_id`: `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"access_code.deleted"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  })[] |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `events`: ({ `event_id`: `string` ; `event_type`: ``"linked_account.connected"`` ; `linked_account_id`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `event_id`: `string` ; `event_type`: ``"linked_account.completed_first_sync"`` ; `linked_account_id`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.connected"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.disconnected"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.tampered"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"access_pass"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"manual"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"unknown"`` \| ``"keycode"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"access_pass"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"manual"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"unknown"`` \| ``"keycode"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `battery_level`: `number` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.low_battery"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `event_id`: `string` ; `event_type`: ``"access_pass.used"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `access_code_id`: `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"access_code.created"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_code_id`: `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"access_code.deleted"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  })[]  } |
+| `jsonResponse.events` | ({ `event_id`: `string` ; `event_type`: ``"linked_account.connected"`` ; `linked_account_id`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `event_id`: `string` ; `event_type`: ``"linked_account.completed_first_sync"`` ; `linked_account_id`: `string` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.connected"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.disconnected"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.tampered"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"access_pass"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"manual"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.unlocked"`` ; `method`: ``"unknown"`` \| ``"keycode"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"access_pass"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"manual"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: `string`  } \| { `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.locked"`` ; `method`: ``"unknown"`` \| ``"keycode"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `battery_level`: `number` ; `building_id`: ``null`` \| `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"device.low_battery"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_pass_id`: `string` ; `building_id`: ``null`` \| `string` ; `event_id`: `string` ; `event_type`: ``"access_pass.used"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string` ; `user_id`: ``null`` \| `string`  } \| { `access_code_id`: `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"access_code.created"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  } \| { `access_code_id`: `string` ; `device_id`: `string` ; `event_id`: `string` ; `event_type`: ``"access_code.deleted"`` ; `occurred_at`: `string` \| `Date` ; `organization_id`: `string`  })[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/events/list"`` |
 
 #### Defined in
@@ -1221,12 +1221,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/health"`` |
 
 #### Defined in
@@ -1243,7 +1243,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `access_code_id?`: `string` ; `access_pass_id?`: `string` ; `between?`: (`string` \| `Date`)[] ; `building_id?`: `string` ; `device_id?`: `string` ; `device_ids?`: `string`[] ; `is_resolved?`: `boolean` ; `linked_account_id?`: `string` ; `query?`: `string`  } |
 | `commonParams.access_code_id?` | `string` |
 | `commonParams.access_pass_id?` | `string` |
 | `commonParams.between?` | (`string` \| `Date`)[] |
@@ -1253,12 +1253,12 @@ ___
 | `commonParams.is_resolved?` | `boolean` |
 | `commonParams.linked_account_id?` | `string` |
 | `commonParams.query?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `incidents`: { `access_code_id`: ``null`` \| `string` ; `access_pass_id`: ``null`` \| `string` ; `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `ended_at`: ``null`` \| `string` \| `Date` ; `incident_id`: `string` ; `incident_type`: `string` ; `is_resolved`: `boolean` ; `linked_account_id`: ``null`` \| `string` ; `organization_id`: `string` ; `started_at`: `string` \| `Date`  }[]  } |
 | `jsonResponse.incidents` | { `access_code_id`: ``null`` \| `string` ; `access_pass_id`: ``null`` \| `string` ; `building_id`: ``null`` \| `string` ; `created_at`: `string` \| `Date` ; `device_id`: ``null`` \| `string` ; `ended_at`: ``null`` \| `string` \| `Date` ; `incident_id`: `string` ; `incident_type`: `string` ; `is_resolved`: `boolean` ; `linked_account_id`: ``null`` \| `string` ; `organization_id`: `string` ; `started_at`: `string` \| `Date`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/incidents/list"`` |
 
 #### Defined in
@@ -1275,13 +1275,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `linked_account_id`: `string`  } |
 | `jsonBody.linked_account_id` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/linked_accounts/delete"`` |
 
 #### Defined in
@@ -1298,12 +1298,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `linked_account_id`: `string`  } |
 | `commonParams.linked_account_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.linked_account` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `linked_account`: { `account_type`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `did_complete_first_sync`: `boolean` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }  } |
+| `jsonResponse.linked_account` | { `account_type`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `did_complete_first_sync`: `boolean` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  } |
 | `jsonResponse.linked_account.account_type` | `string` |
 | `jsonResponse.linked_account.created_at` | `string` \| `Date` |
 | `jsonResponse.linked_account.device_count` | `number` |
@@ -1315,7 +1315,7 @@ ___
 | `jsonResponse.linked_account.user_identifier?` | `any` |
 | `jsonResponse.linked_account.warnings` | { `message`: `string` ; `warning_code`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/linked_accounts/get"`` |
 
 #### Defined in
@@ -1332,14 +1332,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `queries`: `string`[]  } |
 | `commonParams.queries` | `string`[] |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `counts`: { `count`: `number` ; `query`: `string`  }[]  } |
 | `jsonResponse.counts` | { `count`: `number` ; `query`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/linked_accounts/get_counts"`` |
 
 #### Defined in
@@ -1356,15 +1356,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `query?`: `string` ; `since?`: `string` \| `Date`  } |
 | `commonParams.query?` | `string` |
 | `commonParams.since?` | `string` \| `Date` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `linked_accounts`: { `account_type`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `did_complete_first_sync`: `boolean` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }[]  } |
 | `jsonResponse.linked_accounts` | { `account_type`: `string` ; `created_at`: `string` \| `Date` ; `device_count`: `number` ; `did_complete_first_sync`: `boolean` ; `errors`: { `error_code`: `string` ; `message`: `string`  }[] ; `ext_seam_connected_account_id`: `string` ; `linked_account_id`: `string` ; `organization_id`: `string` ; `user_identifier?`: `any` ; `warnings`: { `message`: `string` ; `warning_code`: `string`  }[]  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/linked_accounts/list"`` |
 
 #### Defined in
@@ -1381,14 +1381,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `access_pass_id?`: `string` ; `device_id`: `string`  } |
 | `jsonBody.access_pass_id?` | `string` |
 | `jsonBody.device_id` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/locks/lock"`` |
 
 #### Defined in
@@ -1405,14 +1405,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `access_pass_id?`: `string` ; `device_id`: `string`  } |
 | `jsonBody.access_pass_id?` | `string` |
 | `jsonBody.device_id` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/locks/unlock"`` |
 
 #### Defined in
@@ -1429,14 +1429,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `accepted_providers?`: `string`[] ; `custom_redirect_url?`: `string` ; `device_selection_mode?`: ``"none"`` \| ``"single"`` \| ``"multiple"``  } |
 | `jsonBody.accepted_providers?` | `string`[] |
 | `jsonBody.custom_redirect_url?` | `string` |
 | `jsonBody.device_selection_mode?` | ``"none"`` \| ``"single"`` \| ``"multiple"`` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.login_portal` | `Object` |
+| `jsonResponse` | { `login_portal`: { `created_at`: `string` \| `Date` ; `linked_account_id`: ``null`` \| `string` ; `login_portal_id`: `string` ; `login_successful`: `boolean` ; `organization_id`: `string` ; `status`: ``"pending"`` \| ``"authorized"`` ; `view_url`: `string`  }  } |
+| `jsonResponse.login_portal` | { `created_at`: `string` \| `Date` ; `linked_account_id`: ``null`` \| `string` ; `login_portal_id`: `string` ; `login_successful`: `boolean` ; `organization_id`: `string` ; `status`: ``"pending"`` \| ``"authorized"`` ; `view_url`: `string`  } |
 | `jsonResponse.login_portal.created_at` | `string` \| `Date` |
 | `jsonResponse.login_portal.linked_account_id` | ``null`` \| `string` |
 | `jsonResponse.login_portal.login_portal_id` | `string` |
@@ -1445,7 +1445,7 @@ ___
 | `jsonResponse.login_portal.status` | ``"pending"`` \| ``"authorized"`` |
 | `jsonResponse.login_portal.view_url` | `string` |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/login_portals/create"`` |
 
 #### Defined in
@@ -1462,13 +1462,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `login_portal_id`: `string`  } |
 | `commonParams.login_portal_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/login_portals/delete"`` |
 
 #### Defined in
@@ -1485,12 +1485,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `login_portal_id`: `string`  } |
 | `commonParams.login_portal_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.login_portal` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `login_portal`: { `created_at`: `string` \| `Date` ; `linked_account_id`: ``null`` \| `string` ; `login_portal_id`: `string` ; `login_successful`: `boolean` ; `organization_id`: `string` ; `status`: ``"pending"`` \| ``"authorized"`` ; `view_url`: `string`  }  } |
+| `jsonResponse.login_portal` | { `created_at`: `string` \| `Date` ; `linked_account_id`: ``null`` \| `string` ; `login_portal_id`: `string` ; `login_successful`: `boolean` ; `organization_id`: `string` ; `status`: ``"pending"`` \| ``"authorized"`` ; `view_url`: `string`  } |
 | `jsonResponse.login_portal.created_at` | `string` \| `Date` |
 | `jsonResponse.login_portal.linked_account_id` | ``null`` \| `string` |
 | `jsonResponse.login_portal.login_portal_id` | `string` |
@@ -1499,7 +1499,7 @@ ___
 | `jsonResponse.login_portal.status` | ``"pending"`` \| ``"authorized"`` |
 | `jsonResponse.login_portal.view_url` | `string` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/login_portals/get"`` |
 
 #### Defined in
@@ -1516,14 +1516,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `since?`: `string` \| `Date`  } |
 | `commonParams.since?` | `string` \| `Date` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `login_portals`: { `created_at`: `string` \| `Date` ; `linked_account_id`: ``null`` \| `string` ; `login_portal_id`: `string` ; `login_successful`: `boolean` ; `organization_id`: `string` ; `status`: ``"pending"`` \| ``"authorized"`` ; `view_url`: `string`  }[]  } |
 | `jsonResponse.login_portals` | { `created_at`: `string` \| `Date` ; `linked_account_id`: ``null`` \| `string` ; `login_portal_id`: `string` ; `login_successful`: `boolean` ; `organization_id`: `string` ; `status`: ``"pending"`` \| ``"authorized"`` ; `view_url`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/login_portals/list"`` |
 
 #### Defined in
@@ -1540,19 +1540,19 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `is_sandbox?`: `boolean` ; `name`: `string`  } |
 | `jsonBody.is_sandbox?` | `boolean` |
 | `jsonBody.name` | `string` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.organization` | `Object` |
+| `jsonResponse` | { `organization`: { `created_at`: `string` \| `Date` ; `created_by`: ``null`` \| `string` ; `name`: `string` ; `organization_id`: `string`  }  } |
+| `jsonResponse.organization` | { `created_at`: `string` \| `Date` ; `created_by`: ``null`` \| `string` ; `name`: `string` ; `organization_id`: `string`  } |
 | `jsonResponse.organization.created_at` | `string` \| `Date` |
 | `jsonResponse.organization.created_by` | ``null`` \| `string` |
 | `jsonResponse.organization.name` | `string` |
 | `jsonResponse.organization.organization_id` | `string` |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/create"`` |
 
 #### Defined in
@@ -1569,18 +1569,18 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `organization_id`: `string`  } |
 | `commonParams.organization_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.organization` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `organization`: { `created_at`: `string` \| `Date` ; `created_by`: ``null`` \| `string` ; `name`: `string` ; `organization_id`: `string`  }  } |
+| `jsonResponse.organization` | { `created_at`: `string` \| `Date` ; `created_by`: ``null`` \| `string` ; `name`: `string` ; `organization_id`: `string`  } |
 | `jsonResponse.organization.created_at` | `string` \| `Date` |
 | `jsonResponse.organization.created_by` | ``null`` \| `string` |
 | `jsonResponse.organization.name` | `string` |
 | `jsonResponse.organization.organization_id` | `string` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/get"`` |
 
 #### Defined in
@@ -1597,13 +1597,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `between`: (`string` \| `Date`)[] ; `organization_id`: `string`  } |
 | `commonParams.between` | (`string` \| `Date`)[] |
 | `commonParams.organization_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.organization_counts` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `organization_counts`: { `incidents_in_period`: `number` ; `total_active_access_passes`: `number` ; `total_admins`: `number` ; `total_buildings`: `number` ; `total_devices`: `number` ; `total_linked_accounts`: `number` ; `total_members`: `number` ; `total_online_devices`: `number` ; `total_super_admins`: `number`  }  } |
+| `jsonResponse.organization_counts` | { `incidents_in_period`: `number` ; `total_active_access_passes`: `number` ; `total_admins`: `number` ; `total_buildings`: `number` ; `total_devices`: `number` ; `total_linked_accounts`: `number` ; `total_members`: `number` ; `total_online_devices`: `number` ; `total_super_admins`: `number`  } |
 | `jsonResponse.organization_counts.incidents_in_period` | `number` |
 | `jsonResponse.organization_counts.total_active_access_passes` | `number` |
 | `jsonResponse.organization_counts.total_admins` | `number` |
@@ -1614,7 +1614,7 @@ ___
 | `jsonResponse.organization_counts.total_online_devices` | `number` |
 | `jsonResponse.organization_counts.total_super_admins` | `number` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/get_count_summary"`` |
 
 #### Defined in
@@ -1632,11 +1632,11 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `commonParams` | { `email`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `user_id?`: `string`  } \| { `email?`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `user_id`: `string`  } |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/invite_user"`` |
 
 #### Defined in
@@ -1653,14 +1653,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `query?`: `string`  } |
 | `commonParams.query?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `organizations`: { `created_at`: `string` \| `Date` ; `created_by`: ``null`` \| `string` ; `name`: `string` ; `organization_id`: `string`  }[]  } |
 | `jsonResponse.organizations` | { `created_at`: `string` \| `Date` ; `created_by`: ``null`` \| `string` ; `name`: `string` ; `organization_id`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/list"`` |
 
 #### Defined in
@@ -1677,13 +1677,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `organization_invitation_id`: `string`  } |
 | `commonParams.organization_invitation_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/pending_users/delete"`` |
 
 #### Defined in
@@ -1700,13 +1700,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `pending_users`: { `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `organization_id`: `string` ; `organization_invitation_id`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `status`: ``"pending"`` \| ``"accepted"`` \| ``"declined"`` ; `user_id`: ``null`` \| `string`  }[]  } |
 | `jsonResponse.pending_users` | { `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `organization_id`: `string` ; `organization_invitation_id`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` ; `status`: ``"pending"`` \| ``"accepted"`` \| ``"declined"`` ; `user_id`: ``null`` \| `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/pending_users/list"`` |
 
 #### Defined in
@@ -1723,13 +1723,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `organization_invitation_id`: `string`  } |
 | `jsonBody.organization_invitation_id` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/pending_users/resend_invitation"`` |
 
 #### Defined in
@@ -1746,14 +1746,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `organization_invitation_id`: `string` ; `role`: ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``  } |
 | `commonParams.organization_invitation_id` | `string` |
 | `commonParams.role` | ``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"`` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/pending_users/update"`` |
 
 #### Defined in
@@ -1770,13 +1770,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `user_id`: `string`  } |
 | `commonParams.user_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/remove_user"`` |
 
 #### Defined in
@@ -1793,14 +1793,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `ext_seam_connect_api_key?`: `string` ; `name?`: `string`  } |
 | `commonParams.ext_seam_connect_api_key?` | `string` |
 | `commonParams.name?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/update"`` |
 
 #### Defined in
@@ -1817,15 +1817,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `can_view_all_buildings?`: `boolean` ; `organization_roles?`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  } |
 | `commonParams.can_view_all_buildings?` | `boolean` |
 | `commonParams.organization_roles?` | (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] |
 | `commonParams.user_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/organizations/update_user_role"`` |
 
 #### Defined in
@@ -1842,14 +1842,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `user_group_id`: `string` ; `user_id`: `string`  } |
 | `jsonBody.user_group_id` | `string` |
 | `jsonBody.user_id` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/user_groups/add_user"`` |
 
 #### Defined in
@@ -1866,18 +1866,18 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `name`: `string`  } |
 | `jsonBody.name` | `string` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.user_group` | `Object` |
+| `jsonResponse` | { `user_group`: { `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }  } |
+| `jsonResponse.user_group` | { `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  } |
 | `jsonResponse.user_group.created_at` | `string` \| `Date` |
 | `jsonResponse.user_group.name` | `string` |
 | `jsonResponse.user_group.organization_id` | `string` |
 | `jsonResponse.user_group.user_group_id` | `string` |
 | `method` | ``"POST"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/user_groups/create"`` |
 
 #### Defined in
@@ -1894,13 +1894,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `user_group_id`: `string`  } |
 | `commonParams.user_group_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/user_groups/delete"`` |
 
 #### Defined in
@@ -1917,18 +1917,18 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `user_group_id`: `string`  } |
 | `commonParams.user_group_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.user_group` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `user_group`: { `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }  } |
+| `jsonResponse.user_group` | { `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  } |
 | `jsonResponse.user_group.created_at` | `string` \| `Date` |
 | `jsonResponse.user_group.name` | `string` |
 | `jsonResponse.user_group.organization_id` | `string` |
 | `jsonResponse.user_group.user_group_id` | `string` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/user_groups/get"`` |
 
 #### Defined in
@@ -1945,13 +1945,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `user_groups`: { `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }[]  } |
 | `jsonResponse.user_groups` | { `created_at`: `string` \| `Date` ; `name`: `string` ; `organization_id`: `string` ; `user_group_id`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/user_groups/list"`` |
 
 #### Defined in
@@ -1968,14 +1968,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `user_group_id`: `string` ; `user_id`: `string`  } |
 | `commonParams.user_group_id` | `string` |
 | `commonParams.user_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/user_groups/remove_user"`` |
 
 #### Defined in
@@ -1992,14 +1992,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `name?`: `string` ; `user_group_id`: `string`  } |
 | `jsonBody.name?` | `string` |
 | `jsonBody.user_group_id` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/user_groups/update"`` |
 
 #### Defined in
@@ -2016,13 +2016,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `user_id`: `string`  } |
 | `commonParams.user_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"DELETE"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/users/delete"`` |
 
 #### Defined in
@@ -2039,12 +2039,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `user_id`: `string`  } |
 | `commonParams.user_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
-| `jsonResponse.user` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `user`: { `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id?`: `string` ; `user_id`: `string`  }  } |
+| `jsonResponse.user` | { `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id?`: `string` ; `user_id`: `string`  } |
 | `jsonResponse.user.created_at` | `string` \| `Date` |
 | `jsonResponse.user.email` | ``null`` \| `string` |
 | `jsonResponse.user.first_name` | ``null`` \| `string` |
@@ -2052,7 +2052,7 @@ ___
 | `jsonResponse.user.organization_id?` | `string` |
 | `jsonResponse.user.user_id` | `string` |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/users/get"`` |
 
 #### Defined in
@@ -2069,14 +2069,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `user_id`: `string`  } |
 | `commonParams.user_id` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `user_building_roles`: { `building_id`: `string` ; `building_name`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[] ; `created_at`: `string`  }[]  } |
 | `jsonResponse.user_building_roles` | { `building_id`: `string` ; `building_name`: `string` ; `building_roles`: (``"building:manager"`` \| ``"building:operator"``)[] ; `created_at`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/users/get_building_roles"`` |
 
 #### Defined in
@@ -2093,16 +2093,16 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `building_id?`: `string` ; `user_group_id?`: `string` ; `user_id?`: `string`  } |
 | `commonParams.building_id?` | `string` |
 | `commonParams.user_group_id?` | `string` |
 | `commonParams.user_id?` | `string` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `users`: { `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id?`: `string` ; `user_id`: `string`  }[]  } |
 | `jsonResponse.users` | { `created_at`: `string` \| `Date` ; `email`: ``null`` \| `string` ; `first_name`: ``null`` \| `string` ; `last_name`: ``null`` \| `string` ; `organization_id?`: `string` ; `user_id`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/users/list"`` |
 
 #### Defined in
@@ -2119,13 +2119,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `organizations_with_roles`: { `organization_id`: `string` ; `organization_name`: `string` ; `user_organization_roles`: `string`[]  }[]  } |
 | `jsonResponse.organizations_with_roles` | { `organization_id`: `string` ; `organization_name`: `string` ; `user_organization_roles`: `string`[]  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/users/list_my_organizations"`` |
 
 #### Defined in
@@ -2142,14 +2142,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
+| `commonParams` | { `user_ids?`: `string`[]  } |
 | `commonParams.user_ids?` | `string`[] |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
-| `jsonResponse` | `Object` |
+| `formData` | {} |
+| `jsonBody` | {} |
+| `jsonResponse` | { `user_organization_roles`: { `can_view_all_buildings`: `boolean` ; `organization_roles`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  }[]  } |
 | `jsonResponse.user_organization_roles` | { `can_view_all_buildings`: `boolean` ; `organization_roles`: (``"org:superadmin"`` \| ``"org:admin"`` \| ``"org:member"``)[] ; `user_id`: `string`  }[] |
 | `method` | ``"POST"`` \| ``"GET"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/users/list_organization_roles"`` |
 
 #### Defined in
@@ -2166,15 +2166,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `commonParams` | `Object` |
-| `formData` | `Object` |
-| `jsonBody` | `Object` |
+| `commonParams` | {} |
+| `formData` | {} |
+| `jsonBody` | { `first_name?`: `string` ; `last_name?`: `string` ; `user_id?`: `string`  } |
 | `jsonBody.first_name?` | `string` |
 | `jsonBody.last_name?` | `string` |
 | `jsonBody.user_id?` | `string` |
-| `jsonResponse` | `Object` |
+| `jsonResponse` | {} |
 | `method` | ``"POST"`` \| ``"PATCH"`` |
-| `queryParams` | `Object` |
+| `queryParams` | {} |
 | `route` | ``"/users/update"`` |
 
 #### Defined in

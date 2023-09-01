@@ -29,7 +29,7 @@ ___
 
 ### connection\_type
 
-• **connection\_type**: ``"unknown"`` \| ``"wifi"`` \| ``"zwave"`` \| ``"zigbee"``
+• **connection\_type**: ``"wifi"`` \| ``"zwave"`` \| ``"zigbee"`` \| ``"unknown"``
 
 #### Defined in
 

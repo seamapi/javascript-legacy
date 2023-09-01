@@ -214,7 +214,7 @@ ___
 
 ### status
 
-• **status**: ``"setting"`` \| ``"set"`` \| ``"unset"`` \| ``"removing"``
+• **status**: ``"setting"`` \| ``"set"`` \| ``"removing"`` \| ``"unset"``
 
 #### Defined in
 

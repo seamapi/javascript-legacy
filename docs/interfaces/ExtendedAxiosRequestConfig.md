@@ -34,7 +34,10 @@
 - [maxContentLength](ExtendedAxiosRequestConfig.md#maxcontentlength)
 - [maxRedirects](ExtendedAxiosRequestConfig.md#maxredirects)
 - [method](ExtendedAxiosRequestConfig.md#method)
+- [onDownloadProgress](ExtendedAxiosRequestConfig.md#ondownloadprogress)
+- [onUploadProgress](ExtendedAxiosRequestConfig.md#onuploadprogress)
 - [params](ExtendedAxiosRequestConfig.md#params)
+- [paramsSerializer](ExtendedAxiosRequestConfig.md#paramsserializer)
 - [proxy](ExtendedAxiosRequestConfig.md#proxy)
 - [responseEncoding](ExtendedAxiosRequestConfig.md#responseencoding)
 - [responseType](ExtendedAxiosRequestConfig.md#responsetype)
@@ -50,12 +53,6 @@
 - [withCredentials](ExtendedAxiosRequestConfig.md#withcredentials)
 - [xsrfCookieName](ExtendedAxiosRequestConfig.md#xsrfcookiename)
 - [xsrfHeaderName](ExtendedAxiosRequestConfig.md#xsrfheadername)
-
-### Methods
-
-- [onDownloadProgress](ExtendedAxiosRequestConfig.md#ondownloadprogress)
-- [onUploadProgress](ExtendedAxiosRequestConfig.md#onuploadprogress)
-- [paramsSerializer](ExtendedAxiosRequestConfig.md#paramsserializer)
 
 ## Properties
 
@@ -261,6 +258,62 @@ ___
 
 ___
 
+### onDownloadProgress
+
+• `Optional` **onDownloadProgress**: (`progressEvent`: `any`) => `void`
+
+#### Type declaration
+
+▸ (`progressEvent`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `progressEvent` | `any` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+Omit.onDownloadProgress
+
+#### Defined in
+
+node_modules/axios/index.d.ts:96
+
+___
+
+### onUploadProgress
+
+• `Optional` **onUploadProgress**: (`progressEvent`: `any`) => `void`
+
+#### Type declaration
+
+▸ (`progressEvent`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `progressEvent` | `any` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+Omit.onUploadProgress
+
+#### Defined in
+
+node_modules/axios/index.d.ts:95
+
+___
+
 ### params
 
 • `Optional` **params**: [`RouteRequestParams`](../modules/SeamOSRouteTypes.md#routerequestparams)<`URL`\>
@@ -272,6 +325,34 @@ Omit.params
 #### Defined in
 
 [src/seam-os/client.ts:45](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L45)
+
+___
+
+### paramsSerializer
+
+• `Optional` **paramsSerializer**: (`params`: `any`) => `string`
+
+#### Type declaration
+
+▸ (`params`): `string`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | `any` |
+
+##### Returns
+
+`string`
+
+#### Inherited from
+
+Omit.paramsSerializer
+
+#### Defined in
+
+node_modules/axios/index.d.ts:84
 
 ___
 
@@ -478,75 +559,3 @@ Omit.xsrfHeaderName
 #### Defined in
 
 node_modules/axios/index.d.ts:94
-
-## Methods
-
-### onDownloadProgress
-
-▸ `Optional` **onDownloadProgress**(`progressEvent`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `progressEvent` | `any` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Omit.onDownloadProgress
-
-#### Defined in
-
-node_modules/axios/index.d.ts:96
-
-___
-
-### onUploadProgress
-
-▸ `Optional` **onUploadProgress**(`progressEvent`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `progressEvent` | `any` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Omit.onUploadProgress
-
-#### Defined in
-
-node_modules/axios/index.d.ts:95
-
-___
-
-### paramsSerializer
-
-▸ `Optional` **paramsSerializer**(`params`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `params` | `any` |
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-Omit.paramsSerializer
-
-#### Defined in
-
-node_modules/axios/index.d.ts:84

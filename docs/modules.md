@@ -106,7 +106,7 @@
 - [WorkspaceResetSandboxResponse](interfaces/WorkspaceResetSandboxResponse.md)
 - [WorkspacesListResponse](interfaces/WorkspacesListResponse.md)
 
-### Type aliases
+### Type Aliases
 
 - [APIResponse](modules.md#apiresponse)
 - [AccessCode](modules.md#accesscode)
@@ -210,7 +210,7 @@
 
 Renames and re-exports [Seam](classes/Seam.md)
 
-## Type aliases
+## Type Aliases
 
 ### APIResponse
 
@@ -327,7 +327,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `generated_code` | `Object` |
+| `generated_code` | { `code`: `string` ; `device_id`: `string`  } |
 | `generated_code.code` | `string` |
 | `generated_code.device_id` | `string` |
 
@@ -431,7 +431,9 @@ ___
 
 Ƭ **AnyDevice**: [`Device`](interfaces/Device.md)<`any`, [`DeviceType`](modules.md#devicetype)\>
 
-**`deprecated`** use CommonDevice instead
+**`Deprecated`**
+
+use CommonDevice instead
 
 #### Defined in
 
@@ -590,7 +592,9 @@ ___
 
 Ƭ **ClientSessionsResponse**: [`ClientSessionsCreateResponse`](modules.md#clientsessionscreateresponse)
 
-**`deprecated`** use ClientSessionsCreateResponse instead
+**`Deprecated`**
+
+use ClientSessionsCreateResponse instead
 
 #### Defined in
 
@@ -738,13 +742,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `battery?` | `Object` |
+| `battery?` | { `level`: `number` ; `status`: [`BatteryStatus`](modules.md#batterystatus)  } |
 | `battery.level` | `number` |
 | `battery.status` | [`BatteryStatus`](modules.md#batterystatus) |
 | `image_alt_text?` | `string` |
 | `image_url?` | `string` |
 | `manufacturer?` | `string` |
-| `model` | `Object` |
+| `model` | { `display_name`: `string` ; `manufacturer_display_name`: `string`  } |
 | `model.display_name` | `string` |
 | `model.manufacturer_display_name` | `string` |
 | `name` | `string` |
@@ -918,7 +922,9 @@ ___
 
 Ƭ **NoiseDetectionDeviceType**: [`NoiseSensorDeviceType`](modules.md#noisesensordevicetype)
 
-**`deprecated`** use NoiseSensorDeviceType instead
+**`Deprecated`**
+
+use NoiseSensorDeviceType instead
 
 #### Defined in
 
@@ -1339,7 +1345,9 @@ ___
 
 • `Const` **NOISE\_DETECTION\_DEVICE\_TYPES**: `string`[] = `NOISE_SENSOR_DEVICE_TYPES`
 
-**`deprecated`** use NOISE_SENSOR_DEVICE_TYPES instead
+**`Deprecated`**
+
+use NOISE_SENSOR_DEVICE_TYPES instead
 
 #### Defined in
 
@@ -1425,7 +1433,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `device` | [`LockDevice`](modules.md#lockdevice) \| [`CommonDevice`](modules.md#commondevice) |
+| `device` | [`CommonDevice`](modules.md#commondevice) \| [`LockDevice`](modules.md#lockdevice) |
 
 #### Returns
 

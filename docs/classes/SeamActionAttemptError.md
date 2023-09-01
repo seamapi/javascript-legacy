@@ -17,6 +17,7 @@
 ### Properties
 
 - [action\_type](SeamActionAttemptError.md#action_type)
+- [cause](SeamActionAttemptError.md#cause)
 - [message](SeamActionAttemptError.md#message)
 - [name](SeamActionAttemptError.md#name)
 - [stack](SeamActionAttemptError.md#stack)
@@ -57,6 +58,24 @@ Error.constructor
 
 • **action\_type**: `string`
 
+#### Defined in
+
+[src/lib/api-error.ts:29](https://github.com/seamapi/javascript/blob/main/src/lib/api-error.ts#L29)
+
+___
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+Error.cause
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
 ___
 
 ### message
@@ -66,6 +85,10 @@ ___
 #### Inherited from
 
 Error.message
+
+#### Defined in
+
+[src/lib/api-error.ts:28](https://github.com/seamapi/javascript/blob/main/src/lib/api-error.ts#L28)
 
 ___
 
@@ -79,7 +102,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1022
+node_modules/typescript/lib/lib.es5.d.ts:1028
 
 ___
 
@@ -93,13 +116,17 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1024
+node_modules/typescript/lib/lib.es5.d.ts:1030
 
 ___
 
 ### type
 
 • **type**: `string`
+
+#### Defined in
+
+[src/lib/api-error.ts:27](https://github.com/seamapi/javascript/blob/main/src/lib/api-error.ts#L27)
 
 ___
 
@@ -113,8 +140,6 @@ ___
 
 Optional override for formatting stack traces
 
-**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
-
 ##### Parameters
 
 | Name | Type |
@@ -125,6 +150,10 @@ Optional override for formatting stack traces
 ##### Returns
 
 `any`
+
+**`See`**
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Inherited from
 

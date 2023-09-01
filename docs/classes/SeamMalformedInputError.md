@@ -16,6 +16,7 @@
 
 ### Properties
 
+- [cause](SeamMalformedInputError.md#cause)
 - [message](SeamMalformedInputError.md#message)
 - [name](SeamMalformedInputError.md#name)
 - [stack](SeamMalformedInputError.md#stack)
@@ -50,6 +51,20 @@ Error.constructor
 
 ## Properties
 
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+Error.cause
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+___
+
 ### message
 
 • **message**: `string`
@@ -60,7 +75,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1023
+node_modules/typescript/lib/lib.es5.d.ts:1029
 
 ___
 
@@ -74,7 +89,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1022
+node_modules/typescript/lib/lib.es5.d.ts:1028
 
 ___
 
@@ -88,13 +103,17 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1024
+node_modules/typescript/lib/lib.es5.d.ts:1030
 
 ___
 
 ### validationErrors
 
 • **validationErrors**: `Record`<`string`, `unknown`\>
+
+#### Defined in
+
+[src/lib/api-error.ts:44](https://github.com/seamapi/javascript/blob/main/src/lib/api-error.ts#L44)
 
 ___
 
@@ -108,8 +127,6 @@ ___
 
 Optional override for formatting stack traces
 
-**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
-
 ##### Parameters
 
 | Name | Type |
@@ -120,6 +137,10 @@ Optional override for formatting stack traces
 ##### Returns
 
 `any`
+
+**`See`**
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Inherited from
 

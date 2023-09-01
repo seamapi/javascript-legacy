@@ -8,13 +8,13 @@
 
 - [Routes](../interfaces/SeamOSRouteTypes.Routes.md)
 
-### Type aliases
+### Type Aliases
 
 - [RouteRequestBody](SeamOSRouteTypes.md#routerequestbody)
 - [RouteRequestParams](SeamOSRouteTypes.md#routerequestparams)
 - [RouteResponse](SeamOSRouteTypes.md#routeresponse)
 
-## Type aliases
+## Type Aliases
 
 ### RouteRequestBody
 
