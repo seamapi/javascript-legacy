@@ -32,17 +32,17 @@ export const LOCK_DEVICE_TYPES = [
   "igloohome_lock",
   "hubitat_lock",
 ]
-export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
+export type LockDeviceType = (typeof LOCK_DEVICE_TYPES)[number]
 
 export const NOISE_SENSOR_DEVICE_TYPES = [
   "noiseaware_activity_zone",
   "minut_sensor",
 ]
-export type NoiseSensorDeviceType = typeof NOISE_SENSOR_DEVICE_TYPES[number]
+export type NoiseSensorDeviceType = (typeof NOISE_SENSOR_DEVICE_TYPES)[number]
 export type NoiseSensorDeviceProperties = CommonDeviceProperties
 
 export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
-export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
+export type ThermostatDeviceType = (typeof THERMOSTAT_DEVICE_TYPES)[number]
 
 export type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
 
@@ -97,7 +97,7 @@ export const PROVIDERS = [
   "ttlock",
   "nest",
 ]
-export type Provider = typeof PROVIDERS[number]
+export type Provider = (typeof PROVIDERS)[number]
 
 /** This type can allow for other provider categories as they are added  */
 export type ProviderCategory = "stable"
