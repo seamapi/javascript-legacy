@@ -465,6 +465,7 @@ test(
         automatic_cooling_enabled: true,
         heating_set_point_fahrenheit: 40,
         cooling_set_point_fahrenheit: 80,
+        manual_override_allowed: true,
       },
     ],
     load_devices_from: ["nest"],
