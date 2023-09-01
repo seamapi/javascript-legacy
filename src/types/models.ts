@@ -71,11 +71,9 @@ export interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
   default_climate_setting?: ClimateSetting
   is_climate_setting_schedule_active: boolean
   active_climate_setting_schedule?: ClimateSettingSchedule
-  is_cooling_available: false
-  is_heating_available: false
 }
 
-export type CoolingThermostatProperties = BaseThermostatDeviceProperties & {
+type CoolingProperties = {
   is_cooling_available: true
   min_cooling_set_point_celsius: number
   min_cooling_set_point_fahrenheit: number
@@ -83,7 +81,7 @@ export type CoolingThermostatProperties = BaseThermostatDeviceProperties & {
   max_cooling_set_point_fahrenheit: number
 }
 
-export type HeatingThermostatProperties = BaseThermostatDeviceProperties & {
+type HeatingProperties = {
   is_heating_available: true
   min_heating_set_point_celsius: number
   min_heating_set_point_fahrenheit: number
@@ -91,12 +89,25 @@ export type HeatingThermostatProperties = BaseThermostatDeviceProperties & {
   max_heating_set_point_fahrenheit: number
 }
 
-export type HeatCoolThermostatProperties = BaseThermostatDeviceProperties &
-  CoolingThermostatProperties &
-  HeatingThermostatProperties & {
-    min_heating_cooling_delta_celsius: number
-    min_heating_cooling_delta_fahrenheit: number
+type HeatingCoolingDeltaProperties = {
+  min_heating_cooling_delta_celsius: number
+  min_heating_cooling_delta_fahrenheit: number
+}
+
+export type CoolingThermostatProperties = BaseThermostatDeviceProperties &
+  CoolingProperties & {
+    is_heating_available: false
   }
+
+export type HeatingThermostatProperties = BaseThermostatDeviceProperties &
+  HeatingProperties & {
+    is_cooling_available: false
+  }
+
+export type HeatCoolThermostatProperties = BaseThermostatDeviceProperties &
+  CoolingProperties &
+  HeatingProperties &
+  HeatingCoolingDeltaProperties
 
 export type ThermostatDeviceProperties =
   | CoolingThermostatProperties

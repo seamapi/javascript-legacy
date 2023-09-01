@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/types/models.ts:147](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L147)
+[src/types/models.ts:158](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L158)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:146](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L146)
+[src/types/models.ts:157](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L157)
