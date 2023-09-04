@@ -107,7 +107,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:472](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L472)
+[src/seam-connect/routes.ts:471](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L471)
 
 ___
 
@@ -141,7 +141,7 @@ Routes.clientSessions
 
 #### Defined in
 
-[src/seam-connect/routes.ts:538](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L538)
+[src/seam-connect/routes.ts:537](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L537)
 
 ___
 
@@ -186,7 +186,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:447](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L447)
+[src/seam-connect/routes.ts:446](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L446)
 
 ___
 
@@ -206,7 +206,7 @@ Routes.deviceModels
 
 #### Defined in
 
-[src/seam-connect/routes.ts:577](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L577)
+[src/seam-connect/routes.ts:576](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L576)
 
 ___
 
@@ -301,7 +301,7 @@ Routes.noiseThresholds
 
 #### Defined in
 
-[src/seam-connect/routes.ts:482](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L482)
+[src/seam-connect/routes.ts:481](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L481)
 
 ___
 
@@ -330,7 +330,7 @@ Routes.thermostats
 
 #### Defined in
 
-[src/seam-connect/routes.ts:597](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L597)
+[src/seam-connect/routes.ts:596](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L596)
 
 ___
 
@@ -353,7 +353,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:513](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L513)
+[src/seam-connect/routes.ts:512](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L512)
 
 ___
 
