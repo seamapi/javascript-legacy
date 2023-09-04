@@ -400,8 +400,7 @@ export abstract class Routes {
         "generated_code",
         {
           url: "/access_codes/generate_code",
-          method: "GET",
-          data: params,
+          params,
         }
       ),
 
