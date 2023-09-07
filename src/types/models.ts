@@ -45,6 +45,7 @@ export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
 export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
 
 export type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
+export type FanModeSetting = "on" | "auto"
 
 export type ClimateSetting = {
   automatic_heating_enabled?: boolean
