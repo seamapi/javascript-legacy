@@ -115,9 +115,12 @@ export type AccessCodeGenerateCodeRequest = {
   device_id: string
 }
 
-export type AccessCodesListRequest = {
-  device_id: string
-}
+export type AccessCodesListRequest =
+  | {
+      device_id: string
+      access_code_ids?: string[]
+    }
+  | { access_code_ids: string[] }
 
 export type AccessCodeDeleteRequest = {
   device_id?: string
