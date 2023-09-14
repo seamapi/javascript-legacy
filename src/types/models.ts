@@ -492,6 +492,7 @@ export interface ClientSession {
   connect_webview_ids: string[]
   client_session_id: string
   user_identifier_key: string | null
+  workspace_id: string
   created_at: string
 }
 
