@@ -12,6 +12,7 @@
 - [created\_at](ClientSession.md#created_at)
 - [token](ClientSession.md#token)
 - [user\_identifier\_key](ClientSession.md#user_identifier_key)
+- [workspace\_id](ClientSession.md#workspace_id)
 
 ## Properties
 
@@ -51,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:495](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L495)
+[src/types/models.ts:496](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L496)
 
 ___
 
@@ -72,3 +73,13 @@ ___
 #### Defined in
 
 [src/types/models.ts:494](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L494)
+
+___
+
+### workspace\_id
+
+• **workspace\_id**: `string`
+
+#### Defined in
+
+[src/types/models.ts:495](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L495)
