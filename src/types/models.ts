@@ -25,12 +25,15 @@ export const LOCK_DEVICE_TYPES = [
   "schlage_lock",
   "seam_relay",
   "smartthings_lock",
+  "wyze_lock",
   "yale_lock",
   "two_n_intercom",
   "controlbyweb_device",
   "ttlock_lock",
   "igloohome_lock",
   "hubitat_lock",
+  "four_suites_door",
+  "dormakaba_oracode_door",
 ]
 export type LockDeviceType = typeof LOCK_DEVICE_TYPES[number]
 
@@ -126,23 +129,25 @@ export const NOISE_DETECTION_DEVICE_TYPES = NOISE_SENSOR_DEVICE_TYPES
 export type NoiseDetectionDeviceType = NoiseSensorDeviceType
 
 export const PROVIDERS = [
-  "akuvox",
   "august",
+  "avigilon_alta",
   "brivo",
-  "butterflymx",
-  "doorking",
-  "genie",
-  "igloo",
-  "linear",
-  "lockly",
-  "nuki",
-  "salto",
   "schlage",
   "smartthings",
   "yale",
+  "nuki",
+  "salto",
+  "controlbyweb",
   "minut",
+  "my_2n",
+  "kwikset",
   "ttlock",
-  "nest",
+  "noiseaware",
+  "igloohome",
+  "ecobee",
+  "hubitat",
+  "four_suites",
+  "dormakaba_oracode",
 ]
 export type Provider = typeof PROVIDERS[number]
 
