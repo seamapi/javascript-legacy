@@ -54,6 +54,7 @@ export interface AccessCodeCreateBaseRequest {
   name?: string
   code?: string
   common_code_key?: string
+  allow_external_modification?: boolean
 }
 
 export interface AccessCodeCreateOngoingRequest
@@ -155,6 +156,7 @@ export type UnmanagedAccessCodeUpdateRequest = {
 
 export type UnmanagedAccessCodeConvertToManagedRequest = {
   access_code_id: string
+  allow_external_modification?: boolean
 }
 
 export type PullBackupAccessCodeRequest = {

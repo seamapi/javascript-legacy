@@ -17,6 +17,8 @@
 ### Properties
 
 - [access\_code\_id](UnmanagedAccessCodeBase.md#access_code_id)
+- [allow\_external\_modification](UnmanagedAccessCodeBase.md#allow_external_modification)
+- [appearance](UnmanagedAccessCodeBase.md#appearance)
 - [code](UnmanagedAccessCodeBase.md#code)
 - [created\_at](UnmanagedAccessCodeBase.md#created_at)
 - [device\_id](UnmanagedAccessCodeBase.md#device_id)
@@ -44,6 +46,44 @@
 
 ___
 
+### allow\_external\_modification
+
+• `Optional` **allow\_external\_modification**: `boolean`
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[allow_external_modification](AccessCodeBase.md#allow_external_modification)
+
+#### Defined in
+
+[src/types/models.ts:430](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L430)
+
+___
+
+### appearance
+
+• **appearance**: `Object`
+
+#### Index signature
+
+▪ [key: `string`]: `any`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `name?` | `string` |
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[appearance](AccessCodeBase.md#appearance)
+
+#### Defined in
+
+[src/types/models.ts:426](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L426)
+
+___
+
 ### code
 
 • **code**: ``null`` \| `string`
@@ -64,7 +104,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:452](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L452)
+[src/types/models.ts:457](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L457)
 
 ___
 
@@ -158,7 +198,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:451](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L451)
+[src/types/models.ts:456](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L456)
 
 ___
 

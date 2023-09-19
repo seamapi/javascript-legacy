@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:473](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L473)
+[src/types/models.ts:478](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L478)
 
 ___
 

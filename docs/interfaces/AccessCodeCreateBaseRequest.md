@@ -14,12 +14,23 @@
 
 ### Properties
 
+- [allow\_external\_modification](AccessCodeCreateBaseRequest.md#allow_external_modification)
 - [code](AccessCodeCreateBaseRequest.md#code)
 - [common\_code\_key](AccessCodeCreateBaseRequest.md#common_code_key)
 - [device\_id](AccessCodeCreateBaseRequest.md#device_id)
 - [name](AccessCodeCreateBaseRequest.md#name)
 
 ## Properties
+
+### allow\_external\_modification
+
+• `Optional` **allow\_external\_modification**: `boolean`
+
+#### Defined in
+
+[src/types/route-requests.ts:57](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L57)
+
+___
 
 ### code
 

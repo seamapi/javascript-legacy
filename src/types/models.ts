@@ -423,6 +423,11 @@ export interface AccessCodeBase {
   is_backup_access_code_available: boolean
   errors: Array<AccessCodeError | DeviceError | ConnectedAccountError>
   warnings: SeamWarning[]
+  appearance: {
+    name?: string
+    [key: string]: any
+  }
+  allow_external_modification?: boolean
 }
 
 export interface ManagedAccessCodeBase extends AccessCodeBase {
