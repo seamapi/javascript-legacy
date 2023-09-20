@@ -13,7 +13,6 @@
 ### Properties
 
 - [access\_code\_id](TimeBoundAccessCode.md#access_code_id)
-- [allow\_external\_modification](TimeBoundAccessCode.md#allow_external_modification)
 - [appearance](TimeBoundAccessCode.md#appearance)
 - [code](TimeBoundAccessCode.md#code)
 - [common\_code\_key](TimeBoundAccessCode.md#common_code_key)
@@ -23,6 +22,7 @@
 - [errors](TimeBoundAccessCode.md#errors)
 - [is\_backup](TimeBoundAccessCode.md#is_backup)
 - [is\_backup\_access\_code\_available](TimeBoundAccessCode.md#is_backup_access_code_available)
+- [is\_external\_modification\_allowed](TimeBoundAccessCode.md#is_external_modification_allowed)
 - [is\_scheduled\_on\_device](TimeBoundAccessCode.md#is_scheduled_on_device)
 - [is\_waiting\_for\_code\_assignment](TimeBoundAccessCode.md#is_waiting_for_code_assignment)
 - [name](TimeBoundAccessCode.md#name)
@@ -45,20 +45,6 @@
 #### Defined in
 
 [src/types/models.ts:417](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L417)
-
-___
-
-### allow\_external\_modification
-
-• `Optional` **allow\_external\_modification**: `boolean`
-
-#### Inherited from
-
-[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[allow_external_modification](ManagedAccessCodeBase.md#allow_external_modification)
-
-#### Defined in
-
-[src/types/models.ts:435](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L435)
 
 ___
 
@@ -187,6 +173,20 @@ ___
 #### Defined in
 
 [src/types/models.ts:423](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L423)
+
+___
+
+### is\_external\_modification\_allowed
+
+• **is\_external\_modification\_allowed**: `boolean`
+
+#### Inherited from
+
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[is_external_modification_allowed](ManagedAccessCodeBase.md#is_external_modification_allowed)
+
+#### Defined in
+
+[src/types/models.ts:435](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L435)
 
 ___
 

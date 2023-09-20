@@ -13,7 +13,6 @@
 ### Properties
 
 - [access\_code\_id](OngoingAccessCode.md#access_code_id)
-- [allow\_external\_modification](OngoingAccessCode.md#allow_external_modification)
 - [appearance](OngoingAccessCode.md#appearance)
 - [code](OngoingAccessCode.md#code)
 - [common\_code\_key](OngoingAccessCode.md#common_code_key)
@@ -22,6 +21,7 @@
 - [errors](OngoingAccessCode.md#errors)
 - [is\_backup](OngoingAccessCode.md#is_backup)
 - [is\_backup\_access\_code\_available](OngoingAccessCode.md#is_backup_access_code_available)
+- [is\_external\_modification\_allowed](OngoingAccessCode.md#is_external_modification_allowed)
 - [is\_waiting\_for\_code\_assignment](OngoingAccessCode.md#is_waiting_for_code_assignment)
 - [name](OngoingAccessCode.md#name)
 - [pulled\_backup\_access\_code\_id](OngoingAccessCode.md#pulled_backup_access_code_id)
@@ -42,20 +42,6 @@
 #### Defined in
 
 [src/types/models.ts:417](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L417)
-
-___
-
-### allow\_external\_modification
-
-• `Optional` **allow\_external\_modification**: `boolean`
-
-#### Inherited from
-
-[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[allow_external_modification](ManagedAccessCodeBase.md#allow_external_modification)
-
-#### Defined in
-
-[src/types/models.ts:435](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L435)
 
 ___
 
@@ -174,6 +160,20 @@ ___
 #### Defined in
 
 [src/types/models.ts:423](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L423)
+
+___
+
+### is\_external\_modification\_allowed
+
+• **is\_external\_modification\_allowed**: `boolean`
+
+#### Inherited from
+
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[is_external_modification_allowed](ManagedAccessCodeBase.md#is_external_modification_allowed)
+
+#### Defined in
+
+[src/types/models.ts:435](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L435)
 
 ___
 
