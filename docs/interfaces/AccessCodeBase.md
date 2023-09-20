@@ -15,7 +15,6 @@
 ### Properties
 
 - [access\_code\_id](AccessCodeBase.md#access_code_id)
-- [allow\_external\_modification](AccessCodeBase.md#allow_external_modification)
 - [appearance](AccessCodeBase.md#appearance)
 - [code](AccessCodeBase.md#code)
 - [device\_id](AccessCodeBase.md#device_id)
@@ -35,16 +34,6 @@
 #### Defined in
 
 [src/types/models.ts:417](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L417)
-
-___
-
-### allow\_external\_modification
-
-• `Optional` **allow\_external\_modification**: `boolean`
-
-#### Defined in
-
-[src/types/models.ts:430](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L430)
 
 ___
 

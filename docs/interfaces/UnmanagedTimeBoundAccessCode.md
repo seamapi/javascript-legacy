@@ -13,7 +13,6 @@
 ### Properties
 
 - [access\_code\_id](UnmanagedTimeBoundAccessCode.md#access_code_id)
-- [allow\_external\_modification](UnmanagedTimeBoundAccessCode.md#allow_external_modification)
 - [appearance](UnmanagedTimeBoundAccessCode.md#appearance)
 - [code](UnmanagedTimeBoundAccessCode.md#code)
 - [created\_at](UnmanagedTimeBoundAccessCode.md#created_at)
@@ -42,20 +41,6 @@
 #### Defined in
 
 [src/types/models.ts:417](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L417)
-
-___
-
-### allow\_external\_modification
-
-• `Optional` **allow\_external\_modification**: `boolean`
-
-#### Inherited from
-
-[UnmanagedAccessCodeBase](UnmanagedAccessCodeBase.md).[allow_external_modification](UnmanagedAccessCodeBase.md#allow_external_modification)
-
-#### Defined in
-
-[src/types/models.ts:430](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L430)
 
 ___
 

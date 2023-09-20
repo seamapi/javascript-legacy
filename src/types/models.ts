@@ -427,12 +427,12 @@ export interface AccessCodeBase {
     name?: string
     [key: string]: any
   }
-  allow_external_modification?: boolean
 }
 
 export interface ManagedAccessCodeBase extends AccessCodeBase {
   common_code_key?: string | null
   is_waiting_for_code_assignment?: true
+  allow_external_modification?: boolean
 }
 
 export interface OngoingAccessCode extends ManagedAccessCodeBase {
