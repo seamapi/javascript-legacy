@@ -13,6 +13,7 @@
 ### Properties
 
 - [access\_code\_id](UnmanagedOngoingAccessCode.md#access_code_id)
+- [appearance](UnmanagedOngoingAccessCode.md#appearance)
 - [code](UnmanagedOngoingAccessCode.md#code)
 - [created\_at](UnmanagedOngoingAccessCode.md#created_at)
 - [device\_id](UnmanagedOngoingAccessCode.md#device_id)
@@ -41,6 +42,30 @@
 
 ___
 
+### appearance
+
+• **appearance**: `Object`
+
+#### Index signature
+
+▪ [key: `string`]: `any`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `name?` | `string` |
+
+#### Inherited from
+
+[UnmanagedAccessCodeBase](UnmanagedAccessCodeBase.md).[appearance](UnmanagedAccessCodeBase.md#appearance)
+
+#### Defined in
+
+[src/types/models.ts:426](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L426)
+
+___
+
 ### code
 
 • **code**: ``null`` \| `string`
@@ -65,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:452](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L452)
+[src/types/models.ts:457](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L457)
 
 ___
 
@@ -163,7 +188,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:451](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L451)
+[src/types/models.ts:456](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L456)
 
 ___
 
@@ -173,7 +198,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:456](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L456)
+[src/types/models.ts:461](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L461)
 
 ___
 

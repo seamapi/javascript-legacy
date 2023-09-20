@@ -12,6 +12,7 @@
 
 ### Properties
 
+- [allow\_external\_modification](AccessCodeCreateScheduledRequest.md#allow_external_modification)
 - [code](AccessCodeCreateScheduledRequest.md#code)
 - [common\_code\_key](AccessCodeCreateScheduledRequest.md#common_code_key)
 - [device\_id](AccessCodeCreateScheduledRequest.md#device_id)
@@ -20,6 +21,20 @@
 - [starts\_at](AccessCodeCreateScheduledRequest.md#starts_at)
 
 ## Properties
+
+### allow\_external\_modification
+
+• `Optional` **allow\_external\_modification**: `boolean`
+
+#### Inherited from
+
+[AccessCodeCreateBaseRequest](AccessCodeCreateBaseRequest.md).[allow_external_modification](AccessCodeCreateBaseRequest.md#allow_external_modification)
+
+#### Defined in
+
+[src/types/route-requests.ts:57](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L57)
+
+___
 
 ### code
 
@@ -69,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L65)
+[src/types/route-requests.ts:66](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L66)
 
 ___
 
@@ -93,4 +108,4 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:64](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L64)
+[src/types/route-requests.ts:65](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L65)

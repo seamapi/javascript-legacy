@@ -13,6 +13,7 @@
 ### Properties
 
 - [access\_code\_id](UnmanagedTimeBoundAccessCode.md#access_code_id)
+- [appearance](UnmanagedTimeBoundAccessCode.md#appearance)
 - [code](UnmanagedTimeBoundAccessCode.md#code)
 - [created\_at](UnmanagedTimeBoundAccessCode.md#created_at)
 - [device\_id](UnmanagedTimeBoundAccessCode.md#device_id)
@@ -43,6 +44,30 @@
 
 ___
 
+### appearance
+
+• **appearance**: `Object`
+
+#### Index signature
+
+▪ [key: `string`]: `any`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `name?` | `string` |
+
+#### Inherited from
+
+[UnmanagedAccessCodeBase](UnmanagedAccessCodeBase.md).[appearance](UnmanagedAccessCodeBase.md#appearance)
+
+#### Defined in
+
+[src/types/models.ts:426](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L426)
+
+___
+
 ### code
 
 • **code**: ``null`` \| `string`
@@ -67,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:452](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L452)
+[src/types/models.ts:457](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L457)
 
 ___
 
@@ -91,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:461](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L461)
+[src/types/models.ts:466](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L466)
 
 ___
 
@@ -171,7 +196,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:460](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L460)
+[src/types/models.ts:465](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L465)
 
 ___
 
@@ -185,7 +210,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:451](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L451)
+[src/types/models.ts:456](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L456)
 
 ___
 
@@ -195,7 +220,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:459](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L459)
+[src/types/models.ts:464](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L464)
 
 ___
 

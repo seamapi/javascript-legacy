@@ -13,6 +13,7 @@
 ### Properties
 
 - [access\_code\_id](OngoingAccessCode.md#access_code_id)
+- [appearance](OngoingAccessCode.md#appearance)
 - [code](OngoingAccessCode.md#code)
 - [common\_code\_key](OngoingAccessCode.md#common_code_key)
 - [created\_at](OngoingAccessCode.md#created_at)
@@ -20,6 +21,7 @@
 - [errors](OngoingAccessCode.md#errors)
 - [is\_backup](OngoingAccessCode.md#is_backup)
 - [is\_backup\_access\_code\_available](OngoingAccessCode.md#is_backup_access_code_available)
+- [is\_external\_modification\_allowed](OngoingAccessCode.md#is_external_modification_allowed)
 - [is\_waiting\_for\_code\_assignment](OngoingAccessCode.md#is_waiting_for_code_assignment)
 - [name](OngoingAccessCode.md#name)
 - [pulled\_backup\_access\_code\_id](OngoingAccessCode.md#pulled_backup_access_code_id)
@@ -40,6 +42,30 @@
 #### Defined in
 
 [src/types/models.ts:417](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L417)
+
+___
+
+### appearance
+
+• **appearance**: `Object`
+
+#### Index signature
+
+▪ [key: `string`]: `any`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `name?` | `string` |
+
+#### Inherited from
+
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[appearance](ManagedAccessCodeBase.md#appearance)
+
+#### Defined in
+
+[src/types/models.ts:426](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L426)
 
 ___
 
@@ -67,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:429](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L429)
+[src/types/models.ts:434](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L434)
 
 ___
 
@@ -77,7 +103,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:435](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L435)
+[src/types/models.ts:440](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L440)
 
 ___
 
@@ -137,6 +163,20 @@ ___
 
 ___
 
+### is\_external\_modification\_allowed
+
+• **is\_external\_modification\_allowed**: `boolean`
+
+#### Inherited from
+
+[ManagedAccessCodeBase](ManagedAccessCodeBase.md).[is_external_modification_allowed](ManagedAccessCodeBase.md#is_external_modification_allowed)
+
+#### Defined in
+
+[src/types/models.ts:433](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L433)
+
+___
+
 ### is\_waiting\_for\_code\_assignment
 
 • `Optional` **is\_waiting\_for\_code\_assignment**: ``true``
@@ -147,7 +187,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:430](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L430)
+[src/types/models.ts:435](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L435)
 
 ___
 
@@ -185,7 +225,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:436](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L436)
+[src/types/models.ts:441](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L441)
 
 ___
 
@@ -195,7 +235,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:434](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L434)
+[src/types/models.ts:439](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L439)
 
 ___
 

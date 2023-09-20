@@ -17,12 +17,14 @@
 ### Properties
 
 - [access\_code\_id](ManagedAccessCodeBase.md#access_code_id)
+- [appearance](ManagedAccessCodeBase.md#appearance)
 - [code](ManagedAccessCodeBase.md#code)
 - [common\_code\_key](ManagedAccessCodeBase.md#common_code_key)
 - [device\_id](ManagedAccessCodeBase.md#device_id)
 - [errors](ManagedAccessCodeBase.md#errors)
 - [is\_backup](ManagedAccessCodeBase.md#is_backup)
 - [is\_backup\_access\_code\_available](ManagedAccessCodeBase.md#is_backup_access_code_available)
+- [is\_external\_modification\_allowed](ManagedAccessCodeBase.md#is_external_modification_allowed)
 - [is\_waiting\_for\_code\_assignment](ManagedAccessCodeBase.md#is_waiting_for_code_assignment)
 - [name](ManagedAccessCodeBase.md#name)
 - [pulled\_backup\_access\_code\_id](ManagedAccessCodeBase.md#pulled_backup_access_code_id)
@@ -41,6 +43,30 @@
 #### Defined in
 
 [src/types/models.ts:417](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L417)
+
+___
+
+### appearance
+
+• **appearance**: `Object`
+
+#### Index signature
+
+▪ [key: `string`]: `any`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `name?` | `string` |
+
+#### Inherited from
+
+[AccessCodeBase](AccessCodeBase.md).[appearance](AccessCodeBase.md#appearance)
+
+#### Defined in
+
+[src/types/models.ts:426](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L426)
 
 ___
 
@@ -64,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:429](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L429)
+[src/types/models.ts:434](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L434)
 
 ___
 
@@ -124,13 +150,23 @@ ___
 
 ___
 
+### is\_external\_modification\_allowed
+
+• **is\_external\_modification\_allowed**: `boolean`
+
+#### Defined in
+
+[src/types/models.ts:433](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L433)
+
+___
+
 ### is\_waiting\_for\_code\_assignment
 
 • `Optional` **is\_waiting\_for\_code\_assignment**: ``true``
 
 #### Defined in
 
-[src/types/models.ts:430](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L430)
+[src/types/models.ts:435](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L435)
 
 ___
 

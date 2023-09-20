@@ -12,12 +12,27 @@
 
 ### Properties
 
+- [allow\_external\_modification](AccessCodeCreateOngoingRequest.md#allow_external_modification)
 - [code](AccessCodeCreateOngoingRequest.md#code)
 - [common\_code\_key](AccessCodeCreateOngoingRequest.md#common_code_key)
 - [device\_id](AccessCodeCreateOngoingRequest.md#device_id)
 - [name](AccessCodeCreateOngoingRequest.md#name)
 
 ## Properties
+
+### allow\_external\_modification
+
+• `Optional` **allow\_external\_modification**: `boolean`
+
+#### Inherited from
+
+[AccessCodeCreateBaseRequest](AccessCodeCreateBaseRequest.md).[allow_external_modification](AccessCodeCreateBaseRequest.md#allow_external_modification)
+
+#### Defined in
+
+[src/types/route-requests.ts:57](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L57)
+
+___
 
 ### code
 
