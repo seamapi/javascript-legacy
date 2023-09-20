@@ -430,9 +430,9 @@ export interface AccessCodeBase {
 }
 
 export interface ManagedAccessCodeBase extends AccessCodeBase {
+  is_external_modification_allowed: boolean
   common_code_key?: string | null
   is_waiting_for_code_assignment?: true
-  is_external_modification_allowed: boolean
 }
 
 export interface OngoingAccessCode extends ManagedAccessCodeBase {
