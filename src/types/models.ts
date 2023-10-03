@@ -123,6 +123,10 @@ export type DeviceType =
   | NoiseSensorDeviceType
   | ThermostatDeviceType
 
+export const DEVICE_CATEGORY_TYPES = ["lock", "thermostat", "noise_sensor"]
+
+export type DeviceCategoryType = typeof DEVICE_CATEGORY_TYPES[number]
+
 /** @deprecated use NOISE_SENSOR_DEVICE_TYPES instead */
 export const NOISE_DETECTION_DEVICE_TYPES = NOISE_SENSOR_DEVICE_TYPES
 /** @deprecated use NoiseSensorDeviceType instead */
@@ -211,6 +215,7 @@ export interface Device<
   properties: Properties
   location?: DeviceLocation | null
   device_type: Type
+  device_category: DeviceCategoryType
   connected_account_id: string
   capabilities_supported: unknown[]
   errors: Array<DeviceError | ConnectedAccountError>
