@@ -162,8 +162,8 @@ Use something with sufficient entropy known only to the owner of the client sess
     })
 
     return makeRequest(client, {
-      method: "PUT",
-      url: "/client_sessions/create",
+      method: "POST",
+      url: "/client_sessions/get_or_create",
       data: { user_identifier_key: options.userIdentifierKey },
     })
   }
