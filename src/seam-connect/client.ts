@@ -14,6 +14,7 @@ import {
 } from "../types/globals"
 import { version } from "../../package.json"
 import { ClientSessionsResponse } from "../types"
+import { paramsSerializer } from "../lib/params-serializer"
 
 export interface SeamClientOptions {
   /* Seam API Key */
@@ -96,6 +97,7 @@ export class Seam extends Routes {
       withCredentials: clientSessionToken ? true : false,
       ...axiosOptions,
       baseURL: endpoint,
+      paramsSerializer,
       headers,
     })
 

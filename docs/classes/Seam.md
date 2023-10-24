@@ -54,7 +54,7 @@ Routes.constructor
 
 #### Defined in
 
-[src/seam-connect/client.ts:72](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L72)
+[src/seam-connect/client.ts:73](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L73)
 
 ## Properties
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:70](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L70)
+[src/seam-connect/client.ts:71](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L71)
 
 ___
 
@@ -405,7 +405,7 @@ Routes.makeRequest
 
 #### Defined in
 
-[src/seam-connect/client.ts:108](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L108)
+[src/seam-connect/client.ts:110](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L110)
 
 ___
 
@@ -430,4 +430,4 @@ ___
 
 #### Defined in
 
-[src/seam-connect/client.ts:114](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L114)
+[src/seam-connect/client.ts:116](https://github.com/seamapi/javascript/blob/main/src/seam-connect/client.ts#L116)
