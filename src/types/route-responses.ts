@@ -185,7 +185,7 @@ export type DeviceModelsListResponse = {
 
 // Thermostats
 export interface ThermostatsListResponse {
-  thermostats: ThermostatDevice
+  thermostats: ThermostatDevice[]
 }
 export interface ThermostatGetResponse {
   thermostat: ThermostatDevice

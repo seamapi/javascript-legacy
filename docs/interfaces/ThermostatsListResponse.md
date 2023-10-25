@@ -12,7 +12,7 @@
 
 ### thermostats
 
-• **thermostats**: [`ThermostatDevice`](../modules.md#thermostatdevice)
+• **thermostats**: [`ThermostatDevice`](../modules.md#thermostatdevice)[]
 
 #### Defined in
 
