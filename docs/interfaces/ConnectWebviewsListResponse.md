@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[src/types/route-responses.ts:67](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L67)
+[src/types/route-responses.ts:68](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L68)

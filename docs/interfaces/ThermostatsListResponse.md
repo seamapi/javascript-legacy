@@ -12,8 +12,8 @@
 
 ### thermostats
 
-• **thermostats**: [`Device`](Device.md)<[`CommonDeviceProperties`](../modules.md#commondeviceproperties), `string`\>[]
+• **thermostats**: [`ThermostatDevice`](../modules.md#thermostatdevice)
 
 #### Defined in
 
-[src/types/route-responses.ts:187](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L187)
+[src/types/route-responses.ts:188](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L188)
