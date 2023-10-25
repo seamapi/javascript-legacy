@@ -338,7 +338,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:93](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L93)
+[src/types/route-responses.ts:94](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L94)
 
 ___
 
@@ -478,7 +478,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:161](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L161)
+[src/types/route-responses.ts:162](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L162)
 
 ___
 
@@ -514,7 +514,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:176](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L176)
+[src/types/route-responses.ts:177](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L177)
 
 ___
 
@@ -547,7 +547,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:165](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L165)
+[src/types/route-responses.ts:166](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L166)
 
 ___
 
@@ -581,7 +581,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:169](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L169)
+[src/types/route-responses.ts:170](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L170)
 
 ___
 
@@ -593,7 +593,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:179](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L179)
+[src/types/route-responses.ts:180](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L180)
 
 ___
 
@@ -672,7 +672,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:210](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L210)
+[src/types/route-responses.ts:211](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L211)
 
 ___
 
@@ -849,7 +849,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:181](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L181)
+[src/types/route-responses.ts:182](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L182)
 
 ___
 
@@ -1083,7 +1083,7 @@ ___
 
 #### Defined in
 
-[src/types/route-responses.ts:155](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L155)
+[src/types/route-responses.ts:156](https://github.com/seamapi/javascript/blob/main/src/types/route-responses.ts#L156)
 
 ___
 
@@ -1515,7 +1515,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `device` | [`CommonDevice`](modules.md#commondevice) \| [`ThermostatDevice`](modules.md#thermostatdevice) |
+| `device` | [`ThermostatDevice`](modules.md#thermostatdevice) \| [`CommonDevice`](modules.md#commondevice) |
 
 #### Returns
 
