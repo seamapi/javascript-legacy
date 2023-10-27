@@ -616,6 +616,12 @@ export abstract class Routes {
         method: "DELETE",
         params,
       }),
+    setFanMode: (params: ThermostatUpdateRequest) =>
+      this.createActionAttemptAndWait({
+        url: "/thermostats/set_fan_mode",
+        method: "POST",
+        data: params,
+      }),
 
     climateSettingSchedules: {
       list: (params: ClimateSettingSchedulesListRequest) =>

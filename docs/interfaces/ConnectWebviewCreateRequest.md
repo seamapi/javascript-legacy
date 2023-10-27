@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/types/route-requests.ts:11](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L11)
+[src/types/route-requests.ts:12](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L12)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:17](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L17)
+[src/types/route-requests.ts:18](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L18)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:16](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L16)
+[src/types/route-requests.ts:17](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L17)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:15](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L15)
+[src/types/route-requests.ts:16](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L16)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:14](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L14)
+[src/types/route-requests.ts:15](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L15)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:13](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L13)
+[src/types/route-requests.ts:14](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L14)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:12](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L12)
+[src/types/route-requests.ts:13](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L13)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:18](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L18)
+[src/types/route-requests.ts:19](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L19)
