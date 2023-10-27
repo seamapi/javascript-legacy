@@ -438,6 +438,20 @@ test(
   "{}"
 )
 test(
+  testAPIMethod("thermostats.setFanMode"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+        fan_mode_setting: "on",
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
   testAPIMethod("thermostats.climateSettingSchedules.get"),
   {
     args: (seed) => [

@@ -3,6 +3,7 @@ import {
   ClimateSetting,
   ClimateSettingScheduleBase,
   CommonDeviceProperties,
+  FanModeSetting,
   Provider,
 } from "./models"
 import { CustomMetadata } from "./globals"
@@ -301,4 +302,10 @@ export type ThermostatUpdateRequest = {
   device_id: string
   sync?: boolean
   default_climate_setting: Partial<ClimateSetting>
+}
+
+export type ThermostatSetFanModeRequest = {
+  device_id: string
+  sync?: boolean
+  fan_mode_setting: FanModeSetting
 }

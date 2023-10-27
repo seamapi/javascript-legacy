@@ -58,6 +58,7 @@ import {
   PullBackupAccessCodeRequest,
   EventGetRequest,
   ClientSessionsGetRequest,
+  ThermostatSetFanModeRequest,
 } from "../types/route-requests"
 import {
   AccessCodeGenerateCodeResponse,
@@ -615,6 +616,12 @@ export abstract class Routes {
         url: "/thermostats/delete",
         method: "DELETE",
         params,
+      }),
+    setFanMode: (params: ThermostatSetFanModeRequest) =>
+      this.createActionAttemptAndWait({
+        url: "/thermostats/set_fan_mode",
+        method: "POST",
+        data: params,
       }),
 
     climateSettingSchedules: {
