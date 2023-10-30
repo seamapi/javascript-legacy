@@ -19,6 +19,7 @@
 - [can\_enable\_automatic\_heating](BaseThermostatDeviceProperties.md#can_enable_automatic_heating)
 - [current\_climate\_setting](BaseThermostatDeviceProperties.md#current_climate_setting)
 - [default\_climate\_setting](BaseThermostatDeviceProperties.md#default_climate_setting)
+- [fan\_mode\_setting](BaseThermostatDeviceProperties.md#fan_mode_setting)
 - [image\_alt\_text](BaseThermostatDeviceProperties.md#image_alt_text)
 - [image\_url](BaseThermostatDeviceProperties.md#image_url)
 - [is\_climate\_setting\_schedule\_active](BaseThermostatDeviceProperties.md#is_climate_setting_schedule_active)
@@ -42,7 +43,7 @@
 
 #### Defined in
 
-[src/types/models.ts:77](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L77)
+[src/types/models.ts:78](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L78)
 
 ___
 
@@ -73,7 +74,7 @@ CommonDeviceProperties.battery
 
 #### Defined in
 
-[src/types/models.ts:188](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L188)
+[src/types/models.ts:189](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L189)
 
 ___
 
@@ -103,7 +104,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:74](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L74)
+[src/types/models.ts:75](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L75)
 
 ___
 
@@ -113,7 +114,17 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:75](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L75)
+[src/types/models.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L76)
+
+___
+
+### fan\_mode\_setting
+
+• **fan\_mode\_setting**: [`FanModeSetting`](../modules.md#fanmodesetting)
+
+#### Defined in
+
+[src/types/models.ts:73](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L73)
 
 ___
 
@@ -127,7 +138,7 @@ CommonDeviceProperties.image\_alt\_text
 
 #### Defined in
 
-[src/types/models.ts:193](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L193)
+[src/types/models.ts:194](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L194)
 
 ___
 
@@ -141,7 +152,7 @@ CommonDeviceProperties.image\_url
 
 #### Defined in
 
-[src/types/models.ts:192](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L192)
+[src/types/models.ts:193](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L193)
 
 ___
 
@@ -151,7 +162,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:76](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L76)
+[src/types/models.ts:77](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L77)
 
 ___
 
@@ -191,7 +202,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:73](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L73)
+[src/types/models.ts:74](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L74)
 
 ___
 
@@ -205,7 +216,7 @@ CommonDeviceProperties.manufacturer
 
 #### Defined in
 
-[src/types/models.ts:182](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L182)
+[src/types/models.ts:183](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L183)
 
 ___
 
@@ -226,7 +237,7 @@ CommonDeviceProperties.model
 
 #### Defined in
 
-[src/types/models.ts:183](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L183)
+[src/types/models.ts:184](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L184)
 
 ___
 
@@ -240,7 +251,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:181](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L181)
+[src/types/models.ts:182](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L182)
 
 ___
 
@@ -254,7 +265,7 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:187](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L187)
+[src/types/models.ts:188](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L188)
 
 ___
 

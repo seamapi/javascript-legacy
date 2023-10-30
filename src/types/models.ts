@@ -70,6 +70,7 @@ export interface BaseThermostatDeviceProperties extends CommonDeviceProperties {
   is_heating: boolean
   is_cooling: boolean
   is_fan_running: boolean
+  fan_mode_setting: FanModeSetting
   is_temporary_manual_override_active: boolean // this is true if the current thermostat settings differ that what is on seam, and `current_climate_setting.manual_override_allowed: true`
   current_climate_setting: ClimateSetting // this field has the actual climate setting as it is on the device
   default_climate_setting?: ClimateSetting
