@@ -452,6 +452,34 @@ test(
   "{}"
 )
 test(
+  testAPIMethod("thermostats.heat"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+        heating_set_point_fahrenheit: 80,
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
+  testAPIMethod("thermostats.cool"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+        cooling_set_point_fahrenheit: 60,
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
   testAPIMethod("thermostats.heatCool"),
   {
     args: (seed) => [
@@ -459,6 +487,19 @@ test(
         device_id: seed.devices.nest.id1,
         cooling_set_point_fahrenheit: 60,
         heating_set_point_fahrenheit: 70,
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
+  testAPIMethod("thermostats.off"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
       },
     ],
     load_devices_from: ["nest"],

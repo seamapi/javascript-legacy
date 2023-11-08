@@ -87,7 +87,7 @@ Routes.accessCodes
 
 #### Defined in
 
-[src/seam-connect/routes.ts:325](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L325)
+[src/seam-connect/routes.ts:328](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L328)
 
 ___
 
@@ -107,7 +107,7 @@ Routes.actionAttempts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:473](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L473)
+[src/seam-connect/routes.ts:476](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L476)
 
 ___
 
@@ -141,7 +141,7 @@ Routes.clientSessions
 
 #### Defined in
 
-[src/seam-connect/routes.ts:539](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L539)
+[src/seam-connect/routes.ts:542](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L542)
 
 ___
 
@@ -164,7 +164,7 @@ Routes.connectWebviews
 
 #### Defined in
 
-[src/seam-connect/routes.ts:293](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L293)
+[src/seam-connect/routes.ts:296](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L296)
 
 ___
 
@@ -186,7 +186,7 @@ Routes.connectedAccounts
 
 #### Defined in
 
-[src/seam-connect/routes.ts:448](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L448)
+[src/seam-connect/routes.ts:451](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L451)
 
 ___
 
@@ -206,7 +206,7 @@ Routes.deviceModels
 
 #### Defined in
 
-[src/seam-connect/routes.ts:578](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L578)
+[src/seam-connect/routes.ts:581](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L581)
 
 ___
 
@@ -234,7 +234,7 @@ Routes.devices
 
 #### Defined in
 
-[src/seam-connect/routes.ts:223](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L223)
+[src/seam-connect/routes.ts:226](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L226)
 
 ___
 
@@ -255,7 +255,7 @@ Routes.events
 
 #### Defined in
 
-[src/seam-connect/routes.ts:275](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L275)
+[src/seam-connect/routes.ts:278](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L278)
 
 ___
 
@@ -278,7 +278,7 @@ Routes.locks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:188](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L188)
+[src/seam-connect/routes.ts:191](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L191)
 
 ___
 
@@ -301,7 +301,7 @@ Routes.noiseThresholds
 
 #### Defined in
 
-[src/seam-connect/routes.ts:483](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L483)
+[src/seam-connect/routes.ts:486](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L486)
 
 ___
 
@@ -319,10 +319,13 @@ ___
 | `climateSettingSchedules.get` | (`params`: [`ClimateSettingScheduleGetRequest`](../modules.md#climatesettingschedulegetrequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)\> |
 | `climateSettingSchedules.list` | (`params`: [`ClimateSettingSchedulesListRequest`](../modules.md#climatesettingscheduleslistrequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)[]\> |
 | `climateSettingSchedules.update` | (`params`: [`ClimateSettingScheduleUpdateRequest`](../modules.md#climatesettingscheduleupdaterequest)) => `Promise`<[`ClimateSettingSchedule`](../modules.md#climatesettingschedule)\> |
+| `cool` | (`params`: [`ThermostatCoolRequest`](../modules.md#thermostatcoolrequest)) => `Promise`<{ `actionAttempt`: [`ActionAttempt`](../modules.md#actionattempt)<[`ActionType`](../modules.md#actiontype)\>  }\> |
 | `delete` | (`params`: [`DeviceDeleteRequest`](../modules.md#devicedeleterequest)) => `Promise`<{ `ok`: ``true``  }\> |
 | `get` | (`params`: [`DeviceGetRequest`](../modules.md#devicegetrequest)) => `Promise`<[`ThermostatDevice`](../modules.md#thermostatdevice)\> |
+| `heat` | (`params`: [`ThermostatHeatRequest`](../modules.md#thermostatheatrequest)) => `Promise`<{ `actionAttempt`: [`ActionAttempt`](../modules.md#actionattempt)<[`ActionType`](../modules.md#actiontype)\>  }\> |
 | `heatCool` | (`params`: [`ThermostatHeatCoolRequest`](../modules.md#thermostatheatcoolrequest)) => `Promise`<{ `actionAttempt`: [`ActionAttempt`](../modules.md#actionattempt)<[`ActionType`](../modules.md#actiontype)\>  }\> |
 | `list` | (`params?`: [`DevicesListRequest`](../interfaces/DevicesListRequest.md)) => `Promise`<[`ThermostatDevice`](../modules.md#thermostatdevice)[]\> |
+| `off` | (`params`: [`ThermostatOffRequest`](../modules.md#thermostatoffrequest)) => `Promise`<{ `actionAttempt`: [`ActionAttempt`](../modules.md#actionattempt)<[`ActionType`](../modules.md#actiontype)\>  }\> |
 | `setFanMode` | (`params`: [`ThermostatSetFanModeRequest`](../modules.md#thermostatsetfanmoderequest)) => `Promise`<{ `actionAttempt`: [`ActionAttempt`](../modules.md#actionattempt)<[`ActionType`](../modules.md#actiontype)\>  }\> |
 | `update` | (`params`: [`ThermostatUpdateRequest`](../modules.md#thermostatupdaterequest)) => `Promise`<{ `ok`: ``true``  }\> |
 
@@ -332,7 +335,7 @@ Routes.thermostats
 
 #### Defined in
 
-[src/seam-connect/routes.ts:598](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L598)
+[src/seam-connect/routes.ts:601](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L601)
 
 ___
 
@@ -355,7 +358,7 @@ Routes.webhooks
 
 #### Defined in
 
-[src/seam-connect/routes.ts:514](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L514)
+[src/seam-connect/routes.ts:517](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L517)
 
 ___
 
@@ -377,7 +380,7 @@ Routes.workspaces
 
 #### Defined in
 
-[src/seam-connect/routes.ts:172](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L172)
+[src/seam-connect/routes.ts:175](https://github.com/seamapi/javascript/blob/main/src/seam-connect/routes.ts#L175)
 
 ## Methods
 

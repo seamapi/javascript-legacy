@@ -59,6 +59,9 @@ import {
   EventGetRequest,
   ClientSessionsGetRequest,
   ThermostatSetFanModeRequest,
+  ThermostatHeatRequest,
+  ThermostatCoolRequest,
+  ThermostatOffRequest,
   ThermostatHeatCoolRequest,
 } from "../types/route-requests"
 import {
@@ -624,9 +627,27 @@ export abstract class Routes {
         method: "POST",
         data: params,
       }),
+    heat: (params: ThermostatHeatRequest) =>
+      this.createActionAttemptAndWait({
+        url: "/thermostats/heat",
+        method: "POST",
+        data: params,
+      }),
     heatCool: (params: ThermostatHeatCoolRequest) =>
       this.createActionAttemptAndWait({
         url: "/thermostats/heat_cool",
+        method: "POST",
+        data: params,
+      }),
+    cool: (params: ThermostatCoolRequest) =>
+      this.createActionAttemptAndWait({
+        url: "/thermostats/cool",
+        method: "POST",
+        data: params,
+      }),
+    off: (params: ThermostatOffRequest) =>
+      this.createActionAttemptAndWait({
+        url: "/thermostats/off",
         method: "POST",
         data: params,
       }),
