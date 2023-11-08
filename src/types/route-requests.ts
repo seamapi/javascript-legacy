@@ -310,6 +310,13 @@ export type ThermostatSetFanModeRequest = {
   fan_mode_setting: FanModeSetting
 }
 
+export type ThermostatHeatRequest = {
+  device_id: string
+  sync?: boolean
+  heating_set_point_celsius?: number
+  heating_set_point_fahrenheit?: number
+}
+
 export type ThermostatCoolRequest = {
   device_id: string
   sync?: boolean
@@ -317,9 +324,7 @@ export type ThermostatCoolRequest = {
   cooling_set_point_fahrenheit?: number
 }
 
-export type ThermostatHeatRequest = {
+export type ThermostatOffRequest = {
   device_id: string
   sync?: boolean
-  heating_set_point_celsius?: number
-  heating_set_point_fahrenheit?: number
 }
