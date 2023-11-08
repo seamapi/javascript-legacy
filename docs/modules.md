@@ -178,9 +178,11 @@
 - [PullBackupAccessCodeRequest](modules.md#pullbackupaccesscoderequest)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
+- [ThermostatCoolRequest](modules.md#thermostatcoolrequest)
 - [ThermostatDevice](modules.md#thermostatdevice)
 - [ThermostatDeviceProperties](modules.md#thermostatdeviceproperties)
 - [ThermostatDeviceType](modules.md#thermostatdevicetype)
+- [ThermostatHeatRequest](modules.md#thermostatheatrequest)
 - [ThermostatOffRequest](modules.md#thermostatoffrequest)
 - [ThermostatSetFanModeRequest](modules.md#thermostatsetfanmoderequest)
 - [ThermostatUpdateRequest](modules.md#thermostatupdaterequest)
@@ -1175,6 +1177,25 @@ ___
 
 ___
 
+### ThermostatCoolRequest
+
+Ƭ **ThermostatCoolRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `cooling_set_point_celsius?` | `number` |
+| `cooling_set_point_fahrenheit?` | `number` |
+| `device_id` | `string` |
+| `sync?` | `boolean` |
+
+#### Defined in
+
+[src/types/route-requests.ts:320](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L320)
+
+___
+
 ### ThermostatDevice
 
 Ƭ **ThermostatDevice**: [`Device`](interfaces/Device.md)<[`ThermostatDeviceProperties`](modules.md#thermostatdeviceproperties), [`ThermostatDeviceType`](modules.md#thermostatdevicetype)\>
@@ -1205,6 +1226,25 @@ ___
 
 ___
 
+### ThermostatHeatRequest
+
+Ƭ **ThermostatHeatRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `device_id` | `string` |
+| `heating_set_point_celsius?` | `number` |
+| `heating_set_point_fahrenheit?` | `number` |
+| `sync?` | `boolean` |
+
+#### Defined in
+
+[src/types/route-requests.ts:313](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L313)
+
+___
+
 ### ThermostatOffRequest
 
 Ƭ **ThermostatOffRequest**: `Object`
@@ -1218,7 +1258,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:313](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L313)
+[src/types/route-requests.ts:327](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L327)
 
 ___
 
