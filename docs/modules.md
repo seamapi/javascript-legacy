@@ -181,6 +181,7 @@
 - [ThermostatDevice](modules.md#thermostatdevice)
 - [ThermostatDeviceProperties](modules.md#thermostatdeviceproperties)
 - [ThermostatDeviceType](modules.md#thermostatdevicetype)
+- [ThermostatHeatCoolRequest](modules.md#thermostatheatcoolrequest)
 - [ThermostatSetFanModeRequest](modules.md#thermostatsetfanmoderequest)
 - [ThermostatUpdateRequest](modules.md#thermostatupdaterequest)
 - [UnmanagedAccessCode](modules.md#unmanagedaccesscode)
@@ -1201,6 +1202,27 @@ ___
 #### Defined in
 
 [src/types/models.ts:48](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L48)
+
+___
+
+### ThermostatHeatCoolRequest
+
+Ƭ **ThermostatHeatCoolRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `cooling_set_point_celsius?` | `number` |
+| `cooling_set_point_fahrenheit?` | `number` |
+| `device_id` | `string` |
+| `heating_set_point_celsius?` | `number` |
+| `heating_set_point_fahrenheit?` | `number` |
+| `sync?` | `boolean` |
+
+#### Defined in
+
+[src/types/route-requests.ts:313](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L313)
 
 ___
 
