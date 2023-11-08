@@ -178,6 +178,7 @@
 - [PullBackupAccessCodeRequest](modules.md#pullbackupaccesscoderequest)
 - [SeamWebhookEvent](modules.md#seamwebhookevent)
 - [SuccessfulAPIResponse](modules.md#successfulapiresponse)
+- [ThermostatCoolRequest](modules.md#thermostatcoolrequest)
 - [ThermostatDevice](modules.md#thermostatdevice)
 - [ThermostatDeviceProperties](modules.md#thermostatdeviceproperties)
 - [ThermostatDeviceType](modules.md#thermostatdevicetype)
@@ -1175,6 +1176,25 @@ ___
 
 ___
 
+### ThermostatCoolRequest
+
+Ƭ **ThermostatCoolRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `cooling_set_point_celsius?` | `number` |
+| `cooling_set_point_fahrenheit?` | `number` |
+| `device_id` | `string` |
+| `sync?` | `boolean` |
+
+#### Defined in
+
+[src/types/route-requests.ts:313](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L313)
+
+___
+
 ### ThermostatDevice
 
 Ƭ **ThermostatDevice**: [`Device`](interfaces/Device.md)<[`ThermostatDeviceProperties`](modules.md#thermostatdeviceproperties), [`ThermostatDeviceType`](modules.md#thermostatdevicetype)\>
@@ -1220,7 +1240,7 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:313](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L313)
+[src/types/route-requests.ts:320](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L320)
 
 ___
 
