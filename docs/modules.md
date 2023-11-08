@@ -181,6 +181,7 @@
 - [ThermostatDevice](modules.md#thermostatdevice)
 - [ThermostatDeviceProperties](modules.md#thermostatdeviceproperties)
 - [ThermostatDeviceType](modules.md#thermostatdevicetype)
+- [ThermostatOffRequest](modules.md#thermostatoffrequest)
 - [ThermostatSetFanModeRequest](modules.md#thermostatsetfanmoderequest)
 - [ThermostatUpdateRequest](modules.md#thermostatupdaterequest)
 - [UnmanagedAccessCode](modules.md#unmanagedaccesscode)
@@ -1201,6 +1202,23 @@ ___
 #### Defined in
 
 [src/types/models.ts:48](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L48)
+
+___
+
+### ThermostatOffRequest
+
+Ƭ **ThermostatOffRequest**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `device_id` | `string` |
+| `sync?` | `boolean` |
+
+#### Defined in
+
+[src/types/route-requests.ts:313](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L313)
 
 ___
 
