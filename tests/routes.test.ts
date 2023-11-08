@@ -452,6 +452,20 @@ test(
   "{}"
 )
 test(
+  testAPIMethod("thermostats.heat"),
+  {
+    args: (seed) => [
+      {
+        device_id: seed.devices.nest.id1,
+        heating_set_point_fahrenheit: 80,
+      },
+    ],
+    load_devices_from: ["nest"],
+    modifiesState: true,
+  },
+  "{}"
+)
+test(
   testAPIMethod("thermostats.climateSettingSchedules.get"),
   {
     args: (seed) => [

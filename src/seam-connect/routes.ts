@@ -59,6 +59,7 @@ import {
   EventGetRequest,
   ClientSessionsGetRequest,
   ThermostatSetFanModeRequest,
+  ThermostatHeatRequest,
 } from "../types/route-requests"
 import {
   AccessCodeGenerateCodeResponse,
@@ -620,6 +621,12 @@ export abstract class Routes {
     setFanMode: (params: ThermostatSetFanModeRequest) =>
       this.createActionAttemptAndWait({
         url: "/thermostats/set_fan_mode",
+        method: "POST",
+        data: params,
+      }),
+    heat: (params: ThermostatHeatRequest) =>
+      this.createActionAttemptAndWait({
+        url: "/thermostats/heat",
         method: "POST",
         data: params,
       }),
