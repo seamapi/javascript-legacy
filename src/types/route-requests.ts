@@ -316,3 +316,10 @@ export type ThermostatCoolRequest = {
   cooling_set_point_celsius?: number
   cooling_set_point_fahrenheit?: number
 }
+
+export type ThermostatHeatRequest = {
+  device_id: string
+  sync?: boolean
+  heating_set_point_celsius?: number
+  heating_set_point_fahrenheit?: number
+}
