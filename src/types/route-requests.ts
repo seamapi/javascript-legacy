@@ -153,11 +153,13 @@ export type UnmanagedAccessCodesListRequest = {
 export type UnmanagedAccessCodeUpdateRequest = {
   access_code_id: string
   is_managed: true
+  force?: boolean
 }
 
 export type UnmanagedAccessCodeConvertToManagedRequest = {
   access_code_id: string
   allow_external_modification?: boolean
+  force?: boolean
 }
 
 export type PullBackupAccessCodeRequest = {
