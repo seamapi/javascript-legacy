@@ -156,6 +156,7 @@ export abstract class Routes {
     return response[innerObjectName]
   }
 
+  // @deprecated: anything that uses this will not wait on action attempt
   private async createActionAttemptAndWait<T extends ActionType>(
     request: AxiosRequestConfig
   ): Promise<
@@ -189,6 +190,7 @@ export abstract class Routes {
   }
 
   public readonly locks = {
+    // @deprecated: should take object
     list: (connectedAccountId?: string) =>
       this.makeRequestAndFormat<LocksListResponse>("locks", {
         url: "/locks/list",
@@ -198,6 +200,7 @@ export abstract class Routes {
             }
           : {},
       }),
+    // @deprecated: should take object
     get: (deviceId: string) =>
       this.makeRequestAndFormat<LockGetResponse>("lock", {
         url: "/locks/get",
@@ -205,6 +208,7 @@ export abstract class Routes {
           device_id: deviceId,
         },
       }),
+    // @deprecated: should take object
     lockDoor: (deviceId: string) =>
       this.createActionAttemptAndWait({
         url: "/locks/lock_door",
@@ -213,6 +217,7 @@ export abstract class Routes {
         },
         method: "POST",
       }),
+    // @deprecated: should take object
     unlockDoor: (deviceId: string) =>
       this.createActionAttemptAndWait({
         url: "/locks/unlock_door",
@@ -301,6 +306,7 @@ export abstract class Routes {
           url: "/connect_webviews/list",
         }
       ),
+    // @deprecated: should take object
     get: (connectWebviewId: string) =>
       this.makeRequestAndFormat<ConnectWebviewGetResponse>("connect_webview", {
         url: "/connect_webviews/get",
@@ -410,6 +416,7 @@ export abstract class Routes {
       ),
 
     // We can't narrow the return type here like we do with create because we're given partial input
+    // @deprecated: Returns ActionAttempt
     update: async (
       params: AccessCodeUpdateRequest,
       options?: { waitForCompletion?: boolean }
@@ -474,6 +481,7 @@ export abstract class Routes {
   }
 
   public readonly actionAttempts = {
+    // @deprecated: should take object / removing type param, use type guards
     get: <T extends ActionType = ActionType>(actionAttemptId: string) =>
       this.makeRequestAndFormat<ActionAttemptGetResponse<T>>("action_attempt", {
         url: "/action_attempts/get",
@@ -578,6 +586,7 @@ export abstract class Routes {
       }),
   }
 
+  // @deprecated: will be removed
   public readonly deviceModels = {
     list: ({
       acknowledge_intentional_use_of_internal_api = false,
