@@ -56,6 +56,10 @@ export interface AccessCodeCreateBaseRequest {
   code?: string
   common_code_key?: string
   allow_external_modification?: boolean
+  use_offline_access_code?: boolean
+  is_offline_access_code?: boolean
+  is_one_time_use?: boolean
+  max_time_rounding?: string
 }
 
 export interface AccessCodeCreateOngoingRequest

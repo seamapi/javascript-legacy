@@ -446,9 +446,11 @@ export interface TimeBoundAccessCode extends ManagedAccessCodeBase {
   type: "time_bound"
   created_at: string
   status: "setting" | "set" | "removing" | "unset"
-  is_scheduled_on_device?: boolean
   starts_at: string
   ends_at: string
+  is_offline_access_code: boolean
+  is_one_time_use: boolean
+  is_scheduled_on_device?: boolean
 }
 
 export type AccessCode = OngoingAccessCode | TimeBoundAccessCode
