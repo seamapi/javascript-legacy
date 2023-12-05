@@ -17,8 +17,12 @@
 - [common\_code\_key](AccessCodeCreateScheduledRequest.md#common_code_key)
 - [device\_id](AccessCodeCreateScheduledRequest.md#device_id)
 - [ends\_at](AccessCodeCreateScheduledRequest.md#ends_at)
+- [is\_offline\_access\_code](AccessCodeCreateScheduledRequest.md#is_offline_access_code)
+- [is\_one\_time\_use](AccessCodeCreateScheduledRequest.md#is_one_time_use)
+- [max\_time\_rounding](AccessCodeCreateScheduledRequest.md#max_time_rounding)
 - [name](AccessCodeCreateScheduledRequest.md#name)
 - [starts\_at](AccessCodeCreateScheduledRequest.md#starts_at)
+- [use\_offline\_access\_code](AccessCodeCreateScheduledRequest.md#use_offline_access_code)
 
 ## Properties
 
@@ -84,7 +88,49 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:67](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L67)
+[src/types/route-requests.ts:71](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L71)
+
+___
+
+### is\_offline\_access\_code
+
+• `Optional` **is\_offline\_access\_code**: `boolean`
+
+#### Inherited from
+
+[AccessCodeCreateBaseRequest](AccessCodeCreateBaseRequest.md).[is_offline_access_code](AccessCodeCreateBaseRequest.md#is_offline_access_code)
+
+#### Defined in
+
+[src/types/route-requests.ts:60](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L60)
+
+___
+
+### is\_one\_time\_use
+
+• `Optional` **is\_one\_time\_use**: `boolean`
+
+#### Inherited from
+
+[AccessCodeCreateBaseRequest](AccessCodeCreateBaseRequest.md).[is_one_time_use](AccessCodeCreateBaseRequest.md#is_one_time_use)
+
+#### Defined in
+
+[src/types/route-requests.ts:61](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L61)
+
+___
+
+### max\_time\_rounding
+
+• `Optional` **max\_time\_rounding**: `string`
+
+#### Inherited from
+
+[AccessCodeCreateBaseRequest](AccessCodeCreateBaseRequest.md).[max_time_rounding](AccessCodeCreateBaseRequest.md#max_time_rounding)
+
+#### Defined in
+
+[src/types/route-requests.ts:62](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L62)
 
 ___
 
@@ -108,4 +154,18 @@ ___
 
 #### Defined in
 
-[src/types/route-requests.ts:66](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L66)
+[src/types/route-requests.ts:70](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L70)
+
+___
+
+### use\_offline\_access\_code
+
+• `Optional` **use\_offline\_access\_code**: `boolean`
+
+#### Inherited from
+
+[AccessCodeCreateBaseRequest](AccessCodeCreateBaseRequest.md).[use_offline_access_code](AccessCodeCreateBaseRequest.md#use_offline_access_code)
+
+#### Defined in
+
+[src/types/route-requests.ts:59](https://github.com/seamapi/javascript/blob/main/src/types/route-requests.ts#L59)

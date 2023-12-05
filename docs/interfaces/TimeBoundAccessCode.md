@@ -23,6 +23,8 @@
 - [is\_backup](TimeBoundAccessCode.md#is_backup)
 - [is\_backup\_access\_code\_available](TimeBoundAccessCode.md#is_backup_access_code_available)
 - [is\_external\_modification\_allowed](TimeBoundAccessCode.md#is_external_modification_allowed)
+- [is\_offline\_access\_code](TimeBoundAccessCode.md#is_offline_access_code)
+- [is\_one\_time\_use](TimeBoundAccessCode.md#is_one_time_use)
 - [is\_scheduled\_on\_device](TimeBoundAccessCode.md#is_scheduled_on_device)
 - [is\_waiting\_for\_code\_assignment](TimeBoundAccessCode.md#is_waiting_for_code_assignment)
 - [name](TimeBoundAccessCode.md#name)
@@ -130,7 +132,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:451](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L451)
+[src/types/models.ts:450](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L450)
 
 ___
 
@@ -190,13 +192,33 @@ ___
 
 ___
 
+### is\_offline\_access\_code
+
+• **is\_offline\_access\_code**: `boolean`
+
+#### Defined in
+
+[src/types/models.ts:451](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L451)
+
+___
+
+### is\_one\_time\_use
+
+• **is\_one\_time\_use**: `boolean`
+
+#### Defined in
+
+[src/types/models.ts:452](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L452)
+
+___
+
 ### is\_scheduled\_on\_device
 
 • `Optional` **is\_scheduled\_on\_device**: `boolean`
 
 #### Defined in
 
-[src/types/models.ts:449](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L449)
+[src/types/models.ts:453](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L453)
 
 ___
 
@@ -248,7 +270,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:450](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L450)
+[src/types/models.ts:449](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L449)
 
 ___
 
