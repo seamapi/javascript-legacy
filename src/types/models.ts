@@ -44,7 +44,11 @@ export const NOISE_SENSOR_DEVICE_TYPES = [
 export type NoiseSensorDeviceType = typeof NOISE_SENSOR_DEVICE_TYPES[number]
 export type NoiseSensorDeviceProperties = CommonDeviceProperties
 
-export const THERMOSTAT_DEVICE_TYPES = ["nest_thermostat", "ecobee_thermostat"]
+export const THERMOSTAT_DEVICE_TYPES = [
+  "nest_thermostat",
+  "ecobee_thermostat",
+  "honeywell_resideo_thermostat",
+]
 export type ThermostatDeviceType = typeof THERMOSTAT_DEVICE_TYPES[number]
 
 export type HvacModeSetting = "off" | "heat" | "cool" | "heat_cool"
