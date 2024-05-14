@@ -42,7 +42,42 @@ export const NOISE_SENSOR_DEVICE_TYPES = [
   "minut_sensor",
 ]
 export type NoiseSensorDeviceType = typeof NOISE_SENSOR_DEVICE_TYPES[number]
-export type NoiseSensorDeviceProperties = CommonDeviceProperties
+
+export interface NoiseSensorDeviceProperties extends CommonDeviceProperties {
+  noiseaware_metadata?: {
+    device_model: "indoor" | "outdoor"
+    noise_level_nrs: number
+    noise_level_decibel: number
+    device_name: string
+    device_id: string
+  }
+  minut_metadata?: {
+    device_id: string
+    device_name: string
+    latest_sensor_values: {
+      temperature: {
+        time: string
+        value: number
+      }
+      sound: {
+        time: string
+        value: number
+      }
+      humidity: {
+        time: string
+        value: number
+      }
+      pressure: {
+        time: string
+        value: number
+      }
+      accelerometer_z: {
+        time: string
+        value: number
+      }
+    }
+  }
+}
 
 export const THERMOSTAT_DEVICE_TYPES = [
   "nest_thermostat",
