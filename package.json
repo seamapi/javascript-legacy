@@ -7,7 +7,7 @@
     "iot",
     "device"
   ],
-  "version": "8.22.1",
+  "version": "8.23.0",
   "license": "MIT",
   "sideEffects": false,
   "main": "./cjs-wrapper.js",
