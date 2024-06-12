@@ -13,6 +13,7 @@
 ### Properties
 
 - [battery](NoiseSensorDeviceProperties.md#battery)
+- [currently\_triggering\_noise\_threshold\_ids](NoiseSensorDeviceProperties.md#currently_triggering_noise_threshold_ids)
 - [image\_alt\_text](NoiseSensorDeviceProperties.md#image_alt_text)
 - [image\_url](NoiseSensorDeviceProperties.md#image_url)
 - [manufacturer](NoiseSensorDeviceProperties.md#manufacturer)
@@ -42,7 +43,17 @@ CommonDeviceProperties.battery
 
 #### Defined in
 
-[src/types/models.ts:229](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L229)
+[src/types/models.ts:230](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L230)
+
+___
+
+### currently\_triggering\_noise\_threshold\_ids
+
+• `Optional` **currently\_triggering\_noise\_threshold\_ids**: `string`[]
+
+#### Defined in
+
+[src/types/models.ts:48](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L48)
 
 ___
 
@@ -56,7 +67,7 @@ CommonDeviceProperties.image\_alt\_text
 
 #### Defined in
 
-[src/types/models.ts:234](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L234)
+[src/types/models.ts:235](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L235)
 
 ___
 
@@ -70,7 +81,7 @@ CommonDeviceProperties.image\_url
 
 #### Defined in
 
-[src/types/models.ts:233](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L233)
+[src/types/models.ts:234](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L234)
 
 ___
 
@@ -84,7 +95,7 @@ CommonDeviceProperties.manufacturer
 
 #### Defined in
 
-[src/types/models.ts:223](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L223)
+[src/types/models.ts:224](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L224)
 
 ___
 
@@ -117,7 +128,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:55](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L55)
+[src/types/models.ts:56](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L56)
 
 ___
 
@@ -138,7 +149,7 @@ CommonDeviceProperties.model
 
 #### Defined in
 
-[src/types/models.ts:224](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L224)
+[src/types/models.ts:225](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L225)
 
 ___
 
@@ -152,7 +163,7 @@ CommonDeviceProperties.name
 
 #### Defined in
 
-[src/types/models.ts:222](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L222)
+[src/types/models.ts:223](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L223)
 
 ___
 
@@ -182,7 +193,7 @@ ___
 
 #### Defined in
 
-[src/types/models.ts:48](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L48)
+[src/types/models.ts:49](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L49)
 
 ___
 
@@ -196,4 +207,4 @@ CommonDeviceProperties.online
 
 #### Defined in
 
-[src/types/models.ts:228](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L228)
+[src/types/models.ts:229](https://github.com/seamapi/javascript/blob/main/src/types/models.ts#L229)
