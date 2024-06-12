@@ -45,6 +45,7 @@ export type NoiseSensorDeviceType = typeof NOISE_SENSOR_DEVICE_TYPES[number]
 
 export interface NoiseSensorDeviceProperties extends CommonDeviceProperties {
   noise_level_decibels?: number
+  currently_triggering_noise_threshold_ids?: string[]
   noiseaware_metadata?: {
     device_model: "indoor" | "outdoor"
     noise_level_nrs: number
