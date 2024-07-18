@@ -49,7 +49,7 @@ Error.constructor
 
 #### Defined in
 
-[src/lib/api-error.ts:26](https://github.com/seamapi/javascript/blob/main/src/lib/api-error.ts#L26)
+[src/lib/api-error.ts:26](https://github.com/seamapi/javascript-legacy/blob/main/src/lib/api-error.ts#L26)
 
 ## Properties
 
@@ -160,7 +160,7 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Defined in
 
-[src/lib/api-error.ts:38](https://github.com/seamapi/javascript/blob/main/src/lib/api-error.ts#L38)
+[src/lib/api-error.ts:38](https://github.com/seamapi/javascript-legacy/blob/main/src/lib/api-error.ts#L38)
 
 ___
 

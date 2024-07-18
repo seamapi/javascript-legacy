@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[src/seam-os/client.ts:52](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L52)
+[src/seam-os/client.ts:52](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L52)
 
 ## Properties
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[src/seam-os/client.ts:179](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L179)
+[src/seam-os/client.ts:179](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L179)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:187](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L187)
+[src/seam-os/client.ts:187](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L187)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:50](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L50)
+[src/seam-os/client.ts:50](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L50)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:203](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L203)
+[src/seam-os/client.ts:203](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L203)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:227](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L227)
+[src/seam-os/client.ts:227](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L227)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:238](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L238)
+[src/seam-os/client.ts:238](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L238)
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:223](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L223)
+[src/seam-os/client.ts:223](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L223)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:177](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L177)
+[src/seam-os/client.ts:177](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L177)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:250](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L250)
+[src/seam-os/client.ts:250](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L250)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:254](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L254)
+[src/seam-os/client.ts:254](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L254)
 
 ___
 
@@ -258,7 +258,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:259](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L259)
+[src/seam-os/client.ts:259](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L259)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:264](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L264)
+[src/seam-os/client.ts:264](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L264)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:154](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L154)
+[src/seam-os/client.ts:154](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L154)
 
 ___
 
@@ -326,7 +326,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:270](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L270)
+[src/seam-os/client.ts:270](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L270)
 
 ___
 
@@ -347,7 +347,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:280](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L280)
+[src/seam-os/client.ts:280](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L280)
 
 ## Methods
 
@@ -385,7 +385,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:146](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L146)
+[src/seam-os/client.ts:146](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L146)
 
 ___
 
@@ -423,7 +423,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:108](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L108)
+[src/seam-os/client.ts:108](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L108)
 
 ___
 
@@ -463,7 +463,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:131](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L131)
+[src/seam-os/client.ts:131](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L131)
 
 ___
 
@@ -503,7 +503,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:116](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L116)
+[src/seam-os/client.ts:116](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L116)
 
 ___
 
@@ -530,7 +530,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:93](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L93)
+[src/seam-os/client.ts:93](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L93)
 
 ___
 
@@ -557,7 +557,7 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:83](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L83)
+[src/seam-os/client.ts:83](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L83)
 
 ___
 
@@ -585,4 +585,4 @@ ___
 
 #### Defined in
 
-[src/seam-os/client.ts:100](https://github.com/seamapi/javascript/blob/main/src/seam-os/client.ts#L100)
+[src/seam-os/client.ts:100](https://github.com/seamapi/javascript-legacy/blob/main/src/seam-os/client.ts#L100)
