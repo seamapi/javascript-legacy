@@ -1,3 +1,5 @@
+throw new Error('The seamapi package has been moved to seam. \n Please refer to the migration guide at https://github.com/seamapi/javascript/releases/tag/v1.0.0')
+
 import { Seam } from "./seam-connect/client"
 export default Seam
 
